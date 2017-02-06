@@ -4,7 +4,7 @@
 
 # Site
 title: Macsnow's Blog
-subtitle: 
+subtitle: keep golden
 description: Macsnow's blog with love.
 author: Wang Siyuan
 avatar: /uploads/BetaCat.jpg
@@ -15,7 +15,7 @@ google_analytics: UA-91434433-1
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.macsnow.cn
+url: 'http://blog.macsnow.cn'
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -68,17 +68,10 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: next
 
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: git@github.com:Macsnow14/Macsnow14.github.io.git
-  branch: master
-
 feed:
   type: atom
   path: atom.xml
   limit: false
   hub:
-  content:
+  content: true
 
