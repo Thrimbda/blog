@@ -1,7 +1,6 @@
 ---
 title: about
 date: 2017-02-04 23:50:54
-type: "about"
 comments: false
 ---
 
@@ -41,6 +40,5 @@ class Macsnow(SoftwareEngineer):
     def __setattr__(self, reasonability, name, value):
         with reasonability:
         	self.__dict__[name] = value
-
 ```
 
