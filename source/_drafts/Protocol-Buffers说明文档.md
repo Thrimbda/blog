@@ -182,3 +182,21 @@ message SearchRequest {
 + 必须有一个0值，如此以来我们才能够使用0作为一个数值型[默认值](https://developers.google.com/protocol-buffers/docs/proto3#default)。
 + 0值必须作为第一个元素，为了与[proto2](https://developers.google.com/protocol-buffers/docs/proto)中第一个元素必为默认值的语法兼容。
 
+
+你可以通过把相同的值分配给不同的枚举变量来定义枚举变量的别名。当你要设置别名时需要将`allow_alias`选项设置为`true`，否则 Protocol Buffers 编译器在找到你试图定义的别名时会报错。
+
+```java
+enum EnumAllowingAlias {
+  option allow_alias = true;
+  UNKNOWN = 0;
+  STARTED = 1;
+  RUNNING = 1;
+}
+enum EnumNotAllowingAlias {
+  UNKNOWN = 0;
+  STARTED = 1;
+  // RUNNING = 1;  // 将这行取消注释将会导致一个编译器内部错误和一个外部的警告信息。
+}
+```
+
+枚举变量值必须在32位整形数所能表示的范围之内，因为`enum`值使用[varint encoding](https://developers.google.com/protocol-buffers/docs/encoding)编码，
