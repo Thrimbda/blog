@@ -15,7 +15,7 @@ google_analytics: UA-91434433-1
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: 'http://blog.macsnow.cn'
+url: 'http://blog.thrimbda.cn'
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
