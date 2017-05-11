@@ -1,12 +1,13 @@
 ---
-title: RBAC实践系统设计
+title: RBAC概念与系统设计
 date: 2017-5-7
 tags:
   - 系统设计与分析
+  - RBAC
 categories: 设计
 ---
 
-![RBACmodel](https://github.com/Thrimbda/thrimbda-blog-source/tree/master/source/uploads/RBACmodel.png)
+![RBACmodel](../uploads/RBACmodel.png)
 
 ## RBAC 的概念
 
@@ -26,13 +27,14 @@ RBAC (**R**ole-**B**ased **A**ccess **C**ontrol) 以角色为基础的访问控�
 
 - **主体**和**角色**是多对多关系。
 
-  ${\displaystyle PA\subseteq P\times R}$
+  ${\displaystyle SA\subseteq S\times R}$
 
 - **角色**和**权限**是多对多关系。
 
-  ${\displaystyle SA\subseteq S\times R}$
+  ${\displaystyle PA\subseteq P\times R}$
 
-  ​
+
+<!--more-->
 
 ## 对RBAC的理解
 
@@ -59,6 +61,3 @@ RBAC是一种MAC (**M**andatory **A**ccess **C**ontrol) 即由系统管理员统
 而对于一个资源由个人所拥有的系统来说，每个角色都是平等的，每个角色对于自己的资源具有完全的控制权，此时RBAC模型显得力不从心，而应该使用DAC (**D**iscretionary **A**ccess **C**ontrol) 模型，这在社交网络系统中十分常见。
 
 实际的场景中不可能存在纯粹的共有资源与纯粹的独享资源，因此常常将这两种模型混合使用。例如：微信中普通用户可以对自己的“资源”（朋友圈）具有完全的管理权限。但普通用户无法对其他用户进行管理，“举报”这个功能的实现则有赖于系统中其他具有更高权限的角色进行干预。
-
-
-
