@@ -67,3 +67,21 @@ UDP发包
 ## 时序图
 
 ![thrive-voice-sequence-diagram](C:\Users\Macsnow\Pictures\草图\Thrive-voice打电话时序图.png)
+
+## 状态码
+
+### external
+
+| code | event      |
+| ---- | ---------- |
+| 0    | accepted   |
+| 1    | denied     |
+| 2    | terminated |
+
+### internal
+
+| code | event   |
+| ---- | ------- |
+| m    | message |
+| e    | error   |
+| c    | control |
