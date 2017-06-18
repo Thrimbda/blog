@@ -1,7 +1,7 @@
 ---
-	title: DFD to UML
+title: DFD to UML
 date: 2017-5-22
-tag:
+tags:
   - 系统设计与分析
   - UML
 categories: 设计
