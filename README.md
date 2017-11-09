@@ -1,6 +1,6 @@
 # thrimbda-blog-source
 
-[![Build Status](https://travis-ci.org/Thrimbda/thrimbda-blog-source.svg?branch=master)](https://travis-ci.org/Thrimbda/thrimbda-blog-source)
+[![Build Status](https://travis-ci.org/Thrimbda/blog.svg?branch=master)](https://travis-ci.org/Thrimbda/blog)
 
 my individual blog.
 
