@@ -1,6 +1,6 @@
 language: node_js
 node_js: 
-    - "6"
+    - "8"
 before_install:
     - git config --global user.email $GITHUB_EMAIL
     - git config --global user.name $GITHUB_USERNAME
@@ -14,4 +14,4 @@ after_success:
     - git init
     - git add .
     - git commit -m "Travis Deploy"
-    - git push -f -q https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$GITHUB_USERNAME.github.io master
+    - git push -f -q https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/blog master:gh-pages

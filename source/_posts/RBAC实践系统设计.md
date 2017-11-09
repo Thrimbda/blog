@@ -7,7 +7,7 @@ tags:
 categories: 设计
 ---
 
-![RBACmodel](../uploads/RBACmodel.png)
+![RBACmodel](http://blog.thrimbda.com/uploads/2017/05/07/RBACmodel.png)
 
 ## RBAC 的概念
 
