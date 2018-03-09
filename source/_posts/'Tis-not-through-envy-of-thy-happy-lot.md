@@ -1,5 +1,5 @@
 ---
-title: \'Tis not through envy of thy happy lot
+title: ''Tis not through envy of thy happy lot
 date: 2018-3-9
 tags:
   - 感悟
