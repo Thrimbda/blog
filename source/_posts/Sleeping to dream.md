@@ -1,6 +1,6 @@
 ---
 title: Sleeping to Dream
-data: 2018-8-14
+date: 2018-8-14
 tags:
   - 非正常人类研究
 categories:
