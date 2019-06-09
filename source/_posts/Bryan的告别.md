@@ -1,6 +1,6 @@
 ---
 title: Bryan的告别
-date: 2019-06-02
+date: 2019-06-10
 categories: 随笔
 tags:
   - 非正常人类研究
