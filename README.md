@@ -1,6 +1,6 @@
 # blog
 
-[![Build Status](https://travis-ci.org/Thrimbda/blog.svg?branch=master)](https://travis-ci.org/Thrimbda/blog)
+![github pages](https://github.com/Thrimbda/blog/workflows/github%20pages/badge.svg)
 
 my individual blog.
 
