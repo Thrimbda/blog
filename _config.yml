@@ -10,12 +10,12 @@ author: Wang Siyuan
 avatar: /uploads/avatar.jpg
 language: zh-Hans
 timezone: Asia/Shanghai
-duoshuo_shortname: macsnow-blog
 google_analytics: UA-91434433-1
+disqus_shortname: thrimbda
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: 'http://blog.thrimbda.cn'
+url: 'https://blog.thrimbda.com'
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -75,8 +75,8 @@ feed:
   hub:
   content: true
 
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
+# Comments
+disqus:
+  enable: true
+  shortname: thrimbda
+  count: true
