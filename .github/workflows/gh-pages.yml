@@ -33,7 +33,6 @@ jobs:
         deploy_key:  ${{ secrets.ACTIONS_DEPLOY_KEY }}
         user_name: Thrimbda  # (or delete this input setting to use bot account)
         user_email: c.one@thrimbda.com  # (or delete this input setting to use bot account)
-        commit_msg: "update"  # (or delete this input setting to use hexo default settings)
     
     - name: Get the output
       run: |
