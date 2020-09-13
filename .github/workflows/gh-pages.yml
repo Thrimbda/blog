@@ -34,6 +34,8 @@ jobs:
         user_name: Thrimbda  # (or delete this input setting to use bot account)
         user_email: c.one@thrimbda.com  # (or delete this input setting to use bot account)
     
-    - name: Get the output
-      run: |
-        echo "${{ steps.deploy.outputs.notify }}"
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        PUBLISH_DIR: ./public
