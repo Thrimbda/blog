@@ -1,0 +1,37 @@
+name: github pages
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Cache node modules
+      uses: actions/cache@v1
+      id: cache
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Install Dependencies
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: npm ci
+        
+    - name: Setup Hexo
+      id: deploy
+      uses: sma11black/hexo-action@v1.0.3
+      with:
+        deploy_key:  ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        user_name: Thrimbda  # (or delete this input setting to use bot account)
+        user_email: c.one@thrimbda.com  # (or delete this input setting to use bot account)
+        commit_msg: "update"  # (or delete this input setting to use hexo default settings)
+    
+    - name: Get the output
+      run: |
+        echo "${{ steps.deploy.outputs.notify }}"
