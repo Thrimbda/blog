@@ -38,6 +38,8 @@ tags:
 -   快速链接
 
 
+<!--more-->
+
 <a id="orgdafefdb"></a>
 
 ## 开始前的准备
