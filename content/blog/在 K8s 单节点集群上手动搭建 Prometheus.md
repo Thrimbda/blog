@@ -144,7 +144,7 @@ scrape_configs:
 
 打开 Prometheus 的 web UI，观察到已经新增了一个叫做 `node-exporter` 的 target，查看一下工作负载（运行了一个可以占满所有核的永远计算斐波那契数列的[程序](https://github.com/Thrimbda/fiber)）：
 
-![img](https://blog.thrimbda.com/uploads/2020/11/05/node-load.png)
+![img](https://blog.thrimbda.com/images/2020/11/05/node-load.png)
 
 到此，概念验证阶段圆满完成。
 
@@ -293,7 +293,7 @@ subjects:
 
 label 就是有关某一个端点的属性，而不同的端点可能在同一个 label 下可能有不同的值，`<relabel_config>` 所做的事情，就是针对这些 label 进行一些修改和过滤的操作，使得我们能够过滤/修改出所需要的端点。
 
-![img](https://blog.thrimbda.com/uploads/2020/11/05/node-exporter-target.png)
+![img](https://blog.thrimbda.com/images/2020/11/05/node-exporter-target.png)
 
 可以看到，在上面的 config 中，有三个 relabel 动作，其中第一个的意思是，从 `__meta_kubernetes_service_name` 这个 K8s  服务发现**预定义**的 label 的所有值中，按照给定的正则表达式 "node-exporter" 进行过滤，根据 `action`，保留匹配到的目标端点，丢弃掉剩余相同标签的值。而后面两个 relabel 动作是为了给将 node 和 host_ip 这两个语义标签通过改名的方式保留下来。（还记得吗，双下划线开头的标签最后都会被删除）
 

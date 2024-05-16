@@ -220,14 +220,14 @@ Kubebuilder 依然为业务逻辑的多样性保留了一丝净土，而 Harbor 
 
 #### 关键接口
 
-![img](https://blog.thrimbda.com/uploads/2022/01/30/harbor-operator-class.svg)
+![img](https://blog.thrimbda.com/images/2022/01/30/harbor-operator-class.svg)
 
 <a id="org290c6c2"></a>
 
 #### 系统架构
 
 截至 v1.0.1 Harbor Operator 目前主要负责 Harbor 系统的 Day-1 操作
-![img](https://blog.thrimbda.com/uploads/2022/01/30/harbor-operator-arch.png)
+![img](https://blog.thrimbda.com/images/2022/01/30/harbor-operator-arch.png)
 
 <a id="org41c8944"></a>
 
