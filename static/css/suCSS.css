@@ -594,10 +594,6 @@ pre code {
   background-color: inherit;
 }
 
-iframe {
-  max-width: 90%;
-}
-
 /* progress bars */
 progress {
   width: 100%;
