@@ -572,7 +572,6 @@ kbd, samp {
 pre {
   border: 1px solid var(--accent);
   max-height: 30rem;
-  padding: .625rem;
   overflow: auto;
   font-style: monospace;
   white-space: pre-wrap; 

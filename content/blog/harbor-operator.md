@@ -5,34 +5,108 @@ taxonomies:
   tags:
     - Operator
     - 技术
+extra:
+  toc:
+    - level: 1
+      title: 开始前的准备
+      id: orgdafefdb
+      permalink: orgdafefdb
+      children:
+        - level: 2
+          title: 为什么是 Harbor-Operator
+          id: org081213e
+          permalink: org081213e
+          children:
+            - level: 3
+              title: Worse is Better?
+              id: org55a74c9
+              permalink: org55a74c9
+              children:
+                - level: 4
+                  title: The right thing
+                  id: orgbebeeee
+                  permalink: orgbebeeee
+                - level: 4
+                  title: Worse is better
+                  id: org948c614
+                  permalink: org948c614
+            - level: 3
+              title: Golang - the language
+              id: org55a74c9
+              permalink: org55a74c9
+            - level: 3
+              title: Kubernetes - the platform
+              id: org2432232
+              permalink: org2432232
+    - level: 1
+      title: 目标
+      id: org6815286
+      permalink: org6815286
+    - level: 1
+      title: 源码阅读
+      id: org1198d5f
+      permalink: org1198d5f
+      children:
+        - level: 2
+          title: 静态结构
+          id: orgfc0f08e
+          permalink: orgfc0f08e
+          children:
+            - level: 3
+              title: 目录结构
+              id: orgb32de77
+              permalink: orgb32de77
+            - level: 3
+              title: 关键接口
+              id: org290c6c2
+              permalink: org290c6c2
+            - level: 3
+              title: 系统架构
+              id: org41c8944
+              permalink: org41c8944
+        - level: 2
+          title: 抓大放小：HarborCluster
+          id: orgd9c3526
+          permalink: orgd9c3526
+        - level: 2
+          title: 解决资源间的依赖关系： Dependency Graph
+          id: org75cbb07
+          permalink: org75cbb07
+          children:
+            - level: 3
+              title: AddResource
+              id: org4cb9f3a
+              permalink: org4cb9f3a
+            - level: 3
+              title: Run
+              id: orgdcd001c
+              permalink: orgdcd001c
+            - level: 3
+              title: 初始化
+              id: org73ef8b0
+              permalink: org73ef8b0
+        - level: 2
+          title: 将代码复用率提高到极致：Controller
+          id: orgbd581d5
+          permalink: orgbd581d5
+          children:
+            - level: 3
+              title: 数据结构
+              id: org73ef8b0
+              permalink: org73ef8b0
+            - level: 3
+              title: Reconcile 逻辑
+              id: orgdcd001c
+              permalink: orgdcd001c
+        - level: 2
+          title: 代码即配置：ResourceManager
+          id: orgdcd001c
+          permalink: orgdcd001c
+        - level: 2
+          title: 最后的迷团：ProcessFunc
+          id: orgdcd001c
+          permalink: orgdcd001c
 ---
-
-# Table of Contents
-
-- [Table of Contents](#table-of-contents)
-  - [开始前的准备](#开始前的准备)
-    - [为什么是 Harbor-Operator](#为什么是-harbor-operator)
-      - [Worse is Better?](#worse-is-better)
-        - [The right thing](#the-right-thing)
-        - [Worse is better](#worse-is-better-1)
-      - [Golang - the language](#golang---the-language)
-      - [Kubernetes - the platform](#kubernetes---the-platform)
-  - [目标](#目标)
-  - [源码阅读](#源码阅读)
-    - [静态结构](#静态结构)
-      - [目录结构](#目录结构)
-      - [关键接口](#关键接口)
-      - [系统架构](#系统架构)
-    - [抓大放小：HarborCluster](#抓大放小harborcluster)
-    - [解决资源间的依赖关系： Dependency Graph](#解决资源间的依赖关系-dependency-graph)
-      - [AddResource](#addresource)
-      - [Run](#run)
-      - [初始化](#初始化)
-    - [将代码复用率提高到极致：Controller](#将代码复用率提高到极致controller)
-      - [数据结构](#数据结构)
-      - [Reconcile 逻辑](#reconcile-逻辑)
-    - [代码即配置：ResourceManager](#代码即配置resourcemanager)
-    - [最后的迷团：ProcessFunc](#最后的迷团processfunc)
 
 <!--more-->
 
@@ -249,13 +323,13 @@ Kubebuilder 依然为业务逻辑的多样性保留了一丝净土，而 Harbor 
 
 HarborCluster Controller
 
-![img](./harbor-cluster-controller.png)
+![img](https://blog.thrimbda.com/images/2022/01/30/harbor-cluster-controller.png)
 
 ---
 
 Harbor Core Controller
 
-![img](./harbor-core-controller.png)
+![img](https://blog.thrimbda.com/images/2022/01/30/harbor-core-controller.png)
 
 ---
 
