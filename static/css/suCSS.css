@@ -524,7 +524,7 @@ mark a {
 
 img,
 video {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
   padding: .125rem;
   border: dashed 2px var(--accent);
