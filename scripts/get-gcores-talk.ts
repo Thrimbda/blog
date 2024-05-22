@@ -148,13 +148,13 @@ const cookedData$ = rawGcoresTalkData$.pipe(
         const content = JSON.parse(v.attributes.content);
         const text = content.blocks
           .filter((v: any) => v.type === "unstyled")
-          .map((v: any) => v.text)
+          .map((v: any) => v.text.replace(/\#/, "\\#"))
           .join("\n");
 
         const images = (content.entityMap?.[0]?.data?.images ?? []).map(
           (v: any) => v.path
         );
-        const publishd_at = new Date(v.attributes["published-at"]).getTime();
+        const published_at = new Date(v.attributes["published-at"]).getTime();
         const tags = Object.values(v.relationships as any[])
           .filter((v) => !!v.data)
           .filter((v) => ["topics", "games"].includes(v.data.type))
@@ -162,7 +162,7 @@ const cookedData$ = rawGcoresTalkData$.pipe(
         return {
           text,
           images,
-          publishd_at,
+          published_at,
           tags,
         };
       });
@@ -178,10 +178,10 @@ cookedData$
       console.info(v);
     }),
     map((v: IGcoresTalk): string => {
-      const publishd_time = new Date(v.published_at);
-      const title = `# ${publishd_time.getFullYear()}-${
-        publishd_time.getMonth() + 1
-      }-${publishd_time.getDate()}`;
+      const published_time = new Date(v.published_at);
+      const title = `# ${published_time.getFullYear()}-${
+        published_time.getMonth() + 1
+      }-${published_time.getDate()}`;
       const content = v.text;
       const images = v.images.map((v) => `![${v}](${imageUrl(v)})`).join("\n");
       const tags = v.tags.map((v) => `- ${v}`).join("\n");
@@ -192,7 +192,7 @@ cookedData$
     map(
       (all) =>
         `---\ntitle: '0xc1 的机组日志'\ndate: ${new Date().toISOString()}\n---\n${all.join(
-          "\n\n---\n\n"
+          "\n\n---\n---\n\n"
         )}`
     ),
     tap((v) => {
