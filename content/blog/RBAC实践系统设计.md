@@ -7,7 +7,7 @@ taxonomies:
     - RBAC
 ---
 
-![RBACmodel](http://blog.thrimbda.com/images/2017/05/07/RBACmodel.png)
+![RBACmodel](http://0xc1.space/images/2017/05/07/RBACmodel.png)
 
 ## RBAC 的概念
 

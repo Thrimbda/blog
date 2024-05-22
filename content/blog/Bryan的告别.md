@@ -39,7 +39,7 @@ Bryan最后的故事是在前几天，楼下的电磁门打不开了。当时他
 
 那晚我见到了如此壮丽的晚霞。
 
-![nightfall.jpg](https://blog.thrimbda.com/images/2019/06/10/nightfall.jpg)
+![nightfall.jpg](https://0xc1.space/images/2019/06/10/nightfall.jpg)
 
 ***
 

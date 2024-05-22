@@ -1424,7 +1424,7 @@ Become a sod.
 
 
 毕业的感悟：
-https://blog.thrimbda.com/2018/06/21/%E4%B8%BA%E4%B8%96%E7%95%8C%E4%B9%8B%E5%85%89/
+https://0xc1.space/2018/06/21/%E4%B8%BA%E4%B8%96%E7%95%8C%E4%B9%8B%E5%85%89/
 
 图为：
 1. 正在快乐地磨咖啡豆的阿成。
