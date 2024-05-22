@@ -30,7 +30,7 @@ url.searchParams.set("before", `${Date.now() / 1000}`);
 interface IGcoresTalk {
   text: string;
   images: string[];
-  publishd_at: number;
+  published_at: number;
   tags: string[];
 }
 
@@ -178,7 +178,7 @@ cookedData$
       console.info(v);
     }),
     map((v: IGcoresTalk): string => {
-      const publishd_time = new Date(v.publishd_at);
+      const publishd_time = new Date(v.published_at);
       const title = `# ${publishd_time.getFullYear()}-${
         publishd_time.getMonth() + 1
       }-${publishd_time.getDate()}`;
