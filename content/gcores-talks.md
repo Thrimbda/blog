@@ -1,7 +1,76 @@
 ---
 title: '0xc1 的机组日志'
-date: 2024-05-22T03:48:31.525Z
+date: 2024-06-11T08:53:00.453Z
 ---
+# 2024-6-8
+
+![8f09557f0281674e6b0dbc352a3a5262-1170-2532.png](https://image.gcores.com/8f09557f0281674e6b0dbc352a3a5262-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
+![1f0a358975ce676e561af592a5e08e4b-1170-2532.png](https://image.gcores.com/1f0a358975ce676e561af592a5e08e4b-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
+
+人们经常说：“世界是个巨大的草台班子。”
+
+试想一个没有草台班子的世界：
+
+它一定是静态的，因为一切都已经建构完毕，一切都至臻完美，没有任何改进的可能。
+
+这就是“历史的终结”（化身鞭福侠）。完美的建筑，完美的艺术，科学抵达了它的尽头。人的一生不会在历史上留下任何痕迹。
+
+如果真的有所谓完美就好了。
+
+可惜没有，可惜没有一个高于人类的存在来告知我们什么是好的和完美的。
+完美只存在于永恒的未来想象之中，从这个未来出发给予人前进的推动力。
+
+所以，倘若任何人告诉我们什么是完美的，乃至我们在什么地方已经达到了完美，不管是出于主观还是无意，他一定在骗人。
+
+这些关于完美的谎言，会造就一个个漂亮而虚伪的高楼大厦。而撑起大厦的地基，是普罗大众的血肉之躯。
+
+这些高楼大厦的内部，是一个个高耸入云的草台班子，由摆在眼前的亟待解决的问题、过去的经验和不充分的信息搭建而成。
+
+识破它们精巧的伪装，意识到改变的可能性，还挺好的吧！
+
+- 🔖这段太精彩了
+
+
+---
+---
+
+# 2024-6-6
+
+![6e593dcbeae0b4470c3b6088bda289e4-1170-3294.png](https://image.gcores.com/6e593dcbeae0b4470c3b6088bda289e4-1170-3294.png?x-oss-process=image/quality,q_90/format,webp)
+![ad49ae4032f62c1fb31b5fd8b1e50b39-1170-2532.png](https://image.gcores.com/ad49ae4032f62c1fb31b5fd8b1e50b39-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
+
+星际月卡，小子。
+
+- ✨游戏高光时刻
+
+
+---
+---
+
+# 2024-5-29
+
+
+
+听完了，不光没创死我，甚至感觉很温柔
+
+- 🧑🏻‍🦼虚拟主播
+
+
+---
+---
+
+# 2024-5-28
+
+![fd857cb48a74b1bef1e1589b0b237de2-716-1165.JPG](https://image.gcores.com/fd857cb48a74b1bef1e1589b0b237de2-716-1165.JPG?x-oss-process=image/quality,q_90/format,webp)
+
+拿头咔咔往老朱号列车上创个头破血流
+
+- 🧑🏻‍🦼虚拟主播
+
+
+---
+---
+
 # 2024-5-21
 
 ![0ad6514d154c80a9ef6b4b0d6173d132-3024-4032.HEIC](https://image.gcores.com/0ad6514d154c80a9ef6b4b0d6173d132-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
@@ -1424,7 +1493,7 @@ Become a sod.
 
 
 毕业的感悟：
-https://0xc1.space/2018/06/21/%E4%B8%BA%E4%B8%96%E7%95%8C%E4%B9%8B%E5%85%89/
+https://blog.thrimbda.com/2018/06/21/%E4%B8%BA%E4%B8%96%E7%95%8C%E4%B9%8B%E5%85%89/
 
 图为：
 1. 正在快乐地磨咖啡豆的阿成。
