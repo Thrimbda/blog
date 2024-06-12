@@ -1,11 +1,11 @@
 ---
 title: '0xc1 的机组日志'
-date: 2024-06-11T08:53:00.453Z
+date: 2024-06-12T17:41:37.309Z
 ---
-# 2024-6-8
+原始链接：[Thrimbda 的机组](https://www.gcores.com/users/464460/talks)
+## 2024-6-8
 
-![8f09557f0281674e6b0dbc352a3a5262-1170-2532.png](https://image.gcores.com/8f09557f0281674e6b0dbc352a3a5262-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![1f0a358975ce676e561af592a5e08e4b-1170-2532.png](https://image.gcores.com/1f0a358975ce676e561af592a5e08e4b-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/8f09557f0281674e6b0dbc352a3a5262-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/1f0a358975ce676e561af592a5e08e4b-1170-2532.png?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 人们经常说：“世界是个巨大的草台班子。”
 
@@ -34,10 +34,9 @@ date: 2024-06-11T08:53:00.453Z
 ---
 ---
 
-# 2024-6-6
+## 2024-6-6
 
-![6e593dcbeae0b4470c3b6088bda289e4-1170-3294.png](https://image.gcores.com/6e593dcbeae0b4470c3b6088bda289e4-1170-3294.png?x-oss-process=image/quality,q_90/format,webp)
-![ad49ae4032f62c1fb31b5fd8b1e50b39-1170-2532.png](https://image.gcores.com/ad49ae4032f62c1fb31b5fd8b1e50b39-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/6e593dcbeae0b4470c3b6088bda289e4-1170-3294.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/ad49ae4032f62c1fb31b5fd8b1e50b39-1170-2532.png?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 星际月卡，小子。
 
@@ -47,9 +46,9 @@ date: 2024-06-11T08:53:00.453Z
 ---
 ---
 
-# 2024-5-29
+## 2024-5-29
 
-
+{{ slideshow(slides=[]) }}
 
 听完了，不光没创死我，甚至感觉很温柔
 
@@ -59,7 +58,7 @@ date: 2024-06-11T08:53:00.453Z
 ---
 ---
 
-# 2024-5-28
+## 2024-5-28
 
 ![fd857cb48a74b1bef1e1589b0b237de2-716-1165.JPG](https://image.gcores.com/fd857cb48a74b1bef1e1589b0b237de2-716-1165.JPG?x-oss-process=image/quality,q_90/format,webp)
 
@@ -71,11 +70,9 @@ date: 2024-06-11T08:53:00.453Z
 ---
 ---
 
-# 2024-5-21
+## 2024-5-21
 
-![0ad6514d154c80a9ef6b4b0d6173d132-3024-4032.HEIC](https://image.gcores.com/0ad6514d154c80a9ef6b4b0d6173d132-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![69cea053377d3155d5f7e22e8584f289-4032-3024.HEIC](https://image.gcores.com/69cea053377d3155d5f7e22e8584f289-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![aedf102fa319ce3df2438386f894def4-4032-3024.HEIC](https://image.gcores.com/aedf102fa319ce3df2438386f894def4-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/0ad6514d154c80a9ef6b4b0d6173d132-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/69cea053377d3155d5f7e22e8584f289-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/aedf102fa319ce3df2438386f894def4-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 核聚变好玩，和雨川西蒙合了影，见到了做志愿者的 merz，然而社恐差点没敢上前搭话，腿快走断了，给没能来的小朋友们买了点纪念品，Celeste 随机异变速通震撼我妈，全程硬是没把因为震惊而张开的大嘴合上。可惜周天广州下雨航班被取消所以急匆匆买了深圳回上海的高铁票就没去成周天的。
 
@@ -87,9 +84,9 @@ date: 2024-06-11T08:53:00.453Z
 ---
 ---
 
-# 2024-5-7
+## 2024-5-7
 
-
+{{ slideshow(slides=[]) }}
 
 突然出现！（叉腰）
 敬请期待！（反派狂笑）
@@ -101,9 +98,9 @@ date: 2024-06-11T08:53:00.453Z
 ---
 ---
 
-# 2024-3-22
+## 2024-3-22
 
-
+{{ slideshow(slides=[]) }}
 
 我去看看 Netflix 三体怎么个事
 
@@ -113,10 +110,9 @@ date: 2024-06-11T08:53:00.453Z
 ---
 ---
 
-# 2024-2-20
+## 2024-2-20
 
-![a75d9b0d346d077d060c78312cdf9287-4032-3024.HEIC](https://image.gcores.com/a75d9b0d346d077d060c78312cdf9287-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![dec5d834edc36a230355b2bd39e31e4b-4032-3024.HEIC](https://image.gcores.com/dec5d834edc36a230355b2bd39e31e4b-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/a75d9b0d346d077d060c78312cdf9287-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/dec5d834edc36a230355b2bd39e31e4b-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 回来后和 playground 进行了一个 citywalk，从天安千树走到了外滩。
 
@@ -138,7 +134,7 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2024-2-12
+## 2024-2-12
 
 ![67da102aa90a1895df543f42249a4a79-4032-3024.HEIC](https://image.gcores.com/67da102aa90a1895df543f42249a4a79-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -150,17 +146,9 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2024-2-10
+## 2024-2-10
 
-![b51977b003bbf86090a89eaecca68721-4032-3024.HEIC](https://image.gcores.com/b51977b003bbf86090a89eaecca68721-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![47543f436cacc38b9d1c7279e400b91a-4032-3024.HEIC](https://image.gcores.com/47543f436cacc38b9d1c7279e400b91a-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![334f86b0380e85dbb1e6bf22327fe2d6-4032-3024.HEIC](https://image.gcores.com/334f86b0380e85dbb1e6bf22327fe2d6-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![238168fceb7e42cc33823e0330263e4e-4032-3024.JPG](https://image.gcores.com/238168fceb7e42cc33823e0330263e4e-4032-3024.JPG?x-oss-process=image/quality,q_90/format,webp)
-![778d7709f9b86b7167923ed9591283a4-3024-4032.HEIC](https://image.gcores.com/778d7709f9b86b7167923ed9591283a4-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![c7b78cec949e47fcb5fd57daaed63d36-4032-3024.jpg](https://image.gcores.com/c7b78cec949e47fcb5fd57daaed63d36-4032-3024.jpg?x-oss-process=image/quality,q_90/format,webp)
-![6793266b66c48e1d36eb6c97403314d3-4032-3024.HEIC](https://image.gcores.com/6793266b66c48e1d36eb6c97403314d3-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![56b32513beb82eddcfdbf80f00091c07-4032-3024.HEIC](https://image.gcores.com/56b32513beb82eddcfdbf80f00091c07-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![359389154b5b9ef98fe34f33616443c7-4032-3024.HEIC](https://image.gcores.com/359389154b5b9ef98fe34f33616443c7-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/b51977b003bbf86090a89eaecca68721-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/47543f436cacc38b9d1c7279e400b91a-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/334f86b0380e85dbb1e6bf22327fe2d6-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/238168fceb7e42cc33823e0330263e4e-4032-3024.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/778d7709f9b86b7167923ed9591283a4-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/c7b78cec949e47fcb5fd57daaed63d36-4032-3024.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/6793266b66c48e1d36eb6c97403314d3-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/56b32513beb82eddcfdbf80f00091c07-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/359389154b5b9ef98fe34f33616443c7-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 过去一年照片甄选（1/2）
 
@@ -188,17 +176,9 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2024-2-10
+## 2024-2-10
 
-![c466bc84ff6ec4c44034904a5df3ca2c-3840-2160.JPG](https://image.gcores.com/c466bc84ff6ec4c44034904a5df3ca2c-3840-2160.JPG?x-oss-process=image/quality,q_90/format,webp)
-![b1374ab6b90d7f5c5379196f9fb85757-4032-3024.HEIC](https://image.gcores.com/b1374ab6b90d7f5c5379196f9fb85757-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![a933667d600ddfac174bb18119dad839-4032-3024.HEIC](https://image.gcores.com/a933667d600ddfac174bb18119dad839-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![b2270c1f0cc7a3863947bbbbc70c736f-4032-3024.HEIC](https://image.gcores.com/b2270c1f0cc7a3863947bbbbc70c736f-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![ea2875399dda266598da557815a69e3c-4032-3024.jpg](https://image.gcores.com/ea2875399dda266598da557815a69e3c-4032-3024.jpg?x-oss-process=image/quality,q_90/format,webp)
-![1ef1854595c7d101ba70af553b20f988-3024-4032.HEIC](https://image.gcores.com/1ef1854595c7d101ba70af553b20f988-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![a781c493d8ec3c4cef9fc4d3b36507e3-3024-4032.HEIC](https://image.gcores.com/a781c493d8ec3c4cef9fc4d3b36507e3-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![cce1479e3b6eaa64f6c3817f3d747a43-4032-3024.HEIC](https://image.gcores.com/cce1479e3b6eaa64f6c3817f3d747a43-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![e9f190888047fbfcf88a70397d086bd3-4032-3024.HEIC](https://image.gcores.com/e9f190888047fbfcf88a70397d086bd3-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/c466bc84ff6ec4c44034904a5df3ca2c-3840-2160.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/b1374ab6b90d7f5c5379196f9fb85757-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/a933667d600ddfac174bb18119dad839-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/b2270c1f0cc7a3863947bbbbc70c736f-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/ea2875399dda266598da557815a69e3c-4032-3024.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/1ef1854595c7d101ba70af553b20f988-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/a781c493d8ec3c4cef9fc4d3b36507e3-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/cce1479e3b6eaa64f6c3817f3d747a43-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/e9f190888047fbfcf88a70397d086bd3-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 过去一年照片甄选（2/2）
 
@@ -226,7 +206,7 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2024-2-3
+## 2024-2-3
 
 ![0c6f260a74d238e555a6516d158cf84e-3024-4032.HEIC](https://image.gcores.com/0c6f260a74d238e555a6516d158cf84e-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -240,11 +220,9 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2024-2-2
+## 2024-2-2
 
-![9cade76650e9d727eebe5452abad06a3-1170-2532.png](https://image.gcores.com/9cade76650e9d727eebe5452abad06a3-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![3dc412a80a5b4fce3ba9ad7d2b70643d-1170-2532.png](https://image.gcores.com/3dc412a80a5b4fce3ba9ad7d2b70643d-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![5a310d356fd2239de0fce06293ca029e-1170-2532.png](https://image.gcores.com/5a310d356fd2239de0fce06293ca029e-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/9cade76650e9d727eebe5452abad06a3-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/3dc412a80a5b4fce3ba9ad7d2b70643d-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/5a310d356fd2239de0fce06293ca029e-1170-2532.png?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 我，我好变态😣😖😞😟☹️🙁😕🙂☺️
 
@@ -254,11 +232,9 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2024-2-1
+## 2024-2-1
 
-![24bf415bbcede632a6db6d41db78079d-1170-2532.png](https://image.gcores.com/24bf415bbcede632a6db6d41db78079d-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![57d461a8752ae9abb40f04bf36f6f2ae-1170-2532.png](https://image.gcores.com/57d461a8752ae9abb40f04bf36f6f2ae-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![7f883ba1bd6db5dca3361e31f969eafe-1170-2532.png](https://image.gcores.com/7f883ba1bd6db5dca3361e31f969eafe-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/24bf415bbcede632a6db6d41db78079d-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/57d461a8752ae9abb40f04bf36f6f2ae-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/7f883ba1bd6db5dca3361e31f969eafe-1170-2532.png?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 展示一些大模型 PUA 技巧
 
@@ -268,10 +244,9 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2024-1-31
+## 2024-1-31
 
-![58a5d32e1ed1a187b5ccfc09ec778626-1170-2532.png](https://image.gcores.com/58a5d32e1ed1a187b5ccfc09ec778626-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![e16190241453ab36c7b5da0ce0851f07-1170-2532.png](https://image.gcores.com/e16190241453ab36c7b5da0ce0851f07-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/58a5d32e1ed1a187b5ccfc09ec778626-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/e16190241453ab36c7b5da0ce0851f07-1170-2532.png?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 幻想
 
@@ -301,7 +276,7 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2024-1-23
+## 2024-1-23
 
 ![492a47f514f257c86531aee1ec65bf2b-4032-3024.HEIC](https://image.gcores.com/492a47f514f257c86531aee1ec65bf2b-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -313,7 +288,7 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2024-1-19
+## 2024-1-19
 
 ![d3fa949eb9e1fdc45176d3389b37b092-1000-2697.png](https://image.gcores.com/d3fa949eb9e1fdc45176d3389b37b092-1000-2697.png?x-oss-process=image/quality,q_90/format,webp)
 
@@ -325,9 +300,9 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2024-1-13
+## 2024-1-13
 
-
+{{ slideshow(slides=[]) }}
 
 到现在还能给我深刻印象，猛大帅好猛
 
@@ -337,10 +312,9 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2024-1-6
+## 2024-1-6
 
-![09f4e5a3339f186c10c9525cb53b1da8-4032-3024.JPG](https://image.gcores.com/09f4e5a3339f186c10c9525cb53b1da8-4032-3024.JPG?x-oss-process=image/quality,q_90/format,webp)
-![a163f449e61874be597e19f42a5fecfe-608-416.JPG](https://image.gcores.com/a163f449e61874be597e19f42a5fecfe-608-416.JPG?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/09f4e5a3339f186c10c9525cb53b1da8-4032-3024.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/a163f449e61874be597e19f42a5fecfe-608-416.JPG?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 我的初中同学，也是大学同学。从小到大都身宽体胖，他姓孙，所以在小学的时候被班里的小机灵鬼起了外号叫“孙肥”。
 
@@ -422,7 +396,7 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2024-1-2
+## 2024-1-2
 
 ![e2dbde8c08dc31a6697c6cf6f6da0117-4032-3024.HEIC](https://image.gcores.com/e2dbde8c08dc31a6697c6cf6f6da0117-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -437,10 +411,9 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2024-1-1
+## 2024-1-1
 
-![86270cb1e1f8cd686bacfddfa684f1af-3024-4032.HEIC](https://image.gcores.com/86270cb1e1f8cd686bacfddfa684f1af-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![f41a68e175601e6cc8770b58dc7110dc-1014-253.jpg](https://image.gcores.com/f41a68e175601e6cc8770b58dc7110dc-1014-253.jpg?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/86270cb1e1f8cd686bacfddfa684f1af-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/f41a68e175601e6cc8770b58dc7110dc-1014-253.jpg?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 在新年的第一天成为了 html query 大师，和一些脑瘫网站一边阿米诺斯一边斗智斗勇写出了一些丧心病狂的 query🖕🏿
 
@@ -452,7 +425,7 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2023-12-29
+## 2023-12-29
 
 ![a2e11ba0ac155f8b874a84a73793e97a-1170-2532.png](https://image.gcores.com/a2e11ba0ac155f8b874a84a73793e97a-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
 
@@ -468,7 +441,7 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2023-11-21
+## 2023-11-21
 
 ![641f0526f75d524a69f963117deb5c93-3024-4032.HEIC](https://image.gcores.com/641f0526f75d524a69f963117deb5c93-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -486,11 +459,9 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2023-11-21
+## 2023-11-21
 
-![4c528f8b0e0c68c3fc70b97ea015234c-3024-4032.HEIC](https://image.gcores.com/4c528f8b0e0c68c3fc70b97ea015234c-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![5d68769e46da8aebd5d92044a0554d9d-3024-4032.HEIC](https://image.gcores.com/5d68769e46da8aebd5d92044a0554d9d-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![f492d28a80d94fb837785f5ed2140339-3024-4032.HEIC](https://image.gcores.com/f492d28a80d94fb837785f5ed2140339-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/4c528f8b0e0c68c3fc70b97ea015234c-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/5d68769e46da8aebd5d92044a0554d9d-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/f492d28a80d94fb837785f5ed2140339-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 让我看看是谁把自己钻到裤腿里出不来了？
 
@@ -500,7 +471,7 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2023-11-18
+## 2023-11-18
 
 ![f23b52499e667ef5cd3232926c662e20-3024-4032.HEIC](https://image.gcores.com/f23b52499e667ef5cd3232926c662e20-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -512,17 +483,9 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2023-10-31
+## 2023-10-31
 
-![96aabaa30d96b604660d331f39faf1e4-1170-2532.png](https://image.gcores.com/96aabaa30d96b604660d331f39faf1e4-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![7e7dc3845032ac75c5bc5c2a10eeebea-1170-2532.png](https://image.gcores.com/7e7dc3845032ac75c5bc5c2a10eeebea-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![a0b25204866eaafc3b31181d8adabb2a-3024-4032.jpg](https://image.gcores.com/a0b25204866eaafc3b31181d8adabb2a-3024-4032.jpg?x-oss-process=image/quality,q_90/format,webp)
-![3f6101410870bf18f4c9527fb7dab8c1-4032-3024.HEIC](https://image.gcores.com/3f6101410870bf18f4c9527fb7dab8c1-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![a965db737125ae1f25d8da1410c36318-4032-3024.HEIC](https://image.gcores.com/a965db737125ae1f25d8da1410c36318-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![50c86668c2609df2b477a2fd5da18c4a-4000-3000.JPG](https://image.gcores.com/50c86668c2609df2b477a2fd5da18c4a-4000-3000.JPG?x-oss-process=image/quality,q_90/format,webp)
-![46f37dba0e2faa26d2e214c72fe56829-3024-4032.HEIC](https://image.gcores.com/46f37dba0e2faa26d2e214c72fe56829-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![2f6fa6e361981135dcfadf84824775b3-3024-4032.HEIC](https://image.gcores.com/2f6fa6e361981135dcfadf84824775b3-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![b7e087ef5491a091cf3f04f5f80b55f6-3024-4032.HEIC](https://image.gcores.com/b7e087ef5491a091cf3f04f5f80b55f6-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/96aabaa30d96b604660d331f39faf1e4-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/7e7dc3845032ac75c5bc5c2a10eeebea-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/a0b25204866eaafc3b31181d8adabb2a-3024-4032.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/3f6101410870bf18f4c9527fb7dab8c1-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/a965db737125ae1f25d8da1410c36318-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/50c86668c2609df2b477a2fd5da18c4a-4000-3000.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/46f37dba0e2faa26d2e214c72fe56829-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/2f6fa6e361981135dcfadf84824775b3-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/b7e087ef5491a091cf3f04f5f80b55f6-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 \# 杭州 2 日周末游（拖延一周版）
 
@@ -565,7 +528,7 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2023-10-17
+## 2023-10-17
 
 ![757b95c7953a08adb3af8a77145dface-4032-3024.HEIC](https://image.gcores.com/757b95c7953a08adb3af8a77145dface-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -579,15 +542,9 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2023-10-10
+## 2023-10-10
 
-![3834b297827215ada4723076a9d5f03c-1170-2532.png](https://image.gcores.com/3834b297827215ada4723076a9d5f03c-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![ca0f8add91f4ab9dcfcaac821f921db9-1170-2532.png](https://image.gcores.com/ca0f8add91f4ab9dcfcaac821f921db9-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![61369667553667ca0a3cc84e3fa11f37-1170-2532.png](https://image.gcores.com/61369667553667ca0a3cc84e3fa11f37-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![cfefebc05f51329f0da3f56afac27fa0-1170-2532.png](https://image.gcores.com/cfefebc05f51329f0da3f56afac27fa0-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![ee9a154228677ce291e6d935d16fa9fa-1170-2532.png](https://image.gcores.com/ee9a154228677ce291e6d935d16fa9fa-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![614e6cea3ccb5768a35dbf8d3e2dd353-1170-2532.png](https://image.gcores.com/614e6cea3ccb5768a35dbf8d3e2dd353-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![cca2374a129ddd3ec10ee9c81138d15d-1170-2532.png](https://image.gcores.com/cca2374a129ddd3ec10ee9c81138d15d-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/3834b297827215ada4723076a9d5f03c-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/ca0f8add91f4ab9dcfcaac821f921db9-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/61369667553667ca0a3cc84e3fa11f37-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/cfefebc05f51329f0da3f56afac27fa0-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/ee9a154228677ce291e6d935d16fa9fa-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/614e6cea3ccb5768a35dbf8d3e2dd353-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/cca2374a129ddd3ec10ee9c81138d15d-1170-2532.png?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 \#这七年听了啥
 
@@ -626,7 +583,7 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 ---
 ---
 
-# 2023-10-4
+## 2023-10-4
 
 ![6793266b66c48e1d36eb6c97403314d3-4032-3024.HEIC](https://image.gcores.com/6793266b66c48e1d36eb6c97403314d3-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -658,7 +615,7 @@ rate(jibo_user_spam_report_total[5m]) * 60 * 60 > 100
 ---
 ---
 
-# 2023-10-2
+## 2023-10-2
 
 ![c40fc276ec201c62d4773a0cfb7f1136-1170-2532.png](https://image.gcores.com/c40fc276ec201c62d4773a0cfb7f1136-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
 
@@ -670,7 +627,7 @@ rate(jibo_user_spam_report_total[5m]) * 60 * 60 > 100
 ---
 ---
 
-# 2023-9-28
+## 2023-9-28
 
 ![f9bf3b1251565bad4b845f49a041881f-4032-3024.HEIC](https://image.gcores.com/f9bf3b1251565bad4b845f49a041881f-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -682,10 +639,9 @@ rate(jibo_user_spam_report_total[5m]) * 60 * 60 > 100
 ---
 ---
 
-# 2023-9-16
+## 2023-9-16
 
-![c883134a810e6de8100b45b3d5a4768d-3024-4032.HEIC](https://image.gcores.com/c883134a810e6de8100b45b3d5a4768d-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![c942747dedf44d5ada6b26710f3c26d3-3024-4032.HEIC](https://image.gcores.com/c942747dedf44d5ada6b26710f3c26d3-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/c883134a810e6de8100b45b3d5a4768d-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/c942747dedf44d5ada6b26710f3c26d3-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 之前和hxd们去了一趟玉佛寺，里面都是吓人的金身。
 
@@ -717,14 +673,9 @@ rate(jibo_user_spam_report_total[5m]) * 60 * 60 > 100
 ---
 ---
 
-# 2023-9-13
+## 2023-9-13
 
-![f69af96d5a4390f32056c2c22c90ea09-1170-1881.PNG](https://image.gcores.com/f69af96d5a4390f32056c2c22c90ea09-1170-1881.PNG?x-oss-process=image/quality,q_90/format,webp)
-![067d86a78abb7198bbf84ccf08e10e06-1170-1984.PNG](https://image.gcores.com/067d86a78abb7198bbf84ccf08e10e06-1170-1984.PNG?x-oss-process=image/quality,q_90/format,webp)
-![82209c2855bcaf951be6d523c6c9164f-1170-1920.PNG](https://image.gcores.com/82209c2855bcaf951be6d523c6c9164f-1170-1920.PNG?x-oss-process=image/quality,q_90/format,webp)
-![15c1221ba7c6dd93d808cc30ca6c5e7b-1170-1980.PNG](https://image.gcores.com/15c1221ba7c6dd93d808cc30ca6c5e7b-1170-1980.PNG?x-oss-process=image/quality,q_90/format,webp)
-![c466bc84ff6ec4c44034904a5df3ca2c-3840-2160.JPG](https://image.gcores.com/c466bc84ff6ec4c44034904a5df3ca2c-3840-2160.JPG?x-oss-process=image/quality,q_90/format,webp)
-![d7645de4f6a988bf1a7fc20a44990ad3-1170-1911.PNG](https://image.gcores.com/d7645de4f6a988bf1a7fc20a44990ad3-1170-1911.PNG?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/f69af96d5a4390f32056c2c22c90ea09-1170-1881.PNG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/067d86a78abb7198bbf84ccf08e10e06-1170-1984.PNG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/82209c2855bcaf951be6d523c6c9164f-1170-1920.PNG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/15c1221ba7c6dd93d808cc30ca6c5e7b-1170-1980.PNG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/c466bc84ff6ec4c44034904a5df3ca2c-3840-2160.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/d7645de4f6a988bf1a7fc20a44990ad3-1170-1911.PNG?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 联机游戏的最高配是朋友！
 
@@ -766,7 +717,7 @@ rate(jibo_user_spam_report_total[5m]) * 60 * 60 > 100
 ---
 ---
 
-# 2023-8-22
+## 2023-8-22
 
 ![359389154b5b9ef98fe34f33616443c7-4032-3024.HEIC](https://image.gcores.com/359389154b5b9ef98fe34f33616443c7-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -782,11 +733,9 @@ rate(jibo_user_spam_report_total[5m]) * 60 * 60 > 100
 ---
 ---
 
-# 2023-8-15
+## 2023-8-15
 
-![36839547832b1e064bc81b6b09c873f7-4032-3024.HEIC](https://image.gcores.com/36839547832b1e064bc81b6b09c873f7-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![9e01abcbe1e6b81132721c930e45c480-3024-4032.HEIC](https://image.gcores.com/9e01abcbe1e6b81132721c930e45c480-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![6c4cfd498143240ca5441b58b5f85644-4032-3024.HEIC](https://image.gcores.com/6c4cfd498143240ca5441b58b5f85644-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/36839547832b1e064bc81b6b09c873f7-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/9e01abcbe1e6b81132721c930e45c480-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/6c4cfd498143240ca5441b58b5f85644-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 停车！
 检查！（闻了闻裤腿）
@@ -798,7 +747,7 @@ rate(jibo_user_spam_report_total[5m]) * 60 * 60 > 100
 ---
 ---
 
-# 2023-8-12
+## 2023-8-12
 
 ![952691120f5a3d6daa7ad2fde19fc897-4032-3024.HEIC](https://image.gcores.com/952691120f5a3d6daa7ad2fde19fc897-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -810,11 +759,9 @@ rate(jibo_user_spam_report_total[5m]) * 60 * 60 > 100
 ---
 ---
 
-# 2023-8-4
+## 2023-8-4
 
-![9fb2ad4df4ca03fc8b2dfa6fe521c519-469-784.JPG](https://image.gcores.com/9fb2ad4df4ca03fc8b2dfa6fe521c519-469-784.JPG?x-oss-process=image/quality,q_90/format,webp)
-![8959db22a625fb8f6fa6ea6526307263-680-680.JPG](https://image.gcores.com/8959db22a625fb8f6fa6ea6526307263-680-680.JPG?x-oss-process=image/quality,q_90/format,webp)
-![044ff4c85c7817cd32da3ed15a994726-1920-1080.JPG](https://image.gcores.com/044ff4c85c7817cd32da3ed15a994726-1920-1080.JPG?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/9fb2ad4df4ca03fc8b2dfa6fe521c519-469-784.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/8959db22a625fb8f6fa6ea6526307263-680-680.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/044ff4c85c7817cd32da3ed15a994726-1920-1080.JPG?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 终于我们的项目也到了需要用户系统的时刻了，但我再也不想写crud了，于是就开始进行网上冲浪。
 
@@ -843,7 +790,7 @@ rate(jibo_user_spam_report_total[5m]) * 60 * 60 > 100
 ---
 ---
 
-# 2023-7-21
+## 2023-7-21
 
 ![d8c8d3a437d23a55686ddb17f6b58882-490-453.JPG](https://image.gcores.com/d8c8d3a437d23a55686ddb17f6b58882-490-453.JPG?x-oss-process=image/quality,q_90/format,webp)
 
@@ -886,17 +833,9 @@ rate(jibo_user_spam_report_total[5m]) * 60 * 60 > 100
 ---
 ---
 
-# 2023-7-18
+## 2023-7-18
 
-![c6097d7b3a844bef3d0b0089f8ca68ac-4032-3024.HEIC](https://image.gcores.com/c6097d7b3a844bef3d0b0089f8ca68ac-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![2bcaf33ecf5669ec98f079de29fc7b8b-3024-4032.HEIC](https://image.gcores.com/2bcaf33ecf5669ec98f079de29fc7b8b-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![9f6f0d490efa0cacadd794277f361090-1280-2274.jpg](https://image.gcores.com/9f6f0d490efa0cacadd794277f361090-1280-2274.jpg?x-oss-process=image/quality,q_90/format,webp)
-![e1c9640a9329eef2a67e306f13b12af9-3024-4032.HEIC](https://image.gcores.com/e1c9640a9329eef2a67e306f13b12af9-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![d45213c61cf8640466c9504bd9b1cb2d-4032-3024.HEIC](https://image.gcores.com/d45213c61cf8640466c9504bd9b1cb2d-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![ce91d51e144654b7e04ec6e22152bb7c-4032-3024.HEIC](https://image.gcores.com/ce91d51e144654b7e04ec6e22152bb7c-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![56b32513beb82eddcfdbf80f00091c07-4032-3024.HEIC](https://image.gcores.com/56b32513beb82eddcfdbf80f00091c07-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![4bff14385ea667879f82c402f8b9bf0b-4032-3024.JPG](https://image.gcores.com/4bff14385ea667879f82c402f8b9bf0b-4032-3024.JPG?x-oss-process=image/quality,q_90/format,webp)
-![c6a6954781acad67da11355110ab6e0e-3264-2448.JPG](https://image.gcores.com/c6a6954781acad67da11355110ab6e0e-3264-2448.JPG?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/c6097d7b3a844bef3d0b0089f8ca68ac-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/2bcaf33ecf5669ec98f079de29fc7b8b-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/9f6f0d490efa0cacadd794277f361090-1280-2274.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/e1c9640a9329eef2a67e306f13b12af9-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/d45213c61cf8640466c9504bd9b1cb2d-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/ce91d51e144654b7e04ec6e22152bb7c-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/56b32513beb82eddcfdbf80f00091c07-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/4bff14385ea667879f82c402f8b9bf0b-4032-3024.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/c6a6954781acad67da11355110ab6e0e-3264-2448.JPG?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 \# 缘起
 
@@ -979,11 +918,9 @@ rate(jibo_user_spam_report_total[5m]) * 60 * 60 > 100
 ---
 ---
 
-# 2023-7-9
+## 2023-7-9
 
-![9c5f3192b90117b8a5b2476292b27e70-1344-2011.png](https://image.gcores.com/9c5f3192b90117b8a5b2476292b27e70-1344-2011.png?x-oss-process=image/quality,q_90/format,webp)
-![f3d68168a27dccb162a806d1d97783db-3024-4032.jpg](https://image.gcores.com/f3d68168a27dccb162a806d1d97783db-3024-4032.jpg?x-oss-process=image/quality,q_90/format,webp)
-![b1b2912067ac39eefe8cf3a8e806dbbd-1010-920.jpg](https://image.gcores.com/b1b2912067ac39eefe8cf3a8e806dbbd-1010-920.jpg?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/9c5f3192b90117b8a5b2476292b27e70-1344-2011.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/f3d68168a27dccb162a806d1d97783db-3024-4032.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/b1b2912067ac39eefe8cf3a8e806dbbd-1010-920.jpg?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 发现几年前用来恶搞大学室友做的静态网站还在线，这就说明这几年来他一直在给这个域名付费，我因此陷入了回忆之中。
 https://declaration.vanderchen.com/
@@ -1022,10 +959,9 @@ https://declaration.vanderchen.com/
 ---
 ---
 
-# 2023-7-7
+## 2023-7-7
 
-![f0b945b32623c54764094a45c151488c-2625-1675.jpg](https://image.gcores.com/f0b945b32623c54764094a45c151488c-2625-1675.jpg?x-oss-process=image/quality,q_90/format,webp)
-![f93508ee2fbada73faf8d7488d51c50a-474-496.jpg](https://image.gcores.com/f93508ee2fbada73faf8d7488d51c50a-474-496.jpg?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/f0b945b32623c54764094a45c151488c-2625-1675.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/f93508ee2fbada73faf8d7488d51c50a-474-496.jpg?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 铮铮买了个新的 iPad，然后我们打算尝试一下用它当我们在线会议室的白板，飞书的白板功能还挺好用的，所有的参与者都可以写。
 
@@ -1037,10 +973,9 @@ https://declaration.vanderchen.com/
 ---
 ---
 
-# 2023-7-2
+## 2023-7-2
 
-![8dda3e4ad21c1ed029f76b3ecec43bd2-1170-2532.png](https://image.gcores.com/8dda3e4ad21c1ed029f76b3ecec43bd2-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![9210850f361167e002cd61757f48c48f-474-266.JPG](https://image.gcores.com/9210850f361167e002cd61757f48c48f-474-266.JPG?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/8dda3e4ad21c1ed029f76b3ecec43bd2-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/9210850f361167e002cd61757f48c48f-474-266.JPG?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 一个月后我还在 mili 宇宙中徜徉；
 这首歌叫 Summoning 101。
@@ -1102,7 +1037,7 @@ Owoooooooooooooooooooo
 ---
 ---
 
-# 2023-7-1
+## 2023-7-1
 
 ![9bfa870e02b3597e2b764dfa53a267d9-3024-4032.HEIC](https://image.gcores.com/9bfa870e02b3597e2b764dfa53a267d9-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1118,7 +1053,7 @@ Owoooooooooooooooooooo
 ---
 ---
 
-# 2023-6-29
+## 2023-6-29
 
 ![1773cf6a3297ccd10c75ebe98273091b-4032-3024.HEIC](https://image.gcores.com/1773cf6a3297ccd10c75ebe98273091b-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1132,11 +1067,9 @@ Owoooooooooooooooooooo
 ---
 ---
 
-# 2023-6-27
+## 2023-6-27
 
-![e0d7d87cfa07caeab5780bba38c92362-600-421.JPG](https://image.gcores.com/e0d7d87cfa07caeab5780bba38c92362-600-421.JPG?x-oss-process=image/quality,q_90/format,webp)
-![9d7ae6f86b74ca22666ee227f8ed466e-4032-3024.JPG](https://image.gcores.com/9d7ae6f86b74ca22666ee227f8ed466e-4032-3024.JPG?x-oss-process=image/quality,q_90/format,webp)
-![9527c5b1d278cd768648de43956c9adb-1170-238.PNG](https://image.gcores.com/9527c5b1d278cd768648de43956c9adb-1170-238.PNG?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/e0d7d87cfa07caeab5780bba38c92362-600-421.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/9d7ae6f86b74ca22666ee227f8ed466e-4032-3024.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/9527c5b1d278cd768648de43956c9adb-1170-238.PNG?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 猜猜今天谁过生日☺️
 
@@ -1149,12 +1082,9 @@ Owoooooooooooooooooooo
 ---
 ---
 
-# 2023-6-26
+## 2023-6-26
 
-![25642debb61c6dd4f98820cc94643329-1920-1080.JPG](https://image.gcores.com/25642debb61c6dd4f98820cc94643329-1920-1080.JPG?x-oss-process=image/quality,q_90/format,webp)
-![91724b51ad1ce914427eb072fac946da-3024-4032.jpg](https://image.gcores.com/91724b51ad1ce914427eb072fac946da-3024-4032.jpg?x-oss-process=image/quality,q_90/format,webp)
-![24598604fa7c0078ae9212417f59b39b-4032-3024.HEIC](https://image.gcores.com/24598604fa7c0078ae9212417f59b39b-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![367cc0d9679454f2c7d9d601ada6c966-3024-4032.HEIC](https://image.gcores.com/367cc0d9679454f2c7d9d601ada6c966-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/25642debb61c6dd4f98820cc94643329-1920-1080.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/91724b51ad1ce914427eb072fac946da-3024-4032.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/24598604fa7c0078ae9212417f59b39b-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/367cc0d9679454f2c7d9d601ada6c966-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 和铮铮一起工作后生物钟彻底向西漂移了。
 
@@ -1191,10 +1121,9 @@ Owoooooooooooooooooooo
 ---
 ---
 
-# 2023-6-20
+## 2023-6-20
 
-![d3fd62dce7562dbe53a42f5daf6f6499-1170-2532.png](https://image.gcores.com/d3fd62dce7562dbe53a42f5daf6f6499-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![0e5e381ec1a4a08fddf8b7fc0410925e-1170-2532.png](https://image.gcores.com/0e5e381ec1a4a08fddf8b7fc0410925e-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/d3fd62dce7562dbe53a42f5daf6f6499-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/0e5e381ec1a4a08fddf8b7fc0410925e-1170-2532.png?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 "nice song, and maybe a silent story behind to dig."
 
@@ -1213,16 +1142,9 @@ that's true about lot of things. Finally gets your attention only after it keeps
 ---
 ---
 
-# 2023-6-19
+## 2023-6-19
 
-![15b3d0c12afb72b128ea21f53d626985-4032-3024.HEIC](https://image.gcores.com/15b3d0c12afb72b128ea21f53d626985-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![b72b9c170f15d0d82c6ca62f195e0107-4032-3024.HEIC](https://image.gcores.com/b72b9c170f15d0d82c6ca62f195e0107-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![2337197c7813f0794bbfb10da0f0b924-3024-4032.HEIC](https://image.gcores.com/2337197c7813f0794bbfb10da0f0b924-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![090bfc1a12b27d6b624ac26ed2e2c1b9-3024-4032.HEIC](https://image.gcores.com/090bfc1a12b27d6b624ac26ed2e2c1b9-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![248dd9c29414630e48e41f1340136be7-1080-1920.JPG](https://image.gcores.com/248dd9c29414630e48e41f1340136be7-1080-1920.JPG?x-oss-process=image/quality,q_90/format,webp)
-![bdb516e9fc618958d6af6bea16dca2ce-3024-4032.HEIC](https://image.gcores.com/bdb516e9fc618958d6af6bea16dca2ce-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![e1436f331dda0fdc8f7e4ad633a34212-4032-3024.HEIC](https://image.gcores.com/e1436f331dda0fdc8f7e4ad633a34212-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![0309306da15704bcc69ad10326c25aaf-4032-3024.HEIC](https://image.gcores.com/0309306da15704bcc69ad10326c25aaf-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/15b3d0c12afb72b128ea21f53d626985-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/b72b9c170f15d0d82c6ca62f195e0107-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/2337197c7813f0794bbfb10da0f0b924-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/090bfc1a12b27d6b624ac26ed2e2c1b9-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/248dd9c29414630e48e41f1340136be7-1080-1920.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/bdb516e9fc618958d6af6bea16dca2ce-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/e1436f331dda0fdc8f7e4ad633a34212-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/0309306da15704bcc69ad10326c25aaf-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 今天下大雨，而且晚上也没有饿到想要出门吃饭；想起来家里还有一箱去年买的营多捞面就煮了两包。
 
@@ -1259,7 +1181,7 @@ that's true about lot of things. Finally gets your attention only after it keeps
 ---
 ---
 
-# 2023-6-18
+## 2023-6-18
 
 ![4a381e774ea3648c532d967ea7b307ef-3024-4032.JPG](https://image.gcores.com/4a381e774ea3648c532d967ea7b307ef-3024-4032.JPG?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1275,11 +1197,9 @@ that's true about lot of things. Finally gets your attention only after it keeps
 ---
 ---
 
-# 2023-6-18
+## 2023-6-18
 
-![ea5aa997859652bed50572928ade4c23-676-1021.png](https://image.gcores.com/ea5aa997859652bed50572928ade4c23-676-1021.png?x-oss-process=image/quality,q_90/format,webp)
-![2be3decd0505ba4449ab42d25e3f86cf-1170-1950.PNG](https://image.gcores.com/2be3decd0505ba4449ab42d25e3f86cf-1170-1950.PNG?x-oss-process=image/quality,q_90/format,webp)
-![3c64c2a15eb835039636e7f4e2603003-858-219.PNG](https://image.gcores.com/3c64c2a15eb835039636e7f4e2603003-858-219.PNG?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/ea5aa997859652bed50572928ade4c23-676-1021.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/2be3decd0505ba4449ab42d25e3f86cf-1170-1950.PNG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/3c64c2a15eb835039636e7f4e2603003-858-219.PNG?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 敲骨吸髓，敲的是我自己的骨头和骨髓吧！
 
@@ -1304,9 +1224,9 @@ that's true about lot of things. Finally gets your attention only after it keeps
 ---
 ---
 
-# 2023-6-15
+## 2023-6-15
 
-
+{{ slideshow(slides=[]) }}
 
 我超上海地震了？
 
@@ -1316,10 +1236,9 @@ that's true about lot of things. Finally gets your attention only after it keeps
 ---
 ---
 
-# 2023-6-13
+## 2023-6-13
 
-![9efd6bf334e2fbc0675ab4c3bad6f4e4-1170-2532.png](https://image.gcores.com/9efd6bf334e2fbc0675ab4c3bad6f4e4-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![fc9c2771098a9f738481c21521e7cb50-1170-2532.png](https://image.gcores.com/fc9c2771098a9f738481c21521e7cb50-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/9efd6bf334e2fbc0675ab4c3bad6f4e4-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/fc9c2771098a9f738481c21521e7cb50-1170-2532.png?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 重新测了 mbti- -
 我以为自己早已是个 e 人了，说明人没那么容易变？
@@ -1336,7 +1255,7 @@ that's true about lot of things. Finally gets your attention only after it keeps
 ---
 ---
 
-# 2023-6-12
+## 2023-6-12
 
 ![7a94cb61c6142048180d00821366b9b9-680-453.jpg](https://image.gcores.com/7a94cb61c6142048180d00821366b9b9-680-453.jpg?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1348,12 +1267,9 @@ that's true about lot of things. Finally gets your attention only after it keeps
 ---
 ---
 
-# 2023-6-12
+## 2023-6-12
 
-![b2a1891aa77b82a301277ca30ac71996-4032-3024.HEIC](https://image.gcores.com/b2a1891aa77b82a301277ca30ac71996-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![d5296095bc9579f85f88553cc0521f52-4032-3024.HEIC](https://image.gcores.com/d5296095bc9579f85f88553cc0521f52-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![a6ace1a5db85cd45eb1812874c504e5f-4032-3024.HEIC](https://image.gcores.com/a6ace1a5db85cd45eb1812874c504e5f-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![1c4b8afc73d18b2d4962e1de11c5fb6d-3024-4032.HEIC](https://image.gcores.com/1c4b8afc73d18b2d4962e1de11c5fb6d-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/b2a1891aa77b82a301277ca30ac71996-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/d5296095bc9579f85f88553cc0521f52-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/a6ace1a5db85cd45eb1812874c504e5f-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/1c4b8afc73d18b2d4962e1de11c5fb6d-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 回到杨浦去和朋友们一起桌游聚会，第一次见到了狐狸，但桌游店果然没有 playground 温暖的家那么好🍻
 
@@ -1369,7 +1285,7 @@ that's true about lot of things. Finally gets your attention only after it keeps
 ---
 ---
 
-# 2023-6-10
+## 2023-6-10
 
 ![ba008ca8d6129005bb70adc0e8710d93-3852-2098.png](https://image.gcores.com/ba008ca8d6129005bb70adc0e8710d93-3852-2098.png?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1383,11 +1299,9 @@ vscode 1.79.0 实装了 Copilot Chat，虽说已经用过 ChatGPT 或者 BingAI�
 ---
 ---
 
-# 2023-6-9
+## 2023-6-9
 
-![565985ca2d4054f3d428328dfeaa0159-4032-3024.HEIC](https://image.gcores.com/565985ca2d4054f3d428328dfeaa0159-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![26ed2286dabe0c1638d3d31d849bbe56-4032-3024.HEIC](https://image.gcores.com/26ed2286dabe0c1638d3d31d849bbe56-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![e28cbd568ec621a0d35c2caeea87ece4-4032-3024.HEIC](https://image.gcores.com/e28cbd568ec621a0d35c2caeea87ece4-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/565985ca2d4054f3d428328dfeaa0159-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/26ed2286dabe0c1638d3d31d849bbe56-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/e28cbd568ec621a0d35c2caeea87ece4-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 最后一滴…
 
@@ -1399,7 +1313,7 @@ vscode 1.79.0 实装了 Copilot Chat，虽说已经用过 ChatGPT 或者 BingAI�
 ---
 ---
 
-# 2023-6-9
+## 2023-6-9
 
 ![6f170b3369073ff42e51787b77973e89-4032-3024.HEIC](https://image.gcores.com/6f170b3369073ff42e51787b77973e89-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1413,10 +1327,9 @@ vscode 1.79.0 实装了 Copilot Chat，虽说已经用过 ChatGPT 或者 BingAI�
 ---
 ---
 
-# 2023-6-7
+## 2023-6-7
 
-![0f0c59e1bad89bf9d135259ad7e8cb04-1170-2532.png](https://image.gcores.com/0f0c59e1bad89bf9d135259ad7e8cb04-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
-![14525bdb0690e3c16e8436586143cb0a-1170-2532.png](https://image.gcores.com/14525bdb0690e3c16e8436586143cb0a-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/0f0c59e1bad89bf9d135259ad7e8cb04-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/14525bdb0690e3c16e8436586143cb0a-1170-2532.png?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 这周中断了对 millennium parade 的探索，由点及面地开始听我能找到的所有的 mili 歌曲；
 我称之为赛博朋克魔女音乐剧；
@@ -1457,10 +1370,9 @@ Become a sod.
 ---
 ---
 
-# 2023-6-7
+## 2023-6-7
 
-![c28eb6a3a6a2e936698a26970859a95f-4032-3024.HEIC](https://image.gcores.com/c28eb6a3a6a2e936698a26970859a95f-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![64b474500582c1f6d282576f50e30bb0-1170-2532.png](https://image.gcores.com/64b474500582c1f6d282576f50e30bb0-1170-2532.png?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/c28eb6a3a6a2e936698a26970859a95f-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/64b474500582c1f6d282576f50e30bb0-1170-2532.png?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 在新加坡读博的阿成终于在疫情管制放开后的今年回了趟国，在我家小住的两天成为了他这次回来的第四个目的地。
 
@@ -1506,7 +1418,7 @@ https://blog.thrimbda.com/2018/06/21/%E4%B8%BA%E4%B8%96%E7%95%8C%E4%B9%8B%E5%85%
 ---
 ---
 
-# 2023-6-5
+## 2023-6-5
 
 ![ceab58dca303a143e75fc86bdcbc5176-4032-3024.HEIC](https://image.gcores.com/ceab58dca303a143e75fc86bdcbc5176-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1519,10 +1431,9 @@ T恤太美了，太喜欢了，赞美 playground
 ---
 ---
 
-# 2023-6-3
+## 2023-6-3
 
-![38d764e07f6392a87d21d33afaec487d-4032-3024.HEIC](https://image.gcores.com/38d764e07f6392a87d21d33afaec487d-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![f16a43210a27542233a3e5ecbd1bef8a-1170-1261.JPG](https://image.gcores.com/f16a43210a27542233a3e5ecbd1bef8a-1170-1261.JPG?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/38d764e07f6392a87d21d33afaec487d-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/f16a43210a27542233a3e5ecbd1bef8a-1170-1261.JPG?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 只剩下嗓子没好利索，也很烦于因为每分钟要清嗓子或者咳嗽而睡不着觉；
 
@@ -1579,10 +1490,9 @@ T恤太美了，太喜欢了，赞美 playground
 ---
 ---
 
-# 2023-6-1
+## 2023-6-1
 
-![778d7709f9b86b7167923ed9591283a4-3024-4032.HEIC](https://image.gcores.com/778d7709f9b86b7167923ed9591283a4-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![f16a43210a27542233a3e5ecbd1bef8a-1170-1261.JPG](https://image.gcores.com/f16a43210a27542233a3e5ecbd1bef8a-1170-1261.JPG?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/778d7709f9b86b7167923ed9591283a4-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/f16a43210a27542233a3e5ecbd1bef8a-1170-1261.JPG?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 1. 去麦当劳被送了超小小甜筒，真开心；
 2. 生病几天狂看 re0 40 集的精神状态。
@@ -1593,7 +1503,7 @@ T恤太美了，太喜欢了，赞美 playground
 ---
 ---
 
-# 2023-5-30
+## 2023-5-30
 
 ![d98738249c875b24c61230ae291af761-474-496.JPG](https://image.gcores.com/d98738249c875b24c61230ae291af761-474-496.JPG?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1607,10 +1517,9 @@ T恤太美了，太喜欢了，赞美 playground
 ---
 ---
 
-# 2023-5-24
+## 2023-5-24
 
-![2b3ea5f695fe284c14a07220364ad246-1080-1920.JPG](https://image.gcores.com/2b3ea5f695fe284c14a07220364ad246-1080-1920.JPG?x-oss-process=image/quality,q_90/format,webp)
-![80dcb43413e77e3b21c45754e64b0d54-3024-4032.HEIC](https://image.gcores.com/80dcb43413e77e3b21c45754e64b0d54-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/2b3ea5f695fe284c14a07220364ad246-1080-1920.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/80dcb43413e77e3b21c45754e64b0d54-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 睡不着，反而脑子里全都是郭达老师的陕西方言版《将进酒》
 咱们想象一下这个酒局。
@@ -1634,7 +1543,7 @@ T恤太美了，太喜欢了，赞美 playground
 ---
 ---
 
-# 2023-5-21
+## 2023-5-21
 
 ![74efcbc1a10ca7885ddf26280fd9eb11-240-241.GIF](https://image.gcores.com/74efcbc1a10ca7885ddf26280fd9eb11-240-241.GIF?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1646,7 +1555,7 @@ T恤太美了，太喜欢了，赞美 playground
 ---
 ---
 
-# 2023-5-18
+## 2023-5-18
 
 ![ea16b40c3f132fe58d5ea94b5f5f98f1-3024-4032.HEIC](https://image.gcores.com/ea16b40c3f132fe58d5ea94b5f5f98f1-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1660,10 +1569,9 @@ T恤太美了，太喜欢了，赞美 playground
 ---
 ---
 
-# 2023-5-13
+## 2023-5-13
 
-![da8855cd5570c13ed7e0366896f8066d-4032-3024.HEIC](https://image.gcores.com/da8855cd5570c13ed7e0366896f8066d-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![ca2134cd03e5526aaaa480c21c9d1f33-3024-4032.HEIC](https://image.gcores.com/ca2134cd03e5526aaaa480c21c9d1f33-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/da8855cd5570c13ed7e0366896f8066d-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/ca2134cd03e5526aaaa480c21c9d1f33-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 用上周研发成功的椒麻鸡招待了朋友们（卖相可真差！），见到了从毕业后就没见过的耗子。
 
@@ -1684,11 +1592,9 @@ T恤太美了，太喜欢了，赞美 playground
 ---
 ---
 
-# 2023-5-6
+## 2023-5-6
 
-![623f1214355893cb1184832cae8fe6b1-4032-3024.HEIC](https://image.gcores.com/623f1214355893cb1184832cae8fe6b1-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![8818749d15dd6cc556cc0c4632dd220f-4032-3024.HEIC](https://image.gcores.com/8818749d15dd6cc556cc0c4632dd220f-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![ef6d25e1405636ef9c3f80899bbea043-4032-3024.HEIC](https://image.gcores.com/ef6d25e1405636ef9c3f80899bbea043-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/623f1214355893cb1184832cae8fe6b1-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/8818749d15dd6cc556cc0c4632dd220f-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/ef6d25e1405636ef9c3f80899bbea043-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 五一回西安没有去小南门的机会，也没吃上我最喜欢的西域椒麻鸡；
 
@@ -1707,10 +1613,9 @@ P.S. 我在发这条机脖的时候激动地手抖了一下可乐洒到配菜上
 ---
 ---
 
-# 2023-5-6
+## 2023-5-6
 
-![a0bf089211d8d0eafb8d4fd3bc3bff7b-4032-3024.HEIC](https://image.gcores.com/a0bf089211d8d0eafb8d4fd3bc3bff7b-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![a450bd2550bac678bd392520d11f5261-4032-3024.HEIC](https://image.gcores.com/a450bd2550bac678bd392520d11f5261-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/a0bf089211d8d0eafb8d4fd3bc3bff7b-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/a450bd2550bac678bd392520d11f5261-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 （这整本书都太精彩了）
 
@@ -1732,7 +1637,7 @@ well，经年累月少年终将不再，只是不知道留下的那个人是谁�
 ---
 ---
 
-# 2023-5-5
+## 2023-5-5
 
 ![d959c888feee20df3b26b773c2a8a702-425-425.JPG](https://image.gcores.com/d959c888feee20df3b26b773c2a8a702-425-425.JPG?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1746,7 +1651,7 @@ well，经年累月少年终将不再，只是不知道留下的那个人是谁�
 ---
 ---
 
-# 2023-4-23
+## 2023-4-23
 
 ![18ac0205c6c06020e667122a33ac7c27-4032-3024.JPG](https://image.gcores.com/18ac0205c6c06020e667122a33ac7c27-4032-3024.JPG?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1762,7 +1667,7 @@ well，经年累月少年终将不再，只是不知道留下的那个人是谁�
 ---
 ---
 
-# 2023-4-20
+## 2023-4-20
 
 ![06692b73533548d9af0b770b793fa836-1920-1080.JPG](https://image.gcores.com/06692b73533548d9af0b770b793fa836-1920-1080.JPG?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1788,9 +1693,9 @@ well，经年累月少年终将不再，只是不知道留下的那个人是谁�
 ---
 ---
 
-# 2023-4-14
+## 2023-4-14
 
-
+{{ slideshow(slides=[]) }}
 
 OuterWilds 星际拓荒！！！
 听暴雪四期过的！有龙马重轻西蒙陪着再也没有深空恐惧了！宇宙没有恶意！
@@ -1801,7 +1706,7 @@ OuterWilds 星际拓荒！！！
 ---
 ---
 
-# 2023-4-12
+## 2023-4-12
 
 ![238168fceb7e42cc33823e0330263e4e-4032-3024.JPG](https://image.gcores.com/238168fceb7e42cc33823e0330263e4e-4032-3024.JPG?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1817,7 +1722,7 @@ Praise the mighty Playground.
 ---
 ---
 
-# 2023-3-27
+## 2023-3-27
 
 ![28d97bd200cc0cfa42fb964c8d84c353.HEIC](https://image.gcores.com/28d97bd200cc0cfa42fb964c8d84c353.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1831,10 +1736,9 @@ Praise the mighty Playground.
 ---
 ---
 
-# 2023-3-19
+## 2023-3-19
 
-![1e9b4c9e24e745d8b8901384dcf6dce1.HEIC](https://image.gcores.com/1e9b4c9e24e745d8b8901384dcf6dce1.HEIC?x-oss-process=image/quality,q_90/format,webp)
-![0af46340808ef62e84705932cbf1ecda.HEIC](https://image.gcores.com/0af46340808ef62e84705932cbf1ecda.HEIC?x-oss-process=image/quality,q_90/format,webp)
+{{ slideshow(slides=["https://image.gcores.com/1e9b4c9e24e745d8b8901384dcf6dce1.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/0af46340808ef62e84705932cbf1ecda.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
 
 
 陈s 送了我一件 Olivera 冠军队服！
@@ -1855,7 +1759,7 @@ Praise the mighty Playground.
 ---
 ---
 
-# 2023-2-7
+## 2023-2-7
 
 ![37f785daae8d51ec221250fce7c9168f.GIF](https://image.gcores.com/37f785daae8d51ec221250fce7c9168f.GIF?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1867,7 +1771,7 @@ Praise the mighty Playground.
 ---
 ---
 
-# 2023-1-20
+## 2023-1-20
 
 ![b873fffc348ebe5f742121572e64513a.HEIC](https://image.gcores.com/b873fffc348ebe5f742121572e64513a.HEIC?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1887,7 +1791,7 @@ Praise the mighty Playground.
 ---
 ---
 
-# 2023-1-15
+## 2023-1-15
 
 ![cddc11dbffe501ec1e7ab63ce7522298.png](https://image.gcores.com/cddc11dbffe501ec1e7ab63ce7522298.png?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1915,7 +1819,7 @@ Praise the mighty Playground.
 ---
 ---
 
-# 2023-1-15
+## 2023-1-15
 
 ![6ebd5d5fbe43406afe222e7d3d66f5b5.png](https://image.gcores.com/6ebd5d5fbe43406afe222e7d3d66f5b5.png?x-oss-process=image/quality,q_90/format,webp)
 
@@ -1933,9 +1837,9 @@ Praise the mighty Playground.
 ---
 ---
 
-# 2023-1-15
+## 2023-1-15
 
-
+{{ slideshow(slides=[]) }}
 
 夏日重现太好了，太好了。
 昨晚睡觉甚至还梦见了。
@@ -1947,7 +1851,7 @@ Praise the mighty Playground.
 ---
 ---
 
-# 2023-1-4
+## 2023-1-4
 
 ![1e305210-d41c-4dfd-aec7-5c1223bb50c6.JPG](https://image.gcores.com/1e305210-d41c-4dfd-aec7-5c1223bb50c6.JPG?x-oss-process=image/quality,q_90/format,webp)
 

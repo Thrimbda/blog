@@ -80,3 +80,86 @@ initializeTheme();
 window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", initializeTheme);
+
+const ELS = (selector, parent) =>
+  (parent || document).querySelectorAll(selector);
+const EL = (selector, parent) => (parent || document).querySelector(selector);
+const mod = (n, m) => ((n % m) + m) % m;
+
+ELS(".slider-container").forEach((EL_parent) => {
+  const EL_slider = EL(".slider", EL_parent);
+  const ELS_items = ELS(".slider-item", EL_parent);
+  const ELS_dots = ELS(".slider-dot", EL_parent);
+  const total = ELS_items.length;
+  let c = 0;
+  let startX = 0;
+  let distance = 0;
+
+  const setDotActive = () => {
+    ELS_dots.forEach((EL_dot, i) => {
+      EL_dot.classList.toggle("slider-dot-active", i === c);
+    });
+  };
+
+  setDotActive();
+
+  const anim = () => {
+    EL_slider.style.transform = `translateX(-${c * 100}%)`;
+  };
+  const prev = () => {
+    distance = 0;
+    startX = 0;
+    c = mod(c - 1, total);
+    setDotActive();
+    anim();
+  };
+  const next = () => {
+    distance = 0;
+    startX = 0;
+    c = mod(c + 1, total);
+    setDotActive();
+    anim();
+  };
+
+  EL(".slider-prev", EL_parent).addEventListener("click", prev);
+  EL(".slider-next", EL_parent).addEventListener("click", next);
+
+  ELS(".slider-dot", EL_parent).forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      c = i;
+      setDotActive();
+      anim();
+    });
+  });
+
+  // touch event listener
+  EL_slider.addEventListener("touchstart", (e) => {
+    if (e.target.tagName !== "IMG") {
+      return;
+    }
+    startX = e.touches[0].clientX;
+  });
+
+  EL_slider.addEventListener("touchmove", (e) => {
+    if (e.target.tagName !== "IMG") {
+      return;
+    }
+    distance = e.touches[0].clientX - startX;
+    EL_slider.style.transform = `translateX(-${
+      c * 100 - (distance / EL_slider.offsetWidth) * 100
+    }%)`;
+  });
+
+  EL_slider.addEventListener("touchend", (e) => {
+    if (e.target.tagName !== "IMG") {
+      return;
+    }
+    if (distance / EL_slider.offsetWidth > 0.3) {
+      c = mod(c - 1, total);
+    } else if (distance / EL_slider.offsetWidth < -0.3) {
+      c = mod(c + 1, total);
+    }
+    setDotActive();
+    anim();
+  });
+});

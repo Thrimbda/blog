@@ -120,3 +120,92 @@
 .webring {
   margin: 0.375rem;
 }
+
+.slider-wrapper {
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  transition: 0.5s;
+
+  /* padding: 0 20px; 在两侧添加内边距 */
+  box-sizing: border-box; /* 确保内边距不会增加元素的总宽度 */
+}
+
+.slider-item {
+  position: relative;
+  flex: 1 0 100%;
+  min-height: 150px;
+  max-height: min(550px, 55svh);
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  box-sizing: border-box;
+
+  overflow: visible;
+}
+
+.slider-item img {
+  position: relative;
+  width: auto;
+  max-height: 100%;
+  margin: auto; /* 在水平方向上居中 */
+}
+
+/* Next & previous buttons */
+.slider-prev,
+.slider-next {
+  /* cursor: pointer; */
+  position: absolute;
+  /* top: 50%; */
+  width: auto;
+  height: 100%;
+  transform: translateY(-100%);
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  z-index: 1;
+  color: white;
+  transition: 0.6s ease;
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+/* Position the "next button" to the right */
+.slider-next {
+  right: 0;
+  border-radius: 5px;
+  /* border-radius: 3px 0 0 3px; */
+}
+.slider-prev:hover:enabled,
+.slider-next:hover:enabled {
+  border: none;
+  color: var(--accent);
+  background-color: rgba(71, 71, 71, 0.3);
+}
+
+.slider-dot-container {
+  text-align: center;
+}
+
+.slider-dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.slider-dot:hover,
+.slider-dot-active {
+  background-color: #717171;
+}

@@ -3,7 +3,6 @@ import {
   EMPTY,
   Observable,
   expand,
-  filter,
   map,
   mergeAll,
   mergeMap,
@@ -171,6 +170,14 @@ const cookedData$ = rawGcoresTalkData$.pipe(
   })
 );
 
+// cookedData$.pipe(
+//   //
+//   toArray(),
+//   tap((v) =>
+//     Deno.writeTextFile(`./content/gcores-talks.json`, JSON.stringify(v))
+//   )
+// ).subscribe()
+
 cookedData$
   .pipe(
     //
@@ -179,11 +186,16 @@ cookedData$
     }),
     map((v: IGcoresTalk): string => {
       const published_time = new Date(v.published_at);
-      const title = `# ${published_time.getFullYear()}-${
+      const title = `## ${published_time.getFullYear()}-${
         published_time.getMonth() + 1
       }-${published_time.getDate()}`;
       const content = v.text;
-      const images = v.images.map((v) => `![${v}](${imageUrl(v)})`).join("\n");
+      const images =
+        v.images.length !== 1
+          ? `{{ slideshow(slides=[${v.images
+              .map((v) => `"${imageUrl(v)}"`)
+              .join(",")}]) }}`
+          : `![${v.images[0]}](${imageUrl(v.images[0])})`;
       const tags = v.tags.map((v) => `- ${v}`).join("\n");
 
       return `${title}\n\n${images}\n\n${content}\n\n${tags}\n`;
@@ -191,7 +203,7 @@ cookedData$
     toArray(),
     map(
       (all) =>
-        `---\ntitle: '0xc1 的机组日志'\ndate: ${new Date().toISOString()}\n---\n${all.join(
+        `---\ntitle: '0xc1 的机组日志'\ndate: ${new Date().toISOString()}\n---\n原始链接：[Thrimbda 的机组](https://www.gcores.com/users/464460/talks)\n${all.join(
           "\n\n---\n---\n\n"
         )}`
     ),
