@@ -153,7 +153,7 @@ ELS(".slider-container").forEach((EL_parent) => {
       mergeMap((start) =>
         animationFrames().pipe(
           withLatestFrom(touchmove$),
-          filter(([_, touchEvent]) => touchEvent.target.tagName === "IMG"),
+          // filter(([_, touchEvent]) => touchEvent.target.tagName === "IMG"),
           map(([, touchEvent]) => {
             const distance =
               touchEvent.touches[0].clientX - start.touches[0].clientX;
