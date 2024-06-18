@@ -187,7 +187,7 @@
 .slider-next:hover:enabled {
   border: none;
   color: var(--accent);
-  background-color: rgba(71, 71, 71, 0.3);
+  background-color: var(--bg-light);
 }
 
 .slider-dot-container {
@@ -199,18 +199,48 @@
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: var(--bg-light);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 .slider-dot:hover,
 .slider-dot-active {
-  background-color: #717171;
+  background-color: var(--text-light);
 }
 
 .mermaid-shortcode {
   display: flex;
   justify-content: center;
-  margin: auto;
+  width: 100%;
+}
+
+.title-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-date {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.title-date:hover:before {
+  content: "";
+  border-bottom: 3px inset;
+  border-bottom-color: var(--link);
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.title-date:before {
+  content: "";
+  border-bottom: 2px inset;
+  border-bottom-color: var(--bg-light);
+  flex-grow: 1;
+  margin: 0 10px;
 }
