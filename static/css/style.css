@@ -208,3 +208,9 @@
 .slider-dot-active {
   background-color: #717171;
 }
+
+.mermaid-shortcode {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
