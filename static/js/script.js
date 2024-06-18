@@ -1,12 +1,11 @@
 const {
+  defaultIfEmpty,
   fromEvent,
   withLatestFrom,
   tap,
   last,
-  toArray,
-  filter,
   animationFrames,
-  mergeMap,
+  switchMap,
   map,
   takeUntil,
   repeat,
@@ -144,16 +143,18 @@ ELS(".slider-container").forEach((EL_parent) => {
     });
   });
 
-  const touchstart$ = fromEvent(EL_slider, "touchstart");
+  const touchstart$ = fromEvent(EL_parent, "touchstart");
   const touchend$ = fromEvent(EL_slider, "touchend");
   const touchmove$ = fromEvent(EL_slider, "touchmove");
 
   touchstart$
     .pipe(
-      mergeMap((start) =>
+      tap(() => {
+        EL_slider.style.transition = "none";
+      }),
+      switchMap((start) =>
         animationFrames().pipe(
           withLatestFrom(touchmove$),
-          // filter(([_, touchEvent]) => touchEvent.target.tagName === "IMG"),
           map(([, touchEvent]) => {
             const distance =
               touchEvent.touches[0].clientX - start.touches[0].clientX;
@@ -164,14 +165,16 @@ ELS(".slider-container").forEach((EL_parent) => {
             return distance;
           }),
           takeUntil(touchend$),
+          defaultIfEmpty(0),
           last()
         )
       ),
       tap({
         next: (distance) => {
-          if (distance / EL_slider.offsetWidth > 0.3) {
+          EL_slider.style.transition = "transform 0.3s ease-in-out";
+          if (distance / EL_slider.offsetWidth > 0.2) {
             c = mod(c - 1, total);
-          } else if (distance / EL_slider.offsetWidth < -0.3) {
+          } else if (distance / EL_slider.offsetWidth < -0.2) {
             c = mod(c + 1, total);
           }
           setDotActive();
