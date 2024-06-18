@@ -1,3 +1,17 @@
+const {
+  fromEvent,
+  withLatestFrom,
+  tap,
+  last,
+  toArray,
+  filter,
+  animationFrames,
+  mergeMap,
+  map,
+  takeUntil,
+  repeat,
+} = rxjs;
+
 const toggleButton = document.getElementById("theme-toggle");
 const themeIcon = document.getElementById("theme-icon");
 const themeSound = document.getElementById("theme-sound");
@@ -92,8 +106,6 @@ ELS(".slider-container").forEach((EL_parent) => {
   const ELS_dots = ELS(".slider-dot", EL_parent);
   const total = ELS_items.length;
   let c = 0;
-  let startX = 0;
-  let distance = 0;
 
   const setDotActive = () => {
     ELS_dots.forEach((EL_dot, i) => {
@@ -104,7 +116,7 @@ ELS(".slider-container").forEach((EL_parent) => {
   setDotActive();
 
   const anim = () => {
-    EL_slider.style.transform = `translateX(-${c * 100}%)`;
+    EL_slider.style.transform = `translateX(-${c * EL_slider.offsetWidth}px)`;
   };
   const prev = () => {
     distance = 0;
@@ -132,34 +144,41 @@ ELS(".slider-container").forEach((EL_parent) => {
     });
   });
 
-  // touch event listener
-  EL_slider.addEventListener("touchstart", (e) => {
-    if (e.target.tagName !== "IMG") {
-      return;
-    }
-    startX = e.touches[0].clientX;
-  });
+  const touchstart$ = fromEvent(EL_slider, "touchstart");
+  const touchend$ = fromEvent(EL_slider, "touchend");
+  const touchmove$ = fromEvent(EL_slider, "touchmove");
 
-  EL_slider.addEventListener("touchmove", (e) => {
-    if (e.target.tagName !== "IMG") {
-      return;
-    }
-    distance = e.touches[0].clientX - startX;
-    EL_slider.style.transform = `translateX(-${
-      c * 100 - (distance / EL_slider.offsetWidth) * 100
-    }%)`;
-  });
+  touchstart$
+    .pipe(
+      mergeMap((start) =>
+        animationFrames().pipe(
+          withLatestFrom(touchmove$),
+          filter(([_, touchEvent]) => touchEvent.target.tagName === "IMG"),
+          map(([, touchEvent]) => {
+            const distance =
+              touchEvent.touches[0].clientX - start.touches[0].clientX;
 
-  EL_slider.addEventListener("touchend", (e) => {
-    if (e.target.tagName !== "IMG") {
-      return;
-    }
-    if (distance / EL_slider.offsetWidth > 0.3) {
-      c = mod(c - 1, total);
-    } else if (distance / EL_slider.offsetWidth < -0.3) {
-      c = mod(c + 1, total);
-    }
-    setDotActive();
-    anim();
-  });
+            EL_slider.style.transform = `translateX(-${
+              c * EL_slider.offsetWidth - distance
+            }px)`;
+            return distance;
+          }),
+          takeUntil(touchend$),
+          last()
+        )
+      ),
+      tap({
+        next: (distance) => {
+          if (distance / EL_slider.offsetWidth > 0.3) {
+            c = mod(c - 1, total);
+          } else if (distance / EL_slider.offsetWidth < -0.3) {
+            c = mod(c + 1, total);
+          }
+          setDotActive();
+          anim();
+        },
+      }),
+      repeat()
+    )
+    .subscribe();
 });
