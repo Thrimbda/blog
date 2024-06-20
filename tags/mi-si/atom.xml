@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 迷思</title>
+    <subtitle>c1 的博客</subtitle>
+    <link href="https://0xc1.space/tags/mi-si/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-03-21T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/mi-si/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>我终于想到了答案，但等等...问题是什么呢？</title>
+        <published>2017-03-21T00:00:00+00:00</published>
+        <updated>2017-03-21T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://0xc1.space/blog/wo-zhong-yu-xiang-dao-liao-da-an-dan-deng-deng-wen-ti-shi-shi-yao/" type="text/html"/>
+        <id>https://0xc1.space/blog/wo-zhong-yu-xiang-dao-liao-da-an-dan-deng-deng-wen-ti-shi-shi-yao/</id>
+        
+        <content type="html">&lt;p&gt;标题描述了一种虽然听起来神经但是还蛮常见的一种现象，至少我是这样，&lt;del&gt;你们一定也一样。&lt;&#x2F;del&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;这篇是今天听课听到酣处有感而发，这大概是我一年来听得舒适的一天课了。&lt;&#x2F;p&gt;
+&lt;!--more--&gt;
+&lt;h2 id=&quot;guan-yu-shang-ke&quot;&gt;关于上课&lt;&#x2F;h2&gt;
+&lt;p&gt;我上课不听讲尔来一年有余，原因在于：睡觉太晚，上课太困，久而久之破罐子破摔。但今天灵机一动就决定跑去第一排听讲，想不到感觉很好。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;xin-de&quot;&gt;心得&lt;&#x2F;h2&gt;
+&lt;p&gt;也不知道是因为近来积攒了一点点经验还是别的什么缘故，我认为今天《软件系统分析与设计》和《软件测试与评估》两位老师都提到了一些我很认同的观点。属于吃了亏才跑回来亡羊补牢。&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统的概念&lt;&#x2F;li&gt;
+&lt;li&gt;系统设计的重要性&lt;&#x2F;li&gt;
+&lt;li&gt;需求的重要性&lt;&#x2F;li&gt;
+&lt;li&gt;项目一定要签合同！！！！！！！！！！！！&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;好了我不想写了，因为我把我想讲的问题忘了。&lt;&#x2F;p&gt;
+&lt;p&gt;悲伤。&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

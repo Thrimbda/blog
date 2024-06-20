@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 设计模式</title>
+    <subtitle>c1 的博客</subtitle>
+    <link href="https://0xc1.space/tags/she-ji-mo-shi/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-04-10T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/she-ji-mo-shi/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>观察者模式实力分析</title>
+        <published>2017-04-10T00:00:00+00:00</published>
+        <updated>2017-04-10T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://0xc1.space/blog/guan-cha-zhe-mo-shi-shi-li-fen-xi/" type="text/html"/>
+        <id>https://0xc1.space/blog/guan-cha-zhe-mo-shi-shi-li-fen-xi/</id>
+        
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;一般地，面向对象分析与设计中存在三种事件处理的机制，除了普通的函数调用外，常常用到回调函数，而 J2EE 中还提供了一种基于监听方式的事件处理机制，请查阅资料，对 Action 以及 ActionListener 的机制进行分析，完成一个分析实例。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;首先了解观察者模式&lt;&#x2F;p&gt;
+&lt;!--more--&gt;
+&lt;h2 id=&quot;guan-cha-zhe-mo-shi-observer-pattern&quot;&gt;观察者模式 (Observer Pattern)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;zhen-shi-shi-jie-zhong-de-guan-cha-zhe&quot;&gt;真实世界中的观察者&lt;&#x2F;h3&gt;
+&lt;p&gt;观察者模式又称发布订阅模式，例如 RSS（微信推送的爸爸）订阅，某博客（被观察者）的博主在更新博文后，订阅者的阅读器（观察者）上就会自动能够收到更新。这种发布-订阅的套路我们称作观察者模式。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;guan-cha-zhe-mo-shi&quot;&gt;观察者模式&lt;&#x2F;h3&gt;
+&lt;p&gt;(&lt;strong&gt;G&lt;&#x2F;strong&gt;ang &lt;strong&gt;O&lt;&#x2F;strong&gt;f &lt;strong&gt;F&lt;&#x2F;strong&gt;our)对观察者模式的描述：&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;意图&lt;&#x2F;p&gt;
+&lt;p&gt;定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;别名&lt;&#x2F;p&gt;
+&lt;p&gt;依赖(Dependents)，发布-订阅(Publish-Subscribe)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;动机&lt;&#x2F;p&gt;
+&lt;p&gt;将一个系统分割成一系列相互协作的类有一个常见的副作用：需要维护相关对象间的一致性。我们不希望为了维持一致性而使各类紧密耦合，因为这样降低了他们的可重用性。&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;…&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;参与者&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;subject（目标）&lt;&#x2F;p&gt;
+&lt;p&gt;目标知道他的观察者。可以有任意多个观察者观察同一目标。&lt;&#x2F;p&gt;
+&lt;p&gt;提供注册和删除观察者对象接口。&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Observer（观察者）&lt;&#x2F;p&gt;
+&lt;p&gt;为那些咋目标发生改变时需获得通知的对象定义一个更新接口。&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;ConcreteSubject（具体目标）&lt;&#x2F;p&gt;
+&lt;p&gt;将有关状态存入各 ConcreteObserver 对象。&lt;&#x2F;p&gt;
+&lt;p&gt;当他的状态发生改变时，向他的各个观察者发出通知。&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;ConcreteObserver（具体观察者）&lt;&#x2F;p&gt;
+&lt;p&gt;维护一个指向 ConcreteSubject 对象的引用。&lt;&#x2F;p&gt;
+&lt;p&gt;存储有关状态，这些状态应与目标的状态保持一致。&lt;&#x2F;p&gt;
+&lt;p&gt;实现 Observer 的更新接口以使自身状态与目标的状态保持一致。&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;可以发现观察者模式常常应用于：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;两个对象具有依赖关系。&lt;&#x2F;li&gt;
+&lt;li&gt;一个对象更改时需要同时更改其他对象。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;相比于普通的函数调用以及回调函数，观察者模式的使用能够做到低成本维持对象间一致性，大大&lt;strong&gt;降低了对象间的耦合关系程度，同时可以达到广播的效果，这是前二者做不到的。观察者模式的使用大大&lt;&#x2F;strong&gt;提高了代码的可重用性**。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;而 J2EE 中的 Action 和 ActionListener 正是观察者模式的一个鲜活的例子。&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;j2ee-zhong-de-action-actionlistener&quot;&gt;J2EE 中的 Action&amp;amp;ActionListener&lt;&#x2F;h2&gt;
+&lt;p&gt;Action&amp;amp;ActionListener 可以很好地应用于 MVC 范式用来降低 model 和 view 的耦合程度。&lt;&#x2F;p&gt;
+&lt;p&gt;找到一个很好的&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;http:&#x2F;&#x2F;www.ulisespulido.com&#x2F;2009&#x2F;03&#x2F;observer-design-pattern-and-java-swing.html&quot;&gt;例子&lt;&#x2F;a&gt;，代码如下所示：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
+public class Frame extends JFrame {
+
+  ActionListener observer1 = new Observer(&amp;quot;First Observer&amp;quot;);
+  ActionListener observer2 = new Observer(&amp;quot;Second Observer&amp;quot;);
+  ActionListener observer3 = new Observer(&amp;quot;Third Observer&amp;quot;);
+
+  public Frame(){
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    init();
+  }
+
+  private void init(){
+    addChangingTextField();
+    pack();
+    setVisible(true);
+  }
+
+  private void addChangingTextField(){
+    &amp;#x2F;&amp;#x2F;Observable class TextField. each time
+    &amp;#x2F;&amp;#x2F;An action or event occurs the observers will be updated
+    &amp;#x2F;&amp;#x2F;Almost all the Swing classes has this kind of behavior
+    JTextField dataTextField = new JTextField();
+
+    &amp;#x2F;&amp;#x2F; Observer registering to the observable class.
+    dataTextField.addActionListener(observer1);
+    dataTextField.addActionListener(observer2);
+    dataTextField.addActionListener(observer3);
+
+    add(dataTextField);
+  }
+
+  public static void main(String [] args){
+  	Frame frame = new Frame();
+  }
+}
+
+class Observer implements ActionListener{
+
+  private String name;
+  private String message;
+
+  public Observer (String s){
+  	name = s;
+  }
+
+  public void actionPerformed(ActionEvent e) {
+    JTextField textField = (JTextField) e.getSource();
+    message = textField.getText();
+    JOptionPane.showMessageDialog(null,
+    name + &amp;quot; has been confirmed about the change, Thanks!! &amp;quot;
+    + &amp;quot; The Message was: &amp;quot; + message);
+  }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;fen-xi&quot;&gt;分析&lt;&#x2F;h3&gt;
+&lt;p&gt;两个类分别担任了 Action&#x2F;ActionListener 的角色，&lt;code&gt;frame.dataTextField&lt;&#x2F;code&gt;在&lt;code&gt;addChangingTextField&lt;&#x2F;code&gt;方法中绑定了三个监听器（&lt;code&gt;observer1&lt;&#x2F;code&gt;, &lt;code&gt;observer2&lt;&#x2F;code&gt;, &lt;code&gt;observer3&lt;&#x2F;code&gt;），在 frame 中文本框被编辑后（状态改变），触发 Observer 中&lt;code&gt;actionPerformed&lt;&#x2F;code&gt;方法，显示相应文本。&lt;&#x2F;p&gt;
+&lt;p&gt;在这个例子中，&lt;code&gt;frame.dataTextField&lt;&#x2F;code&gt;作为&lt;code&gt;ConcreteSubject&lt;&#x2F;code&gt;，&lt;code&gt;observer1&lt;&#x2F;code&gt;, &lt;code&gt;observer2&lt;&#x2F;code&gt;, &lt;code&gt;observer3&lt;&#x2F;code&gt;作为&lt;code&gt;ConcreteObserver&lt;&#x2F;code&gt;。而他们所实现的定义了 Action&#x2F;ActionListener 方法的接口，则是相应的&lt;code&gt;Subject&lt;&#x2F;code&gt;和&lt;code&gt;Observer&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;p&gt;在绑定观察者后目标并不关注观察者具体的行为，而只是在自身状态发生改变时通知观察者，由观察者自身决定做什么动作，因此这种方法就很 nice，比显式调用函数或者执行回调函数的方式触发动作不知道高到哪里去了，值得学习一个。&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - John Keats</title>
+    <subtitle>c1 的博客</subtitle>
+    <link href="https://0xc1.space/tags/john-keats/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2018-01-07T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/john-keats/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>To-</title>
+        <published>2018-01-07T00:00:00+00:00</published>
+        <updated>2018-01-07T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://0xc1.space/blog/to/" type="text/html"/>
+        <id>https://0xc1.space/blog/to/</id>
+        
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;济慈曾经见过一位年轻的女士几分钟，为其着迷甚至神伤。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;!--more--&gt;
+&lt;h2 id=&quot;to&quot;&gt;To -&lt;&#x2F;h2&gt;
+&lt;pre&gt;&lt;code&gt;TIME’S sea hath been five years at its slow ebb,
+  Long hours have to and fro let creep the sand,
+Since I was tangled in thy beauty’s web,
+  And snared by the ungloving of thine hand.
+
+And yet I never look on midnight sky,
+  But I behold thine eyes’ well memoried light;
+I cannot look upon the rose’s dye,
+  But to thy cheek my soul doth take its flight.
+
+I cannot look on any budding flower,
+  But my fond ear, in fancy at thy lips
+And harkening for a love-sound, doth devour
+  Its sweets in the wrong sense:—Thou dost eclipse
+
+Every delight with sweet remembering,
+And grief unto my darling joys dost bring.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;xiao-ji&quot;&gt;小记&lt;&#x2F;h3&gt;
+&lt;p&gt;后来发现，这首&lt;code&gt;To - [&amp;quot;Time&#x27;s sea&amp;quot;]&lt;&#x2F;code&gt;中最后两句&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;Every delight with sweet remembering,
+And grief unto my darling joys dost bring.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;和莎士比亚&lt;code&gt;sonnet CXIII&lt;&#x2F;code&gt;中&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;Even so, being full of your ne&amp;#x27;er cloying sweetness,
+To bitter sauces did I frame my feeding.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;有些韵律上的相似。难怪曾经看到济慈这首诗的脚注中提到 “在情绪构架的韵律处理上，在逐渐增强的乐感上，都极似莎士比亚十四行诗。”&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>Ode on Melancholy 忧郁颂</title>
+        <published>2017-06-19T00:00:00+00:00</published>
+        <updated>2017-06-19T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://0xc1.space/blog/ode-on-melancholy-you-yu-song/" type="text/html"/>
+        <id>https://0xc1.space/blog/ode-on-melancholy-you-yu-song/</id>
+        
+        <content type="html">&lt;p&gt;今天我的济慈诗选到了，其实买它有一部分原因就是因为在&lt;em&gt;Sweet Bitter&lt;&#x2F;em&gt;中看到了*《忧郁颂》&lt;em&gt;中的一句&lt;code&gt;隐藏的“忧郁”有她至尊的神龛&lt;&#x2F;code&gt;。另外一部分原因是因为未竟的长诗&lt;&#x2F;em&gt;Hyperion&lt;em&gt;以及济慈本人贯穿了整个&lt;&#x2F;em&gt;《海伯利安》&lt;em&gt;四部曲中。神往已久，于是今天就抄下这首&lt;&#x2F;em&gt;《忧郁颂》*。中文采用屠岸译版。&lt;&#x2F;p&gt;
+&lt;!--more--&gt;
+&lt;h2 id=&quot;ode-on-melancholy&quot;&gt;Ode on Melancholy&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;i&quot;&gt;I&lt;&#x2F;h3&gt;
+&lt;pre&gt;&lt;code&gt;No, no, go not to Lethe, neither twist
+
+  Wolf&amp;#x27;s-bane, tight-rooted, for its poisonous wine;
+     
+Nor suffer thy pale forehead to be kissed
+
+  By nightshade, ruby grape of Proserpine;
+
+Make not your rosary of yew-berries,
+
+  Nor let the beetle, nor the death-moth be
+
+    Your mournful Psyche, nor the downy owl
+
+A partner in your sorrow&amp;#x27;s mysteries;
+
+  For shade to shade will come to drowsily,
+
+    And drown the wakeful anguish of the soul.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;ii&quot;&gt;II&lt;&#x2F;h3&gt;
+&lt;pre&gt;&lt;code&gt;But when the melancholy fit shall fall
+
+  Sudden from heaven like a weeping cloud, 
+
+That fosters the droop-headed flowers all,
+
+  And hides the green hill in an April shroud;
+
+Then glut thy sorrow on a morning rose,
+
+  Or on the rainbow of the salt sand-wave,
+
+    Or on the wealth of globed peonies;
+
+Or if thy mistress some rich anger shows,
+
+  Imprison her soft hand, and let her rave,
+
+    And feed deep, deep upon her peerless eyes.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;iii&quot;&gt;III&lt;&#x2F;h3&gt;
+&lt;pre&gt;&lt;code&gt;She dwells with Beauty—Beauty that must die;
+
+  And joy, whose hand is ever at his lips
+
+Bidding adieu; and aching Pleasure nigh,
+
+  Turning to poison while the bee-mouth sips:
+
+Aye, in the very temple of Delight
+
+  Veiled Melancholy has her sovran shrine,
+
+    Though seen of none save him whose strenuous tongue
+
+  Can burst Joy&amp;#x27;s grape against his palate fine;
+
+His soul shall taste the sadness of her might,
+
+  And be among her cloudy trophies hung.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;you-yu-song&quot;&gt;忧郁颂&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;i-1&quot;&gt;I&lt;&#x2F;h3&gt;
+&lt;pre&gt;&lt;code&gt;不呵！不要到忘川去，也不要拧绞
+
+  根深的乌头，把它的毒汁当美酒；
+
+别让你苍白的额头把龙葵野草——
+
+  普罗赛嫔红葡萄的亲吻承受；
+
+别用紫杉的坚果做你的念珠，
+
+  别让甲虫和墓畔的飞蛾变为
+
+    你忧伤的塞吉，别让批羽的鸱鸮
+
+分享你心底隐秘的悲哀愁苦；
+
+  阴影来亲近阴影会困倦嗜睡，
+
+    会把灵魂中清醒的创痛淹没掉。
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;ii-1&quot;&gt;II&lt;&#x2F;h3&gt;
+&lt;pre&gt;&lt;code&gt;但一旦忧郁的意绪突然来到，
+
+  有如阴云洒着泪自天而降，
+
+云雨滋润着垂头的花花草草，
+
+  四月的雾衣把一脉青山隐藏；
+
+你就该让哀愁痛饮早晨的玫瑰，
+
+  或者饱餐海浪上空的虹彩，
+
+    或者享足姹紫嫣红的牡丹；
+
+若是你钟情的女郎娇嗔颦眉，
+
+  就抓住她的酥手，让她说痛快，
+
+    并深深品尝她举世无双的慧眼。
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;iii-1&quot;&gt;III&lt;&#x2F;h3&gt;
+&lt;pre&gt;&lt;code&gt;她与“美”共处——那必将消亡的“美”；
+
+  还有“喜悦”，他的手总是贴着嘴唇
+
+说再见；令人痛苦的近邻“欣慰”，
+
+  只要蜂蜜啜一口，就变成毒鸠：
+
+啊，就在“快乐”的庙堂之上，
+
+  隐藏的“忧郁”有她至尊的神龛，
+
+    虽然，只有舌头灵、味觉良好、
+
+  能咬破“快乐”果的人才能够瞧见：
+
+他灵魂一旦把“忧郁”的威力品尝，
+
+  便成为她的战利品，悬挂在云霄。
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+</feed>
