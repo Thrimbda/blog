@@ -191,7 +191,9 @@ cookedData$
       }-${published_time.getDate()}`;
       const content = v.text;
       const images =
-        v.images.length !== 1
+        v.images.length === 0
+          ? ""
+          : v.images.length !== 1
           ? `{{ slideshow(slides=[${v.images
               .map((v) => `"${imageUrl(v)}"`)
               .join(",")}]) }}`

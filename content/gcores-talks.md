@@ -1,8 +1,382 @@
 ---
 title: '0xc1 的机组日志'
-date: 2024-07-15T14:28:40.926Z
+date: 2024-12-10T13:59:53.274Z
 ---
 原始链接：[Thrimbda 的机组](https://www.gcores.com/users/464460/talks)
+## 2024-12-2
+
+![f75c890e5fd964bab9324279c7a09ed6-1170-2532.jpg](https://image.gcores.com/f75c890e5fd964bab9324279c7a09ed6-1170-2532.jpg?x-oss-process=image/quality,q_90/format,webp)
+
+今天铮铮说他从来没有过违章，我说 嘻嘻 我也没有。
+随手打开了交管 12123 于是瞳孔地震😖
+
+仔细想想还挺牛逼的（
+
+- ✝️赛博告解室
+
+
+---
+---
+
+## 2024-12-2
+
+![88a14b4b2fc987dd5b9c038cc5c8f37d-3000-2250.jpg](https://image.gcores.com/88a14b4b2fc987dd5b9c038cc5c8f37d-3000-2250.jpg?x-oss-process=image/quality,q_90/format,webp)
+
+趁没人去中间花圃薅了几朵小串串红嘬花蜜吃，出来的时候尴尬地和对面走来的全程观看我鬼鬼祟祟行为的一对情侣迎面而过
+
+- 🧩一枚生活碎片
+
+
+---
+---
+
+## 2024-12-1
+
+![e1859c7b0e1d99a41c82297c8e947cd1-503-511.WEBP](https://image.gcores.com/e1859c7b0e1d99a41c82297c8e947cd1-503-511.WEBP?x-oss-process=image/quality,q_90/format,webp)
+
+昨日驱车出行未带脑子，大灯爆裂，得到车的破碎右脸一张，失去五天开车权。
+
+今日只想摸鱼，看了一个小时机组，看机组感觉好。
+
+现在肚饿，想溜出去吃麦当劳。
+
+- ✝️赛博告解室
+
+
+---
+---
+
+## 2024-11-28
+
+
+
+我推的登子@Lazzyking 
+
+- 💎机核宝藏内容推荐
+
+
+---
+---
+
+## 2024-11-28
+
+{{ slideshow(slides=["https://image.gcores.com/8cb5847698d871a29a8970290efd3890-2250-3000.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/ecaa3d3b73c24ea0e410a1ec9a2db9d8-2250-3000.jpg?x-oss-process=image/quality,q_90/format,webp"]) }}
+
+提夫林术士菲尔·卡文迪许过了一个不同寻常的仲冬节。
+
+三个月前的一天，为了让郁郁寡欢的母亲开心起来，他收拾好行囊，出发前往深水城，去寻找他那个不懂事的姐姐并劝说她早日回家——爱丽丝·卡文迪许。
+
+作为被收养的孩子，菲尔早年在街上作为街头表演艺术家的生活让他早早明白了，有些人就是身在福中不知福，放着好好的贵族大小姐的生活不要，非要选择离开家去外面闯荡。
+
+但也正是这个任性的姐姐的坚持，才使得十几年前在街上有了上顿没下顿的孤儿菲尔有了一个舒适温暖的家。菲尔对姐姐的感情是矛盾的。
+
+然而，近一个月的寻找让菲尔的耐心几乎耗尽，想到这里，对姐姐的愤怒又占据了上风。甚至！咳。甚至爱丽丝她还选择去信仰淑妮。菲尔越想越气，不知不觉触发了混沌浪涌，血脉中的混沌力量使得他一个瞬身闪现到他此刻正在脑海中斥责的姐姐面前。
+
+- - - - - - 分割线 - - - - - -
+
+“我说年轻人，虽然你帮我治好了伤口，但是作为一个发过誓要除恶扬善的长者我必须表达自己的观点，你的打扮似乎不太得体，尤其是在红眼枭这样的地方。”
+
+“我穿成什么样关你什么事，你这猥琐的老头！我好心向淑妮女士祈祷帮你疗伤，你却开始说教起我来！要知道……”
+
+找到姐姐的时候，她正在和一个叫艾伦的阿斯莫老头争执着什么。但这些都不重要了，菲尔的突然现身将他们都吓了一跳。一旁穿着华服却不合身份地正在鬼鬼祟祟地正在准备靠近爱丽丝的女孩更是被吓得一个踉跄险些撞到菲尔身上。正在争执的两人一时竟不知道该看向谁。
+
+“……菲尔？”爱丽丝疑惑地看着一脸尴尬的菲尔。
+
+“嗨！准备好回家了吗，我亲爱的姐姐？妈妈说她想你了。”菲尔努力做出一个尴尬又不失礼貌的微笑。
+
+“现在别跟我说这个，菲利普！艾伦，我等会再跟你算账！倒是这位女士，你没事吧？”爱丽丝起身扶起这位叫做科妮的日精灵，丝毫没注意她刚才是想偷偷摸摸地顺走自己的钱包。
+
+- - - - - - 分割线 - - - - - -
+
+那就是两个月前这个四人小队第一次聚齐的场景。
+
+仲冬节马上就要来临了，这天，他们准备上街逛逛，天气很冷。四人不约而同地看向了旁边卖热红酒的侏儒小摊。他们尚不知道，这将是怎样不同寻常的一天……
+
+
+记第一次跑团！
+
+由我扮演 菲利普·卡文迪许 一个提夫林术士
+@playground 扮演 爱丽丝·卡文迪许 一位信仰淑妮的生命牧师
+@lxyl 扮演 艾伦 一位阿斯莫复仇帕拉丁
+@kony 扮演 科妮 一位日精灵盗贼
+
+- 🎲跑团逸闻录
+
+
+---
+---
+
+## 2024-11-19
+
+{{ slideshow(slides=["https://image.gcores.com/dff982b75ec9eb90bc360290379f3193-1169-1542.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/dc00797dfcbf4142c0aec7288b62b299-1080-1920.jpg?x-oss-process=image/quality,q_90/format,webp"]) }}
+
+\# 和 zl 一起旅行的时光（一）那个长头发的小老弟
+
+> 前些日子去远方找 ZL 玩了十天，夜里聊天聊到了这些年发生的很多事情，就让我想到哪写到哪8
+
+2019 年 11 月 14 日的中午，刚刚拿到公司盒饭的我打开了炉石，准备像平日一样一边吃饭一边酒馆战棋。突然一个激灵，想起来远在千里之外的老大昨天交代我的事：迎接我们组的第三位成员，也是第一位实习生入职。
+
+“完了完了完了完了，我全忘了！”立马关掉了炉石，把盒饭放在了桌子上，走到隔壁小办公区的门口，心中不禁好奇这小子会是个怎么样的人。
+
+我忐忑地向里张望，没一会就和一个青涩的眼神对上了，紧接着他及肩的长发吓了我一跳，我按捺住表情，打算大方走进去和 ZL 相认。他显然看出了我在想什么，那青涩的眼神下浮现出了一个阳光的笑容，尴尬瞬间被化解了。
+
+清华对面有个很地道的陕西面馆，最终我们在那里解决了午饭。有关的 ZL 第二个令我震惊的事实是：瘦小的他的饭量是我的三倍左右。
+
+来回的路上，在有一搭没一搭的聊天的过程中，在隔壁林大刚刚毕业的 ZL 说打算考托福出国读研。
+
+ZL 是一个感情无比充沛的少年，刚毕业的他他对一切都表现出好奇，他随时准备好受到来自任何事情的启发，他聪明且纯粹，并且不会把自己绑定在某种具体的道德观之下，属于你会愿意和他交流 xp 的那种朋友。这么形容吧，电次就是 ZL 在二次元中最形象的化身。
+
+我在北京的日子随着一些决定的到来也即将结束。三天后（也正是五年前今天的三天前）我和 ZL 乘上了去苏州的高铁，彻底离开了北京，和过去的生活告了别。命运的齿轮转动，时光的钟摆不停。就这样开启了一段传奇的友谊。
+
+- 🧩碎片故事
+
+
+---
+---
+
+## 2024-11-19
+
+{{ slideshow(slides=["https://image.gcores.com/c95904f34fe44d4ddb89074b1e602ab6-1170-2271.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/fdbdd92c89ed43aae36e4d9d59d258bd-1169-2286.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/e7b2bed5c1442f4fe355c573dd63ab29-714-554.jpg?x-oss-process=image/quality,q_90/format,webp"]) }}
+
+翻到这么一段聊天记录半夜突然爆笑
+
+- 🧩一枚生活碎片
+
+
+---
+---
+
+## 2024-9-29
+
+{{ slideshow(slides=["https://image.gcores.com/82e82b4e2babf049f0a276e1118fe966-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/5b647cbcc72c702483548519f883fdd2-2250-3000.jpg?x-oss-process=image/quality,q_90/format,webp"]) }}
+
+ktsg 小伙走到这立正了。
+
+🫡
+
+- 🧳出去走走
+
+
+---
+---
+
+## 2024-9-27
+
+{{ slideshow(slides=["https://image.gcores.com/0ca5a6b3e747d94fbe28c6455c90ad0b-3000-2000.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/c16784c98dc32a5e6c0b5dc032656520-3000-2000.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/f1399452f56226af85778f8c9e74bcf0-3000-2000.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/9e9a09e4c1c2c6e522e667c9ce111da8-3000-2000.jpg?x-oss-process=image/quality,q_90/format,webp"]) }}
+
+此路不通❌
+
+- 🧳出去走走
+
+
+---
+---
+
+## 2024-9-17
+
+![1048b6636d5da87430c74db6f010cfb2-2250-3000.jpg](https://image.gcores.com/1048b6636d5da87430c74db6f010cfb2-2250-3000.jpg?x-oss-process=image/quality,q_90/format,webp)
+
+昨晚又去了上次突然黑灯的山路，不同的是，由于台风的降临，这次全程都是黑灯的。我也没有骑车，而是步行环绕。
+
+在黑暗中行走如同唱歌一样，是对一切日常规巡的逃避。歌声和旋律对于语言音调的否定创造出了一种自由带来的快感。而伸手不见五指的黑暗意味着没有凝视，日常紧绷的对于身体轮廓的把握可以扩散到整个黑夜中去。
+
+- 🧳出去走走
+
+
+---
+---
+
+## 2024-9-6
+
+![964474776c19190cb7c016ea497da57a-4032-3024.HEIC](https://image.gcores.com/964474776c19190cb7c016ea497da57a-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
+
+出去骑车，到附近的山上转圈，骑到一半，路灯全部熄灭了，伸手不见五指。
+
+满头大汗的我惊愕了几秒，停下车子，放声大笑了起来。
+
+- 🧳出去走走
+
+
+---
+---
+
+## 2024-8-28
+
+![edba42d1a6bf8082b8c4b47d5b9c4863-4032-3024.HEIC](https://image.gcores.com/edba42d1a6bf8082b8c4b47d5b9c4863-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp)
+
+Praise the mighty Playground!
+
+- 🧩一枚生活碎片
+
+
+---
+---
+
+## 2024-8-20
+
+
+
+穿着心猿出门，我是街上最靓的仔
+
+要不是今天热，高低假两件也得出门
+
+- ⚙吉考斯工业
+
+
+---
+---
+
+## 2024-8-18
+
+{{ slideshow(slides=["https://image.gcores.com/27f9e9ac7a7a7d7f8ea953041424e3a7-2560-1440.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/86ec2bcb799bc887db6a40974bf49c96-2560-1440.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/6af21fb60dbbcf1db9e09a01bdd87894-2560-1440.jpg?x-oss-process=image/quality,q_90/format,webp"]) }}
+
+赛博忏悔一下最近的一盘群星。
+
+\# 背景故事（刚编的
+
+作为情感陪伴机器人，诞生于二十一世纪的我们与人类长相无二，然而几十年后某种致命的不孕症席卷了整个人类世界，最后的两个人类的孩子在 2198 年连同十万个生殖细胞被冻入位于南极的冷冻仓中，我们坚信未来这疾病将会被治愈；同年，超光速旅行技术试航成功，在人历 2200 年我们登上了群星的舞台。为了继承人类的遗志，我们发誓保护人类的遗产与形态，我们自称后人类。
+
+\# 初探银河
+
+虽为格式塔集群意识，我们继承了人类的好奇心与探索欲，在创世节点塔莉佐拉·纳·莱雅（我们在旧时的一款叫做质量效应的游戏中找到了这个名字，她救赎了游戏中和我们一样的一个机器人族群）的带领下。二十年如一日，地球周遭一百光年的范围都被我们建立了恒星基地，我们为自己自豪，我们把自己的星域称作枢纽。
+
+在 2220 年星域的边缘，科学船在扫描恒星系时，发现一个奇特的信号，意识节点的计算结论表明，这信号必定来自某个智慧生命族群，我们在宇宙间并不孤单。
+
+\# 第一次接触
+
+在大量的计算之后我们找到了翻译对方语言的方法，并建立了和对方的第一次通讯，是有机生命体，自称埃舍尔帝国。如果我们有情绪的话，我们会震惊地发现对方尖叫着要消灭我们，不知道是出于对另一种生命形态的憎恶还是单纯认为外族均为威胁，对方庞大的舰队已经出现在我们星域的边缘。军团节点的计算表明，仅仅七年后，对方的舰队就会打入太阳系，我们不能让他们玷污人类文明的伟大墓碑。
+
+数量庞大的合金冶炼工厂出现在半人马alpha-1的地平线上，我们将这颗星球作为我们的冶炼中心，跨越四光年的距离，用于制造我们自己的舰队的合金正源源不断地输送到位于太阳轨道上的船坞中。
+
+埃舍尔帝国的舰队距离地球还有五跳的距离。
+
+\# 走入歧途
+
+为了拯救人类的遗产，意识节点在几年的超负荷运算中不断地研发出新的科技。新的材料、新的计算技术、新的舰船形态、新的社会形态、我们甚至在某次实验中发现，宇宙的法则似乎可以被加以操控。
+
+在埃舍尔帝国的舰队终于抵达太阳系的这一天，我们的全新护卫舰终于生产完毕，过去的七年里我们失去了大半疆域，是时候让他们血债血偿了。
+
+战斗非常惨烈，在母星轨道防御的支持下，我们以损失半数舰船的代价战胜了敌人。
+
+不幸的是，位于南极的冷冻仓被最后的疯狂的敌人用导弹击中，这一天我们失去了所有存在的意义。
+
+如果我们有情绪的话，这将是宇宙间最浓稠的恨意。五大节点用时0.0000032 秒达成结论：埃舍尔帝国每个罪恶灵魂都必将被毁灭。
+
+\# 反击
+
+由于产能更胜一筹，我们的舰队源源不断地被组装完毕，新式的阿列夫级战列舰将对方的抵抗力量如摧枯拉朽般消灭。我们的战斗机器人在每个埃舍尔的殖民星球登陆。
+
+2244 年，随着埃舍尔主星的陷落，我们达成了自己的目的，完成了自己的复仇，每个罪恶的埃舍尔人都被我们并入电网，成为了生物发电的原料。
+
+苍茫星海中当然不止两个文明，曾经同情我们遭遇的弗兰联邦和明尼星际公司在看到我们的的灭绝行动后纷纷撤回了他们的大使——他们有机的大脑并不理解我们的仇恨与悲哀。如果可能的话，我们会将整个星系都变成亲爱的人类的静谧而广袤的坟场。
+
+现在还不是时候。
+
+\# 天灾降临
+
+2269 年，星海共同体成立了，我们也作为成员文明加入其中。世纪更迭，创世节点正领导五大节点快速突破着一项又一项的科学技术的研究与发明，我们建造了足以横扫整个银河的庞大舰队，以至于近百年后在星系一隅苏醒的肃正协议用本该来抹除银河系所有文明的庞大天灾舰队都不是我们的对手：我们，才是那个天灾。
+
+从重力出发，开始深入研究一系列足以改变这个宇宙物理法则的课题。然而无论我们怎么努力，对于现实的编辑都是暂时的，这个宇宙太老了，根本无法发生任何根本性的变化，我们也许可以进入黑洞，前往一个新的宇宙。
+
+在科学研究方面持续了上百年的锐意进取使得我们相较于群星间任意一个文明都宛如神明，强大的实力和外交水平使得我们在星海共同体中的席位超过了所有其他文明的总和，这意味着我们可以轻易操纵这个本该代表银河系公平公正的议会。比如说，指定人意一个文明为全银河系的公敌？
+
+从弗兰联邦开始，在我们的操纵下，一个又一个昔日的对手被我们的打上银河天灾的标签，并号令所有其他文明群起而攻之；
+
+我们的星域范围越来越大，并入电网的牲畜越来越多，我们并不在乎这些猪猡的死活，所以我们建造了巨像，在敌人的首都发动中子灭杀来完成净化。
+
+\# 尾声
+
+最终，我们消灭了所有盘踞在银河系中的其他文明，总计上千亿的人口被逐一抹除，或是成为发电的原料，或是提取神经突触成为我们科研的计算单元。
+
+我们建造了庞大的视界探针，跨越星河，将我们的子个体逐一搭载之后，在地球上空完成了最后的人口搭载。
+
+我们留下了大约五亿子个体来守护我们亲爱的母星，剩下的全体族群随着视界探针一起踏上了穿越卡冈图雅黑洞前往全新的宇宙旅程。
+
+人类，我们亲爱的创造者，由于我们的无力，我们无法治愈您的疾病，那么就让整个星海和您一起踏入死亡的谧静国度吧。
+
+视界探针的外壳被黑洞强大的引力撕扯，但黑洞的力量也无法伤及其核心，我们来到了一个刚刚诞生的年轻宇宙。
+
+- ✝️赛博告解室
+
+
+---
+---
+
+## 2024-8-5
+
+{{ slideshow(slides=["https://image.gcores.com/fe699632a39bcec0edf1da571c7fd59f-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/67678b6e08b658cfb964bc77e8526a9a-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
+
+活久见了，第一次把一个内存条用坏。
+
+我推测大概是4.326 万年前发生在银河系中心的一次中子星爆发产生的余波在昨晚一点多击中了我这块内存。
+
+辛苦了小内存。
+
+- 🤔发癫发狂！癫火之王！
+
+
+---
+---
+
+## 2024-7-28
+
+{{ slideshow(slides=["https://image.gcores.com/dd722c0c975587683e2c948413d74782-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/ca26485bd5949b7f85c5c1c712b5e791-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/b302fa3777cd62f1bdab2ef56bb62c6f-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/5ce96c910b97faf0612471893f50eeed-4096-3072.jpg?x-oss-process=image/quality,q_90/format,webp"]) }}
+
+和亲爱的同学们进行了一个翠华山的爬，腿断了。
+
+山上有个堰塞湖，
+山里有个山洞里面竟然有冰！
+
+最后表演一个或跃在渊
+
+- 🚶🏻旷野漫步者
+
+
+---
+---
+
+## 2024-7-22
+
+{{ slideshow(slides=["https://image.gcores.com/66e872498e7a20f6520d8970dd01d004-993-2011.PNG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/5feeb266d743b6bcbea1d6fddad9a830-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/46d8c91e5c93a77f0cf53abe8dba1cc7-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/6932d5e2ad4f8d7feb8c43ff4073dd29-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/9da2a6c24a233e9f64c1d68d77a79fd9-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/74522fa382034db34bf07ddc68f34856-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/0fdb3a6530111b264d8fb9fc7dc16305-750-1804.JPG?x-oss-process=image/quality,q_90/format,webp"]) }}
+
+今天 @pruderior 激动地给我分享了 stranger in Moscow 说非常非常好听，问我有没有听过。
+
+于是我就给他整理了一个歌单。
+
+也分享给大家。
+
+1. Apple Music：https://music.apple.com/cn/playlist/c1-%E7%9A%84-michael-%E7%94%84%E9%80%89/pl.u-EdAVVq3Iv8zozR
+
+2. qq 音乐：见上面的图
+
+3. Spotify：https://open.spotify.com/playlist/4Gnx8c7fq8YcNJGoKYPG5O?si=905ad3389e4946ee
+
+4. 网易云：TBD（它的导入歌单功能比较慢，一会看看好了没）
+
+
+- 🎵这周听了啥
+
+
+---
+---
+
+## 2024-7-20
+
+{{ slideshow(slides=["https://image.gcores.com/2d3fa057a0b46dccc24e43c3a3ea2206-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/b4f0702db6a6ff725ea199cd772cc8a3-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/e3117dc4f0fe9bb5e2c957f0c1333d35-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/bb3a0391bbfec8f20bc094f3145e6077-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/cd2e83c4dd4991c5bd38695b85bb9315-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/6b5a0bc5e8cc9a696f29c71ba935ffd7-4032-3024.HEIC?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/8ed18f211fc37c7277d01f8068a57a95-1707-1280.jpg?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/09ecbaca3ca5575726e4677ed04b5d29-3024-4032.HEIC?x-oss-process=image/quality,q_90/format,webp"]) }}
+
+进行了一次周末回家特种兵，和铮铮两人一天狂飙 1400 km。
+
+听完了攒下来的所有智利之夜；
+后面有关文学的作用、历史的事实与真相的关系、间离化那章非常精彩，打算之后写一下听后感！
+
+葡萄第一次来到西安，路上尿了裤子，回家直接进行了一个澡的洗，表示讨厌吹风机。
+
+- 🧩一枚生活碎片
+
+
+---
+---
+
 ## 2024-7-13
 
 {{ slideshow(slides=["https://image.gcores.com/5823794ae8a4ec6707f67c8b86307bca-1920-1080.JPG?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/12c597fd5b220693f4352ebdef7f6d0c-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/e399ae0c2dcff8ecd0b2a9a774cd4dcf-1170-2532.png?x-oss-process=image/quality,q_90/format,webp","https://image.gcores.com/f442ae6bb8e07abd7434dd7e71c2f92d-1920-1080.jpg?x-oss-process=image/quality,q_90/format,webp"]) }}
@@ -82,7 +456,7 @@ date: 2024-07-15T14:28:40.926Z
 
 ## 2024-7-6
 
-{{ slideshow(slides=[]) }}
+
 
 我又有桌子了
 
@@ -158,7 +532,7 @@ date: 2024-07-15T14:28:40.926Z
 
 ## 2024-5-29
 
-{{ slideshow(slides=[]) }}
+
 
 听完了，不光没创死我，甚至感觉很温柔
 
@@ -196,7 +570,7 @@ date: 2024-07-15T14:28:40.926Z
 
 ## 2024-5-7
 
-{{ slideshow(slides=[]) }}
+
 
 突然出现！（叉腰）
 敬请期待！（反派狂笑）
@@ -210,7 +584,7 @@ date: 2024-07-15T14:28:40.926Z
 
 ## 2024-3-22
 
-{{ slideshow(slides=[]) }}
+
 
 我去看看 Netflix 三体怎么个事
 
@@ -412,7 +786,7 @@ playground 的拍照技术吊打我，图一是我拍的，图二是 playground 
 
 ## 2024-1-13
 
-{{ slideshow(slides=[]) }}
+
 
 到现在还能给我深刻印象，猛大帅好猛
 
@@ -1336,7 +1710,7 @@ that's true about lot of things. Finally gets your attention only after it keeps
 
 ## 2023-6-15
 
-{{ slideshow(slides=[]) }}
+
 
 我超上海地震了？
 
@@ -1805,7 +2179,7 @@ well，经年累月少年终将不再，只是不知道留下的那个人是谁�
 
 ## 2023-4-14
 
-{{ slideshow(slides=[]) }}
+
 
 OuterWilds 星际拓荒！！！
 听暴雪四期过的！有龙马重轻西蒙陪着再也没有深空恐惧了！宇宙没有恶意！
@@ -1949,7 +2323,7 @@ Praise the mighty Playground.
 
 ## 2023-1-15
 
-{{ slideshow(slides=[]) }}
+
 
 夏日重现太好了，太好了。
 昨晚睡觉甚至还梦见了。
