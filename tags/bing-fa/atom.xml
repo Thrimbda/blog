@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 并发</title>
+    <subtitle>c1 的博客</subtitle>
+    <link href="https://0xc1.space/tags/bing-fa/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-05-19T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/bing-fa/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>二探并发(Actor)</title>
+        <published>2017-05-19T00:00:00+00:00</published>
+        <updated>2017-05-19T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://0xc1.space/blog/er-tan-bing-fa/" type="text/html"/>
+        <id>https://0xc1.space/blog/er-tan-bing-fa/</id>
+        
+        <content type="html">&lt;p&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;http:&#x2F;&#x2F;0xc1.space&#x2F;2017&#x2F;05&#x2F;06&#x2F;%E5%88%9D%E6%8E%A2%E5%B9%B6%E5%8F%91&#x2F;&quot;&gt;上回&lt;&#x2F;a&gt;谈到利用消息队列在线程（进程）间传递消息以此来实现线程间的通信。&lt;&#x2F;p&gt;
+&lt;!--more--&gt;
+&lt;h2 id=&quot;gong-xiang-de-xiao-xi-dui-lie&quot;&gt;共享的消息队列&lt;&#x2F;h2&gt;
+&lt;p&gt;这是建立在&lt;strong&gt;并发只是提高系统吞吐率的基础上&lt;&#x2F;strong&gt;，在这种假设下每一个worker所做的工作都一样，因此可以共享一个消息队列，谁拿到下一条指令都无所谓。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ru-guo-wo-men-bu-shi-tong-bao-ni&quot;&gt;如果我们不是同胞呢&lt;&#x2F;h3&gt;
+&lt;p&gt;假如我们需要实现一个各个worker各司其职异步工作的系统（例如我们的IP-phone）该怎么办呢？假设我们还使用上面的方法，所有的worker共享一个消息队列，这时候就会产生问题：消息没办法发送给特定的worker。&lt;&#x2F;p&gt;
+&lt;p&gt;怎么解决这个问题呢？一个简单粗暴的解决方案是给每个消息加上标识，以标识出这条消息所要发送的对象：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;queue = Queue([(&amp;#x27;Send_to_worker_A&amp;#x27;, &amp;#x27;do_something1&amp;#x27;),
+               (&amp;#x27;Send_to_worker_B&amp;#x27;, &amp;#x27;do_something2&amp;#x27;),
+               (&amp;#x27;Send_to_worker_B&amp;#x27;, &amp;#x27;do_something3&amp;#x27;),
+               (&amp;#x27;Send_to_worker_C&amp;#x27;, &amp;#x27;do_something4&amp;#x27;),
+               (&amp;#x27;Send_to_worker_A&amp;#x27;, &amp;#x27;do_something5&amp;#x27;)])
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;看起来问题迎刃而解了对吧？但我们引入了一个新的问题。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ru-guo-wo-bu-xiao-xin-chai-kai-liao-song-gei-bie-ren-de-xin&quot;&gt;如果我不小心拆开了送给别人的信&lt;&#x2F;h3&gt;
+&lt;p&gt;如果送给worker A的消息被worker B接收到了，他得到条消息其实并没有什么用，而本该得到这条消息的worker A却没得到它，从而这条信息就丢失了。既浪费了worker B的时间，由消耗了work A的青春，甚至有可能因为跳步而使得整个系统陷入到什么诡异的Bug中。&lt;&#x2F;p&gt;
+&lt;p&gt;这个问题又怎么解决呢？从直觉上看，给每一个worker添加如下策略就能解决问题：得到别人的消息就把这条消息塞回消息队列中。&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;class Worker_B:
+    
+    def run(self):
+        while True:
+            if not self.queue.empty():
+                data = self.queue.get()
+                if data[&amp;#x27;to_whom&amp;#x27;] == &amp;#x27;worker_B&amp;#x27;:
+                    do_something_with_data
+                else:
+                    self.queue.put(data)
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;看似修修补补解决了问题…实际上又引入了一个新的问题。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;zhe-kan-qi-lai-shi-yi-tiao-si-lu&quot;&gt;这看起来是一条死路&lt;&#x2F;h3&gt;
+&lt;p&gt;第一，消息队列是一个队列，这意味着FIFO，就算引入了具有优先级的消息队列，本质上这一点也并没有改变。这样一来，本该第一个交给worker A的消息经worker B一倒腾，成为了当前消息队列中最晚递交给worker A的了，可能使得系统陷入诡异的Bug中。&lt;&#x2F;p&gt;
+&lt;p&gt;第二，即使我们设法让分发错了的消息重新插回消息队列的队首，如果不引入锁机制，使得错收了消息worker B的&lt;code&gt;收信-检查-放回&lt;&#x2F;code&gt;操作成为一个原子操作的话，那么在work B执行放回操作的时候，可能其他worker已经在继续进行接收消息操作了，仍然有可能造成时序上的大问题，而引入锁机制索然能解决逻辑上的错误问题，但是这样会使得每次轮询中只有一个worker真正能够工作，而其他得到错误消息执行&lt;code&gt;收信-检查-放回&lt;&#x2F;code&gt;操作的worker白白浪费自己的时间片，&lt;strong&gt;效率低下。&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;所以，看起来针对为了异步工作而引入并发的系统来说，每个worker共享同一个消息队列并不是一个好办法。&lt;&#x2F;p&gt;
+&lt;p&gt;根治这个问题的办法就是针对每一组执行同一任务的worker都建立一个专门的消息队列（邮箱），甚至每个worker都设置自己的消息队列，完全放弃了线程间共享内存的能力。后一种方法就是我今天要讲的主角：&lt;strong&gt;Actor模型（参与者模式）&lt;&#x2F;strong&gt;。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;actormo-xing&quot;&gt;Actor模型&lt;&#x2F;h2&gt;
+&lt;p&gt;首先我们来看看维基百科对Actor模型的定义与概念：&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;gai-nian&quot;&gt;概念&lt;&#x2F;h3&gt;
+&lt;p&gt;在计算机科学中，参与者模式（英语：Actor model）是一种并发运算上的模型。“参与者”是一种程序上的抽象概念，被视为并发运算的基本单元：当一个参与者接收到一则消息，它可以做出一些决策、创建更多的参与者、发送更多的消息、决定要如何回答接下来的消息。参与者模式在1973年于Carl Hewitt、Peter Bishop及Richard Steiger的论文中提出。&lt;&#x2F;p&gt;
+&lt;p&gt;参与者模型推崇的哲学是“一切皆是参与者”，这与面向对象编程的“一切皆是对象”类似，但是面向对象编程通常是顺序执行的，而参与者模型是并行执行的。参与者是一个运算实体，回应接受到的消息，同时并行的：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;发送有限数量的消息给其他参与者；&lt;&#x2F;li&gt;
+&lt;li&gt;创建有限数量的新参与者；&lt;&#x2F;li&gt;
+&lt;li&gt;指定接受到下一个消息时的行为。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;以上操作不含有顺序执行的假设，因此可以并行进行。发送者与已经发送的消息解耦，是参与者模型的根本优势。这允许进行异步通信，同时满足消息传递的控制结构。消息接收者是通过地址区分的，有时也被称作“邮件地址”。因此参与者只能和它拥有地址的参与者通信。它可以通过接受到的信息获取地址，或者获取它创建的参与者的地址。参与者模型的特征是，参与者内部或之间进行并行计算，参与者可以动态创建，参与者地址包含在消息中，交互只有通过直接的异步消息通信，不限制消息到达的顺序。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;shi-xian&quot;&gt;实现&lt;&#x2F;h3&gt;
+&lt;p&gt;Actor足够简单，为并发而生，并且具有足够好的封装性可以隔离变化（例如：不关心是多线程还是多进程）。&lt;&#x2F;p&gt;
+&lt;p&gt;让我们来看看一个典型的Actor的python线程实现：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;
+from queue import Queue
+from threading import Thread, Event
+
+
+class WorkerExit(Exception):
+    # 用来结束任务的异常
+    pass
+
+
+class BaseWorker(object):
+	# Actor
+    def __init__(self):
+        self._mailbox = Queue()
+        super(BaseWorker, self).__init__()
+
+    def send(self, msg):
+        self._mailbox.put(msg)
+
+    def recv(self):
+        msg = self._mailbox.get()
+        if msg is WorkerExit:
+            raise WorkerExit()
+        return msg
+
+    def close(self):
+        self.send(WorkerExit)
+
+    def start(self):
+        self._terminated = Event()
+        t = Thread(target=self._bootstrap)
+
+        t.daemon = True
+        t.start()
+
+    def _bootstrap(self):
+        try:
+            self.run()
+        except WorkerExit:
+            pass
+        finally:
+            self._terminated.set()
+
+    def join(self):
+        self._terminated.wait()
+
+    def run(self):
+        raise NotImplementedError
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;简单地解释一下，这个Actor（我起名为BaseWorker，在真实的项目中作为父类使用），维持两个数据结构：&lt;code&gt;Queue&lt;&#x2F;code&gt;作为邮箱以及&lt;code&gt;Event&lt;&#x2F;code&gt;作为阻塞主线程的杀器。&lt;&#x2F;p&gt;
+&lt;p&gt;这里作为外部接口的核心操作只有一个&lt;code&gt;send()&lt;&#x2F;code&gt;方法。请注意，&lt;strong&gt;我们不限制能够传递的消息类型&lt;&#x2F;strong&gt;，这意味着无比的灵活性。&lt;&#x2F;p&gt;
+&lt;p&gt;在Actor内部我们使用一个线程来运行&lt;code&gt;run()&lt;&#x2F;code&gt;方法结合&lt;code&gt;recv()&lt;&#x2F;code&gt;方法执行所指定的具体工作。值得一提的是，我们设置了一个哨兵信号&lt;code&gt;WorkerExit&lt;&#x2F;code&gt;用来停止任务，请注意&lt;code&gt;WorkerExit&lt;&#x2F;code&gt;的运行原理是当他被识别后作为一个异常被抛出，而在异常处理这里我们甚至做更多事情，当然这里我们只是在捕获到这个异常时停之线程运行。而这一异常处理的实现有赖于用来包装&lt;code&gt;run()&lt;&#x2F;code&gt;方法的&lt;code&gt;_bootstrap()&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;p&gt;在Actor模型的哲学下我们将这个简单的例子拓展从而走得更远。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;zong-jie&quot;&gt;总结&lt;&#x2F;h2&gt;
+&lt;p&gt;并发编程需要一种较之平常更为抽象的思维方式，也可以作为“高内聚，低耦合”这一思想的良好实践。&lt;&#x2F;p&gt;
+&lt;p&gt;而我在这片对我而言的全新领域的探索中Actor的确是一盏指路明灯，算是领着我真正入了门，因此在这里分享。 :)&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>初探并发</title>
+        <published>2017-05-07T00:00:00+00:00</published>
+        <updated>2017-05-07T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://0xc1.space/blog/chu-tan-bing-fa/" type="text/html"/>
+        <id>https://0xc1.space/blog/chu-tan-bing-fa/</id>
+        
+        <content type="html">&lt;p&gt;很好，最近的一个小作业让我游行接触到真正有意义的并发编程。&lt;&#x2F;p&gt;
+&lt;!--more--&gt;
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;&#x2F;h2&gt;
+&lt;p&gt;于是使用 python 的&lt;code&gt;queue&lt;&#x2F;code&gt;和&lt;code&gt;signal&lt;&#x2F;code&gt;还有&lt;code&gt;time&lt;&#x2F;code&gt;模块做了一个不算真正多线程的示意用的小小 demo：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;# -*- coding: utf-8 -*-
+# @Author: Michale
+# @Date:   2017-05-04 15:00:41
+# @Last Modified by:   Michale
+# @Last Modified time: 2017-05-07 00:46:52
+import signal
+import queue
+import time
+
+
+class TestClass(object):
+    queue = queue.Queue()
+
+    def __init__(self):
+        signal.signal(signal.SIGINT, self.stopIfPressKill)
+
+    def stopIfPressKill(self, mySignal, stack):
+        if mySignal == signal.SIGINT:
+            print(&amp;#x27;you pressed CTRL-C&amp;#x27;)
+            self.queue.put_nowait(&amp;#x27;stop&amp;#x27;)
+            print(self.queue.qsize())
+
+    def mainThread(self):
+        while True:
+            time.sleep(1)
+            if not self.queue.empty():
+                data = self.queue.get()
+                print(data)
+                if data == &amp;#x27;stop&amp;#x27;:
+                    break
+                else:
+                    self.queue.put(data)
+
+
+if __name__ == &amp;#x27;__main__&amp;#x27;:
+    yoo = TestClass()
+    yoo.mainThread()
+
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;解释一下三个模块的作用：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;queue&lt;&#x2F;code&gt;：作为消息队列，这里显然有点大材小用。&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;signal&lt;&#x2F;code&gt;：用来捕捉&lt;code&gt;KeyboardInterrupt&lt;&#x2F;code&gt;之后将停止信号置入消息队列。&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;time&lt;&#x2F;code&gt;：用来让主线程能够捕捉到这个&lt;code&gt;KeyboardInterrupt&lt;&#x2F;code&gt;。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;si-xiang&quot;&gt;思想&lt;&#x2F;h2&gt;
+&lt;p&gt;多线程的引入使得非主线程在启动后就很难控制，所以迫使人们使用消息队列这样的方式实现线程间通信。&lt;&#x2F;p&gt;
+&lt;p&gt;但其实不论是否是多线程，系统各个模块本就应该将细节封装起来，而使用事件是他们协同工作，这样对于降低系统耦合有很大帮助，这也是一个好的系统的设计思想：&lt;strong&gt;为变化而设计。&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
