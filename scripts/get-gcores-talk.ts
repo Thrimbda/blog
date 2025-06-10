@@ -2,7 +2,9 @@
 import {
   EMPTY,
   Observable,
+  delayWhen,
   expand,
+  from,
   map,
   mergeAll,
   mergeMap,
@@ -20,8 +22,11 @@ const url = new URL(
   `https://www.gcores.com/gapi/v1/users/${user}/recommend?talk-include=topic%2Cuser%2Chelpful%2Cpoll-options%2Crelated-content.radio%2Crelated-content.video%2Crelated-content.article%2Crelated-content.game%2Crelated-content.film%2Crelated-content.album%2Crelated-content.album-bundle%2Crelated-content.product%2Crelated-content.discussion&original-include=user%2Cdjs%2Ccategory&order-by=time&fields[articles]=title%2Cdesc%2Cexcerpt%2Cis-published%2Cthumb%2Capp-cover%2Ccover%2Ccomments-count%2Clikes-count%2Cbookmarks-count%2Cis-verified%2Cpublished-at%2Coption-is-official%2Coption-is-focus-showcase%2Cduration%2Cdraft%2Caudit-draft%2Cuser%2Ccomments%2Ccategory%2Ctags%2Centries%2Centities%2Csimilarities%2Clatest-collection%2Ccollections%2Coperational-events%2Cportfolios%2Ccatalog-tags&fields[videos]=title%2Cdesc%2Cexcerpt%2Cis-published%2Cthumb%2Capp-cover%2Ccover%2Ccomments-count%2Clikes-count%2Cbookmarks-count%2Cis-verified%2Cpublished-at%2Coption-is-official%2Coption-is-focus-showcase%2Cduration%2Cdraft%2Caudit-draft%2Cuser%2Ccomments%2Ccategory%2Ctags%2Centries%2Centities%2Csimilarities%2Clatest-collection%2Ccollections%2Coperational-events%2Cportfolios%2Ccatalog-tags%2Cmedia%2Cdjs%2Calbums%2Cpublished-albums&fields[radios]=title%2Cdesc%2Cexcerpt%2Cis-published%2Cthumb%2Capp-cover%2Ccover%2Ccomments-count%2Clikes-count%2Cbookmarks-count%2Cis-verified%2Cpublished-at%2Coption-is-official%2Coption-is-focus-showcase%2Cduration%2Cdraft%2Caudit-draft%2Cuser%2Ccomments%2Ccategory%2Ctags%2Centries%2Centities%2Csimilarities%2Clatest-collection%2Ccollections%2Coperational-events%2Cportfolios%2Ccatalog-tags%2Cmedia%2Cdjs%2Clatest-album%2Calbums%2Cis-free%2Cis-require-privilege`
 );
 
-const imageUrl = (image: string) =>
+const gcoresImageUrl = (image: string) =>
   `https://image.gcores.com/${image}?x-oss-process=image/quality,q_90/format,webp`;
+
+const localImageUrl = (image: string) =>
+  `https://0xc1.github.io/static/images/gcores/${image}`;
 
 // pagination
 url.searchParams.set("before", `${Date.now() / 1000}`);
@@ -32,6 +37,16 @@ interface IGcoresTalk {
   published_at: number;
   tags: string[];
 }
+
+const download = async (url: string, filePath: string) => {
+  const res = await fetch(url);
+  const file = await Deno.open(filePath, {
+    create: true,
+    write: true,
+  });
+
+  await res.body?.pipeTo(file.writable);
+};
 
 const rawGcoresTalkData$: Observable<any[]> = of({
   before: Date.now() / 1000,
@@ -184,6 +199,18 @@ cookedData$
     tap((v) => {
       console.info(v);
     }),
+    // delayWhen((v) =>
+    //   from(v.images).pipe(
+    //     mergeMap(async (imageName) => {
+    //       const url = new URL(gcoresImageUrl(imageName));
+    //       return await download(
+    //         url.toString(),
+    //         `./static/images/gcores/${url.pathname}`
+    //       );
+    //     }),
+    //     toArray()
+    //   )
+    // ),
     map((v: IGcoresTalk): string => {
       const published_time = new Date(v.published_at);
       const title = `## ${published_time.getFullYear()}-${
@@ -195,9 +222,9 @@ cookedData$
           ? ""
           : v.images.length !== 1
           ? `{{ slideshow(slides=[${v.images
-              .map((v) => `"${imageUrl(v)}"`)
+              .map((v) => `"${localImageUrl(v)}"`)
               .join(",")}]) }}`
-          : `![${v.images[0]}](${imageUrl(v.images[0])})`;
+          : `![${v.images[0]}](${localImageUrl(v.images[0])})`;
       // const images = "";
       const tags = v.tags.map((v) => `- ${v}`).join("\n");
       // const tags = "";
