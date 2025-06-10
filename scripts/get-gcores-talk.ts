@@ -26,7 +26,7 @@ const gcoresImageUrl = (image: string) =>
   `https://image.gcores.com/${image}?x-oss-process=image/quality,q_90/format,webp`;
 
 const localImageUrl = (image: string) =>
-  `https://0xc1.github.io/static/images/gcores/${image}`;
+  `https://0xc1.github.io/images/gcores/${image}`;
 
 // pagination
 url.searchParams.set("before", `${Date.now() / 1000}`);
