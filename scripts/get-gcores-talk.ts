@@ -198,7 +198,9 @@ cookedData$
               .map((v) => `"${imageUrl(v)}"`)
               .join(",")}]) }}`
           : `![${v.images[0]}](${imageUrl(v.images[0])})`;
+      // const images = "";
       const tags = v.tags.map((v) => `- ${v}`).join("\n");
+      // const tags = "";
 
       return `${title}\n\n${images}\n\n${content}\n\n${tags}\n`;
     }),
