@@ -1,4 +1,6 @@
 +++
+[extra]
+insert_recent_blogs = true
 +++
 
 ## 你好
@@ -23,13 +25,7 @@
 >
 > ------ 我，2017 年 2 月 6 日。
 
-## 博客
-
-**改天我一定会写一些有意思的东西的。**
-
-- [我落入清凉的酷暑中](./blog/wo-luo-ru-qing-liang-de-ku-shu-zhong)
-- [山上的树：开源软件的昨天和今天](./blog/shan-shang-de-shu-kai-yuan-ruan-jian-de-zuo-tian-he-jin-tian/)
-- [话剧《哥本哈根》：人性幽深处的量子观测实验](./blog/hua-ju-ge-ben-ha-gen-ren-xing-you-shen-chu-de-liang-zi-guan-ce-shi-yan)
+<!-- RECENT_BLOGS_PLACEHOLDER -->
 
 ## 标签
 
