@@ -1,8 +1,98 @@
 ---
 title: '0xc1 的机组日志'
-date: 2025-06-10T19:05:50.642Z
+date: 2025-07-25T19:15:16.509Z
 ---
 原始链接：[Thrimbda 的机组](https://www.gcores.com/users/464460/talks)
+## 2025-7-23
+
+{{ slideshow(slides=["https://0xc1.space/images/gcores/5e2c69d3fd0d702f2681170a2c7cea5d-3000-2250.jpg","https://0xc1.space/images/gcores/058782e686ff66b91d20bc70c14f8143-1349-1001.HEIC","https://0xc1.space/images/gcores/6cdfb06a29d11ac000b57be6089762e8-2250-3000.jpg","https://0xc1.space/images/gcores/d5279a8e04fc87b80b4c72fb74f10688-3000-2250.jpg","https://0xc1.space/images/gcores/93e885feb830229d0be84168d289def8-3000-2250.jpg","https://0xc1.space/images/gcores/e6701abeb0ab16b7f6a7e883d8e0c43c-3000-2250.jpg"]) }}
+
+逛骊山见闻
+
+- 🧳出去走走
+
+
+---
+---
+
+## 2025-7-23
+
+
+
+我超了，在量子位上看到同学了，我还搁这玛卡巴卡呢🥹
+
+- 🌙emo树洞
+
+
+---
+---
+
+## 2025-7-20
+
+![06989f6a9aefa0498ff9356b6c1923f7-1280-960.jpg](https://0xc1.space/images/gcores/06989f6a9aefa0498ff9356b6c1923f7-1280-960.jpg)
+
+2016 年，大二到大三期间我的每月生活费是 1000元，我那时候的对象每个月 1200。
+
+她学校在长安区最西南，我学校在沙坡村，每周都见。
+
+我们学校东南门门口有个好利来，她是别的学校的女孩子，周末来找我的时候说半熟芝士好吃，合八块一个。我们只舍得买两个装的，买完后要去对面坐公交车，在天桥上就你一口我一口吃完了。
+
+后来大四下学期我找到实习，每小时三十块。算上加班和绩效月收入达到了一万多，我之前从来没掌握过这么多钱。
+
+2018 年五一，我一个人去学校门口买了一盒五个装的。去对面坐了同一班公交车，一个人默默吃完了。
+
+她读研的学校在中关村，我实习工作在五道口，再也没见过。
+
+
+- 💓情感妙妙屋
+
+
+---
+---
+
+## 2025-7-9
+
+
+
+大家好，我要输出一句暴论：
+
+
+
+
+人无法同时拥有特斯拉汽车和素质。
+
+- 🤔发癫发狂！癫火之王！
+
+
+---
+---
+
+## 2025-6-27
+
+{{ slideshow(slides=["https://0xc1.space/images/gcores/7ca04b334bd62d8d753f7a57cdf5e2c9-3000-2250.jpg","https://0xc1.space/images/gcores/cedd4d2b26276ebc08cd5578cec61442-3000-2250.jpg","https://0xc1.space/images/gcores/55715d26782ff5a1a3ed5bd9acdd0199-4032-3024.HEIC"]) }}
+
+你怎么知道我今天过生日☺️
+
+- 🐒黑神话 悟空
+
+
+---
+---
+
+## 2025-6-21
+
+![061424172fff175b1d412ba20ad405a8-1080-1920.jpg](https://0xc1.space/images/gcores/061424172fff175b1d412ba20ad405a8-1080-1920.jpg)
+
+到达沈阳！
+住铁西区！
+ktsg实地考察任务完成！
+
+- 🧩一枚生活碎片
+
+
+---
+---
+
 ## 2025-6-1
 
 ![d7453f5674d0b9eb078f8306c8b19d6e-2250-3000.jpg](https://0xc1.space/images/gcores/d7453f5674d0b9eb078f8306c8b19d6e-2250-3000.jpg)
