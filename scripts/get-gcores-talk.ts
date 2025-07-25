@@ -16,17 +16,72 @@ import {
   toArray,
 } from "https://esm.sh/rxjs@7.8.1";
 
+// Parse command line arguments
+const args = Deno.args;
+const showHelp = args.includes('--help') || args.includes('-h');
+
+// Parse json file path argument - if not specified, do full update
+let jsonFilePath = '';
+let fullUpdate = true;
+const jsonPathIndex = args.findIndex(arg => arg === '--json' || arg === '-j');
+if (jsonPathIndex !== -1 && args[jsonPathIndex + 1]) {
+  jsonFilePath = args[jsonPathIndex + 1];
+  fullUpdate = false; // If json path is specified, do incremental update
+}
+
+if (showHelp) {
+  console.log(`
+Usage: deno run --allow-net --allow-read --allow-write get-gcores-talk.ts [options]
+
+Options:
+  --json, -j <path>       Specify JSON file path for incremental update
+  --help, -h              Show this help message
+
+Behavior:
+  - Without --json: Performs full update, outputs to ./content/gcores-talks.md only
+  - With --json: Performs incremental update, reads existing data from specified file
+
+Examples:
+  deno run --allow-net --allow-read --allow-write get-gcores-talk.ts                           # Full update (no JSON output)
+  deno run --allow-net --allow-read --allow-write get-gcores-talk.ts --json ./data/talks.json # Incremental update with JSON storage
+  `);
+  Deno.exit(0);
+}
+
 const user = 464460;
 
 const url = new URL(
   `https://www.gcores.com/gapi/v1/users/${user}/recommend?talk-include=topic%2Cuser%2Chelpful%2Cpoll-options%2Crelated-content.radio%2Crelated-content.video%2Crelated-content.article%2Crelated-content.game%2Crelated-content.film%2Crelated-content.album%2Crelated-content.album-bundle%2Crelated-content.product%2Crelated-content.discussion&original-include=user%2Cdjs%2Ccategory&order-by=time&fields[articles]=title%2Cdesc%2Cexcerpt%2Cis-published%2Cthumb%2Capp-cover%2Ccover%2Ccomments-count%2Clikes-count%2Cbookmarks-count%2Cis-verified%2Cpublished-at%2Coption-is-official%2Coption-is-focus-showcase%2Cduration%2Cdraft%2Caudit-draft%2Cuser%2Ccomments%2Ccategory%2Ctags%2Centries%2Centities%2Csimilarities%2Clatest-collection%2Ccollections%2Coperational-events%2Cportfolios%2Ccatalog-tags&fields[videos]=title%2Cdesc%2Cexcerpt%2Cis-published%2Cthumb%2Capp-cover%2Ccover%2Ccomments-count%2Clikes-count%2Cbookmarks-count%2Cis-verified%2Cpublished-at%2Coption-is-official%2Coption-is-focus-showcase%2Cduration%2Cdraft%2Caudit-draft%2Cuser%2Ccomments%2Ccategory%2Ctags%2Centries%2Centities%2Csimilarities%2Clatest-collection%2Ccollections%2Coperational-events%2Cportfolios%2Ccatalog-tags%2Cmedia%2Cdjs%2Calbums%2Cpublished-albums&fields[radios]=title%2Cdesc%2Cexcerpt%2Cis-published%2Cthumb%2Capp-cover%2Ccover%2Ccomments-count%2Clikes-count%2Cbookmarks-count%2Cis-verified%2Cpublished-at%2Coption-is-official%2Coption-is-focus-showcase%2Cduration%2Cdraft%2Caudit-draft%2Cuser%2Ccomments%2Ccategory%2Ctags%2Centries%2Centities%2Csimilarities%2Clatest-collection%2Ccollections%2Coperational-events%2Cportfolios%2Ccatalog-tags%2Cmedia%2Cdjs%2Clatest-album%2Calbums%2Cis-free%2Cis-require-privilege`
 );
 
-const gcoresImageUrl = (image: string) =>
+const _gcoresImageUrl = (image: string) =>
   `https://image.gcores.com/${image}?x-oss-process=image/quality,q_90/format,webp`;
 
 const localImageUrl = (image: string) =>
   `https://0xc1.space/images/gcores/${image}`;
+
+// Read existing data for incremental updates
+let existingData: IGcoresTalk[] = [];
+let latestTimestamp = 0;
+
+if (!fullUpdate) {
+  try {
+    const existingContent = await Deno.readTextFile(jsonFilePath);
+    existingData = JSON.parse(existingContent);
+    if (existingData.length > 0) {
+      latestTimestamp = Math.max(...existingData.map(item => item.published_at));
+      console.info(`Found ${existingData.length} existing talks, latest timestamp: ${latestTimestamp}`);
+    }
+  } catch (error) {
+    console.info('No existing data found or error reading file, performing full update');
+    console.error(error);
+  }
+}
+
+console.info(`Starting ${fullUpdate ? 'full' : 'incremental'} update...`);
+if (!fullUpdate) {
+  console.info(`Using JSON file: ${jsonFilePath}`);
+}
 
 // pagination
 url.searchParams.set("before", `${Date.now() / 1000}`);
@@ -38,7 +93,7 @@ interface IGcoresTalk {
   tags: string[];
 }
 
-const download = async (url: string, filePath: string) => {
+const _download = async (url: string, filePath: string) => {
   const res = await fetch(url);
   const file = await Deno.open(filePath, {
     create: true,
@@ -59,6 +114,25 @@ const rawGcoresTalkData$: Observable<any[]> = of({
     if (!data.data || data.data.length === 0) {
       return EMPTY;
     }
+    
+    // For incremental updates, stop when we reach existing data
+    if (!fullUpdate && latestTimestamp > 0) {
+      const oldestInBatch = Math.min(
+        ...data.data.map((item: any) => new Date(item.attributes["published-at"]).getTime())
+      );
+      if (oldestInBatch <= latestTimestamp) {
+        console.info(`Reached existing data at timestamp ${oldestInBatch}, stopping fetch`);
+        // Filter out items that already exist
+        data.data = data.data.filter((item: any) => 
+          new Date(item.attributes["published-at"]).getTime() > latestTimestamp
+        );
+        if (data.data.length === 0) {
+          return EMPTY;
+        }
+        return { ...data, stopFetch: true };
+      }
+    }
+    
     return {
       before:
         new Date(
@@ -70,10 +144,10 @@ const rawGcoresTalkData$: Observable<any[]> = of({
   skip(1),
   // debug
   // take(1),
-  takeWhile((v) => !!v.data),
+  takeWhile((v) => !!v.data && !v.stopFetch),
   // filter((v) => v.data.length > 0),
   tap((v) => {
-    console.info(v);
+    console.info(`Fetched batch with ${v.data.length} items`);
   }),
   toArray(),
   shareReplay(1)
@@ -185,19 +259,51 @@ const cookedData$ = rawGcoresTalkData$.pipe(
   })
 );
 
-// cookedData$.pipe(
-//   //
-//   toArray(),
-//   tap((v) =>
-//     Deno.writeTextFile(`./content/gcores-talks.json`, JSON.stringify(v))
-//   )
-// ).subscribe()
+// Only save JSON for incremental updates
+if (!fullUpdate) {
+  cookedData$.pipe(
+    //
+    toArray(),
+    map((newData) => {
+      // Merge with existing data for incremental updates
+      if (existingData.length > 0) {
+        const mergedData = [...newData, ...existingData];
+        // Sort by published_at descending (newest first)
+        mergedData.sort((a, b) => b.published_at - a.published_at);
+        console.info(`Merged ${newData.length} new talks with ${existingData.length} existing talks`);
+        return mergedData;
+      }
+      console.info(`Saving ${newData.length} talks`);
+      return newData;
+    }),
+    tap((v) =>
+      Deno.writeTextFile(jsonFilePath, JSON.stringify(v, null, 2))
+    )
+  ).subscribe()
+}
 
-cookedData$
+// Generate markdown from merged data
+const generateMarkdown$ = cookedData$.pipe(
+  toArray(),
+  map((newData) => {
+    // Merge with existing data for incremental updates
+    if (!fullUpdate && existingData.length > 0) {
+      const mergedData = [...newData, ...existingData];
+      // Sort by published_at descending (newest first)
+      mergedData.sort((a, b) => b.published_at - a.published_at);
+      return mergedData;
+    }
+    return newData;
+  }),
+  shareReplay(1)
+);
+
+generateMarkdown$
   .pipe(
+    mergeMap((allData) => from(allData)),
     //
     tap((v) => {
-      console.info(v);
+      console.info(`Processing talk from ${new Date(v.published_at).toLocaleDateString()}`);
     }),
     // delayWhen((v) =>
     //   from(v.images).pipe(
