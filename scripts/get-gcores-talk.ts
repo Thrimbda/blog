@@ -268,8 +268,6 @@ if (!fullUpdate) {
       // Merge with existing data for incremental updates
       if (existingData.length > 0) {
         const mergedData = [...newData, ...existingData];
-        // Sort by published_at descending (newest first)
-        mergedData.sort((a, b) => b.published_at - a.published_at);
         console.info(`Merged ${newData.length} new talks with ${existingData.length} existing talks`);
         return mergedData;
       }
@@ -305,18 +303,35 @@ generateMarkdown$
     tap((v) => {
       console.info(`Processing talk from ${new Date(v.published_at).toLocaleDateString()}`);
     }),
-    // delayWhen((v) =>
-    //   from(v.images).pipe(
-    //     mergeMap(async (imageName) => {
-    //       const url = new URL(gcoresImageUrl(imageName));
-    //       return await download(
-    //         url.toString(),
-    //         `./static/images/gcores/${url.pathname}`
-    //       );
-    //     }),
-    //     toArray()
-    //   )
-    // ),
+    delayWhen((v) =>
+      from(v.images).pipe(
+        mergeMap(async (imageName) => {
+          const localPath = `./static/images/gcores/${imageName}`;
+          try {
+            // Check if file already exists
+            await Deno.stat(localPath);
+            console.info(`Image ${imageName} already exists, skipping download`);
+            return null; // File exists, no need to download
+          } catch {
+            // File doesn't exist, download it
+            console.info(`Downloading image: ${imageName}`);
+            const url = new URL(_gcoresImageUrl(imageName));
+            return await _download(
+              url.toString(),
+              localPath
+            );
+          }
+        }),
+        toArray()
+      )
+    ),
+    toArray(),
+    map((v) => {
+        // Sort by published_at descending (newest first)
+        v.sort((a, b) => b.published_at - a.published_at);
+        return v;
+    }),
+    mergeAll(),
     map((v: IGcoresTalk): string => {
       const published_time = new Date(v.published_at);
       const title = `## ${published_time.getFullYear()}-${
