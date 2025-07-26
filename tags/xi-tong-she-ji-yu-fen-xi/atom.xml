@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 系统设计与分析</title>
+    <subtitle>c1 的博客</subtitle>
+    <link href="https://0xc1.space/tags/xi-tong-she-ji-yu-fen-xi/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-05-11T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/xi-tong-she-ji-yu-fen-xi/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>一个RBAC-Demo：为了艾尔</title>
+        <published>2017-05-11T00:00:00+00:00</published>
+        <updated>2017-05-11T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://0xc1.space/blog/yi-ge-rbac-demo-wei-liao-ai-er/" type="text/html"/>
+        <id>https://0xc1.space/blog/yi-ge-rbac-demo-wei-liao-ai-er/</id>
+        
+        <content type="html">&lt;p&gt;基于上篇对RBAC的理解，也由于作业要求，我将编写一个简单的Demo对作为RBAC的实践。&lt;&#x2F;p&gt;
+&lt;p&gt;我无意将Demo做的无比庞大，我的目标在于说明问题，所以依然”麻雀虽小，五脏俱全。“&lt;&#x2F;p&gt;
+&lt;p&gt;那么这个Demo的目标是什么呢，他都可以做些什么呢？&lt;&#x2F;p&gt;
+&lt;!--more--&gt;
+&lt;h2 id=&quot;fen-xi-yu-she-ji&quot;&gt;分析与设计&lt;&#x2F;h2&gt;
+&lt;p&gt;为了有趣并充分反映问题，我将在自己的Demo中模拟一个大幅简化的、每个单位都奇迹般地拥有了主观能动性的星际争霸 (StarCraft) 战局中一位星灵玩家所面对的场景。&lt;&#x2F;p&gt;
+&lt;p&gt;一个好的Demo需要一个好的名字，因此这个Demo的名字叫做：&lt;strong&gt;为了艾尔！&lt;&#x2F;strong&gt;（艾尔是星灵的母星，每个狂热者在被传送到战场时都会说这样一句慷慨激昂的话：”为艾尔而战！“）&lt;&#x2F;p&gt;
+&lt;p&gt;在&lt;strong&gt;为了艾尔&lt;&#x2F;strong&gt;中，你要带领着己方队伍生产出足够的狂热者战士，消灭毁灭者埃蒙，拯救整个宇宙，如果你的狂热者不够，你将会失败，群星低语，万物湮灭。&lt;&#x2F;p&gt;
+&lt;p&gt;这一切都体现在一个由python的flask框架所编写的RESTful的服务中。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实真实的场景中除玩家外每个主体都可以被创造出来，因此都可以被视为资源，而为了体现RBAC，我给他们添加了如下约束：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;本Demo所提供的几个主体唯一并且始终存在，就如同他们是独一无二的一样，因此也除去任何主体可以被递归地创造出来的可能（例如：探机可以生产星灵枢纽，而星灵枢纽可以生产探机）&lt;&#x2F;li&gt;
+&lt;li&gt;事实上传送门是需要水晶的能量支持才能运作的，但是在这里没有体现出来，我将其解释为我们的传送门受到了位于同步轨道上亚顿之矛这艘星灵的传奇母舰的能量支持，从而只把水晶塔看作提供人口上限的资源。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;这个战局中拥有以下对象：&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;zhu-ti-subject&quot;&gt;主体(Subject)&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;玩家 （你）thrimbda&lt;&#x2F;li&gt;
+&lt;li&gt;探机 （基本的工作单位，可以采集生产资源，也可以建造建筑）probe&lt;&#x2F;li&gt;
+&lt;li&gt;传送门 （生产狂热者，一种作战单位）gatewat&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;jiao-se-role&quot;&gt;角色(Role)&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;执政官（最高统帅，调配一切资源）archon&lt;&#x2F;li&gt;
+&lt;li&gt;晶体矿采集者 （只有探机可以承担此任）crystal_collector&lt;&#x2F;li&gt;
+&lt;li&gt;供狂热者传送的枢纽 （支持星灵战士折跃的信标）portal&lt;&#x2F;li&gt;
+&lt;li&gt;水晶建造者 （有了水晶，我们才可以有足够的人口上限用来传送狂热者）pylon_transporter&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;zi-yuan-resource&quot;&gt;资源 (Resource)&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;未采集的水晶矿 （用于建造水晶，以及传送狂热者，初始值未知）&lt;&#x2F;li&gt;
+&lt;li&gt;采集的水晶矿 （用于建造水晶，以及传送狂热者，初始值0）&lt;&#x2F;li&gt;
+&lt;li&gt;产能 （提供传送的能量，也就是我们口中的人口，初始值0）&lt;&#x2F;li&gt;
+&lt;li&gt;狂热者 （作战单位，你用来拯救宇宙的战士们，初始值0）&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;quan-xian-permission&quot;&gt;权限 (Permission)&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于针对资源的每一个操作都是一个权限，因此这里我们不单独把操作列出，而直接给出权限及其描述&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;采集晶矿（每次最多采集1000单位）&lt;&#x2F;li&gt;
+&lt;li&gt;观察未采集的晶矿（观察总量）&lt;&#x2F;li&gt;
+&lt;li&gt;状态报告 （报告当前你所拥有的资源数量）&lt;&#x2F;li&gt;
+&lt;li&gt;侦察埃蒙的实力（计算需要的狂热者数量）&lt;&#x2F;li&gt;
+&lt;li&gt;建造水晶塔（每个水晶塔提供10的产能单位，以及100晶矿）&lt;&#x2F;li&gt;
+&lt;li&gt;生产狂热者（每个狂热者消耗2的产能单位，以及100晶矿）&lt;&#x2F;li&gt;
+&lt;li&gt;攻击埃蒙（不胜利，毋宁死！）&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;sa&quot;&gt;SA&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;主体-角色以及角色-权限的多对多关系，使用python的多元祖数据结构表示，在实现中亦是如此，因此本应用中不使用数据库。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;subject_role = ((&amp;#x27;thrimbda&amp;#x27;, &amp;#x27;archon&amp;#x27;),
+                (&amp;#x27;probe&amp;#x27;, &amp;#x27;crystal_collector&amp;#x27;),
+                (&amp;#x27;probe&amp;#x27;, &amp;#x27;pylon_transporter&amp;#x27;),
+                (&amp;#x27;gateway&amp;#x27;, &amp;#x27;portal&amp;#x27;))
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;pa&quot;&gt;PA&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;role_permission = ((&amp;#x27;archon&amp;#x27;, &amp;#x27;get_status&amp;#x27;),
+                   (&amp;#x27;archon&amp;#x27;, &amp;#x27;for_aiur&amp;#x27;),
+                   (&amp;#x27;archon&amp;#x27;, &amp;#x27;scout&amp;#x27;),
+                   (&amp;#x27;crystal_collector&amp;#x27;, &amp;#x27;get_crystal&amp;#x27;),
+                   (&amp;#x27;crystal_collector&amp;#x27;, &amp;#x27;crystal_status&amp;#x27;),
+                   (&amp;#x27;pylon_transporter&amp;#x27;, &amp;#x27;get_status&amp;#x27;),
+                   (&amp;#x27;pylon_transporter&amp;#x27;, &amp;#x27;transport_pylon&amp;#x27;),
+                   (&amp;#x27;portal&amp;#x27;, &amp;#x27;transport_zealot&amp;#x27;),
+                   (&amp;#x27;portal&amp;#x27;, &amp;#x27;get_status&amp;#x27;))
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;shi-xian&quot;&gt;实现&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Thrimbda&#x2F;my-life-for-Aiur&quot;&gt;仓库URL&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;my-life-for-aiur.herokuapp.com&#x2F;&quot;&gt;线上部署&lt;&#x2F;a&gt;（速度慢）&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;zong-shu&quot;&gt;综述&lt;&#x2F;h3&gt;
+&lt;p&gt;总的来说我使用了python的flask框架编写了一个RESTful风格的服务，整个应用不涉及前端部分，因此也不存在绕过前端等安全问题了。&lt;&#x2F;p&gt;
+&lt;p&gt;首先这个Demo的一个特点在于没有使用数据库，RBAC并没有强制使用数据库，且在RBAC中使用数据库是符合直觉的意见很自然的事情，但在&lt;strong&gt;为了艾尔&lt;&#x2F;strong&gt;中我们不使用数据库，而是使用文件的形式体现RBAC的&lt;code&gt;主体-角色-权限&lt;&#x2F;code&gt;关系。数据库本身就是在文件系统的基础上发展而来的，这里采用文件是因为系统足够简单，为了说明问题而进一步降低系统的复杂度。具体的文件形式见上述 SA, PA 关系说明。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;you-guan-restful&quot;&gt;有关RESTful&lt;&#x2F;h3&gt;
+&lt;p&gt;这里简单地提以下RESTful(&lt;strong&gt;Re&lt;&#x2F;strong&gt;presentational &lt;strong&gt;S&lt;&#x2F;strong&gt;tate &lt;strong&gt;T&lt;&#x2F;strong&gt;ransfer)&lt;&#x2F;p&gt;
+&lt;p&gt;顾名思义，（资源的）表现层状态转化&lt;&#x2F;p&gt;
+&lt;p&gt;在一个Web服务中，提供的服务即为系统的资源，以URI的形式体现，而服务的形式为对资源的操作（状态转化），以HTTP动词的形式体现。这其中的几个概念可以很好地跟RBAC中资源、操作对应起来，因此我要做的就是将RBAC中的权限管理应用在REST中对资源的操作上。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;rbaczhong-ge-ge-dui-xiang&quot;&gt;RBAC中各个对象&lt;&#x2F;h3&gt;
+&lt;p&gt;可以看到在这两个配置文件中，除了SA和PA之外，我们可以隐含地求得S、R、P：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;# 根据上述元组 subject_role 求得S、R列表
+subjects = list(set([item[0] for item in subject_role]))
+roles = list(set([item[1] for item in subject_role]))
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;而SE可以很好地和web应用中的session对应起来，作为一个主体在一次登陆中的一个临时对象：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;# 主体用来登陆亚顿之矛战术管理系统的API，这里session作为flask的一个全局对象，其实现细节不再赘述。
+class SpearOfAdun(Resource):
+    
+    def post(self):
+        args = self.putparser.parse_args()
+        if args[&amp;#x27;subject&amp;#x27;] is not None:
+            abortInvalideSubject(args[&amp;#x27;subject&amp;#x27;])
+        if args[&amp;#x27;role&amp;#x27;] is not None:
+            abortInvalideRole(args[&amp;#x27;role&amp;#x27;])
+        checkRole(args[&amp;#x27;subject&amp;#x27;], args[&amp;#x27;role&amp;#x27;], subject_role)
+        session[&amp;#x27;subject&amp;#x27;] = args[&amp;#x27;subject&amp;#x27;]
+        session[&amp;#x27;role&amp;#x27;] = args[&amp;#x27;role&amp;#x27;]
+        return {&amp;#x27;message&amp;#x27;: &amp;#x27;login as %s using %s&amp;#x27; % (session[&amp;#x27;subject&amp;#x27;], session[&amp;#x27;role&amp;#x27;])}, 201
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;由于主体-角色的建模最终是为了将权限隔离开后分配，使得系统中的资源能够被妥善使用与保护。&lt;&#x2F;p&gt;
+&lt;p&gt;在&lt;strong&gt;为了艾尔&lt;&#x2F;strong&gt;中，我将权限作为web API的内部属性，例如:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;# 用来传送狂热者的API
+class Zealot(Resource):
+
+    def put(self):
+        permission = &amp;#x27;transport_zealot&amp;#x27; # 权限
+        abortIfSubjectUnauthenticated(session) # 登陆验证
+        checkPermission(session[&amp;#x27;role&amp;#x27;], permission, role_permission) # 鉴定主体在此角色下是否可以请求此权限
+        args = self.putparser.parse_args()
+        amount = nexus.transport(args[&amp;#x27;amount&amp;#x27;])
+        return {&amp;#x27;message&amp;#x27;: &amp;#x27;transport %d zealot warriors, En Taro Tassadar!&amp;#x27; % amount}, 200
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;而在上述用来举例的两个API中每个类都作为系统中的一个资源而存在，而提供的HTTP方法则是对资源的操作。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;至此，RBAC中的几种对象都到齐啦。&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ye-wu-luo-ji&quot;&gt;业务逻辑&lt;&#x2F;h3&gt;
+&lt;p&gt;由于&lt;strong&gt;为了艾尔&lt;&#x2F;strong&gt;是一个真实可玩的在线即时战略类游戏API，因此有必要讲讲它的业务逻辑：&lt;&#x2F;p&gt;
+&lt;p&gt;玩家的目标是：&lt;strong&gt;收集资源，建造基地，然后创造一支令你的敌人闻风丧胆的部队打败黑暗者埃蒙。&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;打败埃蒙的唯一条件就是要拥有足够数量的狂热者（zealot），而这个数量为系统随机生成的一个20到100之间的整数，同时系统会根据这个数据生成刚好够你打败埃蒙的未采集晶矿。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;为什么是刚好够？&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;由于传送狂热者需要足够数量的水晶能量以及晶矿，提供能量的水晶塔也需要消耗晶矿来生产。因此假如你建造了太多的水晶塔，那么虽然水晶能量够了，但你会&lt;strong&gt;因为没有足够的晶矿来传送狂热者而输掉这场决定整个宇宙命运的战役&lt;&#x2F;strong&gt;。&lt;&#x2F;p&gt;
+&lt;p&gt;而整套逻辑由一个生命周期跨越整场战役的对象提供，为了防止问题，我加入了线程锁来确保每个操作都是原子的。&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;# 由于它是整个游戏的核心，我将它称之为枢纽-Nexus
+import random
+from threading import Lock
+
+
+class Nexus(object):
+    _lock = Lock()
+    crestalInControl = None
+    crestalRemain = None
+    populationCap = None
+    zealot = None
+    status = {}
+    _amond = None
+
+    def __init__(self):
+        # 初始化对象
+        self._amond = random.randint(20, 100)
+        self.crestalRemain = self._amond * 100 + (self._amond &amp;#x2F;&amp;#x2F; 5 + 1) * 100
+        self.crestalInControl = 0
+        self.populationCap = 0
+        self.zealot = 0
+
+    def collect(self, amount=1000):
+        # 采集水晶矿
+        with self._lock:
+            amount = min(amount, self.crestalRemain)
+            self.crestalRemain -= amount
+            self.crestalInControl += amount
+            return amount
+
+    def transport(self, amount=5):
+        # 传送狂热者
+        with self._lock:
+            capacity = self.populationCap &amp;#x2F; 2
+            available = self.crestalInControl &amp;#x2F; 100
+            amount = min(amount, capacity, available)
+            self.zealot += amount
+            self.crestalInControl -= amount * 100
+            self.populationCap -= amount * 2
+            return amount
+
+    def build(self, amount=1):
+        # 建造水晶塔
+        with self._lock:
+            available = self.crestalInControl &amp;#x2F; 100
+            amount = min(amount, available)
+            self.populationCap += amount * 10
+            self.crestalInControl -= amount * 100
+            return amount
+
+    def forAiur(self):
+        # 为艾尔而战！
+        with self._lock:
+            if self.zealot &amp;gt;= self._amond:
+                return True
+            else:
+                return False
+
+    def getStatus(self, role):
+        # 获取状态
+        if role == &amp;#x27;archon&amp;#x27;:
+            return {
+                &amp;#x27;crestalInControl&amp;#x27;: self.crestalInControl,
+                &amp;#x27;crestalRemain&amp;#x27;: self.crestalRemain,
+                &amp;#x27;populationCap&amp;#x27;: self.populationCap,
+                &amp;#x27;zealot&amp;#x27;: self.zealot
+            }
+        elif role == &amp;#x27;pylon_transporter&amp;#x27;:
+            return {
+                &amp;#x27;crestalInControl&amp;#x27;: self.crestalInControl,
+                &amp;#x27;populationCap&amp;#x27;: self.populationCap
+            }
+        elif role == &amp;#x27;portal&amp;#x27;:
+            return {
+                &amp;#x27;crestalInControl&amp;#x27;: self.crestalInControl,
+                &amp;#x27;populationCap&amp;#x27;: self.populationCap,
+                &amp;#x27;zealot&amp;#x27;: self.zealot
+            }
+        else:
+            return {}
+
+
+nexus = Nexus() # 实例化对象
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;jie-yu&quot;&gt;结语&lt;&#x2F;h2&gt;
+&lt;p&gt;其实星际争霸二这个游戏在每场战局中都是一个典型的DAC模型：玩家主宰一切，而游戏中所有的操作都可以看作是将水晶矿和高能瓦斯（在我这里被简化掉了）这两种基础资源进行状态转化，成为玩家所需要的资源（生产单位，作战单位）并去消耗敌方的资源从而赢得战局。这说明RESTful服务的思想非常普适。&lt;&#x2F;p&gt;
+&lt;p&gt;在&lt;strong&gt;为了艾尔&lt;&#x2F;strong&gt;这个小游戏中，我将几种角色固化，构造了一个RBAC模型。&lt;&#x2F;p&gt;
+&lt;p&gt;在这次实践中，理解了RBAC在一个系统中的应用，并且进一步学习了flask这个超赞的框架，更加深入地理解了RESTful思想，收获良多。&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>RBAC概念与系统设计</title>
+        <published>2017-05-07T00:00:00+00:00</published>
+        <updated>2017-05-07T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://0xc1.space/blog/rbacshi-jian-xi-tong-she-ji/" type="text/html"/>
+        <id>https://0xc1.space/blog/rbacshi-jian-xi-tong-she-ji/</id>
+        
+        <content type="html">&lt;p&gt;&lt;img src=&quot;http:&#x2F;&#x2F;0xc1.space&#x2F;images&#x2F;2017&#x2F;05&#x2F;07&#x2F;RBACmodel.png&quot; alt=&quot;RBACmodel&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;rbac-de-gai-nian&quot;&gt;RBAC 的概念&lt;&#x2F;h2&gt;
+&lt;p&gt;RBAC (&lt;strong&gt;R&lt;&#x2F;strong&gt;ole-&lt;strong&gt;B&lt;&#x2F;strong&gt;ased &lt;strong&gt;A&lt;&#x2F;strong&gt;ccess &lt;strong&gt;C&lt;&#x2F;strong&gt;ontrol) 以角色为基础的访问控制模型是一套较强制访问控制以及自由选定访问控制更为中性且更具灵活性的访问控制技术。&lt;&#x2F;p&gt;
+&lt;p&gt;首先是RBAC中的几种对象：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;S = 主体 (Subject) = 一名使用者或自动代理人&lt;&#x2F;li&gt;
+&lt;li&gt;R = 角色 (Role) = 被定义为一个授权等级的工作职位或职称&lt;&#x2F;li&gt;
+&lt;li&gt;P = 权限 (Permission) = 一种存取资源的方式&lt;&#x2F;li&gt;
+&lt;li&gt;SE = 会期 (Session) = S，R或P之间的映射关系&lt;&#x2F;li&gt;
+&lt;li&gt;SA = 主体指派 (Subject Assignment)&lt;&#x2F;li&gt;
+&lt;li&gt;PA = 权限指派 (Permission Assignment)&lt;&#x2F;li&gt;
+&lt;li&gt;RH = 角色阶层 (Role Hierarchy)。能被表示为：≥（x ≥ y 代表 x 继承 y 的权限）&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;其次各对象间具有如下关系：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;主体&lt;&#x2F;strong&gt;和&lt;strong&gt;角色&lt;&#x2F;strong&gt;是多对多关系。&lt;&#x2F;p&gt;
+&lt;p&gt;${\displaystyle SA\subseteq S\times R}$&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;角色&lt;&#x2F;strong&gt;和&lt;strong&gt;权限&lt;&#x2F;strong&gt;是多对多关系。&lt;&#x2F;p&gt;
+&lt;p&gt;${\displaystyle PA\subseteq P\times R}$&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;!--more--&gt;
+&lt;h2 id=&quot;dui-rbacde-li-jie&quot;&gt;对RBAC的理解&lt;&#x2F;h2&gt;
+&lt;p&gt;在了解RBAC相关概念之后，在此谈谈自己的理解。&lt;&#x2F;p&gt;
+&lt;p&gt;RBAC是一种MAC (&lt;strong&gt;M&lt;&#x2F;strong&gt;andatory &lt;strong&gt;A&lt;&#x2F;strong&gt;ccess &lt;strong&gt;C&lt;&#x2F;strong&gt;ontrol) 即由系统管理员统一配置管理个用户角色。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;S&lt;&#x2F;strong&gt;（主体）&lt;strong&gt;R&lt;&#x2F;strong&gt;（角色）、&lt;strong&gt;SE&lt;&#x2F;strong&gt;（会话）的关系如上图所示，即虽然一个主体可以拥有多个角色，但主题在登陆系统后（即在与系统的一个会话期间）只能行使一个角色的权力，&lt;&#x2F;p&gt;
+&lt;p&gt;而&lt;strong&gt;P&lt;&#x2F;strong&gt;（权限）由系统所提供的服务决定，实则是系统提供的资源以及对资源所进行的操作的的组合，也正是资源与操作的组合才使得权限这个概念有了意义。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ying-yong&quot;&gt;应用&lt;&#x2F;h3&gt;
+&lt;p&gt;我对RBAC的应用场景的定义：&lt;strong&gt;一个资源由系统共有且具有多种分层的角色的责任分立的系统&lt;&#x2F;strong&gt;。&lt;&#x2F;p&gt;
+&lt;p&gt;资源由系统共有，且具有多种、分层的角色，这表明系统中的资源对于每一个角色的意义都不一样，因此每个角色对资源承担的责任也因此而不一样，因此对于这样的系统，RBAC是一种十分合适的访问控制模型，可以有效地分配权利与责任，从而更好地保护与利用系统中的资源。&lt;&#x2F;p&gt;
+&lt;p&gt;例如：商业公司、以及遵循最小权限原则 (Principle of least privilege) 的操作系统。&lt;&#x2F;p&gt;
+&lt;p&gt;而对于一个资源由个人所拥有的系统来说，每个角色都是平等的，每个角色对于自己的资源具有完全的控制权，此时RBAC模型显得力不从心，而应该使用DAC (&lt;strong&gt;D&lt;&#x2F;strong&gt;iscretionary &lt;strong&gt;A&lt;&#x2F;strong&gt;ccess &lt;strong&gt;C&lt;&#x2F;strong&gt;ontrol) 模型，这在社交网络系统中十分常见。&lt;&#x2F;p&gt;
+&lt;p&gt;实际的场景中不可能存在纯粹的共有资源与纯粹的独享资源，因此常常将这两种模型混合使用。例如：微信中普通用户可以对自己的“资源”（朋友圈）具有完全的管理权限。但普通用户无法对其他用户进行管理，“举报”这个功能的实现则有赖于系统中其他具有更高权限的角色进行干预。&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

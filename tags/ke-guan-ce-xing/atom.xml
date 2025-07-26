@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 可观测性</title>
+    <subtitle>c1 的博客</subtitle>
+    <link href="https://0xc1.space/tags/ke-guan-ce-xing/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2020-11-05T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/ke-guan-ce-xing/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>在 K8s 单节点集群上手动搭建 Prometheus</title>
+        <published>2020-11-05T00:00:00+00:00</published>
+        <updated>2020-11-05T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://0xc1.space/blog/zai-k8s-dan-jie-dian-ji-qun-shang-shou-dong-da-jian-prometheus/" type="text/html"/>
+        <id>https://0xc1.space/blog/zai-k8s-dan-jie-dian-ji-qun-shang-shou-dong-da-jian-prometheus/</id>
+        
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;本文的目标读者是刚刚开始接触监控系统，以及对 Prometheus 知之甚少的弱势群体（一如写就本文时候的笔者）&lt;&#x2F;p&gt;
+&lt;p&gt;本文中用于搭建 Prometheus 的环境：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;K8s version: 1.19.3&lt;&#x2F;li&gt;
+&lt;li&gt;Prometheus version: 2.22.0&lt;&#x2F;li&gt;
+&lt;li&gt;操作系统：Archlinux at 2020.11&lt;&#x2F;li&gt;
+&lt;li&gt;配置了 hosts，Devbox 的域名为 devbox&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;⚠️ 请注意：本文列出的命令行参数需要根据当前环境稍作调整（比如 Prometheus 二进制包版本等）&lt;&#x2F;p&gt;
+&lt;p&gt;这里列出了一些推荐的前置阅读项：&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lichuan0620&#x2F;k8s-sre-learning-notes&#x2F;blob&#x2F;master&#x2F;observability&#x2F;OBSV-101.md&quot;&gt;可观测性：概念和最佳实践&lt;&#x2F;a&gt; 在其中介绍了可观测性的各类基本概念&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lichuan0620&#x2F;k8s-sre-learning-notes&#x2F;blob&#x2F;master&#x2F;prometheus&#x2F;PROM-101.md&quot;&gt; 初步认识 Prometheus&lt;&#x2F;a&gt; 介绍了 Prometheus 项目&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;docs&#x2F;introduction&#x2F;overview&#x2F;&quot;&gt;Prometheus 官方网站的介绍&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;mu-biao&quot;&gt;目标&lt;&#x2F;h2&gt;
+&lt;p&gt;既然是在 K8s 上手动搭建 Prometheus，那我们在这里有两点规约&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;刻意不去使用 Helm-Chart，Prometheus Operator 之类的快捷部署方式，这里列出来供参考：&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Prometheus 社区维护的 &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;prometheus-community&#x2F;helm-charts&quot;&gt;Helm chart&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;prometheus-operator&#x2F;prometheus-operator&quot;&gt;Prometheus Operator&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;prometheus-operator&#x2F;kube-prometheus&quot;&gt;Kube-Prometheus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;在 K8s 上搭建 Prometheus，即 K8s 负责管理 Prometheus 服务，和上面提到的 Prometheus Operator 不同的是，在这里我们要自己写相关的各类 YAML 配置文件。&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;列出如下监控目标：&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Prometheus&lt;&#x2F;li&gt;
+&lt;li&gt;Node exporter&lt;&#x2F;li&gt;
+&lt;li&gt;Kubelet&lt;&#x2F;li&gt;
+&lt;li&gt;Cadvisor&lt;&#x2F;li&gt;
+&lt;li&gt;ApiServer&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;那我们开始吧！&lt;&#x2F;p&gt;
+&lt;!--more--&gt;
+&lt;h2 id=&quot;luo-ji-yun-xing-prometheus-gai-nian-yan-zheng&quot;&gt;裸机运行 Prometheus 概念验证&lt;&#x2F;h2&gt;
+&lt;p&gt;首先第一直觉是在裸机上做概念验证，先跑起来再对进一步的配置做实验，最终，当我们理解了 Prometheus 的各个配置项之后，重新部署到 K8s 上应当是信手拈来。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我想尝试偷懒，搜索教程博客之后发现都不清不楚并且大部分都已经过期了，结果浪费半天时间还得老老实实去官网读文档。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;an-zhuang-prometheus&quot;&gt;安装 Prometheus&lt;&#x2F;h3&gt;
+&lt;p&gt;根据&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;docs&#x2F;prometheus&#x2F;2.22&#x2F;getting_started&#x2F;&quot;&gt;文档&lt;&#x2F;a&gt;的描述，直接在&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;download&#x2F;&quot;&gt;这里&lt;&#x2F;a&gt;下载对应的预编译二进制包：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl -LO &amp;quot;https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;prometheus&amp;#x2F;prometheus&amp;#x2F;releases&amp;#x2F;download&amp;#x2F;v2.22.0&amp;#x2F;prometheus-2.22.0.linux-amd64.tar.gz&amp;quot;
+tar -zxvf prometheus-2.22.0.linux-amd64.tar.gz
+cd prometheus-2.22.0.linux-amd64
+.&amp;#x2F;prometheus --version
+# expected output should be like this:
+# prometheus, version 2.22.0 (branch: HEAD, revision: 0a7fdd3b76960808c3a91d92267c3d815c1bc354)
+#  build user:    root@6321101b2c50
+#  build date:    20201015-12:29:59
+#  go version:    go1.15.3
+#  platform:     linux&amp;#x2F;amd64
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;查看一下目录，发现自带一个配置文件 prometheus.yml：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;# my global config
+global:
+ scrape_interval:   15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+ evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+ # scrape_timeout is set to the global default (10s).
+# Alertmanager configuration
+alerting:
+ alertmanagers:
+ - static_configs:
+  - targets:
+   # - alertmanager:9093
+# Load rules once and periodically evaluate them according to the global &amp;#x27;evaluation_interval&amp;#x27;.
+rule_files:
+ # - &amp;quot;first_rules.yml&amp;quot;
+ # - &amp;quot;second_rules.yml&amp;quot;
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it&amp;#x27;s Prometheus itself.
+scrape_configs:
+ # The job name is added as a label `job=&amp;lt;job_name&amp;gt;` to any timeseries scraped from this config.
+ - job_name: &amp;#x27;prometheus&amp;#x27;
+  # metrics_path defaults to &amp;#x27;&amp;#x2F;metrics&amp;#x27;
+  # scheme defaults to &amp;#x27;http&amp;#x27;.
+  static_configs:
+  - targets: [&amp;#x27;localhost:9090&amp;#x27;]
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;这时候我们通过运行刚刚下载的 Prometheus 来监控它自己，获得一个小小的满足感反馈闭环：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;.&amp;#x2F;prometheus --config.file=prometheus.yml
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;可以看到这个时候 Prometheus 已经启动了，访问 http:&#x2F;&#x2F;devbox:9090 看到它的用户界面，这时候随机点点，可以对 Prometheus 提供的功能有一个大致的感觉，让我们对 Prometheus 正常运行时候的表现有一个认知。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;yun-xing-node-exporter&quot;&gt;运行 Node exporter&lt;&#x2F;h3&gt;
+&lt;p&gt;此时我们裸机运行一个 Node Exporter 观察一下本机的各种指标。&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl -LO &amp;quot;https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;prometheus&amp;#x2F;node_exporter&amp;#x2F;releases&amp;#x2F;download&amp;#x2F;v1.0.1&amp;#x2F;node_exporter-1.0.1.linux-amd64.tar.gz&amp;quot;
+tar -zxvf node_exporter-1.0.1.linux-amd64.tar.gz
+cd node_exporter-1.0.1.linux-amd64
+.&amp;#x2F;node_exporter
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;接下来修改配置让 Prometheus 从中采集指标&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;# my global config
+global:
+ scrape_interval:   15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+ evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+ # scrape_timeout is set to the global default (10s).
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it&amp;#x27;s Prometheus itself.
+scrape_configs:
+ # The job name is added as a label `job=&amp;lt;job_name&amp;gt;` to any timeseries scraped from this config.
+ - job_name: &amp;#x27;prometheus&amp;#x27;
+  # metrics_path defaults to &amp;#x27;&amp;#x2F;metrics&amp;#x27;
+  # scheme defaults to &amp;#x27;http&amp;#x27;.
+  static_configs:
+  - targets: [&amp;#x27;localhost:9090&amp;#x27;]
+ - job_name: &amp;#x27;node-exporter&amp;#x27;
+  static_configs:
+  - targets: [&amp;#x27;localhost:9100&amp;#x27;]
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;打开 Prometheus 的 web UI，观察到已经新增了一个叫做 &lt;code&gt;node-exporter&lt;&#x2F;code&gt; 的 target，查看一下工作负载（运行了一个可以占满所有核的永远计算斐波那契数列的&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Thrimbda&#x2F;fiber&quot;&gt;程序&lt;&#x2F;a&gt;）：&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;0xc1.space&#x2F;images&#x2F;2020&#x2F;11&#x2F;05&#x2F;node-load.png&quot; alt=&quot;img&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;到此，概念验证阶段圆满完成。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：作为概念验证环节，这里不推荐直接使用裸机部署的 Prometheus 监控 K8s 集群，原因在于集群外访问 K8s 组件需要配置证书和具备相应的访问权限的 &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;kubernetes.io&#x2F;zh&#x2F;docs&#x2F;reference&#x2F;access-authn-authz&#x2F;rbac&#x2F;&quot;&gt;ClusterRole&lt;&#x2F;a&gt;（此处省去笔者非得尝试用裸机部署的 Prometheus 监控 K8s 集群以及其中各种组件的时候踩的各种坑）。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;yong-prometheus-jian-kong-k8s-ji-qun&quot;&gt;用 Prometheus 监控 K8s 集群&lt;&#x2F;h2&gt;
+&lt;p&gt;接下来我们要通过 Prometheus 去监控我们的 K8s 集群。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;prometheus-de-pei-zhi-xiang&quot;&gt;Prometheus 的配置项&lt;&#x2F;h3&gt;
+&lt;p&gt;在对 Prometheus 的介绍中可以了解到，Prometheus 主要是 Pull based 数据获取方式，因此需要有服务发现，也就是让 Prometheus 知道从哪里去拉取数据，以便用户去查看。&lt;&#x2F;p&gt;
+&lt;p&gt;那么首先就要解决一个问题：&lt;strong&gt;对 K8s 集群的服务发现&lt;&#x2F;strong&gt;——秘密一定隐藏在配置之中。&lt;&#x2F;p&gt;
+&lt;p&gt;在&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;docs&#x2F;prometheus&#x2F;2.22&#x2F;configuration&#x2F;configuration&#x2F;&quot;&gt;文档&lt;&#x2F;a&gt;中有对于 Prometheus 配置的详细描述。&lt;&#x2F;p&gt;
+&lt;p&gt;对其中如下几个配置项稍作描述（彼此之间并不一定正交）：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;docs&#x2F;prometheus&#x2F;2.22&#x2F;configuration&#x2F;configuration&#x2F;#configuration-file&quot;&gt;&lt;code&gt;&amp;lt;global&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;：其中的配置对任何其他配置项都有作用，并作为其他配置中项目的默认值。&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;docs&#x2F;prometheus&#x2F;2.22&#x2F;configuration&#x2F;configuration&#x2F;#scrape_config&quot;&gt;&lt;code&gt;&amp;lt;scrape_config&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;：定义了一个监控任务，描述了 Prometheus 应该从哪以及如何监控这个目标等信息。&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;docs&#x2F;prometheus&#x2F;2.22&#x2F;configuration&#x2F;configuration&#x2F;#tls_config&quot;&gt;&lt;code&gt;&amp;lt;tls_config&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;：描述了 TLS 配置。&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;docs&#x2F;prometheus&#x2F;2.22&#x2F;configuration&#x2F;configuration&#x2F;#kubernetes_sd_config&quot;&gt;&lt;code&gt;&amp;lt;*_sd_config&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;：Prometheus 通过这个系列的配置项提供了对一系列预定义监控目标服务发现的配置（sd 代表 service discovery）。&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;docs&#x2F;prometheus&#x2F;2.22&#x2F;configuration&#x2F;configuration&#x2F;#static_config&quot;&gt;&lt;code&gt;&amp;lt;static_config&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;：对于 Prometheus 没有预定义的监控目标（比如裸机手动部署的任意服务），可以通过这个配置项去做服务发现，上面我们在做概念验证的时候就用到了这个配置项目。&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;docs&#x2F;prometheus&#x2F;2.22&#x2F;configuration&#x2F;configuration&#x2F;#relabel_config&quot;&gt;&lt;code&gt;&amp;lt;relabel_config&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;：在开始拉取监控目标的各项指标前，可以通过这个配置项对于一些 lable 进行改变，Prometheus 提供了一些预定义的 lable 规则，relable 可以多步进行，在 relable 结束后，以 __ 为前缀的 lable 会被删除。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;看起来 Prometheus 中最核心的配置项就是其 &lt;code&gt;&amp;lt;scrape_config&amp;gt;&lt;&#x2F;code&gt; 了，每一个都定义了一个监控任务，类似 namespace 的概念，主要是提供了一个监控目标的聚合，在其中我们通过定义 &lt;code&gt;&amp;lt;*_sd_config&amp;gt;&lt;&#x2F;code&gt; 或者 &lt;code&gt;&amp;lt;static_config&amp;gt;&lt;&#x2F;code&gt; 来告诉 Prometheus 具体从哪些端点去拉取数据，以及如何过滤这些端点。&lt;&#x2F;p&gt;
+&lt;p&gt;接下来通过实战来对这些配置项加深理解！&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;bu-shu-prometheus&quot;&gt;部署 Prometheus&lt;&#x2F;h3&gt;
+&lt;p&gt;部署的核心工作在于思考清楚为了在集群中部署 Prometheus 都需要哪些资源，笔者直接在这里公布答案：&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;专有的 Namespace&lt;&#x2F;li&gt;
+&lt;li&gt;一个 DaemonSet 用来管理 node-exporter&lt;&#x2F;li&gt;
+&lt;li&gt;Node-exporter Service&lt;&#x2F;li&gt;
+&lt;li&gt;用 ConfigMap 管理 Prometheus 的配置&lt;&#x2F;li&gt;
+&lt;li&gt;Prometheus 专有的 ServiceAccount&lt;&#x2F;li&gt;
+&lt;li&gt;具备足够权限的 ClusterRole&lt;&#x2F;li&gt;
+&lt;li&gt;将 ServiceAccount 和 ClusterRole 绑定在一起的 ClusterRoleBinding&lt;&#x2F;li&gt;
+&lt;li&gt;Prometheus Deployment&lt;&#x2F;li&gt;
+&lt;li&gt;Prometheus Service&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;在应用了 RBAC 的 K8s 集群上，我们需要为 Prometheus 定义一个具备足够权限的角色，可以读取集群状态以及各项指标，因此需要第 5-7 项。&lt;&#x2F;p&gt;
+&lt;p&gt;这里给出了一份笔者自己搭建过程中积累的&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Thrimbda&#x2F;prometheus-set-up&quot;&gt;资源声明集合&lt;&#x2F;a&gt;，除了上述的资源还多了 kube-state-metrics，按顺序操作就可以得到一个部署好的 Prometheus 了。&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;node-exporter&quot;&gt;Node-exporter&lt;&#x2F;h4&gt;
+&lt;p&gt;对于 Node-exporter，由于是对于机器本身的监控，因此需求是每个 Node 一个，由于我们同时希望享受 K8s 的生命周期管理，因此 DaemonSet 是最好的选择。&lt;&#x2F;p&gt;
+&lt;p&gt;由于跑在容器之中，不做配置时并不能收集到真实的 Node 指标，因此需要在容器中挂载 host 上的特殊位置以便 Node-exporter 收集指标。&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;args:
+- &amp;#x27;--path.procfs=&amp;#x2F;host&amp;#x2F;proc&amp;#x27;
+- &amp;#x27;--path.sysfs=&amp;#x2F;host&amp;#x2F;sys&amp;#x27;
+- &amp;#x27;--path.rootfs=&amp;#x2F;host&amp;#x2F;root&amp;#x27;
+volumes:
+- hostPath:
+  path: &amp;#x2F;proc
+ name: proc
+- hostPath:
+  path: &amp;#x2F;sys
+ name: sys
+- hostPath:
+  path: &amp;#x2F;
+ name: roo
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;然后通过 Service 暴露出 Prometheus 可以长期访问端点即可。&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;prometheus&quot;&gt;Prometheus&lt;&#x2F;h4&gt;
+&lt;p&gt;Prometheus 则使用 Deployment 完成部署，在部署 Prometheus 之前，需要给它配置足够的权限使得它可以访问必要的端点来收集指标，在配置了 RBAC 的 K8s 集群中通过 ClusterRole&#x2F;ServiceAccount&#x2F;ClusterRoleBinding 来完成这一目标，在配置完成之后，Prometheus 通过 ServiceAccount 来完成相应的鉴权从而访问需要的端点。&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;apiVersion: rbac.authorization.k8s.io&amp;#x2F;v1
+kind: ClusterRole
+metadata:
+ name: prometheus
+ labels:
+  app.kubernetes.io&amp;#x2F;name: prometheus
+rules:
+ - apiGroups: [&amp;quot;&amp;quot;]
+  resources:
+  - nodes
+  - nodes&amp;#x2F;metrics
+  - services
+  - endpoints
+  - pods
+  verbs: [&amp;quot;get&amp;quot;, &amp;quot;list&amp;quot;, &amp;quot;watch&amp;quot;]
+ - nonResourceURLs:
+  - &amp;quot;&amp;#x2F;metrics&amp;quot;
+  - &amp;quot;&amp;#x2F;metrics&amp;#x2F;cadviror&amp;quot;
+  verbs: [&amp;quot;get&amp;quot;]
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+ name: default
+ namespace: monitoring-system
+ labels:
+  app.kubernetes.io&amp;#x2F;name: prometheus
+---
+apiVersion: rbac.authorization.k8s.io&amp;#x2F;v1
+kind: ClusterRoleBinding
+metadata:
+ name: promtheus
+ labels:
+  app.kubernetes.io&amp;#x2F;name: prometheus
+roleRef:
+ apiGroup: rbac.authorization.k8s.io
+ kind: ClusterRole
+ name: prometheus
+subjects:
+- kind: ServiceAccount
+ name: default
+ namespace: monitoring-system
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;到现在为止，我们已经拥有了实现监控目标的一切前提条件了，那么怎么去驱动 Prometheus 这个强大的引擎充分利用好我们布置好的环境实现监控呢？&lt;&#x2F;p&gt;
+&lt;p&gt;结合前文中对 Prometheus 配置的介绍，四个监控目标用四个 &lt;code&gt;&amp;lt;scrape_config&amp;gt;&lt;&#x2F;code&gt;  定义：&lt;&#x2F;p&gt;
+&lt;p&gt;对于 node-exporter：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;- job_name: &amp;#x27;node-exporter&amp;#x27;
+ kubernetes_sd_configs:
+ - role: endpoints
+ relabel_configs:
+ - source_labels: [__meta_kubernetes_service_name]
+  regex: node-exporter
+  action: keep
+ - source_labels: [__meta_kubernetes_endpoint_node_name]
+  target_label: node
+ - source_labels: [__meta_kubernetes_pod_host_ip]
+  target_label: host_ip
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;由于是在集群内部，因此不需要额外的认证，也不用开 https 访问。&lt;&#x2F;p&gt;
+&lt;p&gt;这里通过 node-exporter 的例子对 &lt;code&gt;&amp;lt;relabel_configs&amp;gt;&lt;&#x2F;code&gt; 做进一步的解释：&lt;&#x2F;p&gt;
+&lt;p&gt;label 就是有关某一个端点的属性，而不同的端点可能在同一个 label 下可能有不同的值，&lt;code&gt;&amp;lt;relabel_config&amp;gt;&lt;&#x2F;code&gt; 所做的事情，就是针对这些 label 进行一些修改和过滤的操作，使得我们能够过滤&#x2F;修改出所需要的端点。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;0xc1.space&#x2F;images&#x2F;2020&#x2F;11&#x2F;05&#x2F;node-exporter-target.png&quot; alt=&quot;img&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;可以看到，在上面的 config 中，有三个 relabel 动作，其中第一个的意思是，从 &lt;code&gt;__meta_kubernetes_service_name&lt;&#x2F;code&gt; 这个 K8s  服务发现&lt;strong&gt;预定义&lt;&#x2F;strong&gt;的 label 的所有值中，按照给定的正则表达式 “node-exporter” 进行过滤，根据 &lt;code&gt;action&lt;&#x2F;code&gt;，保留匹配到的目标端点，丢弃掉剩余相同标签的值。而后面两个 relabel 动作是为了给将 node 和 host_ip 这两个语义标签通过改名的方式保留下来。（还记得吗，双下划线开头的标签最后都会被删除）&lt;&#x2F;p&gt;
+&lt;p&gt;对于 prometheus 自己：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;- job_name: &amp;#x27;prometheus&amp;#x27;
+ kubernetes_sd_configs:
+ - role: endpoints
+ relabel_configs:
+ - source_labels: [__meta_kubernetes_service_name]
+  regex: prometheus
+  action: kee
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;使用同样的套路过滤出端点&lt;&#x2F;p&gt;
+&lt;p&gt;对于 kubelet 和 cadvisor，情况变得稍微复杂了一些：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;- job_name: &amp;#x27;kubelet&amp;#x27;
+ kubernetes_sd_configs:
+ - role: node
+ tls_config:
+  # ca_file: &amp;#x2F;var&amp;#x2F;run&amp;#x2F;secrets&amp;#x2F;kubernetes.io&amp;#x2F;serviceaccount&amp;#x2F;ca.crt
+  # cert_file: &amp;#x2F;etc&amp;#x2F;secret&amp;#x2F;cert
+  # key_file: &amp;#x2F;etc&amp;#x2F;secret&amp;#x2F;key
+  insecure_skip_verify: true
+ bearer_token_file: &amp;#x2F;var&amp;#x2F;run&amp;#x2F;secrets&amp;#x2F;kubernetes.io&amp;#x2F;serviceaccount&amp;#x2F;token
+ scheme: https
+- job_name: &amp;#x27;cadvisor&amp;#x27;
+ kubernetes_sd_configs:
+ - role: node
+ metrics_path: &amp;#x2F;metrics&amp;#x2F;cadvisor
+ tls_config:
+  # ca_file: &amp;#x2F;var&amp;#x2F;run&amp;#x2F;secrets&amp;#x2F;kubernetes.io&amp;#x2F;serviceaccount&amp;#x2F;ca.crt
+  # cert_file: &amp;#x2F;etc&amp;#x2F;secret&amp;#x2F;cert
+  # key_file: &amp;#x2F;etc&amp;#x2F;secret&amp;#x2F;key
+  insecure_skip_verify: true
+ bearer_token_file: &amp;#x2F;var&amp;#x2F;run&amp;#x2F;secrets&amp;#x2F;kubernetes.io&amp;#x2F;serviceaccount&amp;#x2F;token
+ scheme: https
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;注意到 role 变成了 node，因此 Prometheus 会默认从 &lt;code&gt;&amp;lt;node_ip&amp;gt;:10250&#x2F;metrics&lt;&#x2F;code&gt; 收集指标，这里多了一个 &lt;code&gt;bearer_token_file&lt;&#x2F;code&gt; 配置项，由于 kubelet 默认不允许匿名访问其指标数据，这里就是用到前面配置的 ServiceAccount 的地方了，这里我们为了方便使用 &lt;code&gt;insecure_skip_verify: true&lt;&#x2F;code&gt; 的方式跳过 TLS 认证。&lt;&#x2F;p&gt;
+&lt;p&gt;对于 ApiServer，又变得稍微复杂了一点：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;scrape_configs:
+- job_name: &amp;#x27;kubernetes-apiservers&amp;#x27;
+ kubernetes_sd_configs:
+ - role: endpoints
+ scheme: https
+ tls_config:
+  ca_file: &amp;#x2F;var&amp;#x2F;run&amp;#x2F;secrets&amp;#x2F;kubernetes.io&amp;#x2F;serviceaccount&amp;#x2F;ca.crt
+ bearer_token_file: &amp;#x2F;var&amp;#x2F;run&amp;#x2F;secrets&amp;#x2F;kubernetes.io&amp;#x2F;serviceaccount&amp;#x2F;token
+ relabel_configs:
+ - source_labels: [__meta_kubernetes_namespace, __meta_kubernetes_service_name, __meta_kubernetes_endpoint_port_name]
+  action: keep
+  regex: default;kubernetes;https
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;在这里我们通过 &lt;code&gt;&amp;lt;relabel_config&amp;gt;&lt;&#x2F;code&gt; 完成对于 ApiServer 自身端点的过滤，在提供 token 鉴权的同时要多提供 CA 文件认证身份，这样我们就可以访问到 ApiServer 啦。&lt;&#x2F;p&gt;
+&lt;p&gt;至此我们就完成了 Prometheus 的部署以及对目标端点的监控配置。&lt;&#x2F;p&gt;
+&lt;p&gt;感兴趣的读者可以进一步修改 config，来观察不同配置下 Prometheus 的行为来加深理解，这里留下一个小作业：我们如何通过裸机部署的 Prometheus 监控 K8s 集群呢？&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;can-kao-zi-liao&quot;&gt;参考资料&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;docs&#x2F;prometheus&#x2F;2.22&#x2F;configuration&#x2F;configuration&#x2F;#configuration&quot;&gt;Prometheus Configuration&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;prometheus-operator&#x2F;kube-prometheus&#x2F;tree&#x2F;8b0eebdd08d8926649d27d2bc23acf31144c2f6b&#x2F;manifests&quot;&gt;Kube-prometheus manifests&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fabxc.org&#x2F;tsdb&#x2F;&quot;&gt;TSDB v3 design&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lichuan0620&#x2F;k8s-sre-learning-notes&#x2F;blob&#x2F;master&#x2F;observability&#x2F;OBSV-101.md&quot;&gt; 可观测性：概念和最佳实践&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lichuan0620&#x2F;k8s-sre-learning-notes&#x2F;blob&#x2F;master&#x2F;observability&#x2F;OBSV-101.md&quot;&gt; 初步认识 Prometheus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;kubernetes.io&#x2F;zh&#x2F;docs&#x2F;reference&#x2F;access-authn-authz&#x2F;rbac&#x2F;&quot;&gt;RBAC on K8s&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+</feed>
