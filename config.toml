@@ -3,15 +3,15 @@ title = "c1 的博客"
 description = "c1 的博客"
 compile_sass = false
 minify_html = true
-generate_feed = true
+generate_feeds = true
 default_language = "zh"
 
 taxonomies = [{ name = "tags", feed = true }]
 
-[languages.en]
-weight = 2
-languageName = "Englisch"
-languageCode = "en"
+# [languages.en]
+# weight = 2
+# languageName = "Englisch"
+# languageCode = "en"
 
 [markdown]
 render_emoji = true
