@@ -1,6 +1,6 @@
 ---
 title: '0xc1 的机组日志'
-date: 2025-07-25T19:52:46.977Z
+date: 2025-09-11T08:32:11.825Z
 ---
 原始链接：[Thrimbda 的机组](https://www.gcores.com/users/464460/talks)
 ## 2025-7-23

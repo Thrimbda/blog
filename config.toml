@@ -31,6 +31,7 @@ internal_level = "warn"
 [extra]
 author = "0xc1"
 display_author = true
+google_analytics = "G-8DQTX42T4P"
 
 favicon = "favicon.ico"
 image = ""
