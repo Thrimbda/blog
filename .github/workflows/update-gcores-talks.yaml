@@ -1,17 +1,37 @@
-# On every push this script is executed
-on: push
-name: Build and deploy GH Pages
+# On every push or daily schedule this script is executed
+on:
+  schedule:
+    - cron: "0 0 * * *" # Run daily at midnight UTC
+
+name: Update Gcores Talks
+
 jobs:
-  build:
+  update-gcores-talks:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
     steps:
-      - name: checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: build_and_deploy
-        uses: shalzz/zola-deploy-action@v0.17.2
-        env:
-          # Target branch
-          PAGES_BRANCH: gh-pages
-          # Or if publishing to the same repo, use the automatic token
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Run get-gcores-talk.ts
+        run: deno run --allow-net --allow-read --allow-write ./scripts/get-gcores-talk.ts --json ./data/gcores-talks.json
+
+      - name: Check for changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add ./data/gcores-talks.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git commit -m "Update gcores-talks.json"
+          git push origin master
+          echo "Changes committed and pushed."
