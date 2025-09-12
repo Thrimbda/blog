@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 雅兴</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/ya-xing/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-02-12T13:20:51+00:00</updated>
+    <id>https://0xc1.space/tags/ya-xing/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>登岳渎阁</title>
+        <published>2017-02-12T13:20:51+00:00</published>
+        <updated>2017-02-12T13:20:51+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/deng-yue-du-ge/"/>
+        <id>https://0xc1.space/blog/deng-yue-du-ge/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;img src=&quot;http:&#x2F;&#x2F;0xc1.space&#x2F;images&#x2F;2017&#x2F;02&#x2F;12&#x2F;yuedu1.jpg&quot; alt=&quot;岳渎阁&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;deng-yue-du-ge&quot;&gt;登岳渎阁&lt;&#x2F;h1&gt;
+&lt;p&gt;峰峦如聚，波涛如怒，山河表里潼关路。&lt;&#x2F;p&gt;
+&lt;p&gt;岳渎相望，八百里秦川尽收眼底：&lt;&#x2F;p&gt;
+&lt;p&gt;君不见——阡陌交通，鸡犬相闻，风调雨顺，人杰地灵！&lt;&#x2F;p&gt;
+&lt;p&gt;此地北眺黄土高原之壮阔，南临秦岭华岳之雄浑；承渭水浩浩汤汤之恩泽，育华夏璀璨磅礴之文明！&lt;&#x2F;p&gt;
+&lt;p&gt;愿闻鸡起舞，继往开来！&lt;&#x2F;p&gt;
+&lt;p&gt;幸甚至哉，歌以咏志。&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

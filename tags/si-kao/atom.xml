@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 思考</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/si-kao/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-08-29T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/si-kao/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>明明如月，何时可掇？</title>
+        <published>2017-08-29T00:00:00+00:00</published>
+        <updated>2017-08-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/ming-ming-ru-yue-he-shi-ke-duo/"/>
+        <id>https://0xc1.space/blog/ming-ming-ru-yue-he-shi-ke-duo/</id>
+        
+        <summary type="html">&lt;p&gt;有些东西想写出来。&lt;&#x2F;p&gt;
+&lt;p&gt;一粒豆大的汗滴落在地上。我注意到另一粒落在安检机的传送带上。&lt;&#x2F;p&gt;
+&lt;p&gt;因为我必须在半小时内从北邮到北京西检票上车：一路狂奔中我只有在排队的时候停下来喘息一口，再次注意到地面。&lt;&#x2F;p&gt;
+&lt;p&gt;一年为期啊。&lt;&#x2F;p&gt;
+&lt;p&gt;有些问题只要在脑子里从想法具象为语言，就已经有了答案。这篇文章一个月以前就起了头，是因为有着零碎的念想。在吃饭时、等车时、走路时、睡觉时，只要稍有分神，它们就会趁机从世界的各个角落跑来钻进我的脑子里；可当我真的想把它们抓住时，却又背叛我，从我这里溜走，似乎在刻意与我保持距离。&lt;&#x2F;p&gt;
+&lt;p&gt;但不管怎么样，一整年过去总是有些想写的。&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>答辩失败后的总结与思考</title>
+        <published>2017-03-29T00:00:00+00:00</published>
+        <updated>2017-03-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/da-bian-shi-bai-hou-de-zong-jie-yu-si-kao/"/>
+        <id>https://0xc1.space/blog/da-bian-shi-bai-hou-de-zong-jie-yu-si-kao/</id>
+        
+        <summary type="html">&lt;p&gt;五个小时了，答辩结束后的我被扒掉一层皮一样，羞愧难当。默默地骑着自行车，隐身在梧桐道上，好在四下无人里都是陌生人，让我得到一丝喘息的机会。&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>宁静致远</title>
+        <published>2017-03-20T00:00:00+00:00</published>
+        <updated>2017-03-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/zhu-jing-zhi-yuan/"/>
+        <id>https://0xc1.space/blog/zhu-jing-zhi-yuan/</id>
+        
+        <content type="html" xml:base="https://0xc1.space/blog/zhu-jing-zhi-yuan/">&lt;p&gt;成都之行令人难忘。&lt;&#x2F;p&gt;
+&lt;p&gt;然而现在坐在实验室里的我感到无所适从——说实话，每当我坐在实验室里的时候都会如此。&lt;&#x2F;p&gt;
+&lt;p&gt;这种现象是因为对自己的生活没有计划。&lt;&#x2F;p&gt;
+&lt;p&gt;所以我要做个计划。&lt;&#x2F;p&gt;
+&lt;p&gt;宁静致远。&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

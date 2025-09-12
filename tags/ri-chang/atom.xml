@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 日常</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/ri-chang/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-03-20T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/ri-chang/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>宁静致远</title>
+        <published>2017-03-20T00:00:00+00:00</published>
+        <updated>2017-03-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/zhu-jing-zhi-yuan/"/>
+        <id>https://0xc1.space/blog/zhu-jing-zhi-yuan/</id>
+        
+        <content type="html" xml:base="https://0xc1.space/blog/zhu-jing-zhi-yuan/">&lt;p&gt;成都之行令人难忘。&lt;&#x2F;p&gt;
+&lt;p&gt;然而现在坐在实验室里的我感到无所适从——说实话，每当我坐在实验室里的时候都会如此。&lt;&#x2F;p&gt;
+&lt;p&gt;这种现象是因为对自己的生活没有计划。&lt;&#x2F;p&gt;
+&lt;p&gt;所以我要做个计划。&lt;&#x2F;p&gt;
+&lt;p&gt;宁静致远。&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>实训日志（二）</title>
+        <published>2017-03-12T16:09:19+00:00</published>
+        <updated>2017-03-12T16:09:19+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/shi-xun-ri-zhi-er/"/>
+        <id>https://0xc1.space/blog/shi-xun-ri-zhi-er/</id>
+        
+        <summary type="html">&lt;p&gt;实训即将走到终点，至此后端API服务器基本版的编码工作基本完工了，在这里总结一下。&lt;&#x2F;p&gt;
+&lt;p&gt;作为项目组组长，我有关于软件项目管理的唯一知识来自于寒假里读过一遍的《人月神话》。经此一番实践，发现自己还是太嫩。但是仍然，我认为自己还是学到了一点东西。&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>实训日志（一）</title>
+        <published>2017-02-22T22:55:06+00:00</published>
+        <updated>2017-02-22T22:55:06+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/shi-xun-ri-zhi-yi/"/>
+        <id>https://0xc1.space/blog/shi-xun-ri-zhi-yi/</id>
+        
+        <summary type="html">&lt;p&gt;嗯，今天是实训的第三天，目前看来和之前预想的区别很大。&lt;&#x2F;p&gt;
+&lt;p&gt;之前吐槽过这里的网以及网速：宿舍完全没网，上课的地方网速较差。这样一折腾让我突然发现自己网瘾很大，不过私以为这没什么问题，网络完全可以成为启迪人们心智的“卡拉”，继而让我们整个物种升华成为一个高度发达的……&lt;&#x2F;p&gt;
+&lt;p&gt;言归正传，这两天在学习Spring framework，让人有种耳目一新的感觉，初来乍到的我不禁感叹道Java代码竟然也可以如此优雅。&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

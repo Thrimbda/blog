@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - Prometheus</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/prometheus/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2020-11-05T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/prometheus/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>在 K8s 单节点集群上手动搭建 Prometheus</title>
+        <published>2020-11-05T00:00:00+00:00</published>
+        <updated>2020-11-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/zai-k8s-dan-jie-dian-ji-qun-shang-shou-dong-da-jian-prometheus/"/>
+        <id>https://0xc1.space/blog/zai-k8s-dan-jie-dian-ji-qun-shang-shou-dong-da-jian-prometheus/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文的目标读者是刚刚开始接触监控系统，以及对 Prometheus 知之甚少的弱势群体（一如写就本文时候的笔者）&lt;&#x2F;p&gt;
+&lt;p&gt;本文中用于搭建 Prometheus 的环境：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;K8s version: 1.19.3&lt;&#x2F;li&gt;
+&lt;li&gt;Prometheus version: 2.22.0&lt;&#x2F;li&gt;
+&lt;li&gt;操作系统：Archlinux at 2020.11&lt;&#x2F;li&gt;
+&lt;li&gt;配置了 hosts，Devbox 的域名为 devbox&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;⚠️ 请注意：本文列出的命令行参数需要根据当前环境稍作调整（比如 Prometheus 二进制包版本等）&lt;&#x2F;p&gt;
+&lt;p&gt;这里列出了一些推荐的前置阅读项：&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lichuan0620&#x2F;k8s-sre-learning-notes&#x2F;blob&#x2F;master&#x2F;observability&#x2F;OBSV-101.md&quot;&gt;可观测性：概念和最佳实践&lt;&#x2F;a&gt; 在其中介绍了可观测性的各类基本概念&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lichuan0620&#x2F;k8s-sre-learning-notes&#x2F;blob&#x2F;master&#x2F;prometheus&#x2F;PROM-101.md&quot;&gt; 初步认识 Prometheus&lt;&#x2F;a&gt; 介绍了 Prometheus 项目&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;docs&#x2F;introduction&#x2F;overview&#x2F;&quot;&gt;Prometheus 官方网站的介绍&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;mu-biao&quot;&gt;目标&lt;&#x2F;h2&gt;
+&lt;p&gt;既然是在 K8s 上手动搭建 Prometheus，那我们在这里有两点规约&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;刻意不去使用 Helm-Chart，Prometheus Operator 之类的快捷部署方式，这里列出来供参考：&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Prometheus 社区维护的 &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;prometheus-community&#x2F;helm-charts&quot;&gt;Helm chart&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;prometheus-operator&#x2F;prometheus-operator&quot;&gt;Prometheus Operator&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;prometheus-operator&#x2F;kube-prometheus&quot;&gt;Kube-Prometheus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;在 K8s 上搭建 Prometheus，即 K8s 负责管理 Prometheus 服务，和上面提到的 Prometheus Operator 不同的是，在这里我们要自己写相关的各类 YAML 配置文件。&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;列出如下监控目标：&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Prometheus&lt;&#x2F;li&gt;
+&lt;li&gt;Node exporter&lt;&#x2F;li&gt;
+&lt;li&gt;Kubelet&lt;&#x2F;li&gt;
+&lt;li&gt;Cadvisor&lt;&#x2F;li&gt;
+&lt;li&gt;ApiServer&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;那我们开始吧！&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

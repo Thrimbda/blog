@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 实训</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/shi-xun/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-03-12T16:09:19+00:00</updated>
+    <id>https://0xc1.space/tags/shi-xun/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>实训日志（二）</title>
+        <published>2017-03-12T16:09:19+00:00</published>
+        <updated>2017-03-12T16:09:19+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/shi-xun-ri-zhi-er/"/>
+        <id>https://0xc1.space/blog/shi-xun-ri-zhi-er/</id>
+        
+        <summary type="html">&lt;p&gt;实训即将走到终点，至此后端API服务器基本版的编码工作基本完工了，在这里总结一下。&lt;&#x2F;p&gt;
+&lt;p&gt;作为项目组组长，我有关于软件项目管理的唯一知识来自于寒假里读过一遍的《人月神话》。经此一番实践，发现自己还是太嫩。但是仍然，我认为自己还是学到了一点东西。&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

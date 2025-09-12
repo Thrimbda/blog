@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 迷思</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/mi-si/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-03-21T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/mi-si/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>我终于想到了答案，但等等...问题是什么呢？</title>
+        <published>2017-03-21T00:00:00+00:00</published>
+        <updated>2017-03-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/wo-zhong-yu-xiang-dao-liao-da-an-dan-deng-deng-wen-ti-shi-shen-me/"/>
+        <id>https://0xc1.space/blog/wo-zhong-yu-xiang-dao-liao-da-an-dan-deng-deng-wen-ti-shi-shen-me/</id>
+        
+        <summary type="html">&lt;p&gt;标题描述了一种虽然听起来神经但是还蛮常见的一种现象，至少我是这样，&lt;del&gt;你们一定也一样。&lt;&#x2F;del&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;这篇是今天听课听到酣处有感而发，这大概是我一年来听得舒适的一天课了。&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 分享</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/fen-xiang/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-02-06T16:07:29+00:00</updated>
+    <id>https://0xc1.space/tags/fen-xiang/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>搭好博客后的一点话</title>
+        <published>2017-02-06T16:07:29+00:00</published>
+        <updated>2017-02-06T16:07:29+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/da-hao-bo-ke-hou-de-yi-dian-hua/"/>
+        <id>https://0xc1.space/blog/da-hao-bo-ke-hou-de-yi-dian-hua/</id>
+        
+        <summary type="html">&lt;p&gt;用了两天时间搭好了自己的博客，这时候满腹金光，想讲上个三点。&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

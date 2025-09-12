@@ -1,0 +1,39 @@
+<!doctype html><html lang=zh><head><meta charset=UTF-8><meta content="IE=edge" http-equiv=X-UA-Compatible><meta content="text/html; charset=UTF-8" http-equiv=content-type><meta content="width=device-width,initial-scale=1,user-scalable=no" name=viewport><meta content="index, follow" name=robots><title>初探并发</title><meta content=初探并发 name=title><meta content=0xc1 name=author><meta content="c1 的博客" name=description><meta content=website property=og:type><meta content=https://0xc1.space/blog/chu-tan-bing-fa/ property=og:url><meta content="c1 的博客" property=og:site_name><meta content=初探并发 property=og:title><meta content="c1 的博客" property=og:description><meta content=https://0xc1.space/favicon.ico property=og:image><meta content=summary_large_image property=twitter:card><meta content=https://0xc1.space/blog/chu-tan-bing-fa/ property=twitter:url><meta content=初探并发 property=twitter:title><meta content="c1 的博客" property=twitter:description><meta content=https://0xc1.space/favicon.ico property=twitter:image><link href=https://0xc1.space/blog/chu-tan-bing-fa/ rel=canonical><link rel="shortcut icon" href=https://0xc1.space/favicon.ico type=image/x-icon><link href=https://0xc1.space/atom.xml rel=alternate title=RSS type=application/atom+xml><link href=https://0xc1.space/css/reset.css rel=stylesheet><link href=https://0xc1.space/css/suCSS.css rel=stylesheet><link href=https://0xc1.space/css/style.css rel=stylesheet><script defer src=https://0xc1.space/js/script.js></script><script src=https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js></script><script defer src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js></script><script defer>hljs.highlightAll()</script><script defer src=https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js></script><script defer>mermaid.initialize({startOnLoad:!0})</script><script src="https://www.googletagmanager.com/gtag/js?id=G-8DQTX42T4P" async></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[];gtag(`js`,new Date());gtag(`config`,`G-8DQTX42T4P`,{'page_title':`初探并发`,'page_path':`true`})</script><body><header><nav id=nav-bar><h3 id=nav-home><a href=/>0xc1</a> 的博客</h3><div id=nav-links><a href=/blog> |博客| </a><a href=/gcores-talks> |机组| </a><a href=/about> |关于| </a><div><input id=theme-toggle style=display:none type=checkbox><label for=theme-toggle id=theme-toggle-label><svg class=icons id=theme-icon><use href=https://0xc1.space/icons.svg#lightMode></use></svg></label><audio id=theme-sound><source src=https://0xc1.space/click.ogg type=audio/ogg></audio></div></div></nav></header><main><div><a href=..>..</a>/<span class=accent-data>chu-tan-bing-fa</span></div><time datetime=2017-05-07>Published on: <span class=accent-data>2017-05-07</span></time><address rel=author>By <span class=accent-data>0xc1</span></address><h1>初探并发</h1><p>很好，最近的一个小作业让我游行接触到真正有意义的并发编程。</p><span id=continue-reading></span><h2 id=demo>Demo</h2><p>于是使用 python 的<code>queue</code>和<code>signal</code>还有<code>time</code>模块做了一个不算真正多线程的示意用的小小 demo：<pre class=language-python data-lang=python><code class=language-python data-lang=python># -*- coding: utf-8 -*-
+# @Author: Michale
+# @Date:   2017-05-04 15:00:41
+# @Last Modified by:   Michale
+# @Last Modified time: 2017-05-07 00:46:52
+import signal
+import queue
+import time
+
+
+class TestClass(object):
+    queue = queue.Queue()
+
+    def __init__(self):
+        signal.signal(signal.SIGINT, self.stopIfPressKill)
+
+    def stopIfPressKill(self, mySignal, stack):
+        if mySignal == signal.SIGINT:
+            print('you pressed CTRL-C')
+            self.queue.put_nowait('stop')
+            print(self.queue.qsize())
+
+    def mainThread(self):
+        while True:
+            time.sleep(1)
+            if not self.queue.empty():
+                data = self.queue.get()
+                print(data)
+                if data == 'stop':
+                    break
+                else:
+                    self.queue.put(data)
+
+
+if __name__ == '__main__':
+    yoo = TestClass()
+    yoo.mainThread()
+
+</code></pre><p>解释一下三个模块的作用：<ul><li><code>queue</code>：作为消息队列，这里显然有点大材小用。<li><code>signal</code>：用来捕捉<code>KeyboardInterrupt</code>之后将停止信号置入消息队列。<li><code>time</code>：用来让主线程能够捕捉到这个<code>KeyboardInterrupt</code>。</ul><h2 id=si-xiang>思想</h2><p>多线程的引入使得非主线程在启动后就很难控制，所以迫使人们使用消息队列这样的方式实现线程间通信。<p>但其实不论是否是多线程，系统各个模块本就应该将细节封装起来，而使用事件是他们协同工作，这样对于降低系统耦合有很大帮助，这也是一个好的系统的设计思想：<strong>为变化而设计。</strong><p class=tags-data><a href=/tags/python>/python/</a> <a href=/tags/bing-fa>/并发/</a></p><script async crossorigin data-category=General data-category-id=DIC_kwDOL-lrA84Cfgx1 data-emit-metadata=0 data-input-position=bottom data-lang=zh-CN data-mapping=og:title data-reactions-enabled=1 data-repo=Thrimbda/blog-comment data-repo-id=R_kgDOL-lrAw data-strict=0 data-theme=preferred_color_scheme src=https://giscus.app/client.js></script></main><footer><hr><div id=footer-container><div><p>Theme and color theme licensed under <a rel="noopener noreferrer" href=https://en.wikipedia.org/wiki/Licence_MIT target=_blank>MIT</a>.<br> Built with <a rel="noopener noreferrer" href=https://www.getzola.org target=_blank>Zola</a> using <a rel="noopener noreferrer" href=https://github.com/Speyll/anemone target=_blank>anemone</a> theme, <a rel="noopener noreferrer" href=https://speyll.github.io/suCSS/ target=_blank>suCSS</a> framework & <a rel="noopener noreferrer" href=https://github.com/Speyll/veqev target=_blank>veqev</a>.<br> Written By C1 with love ❤️.</div><div><a rel="noopener noreferrer" title="Subscribe via RSS for updates." class=no-style href=https://0xc1.space/atom.xml target=_blank><svg class=icons><use href=https://0xc1.space/icons.svg#rss></use></svg></a></div></div></footer>

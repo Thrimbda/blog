@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 开源</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/kai-yuan/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-27T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/kai-yuan/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>山上的树：开源软件的昨天和今天</title>
+        <published>2023-08-27T00:00:00+00:00</published>
+        <updated>2023-08-27T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/shan-shang-de-shu-kai-yuan-ruan-jian-de-zuo-tian-he-jin-tian/"/>
+        <id>https://0xc1.space/blog/shan-shang-de-shu-kai-yuan-ruan-jian-de-zuo-tian-he-jin-tian/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;em&gt;它越是想往高处和亮处升上去，它的根就越发强有力地拼命伸向地里，伸向下面，伸向黑暗里，伸进深处——伸进罪恶。&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;yin-zi-cui-ruo-de-kai-yuan-ruan-jian&quot;&gt;引子 - 脆弱 (?) 的开源软件&lt;&#x2F;h2&gt;
+&lt;p&gt;近日 doom-emacs 的作者 Henrik Lissner 在消失了近半年后于 doom-emacs 的 Discord 频道发言说：&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;http:&#x2F;&#x2F;0xc1.space&#x2F;images&#x2F;2023&#x2F;08&#x2F;27&#x2F;doom.png&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 总结</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/zong-jie/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-05-05T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/zong-jie/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>Thrimbda</title>
+        <published>2017-05-05T00:00:00+00:00</published>
+        <updated>2017-05-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/thrimbda/"/>
+        <id>https://0xc1.space/blog/thrimbda/</id>
+        
+        <summary type="html">&lt;p&gt;想出并考量了近一个月，决定使用新的 ID: &lt;strong&gt;Thrimbda&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;什么意思呢？&lt;&#x2F;p&gt;
+&lt;p&gt;alive and thrive.&lt;&#x2F;p&gt;
+&lt;p&gt;尾巴取自希腊字母英文发音 lambda，这个字母代表着大智若愚。&lt;&#x2F;p&gt;
+&lt;p&gt;所以&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Thrimbda&lt;&#x2F;strong&gt;!&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>答辩失败后的总结与思考</title>
+        <published>2017-03-29T00:00:00+00:00</published>
+        <updated>2017-03-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/da-bian-shi-bai-hou-de-zong-jie-yu-si-kao/"/>
+        <id>https://0xc1.space/blog/da-bian-shi-bai-hou-de-zong-jie-yu-si-kao/</id>
+        
+        <summary type="html">&lt;p&gt;五个小时了，答辩结束后的我被扒掉一层皮一样，羞愧难当。默默地骑着自行车，隐身在梧桐道上，好在四下无人里都是陌生人，让我得到一丝喘息的机会。&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

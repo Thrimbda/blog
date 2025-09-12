@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 需求分析</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/xu-qiu-fen-xi/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-04-06T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/xu-qiu-fen-xi/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>worktile需求管理实力分析</title>
+        <published>2017-04-06T00:00:00+00:00</published>
+        <updated>2017-04-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/worktileshi-li-fen-xi/"/>
+        <id>https://0xc1.space/blog/worktileshi-li-fen-xi/</id>
+        
+        <summary type="html">&lt;h1 id=&quot;xu-qiu-guan-li&quot;&gt;需求管理&lt;&#x2F;h1&gt;
+&lt;p&gt;首先摘抄一段来自《人月神话》中有关项目管理举的一个典型的失败例子。&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

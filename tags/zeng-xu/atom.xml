@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 赠序</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/zeng-xu/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-02-05T00:21:13+00:00</updated>
+    <id>https://0xc1.space/tags/zeng-xu/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>送给活宝们的绝活</title>
+        <published>2017-01-13T22:53:52+00:00</published>
+        <updated>2017-02-05T00:21:13+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/song-gei-huo-bao-men-de-jue-huo/"/>
+        <id>https://0xc1.space/blog/song-gei-huo-bao-men-de-jue-huo/</id>
+        
+        <summary type="html">&lt;p&gt;2017-02-05 更：&lt;&#x2F;p&gt;
+&lt;p&gt;前几天聚会碰巧碰见一个大学也跟我同校的师兄，闲来聊天就问我高中在那个学校，我说黄河。他惊叹：“那你一定是你们学校状元吧！”&lt;&#x2F;p&gt;
+&lt;p&gt;我上大学之后，这个问题被西安土著同学问过很多次，回答无非是上面这样的惊叹或者表示不知道这个高中。&lt;&#x2F;p&gt;
+&lt;p&gt;其实我宁愿自己能讲：“我高中是倒数第一。”&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

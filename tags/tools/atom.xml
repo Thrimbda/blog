@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - Tools</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/tools/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2021-02-22T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/tools/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>Tools of notes</title>
+        <published>2021-02-22T00:00:00+00:00</published>
+        <updated>2021-02-22T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/tools-of-notes/"/>
+        <id>https://0xc1.space/blog/tools-of-notes/</id>
+        
+        <summary type="html">&lt;p&gt;Hi everyone! It’s been a looooong time since we met the last time, how have you been?&lt;&#x2F;p&gt;
+&lt;p&gt;I’ve been very busy with my new work at Bytedance, and why am I write this lil blog post in English? I’ll explain.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

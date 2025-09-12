@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - RBAC</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/rbac/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-05-11T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/rbac/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>一个RBAC-Demo：为了艾尔</title>
+        <published>2017-05-11T00:00:00+00:00</published>
+        <updated>2017-05-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/yi-ge-rbac-demo-wei-liao-ai-er/"/>
+        <id>https://0xc1.space/blog/yi-ge-rbac-demo-wei-liao-ai-er/</id>
+        
+        <summary type="html">&lt;p&gt;基于上篇对RBAC的理解，也由于作业要求，我将编写一个简单的Demo对作为RBAC的实践。&lt;&#x2F;p&gt;
+&lt;p&gt;我无意将Demo做的无比庞大，我的目标在于说明问题，所以依然”麻雀虽小，五脏俱全。“&lt;&#x2F;p&gt;
+&lt;p&gt;那么这个Demo的目标是什么呢，他都可以做些什么呢？&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>RBAC概念与系统设计</title>
+        <published>2017-05-07T00:00:00+00:00</published>
+        <updated>2017-05-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/rbacshi-jian-xi-tong-she-ji/"/>
+        <id>https://0xc1.space/blog/rbacshi-jian-xi-tong-she-ji/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;img src=&quot;http:&#x2F;&#x2F;0xc1.space&#x2F;images&#x2F;2017&#x2F;05&#x2F;07&#x2F;RBACmodel.png&quot; alt=&quot;RBACmodel&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;rbac-de-gai-nian&quot;&gt;RBAC 的概念&lt;&#x2F;h2&gt;
+&lt;p&gt;RBAC (&lt;strong&gt;R&lt;&#x2F;strong&gt;ole-&lt;strong&gt;B&lt;&#x2F;strong&gt;ased &lt;strong&gt;A&lt;&#x2F;strong&gt;ccess &lt;strong&gt;C&lt;&#x2F;strong&gt;ontrol) 以角色为基础的访问控制模型是一套较强制访问控制以及自由选定访问控制更为中性且更具灵活性的访问控制技术。&lt;&#x2F;p&gt;
+&lt;p&gt;首先是RBAC中的几种对象：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;S = 主体 (Subject) = 一名使用者或自动代理人&lt;&#x2F;li&gt;
+&lt;li&gt;R = 角色 (Role) = 被定义为一个授权等级的工作职位或职称&lt;&#x2F;li&gt;
+&lt;li&gt;P = 权限 (Permission) = 一种存取资源的方式&lt;&#x2F;li&gt;
+&lt;li&gt;SE = 会期 (Session) = S，R或P之间的映射关系&lt;&#x2F;li&gt;
+&lt;li&gt;SA = 主体指派 (Subject Assignment)&lt;&#x2F;li&gt;
+&lt;li&gt;PA = 权限指派 (Permission Assignment)&lt;&#x2F;li&gt;
+&lt;li&gt;RH = 角色阶层 (Role Hierarchy)。能被表示为：≥（x ≥ y 代表 x 继承 y 的权限）&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;其次各对象间具有如下关系：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;主体&lt;&#x2F;strong&gt;和&lt;strong&gt;角色&lt;&#x2F;strong&gt;是多对多关系。&lt;&#x2F;p&gt;
+&lt;p&gt;${\displaystyle SA\subseteq S\times R}$&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;角色&lt;&#x2F;strong&gt;和&lt;strong&gt;权限&lt;&#x2F;strong&gt;是多对多关系。&lt;&#x2F;p&gt;
+&lt;p&gt;${\displaystyle PA\subseteq P\times R}$&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</summary>
+        
+    </entry>
+</feed>

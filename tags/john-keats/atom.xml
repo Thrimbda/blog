@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - John Keats</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/john-keats/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2018-01-07T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/john-keats/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>To-</title>
+        <published>2018-01-07T00:00:00+00:00</published>
+        <updated>2018-01-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/to/"/>
+        <id>https://0xc1.space/blog/to/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;济慈曾经见过一位年轻的女士几分钟，为其着迷甚至神伤。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>Ode on Melancholy 忧郁颂</title>
+        <published>2017-06-19T00:00:00+00:00</published>
+        <updated>2017-06-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/ode-on-melancholy-you-yu-song/"/>
+        <id>https://0xc1.space/blog/ode-on-melancholy-you-yu-song/</id>
+        
+        <summary type="html">&lt;p&gt;今天我的济慈诗选到了，其实买它有一部分原因就是因为在&lt;em&gt;Sweet Bitter&lt;&#x2F;em&gt;中看到了*《忧郁颂》&lt;em&gt;中的一句&lt;code&gt;隐藏的“忧郁”有她至尊的神龛&lt;&#x2F;code&gt;。另外一部分原因是因为未竟的长诗&lt;&#x2F;em&gt;Hyperion&lt;em&gt;以及济慈本人贯穿了整个&lt;&#x2F;em&gt;《海伯利安》&lt;em&gt;四部曲中。神往已久，于是今天就抄下这首&lt;&#x2F;em&gt;《忧郁颂》*。中文采用屠岸译版。&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

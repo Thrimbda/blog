@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>c1 的博客 - 设计模式</title>
+    <subtitle>c1 的博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://0xc1.space/tags/she-ji-mo-shi/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://0xc1.space"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-04-10T00:00:00+00:00</updated>
+    <id>https://0xc1.space/tags/she-ji-mo-shi/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>观察者模式实力分析</title>
+        <published>2017-04-10T00:00:00+00:00</published>
+        <updated>2017-04-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://0xc1.space/blog/guan-cha-zhe-mo-shi-shi-li-fen-xi/"/>
+        <id>https://0xc1.space/blog/guan-cha-zhe-mo-shi-shi-li-fen-xi/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;一般地，面向对象分析与设计中存在三种事件处理的机制，除了普通的函数调用外，常常用到回调函数，而 J2EE 中还提供了一种基于监听方式的事件处理机制，请查阅资料，对 Action 以及 ActionListener 的机制进行分析，完成一个分析实例。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;首先了解观察者模式&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>
