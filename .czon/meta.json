@@ -1,0 +1,2131 @@
+{
+  "version": "1.0.0",
+  "options": {
+    "langs": [
+      "zh-Hans",
+      "en-US"
+    ]
+  },
+  "files": [
+    {
+      "hash": "c0dfa46f7ac0e02c254b30008f4d79a8c50faf77a1fae27697f1ff75d186c076",
+      "path": "README.md",
+      "links": [
+        "https://www.getzola.org/",
+        "https://anemone.pages.dev/"
+      ],
+      "metadata": {
+        "title": "博客构建说明",
+        "description": "介绍使用Zola构建博客并采用Anemone主题的过程。",
+        "short_summary": "本文档描述了博客的构建过程，使用Zola作为生成器，并采用Anemone主题进行定制。文档简洁地介绍了技术实现和主题选择。",
+        "audience": "对静态网站生成和博客构建感兴趣的技术爱好者。",
+        "key_points": [
+          "博客使用Zola构建",
+          "采用Anemone主题",
+          "主题进行了轻微修改",
+          "文档简洁明了",
+          "强调技术实现"
+        ],
+        "summary": "本文档简要介绍了博客的构建过程，使用Zola作为静态网站生成器，并采用了Anemone主题进行定制。文档强调了博客的构建工具和主题选择，展示了技术实现的基本框架。",
+        "slug": "blog-build-description",
+        "tags": [
+          "博客",
+          "Zola",
+          "Anemone",
+          "静态网站",
+          "主题定制"
+        ],
+        "inferred_lang": "en-US",
+        "tokens_used": {
+          "prompt": 555,
+          "completion": 231,
+          "total": 786
+        }
+      },
+      "category": "Blog Development",
+      "nativeMarkdownHash": "052e584184807037dfe3b4b89fda3220fbe4574080800419753782e9916d8965"
+    },
+    {
+      "hash": "af9467c60e6da8b6b1a581de4ce1154701304eab9ef646a7b44e6fd469a14fbc",
+      "path": ".legion/tasks/zola-wysiwyg-markdown-supabasegithub/context.md",
+      "links": [],
+      "metadata": {
+        "title": "Zola博客实时编辑与后端方案设计",
+        "description": "为Zola博客设计WYSIWYG Markdown实时编辑方案，推荐Vditor编辑器与Supabase后端，保持现有技术栈与设计语言。",
+        "short_summary": "本文档为Zola博客站点设计了一套WYSIWYG Markdown实时编辑方案，推荐使用Vditor编辑器和Supabase后端。方案强调保持现有技术栈和设计语言，避免引入复杂构建链，同时确保短代码和Front matter不被破坏。文档还分析了编辑范围、发布流程等关键问题，并提供了备选方案供参考。",
+        "audience": "Zola博客开发者、前端工程师、技术决策者，关注博客内容管理和实时编辑功能实现。",
+        "key_points": [
+          "Zola博客站点现状审计，技术栈为极简JS，设计语言基于suCSS CSS变量",
+          "推荐Vditor作为WYSIWYG Markdown编辑器，支持三种模式且集成成本低",
+          "推荐Supabase作为后端，提供托管DB、Auth和Storage，安全边界清晰",
+          "编辑范围需明确，包括实时编辑含义、编辑页面范围和发布链路",
+          "必须保持现有主题切换机制和组件风格，不引入新设计体系",
+          "编辑器需确保Zola短代码和YAML front matter不被破坏",
+          "备选方案包括TOAST UI Editor、GitHub Issue/Discussion等",
+          "方案设计需考虑与现有GitHub Actions部署流程的集成",
+          "目标实现纯JS admin页面，无需Node/React构建链",
+          "文档提供了快速交接点和后续步骤，便于项目推进"
+        ],
+        "summary": "本文档详细分析了Zola博客站点的现状，包括技术栈、设计语言和内容特性，并针对实现WYSIWYG Markdown实时编辑功能进行了方案设计。核心推荐使用Vditor作为编辑器，Supabase作为后端存储与鉴权方案，强调无需引入构建链，保持现有极简JS风格和suCSS设计语言。文档还探讨了编辑范围、发布链路等关键决策点，并提供了编辑器与后端的备选方案，确保方案与现有工程匹配且易于实施。",
+        "slug": "zola-blog-wysiwyg-markdown-supabase-backend-design",
+        "tags": [
+          "Zola",
+          "Markdown",
+          "WYSIWYG",
+          "Supabase",
+          "实时编辑",
+          "博客",
+          "前端",
+          "设计"
+        ],
+        "inferred_date": "2026-01-06",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 2422,
+          "completion": 549,
+          "total": 2971
+        }
+      },
+      "category": "Blog Development",
+      "nativeMarkdownHash": "993ece726761fac1e1b609c8f8b65c8ad46a01a1a57d554f6b83c2884ce7498f"
+    },
+    {
+      "hash": "96a50720ad6955c71f7410ae096ba94021d0350a3cc2d28e3c775fbab9964835",
+      "path": ".legion/tasks/zola-wysiwyg-markdown-supabasegithub/plan.md",
+      "links": [],
+      "metadata": {
+        "title": "Zola博客实时编辑与GitHub后端整合方案设计",
+        "description": "为Zola博客设计无后端实时Markdown编辑方案，通过GitHub Device Flow实现内容发布，保持现有设计风格。",
+        "short_summary": "本文为Zola博客设计了一个无后端实时Markdown编辑方案，主推方案D，通过GitHub Device Flow实现鉴权和内容发布，草稿仅本机缓存，图片存回repo。方案保持现有设计风格，支持实时预览和自动保存，确保内容发布不破坏现有结构。",
+        "audience": "Zola博客开发者、前端工程师、技术博主，寻求无后端实时内容编辑解决方案的用户。",
+        "key_points": [
+          "设计目标：为Zola博客添加实时Markdown编辑功能，不破坏现有CSS风格。",
+          "设计原则：保持视觉语言、避免手写后端、支持实时预览与自动保存。",
+          "现状：Zola站点，无Node/React构建链，内容为Markdown文件。",
+          "主方案：方案D，纯前端实现，使用Vditor编辑器和GitHub Device Flow。",
+          "鉴权：采用GitHub OAuth device flow，无需后端，token仅存本地。",
+          "草稿管理：仅本机缓存（IndexedDB），不跨设备同步。",
+          "发布流程：一键创建PR，将编辑内容和图片提交到GitHub repo。",
+          "图片处理：上传图片存回repo的static/images/uploads，引用站内路径。",
+          "安全考虑：编辑器保真性、XSS风险、GitHub token最小化scope。",
+          "落地步骤：从/admin页面到发布PR的完整实现流程。"
+        ],
+        "summary": "本文详细规划了为Zola博客在不破坏现有CSS设计风格的前提下，设计一个可实时编辑Markdown的WYSIWYG编辑器与“免手写后端”整合方案。文档明确了设计原则，包括保持现有视觉语言、尽量不引入手写后端、支持实时预览与自动保存等。通过现状审计，确认项目为Zola站点，无Node/React构建链，内容源为Markdown文件。在候选方案中，主推方案D：纯JS /admin + Vditor + GitHub Device Flow + PR发布，实现无自建后端、以GitHub为真相源、草稿仅本机缓存、图片存回repo的完整流程。文档还涵盖了安全风险、范围界定和阶段概览，最终推荐落地步骤基于默认假设，确保方案可行且符合用户偏好。",
+        "slug": "zola-blog-wysiwyg-markdown-editor-github-backend-design",
+        "tags": [
+          "Zola",
+          "Markdown",
+          "WYSIWYG",
+          "GitHub",
+          "实时编辑",
+          "无后端",
+          "前端开发",
+          "博客优化"
+        ],
+        "inferred_date": "2026-01-06",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 3489,
+          "completion": 631,
+          "total": 4120
+        }
+      },
+      "category": "Blog Development",
+      "nativeMarkdownHash": "9571b9c64d6605f5829d30ff931b93e3a5208216c1eca49e4d4a1adafefa5ab3"
+    },
+    {
+      "hash": "f3b0e084a6a88866423780c792ff8a46de3043b7b92bc08afcb6857b694d02de",
+      "path": ".legion/tasks/zola-wysiwyg-markdown-supabasegithub/tasks.md",
+      "links": [],
+      "metadata": {
+        "title": "Zola博客实时编辑与后端方案设计任务清单",
+        "description": "本文档详细规划了Zola博客集成WYSIWYG Markdown实时编辑器和Supabase/GitHub后端方案的设计任务与实施步骤。",
+        "short_summary": "本文档概述了Zola博客集成实时编辑器和后端方案的设计任务，包括四个完成阶段和MVP实施计划。核心内容包括编辑器选型、Supabase/GitHub后端设计、发布流程和权限管理，旨在实现无缝的博客编辑和发布体验。",
+        "audience": "博客开发者、技术项目经理、对Zola、Markdown编辑器和后端集成感兴趣的技术人员",
+        "key_points": [
+          "文档分为四个阶段：现状审计、编辑器调研、后端设计、整合方案，所有阶段已完成设计",
+          "MVP范围包括/admin页面、Supabase documents表、Vditor编辑器集成、自动保存和GitHub Actions发布流程",
+          "v2增强项涵盖图片上传、版本历史、本地预览一致性和多用户权限",
+          "采用Supabase作为数据源，结合GitHub Actions实现自动化同步和部署",
+          "强调前端与现有CSS变量和设计语言保持一致，最小化引入新系统",
+          "定义实时编辑含义，包括实时预览、自动保存和多人协作",
+          "提供两套后端方案：Supabase和GitHub Issue/Discussion，并分析数据流和权限模型",
+          "发布路径通过GitHub Actions从Supabase拉取已发布文档并提交到master",
+          "冲突策略以Supabase为真源，检测到repo手工改动时fail-fast",
+          "最后更新时间为2026年01月06日，文档处于待review状态"
+        ],
+        "summary": "本文档是一份关于Zola博客集成WYSIWYG Markdown实时编辑器和Supabase/GitHub后端方案的设计任务清单。文档分为四个主要阶段：现状审计与约束、编辑器选型调研、后端与数据模型设计、整合方案详细设计与落地计划，每个阶段包含具体任务和验收标准。当前所有设计任务已完成，进入review阶段。文档还列出了MVP（最小可用产品）建议范围，包括/admin页面、Supabase表结构、编辑器集成、发布流程等核心功能，以及v2增强项如图片上传、版本历史和多文档管理。最后更新时间为2026年01月06日。",
+        "slug": "zola-blog-wysiwyg-markdown-supabase-github-backend-task-list",
+        "tags": [
+          "Zola",
+          "Markdown",
+          "WYSIWYG",
+          "Supabase",
+          "GitHub",
+          "实时编辑",
+          "博客",
+          "任务清单"
+        ],
+        "inferred_date": "2026-01-06",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1619,
+          "completion": 585,
+          "total": 2204
+        }
+      },
+      "category": "Blog Development",
+      "nativeMarkdownHash": "2925d08786aee17ea708f4d7cf3d19dd2b1ad171f710d940e56569f7f373c83e"
+    },
+    {
+      "hash": "1868f92f6f4b1edeedb75aa693b41f0f94a4e62f09a61f2bc18707d011871a17",
+      "path": "content/_index.md",
+      "links": [
+        "./tags",
+        "mailto:siyuan.arc@gmail.com",
+        "https://github.com/Thrimbda",
+        "https://github.com/zccz14/blog/tree/master/src/posts"
+      ],
+      "metadata": {
+        "title": "博客重建与个人表达",
+        "description": "作者分享重建博客的经历，选择Zola静态网站生成器的原因，以及对个人表达的思考。",
+        "short_summary": "作者因Hexo CI问题重建博客，选择了Zola静态网站生成器以满足长期维护需求。文章回顾了个人博客历史，并讨论了在当今时代维护博客的意义。",
+        "audience": "对博客搭建、静态网站生成器感兴趣的技术爱好者，以及关注个人表达和数字生活的读者。",
+        "key_points": [
+          "作者在2024年重建博客",
+          "选择Zola替代Hexo",
+          "Zola支持Markdown和单二进制文件",
+          "强调长期维护和简单主题",
+          "反思个人表达欲的变化",
+          "分享2017年关于博客的旧文",
+          "提供多种联系方式",
+          "讨论博客的自由写作价值",
+          "脚注提到朋友博客的链接",
+          "博客重建基于技术需求和兴趣"
+        ],
+        "summary": "本文记录了作者在2024年重建个人博客的过程。由于Hexo的CI问题，作者决定更换博客系统，经过简单考察后选择了Zola静态网站生成器，主要原因是其支持Markdown、单二进制文件便于长期维护，以及主题简单易维护。作者反思了当前生活阶段表达欲的变化，并分享了2017年关于博客的旧文，表达了对自由写作的追求。文章还提供了联系方式，并附有脚注说明。",
+        "slug": "blog-rebuild-and-personal-expression",
+        "tags": [
+          "博客",
+          "Zola",
+          "静态网站生成器",
+          "个人表达",
+          "技术选择",
+          "Markdown",
+          "维护",
+          "Hexo"
+        ],
+        "inferred_date": "2024-01-01",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1051,
+          "completion": 382,
+          "total": 1433
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "fd7806fcab8171f5ef7a3a76f106b96381965ae91a0f6a7a26554ec36fc8e26e"
+    },
+    {
+      "hash": "8d589b257fc275741645b96e35f74ac33d582bf23a0db377ac971c084b6a28f5",
+      "path": "content/about.md",
+      "links": [],
+      "metadata": {
+        "title": "关于王思远：代码、文字与生活的交织",
+        "description": "王思远分享作为开发者如何用技术理解世界，同时通过游戏、艺术和日常生活寻找真实与勇气，探讨理想与现实的平衡。",
+        "short_summary": "王思远是一名开发者，分享了他如何通过技术、游戏、艺术和日常生活来理解世界和寻找意义。他从理想主义转向更务实的生活观，强调实践和具体体验的价值。文章展现了一个技术人如何平衡代码与生活，在现实中寻找勇气和真实。",
+        "audience": "对技术、生活哲学、个人成长感兴趣的读者，尤其是开发者和创意工作者。",
+        "key_points": [
+          "王思远是毕业于XJTU的开发者，现居上海",
+          "白天用技术构建秩序，但认为技术应服务公平而非建造围墙",
+          "夜晚沉浸在游戏和艺术中，从中获得真实勇气",
+          "养蓝猫葡萄，从日常互动中领悟生活不可优化",
+          "喜欢骑行探索城市，从具体细节中寻找意义",
+          "从理想主义转向更务实的生活态度",
+          "强调实践和具体体验的重要性",
+          "技术是理解世界的语言，但解不了现实瑕疵",
+          "虚拟世界常给最真实的勇气",
+          "生活不是可优化的算法"
+        ],
+        "summary": "本文是王思远的个人简介，他毕业于XJTU，现居上海，是一名开发者。文章描述了他白天沉迷于技术构建，如使用NixOS和Emacs，但逐渐认识到技术应服务于公平而非建造围墙。夜晚他沉浸在游戏和艺术中，从虚拟世界和艺术作品中获得勇气和启示。他养了一只蓝猫葡萄，从日常互动中领悟生活不可优化。他还喜欢骑行探索城市，从具体的生活细节中寻找意义。文章总结了他从理想主义到更务实的生活态度的转变，强调实践和具体体验的重要性。",
+        "slug": "about-wangsiyuan",
+        "tags": [
+          "个人简介",
+          "开发者",
+          "技术",
+          "生活哲学",
+          "游戏",
+          "艺术",
+          "上海",
+          "猫"
+        ],
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1290,
+          "completion": 461,
+          "total": 1751
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "11139caee47ab9825d886c566e8cd6dc3894d7719cc7b22f274c9ac8e5b9dac8"
+    },
+    {
+      "hash": "966987c4cb6f4e863fbcdad289c5cf61c3b68d0a64254b6d80722b8391262bb8",
+      "path": "content/gcores-talks.md",
+      "links": [
+        "https://www.gcores.com/users/464460/talks",
+        "https://0xc1.space/images/gcores/06989f6a9aefa0498ff9356b6c1923f7-1280-960.jpg",
+        "https://0xc1.space/images/gcores/061424172fff175b1d412ba20ad405a8-1080-1920.jpg",
+        "https://0xc1.space/images/gcores/d7453f5674d0b9eb078f8306c8b19d6e-2250-3000.jpg",
+        "https://0xc1.space/images/gcores/f75c890e5fd964bab9324279c7a09ed6-1170-2532.jpg",
+        "https://0xc1.space/images/gcores/88a14b4b2fc987dd5b9c038cc5c8f37d-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/e1859c7b0e1d99a41c82297c8e947cd1-503-511.WEBP",
+        "https://0xc1.space/images/gcores/1048b6636d5da87430c74db6f010cfb2-2250-3000.jpg",
+        "https://0xc1.space/images/gcores/964474776c19190cb7c016ea497da57a-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/edba42d1a6bf8082b8c4b47d5b9c4863-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/1bea3fdb1374c02055e0e8be58175dfc-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/7d61fbdf5dde6df68e9872e7b27798c4-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/fd857cb48a74b1bef1e1589b0b237de2-716-1165.JPG",
+        "https://0xc1.space/images/gcores/67da102aa90a1895df543f42249a4a79-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/0c6f260a74d238e555a6516d158cf84e-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/492a47f514f257c86531aee1ec65bf2b-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/d3fa949eb9e1fdc45176d3389b37b092-1000-2697.png",
+        "https://0xc1.space/images/gcores/e2dbde8c08dc31a6697c6cf6f6da0117-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/a2e11ba0ac155f8b874a84a73793e97a-1170-2532.png",
+        "https://0xc1.space/images/gcores/641f0526f75d524a69f963117deb5c93-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/f23b52499e667ef5cd3232926c662e20-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/757b95c7953a08adb3af8a77145dface-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/6793266b66c48e1d36eb6c97403314d3-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/c40fc276ec201c62d4773a0cfb7f1136-1170-2532.png",
+        "https://0xc1.space/images/gcores/f9bf3b1251565bad4b845f49a041881f-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/359389154b5b9ef98fe34f33616443c7-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/952691120f5a3d6daa7ad2fde19fc897-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/d8c8d3a437d23a55686ddb17f6b58882-490-453.JPG",
+        "https://0xc1.space/images/gcores/9bfa870e02b3597e2b764dfa53a267d9-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/1773cf6a3297ccd10c75ebe98273091b-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/4a381e774ea3648c532d967ea7b307ef-3024-4032.JPG",
+        "https://0xc1.space/images/gcores/7a94cb61c6142048180d00821366b9b9-680-453.jpg",
+        "https://0xc1.space/images/gcores/ba008ca8d6129005bb70adc0e8710d93-3852-2098.png",
+        "https://0xc1.space/images/gcores/6f170b3369073ff42e51787b77973e89-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/ceab58dca303a143e75fc86bdcbc5176-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/d98738249c875b24c61230ae291af761-474-496.JPG",
+        "https://0xc1.space/images/gcores/74efcbc1a10ca7885ddf26280fd9eb11-240-241.GIF",
+        "https://0xc1.space/images/gcores/ea16b40c3f132fe58d5ea94b5f5f98f1-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/d959c888feee20df3b26b773c2a8a702-425-425.JPG",
+        "https://0xc1.space/images/gcores/18ac0205c6c06020e667122a33ac7c27-4032-3024.JPG",
+        "https://0xc1.space/images/gcores/06692b73533548d9af0b770b793fa836-1920-1080.JPG",
+        "https://0xc1.space/images/gcores/238168fceb7e42cc33823e0330263e4e-4032-3024.JPG",
+        "https://0xc1.space/images/gcores/28d97bd200cc0cfa42fb964c8d84c353.HEIC",
+        "https://0xc1.space/images/gcores/37f785daae8d51ec221250fce7c9168f.GIF",
+        "https://0xc1.space/images/gcores/b873fffc348ebe5f742121572e64513a.HEIC",
+        "https://0xc1.space/images/gcores/cddc11dbffe501ec1e7ab63ce7522298.png",
+        "https://0xc1.space/images/gcores/6ebd5d5fbe43406afe222e7d3d66f5b5.png",
+        "https://github.com/hlissner/dotfiles",
+        "https://0xc1.space/images/gcores/1e305210-d41c-4dfd-aec7-5c1223bb50c6.JPG"
+      ],
+      "metadata": {
+        "title": "0xc1的机组日志：个人生活与思考记录",
+        "description": "记录了作者0xc1的个人生活点滴、旅行回忆、情感故事、游戏体验和日常思考，展现丰富的情感世界和深刻反思。",
+        "short_summary": "这是一系列个人日志，记录了作者0xc1的生活片段、旅行冒险、情感经历和思想探索。内容涉及与朋友zl的深厚友谊、游戏沉迷、音乐热爱以及对人生和技术的反思，展现了真实而丰富的情感世界。",
+        "audience": "对个人生活记录、旅行故事、游戏文化、情感反思和技术探索感兴趣的读者，尤其是年轻人和数字文化爱好者。",
+        "key_points": [
+          "记录了与朋友zl的多次旅行经历，包括青海湖骑行和美国重逢，展现深厚友谊。",
+          "分享了个人情感故事，如大学时期的恋爱回忆和分手后的孤独体验。",
+          "详细描述了游戏体验，如《怪物猎人》中挑战黑龙的历程和《星际争霸2》的竞技热情。",
+          "包含音乐和影视评论，如对Mili音乐的沉迷和对《婚姻故事》的深刻分析。",
+          "探讨技术话题，如使用NixOS的操作系统体验和编程工具的效率提升。",
+          "反思生活哲学，强调理想主义、人与人之间的连接以及在逆境中坚持的意义。",
+          "通过日常碎片如生病、做饭、骑车等事件，呈现真实的生活状态和情感波动。",
+          "分享了与多位朋友（如playground、陈神）的互动故事，体现社交网络的温暖。",
+          "记录了时间跨度从2023年到2025年的持续更新，显示长期的生活记录习惯。",
+          "语言生动，结合图片和文字，增强了叙述的感染力和真实感。"
+        ],
+        "summary": "本文是0xc1在机组平台发布的个人日志集合，时间跨度从2023年1月到2025年7月，内容涵盖日常生活、旅行见闻（如与朋友zl的旅行故事、青海湖骑行、美国之旅）、情感回忆（如大学时期的恋爱故事）、游戏体验（如《怪物猎人》、《星际争霸2》、《蔚蓝》）、音乐分享、影视评论（如《婚姻故事》）、技术思考（如NixOS、编程工具）以及哲学反思。日志通过文字和图片生动呈现了作者的情感波动、成长经历和对生活的深刻洞察，强调人与人之间的连接、理想主义的追求以及在平凡中寻找意义。",
+        "slug": "0xc1-crew-log",
+        "tags": [
+          "个人日志",
+          "生活记录",
+          "旅行故事",
+          "游戏体验",
+          "情感回忆",
+          "技术思考",
+          "音乐分享"
+        ],
+        "inferred_date": "2025-07-25",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 36417,
+          "completion": 580,
+          "total": 36997
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "fb7ea698bef2827ea222cd7280d46469e42bced65854d0f612c76952724ea511"
+    },
+    {
+      "hash": "a55abaeddee43e2f4ee45c3d0a0f24db1b8f8f1fc1726bff28ac9a701624487e",
+      "path": "content/blog/_index.md",
+      "links": [
+        "/tags"
+      ],
+      "metadata": {
+        "title": "All blog posts",
+        "description": "博客文章列表页面，展示所有按日期排序的博客文章。",
+        "short_summary": "这是一个博客文章列表页面，标题为“All blog posts”，按日期排序展示所有文章。页面包含指向标签页面的链接，便于内容分类浏览。",
+        "audience": "博客读者和内容管理者，需要浏览或管理所有博客文章的用户。",
+        "key_points": [
+          "页面标题为“All blog posts”",
+          "每页显示15篇文章",
+          "按日期排序",
+          "使用“blog-page.html”模板",
+          "包含指向标签页面的链接",
+          "用于汇总博客文章",
+          "便于用户浏览所有内容"
+        ],
+        "summary": "这是一个博客文章列表页面，标题为“All blog posts”，配置为每页显示15篇文章，按日期排序，使用“blog-page.html”作为页面模板，并包含指向所有标签页面的链接。页面主要用于汇总和导航博客内容，方便用户浏览所有文章。",
+        "slug": "all-blog-posts",
+        "tags": [
+          "blog",
+          "posts",
+          "list",
+          "date",
+          "tags"
+        ],
+        "inferred_lang": "en-US",
+        "tokens_used": {
+          "prompt": 555,
+          "completion": 267,
+          "total": 822
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "39f972a6c3816a31508d5267e9f98d263658b85fd77db628fc6dc3584c78494b"
+    },
+    {
+      "hash": "476892934ea8996e1925defebc1a2a58b12894c674a0b17ff8651575d1b83e7f",
+      "path": "content/blog/'Tis-not-through-envy-of-thy-happy-lot.md",
+      "links": [],
+      "metadata": {
+        "title": "'Tis not through envy of thy happy lot",
+        "description": "作者分享北漂独居生活的感悟，强调在压力中保持警惕、持续学习的重要性，避免盲目度日或成为“地狱的一部分”。",
+        "short_summary": "作者讲述北漂独居生活的开端，包括实习初期的困惑与适应，强调压力带来的成长。文章深入探讨如何在日常中保持警惕和学习，避免成为“地狱的一部分”，并鼓励清醒面对生活、把握机会。",
+        "audience": "对个人成长、生活感悟感兴趣的读者，特别是年轻职场人或北漂群体，寻求在压力中保持积极心态的启示。",
+        "key_points": [
+          "作者开始北漂独居生活，体验梦寐以求的自由",
+          "实习初期感到压力，但认为压力有益并快速融入环境",
+          "引用“生于忧患，死于安乐”强调警惕的重要性",
+          "讨论卡尔维诺的隐喻，主张在地狱中寻找非地狱元素",
+          "强调自我意识（Self-awareness）避免盲目度日",
+          "鼓励清醒面对失败风险，持续学习",
+          "引用朋友的话提醒把握机会",
+          "总结在自我折磨中充实生活，毫不后悔"
+        ],
+        "summary": "本文记录了作者开始北漂独居生活后的经历与思考。作者通过实习初期的压力体验，认识到这些挑战具有“浓厚的生活气息”，促使自己快速融入新环境。文章引用“生于忧患，死于安乐”和卡尔维诺的隐喻，强调在日常生活（或“地狱”）中保持警惕和学习，寻找非地狱的元素并赋予其空间，以避免盲目度日或被动接受现状。作者主张培养清晰的自我意识，清醒地面对失败风险，充实度过每一天，并引用朋友的话鼓励把握机会。最终，文章以积极态度总结，倡导在自我折磨中成长，不后悔选择。",
+        "slug": "tis-not-through-envy-of-thy-happy-lot",
+        "tags": [
+          "感悟",
+          "北漂",
+          "独居生活",
+          "警惕",
+          "学习",
+          "自我意识",
+          "压力",
+          "成长"
+        ],
+        "inferred_date": "2018-03-09",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1254,
+          "completion": 467,
+          "total": 1721
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "4f982d44fc7645f66ed624884b09bc671905fe640e3555fca15f2f6c035ea40c"
+    },
+    {
+      "hash": "fde9f7fd0b843bfd9bba7832c7baf2223cbb9f784e5eee822f850154acc06002",
+      "path": "content/blog/2020-09-13-窗帘上有小爪印.md",
+      "links": [
+        "https://0xc1.space/images/2020/09/13/frank.jpg",
+        "https://0xc1.space/images/2020/09/13/Country_road_in_Provence_by_night.jpg",
+        "https://0xc1.space/images/2020/09/13/copenhagen.jpg",
+        "https://0xc1.space/images/2020/09/13/pain.jpg"
+      ],
+      "metadata": {
+        "title": "窗帘上的小爪印",
+        "description": "作者通过窗帘上的猫爪印引发对时间、风格与品位的思考，分享从建筑师弗兰克·劳埃德·赖特自传中获得的启示。",
+        "short_summary": "作者从窗帘上的猫爪印出发，反思时间流逝和生活体验。通过弗兰克·劳埃德·赖特的自传，探讨风格与品位如何塑造人生，引用艺术和文学例子说明品位的培养过程。文章强调这些元素在见证世界、赋予生命连贯性中的作用。",
+        "audience": "对文学、艺术、哲学思考感兴趣的读者，喜欢深度反思生活和时间的人士。",
+        "key_points": [
+          "以猫爪印为引子，引发对时间和生活的深度思考",
+          "从弗兰克·劳埃德·赖特自传中学到风格与品位的重要性",
+          "风格形成需要时间积累和扎实基础，最终自然呈现",
+          "品位涉及艺术欣赏能力，需通过生活经验和训练培养",
+          "引用梵高、济慈、贝多芬等例子说明品位的跨时空影响",
+          "以话剧《哥本哈根》为例，探讨人性复杂性和动机多样性",
+          "风格与品位如同“apply”和“eval”，构建丰沛人生",
+          "文章强调见证世界、赋予生命连贯性的核心价值",
+          "通过个人经历连接抽象概念与具体情感",
+          "最终回归猫爪印意象，表达记忆与情感的持久性"
+        ],
+        "summary": "本文以作者回到苏州后，发现窗帘上猫爪印为引子，展开对时间流逝、生活体验的反思。文章核心围绕从建筑师弗兰克·劳埃德·赖特自传中学到的两件事：风格与品位。作者探讨风格的形成需要时间积累和扎实基础，最终自然呈现；品位则涉及对艺术作品的欣赏能力，需通过生活经验和训练培养。文中引用梵高、济慈、贝多芬等例子，以及话剧《哥本哈根》的剧情，说明品位如何跨越时空影响人心。最后，作者将风格与品位比作“apply”和“eval”，强调它们构建丰沛人生的意义，并以猫爪印的意象收尾，呼应情感与记忆的留存。",
+        "slug": "curtain-paw-prints",
+        "tags": [
+          "感悟",
+          "书",
+          "时间",
+          "风格",
+          "品位",
+          "弗兰克·劳埃德·赖特",
+          "艺术欣赏",
+          "生活反思"
+        ],
+        "inferred_date": "2020-09-13",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 2107,
+          "completion": 553,
+          "total": 2660
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "cbb41983a282b7f2e45b8fda51bfc5724e1f89dcbbd2d094100768ded068bbcf"
+    },
+    {
+      "hash": "896722e9c6feb61f365efb9361f4aafbaf76d56c6baf29709aebaa16df621700",
+      "path": "content/blog/拨云见日.md",
+      "links": [],
+      "metadata": {
+        "title": "拨云见日",
+        "description": "作者在朋友生日时回忆友情与人生感悟，探讨成长中的迷茫与拨云见日的智慧。",
+        "short_summary": "作者在朋友生日时回忆友情，反思人生道路的复杂性和成长中的迷茫。文章通过个人经历和故事，探讨了如何在年轻时的跳跃穿梭中总结规律，最终拨云见日，找到方向。",
+        "audience": "对友情、人生感悟、成长反思感兴趣的读者，特别是年轻人和文学爱好者。",
+        "key_points": [
+          "作者在朋友生日时回忆九年友情，关系未因距离疏远。",
+          "见证朋友经历安逸、背叛、前进与爱的变化。",
+          "反思人生道路不是简单选择，而是分层的复杂有向图。",
+          "强调年轻时有时间在人生边中跳跃穿梭，练习总结规律。",
+          "以“拨云见日”比喻在迷茫中找到方向和智慧的过程。",
+          "语言被描述为奇妙能力，能在个体间传递信息并嵌入永恒。",
+          "人生顺意时少，迷茫时多，但回忆时发现肚量不够大。",
+          "作者自问“我何尝不是这样？”，体现共情与自我反思。"
+        ],
+        "summary": "本文以朋友生日为契机，作者回顾了九年的友情历程，从大学后的联系减少但关系未疏远，到见证朋友经历安逸、背叛、前进与爱的变化。文章通过个人反思和故事讲述，探讨了人生道路的复杂性，认为人生不是简单的选择路径，而是分层的、容易迷失方向的巨大有向图。作者强调年轻时的练习和总结规律的重要性，最终以“拨云见日”比喻在迷茫中找到方向的过程，核心论点是人生充满迷茫，但通过时间和经验可以拨云见日，找到自己的路。",
+        "slug": "bo-yun-jian-ri",
+        "tags": [
+          "感悟",
+          "友情",
+          "人生",
+          "成长",
+          "迷茫",
+          "拨云见日",
+          "反思",
+          "故事"
+        ],
+        "inferred_date": "2017-04-27",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1114,
+          "completion": 462,
+          "total": 1576
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "f779ee1511b09dc458d915cde2552817b7713c2ed59ed8aa1afc222a4f5acaca"
+    },
+    {
+      "hash": "1aa195b25fbf3ed7ded86c4d8d3d1b7d4cbd561f9b7e698b4ae2dd1f4908a9cf",
+      "path": "content/blog/成都2017.md",
+      "links": [
+        "https://www.zhihu.com/question/38584390",
+        "https://www.zhihu.com/question/38545586",
+        "https://github.com/function-x/Orange-Juice"
+      ],
+      "metadata": {
+        "title": "成都2017",
+        "description": "作者回顾2017年成都实训经历，分享对成都的印象、创业小镇观察及个人学习反思，表达静心专注的决心。",
+        "short_summary": "作者分享2017年成都实训经历，描述对成都的印象和菁蓉镇创业环境的观察，反思个人学习失误，强调实训目的是学习规范开发并决心静心专注。文章以天气对比结尾，表达踏实前行的愿望。",
+        "audience": "对成都文化、创业环境感兴趣者，软件工程学生，以及关注个人成长与学习反思的读者。",
+        "key_points": [
+          "作者于2017年2月20日记录成都实训经历，对比之前旅行印象。",
+          "描述成都作为休闲之都，但个人非吃货，吸引力有限。",
+          "观察菁蓉镇作为创业小镇，响应国家号召，但环境可能过于鸡血。",
+          "反思个人学习失误，如错过概率论重修和软件项目管理报名。",
+          "实训主要目的是学习规范软件开发流程，尽管因Java要求放弃原有项目。",
+          "强调静心专注的重要性，决心踏实完成一个月实训。",
+          "以西安下雪和成都下雨的天气对比，表达前行决心。",
+          "文章包含对成都司机驾驶风格的生动描述。",
+          "提及实训环境不如预期，网速差且需上课。",
+          "整体基调是反思与决心，结合城市观察和个人成长。"
+        ],
+        "summary": "本文是作者在2017年2月20日记录的成都实训经历。作者回顾了高三暑假的成都之行，对比此次实训的期待与现实，描述了成都作为休闲之都的印象，特别是对菁蓉镇创业环境的观察，指出其响应国家号召但可能过于鸡血。文章还反思了个人学习中的失误，如错过课程报名，并强调此次实训的目的是学习规范软件开发，尽管因Java要求放弃原有项目，仍决心静心专注。最后，作者以西安下雪、成都下雨的对比，表达一步一个脚印向前走的愿望。",
+        "slug": "chengdu-2017",
+        "tags": [
+          "成都",
+          "实训",
+          "创业",
+          "学习反思",
+          "软件开发",
+          "菁蓉镇",
+          "个人成长"
+        ],
+        "inferred_date": "2017-02-20",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1805,
+          "completion": 500,
+          "total": 2305
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "30fa48e850c31e5169b059c937c8a71e981f3a390180bf113432c7979e7fe2d6"
+    },
+    {
+      "hash": "dba4c39b91316280aae675855de0345017b902660e15d4f6085cb55524b3cc18",
+      "path": "content/blog/初探并发.md",
+      "links": [],
+      "metadata": {
+        "title": "初探并发",
+        "description": "通过Python的queue、signal和time模块实现并发编程的简单demo，探讨多线程与消息队列的设计思想。",
+        "short_summary": "本文介绍了使用Python的queue、signal和time模块实现并发编程的简单demo，展示了如何通过消息队列处理线程间通信。文章还探讨了多线程设计中消息队列的作用，以及降低系统耦合的设计思想。",
+        "audience": "对Python并发编程感兴趣的初学者，希望了解多线程和消息队列基础知识的开发者。",
+        "key_points": [
+          "通过Python实现并发编程的简单demo",
+          "使用queue模块作为消息队列",
+          "使用signal模块捕捉KeyboardInterrupt",
+          "使用time模块让主线程响应中断",
+          "演示线程间通过消息队列通信",
+          "探讨多线程环境下消息队列的作用",
+          "强调降低系统耦合的设计思想",
+          "提出“为变化而设计”的理念",
+          "适合初学者学习并发编程基础",
+          "提供实际代码示例便于理解"
+        ],
+        "summary": "本文作者通过一个小作业接触到并发编程，使用Python的queue、signal和time模块创建了一个简单的demo，演示了如何通过消息队列实现线程间通信。文章解释了queue作为消息队列、signal用于捕捉KeyboardInterrupt、time用于主线程响应的作用，并探讨了多线程环境下使用消息队列降低系统耦合的设计思想，强调“为变化而设计”的重要性。",
+        "slug": "first-look-at-concurrency",
+        "tags": [
+          "python",
+          "并发",
+          "多线程",
+          "消息队列",
+          "queue",
+          "signal",
+          "time"
+        ],
+        "inferred_date": "2017-05-07",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1093,
+          "completion": 370,
+          "total": 1463
+        }
+      },
+      "category": "Technical Tutorial",
+      "nativeMarkdownHash": "4fbca41e61d20e08343c6979f695ce35bf0b3fc1fde15f0166a1fc9089120117"
+    },
+    {
+      "hash": "5221db5c2766ca0baade64eb4959a1c4fb1596bf1294c20de8af0c1448781374",
+      "path": "content/blog/搭好博客后的一点话.md",
+      "links": [
+        "http://www.jianshu.com/",
+        "https://zccz14.com/",
+        "https://zccz14.com/2016/12/30/%E4%BC%98%E9%9B%85%E5%9C%B0%E4%BD%BF%E7%94%A8Hexo/",
+        "https://pages.github.com/"
+      ],
+      "metadata": {
+        "title": "搭好博客后的一点话",
+        "description": "作者分享搭建个人博客的心路历程，从选择Hexo框架到优化自动部署，并反思学习与坚持的重要性。",
+        "short_summary": "作者详细描述了搭建Hexo博客的技术过程，包括选择框架、配置主题、部署到GitHub Pages，并探索了Travis CI自动部署方案。文章不仅分享技术经验，还结合个人反思，探讨了学习态度和坚持的重要性。",
+        "audience": "对搭建个人博客感兴趣的技术爱好者、Hexo用户、以及寻求学习与生活平衡的读者。",
+        "key_points": [
+          "作者因对简书平台限制不满而决定自建博客",
+          "选择Hexo框架并搭配NexT主题进行搭建",
+          "将博客部署到GitHub Pages并设置域名解析",
+          "探索并应用Travis CI实现自动构建和部署",
+          "反思假期学习状态和回归学校实验室的环境优势",
+          "强调技术探索中从手动到自动的优化过程",
+          "分享“骐骥一跃，不能十步”的学习感悟",
+          "倡导“锲而不舍”作为人生追求目标",
+          "结合农历新年背景，表达新年新气象的期许",
+          "记录从技术实现到个人成长的心路历程"
+        ],
+        "summary": "本文记录了作者在2017年农历新年后，利用两天时间搭建个人博客的完整过程。作者最初因对简书平台限制不满，受朋友博客启发，选择Hexo框架并部署到GitHub Pages。在搭建过程中，作者经历了从手动部署到发现Travis CI自动构建方案的探索，最终实现了更便捷的博客更新方式。文章不仅分享了技术细节，还通过“事出有因”、“动手研究”、“满腹金光”三个部分，反思了假期学习状态、技术探索的乐趣，以及“锲而不舍”的人生感悟，强调踏实坚持的价值。",
+        "slug": "blog-setup-reflections",
+        "tags": [
+          "博客搭建",
+          "Hexo",
+          "GitHub Pages",
+          "技术分享",
+          "个人感悟",
+          "学习反思",
+          "自动部署",
+          "Travis CI"
+        ],
+        "inferred_date": "2017-02-06",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1524,
+          "completion": 483,
+          "total": 2007
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "dada49ae66b3bfa19ba2fba793b6c9b1076b529a6a1b4459f741800f8f35b9ba"
+    },
+    {
+      "hash": "d07e11edec2b536818451af1426649cfdfa386094126a3ef8f5bc240d957f682",
+      "path": "content/blog/答辩失败后的总结与思考.md",
+      "links": [
+        "http://0xc1.space/images/2017/03/29/light.png",
+        "http://0xc1.space/images/2017/03/29/light1.png"
+      ],
+      "metadata": {
+        "title": "答辩失败后的总结与思考",
+        "description": "作者反思大创项目答辩失败的原因，包括PPT简陋、表达能力不足、对项目理解不深等，并探讨好产品的定义。",
+        "short_summary": "作者详细反思了大创项目答辩失败的原因，包括PPT设计简陋、表达能力和对项目理解不足，最终归结为态度问题。文章还探讨了好产品的定义，认为应联结技术与人文，并思考了社会信息不对称的解决方案。",
+        "audience": "大学生、创业者、项目参与者、对失败反思和个人成长感兴趣的读者",
+        "key_points": [
+          "答辩失败源于PPT过于简陋，缺乏数据和示例",
+          "表达能力不足，包括逻辑不连贯和忘词",
+          "对项目理解不深，未完全掌握系统设想和未来规划",
+          "根本原因是态度“不走心”，未充分准备和排练",
+          "好产品应满足基本需求、方便使用并联结技术与人文",
+          "社会存在信息不对称，需要高效匹配信息供需",
+          "作者强调勤能补拙，从失败中学习改进",
+          "项目Light可能解决信息匹配问题，有待探索",
+          "反思过程包括外在原因、表层现象和内在缺点分析",
+          "通过散步和思考，作者总结了失败教训和产品理念"
+        ],
+        "summary": "本文记录了作者在一次大创项目答辩失败后的深刻反思。作者分析了失败的多重原因：PPT过于简陋缺乏内容、表达能力不足导致逻辑不清、对项目理解不够深入，最终归结为“不走心”的态度问题。文章还延伸思考了好的产品应满足人的基本需求、方便使用并成为技术与人文的纽带，同时探讨了社会结构中的信息不对称问题，并暗示其项目Light可能解决这类问题。作者通过这次经历强调了勤能补拙的重要性，并表达了羞愧与改进的决心。",
+        "slug": "defense-failure-reflection-summary",
+        "tags": [
+          "思考",
+          "总结",
+          "答辩",
+          "失败",
+          "反思",
+          "产品",
+          "表达",
+          "学习"
+        ],
+        "inferred_date": "2017-03-29",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1932,
+          "completion": 453,
+          "total": 2385
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "aed7f1fdc2526342a377347bc3357a218f9a3af1784c75e8dde066c8d63523d3"
+    },
+    {
+      "hash": "8453b90fa92028787506315a77ca38839b26e3203f20ffbd33f91936c3a12f1f",
+      "path": "content/blog/捯饬新的博客：我把机组搬到了博客里.md",
+      "links": [
+        "<[搭好博客后的一点话](./da-hao-bo-ke-hou-de-yi-dian-hua/",
+        "https://blog.thrimbda.com",
+        "https://www.getzola.org/",
+        "https://github.com/Speyll/anemone",
+        "https://0xc1.space/images/2024/06/18/gcores-api-at-glance.jpg",
+        "${imageUrl(v",
+        "https://www.gcores.com/users/464460/talks",
+        "https://github.com/Thrimbda/blog/blob/184bad3cbc217b52248dfe169a09fb44aa551328/scripts/get-gcores-talk.ts",
+        "https://0xc1.space/images/2024/06/18/gcores-pictures-render.jpg",
+        "https://www.getzola.org/documentation/content/shortcodes/"
+      ],
+      "metadata": {
+        "title": "捯饬新的博客：我把机组搬到了博客里",
+        "description": "作者分享将机核（Gcores）上的机组内容迁移到个人博客的技术过程，包括数据抓取、处理和前端实现，探讨了编程带来的快乐。",
+        "short_summary": "作者因旧博客失效而重建新博客，并详细介绍了将机核机组内容迁移到博客的技术过程，包括数据抓取、Markdown生成和前端交互实现。文章探讨了编程中反馈循环带来的快乐，并分享了这次技术实践的心得。",
+        "audience": "对博客搭建、前端开发、数据抓取和技术实践感兴趣的开发者或技术爱好者。",
+        "key_points": [
+          "旧博客因依赖过时失效，作者重建新博客使用Zola生成器",
+          "通过机核API抓取机组数据，处理成Markdown格式",
+          "利用前端技术实现滑动图片组交互，提升用户体验",
+          "详细介绍了数据抓取、处理和渲染的技术细节",
+          "探讨了前端开发中快速反馈循环带来的快乐",
+          "反思技术实践的深度与纯粹快乐的平衡",
+          "分享了完整的代码示例和实现思路",
+          "强调了工程实践中的简单与方便原则"
+        ],
+        "summary": "本文详细介绍了作者如何将机核（Gcores）上的机组内容迁移到个人博客的技术过程。文章从旧博客因依赖过时失效开始，讲述了新博客的技术选型（使用Zola生成器和简单主题），重点描述了通过API抓取机组数据、处理成Markdown格式，并利用前端技术（HTML、CSS、JavaScript）实现滑动图片组交互的完整流程。作者强调了前端开发中快速反馈循环带来的快乐，并反思了这次技术实践的意义。",
+        "slug": "new-blog-migrating-gcores-talks",
+        "tags": [
+          "博客",
+          "技术",
+          "前端开发",
+          "数据抓取",
+          "Zola",
+          "机核",
+          "编程快乐"
+        ],
+        "inferred_date": "2024-06-18",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 7547,
+          "completion": 440,
+          "total": 7987
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "12a215edd646fb48fdf163332803a68e181d34e79b63dc8da37b119038042c5d"
+    },
+    {
+      "hash": "28dd1360a79274ffe0b19d33558c3fe102f3f55068095fbdda3c00719c737e03",
+      "path": "content/blog/登岳渎阁.md",
+      "links": [
+        "http://0xc1.space/images/2017/02/12/yuedu1.jpg",
+        "http://0xc1.space/images/2017/02/12/yuedu2.jpg",
+        "http://0xc1.space/images/2017/02/12/yuedu3.jpg"
+      ],
+      "metadata": {
+        "title": "登岳渎阁",
+        "description": "作者登临岳渎阁，描绘了秦川壮丽山河与华夏文明的辉煌，表达了对未来的美好祝愿。",
+        "short_summary": "作者登岳渎阁，欣赏秦川山河的壮丽景色，感叹华夏文明的璀璨。文章表达了继往开来的积极态度，并附有图片展示岳渎阁风貌。",
+        "audience": "对游记、自然景观、华夏文化感兴趣的读者，以及文学爱好者。",
+        "key_points": [
+          "登临岳渎阁欣赏山河壮丽",
+          "描绘八百里秦川的辽阔景象",
+          "强调北眺黄土高原、南临秦岭的地理位置",
+          "提及渭水对华夏文明的滋养",
+          "表达继往开来的美好愿望",
+          "引用古典诗句增强文学性",
+          "附有岳渎阁的图片展示",
+          "整体风格充满雅兴与情怀"
+        ],
+        "summary": "本文以登临岳渎阁为背景，通过生动的语言描绘了峰峦、波涛、山河的壮丽景象，展现了八百里秦川的辽阔与富饶。文章强调了此地北眺黄土高原、南临秦岭华岳的地理优势，以及承渭水恩泽、育华夏文明的历史意义。作者在结尾表达了对未来的积极展望，如“愿闻鸡起舞，继往开来”，并引用“幸甚至哉，歌以咏志”来抒发情感。整体上，这是一篇充满雅兴的游记，融合了自然景观与人文情怀。",
+        "slug": "deng-yuedu-ge",
+        "tags": [
+          "雅兴",
+          "游记",
+          "岳渎阁",
+          "秦川",
+          "华夏文明",
+          "自然景观"
+        ],
+        "inferred_date": "2017-02-12",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 799,
+          "completion": 393,
+          "total": 1192
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "5c09c250f2b7c97e7cde0f0ba882b61d740973b3dbef5b53d0d78c725d36911b"
+    },
+    {
+      "hash": "f6d821b8d869f1235df1f8293626f28fc4b9f3aea885af0d25127e1caa763add",
+      "path": "content/blog/二探并发.md",
+      "links": [
+        "http://0xc1.space/2017/05/06/初探并发/"
+      ],
+      "metadata": {
+        "title": "二探并发(Actor)",
+        "description": "探讨并发编程中共享消息队列的局限性，并介绍Actor模型作为解决方案，实现各司其职的异步工作系统。",
+        "short_summary": "本文分析了并发编程中共享消息队列的局限性，如消息无法定向发送和效率问题。通过逐步探讨解决方案的缺陷，引入Actor模型作为根治方法，详细解释其概念并提供Python实现示例。文章旨在帮助读者理解并发编程的抽象思维和Actor模型的应用价值。",
+        "audience": "对并发编程感兴趣的开发者，特别是使用Python进行异步系统设计和消息传递的工程师。",
+        "key_points": [
+          "共享消息队列在异步工作系统中存在局限性，如消息无法定向发送",
+          "引入标识和回放机制会引发时序错乱和效率低下问题",
+          "Actor模型通过为每个worker设置独立邮箱解决共享队列问题",
+          "Actor模型基于并行执行、消息解耦和地址通信等概念",
+          "Python实现示例展示了Actor的基本结构和运行原理",
+          "并发编程需要抽象思维，Actor模型是入门并发领域的有效工具",
+          "文章强调高内聚低耦合思想在并发编程中的实践",
+          "Actor模型适用于需要各司其职的异步系统设计"
+        ],
+        "summary": "本文深入探讨了并发编程中共享消息队列的局限性，指出在需要各worker异步工作的系统中，共享队列会导致消息无法定向发送、时序错乱和效率低下等问题。作者通过分析逐步引入标识、回放机制等解决方案的缺陷，最终提出Actor模型作为根治方案。文章详细解释了Actor模型的概念，包括其并行执行、消息解耦和地址通信等核心特性，并提供了一个Python线程实现的示例代码。总结强调并发编程需要抽象思维，Actor模型是入门并发领域的有效指引。",
+        "slug": "er-tan-bing-fa-actor",
+        "tags": [
+          "python",
+          "并发",
+          "Actor模型",
+          "消息队列",
+          "异步编程",
+          "线程通信"
+        ],
+        "inferred_date": "2017-05-19",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 2361,
+          "completion": 449,
+          "total": 2810
+        }
+      },
+      "category": "Technical Tutorial",
+      "nativeMarkdownHash": "2803b1ccbfccceda702263933bbd4549ea152774f502a1e1c6842e66b6087916"
+    },
+    {
+      "hash": "2fa238074f191e5be5e171cecfb622fc5559e640f699afa690c0b792a814fce0",
+      "path": "content/blog/观察者模式实力分析.md",
+      "links": [
+        "http://www.ulisespulido.com/2009/03/observer-design-pattern-and-java-swing.html"
+      ],
+      "metadata": {
+        "title": "观察者模式实力分析",
+        "description": "本文分析观察者模式及其在J2EE中Action和ActionListener的应用，通过实例说明如何降低对象间耦合度。",
+        "short_summary": "本文深入分析观察者模式，解释其如何通过发布-订阅机制降低对象间耦合。通过J2EE中Action和ActionListener的实例，展示该模式在MVC架构中的应用，强调其优于普通函数调用和回调函数的优势。",
+        "audience": "学习设计模式、系统分析与设计的开发者，特别是对J2EE和MVC架构感兴趣的编程人员。",
+        "key_points": [
+          "观察者模式定义对象间一对多依赖关系，状态改变时自动通知观察者",
+          "别名包括依赖和发布-订阅模式，常用于RSS订阅等场景",
+          "模式参与者包括Subject、Observer、ConcreteSubject和ConcreteObserver",
+          "观察者模式能降低对象间耦合度，提高代码可重用性",
+          "J2EE中Action和ActionListener是观察者模式的典型应用",
+          "实例展示JTextField作为具体目标绑定多个ActionListener观察者",
+          "模式适用于MVC架构，减少Model和View的耦合",
+          "相比函数调用和回调，观察者模式支持广播效果",
+          "文章通过代码实例详细解析模式实现机制",
+          "强调模式在维持对象一致性和系统分割中的优势"
+        ],
+        "summary": "本文首先介绍了观察者模式的基本概念，包括其定义、别名、动机和参与者，并指出该模式常用于处理对象间的依赖关系和状态同步。文章通过一个J2EE中的Action和ActionListener实例，展示了观察者模式在降低Model和View耦合度方面的实际应用。实例中，JTextField作为具体目标，多个ActionListener作为具体观察者，当文本框状态改变时自动通知观察者执行相应操作。文章强调观察者模式相比普通函数调用和回调函数，能更有效地维持对象间一致性，提高代码可重用性。",
+        "slug": "observer-pattern-analysis-j2ee-action-actionlistener",
+        "tags": [
+          "设计模式",
+          "观察者模式",
+          "J2EE",
+          "Action",
+          "ActionListener",
+          "系统分析与设计",
+          "MVC",
+          "耦合度"
+        ],
+        "inferred_date": "2017-04-10",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1988,
+          "completion": 501,
+          "total": 2489
+        }
+      },
+      "category": "Software Design",
+      "nativeMarkdownHash": "a387a7820780a37a6b107e1739d074af695c2e8f27e682a9d23b944e0bd5397f"
+    },
+    {
+      "hash": "658613fb326867bf9602b9c020c7f90293b6463d6e9669e448921d4afe396efd",
+      "path": "content/blog/和 ZL 一起旅行的时光.md",
+      "links": [],
+      "metadata": {
+        "title": "和ZL一起旅行的时光",
+        "description": "作者回忆与好友ZL从相识到重逢的友谊历程，包括北京初遇、苏州生活、青海湖骑行和北美重聚的温暖故事。",
+        "short_summary": "作者回忆了与好友ZL从北京初遇到北美重逢的友谊故事。文章讲述了他们在苏州的共同生活、青海湖的骑行挑战，以及久别重逢后的情感连接。这是一段关于成长、陪伴和珍贵回忆的温暖叙述。",
+        "audience": "喜欢阅读个人随笔、友情故事和旅行经历的读者，以及对生活回忆和情感叙事感兴趣的群体。",
+        "key_points": [
+          "2019年在北京，作者作为同事迎接实习生ZL，两人因ZL的长发和阳光笑容相识。",
+          "两人一同前往苏州工作生活，在疫情期间构建日常，关系如同大学室友般紧密。",
+          "2021年夏天，在ZL出国前，两人共同完成了环青海湖360公里的骑行挑战。",
+          "骑行旅途充满美景与艰辛，包括高原反应、暴雨和互助的温暖时刻。",
+          "作者珍藏了ZL赠送的一瓶冰酒五年，最终在北美重逢时共同开启。",
+          "2024年，作者前往北美与三年未见的ZL重聚，发现彼此虽有变化但情谊依旧。",
+          "重逢后两人一起在太平洋海岸公路驾车旅行，实现了作者的梦想，创造了新回忆。",
+          "全文通过多个时间节点的故事，展现了友谊的持久与共同经历的珍贵。",
+          "ZL的形象从青涩长发少年成长为情绪稳定的壮汉，但内核依然纯粹。",
+          "文章情感真挚，细节丰富，突出了旅行和日常相处对友谊的滋养。"
+        ],
+        "summary": "本文是一篇随笔，作者深情回忆了与好友ZL从2019年相识至今的友谊历程。文章分为四个部分：在北京初遇时ZL的青涩与阳光；在苏州共同生活、构建日常的快乐时光；2021年夏天一起在青海湖进行360公里骑行的疯狂旅行；以及2024年作者远渡重洋与三年未见的ZL在北美重逢，旧日情谊在旅途中再次点燃。全文通过具体的生活细节和旅行经历，展现了两人之间深厚、纯粹的友谊，以及时光流转中彼此的成长与不变的情感连接。",
+        "slug": "travel-time-with-zl",
+        "tags": [
+          "随笔",
+          "友谊",
+          "旅行",
+          "回忆",
+          "成长",
+          "青海湖",
+          "苏州",
+          "重逢"
+        ],
+        "inferred_date": "2025-03-06",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 3594,
+          "completion": 552,
+          "total": 4146
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "05eb3a0138d8bd8bf2f996ae41785672a5a6aa8a69f3f2f0f5e46e9ed050b4ca"
+    },
+    {
+      "hash": "9999ec8b36ba160508fb6a5c4abaa2766f214809a900db1a1edbf3b44a408565",
+      "path": "content/blog/话剧《哥本哈根》：人性幽深处的量子观测实验.md",
+      "links": [
+        "http://0xc1.space/images/2023/06/18/Bohr-Heisenberg.jpg",
+        "http://0xc1.space/images/2023/06/18/theme.jpg",
+        "http://0xc1.space/images/2023/06/18/stage-photo-2018.jpg",
+        "https://archive.org/details/michael-frayn-copenhagen",
+        "https://annas-archive.org/md5/25a3c6881d0e39175dda91341a8ac80d",
+        "https://annas-archive.org/md5/ec021e1580eb5248ff6549cbd2cbd264"
+      ],
+      "metadata": {
+        "title": "话剧《哥本哈根》：人性幽深处的量子观测实验",
+        "description": "通过分析话剧《哥本哈根》对历史谜案的探讨，揭示人性动机的复杂性和不确定性，以及文艺作品如何以诗歌般的模糊意象直抵灵魂。",
+        "short_summary": "本文探讨话剧《哥本哈根》如何通过历史谜案揭示人性动机的复杂性。作者认为，相比于历史真相，人性在身份叠加态中的不确定性更具价值，而文艺作品以诗歌般的意象直抵灵魂，让生命更浓烈。",
+        "audience": "对话剧、历史、人性哲学、文艺评论感兴趣的读者，尤其是喜欢深度思考的文艺爱好者。",
+        "key_points": [
+          "话剧《哥本哈根》以1941年海森堡与玻尔的会面为背景，探讨历史谜案中的人性动机",
+          "相比于历史真相，人性在多重身份叠加态中的不确定性更具研究价值",
+          "作品通过死后世界的演绎，将复杂历史转化为一次人性量子实验",
+          "好的文艺作品以诗歌般的模糊意象直抵灵魂，提供个人化启示",
+          "作者结合个人观剧体验，强调生命应追求浓烈与深度",
+          "历史是一面镜子，观测者从中获得的认知影响与现实世界的交互",
+          "人性动机的复杂性源于现实世界的巨量信息和集体无意识互动",
+          "话剧深刻讨论了伦理、道德、命运等议题，承载丰富信息",
+          "文艺作品的价值在于增加生命色彩与厚重感，而非提供具体解决方案",
+          "通过敲骨吸髓的决心，人可以增加厚度、智慧和广度"
+        ],
+        "summary": "本文以话剧《哥本哈根》为切入点，探讨了1941年海森堡与玻尔在哥本哈根会面的历史谜案。文章指出，相比于历史真相本身，人性在多重身份叠加态中的动机不确定性更具研究价值。话剧通过三位主角在死后世界的重新演绎，深刻讨论了伦理、道德、人性等议题，将复杂的历史事件转化为一次精巧的人性量子实验。作者结合个人观剧体验，强调好的文艺作品如同诗歌，以模糊意象直抵灵魂，让每个人获得不同启示，从而增加生命的厚度与浓烈度。",
+        "slug": "copenhagen-play-humanity-quantum-experiment",
+        "tags": [
+          "话剧",
+          "哥本哈根",
+          "人性",
+          "量子",
+          "历史",
+          "文艺评论",
+          "动机",
+          "不确定性"
+        ],
+        "inferred_date": "2023-06-18",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 3646,
+          "completion": 545,
+          "total": 4191
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "d5eba2d33dcb12d43f3830efc7c04393bc898186fad71ab81698a10f9831072e"
+    },
+    {
+      "hash": "c9848fcf6b60d5733dc0d35bd81636e5920de23227f5d3dc85f7ab5ded378962",
+      "path": "content/blog/嫉妒时间的人.md",
+      "links": [
+        "<https://0xc1.space/2018/08/13/Sleeping%20to%20dream/>"
+      ],
+      "metadata": {
+        "title": "嫉妒时间的人",
+        "description": "探讨时间在人心中的复杂作用，以及个体如何面对时间带来的嫉妒与成长。",
+        "short_summary": "文章以Bryan的故事为主线，探讨了时间的复杂性和其在人心中的印记。Bryan嫉妒时间在他人身上的作用，通过分析语言、情感与时间的关系，最终学会在时间中寻找平衡与成长。",
+        "audience": "对时间哲学、心理学和文学感兴趣的读者，特别是关注情感与成长主题的人群。",
+        "key_points": [
+          "时间并非一维直线，而是复杂的网状结构",
+          "人心通过语言编码，但受时间影响难以完全传达",
+          "Bryan因时间差异产生嫉妒与自卑的情感",
+          "时间对快乐和忧郁等情感有相对作用",
+          "个体需分辨时间中变化与不变的事物以获得成长",
+          "一致性是时间跨度中可贵的品质",
+          "时间终止于日常生活的瞬间，如等离子蛋蛋的呼噜声"
+        ],
+        "summary": "本文通过主人公Bryan的视角，深入探讨了时间并非一维直线的复杂结构及其在人心中的投影。文章分析了时间如何影响人与人之间的语言交流、情感体验和记忆，揭示了Bryan因时间差异而产生的嫉妒与自卑，最终强调通过分辨时间中变化与不变的事物来获得成长与丰腴。核心论点包括时间的网状结构、人心与语言的编码关系、时间对情感的作用，以及个体如何勇敢面对时间带来的挑战。",
+        "slug": "jealous-of-time",
+        "tags": [
+          "时间",
+          "人心",
+          "语言",
+          "嫉妒",
+          "成长",
+          "情感",
+          "非正常人类研究"
+        ],
+        "inferred_date": "2019-04-19",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1923,
+          "completion": 377,
+          "total": 2300
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "c59a8c04ab81fdd4bf3cfae4d9a33b06db2a1dc9db5154bbf1db6d6e818190fd"
+    },
+    {
+      "hash": "e6cb322b3b182b051b8952954956a7a0ddc66b439175be040b71a02a768bf512",
+      "path": "content/blog/迷之代码.md",
+      "links": [],
+      "metadata": {
+        "title": "迷之代码",
+        "description": "作者回顾自己的代码时发现一个逻辑错误，其中A与B互斥，但代码中却包含嵌套条件，引发自我反思。",
+        "short_summary": "作者在代码审查中发现一个逻辑错误：A与B互斥，但代码中却包含嵌套条件。这引发了对代码质量和自我反思的讨论。文章提醒程序员注意逻辑一致性。",
+        "audience": "程序员、软件开发者、对代码质量和逻辑错误感兴趣的读者",
+        "key_points": [
+          "作者回顾自己的代码",
+          "发现A与B互斥的逻辑错误",
+          "代码中包含嵌套if语句",
+          "引发自我反思和困惑",
+          "强调代码审查的重要性",
+          "提醒避免逻辑矛盾",
+          "涉及Java编程语言",
+          "文章风格轻松幽默"
+        ],
+        "summary": "本文是一篇简短的博客文章，作者在回顾自己的代码时，发现了一个逻辑错误：已知A与B互斥，但代码中却使用了嵌套的if语句（if(A) { ... if(B) { ... } ... }），这导致代码逻辑不合理。作者对此感到困惑和自嘲，暗示自己可能脑子出了问题。文章核心在于强调代码审查的重要性，以及程序员在编写代码时应避免明显的逻辑矛盾，以提高代码质量和可维护性。",
+        "slug": "mysterious-code",
+        "tags": [
+          "碎碎念",
+          "代码审查",
+          "逻辑错误",
+          "Java",
+          "程序员反思"
+        ],
+        "inferred_date": "2017-02-14",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 645,
+          "completion": 335,
+          "total": 980
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "7cc4f9dc200012c98e1d391f6b35cd5b1c7bd90da60f6ac18134929139956fe7"
+    },
+    {
+      "hash": "7cb02f13504c3ee63916e2a203a4039ea962b6eb1068aa9a521322008142c029",
+      "path": "content/blog/明明如月，何时可掇.md",
+      "links": [],
+      "metadata": {
+        "title": "明明如月，何时可掇？",
+        "description": "作者通过北京之行和日常思考，探讨了大学时期的迷茫、自我反思与寻求改变的心路历程。",
+        "short_summary": "作者通过北京之行的经历，反思了大学时期的迷茫与自我成长。文章探讨了如何在焦虑中寻求平衡，并引用济慈的例子来思考困境与成就的关系。最终强调通过教育和视野拓展来应对人生挑战。",
+        "audience": "大学生、年轻人，以及对自我反思、成长和文学感兴趣的读者。",
+        "key_points": [
+          "作者在北京夏令营期间感到怅然若失，与去年经历对比",
+          "描述了大学阶段平衡但不稳定的生活状态，面临颓废压力",
+          "探讨了何以解忧的问题，认为静不下心是焦虑根源",
+          "引用济慈的例子，分析困境如何成就艺术创作",
+          "强调教育带来的视野对个人成长和方法论形成的重要性",
+          "通过写作记录思考，寻求人生方向的答案",
+          "在忙碌奔波中捕捉瞬间感悟，如汗滴落地的细节",
+          "思考人与世界的相互影响，以及时势与英雄的关系",
+          "表达了对改变和前进的渴望，但需外部刺激触发",
+          "最终以歌以咏志结束，总结反思与成长"
+        ],
+        "summary": "本文以作者在北京参加夏令营的经历为引子，回顾了一年的生活与思考。文章描述了作者在忙碌奔波中的瞬间感悟，如汗滴落地的细节，以及面对大学阶段迷茫、颓废情绪的自我剖析。作者通过引用济慈的诗句和电影《明亮的星》，探讨了困境与创作的关系，并思考了教育、视野对个人成长的影响。最终，文章表达了在焦虑与无忧之间寻求平衡，通过写作和反思来记录成长、寻找人生方向的核心主题。",
+        "slug": "ming-ming-ru-yue-he-shi-ke-duo",
+        "tags": [
+          "思考",
+          "大学",
+          "迷茫",
+          "自我反思",
+          "济慈",
+          "教育",
+          "北京之行",
+          "成长"
+        ],
+        "inferred_date": "2017-08-29",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1927,
+          "completion": 461,
+          "total": 2388
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "6a66af6784801ee5198ff448bf1c5436fc29b61b335bdf506be3c3ec5f229a47"
+    },
+    {
+      "hash": "735195eacfb59d5832a47dd5b4c7ae2ce5d5d665e52cfa4443effb0ec6bd3851",
+      "path": "content/blog/宁静致远.md",
+      "links": [],
+      "metadata": {
+        "title": "宁静致远",
+        "description": "作者反思在实验室感到无所适从，认识到缺乏生活计划，决定制定计划以实现宁静致远。",
+        "short_summary": "作者在成都之行后，坐在实验室感到无所适从，认为这是缺乏生活计划所致。因此决定制定计划，以实现宁静致远的目标。",
+        "audience": "对个人成长、生活规划感兴趣的读者，特别是学生和职场人士。",
+        "key_points": [
+          "成都之行令人难忘",
+          "在实验室感到无所适从",
+          "现象源于缺乏生活计划",
+          "决定制定计划",
+          "追求宁静致远的生活状态",
+          "反思个人生活状态",
+          "强调计划的重要性",
+          "内心平静与长远目标相关"
+        ],
+        "summary": "本文记录了作者在成都之行后的反思，坐在实验室时感到无所适从，认为这种现象源于对自己生活缺乏计划。作者因此决定制定计划，以追求宁静致远的生活状态。文章通过个人经历探讨了计划对生活的重要性，并强调了内心平静与长远目标的关系。",
+        "slug": "ningjingzhiyuan",
+        "tags": [
+          "日常",
+          "思考",
+          "计划",
+          "反思",
+          "宁静致远"
+        ],
+        "inferred_date": "2017-03-20",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 619,
+          "completion": 279,
+          "total": 898
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "10df1f96ebf9dbe573dbd68a40c034260e89e1d357e5df0638156b3d9866943d"
+    },
+    {
+      "hash": "5746cd5e453222acacfda8ba49ca0d6de3336c56d58e9425f58cb7ab0f701d8d",
+      "path": "content/blog/三年不成章.md",
+      "links": [
+        "http://0xc1.space/images/2016/11/23/three_year_1.jpg"
+      ],
+      "metadata": {
+        "title": "三年不成章",
+        "description": "作者通过大雪触景生情，反思个人成长与大学文化，强调在困境中寻找希望和持续学习的重要性。",
+        "short_summary": "作者因大雪触景生情，反思个人成长中的空谈与愤青行为，强调实际行动的重要性。文章引用卡尔维诺和约翰·纽曼，探讨大学文化如何促进学习与交流，在困境中寻找希望。最终，作者在校园的生机中感受到感动与启示。",
+        "audience": "大学生、年轻读者、对个人成长和文化反思感兴趣的人群",
+        "key_points": [
+          "以大雪为背景触发个人情感反思",
+          "批评空谈人生理想而不务正业的行为",
+          "引用卡尔维诺观点，强调在地狱中寻找非地狱元素",
+          "探讨大学文化作为年轻人互相学习的重要性",
+          "从校园生机中感受到希望与感动",
+          "呼吁避免愤青式抱怨，注重实际行动",
+          "结合历史与文学引用增强论述深度",
+          "最终表达对成长和学习的积极态度"
+        ],
+        "summary": "本文以西安大雪为背景，作者从错过雪景的遗憾出发，触景生情地反思个人成长历程。文章探讨了大学文化的价值，引用卡尔维诺和约翰·纽曼的观点，强调在现实困境中寻找非地狱元素的重要性，以及大学作为年轻人互相学习、交流思想的场所。作者最终在校园的生机中感受到希望，呼吁读者避免空谈，注重实际行动和沉淀。",
+        "slug": "three-years-no-chapter",
+        "tags": [
+          "感悟",
+          "大学",
+          "成长",
+          "反思",
+          "文化",
+          "学习",
+          "雪景"
+        ],
+        "inferred_date": "2016-11-23",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1772,
+          "completion": 386,
+          "total": 2158
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "f654f66a19b9d3d501ee9ac320399f3af549f7624b5fbd36a12cdc1364b937bb"
+    },
+    {
+      "hash": "8d105349a51c0aaee7783867192150ad089dba1a9364eefb17db65c60b9c371e",
+      "path": "content/blog/山上的树：开源软件的昨天和今天.md",
+      "links": [
+        "http://0xc1.space/images/2023/08/27/doom.png",
+        "http://0xc1.space/images/2023/08/27/endgame.jpeg",
+        "http://0xc1.space/images/2023/08/27/xkcd-2347.png",
+        "https://www.explainxkcd.com/wiki/index.php/2347:_Dependency",
+        "http://0xc1.space/images/2023/08/27/Aaron.jpeg",
+        "http://0xc1.space/images/2023/08/27/iem.jpeg",
+        "http://0xc1.space/images/2023/08/27/the-end-of-the-history.jpeg",
+        "http://0xc1.space/images/2023/08/27/landscape.png",
+        "http://0xc1.space/images/2023/08/27/motoko.jpeg"
+      ],
+      "metadata": {
+        "title": "开源软件的昨天和今天",
+        "description": "探讨开源软件从理想主义乌托邦到拥抱商业逻辑的演变，分析其现状、挑战与未来。",
+        "short_summary": "文章从Bus Factor概念出发，揭示开源软件的脆弱性，如维护者问题导致项目废弃。通过社会学理论，解释开源从理想主义到商业化的演变。如今开源软件支撑整个软件行业，分化出乌托邦式和商业驱动两种形态，形成可持续商业模式，推动行业创新。",
+        "audience": "对开源软件、技术文化、商业模式感兴趣的技术人员、创业者和观察者。",
+        "key_points": [
+          "Bus Factor概念揭示开源项目对关键成员的依赖风险",
+          "Faker.js事件体现开源维护者困境与License争议",
+          "布迪厄场域理论解释开源精神作为文化资本积累",
+          "开源软件从乌托邦式黑客文化转向商业逻辑驱动",
+          "开源分化为传统项目（如Linux）和商业项目（如MongoDB）",
+          "开源形成发行版、高级功能收费、咨询等商业模式",
+          "开源基础设施降低行业垄断，促进创新与分工打破",
+          "英雄迟暮但社区延续，开源理想在现实中生根发芽",
+          "微软等巨头从反对到拥抱开源，体现历史演变",
+          "开源软件支撑现代软件行业，改变开发范式"
+        ],
+        "summary": "本文以doom-emacs作者Henrik Lissner提到的Bus Factor为引子，探讨开源软件的脆弱性，如Faker.js事件。通过布迪厄的场域理论，分析开源精神从黑客文化礼物经济到商业化的转变。文章指出开源软件已分化为乌托邦式项目（如Linux）和商业驱动项目（如MongoDB），并形成多种商业模式。作者认为开源拥抱资本是历史必然，催生了更稳固的基础设施，使行业不再依赖单一英雄，而是由社区共同推动进步。",
+        "slug": "open-source-yesterday-today",
+        "tags": [
+          "开源",
+          "软件",
+          "Bus Factor",
+          "商业模式",
+          "黑客文化",
+          "理想主义",
+          "商业化",
+          "社区"
+        ],
+        "inferred_date": "2023-08-27",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 4371,
+          "completion": 480,
+          "total": 4851
+        }
+      },
+      "category": "Software Design",
+      "nativeMarkdownHash": "1633a520b3018bf4e2432fe0856622c9857eec14cdf36fa4966260ee1fa38abe"
+    },
+    {
+      "hash": "2110dffd568c719a79136561815b0b98a8ecbf729acc5521dbec84d0a13d8d8c",
+      "path": "content/blog/实训日志（二）.md",
+      "links": [],
+      "metadata": {
+        "title": "实训日志（二）：后端API服务器开发总结",
+        "description": "作者作为项目组长，总结后端API服务器开发经验，分享软件项目管理、系统设计与实现的心得体会。",
+        "short_summary": "作者总结实训期间后端API服务器开发经验，详细介绍了目标管理系统“Seed”的设计与实现过程，包括产品定位、系统特性和技术选型。文章还反思了作为项目经理的不足，并讨论了软件工程师需要平衡系统架构与算法实现能力的重要性。",
+        "audience": "软件工程学生、后端开发者、项目管理人员以及对软件开发流程和项目管理感兴趣的读者",
+        "key_points": [
+          "实训后端API服务器开发基本完工，作者作为项目组长进行总结",
+          "项目“Seed”是一个以微信小程序为主打的目标管理系统，强调小而精简的设计",
+          "系统特性包括用户系统、目标管理、微信兼容性和RESTful API架构",
+          "技术选型使用Spring全家桶（Spring Boot、Spring Framework等）",
+          "开发过程中采用测试驱动开发，但实践存在挑战",
+          "作者反思作为项目经理在进度把控、人员分配和技术培训方面的不足",
+          "讨论了软件工程师需要平衡系统架构能力与算法实现能力",
+          "认为实训是对课堂教育不足的有效补充，有助于避免成绩与能力矛盾",
+          "引用《人月神话》经验，避免项目冗余和盲目自大",
+          "强调明确产品定位和设计在软件开发中的重要性"
+        ],
+        "summary": "本文是作者在实训期间作为项目组长开发后端API服务器的总结日志。文章详细介绍了项目“Seed”（一个微信小程序为主打的目标管理系统）的设计思路，包括明确产品定位、系统特性（如用户系统、目标管理、微信兼容性）和RESTful API架构。在实现方面，作者选用Spring全家桶作为技术栈，并分享了开发过程中的测试驱动开发实践。文章还反思了作为项目经理在进度把控、人员分配和技术培训方面的不足，并讨论了软件工程师需要具备的系统架构能力与算法实现能力之间的平衡。最后，作者认为实训是对课堂教育不足的有效补充，有助于避免成绩与能力之间的矛盾。",
+        "slug": "training-log-2-backend-api-server-summary",
+        "tags": [
+          "实训",
+          "后端开发",
+          "项目管理",
+          "Spring框架",
+          "微信小程序",
+          "RESTful API",
+          "软件设计",
+          "学习总结"
+        ],
+        "inferred_date": "2017-03-12",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 2083,
+          "completion": 521,
+          "total": 2604
+        }
+      },
+      "category": "Technical Tutorial",
+      "nativeMarkdownHash": "45d54eaae5b35e225b4ea8f9dae1cb30b6c719df488d36dc43a5082273c914f7"
+    },
+    {
+      "hash": "bb6df5fed360f769671bfaf08339f5dee31fc9c4f9adcb40f0d45ca225347f7b",
+      "path": "content/blog/实训日志（一）.md",
+      "links": [
+        "./迷之代码.md"
+      ],
+      "metadata": {
+        "title": "实训日志（一）",
+        "description": "作者分享实训第三天学习Spring框架的体验，对比不同Web开发技术，探讨RESTful架构和框架设计思想。",
+        "short_summary": "作者在实训中学习Spring框架，体验其优雅和轻盈，对比了JSP、Django和Flask等Web技术。文章探讨了RESTful架构的优势，如前后端解耦，并分享了对框架设计和个人编程水平的反思。",
+        "audience": "对Web开发、Spring框架或编程学习感兴趣的学习者和开发者，特别是Java和Python用户。",
+        "key_points": [
+          "实训第三天学习Spring框架，感觉Java代码优雅",
+          "对比JSP、Django、Flask和Spring等Web开发技术",
+          "Spring与Flask相似，轻盈且限制少",
+          "RESTful架构实现前后端解耦和清晰表现",
+          "Spring使用注解实现控制器路由，类似Python装饰器",
+          "优雅代码源于缜密设计，与语言载体无关",
+          "框架从实际项目剥离，提供可复用构件",
+          "作者对Java和Spring好感度大增，期待深入学习",
+          "反思个人编程水平，未涉及Ioc、DI等核心特性",
+          "网络问题引发对网瘾和网络价值的思考"
+        ],
+        "summary": "本文是作者实训第三天的日志，主要记录了学习Spring框架的初体验。作者对比了JSP、Django、Flask和Spring等Web开发技术，认为Spring与Flask相似，都轻盈且限制少。文章重点讨论了RESTful架构的优点，如前后端解耦和表现清晰，并提到Spring使用注解实现控制器路由，与Python装饰器类似。作者还反思了优雅代码与语言载体的关系，并表达了对Java和Spring的好感，期待进一步学习。",
+        "slug": "training-log-1",
+        "tags": [
+          "实训",
+          "Spring框架",
+          "Java",
+          "Web开发",
+          "RESTful",
+          "编程学习",
+          "技术对比",
+          "框架设计"
+        ],
+        "inferred_date": "2017-02-22",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1569,
+          "completion": 460,
+          "total": 2029
+        }
+      },
+      "category": "Technical Tutorial",
+      "nativeMarkdownHash": "60efdf0d6d6a782c511c9aa0c5c600927b3b3e80782a5d2fd310653e3fc43f2d"
+    },
+    {
+      "hash": "a419ffb94471da7368b31ee9cb1f069efbbc7ac80ab331e599238308e2166e4c",
+      "path": "content/blog/送给活宝们的绝活.md",
+      "links": [],
+      "metadata": {
+        "title": "送给活宝们的绝活",
+        "description": "作者以高中经历反思学习态度，探讨思与学的平衡，分享人生经验给师弟妹。",
+        "short_summary": "作者通过高中同学J和Y的例子，反思了思而不学和学而不思的学习态度，强调平衡思与学的重要性。文章旨在分享经验，引导读者自我成长，避免陷入极端。",
+        "audience": "高中师弟妹，以及对学习态度和人生经验感兴趣的读者。",
+        "key_points": [
+          "标题中的“活宝”和“绝活”源自高中班主任的口头禅，带有个人色彩。",
+          "作者以师兄身份分享经验，但希望读者将其视为普通人，理解文章目的。",
+          "写作动机是分享人生经验，同时总结自我，实现互惠互利。",
+          "通过同学J的例子，说明思而不学的危害：聪明但自负，缺乏实践。",
+          "通过同学Y的例子，说明学而不思的弊端：刻苦但死板，缺乏思考。",
+          "强调“学而不思则罔，思而不学则殆”的道理，避免偏向极端。",
+          "文章以引导而非说教的方式，鼓励读者自我探索和思考。",
+          "引用《孙子兵法》的“胸有激雷而面如平湖者，可以拜上将军”作为共勉。",
+          "核心观点是学习需要思与学的平衡，才能避免成为悲剧人物。",
+          "目标读者是高中师弟妹，旨在帮助他们反思学习态度和成长。"
+        ],
+        "summary": "本文是一篇赠序，作者回忆高中时期的学习经历，通过两位同学J和Y的例子，反思了“思而不学”和“学而不思”两种极端学习态度。J聪明但自负，陷入思而不学的陷阱；Y刻苦但死板，属于学而不思的懒惰。作者强调真正的学习需要思与学的结合，避免成为悲剧人物。文章旨在引导读者自我思考，而非说教，并以《孙子兵法》中的“胸有激雷而面如平湖者，可以拜上将军”与读者共勉。",
+        "slug": "song-gei-huo-bao-men-de-jue-huo",
+        "tags": [
+          "赠序",
+          "学习态度",
+          "高中经历",
+          "思与学",
+          "人生经验",
+          "教育反思"
+        ],
+        "inferred_date": "2017-01-13",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1928,
+          "completion": 524,
+          "total": 2452
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "d4b9c2a078fc707fe75ec34d4468a9bdff5a5ba7ab13a67958cf3d458374ce3a"
+    },
+    {
+      "hash": "d64d1a7910c67fa85cfe16ef0839b17fdeb29d8510d5cf57b44715d775e151c4",
+      "path": "content/blog/为世界之光.md",
+      "links": [
+        "http://0xc1.space/2017/12/10/%E8%A1%8C%E7%99%BE%E9%87%8C%E8%80%85%E5%8D%8A%E4%B9%9D%E5%8D%81/",
+        "http://0xc1.space/2018/03/08/'Tis-not-through-envy-of-thy-happy-lot/"
+      ],
+      "metadata": {
+        "title": "为世界之光",
+        "description": "作者在西安交通大学毕业之际，通过校歌“为世界之光”表达对母校的复杂情感、个人成长反思及对未来现实的展望。",
+        "short_summary": "作者在毕业之际，借西安交通大学校歌“为世界之光”，抒发对母校的复杂情感与个人成长反思。文章回顾了大学四年的心路历程，从初入校园的失落，到通过社团、实习等经历逐步成长，并探讨了交大历史与精神。最终，作者以积极心态展望未来，决心践行“为世界之光”的使命。",
+        "audience": "大学生、毕业生、教育工作者、对交通大学或校园文化感兴趣的读者",
+        "key_points": [
+          "毕业前夕，作者借校歌“为世界之光”表达复杂情感与未来展望",
+          "初入西安交大时，“考败来交”的失落心态普遍存在，尤其在软件工程专业",
+          "学校被视为“工程师的摇篮”，作者反思自身适合做“observer”而非leader或follower",
+          "通过参与微软学生俱乐部、机器人队、实习等项目，在错误中学习并成长",
+          "交通大学有西交、上交等五所同源高校，“饮水思源”是共同精神",
+          "校园生活如“美梦”，实习生活是“现实”，作者从中悟出学习与成长的重要性",
+          "文章强调在良性错误中积累经验，为未来险恶环境做准备",
+          "最终以“为世界之光”为使命，积极面对毕业后的新生活"
+        ],
+        "summary": "本文是作者在西安交通大学毕业前夕的随笔，围绕校歌“为世界之光”展开，回顾了大学四年的心路历程。作者描述了初入校园时“考败来交”的普遍失落心态，以及软件工程专业的特殊氛围；反思了学校作为“工程师的摇篮”的培养定位与个人“observer”角色的契合；通过参与社团、实习、项目等经历，逐步从迷茫走向成长，强调在错误中学习的重要性。文章还探讨了交通大学的历史渊源与“饮水思源”精神，并对比校园“美梦”与实习“现实”，表达了对未来的期待与决心——以“为世界之光”为使命，继续前行。",
+        "slug": "wei-shi-jie-zhi-guang",
+        "tags": [
+          "交通大学",
+          "毕业",
+          "感悟",
+          "校歌",
+          "成长",
+          "西安交通大学",
+          "为世界之光"
+        ],
+        "inferred_date": "2018-06-22",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 3473,
+          "completion": 550,
+          "total": 4023
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "419c7af01373e0a9aef80f662b7ad69bb7bda6e803f01384e2e2274c1e1ea2d6"
+    },
+    {
+      "hash": "a5b9bad3df442d5f331af35260a89add81406a581b88f7b07178ff65ccda9f48",
+      "path": "content/blog/我落入清凉的酷暑中.md",
+      "links": [
+        "https://0xc1.space/images/2024/04/19/fighting_people.jpg",
+        "https://0xc1.space/images/2024/04/19/dance_in_the_water.jpg"
+      ],
+      "metadata": {
+        "title": "我落入清凉的酷暑中",
+        "description": "作者在泰国旅行中经历曲折与狂欢，通过泼水节和意外相遇反思旅行的意义与生命体验。",
+        "short_summary": "作者在泰国旅行中经历了赶飞机的紧张、泼水节的狂欢和手机丢失的波折。在清迈的酒吧，他遇到一位自由舞动的女孩Mint，这次短暂相遇成为旅行的情感核心，让他反思旅行的意义在于寻觅而非征服。最终，作者在行程早期找到了旅行的终点，重新点燃对生活的渴望。",
+        "audience": "喜欢旅行文学、个人成长故事和文化体验的读者，以及对生活反思和情感探索感兴趣的人。",
+        "key_points": [
+          "旅行对作者意味着寻觅而非征服，强调不圆满驱动的探索过程",
+          "出发时经历赶飞机、同伴未成行等曲折，体现旅行的不确定性",
+          "参与泰国泼水节，体验文化狂欢和集体快乐",
+          "手机丢失后的城市追逐战，展现异国困境中的冒险与解决",
+          "在酒吧Zoe in yellow遇到女孩Mint，自由舞动引发情感冲击",
+          "短暂相遇后刻意不留联系方式，以遗憾成就旅行的圆满",
+          "旅行终点在行程1/3处抵达，通过体验重新点燃生命活力",
+          "反思过去一年的浑噩，渴望未来可能性",
+          "强调旅行作为自我反思和情感觉醒的载体",
+          "融合个人叙事与哲学思考，探讨存在与体验的关系"
+        ],
+        "summary": "本文记录了作者在泰国清迈和曼谷的旅行经历，从出发时的曲折（如赶飞机、同伴未成行）到参与泼水节的狂欢，再到意外丢失手机后的城市追逐战。在泼水节期间，作者在酒吧Zoe in yellow遇到一位自由舞动的女孩Mint，这次短暂而深刻的相遇成为旅行的情感高潮。作者通过这次经历反思旅行的意义——不在于征服，而在于寻觅和体验，最终在行程的1/3处找到了旅行的终点，即对生命鲜活感的重新觉醒和对未来的期待。文章融合了冒险、文化体验和个人感悟，强调旅行作为自我探索的过程。",
+        "slug": "falling-into-cool-summer",
+        "tags": [
+          "感悟",
+          "旅行",
+          "泰国",
+          "泼水节",
+          "自我探索",
+          "冒险",
+          "情感体验"
+        ],
+        "inferred_date": "2024-04-19",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 4262,
+          "completion": 530,
+          "total": 4792
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "d2dd25c7ee541e4e6bc3594329ef37b68874b0d25ec77e18cb353b20ef247f76"
+    },
+    {
+      "hash": "cffe9b300694561f77a04ec47e5f4f9c65af28e3a87bc04e006ab79ccde14c41",
+      "path": "content/blog/我终于想到了答案，但等等…问题是什么.md",
+      "links": [],
+      "metadata": {
+        "title": "我终于想到了答案，但等等...问题是什么呢？",
+        "description": "作者分享上课听讲的心得，反思系统设计、需求和合同的重要性，并幽默地表达忘记问题的无奈。",
+        "short_summary": "作者分享今天上课听讲的心得，认同系统设计、需求和合同的重要性。文章以忘记问题幽默结尾，表达无奈。",
+        "audience": "对软件系统、设计、需求管理感兴趣的学生或从业者，以及喜欢幽默反思文章的读者。",
+        "key_points": [
+          "作者一年来上课不听讲，今天坐第一排听课感觉很好",
+          "认同《软件系统分析与设计》和《软件测试与评估》课程中的观点",
+          "强调系统的概念和系统设计的重要性",
+          "指出需求在项目中的关键作用",
+          "强烈建议项目一定要签合同",
+          "文章以幽默方式表达忘记问题的无奈",
+          "反思上课不听讲的原因如睡觉太晚、上课太困",
+          "描述亡羊补牢的学习心态",
+          "分享听课的舒适体验",
+          "核心价值在于分享学习心得和实用建议"
+        ],
+        "summary": "本文作者描述了自己一年来上课不听讲，但今天决定坐第一排听课的经历，感觉良好。在《软件系统分析与设计》和《软件测试与评估》课程中，作者认同老师提到的观点，包括系统的概念、系统设计的重要性、需求的重要性，并强调项目一定要签合同。文章以幽默的方式结尾，作者忘记了自己想讲的问题，表达了一丝悲伤。",
+        "slug": "i-finally-thought-of-the-answer-but-wait-what-was-the-question",
+        "tags": [
+          "迷思",
+          "上课",
+          "心得",
+          "软件系统",
+          "设计",
+          "需求",
+          "合同",
+          "反思"
+        ],
+        "inferred_date": "2017-03-21",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 788,
+          "completion": 400,
+          "total": 1188
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "0dd12ced7326eec11920f09e1613e62e6b38821943634b2fba826bb8309fc80d"
+    },
+    {
+      "hash": "ecc2b508058b0249173531179fe6c435d75b73a5ccdfe422ea1db1bb6e8534c1",
+      "path": "content/blog/行百里者半九十.md",
+      "links": [],
+      "metadata": {
+        "title": "行百里者半九十",
+        "description": "作者通过个人经历反思成长与探索，强调坚持与自我认知的重要性，以乾卦爻辞为喻表达对未来的期待。",
+        "short_summary": "作者分享在Gap决定后的反思，回顾迷茫四年中的成长与坚持。文章以乾卦爻辞为喻，强调自我认知和探索的重要性，鼓励读者在苦难中进步并保持好奇心。",
+        "audience": "对个人成长、自我反思、生活探索感兴趣的读者，尤其是面临迷茫或转折点的年轻人。",
+        "key_points": [
+          "作者在决定Gap后通过吸烟、喝酒等方式进行自我反思",
+          "回顾四年迷茫期，虽常前功尽弃但未偏航",
+          "引用乾卦“潜龙勿用”象征早期阶段的隐忍与积累",
+          "提出三段论：人们不会为不自知的缺失心慌，知识一旦知晓即拥有",
+          "强调在苦难中精神水平提高，不愿回到过去",
+          "感激已走过的旅程，无论能否到达终点",
+          "以乾卦“见龙在田”表达对未来的积极期待",
+          "与Master聊天后确信选择最适合自己的道路",
+          "发现越来越喜欢与父母相处",
+          "鼓励持续探索并保持好奇心"
+        ],
+        "summary": "本文记录了作者在决定Gap后的心路历程，通过回顾迷茫的四年，反思了自我认知、成长与探索的过程。文章以“行百里者半九十”为题，探讨了坚持与放弃的辩证关系，引用乾卦爻辞“潜龙勿用”和“见龙在田”来象征不同阶段的自我状态。作者强调，尽管前路未卜，但通过苦难中的精神提升和对未来的美好期望，个人得以进步并感激已走过的旅程。文章鼓励读者保持好奇心，继续探索适合自己的道路。",
+        "slug": "xing-bai-li-zhe-ban-jiu-shi",
+        "tags": [
+          "感悟",
+          "成长",
+          "探索",
+          "自我认知",
+          "坚持",
+          "乾卦",
+          "Gap"
+        ],
+        "inferred_date": "2017-12-11",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1040,
+          "completion": 464,
+          "total": 1504
+        }
+      },
+      "category": "Personal Blogging",
+      "nativeMarkdownHash": "7199d0cd1da2cf1db2c6caee4d972640426fa8833e19c3dd5b47adef70bca8cc"
+    },
+    {
+      "hash": "ff871375ebd40d93bd54103ddc2429abb093cb03c08908123d7eb6a5871b9bdf",
+      "path": "content/blog/一个RBAC-Demo-为了艾尔.md",
+      "links": [
+        "https://github.com/Thrimbda/my-life-for-Aiur",
+        "https://my-life-for-aiur.herokuapp.com/"
+      ],
+      "metadata": {
+        "title": "一个RBAC-Demo：为了艾尔",
+        "description": "本文介绍了一个基于RBAC模型的星际争霸主题Demo，使用Python Flask框架实现RESTful服务，展示了RBAC在系统设计中的应用。",
+        "short_summary": "本文介绍了一个名为“为了艾尔”的RBAC Demo项目，该项目以星际争霸为背景，使用Python Flask框架实现了一个RESTful服务。文章详细阐述了项目的设计思路、RBAC模型的具体实现，以及如何通过角色和权限管理来模拟游戏中的资源操作。",
+        "audience": "对系统设计、RBAC模型、Python Flask开发或RESTful服务感兴趣的开发者、学生和技术爱好者。",
+        "key_points": [
+          "项目是一个基于RBAC模型的星际争霸主题Demo",
+          "使用Python Flask框架实现RESTful服务",
+          "定义了主体、角色、资源和权限等RBAC核心元素",
+          "通过文件管理SA和PA关系，而非数据库",
+          "模拟了游戏中的资源采集、建造和生产等操作",
+          "提供了具体的代码实现和业务逻辑说明",
+          "强调了RBAC在系统设计中的应用价值",
+          "项目名为“为了艾尔”，背景设定有趣",
+          "展示了如何将RBAC与RESTful API结合",
+          "作者通过实践加深了对RBAC和Flask的理解"
+        ],
+        "summary": "本文详细介绍了作者开发的RBAC（基于角色的访问控制）Demo项目“为了艾尔”，该项目以星际争霸为背景，模拟了一个简化的游戏场景。文章阐述了项目的分析与设计过程，包括主体、角色、资源和权限的定义，以及SA（主体-角色）和PA（角色-权限）关系的配置。实现部分使用Python的Flask框架构建RESTful服务，通过文件而非数据库管理RBAC关系，并提供了具体的代码示例和业务逻辑说明。文章最后总结了RBAC在系统中的应用价值，以及作者在实践中的收获。",
+        "slug": "rbac-demo-for-aiur",
+        "tags": [
+          "系统设计与分析",
+          "RESTful",
+          "RBAC",
+          "Python",
+          "Flask",
+          "星际争霸",
+          "Demo",
+          "访问控制"
+        ],
+        "inferred_date": "2017-05-11",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 3671,
+          "completion": 484,
+          "total": 4155
+        }
+      },
+      "category": "Software Design",
+      "nativeMarkdownHash": "83d60d54607669781c6a23a1005ab69225bd9eaea7fca42539744be6f2a90ebc"
+    },
+    {
+      "hash": "91164d710552b59d046e20e4b77fe5933308ad988eb960fcdc14fbf5e674ebc6",
+      "path": "content/blog/在 K8s 单节点集群上手动搭建 Prometheus.md",
+      "links": [
+        "https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/observability/OBSV-101.md",
+        "https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/prometheus/PROM-101.md",
+        "https://prometheus.io/docs/introduction/overview/",
+        "https://github.com/prometheus-community/helm-charts",
+        "https://github.com/prometheus-operator/prometheus-operator",
+        "https://github.com/prometheus-operator/kube-prometheus",
+        "https://prometheus.io/docs/prometheus/2.22/getting_started/",
+        "https://prometheus.io/download/",
+        "https://github.com/Thrimbda/fiber",
+        "https://0xc1.space/images/2020/11/05/node-load.png",
+        "https://kubernetes.io/zh/docs/reference/access-authn-authz/rbac/",
+        "https://prometheus.io/docs/prometheus/2.22/configuration/configuration/",
+        "https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#configuration-file",
+        "https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#scrape_config",
+        "https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#tls_config",
+        "https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#kubernetes_sd_config",
+        "https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#static_config",
+        "https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#relabel_config",
+        "https://github.com/Thrimbda/prometheus-set-up",
+        "https://0xc1.space/images/2020/11/05/node-exporter-target.png",
+        "https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#configuration",
+        "https://github.com/prometheus-operator/kube-prometheus/tree/8b0eebdd08d8926649d27d2bc23acf31144c2f6b/manifests",
+        "https://fabxc.org/tsdb/",
+        "https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/observability/OBSV-101.md",
+        "https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/observability/OBSV-101.md",
+        "https://kubernetes.io/zh/docs/reference/access-authn-authz/rbac/"
+      ],
+      "metadata": {
+        "title": "在 K8s 单节点集群上手动搭建 Prometheus",
+        "description": "本文详细介绍了如何在 Kubernetes 单节点集群上手动部署和配置 Prometheus 监控系统，包括环境准备、概念验证和集群监控实现。",
+        "short_summary": "本文提供了在 Kubernetes 单节点集群上手动搭建 Prometheus 的完整教程。文章从概念验证开始，演示了如何在裸机上运行 Prometheus 和 Node Exporter，然后详细讲解了在 K8s 环境中部署 Prometheus 所需的资源配置和配置项设置，包括服务发现、权限管理和监控目标配置。通过逐步指导，帮助读者理解 Prometheus 的核心功能并实现集群监控。",
+        "audience": "刚刚开始接触监控系统、对 Prometheus 知之甚少的初学者，以及希望在 K8s 上手动部署 Prometheus 的技术人员。",
+        "key_points": [
+          "在 K8s 单节点集群上手动搭建 Prometheus，避免使用 Helm-Chart 或 Prometheus Operator",
+          "环境包括 K8s 1.19.3、Prometheus 2.22.0 和 Archlinux",
+          "概念验证阶段在裸机运行 Prometheus 和 Node Exporter，并修改配置文件",
+          "集群监控阶段部署 K8s 资源如 Namespace、DaemonSet、ConfigMap、ServiceAccount 等",
+          "详细讲解 Prometheus 配置项，如 global、scrape_config、tls_config 和 relabel_config",
+          "针对不同监控目标（Prometheus、Node Exporter、Kubelet、Cadvisor、ApiServer）提供配置示例",
+          "使用 ServiceAccount 和 ClusterRole 实现权限管理，以访问 K8s 集群指标",
+          "通过 kubernetes_sd_config 实现服务发现，静态配置用于裸机部署",
+          "解释 relabel_config 的作用，用于过滤和修改监控端点标签",
+          "提供参考资料和进一步学习建议，如修改配置以加深理解"
+        ],
+        "summary": "本文是一篇关于在 Kubernetes 单节点集群上手动搭建 Prometheus 监控系统的详细指南。文章首先介绍了搭建环境，包括 K8s 版本 1.19.3 和 Prometheus 版本 2.22.0，并明确了不使用 Helm-Chart 或 Prometheus Operator 等快捷部署方式，而是通过手动编写 YAML 配置文件来实现。内容分为概念验证和集群监控两部分：在概念验证阶段，作者演示了如何在裸机上运行 Prometheus 和 Node Exporter，并修改配置文件以监控自身和节点指标；在集群监控阶段，详细讲解了 Prometheus 的核心配置项，如 global、scrape_config、tls_config 等，并逐步部署了所需的 K8s 资源，包括 Namespace、DaemonSet、ConfigMap、ServiceAccount、ClusterRole、Deployment 和 Service。文章还提供了针对不同监控目标（如 Prometheus 自身、Node Exporter、Kubelet、Cadvisor 和 ApiServer）的具体配置示例，并解释了 relabel_config 的作用。最后，作者总结了通过手动部署 Prometheus 来监控 K8s 集群的关键步骤和注意事项，为初学者提供了实用的参考。",
+        "slug": "manual-prometheus-setup-on-k8s-single-node-cluster",
+        "tags": [
+          "可观测性",
+          "Prometheus",
+          "Kubernetes",
+          "监控",
+          "技术",
+          "手动部署",
+          "配置"
+        ],
+        "inferred_date": "2020-11-05",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 4731,
+          "completion": 750,
+          "total": 5481
+        }
+      },
+      "category": "Technical Tutorial",
+      "nativeMarkdownHash": "990440905907151620df7d861f68f72eb796d4f8c9e9a7d1271a11149fd68a66"
+    },
+    {
+      "hash": "0dff3fea68bf91ed51b4118451bf8f64b7ebd7468ae07ad01f8f26d920929130",
+      "path": "content/blog/Bryan的告别.md",
+      "links": [
+        "https://0xc1.space/images/2019/06/10/nightfall.jpg"
+      ],
+      "metadata": {
+        "title": "Bryan的告别",
+        "description": "作者通过Bryan的消失和室友的不辞而别，探讨友谊、自我反思与成长，最终接受情绪替身的离去，追求真实自我。",
+        "short_summary": "作者在五月底意识到Bryan（一个情绪替身）已消失，同时反思室友的不辞而别，探讨友谊与自我成长。通过日常事件和深层思考，作者最终接受Bryan的离去，认识到这标志着自己从逃避中解脱，追求更真实的人生。文章以引用和比喻总结，强调真实与成长的重要性。",
+        "audience": "对自我反思、情感成长、友谊探讨感兴趣的读者，尤其是喜欢文学性叙事和哲学思考的人群。",
+        "key_points": [
+          "Bryan作为情绪替身的消失象征作者从逃避中解脱",
+          "室友的不辞而别引发对友谊定义的反思",
+          "通过日常细节（如电磁门事件）探讨自由与动机",
+          "引用弗兰克·劳埃德·赖特强调真实的重要性",
+          "作者追求情绪稳定、清醒、自知、专注和丰腴的人生",
+          "文章以滑雪比喻生活，强调过程引人入胜",
+          "Bryan的忧伤被描述为纯粹且仪式性的",
+          "最终收到室友邮件，确认友谊的价值",
+          "作者从多年折磨中成长为更真实的人",
+          "生活被描述为既拥有又被拥有"
+        ],
+        "summary": "本文以Bryan的消失为引子，叙述了作者在五月底意识到Bryan（一个象征逃避不良情绪的替身）已彻底离去，同时回忆起室友不辞而别的经历，引发对友谊和自我身份的反思。作者通过日常细节（如下班路上的思绪、电磁门事件）和深层思考，探讨了忧伤、孤独与成长的关系。最终，作者收到室友的邮件，确认了友谊的价值，并认识到Bryan的消失标志着自己从情绪逃避中解脱，成为一个更真实、坦然的人。文章引用弗兰克·劳埃德·赖特的话强调真实的重要性，并以滑雪比喻生活，总结出追求情绪稳定、清醒、自知、专注和丰腴的人生目标。",
+        "slug": "bryans-farewell",
+        "tags": [
+          "非正常人类研究",
+          "感悟",
+          "友谊",
+          "自我反思",
+          "成长",
+          "情绪",
+          "孤独",
+          "真实"
+        ],
+        "inferred_date": "2019-06-10",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1794,
+          "completion": 523,
+          "total": 2317
+        }
+      },
+      "category": "Personal Reflection",
+      "nativeMarkdownHash": "1179c895f6732336c19bc166693475ad42d20c4a2ad26f2a01c4ee3521f14237"
+    },
+    {
+      "hash": "e990d0dca3e254b36af2c51a1f15eea7208aadcd80be8766e34fd4efed063402",
+      "path": "content/blog/harbor-operator.md",
+      "links": [
+        "https://0xc1.space/images/2022/01/30/harbor-operator-class.svg",
+        "https://0xc1.space/images/2022/01/30/harbor-operator-arch.png",
+        "https://0xc1.space/images/2022/01/30/harbor-cluster-controller.png",
+        "https://0xc1.space/images/2022/01/30/harbor-core-controller.png",
+        "f: A => M[B], g: B => M[C]"
+      ],
+      "metadata": {
+        "title": "源码阅读：Harbor-Operator 设计分析",
+        "description": "深入分析 Harbor-Operator 源码，探讨其依赖图、控制器复用和代码配置化等优秀设计理念。",
+        "short_summary": "本文深入剖析 Harbor-Operator 源码，揭示其依赖图、控制器复用和代码配置化等核心设计。通过分析 Golang 和 Kubernetes 平台实践，展示了如何平衡简单性、一致性和完整性，为 Operator 开发提供优秀范例。",
+        "audience": "Kubernetes Operator 开发者、软件架构师、对 Harbor 或云原生技术感兴趣的工程师",
+        "key_points": [
+          "Harbor-Operator 使用依赖图（Dependency Graph）管理资源间依赖，实现 DAG 执行引擎",
+          "通过单一 Controller 复用逻辑，处理十一个不同 CRD，减少代码冗余",
+          "ResourceManager 将代码配置化，声明式添加资源，简化 Operator 开发",
+          "设计遵循 'the right thing' 理念，强调简单性、正确性、一致性和完整性",
+          "利用 Golang 语言特性和 Kubernetes 平台，实现高效、可读的代码",
+          "通过 Mutable 和 Checkable 接口抽象资源操作，提高灵活性和可维护性",
+          "ProcessFunc 统一处理资源变更检测和调谐逻辑",
+          "牺牲部分灵活性以追求极致的概念一致和简单",
+          "为 Operator 开发提供了优秀的设计模式和最佳实践参考",
+          "文章深入探讨了软件设计理念在具体项目中的应用与平衡"
+        ],
+        "summary": "本文详细解析了 Harbor-Operator 的源码设计，重点探讨了其如何通过依赖图（Dependency Graph）解决资源间依赖关系，使用单一控制器（Controller）实现多个 CRD 的调谐逻辑，以及通过 ResourceManager 将代码配置化以提高复用率。文章还分析了 Harbor-Operator 在 Golang 和 Kubernetes 平台上的实践，展示了其作为 'the right thing' 设计理念的典范，如何在简单性、一致性和完整性之间取得平衡，为 Operator 开发提供了宝贵的设计参考。",
+        "slug": "source-code-reading-harbor-operator",
+        "tags": [
+          "Harbor-Operator",
+          "源码分析",
+          "Kubernetes",
+          "Operator Pattern",
+          "依赖图",
+          "控制器设计",
+          "Golang",
+          "软件架构"
+        ],
+        "inferred_date": "2022-01-30",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 9172,
+          "completion": 526,
+          "total": 9698
+        }
+      },
+      "category": "Technical Analysis",
+      "nativeMarkdownHash": "f1cdccbb80e4af4c373d54bb4914d0c40d601e2c9bfa860b44758d10722ade26"
+    },
+    {
+      "hash": "4c8029ee6e2b54fc00f8af7818f4ac314332234f411854d0c77f823f8bfddd45",
+      "path": "content/blog/Ode-on-Melancholy-忧郁颂.md",
+      "links": [],
+      "metadata": {
+        "title": "Ode on Melancholy 忧郁颂",
+        "description": "本文分享了济慈的《忧郁颂》英文原文及屠岸的中文翻译，探讨了忧郁与美的哲学关系。",
+        "short_summary": "本文分享了济慈的《忧郁颂》英文原文及屠岸的中文翻译，分为三个部分。诗歌探讨了忧郁与美、喜悦的关联，认为忧郁隐藏在快乐之中，只有深刻体验者才能领悟。",
+        "audience": "诗歌爱好者、济慈研究者、文学翻译读者、对忧郁主题感兴趣的读者。",
+        "key_points": [
+          "济慈的《忧郁颂》英文原文全文",
+          "屠岸的中文翻译版本",
+          "诗歌分为三个部分，每部分有对应译文",
+          "探讨忧郁与美、喜悦、痛苦的情感关系",
+          "强调忧郁隐藏在快乐的庙堂中",
+          "只有能深刻体验快乐的人才能察觉忧郁",
+          "诗歌使用丰富的意象和比喻",
+          "双语对照有助于理解诗歌内涵",
+          "作者因《Sweet Bitter》引用而分享此诗",
+          "涉及济慈其他作品如《Hyperion》的提及"
+        ],
+        "summary": "本文是一篇关于济慈诗歌《忧郁颂》的分享文章，作者因在《Sweet Bitter》中读到该诗的一句而购买济慈诗选，并抄录了全诗。文章提供了英文原文和屠岸的中文翻译，分为三个部分，每部分都有对应的译文。诗中探讨了忧郁与美、喜悦、痛苦等情感的复杂关系，强调忧郁隐藏在快乐的庙堂中，只有能深刻体验快乐的人才能察觉。文章的核心价值在于呈现这首经典诗歌的双语对照，帮助读者理解济慈对忧郁的哲学思考。",
+        "slug": "ode-on-melancholy",
+        "tags": [
+          "John Keats",
+          "忧郁颂",
+          "Ode on Melancholy",
+          "诗歌",
+          "济慈",
+          "屠岸翻译",
+          "英文诗",
+          "中文翻译"
+        ],
+        "inferred_date": "2017-06-19",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1668,
+          "completion": 447,
+          "total": 2115
+        }
+      },
+      "category": "Poetry Analysis",
+      "nativeMarkdownHash": "e4d1ceafffc571522b510fcc246d79a0bb5eeaf0364993cba09c6c534a462f03"
+    },
+    {
+      "hash": "2d6fd4c77174857cfafa65929232f4d2a4b8322aca3cde34ee7646e81e07da77",
+      "path": "content/blog/RBAC实践系统设计.md",
+      "links": [
+        "http://0xc1.space/images/2017/05/07/RBACmodel.png"
+      ],
+      "metadata": {
+        "title": "RBAC概念与系统设计",
+        "description": "本文介绍RBAC访问控制模型的概念、对象关系、应用场景及其与MAC、DAC模型的对比。",
+        "short_summary": "本文介绍RBAC访问控制模型的基本概念、对象关系和核心原则。它适用于资源共有且角色分层的系统，如商业公司，并对比了MAC和DAC模型。实际应用中常混合使用这些模型，以平衡权限管理。",
+        "audience": "系统设计师、软件开发人员、安全工程师以及对访问控制模型感兴趣的技术读者。",
+        "key_points": [
+          "RBAC是基于角色的访问控制模型，提供中性且灵活的权限管理。",
+          "RBAC核心对象包括主体、角色、权限、会话、主体指派、权限指派和角色阶层。",
+          "主体和角色、角色和权限之间是多对多关系。",
+          "RBAC适用于资源共有且角色分层的系统，如商业公司和操作系统。",
+          "与MAC（强制访问控制）和DAC（自由选定访问控制）相比，RBAC更具通用性。",
+          "在实际应用中，常混合使用RBAC和DAC模型，例如在社交网络系统中。",
+          "RBAC强调最小权限原则，有效分配权利与责任以保护资源。",
+          "文章以微信为例，说明混合访问控制模型的实际应用场景。",
+          "RBAC在个人资源系统中可能力不从心，更适合DAC模型。",
+          "理解RBAC有助于设计更安全和高效的访问控制系统。"
+        ],
+        "summary": "本文详细阐述了基于角色的访问控制（RBAC）模型，包括其核心概念如主体、角色、权限、会话等对象及其多对多关系。文章解释了RBAC作为中性且灵活的访问控制技术，适用于资源共有且角色分层的系统，如商业公司和遵循最小权限原则的操作系统。同时，作者对比了RBAC与强制访问控制（MAC）及自由选定访问控制（DAC）的差异，指出在实际应用中常混合使用这些模型，并以微信为例说明混合场景。文章还讨论了RBAC的应用限制，强调其在个人资源系统中的局限性。",
+        "slug": "rbac-concept-system-design",
+        "tags": [
+          "系统设计与分析",
+          "RBAC",
+          "访问控制",
+          "MAC",
+          "DAC",
+          "权限管理",
+          "角色模型",
+          "安全模型"
+        ],
+        "inferred_date": "2017-05-07",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1309,
+          "completion": 520,
+          "total": 1829
+        }
+      },
+      "category": "Software Design",
+      "nativeMarkdownHash": "602fca7aa28279ebb81f7749587f3e949b86bfaf0eb4b53e97390cd2763a0136"
+    },
+    {
+      "hash": "f680bdef35e31aa7a261d815684cd74313855fdcc52dac87ac7802793e055661",
+      "path": "content/blog/Sleeping to dream.md",
+      "links": [],
+      "metadata": {
+        "title": "Sleeping to Dream",
+        "description": "Bryan 在回忆的冲击下，体验悲哀的延时性，探讨人性在时间中的迷失与悲凉。",
+        "short_summary": "Bryan 在回忆的冲击下，体验悲哀的延时性，形容悲哀为温热的流体腐蚀心灵。他迷失在时间中，分不清过去与现在，最终意识到人性的悲凉，却无法摆脱悲剧循环。",
+        "audience": "对心理学、人性探讨、文学随笔感兴趣的读者，特别是关注情感、回忆和时间主题的人群。",
+        "key_points": [
+          "悲哀具有延时性，过去的回忆会突然冲击现在",
+          "悲哀被形容为温热的流体，在胸口中晃动并腐蚀心灵",
+          "回忆如同超距作用，操控情感并导致时间迷失",
+          "Bryan 分不清过去与现在的事件，回忆感染其他记忆",
+          "文章引用济慈的《忧郁颂》，探讨忧郁与美的关系",
+          "Bryan 意识到人性的悲凉，夹在神与野兽之间",
+          "他无法控制自己，成为螺旋悲剧的祭品",
+          "悲哀与痛苦持续存在，像文火慢炖般煎熬",
+          "回忆带来温暖甜蜜与怨恨，混合成复杂情感",
+          "时间生物的特性使大脑传递久远信息，加剧悲哀"
+        ],
+        "summary": "本文通过 Bryan 的经历，描述了悲哀的延时性如何让他被过去的回忆所困扰。悲哀被形容为温热的流体，在胸口中晃动，腐蚀心灵。回忆如同超距作用，操控着他的情感，使他在时间中迷失，分不清过去与现在。文章引用济慈的《忧郁颂》，进一步探讨了忧郁与美的共存。最终，Bryan 意识到人性的悲凉，却仍无法摆脱螺旋悲剧的祭品角色。",
+        "slug": "sleeping-to-dream",
+        "tags": [
+          "非正常人类研究",
+          "随笔",
+          "悲哀",
+          "回忆",
+          "时间",
+          "人性",
+          "忧郁"
+        ],
+        "inferred_date": "2018-08-14",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1430,
+          "completion": 448,
+          "total": 1878
+        }
+      },
+      "category": "Personal Reflection",
+      "nativeMarkdownHash": "8bd2996600f9f95ab004e352ef441699864b072611dc47f994972e566baa515f"
+    },
+    {
+      "hash": "41824d75d5760caadb2137e487616eeba55cea8f19d07b9eb845d8d4d2f98fef",
+      "path": "content/blog/Thrimbda.md",
+      "links": [],
+      "metadata": {
+        "title": "Thrimbda",
+        "description": "作者决定使用新ID Thrimbda，并探讨了道与术的哲学思考，反思个人在术上过度投入而忽视道的徒劳。",
+        "short_summary": "作者宣布新ID Thrimbda，寓意“alive and thrive”和大智若愚。文章探讨了道与术的哲学区别，反思个人在术上过度投入而忽视道的徒劳，强调平衡的重要性。",
+        "audience": "对哲学、自我反思、个人成长感兴趣的读者，以及关注ID命名和学问分类的人群。",
+        "key_points": [
+          "作者决定使用新ID Thrimbda",
+          "Thrimbda含义源自alive and thrive和希腊字母lambda",
+          "道代表概观、框架和胸有成竹",
+          "术代表细节、实现和奇淫技巧",
+          "作者反思个人在术上过度投入",
+          "强调平衡道与术的重要性",
+          "避免因忽视道而导致徒劳",
+          "文章包含哲学思考和自我反省"
+        ],
+        "summary": "本文首先介绍了作者经过近一个月思考后决定使用新ID Thrimbda，其含义源自“alive and thrive”和希腊字母lambda，象征大智若愚。接着，文章深入探讨了道与术的哲学层面，将学问分为道（概观、框架、胸有成竹）和术（细节、实现、奇淫技巧），并反思作者个人因看不清自己的道而在术上下了不少功夫，导致徒劳。核心论点是强调在追求学问或技能时，应平衡道与术，避免过度专注于细节而忽视整体框架。",
+        "slug": "thrimbda",
+        "tags": [
+          "Thrimbda",
+          "道",
+          "术",
+          "哲学",
+          "反思",
+          "ID"
+        ],
+        "inferred_date": "2017-05-05",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 770,
+          "completion": 416,
+          "total": 1186
+        }
+      },
+      "category": "Personal Reflection",
+      "nativeMarkdownHash": "9b9ce3a03564865386929577eec03ffaed5f4e138ffb5e0e06b63bb989ae6bc6"
+    },
+    {
+      "hash": "031a7e5bf69997a0ed7086db4b8793c0f9f9387c509132eccf67eb35b4f9be0a",
+      "path": "content/blog/To-.md",
+      "links": [],
+      "metadata": {
+        "title": "济慈诗歌《To -》分析",
+        "description": "分析济慈诗歌《To -》的内容、情感表达及其与莎士比亚十四行诗的韵律相似性。",
+        "short_summary": "本文分析济慈诗歌《To -》，展现其因邂逅而产生的深情思念，并通过自然意象抒发情感。文章还指出诗歌在韵律上与莎士比亚十四行诗相似，探讨了济慈的创作借鉴。",
+        "audience": "文学爱好者、诗歌研究者、学生以及对济慈和莎士比亚作品感兴趣的读者。",
+        "key_points": [
+          "济慈因短暂邂逅一位年轻女士而创作诗歌《To -》",
+          "诗歌表达了对这位女士的深切思念和情感困扰",
+          "使用午夜天空、玫瑰等自然意象来寄托情感",
+          "诗歌最后两句在韵律上极似莎士比亚十四行诗",
+          "引用了莎士比亚《sonnet CXIII》进行韵律对比",
+          "济慈诗歌在情绪构架和乐感上接近莎士比亚风格",
+          "探讨了济慈创作中的韵律借鉴与文学影响",
+          "诗歌体现了浪漫主义文学的情感深度和艺术表达"
+        ],
+        "summary": "本文以济慈的诗歌《To -》为核心，首先介绍了济慈因短暂邂逅一位年轻女士而深受触动的情感背景，并完整呈现了诗歌原文。诗歌表达了诗人对这位女士的深切思念，通过自然意象如午夜天空、玫瑰和花朵来寄托情感。文章进一步指出，诗歌最后两句在韵律处理上极似莎士比亚的十四行诗，引用了莎士比亚《sonnet CXIII》中的诗句进行对比，并提及济慈这首诗的脚注曾评论其在情绪构架和乐感上接近莎士比亚风格，从而探讨了济慈诗歌创作中的韵律借鉴与情感表达。",
+        "slug": "keats-poem-to-analysis",
+        "tags": [
+          "济慈",
+          "John Keats",
+          "诗歌分析",
+          "莎士比亚",
+          "韵律",
+          "情感表达",
+          "文学比较"
+        ],
+        "inferred_date": "2018-01-07",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 931,
+          "completion": 443,
+          "total": 1374
+        }
+      },
+      "category": "Poetry Analysis",
+      "nativeMarkdownHash": "dd7a8df2c42682fe1c7d0d216e791fd73af2aedf8197fd327e7ff3ae5fea8dd5"
+    },
+    {
+      "hash": "087fb6e050beef76854d8437939d18ee4586e189359e12ab5120a0df426d7e82",
+      "path": "content/blog/Tools-of-notes.md",
+      "links": [
+        "https://www.youtube.com/watch?v=0M6erlK57go&ab_channel=MikeZamansky",
+        "https://github.com/Thrimbda/.thript"
+      ],
+      "metadata": {
+        "title": "Tools of notes",
+        "description": "作者分享从记录日常到使用 Spacemacs 和 Org Mode 的心路历程，探讨工具选择对习惯养成的影响。",
+        "short_summary": "作者分享了自己记录日常笔记的习惯养成过程，从尝试多种工具失败到受朋友启发使用 Spacemacs 和 Org Mode。文章探讨了工具选择对习惯的影响，并提到了中文输入和博客集成等未解决的挑战。",
+        "audience": "对笔记工具、效率提升、Vim/Emacs 使用感兴趣的技术爱好者和个人成长追求者。",
+        "key_points": [
+          "记录日常和反思对决策有帮助，如作者六月反思促成了工作变动",
+          "尝试多种工具如 Excel、JSON、自动时间追踪应用但效果不佳",
+          "受朋友关于工具持久性的讨论启发，开始考虑 Emacs 和 Org Mode",
+          "作为 Vim 用户，通过 Spacemacs 结合 Vim 键绑定使用 Org Mode",
+          "仍面临中文输入与 Vim 键绑定不兼容的问题",
+          "未找到用 Org Mode 替代 Markdown 在 Hexo 博客中的好方案",
+          "工具选择影响习惯养成和效率",
+          "从历史角度理解 Vim 和 Emacs 的设计差异",
+          "使用不同语言写作带来不同的表达体验",
+          "强调工具持久性和适应性的重要性"
+        ],
+        "summary": "本文作者回顾了自己记录日常和反思的习惯养成过程，最初尝试了多种工具如 Excel、JSON 和自动时间追踪应用但效果不佳，后来受朋友启发开始认真考虑 Emacs 和 Org Mode。作为长期 Vim 用户，作者通过 Spacemacs 结合 Vim 键绑定和 Org Mode 来记录笔记，解决了部分问题但仍面临中文输入和博客集成等挑战。文章强调了工具选择对习惯坚持的重要性，并分享了从 Vim 转向 Emacs 生态的体验。",
+        "slug": "tools-of-notes",
+        "tags": [
+          "Tools",
+          "笔记",
+          "Org Mode",
+          "Spacemacs",
+          "Vim",
+          "习惯养成",
+          "时间追踪"
+        ],
+        "inferred_date": "2021-02-22",
+        "inferred_lang": "en-US",
+        "tokens_used": {
+          "prompt": 1239,
+          "completion": 474,
+          "total": 1713
+        }
+      },
+      "category": "Tool Usage",
+      "nativeMarkdownHash": "7bd4014c3ff08ab76776d8c3bc88eef2c0877e5d8009d59e84f785a2997cd5d3"
+    },
+    {
+      "hash": "b7cccf8d6b965c88b94bb4fe88f2ca0e53dc930116910067fa23f72bd2b747a7",
+      "path": "content/blog/worktile实力分析.md",
+      "links": [],
+      "metadata": {
+        "title": "Worktile需求管理实力分析",
+        "description": "分析Worktile如何通过任务协作、沟通和统计分析功能解决需求管理中的交流、组织和度量问题。",
+        "short_summary": "本文分析Worktile如何解决需求管理中的关键问题。以巴比伦塔失败案例说明交流和组织的重要性，详细介绍了Worktile的特性及其在需求管理流程中的应用，帮助团队实现有效协作和项目度量。",
+        "audience": "项目经理、团队领导者、需求分析师、对项目管理工具感兴趣的专业人士",
+        "key_points": [
+          "需求管理失败常因缺乏交流和组织，如巴比伦塔案例所示",
+          "Worktile提供看板式任务管理、文件同步、团队日历、消息通知和分析统计视图",
+          "使用Worktile可支持需求管理全流程：提出、审核、实施、确认和度量",
+          "通过任务列表和标签灵活管理需求优先级和状态",
+          "讨论和通知功能促进团队沟通与协作",
+          "统计分析功能帮助度量项目进展和需求完成情况",
+          "Worktile有助于避免系统边界定义含糊等问题",
+          "需求管理应与其他项目管理要素结合",
+          "Worktile支持整个项目生命周期管理",
+          "工具特性如任务直观性和多种视图提升管理效率"
+        ],
+        "summary": "本文以《人月神话》中巴比伦塔的失败案例为引，指出需求管理失败的关键在于缺乏交流和组织。作者随后详细分析了Worktile项目管理工具的特性，包括看板式任务管理、文件同步、团队日历、消息通知和分析统计视图。文章重点阐述了如何使用Worktile进行需求管理流程，如提出需求、审核、实施、确认和度量，并说明其如何通过任务列表、标签、讨论平台和统计分析功能解决交流、组织和系统边界问题。最后强调需求管理应与其他项目管理要素结合，Worktile能支持整个项目生命周期管理。",
+        "slug": "worktile-demand-management-analysis",
+        "tags": [
+          "需求管理",
+          "Worktile",
+          "项目管理",
+          "任务协作",
+          "系统分析",
+          "团队沟通",
+          "工具分析"
+        ],
+        "inferred_date": "2017-04-06",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 2058,
+          "completion": 470,
+          "total": 2528
+        }
+      },
+      "category": "Software Design",
+      "nativeMarkdownHash": "6a5613490dff9290975ebdae6bae1f8a8cdac3dd5e040ebdfbd8ab2d0d45a9f0"
+    },
+    {
+      "hash": "2095aed78f85e551a99061c4d8c1c0710240ca3e85ad18469311297b6c8d979d",
+      "path": "static/admin/README.md",
+      "links": [],
+      "metadata": {
+        "title": "/admin 使用说明（MVP）",
+        "description": "介绍如何在无需自建后端的情况下，通过 /admin 界面编辑 Markdown 内容、自动保存草稿并发布到 GitHub 仓库。",
+        "short_summary": "本文档介绍了 /admin 功能的使用说明，允许用户编辑 Markdown 文件并自动保存草稿。通过 GitHub OAuth 授权，用户可以发布内容到仓库，简化内容管理流程。",
+        "audience": "希望在不引入自建后端的情况下，通过 /admin 界面管理 Markdown 内容的用户，特别是使用 GitHub 仓库的开发者或内容创作者。",
+        "key_points": [
+          "无需自建后端编辑 content/**.md 文件",
+          "草稿自动保存到本机 IndexedDB",
+          "发布时将 Markdown 和图片写回 GitHub 仓库",
+          "配置 GitHub OAuth App 并填入 client_id",
+          "使用设备流完成 GitHub 授权",
+          "编辑内容并自动保存草稿",
+          "插入图片并在发布时写入指定目录",
+          "点击发布创建 PR 触发站点发布流程",
+          "配置文件不包含 secret，可公开提交",
+          "适用于简化内容管理的用户"
+        ],
+        "summary": "本文档详细说明了 /admin 功能的使用方法，旨在帮助用户在不引入自建后端的前提下，通过 GitHub OAuth 授权，编辑 content/**.md 文件，自动保存草稿到本机 IndexedDB，并在发布时将 Markdown 和图片写回 GitHub 仓库（默认创建分支和 PR）。文档包括配置步骤（如复制配置文件、创建 GitHub OAuth App）和使用流程（如连接授权、编辑内容、插入图片、发布 PR），适用于希望简化内容管理流程的用户。",
+        "slug": "admin-usage-mvp",
+        "tags": [
+          "admin",
+          "使用说明",
+          "Markdown",
+          "GitHub",
+          "OAuth",
+          "内容管理",
+          "MVP"
+        ],
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 826,
+          "completion": 426,
+          "total": 1252
+        }
+      },
+      "category": "Admin Documentation",
+      "nativeMarkdownHash": "e697d3674b3b1092a8f52ce72608cce63e48e2769bfda0e5898a0a3132319fd2"
+    }
+  ]
+}

@@ -4,14 +4,14 @@ description = "c1 的博客"
 compile_sass = false
 minify_html = true
 generate_feeds = true
+feed_filenames = ["atom.xml"]
 default_language = "zh"
 
 taxonomies = [{ name = "tags", feed = true }]
 
-# [languages.en]
-# weight = 2
-# languageName = "Englisch"
-# languageCode = "en"
+[languages.en]
+title = "c1's blog"
+description = "c1's blog"
 
 [markdown]
 render_emoji = true

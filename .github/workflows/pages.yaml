@@ -1,0 +1,70 @@
+name: Deploy both Zola and Czon sites
+
+on:
+  push:
+    branches: [master]
+  schedule:
+    - cron: "0 * * * *" # 每小时运行一次
+  workflow_dispatch: # 允许手动触发
+
+# 设置 GITHUB_TOKEN 的权限以允许部署到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允许一个并发部署，跳过正在运行的队列
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref || github.ref }}
+
+      - name: Setup Zola
+        uses: taiki-e/install-action@v2
+        with:
+          tool: zola
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24.x"
+
+      - name: Build Zola site (main site)
+        run: |
+          zola build
+          mkdir -p ./final-output
+          cp -r ./public/* ./final-output/
+
+      - name: Build Czon site (sub-path /czon)
+        run: |
+          npx czon@latest build --lang zh-Hans --lang en-US --lang ja-JP --lang es-ES --lang de-DE --verbose
+          mkdir -p ./final-output/czon
+          cp -r ./.czon/dist/* ./final-output/czon/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./final-output"
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

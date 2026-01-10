@@ -1,13 +1,12 @@
 # 此文件已被禁用，现在使用 pages.yaml 统一处理两个站点的部署
-# 如需重新启用，请将 workflow_dispatch 改为 push
+# 如需重新启用，请将文件名改回 ci.yaml
 
 # On every push this script is executed
 on: 
-  workflow_dispatch:  # 禁用自动触发，只允许手动触发
-    # push:
-    # branches: [master]
+  push:
+    branches: [master]
 
-name: Build and deploy Zola site to main domain (DISABLED)
+name: Build and deploy Zola site to main domain
 jobs:
   build:
     runs-on: ubuntu-latest
