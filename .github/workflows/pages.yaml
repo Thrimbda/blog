@@ -31,7 +31,8 @@ jobs:
       - name: Setup Zola
         uses: taiki-e/install-action@v2
         with:
-          tool: zola
+          # Lock Zola version to 0.21.0 to avoid unexpected issues from newer versions
+          tool: zola@0.21.0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
