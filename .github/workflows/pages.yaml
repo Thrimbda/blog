@@ -3,8 +3,8 @@ name: Deploy both Zola and Czon sites
 on:
   push:
     branches: [master]
-  schedule:
-    - cron: "0 * * * *" # 每小时运行一次
+  # schedule:
+  #   - cron: "0 * * * *" # 每小时运行一次
   workflow_dispatch: # 允许手动触发
 
 # 设置 GITHUB_TOKEN 的权限以允许部署到 GitHub Pages
