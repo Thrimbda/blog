@@ -99,89 +99,166 @@ const ELS = (selector, parent) =>
 const EL = (selector, parent) => (parent || document).querySelector(selector);
 const mod = (n, m) => ((n % m) + m) % m;
 
-ELS(".slider-container").forEach((EL_parent) => {
-  const EL_slider = EL(".slider", EL_parent);
-  const ELS_items = ELS(".slider-item", EL_parent);
-  const ELS_dots = ELS(".slider-dot", EL_parent);
-  const total = ELS_items.length;
-  let c = 0;
+ /*
+ ELS(".slider-container").forEach((EL_parent) => {
+   const EL_slider = EL(".slider", EL_parent);
+   const ELS_items = ELS(".slider-item", EL_parent);
+   const ELS_dots = ELS(".slider-dot", EL_parent);
+   const total = ELS_items.length;
+   let c = 0;
 
-  const setDotActive = () => {
-    ELS_dots.forEach((EL_dot, i) => {
-      EL_dot.classList.toggle("slider-dot-active", i === c);
-    });
-  };
+   const setDotActive = () => {
+     ELS_dots.forEach((EL_dot, i) => {
+       EL_dot.classList.toggle("slider-dot-active", i === c);
+     });
+   };
 
-  setDotActive();
+   setDotActive();
 
-  const anim = () => {
-    EL_slider.style.transform = `translateX(-${c * EL_slider.offsetWidth}px)`;
-  };
-  const prev = () => {
-    distance = 0;
-    startX = 0;
-    c = mod(c - 1, total);
-    setDotActive();
-    anim();
-  };
-  const next = () => {
-    distance = 0;
-    startX = 0;
-    c = mod(c + 1, total);
-    setDotActive();
-    anim();
-  };
+   const anim = () => {
+     EL_slider.style.transform = `translateX(-${c * EL_slider.offsetWidth}px)`;
+   };
+   const prev = () => {
+     distance = 0;
+     startX = 0;
+     c = mod(c - 1, total);
+     setDotActive();
+     anim();
+   };
+   const next = () => {
+     distance = 0;
+     startX = 0;
+     c = mod(c + 1, total);
+     setDotActive();
+     anim();
+   };
 
-  EL(".slider-prev", EL_parent).addEventListener("click", prev);
-  EL(".slider-next", EL_parent).addEventListener("click", next);
+   EL(".slider-prev", EL_parent).addEventListener("click", prev);
+   EL(".slider-next", EL_parent).addEventListener("click", next);
 
-  ELS(".slider-dot", EL_parent).forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      c = i;
-      setDotActive();
-      anim();
-    });
+   ELS(".slider-dot", EL_parent).forEach((dot, i) => {
+     dot.addEventListener("click", () => {
+       c = i;
+       setDotActive();
+       anim();
   });
+ });
+ */
 
-  const touchstart$ = fromEvent(EL_parent, "touchstart");
-  const touchend$ = fromEvent(EL_slider, "touchend");
-  const touchmove$ = fromEvent(EL_slider, "touchmove");
+// Embla Carousel initialization
+function renderEmblaCarousels() {
+  // Only initialize if EmblaCarousel is available
+  if (typeof EmblaCarousel === 'undefined' || typeof EmblaCarouselAutoplay === 'undefined') {
+    console.warn('Embla Carousel libraries not loaded yet');
+    return;
+  }
 
-  touchstart$
-    .pipe(
-      tap(() => {
-        EL_slider.style.transition = "none";
-      }),
-      switchMap((start) =>
-        animationFrames().pipe(
-          withLatestFrom(touchmove$),
-          map(([, touchEvent]) => {
-            const distance =
-              touchEvent.touches[0].clientX - start.touches[0].clientX;
+  console.log('Initializing Embla Carousels...');
+  
+  // Get all images
+  const allImages = Array.from(document.querySelectorAll('img'));
+  
+  // Skip images that are already inside Embla or slider containers
+  const filteredImages = allImages.filter(img => 
+    !img.closest('.embla') && 
+    !img.closest('.slider-container')
+  );
+  
+  console.log(`Found ${filteredImages.length} images to process`);
+  
+  // Group images by their immediate parent element (like CZON does)
+  const groups = new Map();
+  
+  filteredImages.forEach(img => {
+    const parent = img.parentElement;
+    if (!groups.has(parent)) {
+      groups.set(parent, []);
+    }
+    groups.get(parent).push(img);
+  });
+  
+  // Debug: log all groups
+  console.log('Image groups:');
+  groups.forEach((images, parent) => {
+    console.log(`  Parent: ${parent.tagName}${parent.className ? '.' + parent.className : ''}${parent.id ? '#' + parent.id : ''}, Images: ${images.length}`);
+  });
+  
+  // Convert to array and filter out groups with only 1 image
+  const imageGroups = Array.from(groups.values()).filter(group => group.length > 1);
+  
+  console.log(`Found ${imageGroups.length} image groups with multiple images`);
+  
+  // Create carousels for each group
+  imageGroups.forEach(imageGroup => {
+    const parent = imageGroup[0].parentElement;
+    
+    // Skip if container already has Embla or slider classes
+    if (parent.classList.contains('embla') || 
+        parent.classList.contains('slider-container') ||
+        parent.closest('.embla') || 
+        parent.closest('.slider-container')) {
+      return;
+    }
+    
+    console.log(`Creating carousel with ${imageGroup.length} images in`, parent);
+    
+    // Create Embla structure
+    const outer = document.createElement('div');
+    outer.classList.add('embla');
+    parent.appendChild(outer);
+    
+    const inner = document.createElement('div');
+    inner.classList.add('embla__container');
+    outer.appendChild(inner);
+    
+    imageGroup.forEach(img => {
+      // Remove image from its current position
+      img.parentElement.removeChild(img);
+      
+      const slide = document.createElement('div');
+      slide.classList.add('embla__slide');
+      slide.appendChild(img);
+      inner.appendChild(slide);
+    });
+    
+    // Initialize Embla Carousel with autoplay
+    try {
+      EmblaCarousel(outer, { loop: true }, [EmblaCarouselAutoplay()]);
+      console.log('Embla carousel initialized successfully');
+    } catch (error) {
+      console.error('Failed to initialize Embla Carousel:', error);
+    }
+  });
+}
 
-            EL_slider.style.transform = `translateX(-${
-              c * EL_slider.offsetWidth - distance
-            }px)`;
-            return distance;
-          }),
-          takeUntil(touchend$),
-          defaultIfEmpty(0),
-          last()
-        )
-      ),
-      tap({
-        next: (distance) => {
-          EL_slider.style.transition = "transform 0.3s ease-in-out";
-          if (distance / EL_slider.offsetWidth > 0.2) {
-            c = mod(c - 1, total);
-          } else if (distance / EL_slider.offsetWidth < -0.2) {
-            c = mod(c + 1, total);
-          }
-          setDotActive();
-          anim();
-        },
-      }),
-      repeat()
-    )
-    .subscribe();
-});
+// Initialize Embla when both libraries are loaded
+function initEmblaCarousels() {
+  if (typeof EmblaCarousel !== 'undefined' && typeof EmblaCarouselAutoplay !== 'undefined') {
+    renderEmblaCarousels();
+  } else {
+    // Wait for scripts to load
+    const emblaLib = document.getElementById('embla-lib');
+    const emblaAutoplayLib = document.getElementById('embla-autoplay-lib');
+    
+    if (emblaLib && emblaAutoplayLib) {
+      Promise.all([
+        new Promise(resolve => emblaLib.addEventListener('load', resolve)),
+        new Promise(resolve => emblaAutoplayLib.addEventListener('load', resolve))
+      ]).then(() => {
+        console.log('Embla Carousel and Autoplay loaded');
+        renderEmblaCarousels();
+      }).catch(error => {
+        console.error('Error loading Embla libraries:', error);
+      });
+    }
+  }
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initEmblaCarousels);
+} else {
+  initEmblaCarousels();
+}
+
+

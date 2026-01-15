@@ -50,6 +50,337 @@
       "nativeMarkdownHash": "315720965ce81828dadccb48bbadd27d0f05b211028e696ce5bb1c3c1a12c6fc"
     },
     {
+      "hash": "c37ec5ff3622b48e41ee7c362ff049a1913d57263c4ca4b100fae7ec5bb70375",
+      "path": ".legion/tasks/czon-embla-get-gcores-talkts/context.md",
+      "links": [],
+      "metadata": {
+        "title": "调研CZON Embla轮播图并修改get-gcores-talk.ts",
+        "description": "本文记录了使用Embla轮播图库替换现有slider的实现过程、关键决策和后续步骤。",
+        "short_summary": "本文记录了使用Embla轮播图库替换博客现有slider的完整过程，包括实现步骤、关键决策和待解决问题。核心目标是统一轮播图方案，提升代码一致性，并利用Embla的丰富功能。文档还提供了后续调试和测试的指导建议。",
+        "audience": "前端开发者、博客维护人员、对Embla轮播图集成感兴趣的技术人员",
+        "key_points": [
+          "调研CZON的Embla实现细节并确定集成方案",
+          "修改get-gcores-talk.ts输出平铺markdown图片行以适配Embla",
+          "在head.html中添加Embla库加载脚本和初始化代码",
+          "修改slideshow shortcode输出Embla兼容的DOM结构",
+          "注释旧slider初始化代码以避免与Embla冲突",
+          "构建博客验证基本功能，但需调试Embla初始化问题",
+          "关键决策：统一使用Embla替换现有slider方案",
+          "关键决策：注释旧代码而非删除以便必要时恢复",
+          "提供快速交接指南，包括恢复图片下载功能等后续步骤",
+          "注意事项：Embla分组算法基于DOM连续性，复杂布局可能需要调整"
+        ],
+        "summary": "本文详细记录了在博客项目中调研并集成Embla轮播图库以替换现有slider的完整过程。主要内容包括：已完成的工作，如分析Embla实现细节、修改get-gcores-talk.ts输出格式、添加Embla库加载和初始化代码；关键决策，如统一使用Embla方案、注释旧代码避免冲突；以及待解决的问题，如Embla初始化调试。文档还提供了快速交接指南，帮助后续开发者继续完善功能。",
+        "slug": "czon-embla-slider-get-gcores-talk-modification",
+        "tags": [
+          "Embla",
+          "轮播图",
+          "slider",
+          "博客开发",
+          "前端集成",
+          "代码重构",
+          "技术文档"
+        ],
+        "inferred_date": "2026-01-15",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1207,
+          "completion": 463,
+          "total": 1670
+        }
+      },
+      "category": "Frontend Development",
+      "translations": {
+        "ja-JP": {
+          "content_length": 2327,
+          "token_used": {
+            "prompt_tokens": 1247,
+            "completion_tokens": 1542,
+            "total_tokens": 2789,
+            "completion_tokens_details": {
+              "reasoning_tokens": 236
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1247
+          }
+        },
+        "en-US": {
+          "content_length": 3953,
+          "token_used": {
+            "prompt_tokens": 1010,
+            "completion_tokens": 1070,
+            "total_tokens": 2080,
+            "completion_tokens_details": {
+              "reasoning_tokens": 167
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1010
+          }
+        },
+        "es-ES": {
+          "content_length": 4751,
+          "token_used": {
+            "prompt_tokens": 1012,
+            "completion_tokens": 1416,
+            "total_tokens": 2428,
+            "completion_tokens_details": {
+              "reasoning_tokens": 185
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1012
+          }
+        },
+        "de-DE": {
+          "content_length": 4630,
+          "token_used": {
+            "prompt_tokens": 1012,
+            "completion_tokens": 1580,
+            "total_tokens": 2592,
+            "completion_tokens_details": {
+              "reasoning_tokens": 235
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1012
+          }
+        }
+      },
+      "nativeMarkdownHash": "9e0a5678e078ae8b277fae3db9d85c15f83877b4fd55959e2f7ad1cfa570fd6a"
+    },
+    {
+      "hash": "a0c570634f7c00ef029f6f8a78cf7c5e3aa83572cc113869317d975be2db5734",
+      "path": ".legion/tasks/czon-embla-get-gcores-talkts/plan.md",
+      "links": [
+        "..."
+      ],
+      "metadata": {
+        "title": "调研CZON Embla轮播图并修改get-gcores-talk.ts",
+        "description": "本文档详细说明了如何修改博客脚本以集成Embla轮播图，替换现有slider实现，确保与CZON保持一致。",
+        "short_summary": "本文档概述了将Embla轮播图集成到博客项目中的完整方案。通过修改get-gcores-talk.ts脚本和模板文件，用Embla替换现有slider，并添加必要的脚本和样式。最终目标是实现与CZON一致的轮播图功能，并确保兼容性。",
+        "audience": "博客开发者、前端工程师、项目维护人员，特别是负责集成轮播图功能的技术人员。",
+        "key_points": [
+          "调研CZON中Embla轮播图的实现细节",
+          "分析当前博客模板结构和现有slider实现",
+          "修改get-gcores-talk.ts的图片输出逻辑，将slideshow宏改为多个markdown图片行",
+          "在博客模板中添加Embla库加载和初始化脚本",
+          "添加Embla所需的CSS样式",
+          "测试轮播图功能并确保兼容性",
+          "设计决策确认使用Embla替换现有slider的方案",
+          "详细设计方案涵盖核心流程、接口定义和文件变更明细",
+          "处理不确定点如CSS样式重写和初始化逻辑影响",
+          "阶段概览包括调研、修改、集成和测试四个阶段"
+        ],
+        "summary": "本文档旨在指导将CZON的Embla轮播图集成到博客中，替换现有的slider实现。核心任务包括调研Embla实现细节、修改get-gcores-talk.ts脚本以输出平铺的markdown图片、更新模板和静态资源以支持Embla，并进行测试验证。设计决策确认使用Embla替换方案，详细设计方案涵盖了从脚本修改到样式调整的全流程，确保功能兼容性和代码统一。",
+        "slug": "research-czon-embla-carousel-modify-get-gcores-talk-ts",
+        "tags": [
+          "Embla",
+          "轮播图",
+          "博客开发",
+          "TypeScript",
+          "前端集成",
+          "模板修改",
+          "静态资源",
+          "兼容性测试"
+        ],
+        "inferred_date": "2026-01-15",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1414,
+          "completion": 466,
+          "total": 1880
+        }
+      },
+      "category": "Frontend Development",
+      "translations": {
+        "ja-JP": {
+          "content_length": 2717,
+          "token_used": {
+            "prompt_tokens": 1457,
+            "completion_tokens": 1694,
+            "total_tokens": 3151,
+            "completion_tokens_details": {
+              "reasoning_tokens": 304
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1457
+          }
+        },
+        "de-DE": {
+          "content_length": 5182,
+          "token_used": {
+            "prompt_tokens": 1222,
+            "completion_tokens": 1696,
+            "total_tokens": 2918,
+            "completion_tokens_details": {
+              "reasoning_tokens": 157
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1222
+          }
+        },
+        "es-ES": {
+          "content_length": 5157,
+          "token_used": {
+            "prompt_tokens": 1222,
+            "completion_tokens": 1584,
+            "total_tokens": 2806,
+            "completion_tokens_details": {
+              "reasoning_tokens": 171
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1222
+          }
+        },
+        "en-US": {
+          "content_length": 4443,
+          "token_used": {
+            "prompt_tokens": 1220,
+            "completion_tokens": 1267,
+            "total_tokens": 2487,
+            "completion_tokens_details": {
+              "reasoning_tokens": 209
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1220
+          }
+        }
+      },
+      "nativeMarkdownHash": "7d9826e8cbc6fef35a62d82559ac0f3782fdf716759c5ecc142427af89c6446c"
+    },
+    {
+      "hash": "5e89b0e404e367703e9649a7941246303fe48cf5c5906f4914caec4abe1cbefe",
+      "path": ".legion/tasks/czon-embla-get-gcores-talkts/tasks.md",
+      "links": [],
+      "metadata": {
+        "title": "调研CZON Embla轮播图并修改get-gcores-talk.ts任务清单",
+        "description": "本文档详细记录了调研CZON Embla轮播图实现、修改get-gcores-talk.ts脚本以及集成Embla到博客模板的完整任务清单与进度。",
+        "short_summary": "本文档记录了将CZON的Embla轮播图集成到博客中的任务清单，包括调研分析、脚本修改和模板集成。所有任务已完成，当前处于测试验证阶段，确保轮播图功能正常且与现有系统兼容。",
+        "audience": "前端开发者、博客维护人员、对Embla轮播图集成感兴趣的技术人员",
+        "key_points": [
+          "详细分析CZON的Embla实现（JavaScript、CSS、HTML）",
+          "修改get-gcores-talk.ts脚本以输出平铺的Markdown图片行",
+          "在博客模板中添加Embla库的加载脚本和初始化代码",
+          "集成Embla所需的CSS样式到博客中",
+          "运行测试验证轮播图功能正常工作",
+          "确保与现有slider功能兼容",
+          "任务分为四个阶段：调研分析、脚本修改、模板集成、测试验证",
+          "所有任务已完成，进度为10/10",
+          "当前阶段为阶段4：测试与验证",
+          "最后更新时间为2026-01-15 18:30"
+        ],
+        "summary": "本文档是一份关于在博客中集成Embla轮播图的任务清单，涵盖了从调研分析、脚本修改到集成测试的四个阶段。文档详细列出了每个阶段的具体任务、验收标准及完成状态，当前处于测试与验证阶段，所有任务均已完成。核心内容包括分析CZON的Embla实现、修改get-gcores-talk.ts以输出平铺的Markdown图片行、在博客模板中添加Embla库和样式，并进行功能验证与兼容性测试。",
+        "slug": "czon-embla-carousel-get-gcores-talk-ts-task-list",
+        "tags": [
+          "Embla",
+          "轮播图",
+          "任务清单",
+          "博客集成",
+          "JavaScript",
+          "CSS",
+          "get-gcores-talk.ts",
+          "测试验证"
+        ],
+        "inferred_date": "2026-01-15",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1099,
+          "completion": 494,
+          "total": 1593
+        }
+      },
+      "category": "Frontend Development",
+      "translations": {
+        "en-US": {
+          "content_length": 3378,
+          "token_used": {
+            "prompt_tokens": 917,
+            "completion_tokens": 1004,
+            "total_tokens": 1921,
+            "completion_tokens_details": {
+              "reasoning_tokens": 221
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 917
+          }
+        },
+        "de-DE": {
+          "content_length": 3844,
+          "token_used": {
+            "prompt_tokens": 919,
+            "completion_tokens": 1341,
+            "total_tokens": 2260,
+            "completion_tokens_details": {
+              "reasoning_tokens": 201
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 919
+          }
+        },
+        "es-ES": {
+          "content_length": 3981,
+          "token_used": {
+            "prompt_tokens": 919,
+            "completion_tokens": 1299,
+            "total_tokens": 2218,
+            "completion_tokens_details": {
+              "reasoning_tokens": 188
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 919
+          }
+        },
+        "ja-JP": {
+          "content_length": 1902,
+          "token_used": {
+            "prompt_tokens": 1154,
+            "completion_tokens": 1301,
+            "total_tokens": 2455,
+            "completion_tokens_details": {
+              "reasoning_tokens": 213
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1154
+          }
+        }
+      },
+      "nativeMarkdownHash": "6a0c00b4cc6b6f31e592d063d1fd405c2b48a18f7ed7cb498962886b514d061b"
+    },
+    {
       "hash": "1868f92f6f4b1edeedb75aa693b41f0f94a4e62f09a61f2bc18707d011871a17",
       "path": "content/_index.md",
       "links": [
@@ -95,7 +426,7 @@
           "total": 1436
         }
       },
-      "category": "Personal Reflection",
+      "category": "Blog Introduction",
       "nativeMarkdownHash": "7c5c83d5bea04f0ad002e2dae798d799b095b968a4c900ef2ea864e2d4709cd5"
     },
     {
@@ -135,61 +466,397 @@
           "total": 1753
         }
       },
-      "category": "Personal Reflection",
+      "category": "Blog Introduction",
       "nativeMarkdownHash": "2d2ea6d06b2ea46402ad1135a6838e959c453c5862c330085953e6eef09b288e"
     },
     {
-      "hash": "93eb337d6492dc604f3c3714f206120aa1e4200d8245c5c108e09d0c243d59c4",
+      "hash": "a10ec12196d196dcb6c83841403b202aa6002d35dd1144f1764a9ef0ef9afe37",
+      "path": "content/embla-test.md",
+      "links": [
+        "https://via.placeholder.com/600x400/FF5733/fff?text=Image+1",
+        "https://via.placeholder.com/600x400/33FF57/fff?text=Image+2",
+        "https://via.placeholder.com/600x400/3357FF/fff?text=Image+3",
+        "https://via.placeholder.com/600x400/F333FF/fff?text=Image+4",
+        "https://via.placeholder.com/600x400/33FFF3/fff?text=Image+5"
+      ],
+      "metadata": {
+        "title": "Embla Test",
+        "description": "这是一个用于测试 Embla 轮播功能的页面，包含示例图片和说明。",
+        "short_summary": "这是一个 Embla 轮播的测试页面，包含五张示例图片和简单文本。文档展示了图片的嵌入方式和布局，适用于测试轮播功能。",
+        "audience": "前端开发者、测试人员、Embla 轮播组件使用者",
+        "key_points": [
+          "文档标题为 Embla Test",
+          "创建日期为 2025-01-01",
+          "包含五张示例图片",
+          "图片使用占位符服务生成",
+          "图片之间有文本内容",
+          "用于测试 Embla 轮播功能",
+          "文档结构简单明了",
+          "适合作为测试用例"
+        ],
+        "summary": "本文档是一个针对 Embla 轮播的测试页面，展示了如何嵌入多张图片并进行简单描述。文档中包含了五张示例图片，每张图片都有不同的颜色和编号，用于演示轮播效果。此外，文档还包含了一些文本内容，用于测试图片与文本的混合布局。整体而言，该文档旨在提供一个基础的测试环境，帮助用户理解和配置 Embla 轮播组件。",
+        "slug": "embla-test",
+        "tags": [
+          "Embla",
+          "carousel",
+          "test",
+          "图片轮播",
+          "前端测试",
+          "示例"
+        ],
+        "inferred_date": "2025-01-01",
+        "inferred_lang": "en-US",
+        "tokens_used": {
+          "prompt": 669,
+          "completion": 307,
+          "total": 976
+        }
+      },
+      "category": "Frontend Development",
+      "translations": {
+        "es-ES": {
+          "content_length": 1213,
+          "token_used": {
+            "prompt_tokens": 443,
+            "completion_tokens": 578,
+            "total_tokens": 1021,
+            "completion_tokens_details": {
+              "reasoning_tokens": 195
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 443
+          }
+        },
+        "ja-JP": {
+          "content_length": 836,
+          "token_used": {
+            "prompt_tokens": 678,
+            "completion_tokens": 667,
+            "total_tokens": 1345,
+            "completion_tokens_details": {
+              "reasoning_tokens": 263
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 678
+          }
+        },
+        "zh-Hans": {
+          "content_length": 734,
+          "token_used": {
+            "prompt_tokens": 447,
+            "completion_tokens": 496,
+            "total_tokens": 943,
+            "completion_tokens_details": {
+              "reasoning_tokens": 166
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 447
+          }
+        },
+        "de-DE": {
+          "content_length": 1202,
+          "token_used": {
+            "prompt_tokens": 443,
+            "completion_tokens": 610,
+            "total_tokens": 1053,
+            "completion_tokens_details": {
+              "reasoning_tokens": 212
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 443
+          }
+        }
+      },
+      "nativeMarkdownHash": "f75373a8377d0ba9c0f524930a5201ad1525603fa154dd5e83ab075f2d1994f6"
+    },
+    {
+      "hash": "b00926d2c0f36f862bd931a147395060ac3b90b76b129d9da787d4cd7901aa3d",
       "path": "content/gcores-talks.md",
       "links": [
         "https://www.gcores.com/users/464460/talks",
         "https://0xc1.space/images/gcores/d5af5a69eb094000a0442d82ea886fe9-500-500.WEBP",
         "https://0xc1.space/images/gcores/edea92f41dafcd310c76d8f702e77f53-2250-3000.jpg",
+        "https://0xc1.space/images/gcores/a2cab2bc6461eb94ab48cb61ef847080-600-386.JPG",
+        "https://0xc1.space/images/gcores/9f41e894ba69904a68d06c1ec654c9fb-3000-2250.jpg",
         "https://0xc1.space/images/gcores/961a8f9a402126fbe802256130d0d9b4-3000-2000.jpg",
         "https://0xc1.space/images/gcores/414a10aed2900348bd22126bd6a2042c-1170-1747.jpg",
         "https://0xc1.space/images/gcores/c4a828ade12c3439e89eb371441589b7-621-1080.jpg",
+        "https://0xc1.space/images/gcores/5e2c69d3fd0d702f2681170a2c7cea5d-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/058782e686ff66b91d20bc70c14f8143-1349-1001.HEIC",
+        "https://0xc1.space/images/gcores/6cdfb06a29d11ac000b57be6089762e8-2250-3000.jpg",
+        "https://0xc1.space/images/gcores/d5279a8e04fc87b80b4c72fb74f10688-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/93e885feb830229d0be84168d289def8-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/e6701abeb0ab16b7f6a7e883d8e0c43c-3000-2250.jpg",
         "https://0xc1.space/images/gcores/06989f6a9aefa0498ff9356b6c1923f7-1280-960.jpg",
+        "https://0xc1.space/images/gcores/7ca04b334bd62d8d753f7a57cdf5e2c9-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/cedd4d2b26276ebc08cd5578cec61442-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/55715d26782ff5a1a3ed5bd9acdd0199-4032-3024.HEIC",
         "https://0xc1.space/images/gcores/061424172fff175b1d412ba20ad405a8-1080-1920.jpg",
         "https://0xc1.space/images/gcores/d7453f5674d0b9eb078f8306c8b19d6e-2250-3000.jpg",
+        "https://0xc1.space/images/gcores/aaf6e00a51182ab5174ed0aead31c165-2594-1464.jpg",
+        "https://0xc1.space/images/gcores/2e9d7fb4f3a89a16e1803eea46596839-2596-1470.jpeg",
+        "https://0xc1.space/images/gcores/badc7f0b4420470d7c5cc339997496f3-2590-1460.jpeg",
+        "https://0xc1.space/images/gcores/f2cbf16388f939dc822ea5783be0f749-2250-3000.jpg",
+        "https://0xc1.space/images/gcores/fd3786b7e269c939afa325aed4ae1534-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/b02dbbc6cbe6e5f31fdf35ef8b1d6960-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/a2e5dc58381511e841478d817d239366-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/094650364c212b394167d859905e4984-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/d1eb014c0046576f4b96e76a38d9c7ab-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/aa2289d593fc157175e9a1768c1dc7a7-3000-2000.jpg",
+        "https://0xc1.space/images/gcores/0c814503d754509880ee91bec9bca4f8-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/a8ac417f1fe5d46f29d00ee00020be7f-3000-2000.jpg",
+        "https://0xc1.space/images/gcores/1de84051981bab775dbe16da0a24e90e-3000-1688.jpg",
+        "https://0xc1.space/images/gcores/41d830a7d8acb3d0daa32351f9496b78-3000-1688.jpg",
+        "https://0xc1.space/images/gcores/67c066a7822dc406a1c11ddac4997bc1-3000-1688.jpg",
+        "https://0xc1.space/images/gcores/362ebbd85f928230b757f5abd5bee528-1280-720.jpg",
+        "https://0xc1.space/images/gcores/fb04cbbaea41dc1e7555428b79c9fa43-2979-821.jpg",
+        "https://0xc1.space/images/gcores/bb55c8a58c6b1ab759aa019cf279fd85-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/b6397bbb5c001cd0861c913e17e57ccb-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/d6d8b788de296f365a11f8c42bb51d01-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/ed38887f0256cacf2b10bb6295e665b4-2731-1536.jpg",
+        "https://0xc1.space/images/gcores/18fe9dd143f0a63ea1d1a92a854a14a2-2250-3000.jpg",
+        "https://0xc1.space/images/gcores/6dcb3c6e48221485abd109e86973efe4-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/8b4866919a3a4c6cbdb9b63f42ccebeb-2250-3000.jpg",
+        "https://0xc1.space/images/gcores/c732ef6ad4dba90bb65d63d5482d4611-1920-1080.jpg",
+        "https://0xc1.space/images/gcores/90f9085c6ea5bdaacb5d645737f5d559-1080-1920.jpg",
+        "https://0xc1.space/images/gcores/ff5a026deb800ff917ac476c4158dbad-1080-1440.jpg",
+        "https://0xc1.space/images/gcores/4dca7fa517f23c72eb0e2e36ca4f2467-1280-1919.jpg",
+        "https://0xc1.space/images/gcores/fd663cfe1115c15f7906cc9aa2a1b5e0-2010-1054.jpg",
+        "https://0xc1.space/images/gcores/43091c9346f9d9077dc7f70b9abd2502-1280-1706.jpg",
+        "https://0xc1.space/images/gcores/3f9dce8827956ed17bc3270eceefe764-3000-2250.jpg",
+        "https://0xc1.space/images/gcores/d32e4957260ac6c9674d8b158643b3a5-3000-1688.jpg",
+        "https://0xc1.space/images/gcores/36fd0bff4dbd942c0e6099c8a17fc224-3000-1688.jpg",
+        "https://0xc1.space/images/gcores/36dcbc643beed83d260a1a50b4bfb47b-3000-1688.jpg",
         "https://0xc1.space/images/gcores/f75c890e5fd964bab9324279c7a09ed6-1170-2532.jpg",
         "https://0xc1.space/images/gcores/88a14b4b2fc987dd5b9c038cc5c8f37d-3000-2250.jpg",
         "https://0xc1.space/images/gcores/e1859c7b0e1d99a41c82297c8e947cd1-503-511.WEBP",
+        "https://0xc1.space/images/gcores/8cb5847698d871a29a8970290efd3890-2250-3000.jpg",
+        "https://0xc1.space/images/gcores/ecaa3d3b73c24ea0e410a1ec9a2db9d8-2250-3000.jpg",
+        "https://0xc1.space/images/gcores/dff982b75ec9eb90bc360290379f3193-1169-1542.jpg",
+        "https://0xc1.space/images/gcores/dc00797dfcbf4142c0aec7288b62b299-1080-1920.jpg",
+        "https://0xc1.space/images/gcores/c95904f34fe44d4ddb89074b1e602ab6-1170-2271.jpg",
+        "https://0xc1.space/images/gcores/fdbdd92c89ed43aae36e4d9d59d258bd-1169-2286.jpg",
+        "https://0xc1.space/images/gcores/e7b2bed5c1442f4fe355c573dd63ab29-714-554.jpg",
+        "https://0xc1.space/images/gcores/82e82b4e2babf049f0a276e1118fe966-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/5b647cbcc72c702483548519f883fdd2-2250-3000.jpg",
+        "https://0xc1.space/images/gcores/0ca5a6b3e747d94fbe28c6455c90ad0b-3000-2000.jpg",
+        "https://0xc1.space/images/gcores/c16784c98dc32a5e6c0b5dc032656520-3000-2000.jpg",
+        "https://0xc1.space/images/gcores/f1399452f56226af85778f8c9e74bcf0-3000-2000.jpg",
+        "https://0xc1.space/images/gcores/9e9a09e4c1c2c6e522e667c9ce111da8-3000-2000.jpg",
         "https://0xc1.space/images/gcores/1048b6636d5da87430c74db6f010cfb2-2250-3000.jpg",
         "https://0xc1.space/images/gcores/964474776c19190cb7c016ea497da57a-4032-3024.HEIC",
         "https://0xc1.space/images/gcores/edba42d1a6bf8082b8c4b47d5b9c4863-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/27f9e9ac7a7a7d7f8ea953041424e3a7-2560-1440.jpg",
+        "https://0xc1.space/images/gcores/86ec2bcb799bc887db6a40974bf49c96-2560-1440.jpg",
+        "https://0xc1.space/images/gcores/6af21fb60dbbcf1db9e09a01bdd87894-2560-1440.jpg",
+        "https://0xc1.space/images/gcores/fe699632a39bcec0edf1da571c7fd59f-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/67678b6e08b658cfb964bc77e8526a9a-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/dd722c0c975587683e2c948413d74782-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/ca26485bd5949b7f85c5c1c712b5e791-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/b302fa3777cd62f1bdab2ef56bb62c6f-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/5ce96c910b97faf0612471893f50eeed-4096-3072.jpg",
+        "https://0xc1.space/images/gcores/66e872498e7a20f6520d8970dd01d004-993-2011.PNG",
+        "https://0xc1.space/images/gcores/5feeb266d743b6bcbea1d6fddad9a830-1170-2532.png",
+        "https://0xc1.space/images/gcores/46d8c91e5c93a77f0cf53abe8dba1cc7-1170-2532.png",
+        "https://0xc1.space/images/gcores/6932d5e2ad4f8d7feb8c43ff4073dd29-1170-2532.png",
+        "https://0xc1.space/images/gcores/9da2a6c24a233e9f64c1d68d77a79fd9-1170-2532.png",
+        "https://0xc1.space/images/gcores/74522fa382034db34bf07ddc68f34856-1170-2532.png",
+        "https://0xc1.space/images/gcores/0fdb3a6530111b264d8fb9fc7dc16305-750-1804.JPG",
+        "https://0xc1.space/images/gcores/2d3fa057a0b46dccc24e43c3a3ea2206-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/b4f0702db6a6ff725ea199cd772cc8a3-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/e3117dc4f0fe9bb5e2c957f0c1333d35-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/bb3a0391bbfec8f20bc094f3145e6077-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/cd2e83c4dd4991c5bd38695b85bb9315-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/6b5a0bc5e8cc9a696f29c71ba935ffd7-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/8ed18f211fc37c7277d01f8068a57a95-1707-1280.jpg",
+        "https://0xc1.space/images/gcores/09ecbaca3ca5575726e4677ed04b5d29-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/5823794ae8a4ec6707f67c8b86307bca-1920-1080.JPG",
+        "https://0xc1.space/images/gcores/12c597fd5b220693f4352ebdef7f6d0c-1170-2532.png",
+        "https://0xc1.space/images/gcores/e399ae0c2dcff8ecd0b2a9a774cd4dcf-1170-2532.png",
+        "https://0xc1.space/images/gcores/f442ae6bb8e07abd7434dd7e71c2f92d-1920-1080.jpg",
+        "https://0xc1.space/images/gcores/cfa1c82b7657cfbea3cecaab63349c6f-936-461.jpg",
+        "https://0xc1.space/images/gcores/1509fc51d5afb6c0defae12ea2c41e21-1710-1070.jpg",
         "https://0xc1.space/images/gcores/1bea3fdb1374c02055e0e8be58175dfc-4032-3024.HEIC",
         "https://0xc1.space/images/gcores/7d61fbdf5dde6df68e9872e7b27798c4-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/8f09557f0281674e6b0dbc352a3a5262-1170-2532.png",
+        "https://0xc1.space/images/gcores/1f0a358975ce676e561af592a5e08e4b-1170-2532.png",
+        "https://0xc1.space/images/gcores/6e593dcbeae0b4470c3b6088bda289e4-1170-3294.png",
+        "https://0xc1.space/images/gcores/ad49ae4032f62c1fb31b5fd8b1e50b39-1170-2532.png",
         "https://0xc1.space/images/gcores/fd857cb48a74b1bef1e1589b0b237de2-716-1165.JPG",
+        "https://0xc1.space/images/gcores/0ad6514d154c80a9ef6b4b0d6173d132-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/69cea053377d3155d5f7e22e8584f289-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/aedf102fa319ce3df2438386f894def4-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/a75d9b0d346d077d060c78312cdf9287-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/dec5d834edc36a230355b2bd39e31e4b-4032-3024.HEIC",
         "https://0xc1.space/images/gcores/67da102aa90a1895df543f42249a4a79-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/b51977b003bbf86090a89eaecca68721-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/47543f436cacc38b9d1c7279e400b91a-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/334f86b0380e85dbb1e6bf22327fe2d6-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/238168fceb7e42cc33823e0330263e4e-4032-3024.JPG",
+        "https://0xc1.space/images/gcores/778d7709f9b86b7167923ed9591283a4-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/c7b78cec949e47fcb5fd57daaed63d36-4032-3024.jpg",
+        "https://0xc1.space/images/gcores/6793266b66c48e1d36eb6c97403314d3-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/56b32513beb82eddcfdbf80f00091c07-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/359389154b5b9ef98fe34f33616443c7-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/c466bc84ff6ec4c44034904a5df3ca2c-3840-2160.JPG",
+        "https://0xc1.space/images/gcores/b1374ab6b90d7f5c5379196f9fb85757-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/a933667d600ddfac174bb18119dad839-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/b2270c1f0cc7a3863947bbbbc70c736f-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/ea2875399dda266598da557815a69e3c-4032-3024.jpg",
+        "https://0xc1.space/images/gcores/1ef1854595c7d101ba70af553b20f988-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/a781c493d8ec3c4cef9fc4d3b36507e3-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/cce1479e3b6eaa64f6c3817f3d747a43-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/e9f190888047fbfcf88a70397d086bd3-4032-3024.HEIC",
         "https://0xc1.space/images/gcores/0c6f260a74d238e555a6516d158cf84e-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/9cade76650e9d727eebe5452abad06a3-1170-2532.png",
+        "https://0xc1.space/images/gcores/3dc412a80a5b4fce3ba9ad7d2b70643d-1170-2532.png",
+        "https://0xc1.space/images/gcores/5a310d356fd2239de0fce06293ca029e-1170-2532.png",
+        "https://0xc1.space/images/gcores/24bf415bbcede632a6db6d41db78079d-1170-2532.png",
+        "https://0xc1.space/images/gcores/57d461a8752ae9abb40f04bf36f6f2ae-1170-2532.png",
+        "https://0xc1.space/images/gcores/7f883ba1bd6db5dca3361e31f969eafe-1170-2532.png",
+        "https://0xc1.space/images/gcores/58a5d32e1ed1a187b5ccfc09ec778626-1170-2532.png",
+        "https://0xc1.space/images/gcores/e16190241453ab36c7b5da0ce0851f07-1170-2532.png",
         "https://0xc1.space/images/gcores/492a47f514f257c86531aee1ec65bf2b-4032-3024.HEIC",
         "https://0xc1.space/images/gcores/d3fa949eb9e1fdc45176d3389b37b092-1000-2697.png",
+        "https://0xc1.space/images/gcores/09f4e5a3339f186c10c9525cb53b1da8-4032-3024.JPG",
+        "https://0xc1.space/images/gcores/a163f449e61874be597e19f42a5fecfe-608-416.JPG",
         "https://0xc1.space/images/gcores/e2dbde8c08dc31a6697c6cf6f6da0117-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/86270cb1e1f8cd686bacfddfa684f1af-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/f41a68e175601e6cc8770b58dc7110dc-1014-253.jpg",
         "https://0xc1.space/images/gcores/a2e11ba0ac155f8b874a84a73793e97a-1170-2532.png",
         "https://0xc1.space/images/gcores/641f0526f75d524a69f963117deb5c93-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/4c528f8b0e0c68c3fc70b97ea015234c-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/5d68769e46da8aebd5d92044a0554d9d-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/f492d28a80d94fb837785f5ed2140339-3024-4032.HEIC",
         "https://0xc1.space/images/gcores/f23b52499e667ef5cd3232926c662e20-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/96aabaa30d96b604660d331f39faf1e4-1170-2532.png",
+        "https://0xc1.space/images/gcores/7e7dc3845032ac75c5bc5c2a10eeebea-1170-2532.png",
+        "https://0xc1.space/images/gcores/a0b25204866eaafc3b31181d8adabb2a-3024-4032.jpg",
+        "https://0xc1.space/images/gcores/3f6101410870bf18f4c9527fb7dab8c1-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/a965db737125ae1f25d8da1410c36318-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/50c86668c2609df2b477a2fd5da18c4a-4000-3000.JPG",
+        "https://0xc1.space/images/gcores/46f37dba0e2faa26d2e214c72fe56829-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/2f6fa6e361981135dcfadf84824775b3-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/b7e087ef5491a091cf3f04f5f80b55f6-3024-4032.HEIC",
         "https://0xc1.space/images/gcores/757b95c7953a08adb3af8a77145dface-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/3834b297827215ada4723076a9d5f03c-1170-2532.png",
+        "https://0xc1.space/images/gcores/ca0f8add91f4ab9dcfcaac821f921db9-1170-2532.png",
+        "https://0xc1.space/images/gcores/61369667553667ca0a3cc84e3fa11f37-1170-2532.png",
+        "https://0xc1.space/images/gcores/cfefebc05f51329f0da3f56afac27fa0-1170-2532.png",
+        "https://0xc1.space/images/gcores/ee9a154228677ce291e6d935d16fa9fa-1170-2532.png",
+        "https://0xc1.space/images/gcores/614e6cea3ccb5768a35dbf8d3e2dd353-1170-2532.png",
+        "https://0xc1.space/images/gcores/cca2374a129ddd3ec10ee9c81138d15d-1170-2532.png",
         "https://0xc1.space/images/gcores/6793266b66c48e1d36eb6c97403314d3-4032-3024.HEIC",
         "https://0xc1.space/images/gcores/c40fc276ec201c62d4773a0cfb7f1136-1170-2532.png",
         "https://0xc1.space/images/gcores/f9bf3b1251565bad4b845f49a041881f-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/c883134a810e6de8100b45b3d5a4768d-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/c942747dedf44d5ada6b26710f3c26d3-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/f69af96d5a4390f32056c2c22c90ea09-1170-1881.PNG",
+        "https://0xc1.space/images/gcores/067d86a78abb7198bbf84ccf08e10e06-1170-1984.PNG",
+        "https://0xc1.space/images/gcores/82209c2855bcaf951be6d523c6c9164f-1170-1920.PNG",
+        "https://0xc1.space/images/gcores/15c1221ba7c6dd93d808cc30ca6c5e7b-1170-1980.PNG",
+        "https://0xc1.space/images/gcores/c466bc84ff6ec4c44034904a5df3ca2c-3840-2160.JPG",
+        "https://0xc1.space/images/gcores/d7645de4f6a988bf1a7fc20a44990ad3-1170-1911.PNG",
         "https://0xc1.space/images/gcores/359389154b5b9ef98fe34f33616443c7-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/36839547832b1e064bc81b6b09c873f7-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/9e01abcbe1e6b81132721c930e45c480-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/6c4cfd498143240ca5441b58b5f85644-4032-3024.HEIC",
         "https://0xc1.space/images/gcores/952691120f5a3d6daa7ad2fde19fc897-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/9fb2ad4df4ca03fc8b2dfa6fe521c519-469-784.JPG",
+        "https://0xc1.space/images/gcores/8959db22a625fb8f6fa6ea6526307263-680-680.JPG",
+        "https://0xc1.space/images/gcores/044ff4c85c7817cd32da3ed15a994726-1920-1080.JPG",
         "https://0xc1.space/images/gcores/d8c8d3a437d23a55686ddb17f6b58882-490-453.JPG",
+        "https://0xc1.space/images/gcores/c6097d7b3a844bef3d0b0089f8ca68ac-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/2bcaf33ecf5669ec98f079de29fc7b8b-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/9f6f0d490efa0cacadd794277f361090-1280-2274.jpg",
+        "https://0xc1.space/images/gcores/e1c9640a9329eef2a67e306f13b12af9-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/d45213c61cf8640466c9504bd9b1cb2d-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/ce91d51e144654b7e04ec6e22152bb7c-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/56b32513beb82eddcfdbf80f00091c07-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/4bff14385ea667879f82c402f8b9bf0b-4032-3024.JPG",
+        "https://0xc1.space/images/gcores/c6a6954781acad67da11355110ab6e0e-3264-2448.JPG",
+        "https://0xc1.space/images/gcores/9c5f3192b90117b8a5b2476292b27e70-1344-2011.png",
+        "https://0xc1.space/images/gcores/f3d68168a27dccb162a806d1d97783db-3024-4032.jpg",
+        "https://0xc1.space/images/gcores/b1b2912067ac39eefe8cf3a8e806dbbd-1010-920.jpg",
+        "https://0xc1.space/images/gcores/f0b945b32623c54764094a45c151488c-2625-1675.jpg",
+        "https://0xc1.space/images/gcores/f93508ee2fbada73faf8d7488d51c50a-474-496.jpg",
+        "https://0xc1.space/images/gcores/8dda3e4ad21c1ed029f76b3ecec43bd2-1170-2532.png",
+        "https://0xc1.space/images/gcores/9210850f361167e002cd61757f48c48f-474-266.JPG",
         "https://0xc1.space/images/gcores/9bfa870e02b3597e2b764dfa53a267d9-3024-4032.HEIC",
         "https://0xc1.space/images/gcores/1773cf6a3297ccd10c75ebe98273091b-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/e0d7d87cfa07caeab5780bba38c92362-600-421.JPG",
+        "https://0xc1.space/images/gcores/9d7ae6f86b74ca22666ee227f8ed466e-4032-3024.JPG",
+        "https://0xc1.space/images/gcores/9527c5b1d278cd768648de43956c9adb-1170-238.PNG",
+        "https://0xc1.space/images/gcores/25642debb61c6dd4f98820cc94643329-1920-1080.JPG",
+        "https://0xc1.space/images/gcores/91724b51ad1ce914427eb072fac946da-3024-4032.jpg",
+        "https://0xc1.space/images/gcores/24598604fa7c0078ae9212417f59b39b-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/367cc0d9679454f2c7d9d601ada6c966-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/d3fd62dce7562dbe53a42f5daf6f6499-1170-2532.png",
+        "https://0xc1.space/images/gcores/0e5e381ec1a4a08fddf8b7fc0410925e-1170-2532.png",
+        "https://0xc1.space/images/gcores/15b3d0c12afb72b128ea21f53d626985-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/b72b9c170f15d0d82c6ca62f195e0107-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/2337197c7813f0794bbfb10da0f0b924-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/090bfc1a12b27d6b624ac26ed2e2c1b9-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/248dd9c29414630e48e41f1340136be7-1080-1920.JPG",
+        "https://0xc1.space/images/gcores/bdb516e9fc618958d6af6bea16dca2ce-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/e1436f331dda0fdc8f7e4ad633a34212-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/0309306da15704bcc69ad10326c25aaf-4032-3024.HEIC",
         "https://0xc1.space/images/gcores/4a381e774ea3648c532d967ea7b307ef-3024-4032.JPG",
+        "https://0xc1.space/images/gcores/ea5aa997859652bed50572928ade4c23-676-1021.png",
+        "https://0xc1.space/images/gcores/2be3decd0505ba4449ab42d25e3f86cf-1170-1950.PNG",
+        "https://0xc1.space/images/gcores/3c64c2a15eb835039636e7f4e2603003-858-219.PNG",
+        "https://0xc1.space/images/gcores/9efd6bf334e2fbc0675ab4c3bad6f4e4-1170-2532.png",
+        "https://0xc1.space/images/gcores/fc9c2771098a9f738481c21521e7cb50-1170-2532.png",
         "https://0xc1.space/images/gcores/7a94cb61c6142048180d00821366b9b9-680-453.jpg",
+        "https://0xc1.space/images/gcores/b2a1891aa77b82a301277ca30ac71996-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/d5296095bc9579f85f88553cc0521f52-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/a6ace1a5db85cd45eb1812874c504e5f-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/1c4b8afc73d18b2d4962e1de11c5fb6d-3024-4032.HEIC",
         "https://0xc1.space/images/gcores/ba008ca8d6129005bb70adc0e8710d93-3852-2098.png",
+        "https://0xc1.space/images/gcores/565985ca2d4054f3d428328dfeaa0159-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/26ed2286dabe0c1638d3d31d849bbe56-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/e28cbd568ec621a0d35c2caeea87ece4-4032-3024.HEIC",
         "https://0xc1.space/images/gcores/6f170b3369073ff42e51787b77973e89-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/0f0c59e1bad89bf9d135259ad7e8cb04-1170-2532.png",
+        "https://0xc1.space/images/gcores/14525bdb0690e3c16e8436586143cb0a-1170-2532.png",
+        "https://0xc1.space/images/gcores/c28eb6a3a6a2e936698a26970859a95f-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/64b474500582c1f6d282576f50e30bb0-1170-2532.png",
         "https://0xc1.space/images/gcores/ceab58dca303a143e75fc86bdcbc5176-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/38d764e07f6392a87d21d33afaec487d-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/f16a43210a27542233a3e5ecbd1bef8a-1170-1261.JPG",
+        "https://0xc1.space/images/gcores/778d7709f9b86b7167923ed9591283a4-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/f16a43210a27542233a3e5ecbd1bef8a-1170-1261.JPG",
         "https://0xc1.space/images/gcores/d98738249c875b24c61230ae291af761-474-496.JPG",
+        "https://0xc1.space/images/gcores/2b3ea5f695fe284c14a07220364ad246-1080-1920.JPG",
+        "https://0xc1.space/images/gcores/80dcb43413e77e3b21c45754e64b0d54-3024-4032.HEIC",
         "https://0xc1.space/images/gcores/74efcbc1a10ca7885ddf26280fd9eb11-240-241.GIF",
         "https://0xc1.space/images/gcores/ea16b40c3f132fe58d5ea94b5f5f98f1-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/da8855cd5570c13ed7e0366896f8066d-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/ca2134cd03e5526aaaa480c21c9d1f33-3024-4032.HEIC",
+        "https://0xc1.space/images/gcores/623f1214355893cb1184832cae8fe6b1-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/8818749d15dd6cc556cc0c4632dd220f-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/ef6d25e1405636ef9c3f80899bbea043-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/a0bf089211d8d0eafb8d4fd3bc3bff7b-4032-3024.HEIC",
+        "https://0xc1.space/images/gcores/a450bd2550bac678bd392520d11f5261-4032-3024.HEIC",
         "https://0xc1.space/images/gcores/d959c888feee20df3b26b773c2a8a702-425-425.JPG",
         "https://0xc1.space/images/gcores/18ac0205c6c06020e667122a33ac7c27-4032-3024.JPG",
         "https://0xc1.space/images/gcores/06692b73533548d9af0b770b793fa836-1920-1080.JPG",
         "https://0xc1.space/images/gcores/238168fceb7e42cc33823e0330263e4e-4032-3024.JPG",
         "https://0xc1.space/images/gcores/28d97bd200cc0cfa42fb964c8d84c353.HEIC",
+        "https://0xc1.space/images/gcores/1e9b4c9e24e745d8b8901384dcf6dce1.HEIC",
+        "https://0xc1.space/images/gcores/0af46340808ef62e84705932cbf1ecda.HEIC",
         "https://0xc1.space/images/gcores/37f785daae8d51ec221250fce7c9168f.GIF",
         "https://0xc1.space/images/gcores/b873fffc348ebe5f742121572e64513a.HEIC",
         "https://0xc1.space/images/gcores/cddc11dbffe501ec1e7ab63ce7522298.png",
@@ -198,44 +865,109 @@
         "https://0xc1.space/images/gcores/1e305210-d41c-4dfd-aec7-5c1223bb50c6.JPG"
       ],
       "metadata": {
-        "title": "0xc1 的机组日志",
-        "description": "记录了作者从2023年1月到2026年1月的个人生活、旅行、游戏、情感和思考的碎片化日志。",
-        "short_summary": "这是一份个人日志，记录了作者近三年的生活点滴，包括旅行、游戏、情感和技术探索。日志强调人与人的连接、理想主义的坚持以及对日常生活的深刻反思。通过碎片化的记录，作者展现了生活的丰富性和自我成长的轨迹。",
-        "audience": "对个人成长、生活记录、文化分享和技术探索感兴趣的读者，特别是年轻人和数字文化爱好者。",
+        "title": "0xc1的机组日志：生活碎片与情感记录",
+        "description": "0xc1在机核网的个人日志，记录生活点滴、情感故事、游戏体验和旅行回忆，展现真实而丰富的个人世界。",
+        "short_summary": "0xc1的机组日志记录了作者多年来的生活点滴、情感故事和兴趣爱好。内容涵盖游戏体验、旅行见闻、技术思考和个人感悟，展现了真实而丰富的个人世界。日志以亲切的笔触分享日常，既有轻松的生活碎片，也有深刻的情感反思。",
+        "audience": "机核网用户、喜欢阅读个人生活记录和情感故事的读者、游戏爱好者、技术爱好者",
         "key_points": [
-          "日志时间跨度从2023年1月到2026年1月，覆盖近三年的个人经历。",
-          "内容多样化，包括日常生活、旅行故事、游戏体验、情感回忆和技术思考。",
-          "强调友谊的重要性，多次提及与朋友如zl、playground等的互动和旅行。",
-          "展现理想主义和对生活的深刻反思，如对婚姻、时间、虚无感的探讨。",
-          "包含技术相关分享，如编程、NixOS使用、AI工具体验等。",
-          "记录情感经历，如分手、思念、焦虑等个人情绪变化。",
-          "突出人与人的连接，认为这是抵御空虚和寻找意义的关键。",
-          "鼓励积极表达和记录，以对抗生活的平淡和虚无。",
-          "涉及文化内容，如音乐、诗歌、话剧、动画的欣赏和推荐。",
-          "体现作者对自我成长的持续关注和哲学思考。"
+          "记录日常生活碎片，如养猫、做饭、骑车等琐事",
+          "分享情感故事，包括爱情、友情和家庭回忆",
+          "详述游戏体验，如《怪物猎人》《星际争霸2》《蔚蓝》等",
+          "描述旅行见闻，包括青海湖骑行、美国旅行、杭州散心等",
+          "探讨技术话题，如NixOS、Vim、CRUD等",
+          "反思个人成长和人生感悟",
+          "展现与朋友（如zl、playground等）的深厚友谊",
+          "分享对音乐、电影、动画的欣赏和评论",
+          "记录参与核聚变等活动的经历",
+          "表达对理想和未来的思考"
         ],
-        "summary": "本文是作者0xc1在机组平台发布的个人日志，时间跨度从2023年1月到2026年1月，内容涵盖日常生活、旅行见闻、游戏体验、情感回忆、技术思考等多个方面。日志以碎片化形式呈现，包括文字、图片和链接，展现了作者对生活的细腻观察、对友谊的珍视、对理想的追求以及对自我成长的反思。核心论点在于通过记录和分享，构建人与人的连接，寻找生命的意义和活力。结论是生活充满多样性和可能性，鼓励读者积极体验和表达。",
-        "slug": "0xc1-journal",
+        "summary": "本文是0xc1在机核网的个人日志集合，时间跨度从2023年到2026年，内容涵盖日常生活碎片、情感故事、游戏体验（如《怪物猎人》《星际争霸2》《蔚蓝》等）、旅行见闻（如青海湖骑行、美国旅行、杭州散心等）、技术思考（如NixOS、Vim、CRUD等）以及个人感悟。日志以第一人称叙述，风格亲切真实，既有琐碎的生活记录，也有深刻的情感反思，展现了作者对生活、友情、爱情和理想的思考。",
+        "slug": "0xc1-gcores-journal",
         "tags": [
           "个人日志",
-          "生活碎片",
-          "旅行",
-          "游戏",
-          "情感",
-          "技术",
-          "友谊",
-          "反思"
+          "生活记录",
+          "游戏体验",
+          "旅行见闻",
+          "情感故事",
+          "技术思考",
+          "机核网"
         ],
-        "inferred_date": "2026-01-11",
+        "inferred_date": "2026-01-15",
         "inferred_lang": "zh-Hans",
         "tokens_used": {
-          "prompt": 37177,
-          "completion": 518,
-          "total": 37695
+          "prompt": 43015,
+          "completion": 505,
+          "total": 43520
         }
       },
-      "category": "Personal Reflection",
-      "nativeMarkdownHash": "13b9f41b35e6324e1d29eb12bc9434ecd8d0d968e6e1a1ccf2382376672858d5"
+      "category": "Blog Content",
+      "translations": {
+        "en-US": {
+          "content_length": 25812,
+          "token_used": {
+            "prompt_tokens": 42806,
+            "completion_tokens": 8367,
+            "total_tokens": 51173,
+            "completion_tokens_details": {
+              "reasoning_tokens": 175
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 42806
+          }
+        },
+        "es-ES": {
+          "content_length": 23114,
+          "token_used": {
+            "prompt_tokens": 42808,
+            "completion_tokens": 8423,
+            "total_tokens": 51231,
+            "completion_tokens_details": {
+              "reasoning_tokens": 231
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 42808
+          }
+        },
+        "ja-JP": {
+          "content_length": 14039,
+          "token_used": {
+            "prompt_tokens": 43043,
+            "completion_tokens": 8458,
+            "total_tokens": 51501,
+            "completion_tokens_details": {
+              "reasoning_tokens": 266
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 43043
+          }
+        },
+        "de-DE": {
+          "content_length": 22804,
+          "token_used": {
+            "prompt_tokens": 42808,
+            "completion_tokens": 8399,
+            "total_tokens": 51207,
+            "completion_tokens_details": {
+              "reasoning_tokens": 207
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 42808
+          }
+        }
+      },
+      "nativeMarkdownHash": "86f829ce548fc05e8c7652c63d3724c25f7dc54f9ff3d831e1ff83f3d72d6530"
     },
     {
       "hash": "a55abaeddee43e2f4ee45c3d0a0f24db1b8f8f1fc1726bff28ac9a701624487e",
@@ -683,7 +1415,7 @@
           "total": 1176
         }
       },
-      "category": "Personal Reflection",
+      "category": "Poetry and Literature",
       "nativeMarkdownHash": "b9d5eadd78a4cf79e8acdad7db93588687d3ae8aad2e509def065c919b6a524c"
     },
     {

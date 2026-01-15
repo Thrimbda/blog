@@ -1,0 +1,108 @@
+{
+  "version": "1.0.0",
+  "currentTask": "czon-embla-get-gcores-talkts",
+  "settings": {
+    "autoRemind": true,
+    "remindBeforeReset": true,
+    "taskCreationPolicy": "agent-with-approval"
+  },
+  "tasks": [
+    {
+      "id": "czon-embla-get-gcores-talkts",
+      "name": "调研 CZON embla 轮播图并修改 get-gcores-talk.ts",
+      "status": "active",
+      "createdAt": "2026-01-15T09:35:59.369Z",
+      "updatedAt": "2026-01-15T10:44:57.828Z"
+    }
+  ],
+  "pendingProposals": [
+    {
+      "id": "proposal-mkf987um-8d5189",
+      "name": "调研 CZON embla 轮播图并修改 get-gcores-talk.ts",
+      "goal": "修改 get-gcores-talk.ts 以输出平铺的 markdown 图片，并集成 Embla 轮播图实现，与 CZON 保持一致",
+      "rationale": "用户要求调研 CZON 如何使用 embla 制作轮播图，并修改 get-gcores-talk.ts 使 image 成为用换行符分隔的 markdown 图片平铺（与 CZON 一致），同时使用 embla 进行渲染。当前博客使用自定义 slider 实现，而 CZON 使用更现代的 Embla 库。集成 Embla 可以提升用户体验并保持项目间一致性。",
+      "points": [
+        "调研 CZON 中 Embla 轮播图的实现细节",
+        "分析当前博客的模板结构和现有 slider 实现",
+        "修改 get-gcores-talk.ts 的图片输出逻辑，将 slideshow 宏改为多个 markdown 图片行",
+        "在博客模板中添加 Embla 库加载和初始化脚本",
+        "添加 Embla 所需的 CSS 样式",
+        "测试轮播图功能并确保兼容性"
+      ],
+      "scope": [
+        "/Users/c1/Work/blog/scripts/get-gcores-talk.ts",
+        "/Users/c1/Work/blog/templates/",
+        "/Users/c1/Work/blog/static/js/",
+        "/Users/c1/Work/blog/static/css/"
+      ],
+      "phases": [
+        {
+          "name": "调研与分析",
+          "tasks": [
+            {
+              "description": "详细分析 CZON 的 Embla 实现（JavaScript、CSS、HTML）",
+              "acceptance": "理解 CZON 中 Embla 的加载、初始化和分组逻辑，记录关键代码片段"
+            },
+            {
+              "description": "分析当前博客的模板结构和现有的 slider 实现",
+              "acceptance": "明确现有 slider 的实现方式，确定模板文件位置和脚本加载顺序"
+            },
+            {
+              "description": "确定集成方案（是否替换现有 slider，如何添加 Embla）",
+              "acceptance": "制定具体集成方案，包括 Embla 脚本插入位置、CSS 添加方式、与现有 slider 的兼容性决策"
+            }
+          ]
+        },
+        {
+          "name": "修改 get-gcores-talk.ts",
+          "tasks": [
+            {
+              "description": "修改图片输出逻辑，生成平铺的 markdown 图片行",
+              "acceptance": "get-gcores-talk.ts 输出连续的 markdown 图片行，每行一个图片，移除 slideshow 宏"
+            }
+          ]
+        },
+        {
+          "name": "集成 Embla 到博客模板",
+          "tasks": [
+            {
+              "description": "在模板中添加 Embla 库的加载脚本",
+              "acceptance": "在适当的模板文件（如 base.html 或 blog-page.html）中添加 Embla 和 Embla Autoplay 的 CDN 脚本标签"
+            },
+            {
+              "description": "添加 Embla 初始化 JavaScript 代码",
+              "acceptance": "添加与 CZON 类似的初始化脚本，确保能自动将连续图片分组为轮播图"
+            },
+            {
+              "description": "添加 Embla 所需的 CSS 样式",
+              "acceptance": "将 CZON 的 Embla CSS 样式添加到博客的 CSS 文件中，或通过 style 标签嵌入"
+            }
+          ]
+        },
+        {
+          "name": "测试与验证",
+          "tasks": [
+            {
+              "description": "运行脚本生成测试内容，检查输出格式",
+              "acceptance": "执行 get-gcores-talk.ts 生成 markdown 文件，确认图片行格式正确"
+            },
+            {
+              "description": "构建博客并验证轮播图功能",
+              "acceptance": "使用 zola build 或 serve 预览博客，确认轮播图正常工作，图片可滑动"
+            },
+            {
+              "description": "确保与现有功能兼容",
+              "acceptance": "验证现有 slider 功能（如其他文章中的 slideshow shortcode）不受影响，或决定是否替换"
+            }
+          ]
+        }
+      ],
+      "proposedBy": "Claude",
+      "proposedAt": "2026-01-15T09:35:49.441Z",
+      "status": "approved",
+      "decidedAt": "2026-01-15T09:35:59.369Z",
+      "decidedBy": "Claude",
+      "createdTaskId": "czon-embla-get-gcores-talkts"
+    }
+  ]
+}

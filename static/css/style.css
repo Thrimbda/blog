@@ -204,12 +204,35 @@
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-.slider-dot:hover,
-.slider-dot-active {
-  background-color: var(--text-light);
-}
+ .slider-dot:hover,
+ .slider-dot-active {
+   background-color: var(--text-light);
+ }
 
-.mermaid-shortcode {
+ /* Embla Carousel Styles */
+ .embla {
+   overflow: hidden;
+ }
+ .embla__container {
+   display: flex;
+ }
+ .embla__slide {
+   flex: 0 0 100%;
+   min-width: 0;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ .embla__slide img {
+   max-width: 100%;
+   max-height: min(550px, 55svh);
+   width: auto;
+   height: auto;
+   margin: auto;
+ }
+
+ .mermaid-shortcode {
   display: flex;
   justify-content: center;
   width: 100%;

@@ -101,11 +101,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
 <script defer>hljs.highlightAll();</script>
 
-<!-- mermaid -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js" defer></script>
-<script defer>mermaid.initialize({startOnLoad:true});</script>
+ <!-- mermaid -->
+ <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js" defer></script>
+ <script defer>mermaid.initialize({startOnLoad:true});</script>
 
-<!-- Google tag (gtag.js) -->
+ <!-- Embla Carousel -->
+ <script id="embla-lib" src="https://unpkg.com/embla-carousel/embla-carousel.umd.js" defer></script>
+ <script id="embla-autoplay-lib" src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js" defer></script>
+
+ <!-- Google tag (gtag.js) -->
 {% if config.extra.google_analytics %}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.google_analytics }}"></script>
 <script>

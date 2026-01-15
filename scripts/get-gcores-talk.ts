@@ -303,28 +303,28 @@ generateMarkdown$
     tap((v) => {
       console.info(`Processing talk from ${new Date(v.published_at).toLocaleDateString()}`);
     }),
-    delayWhen((v) =>
-      from(v.images).pipe(
-        mergeMap(async (imageName) => {
-          const localPath = `./static/images/gcores/${imageName}`;
-          try {
-            // Check if file already exists
-            await Deno.stat(localPath);
-            console.info(`Image ${imageName} already exists, skipping download`);
-            return null; // File exists, no need to download
-          } catch {
-            // File doesn't exist, download it
-            console.info(`Downloading image: ${imageName}`);
-            const url = new URL(_gcoresImageUrl(imageName));
-            return await _download(
-              url.toString(),
-              localPath
-            );
-          }
-        }),
-        toArray()
-      )
-    ),
+     // delayWhen((v) =>
+     //   from(v.images).pipe(
+     //     mergeMap(async (imageName) => {
+     //       const localPath = `./static/images/gcores/${imageName}`;
+     //       try {
+     //         // Check if file already exists
+     //         await Deno.stat(localPath);
+     //         console.info(`Image ${imageName} already exists, skipping download`);
+     //         return null; // File exists, no need to download
+     //       } catch {
+     //         // File doesn't exist, download it
+     //         console.info(`Downloading image: ${imageName}`);
+     //         const url = new URL(_gcoresImageUrl(imageName));
+     //         return await _download(
+     //           url.toString(),
+     //           localPath
+     //         );
+     //       }
+     //     }),
+     //     toArray()
+     //   )
+     // ),
     toArray(),
     map((v) => {
         // Sort by published_at descending (newest first)
@@ -341,11 +341,9 @@ generateMarkdown$
       const images =
         v.images.length === 0
           ? ""
-          : v.images.length !== 1
-          ? `{{ slideshow(slides=[${v.images
-              .map((v) => `"${localImageUrl(v)}"`)
-              .join(",")}]) }}`
-          : `![${v.images[0]}](${localImageUrl(v.images[0])})`;
+          : v.images.length === 1
+          ? `![${v.images[0]}](${localImageUrl(v.images[0])})`
+          : v.images.map(img => `![${img}](${localImageUrl(img)})`).join("\n");
       // const images = "";
       const tags = v.tags.map((v) => `- ${v}`).join("\n");
       // const tags = "";

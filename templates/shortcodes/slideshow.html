@@ -1,8 +1,8 @@
 <div class="slider-container">
-  <div class="slider-wrapper">
-    <div class="slider">
+  <div class="embla">
+    <div class="embla__container">
       {% for slide in slides %}
-      <div class="slider-item">
+      <div class="embla__slide">
         <img src="{{slide}}" />
         {% if slide.caption %}
         <div class="caption">{{slide.caption}}</div>
@@ -10,13 +10,5 @@
       </div>
       {% endfor %}
     </div>
-    <button class="slider-prev" type="button">&#10094;</button>
-    <button class="slider-next" type="button">&#10095;</button>
-  </div>
-  <!-- The dots/circles -->
-  <div class="slider-dot-container">
-    {% for slide in slides %}
-    <span class="slider-dot"></span>
-    {% endfor %}
   </div>
 </div>
