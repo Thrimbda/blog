@@ -12,6 +12,113 @@
   },
   "files": [
     {
+      "hash": "f94b1cc4519053947dfbce6688602e233ebea9d339014ac83d6666f12d7eb17c",
+      "path": "MCP_NOTION.md",
+      "links": [],
+      "metadata": {
+        "title": "Notion MCP 在 OpenCode 中的配置与使用指南",
+        "description": "本文详细介绍了如何在 OpenCode 中成功配置和使用 Notion MCP 服务器，包括认证、工具使用和故障排除。",
+        "short_summary": "本文指导用户如何在 OpenCode 中配置和使用 Notion MCP 服务器。它涵盖了从初始配置、OAuth 认证到实际使用 Notion 工具（如搜索页面、管理数据库）的完整流程。文档还提供了故障排除方法和替代的本地服务器配置方案。",
+        "audience": "使用 OpenCode 并希望集成 Notion 功能的开发者或技术用户。",
+        "key_points": [
+          "Notion MCP 已在 OpenCode 中通过远程服务器成功配置。",
+          "使用 OAuth 进行认证，令牌安全存储于本地。",
+          "可通过命令行检查 MCP 服务器状态和管理认证。",
+          "在 OpenCode 中可直接使用 Notion 工具进行页面搜索、内容检索等操作。",
+          "提供了详细的故障排除步骤，包括调试和重新认证。",
+          "作为替代，支持使用本地 MCP 服务器并配置 API 令牌。",
+          "强调了 OAuth 令牌的安全存储和远程服务器的可靠性。",
+          "文档最后标注了设置完成日期为 2026-01-18。"
+        ],
+        "summary": "本文是一份关于在 OpenCode 中设置和使用 Notion MCP 服务器的完整指南。文档首先确认了通过远程 MCP 服务器成功完成配置，并提供了存储在 `opencode.json` 中的具体配置示例。接着说明了 OAuth 认证已成功完成，认证令牌安全存储。文章核心部分详细阐述了如何使用 Notion 工具，包括检查服务器状态、在提示中引用工具、以及可用的工具范围（如搜索页面、检索内容、管理数据库等）。此外，还提供了重新认证、注销以及故障排除的步骤。文档也提到了作为替代方案的本地 MCP 服务器配置方法，并强调了安全注意事项。最后，文档标注了设置完成日期为 2026-01-18。",
+        "slug": "notion-mcp-opencode-setup-guide",
+        "tags": [
+          "Notion",
+          "MCP",
+          "OpenCode",
+          "配置指南",
+          "API 集成",
+          "自动化",
+          "开发工具"
+        ],
+        "inferred_date": "2026-01-18",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1141,
+          "completion": 503,
+          "total": 1644
+        }
+      },
+      "category": "Technical Tutorial",
+      "translations": {
+        "en-US": {
+          "content_length": 3599,
+          "token_used": {
+            "prompt_tokens": 999,
+            "completion_tokens": 1145,
+            "total_tokens": 2144,
+            "completion_tokens_details": {
+              "reasoning_tokens": 262
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 999
+          }
+        },
+        "es-ES": {
+          "content_length": 4081,
+          "token_used": {
+            "prompt_tokens": 1001,
+            "completion_tokens": 1291,
+            "total_tokens": 2292,
+            "completion_tokens_details": {
+              "reasoning_tokens": 163
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1001
+          }
+        },
+        "ja-JP": {
+          "content_length": 2501,
+          "token_used": {
+            "prompt_tokens": 1236,
+            "completion_tokens": 1426,
+            "total_tokens": 2662,
+            "completion_tokens_details": {
+              "reasoning_tokens": 231
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1236
+          }
+        },
+        "de-DE": {
+          "content_length": 4060,
+          "token_used": {
+            "prompt_tokens": 1001,
+            "completion_tokens": 1424,
+            "total_tokens": 2425,
+            "completion_tokens_details": {
+              "reasoning_tokens": 234
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1001
+          }
+        }
+      },
+      "nativeMarkdownHash": "00ee6f6f7b240cec976505b05dc905f1609e349f7d30ac126f5a1f9972790af0"
+    },
+    {
       "hash": "c0dfa46f7ac0e02c254b30008f4d79a8c50faf77a1fae27697f1ff75d186c076",
       "path": "README.md",
       "links": [
@@ -1051,6 +1158,336 @@
       "nativeMarkdownHash": "602f3ea81e1c28c4d697429b0e1e4c4b0dfd3678c25266f925a55b6c772f0000"
     },
     {
+      "hash": "37752561fa61da4c5f1f3de71fc2d9290d0d3034aa82e1bd0e743d1d96dfd9fe",
+      "path": "content/blog/2020-04-工作日志.md",
+      "links": [
+        "https://github.com/scalameta/scalafmt/issues/337",
+        "https://jira.momenta.works/browse/HDMAPMDK-1111"
+      ],
+      "metadata": {
+        "title": "2020年4月工作日志",
+        "description": "记录了2020年4月期间在技术项目中的工作进展，包括限速编译、自定义限速方案、bug修复和地图数据规范同步等关键任务。",
+        "short_summary": "这篇工作日志总结了2020年4月的技术工作，重点包括限速编译和自定义限速方案的开发与验证，以及对向车道POI绑定的实现。同时，文档记录了地图数据规范的同步修改和多个bug的修复过程，反映了日常开发中的问题解决和团队协作。",
+        "audience": "技术团队成员、项目管理者、对地图数据处理和编译系统开发感兴趣的开发者。",
+        "key_points": [
+          "完成了限速编译的基本实现和验证，并讨论了自定义限速方案的技术细节。",
+          "修复了RoadBorder中的错误假设，完善了测试用例和工具链。",
+          "实现了对向车道POI绑定的功能，并进行了测试数据构造和调试。",
+          "同步修改了地图数据规范（mdm spec）和原型（proto），解决了遗留问题。",
+          "处理了多个bug（如HDMAPMDK-1111、1121、1143），以应对发版前的压力。",
+          "提出了Sectioning问题的优化算法，研究了自执行Jar原理等技术探索。",
+          "与团队成员（如广聪、逸铭、晓康等）进行了多次技术讨论和协作。",
+          "记录了日常工作中的奇思妙想，如使用Spark、OSM Context需求等。",
+          "文档以日期结构组织，清晰展示了工作进展和问题解决的时间线。",
+          "涉及编译系统、地图数据处理、性能优化等多个技术领域。"
+        ],
+        "summary": "本文档是2020年4月的工作日志，详细记录了作者在技术项目中的日常进展和问题解决过程。核心工作包括限速编译的实现与验证、自定义限速方案的讨论与算法梳理、对向车道POI绑定的完成与测试，以及地图数据规范（mdm spec）与原型（proto）的同步修改。此外，文档还涉及多个bug的修复（如HDMAPMDK-1111、1121、1143等）、性能优化方案的提出（如Sectioning问题中的edgeLifting优化），以及团队协作与知识分享（如与同事讨论接口、review代码）。文档以日期为结构，展现了从方案设计、开发实现到测试调试的全流程，突出了技术挑战的解决和项目推进的关键节点。",
+        "slug": "2020-04-work-log",
+        "tags": [
+          "工作日志",
+          "技术开发",
+          "限速编译",
+          "自定义限速",
+          "bug修复",
+          "地图数据",
+          "月度总结",
+          "性能优化"
+        ],
+        "inferred_date": "2020-04-01",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1604,
+          "completion": 587,
+          "total": 2191
+        }
+      },
+      "category": "Work Log",
+      "translations": {
+        "en-US": {
+          "content_length": 5658,
+          "token_used": {
+            "prompt_tokens": 1429,
+            "completion_tokens": 1529,
+            "total_tokens": 2958,
+            "completion_tokens_details": {
+              "reasoning_tokens": 161
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1429
+          }
+        },
+        "ja-JP": {
+          "content_length": 3191,
+          "token_used": {
+            "prompt_tokens": 1666,
+            "completion_tokens": 1950,
+            "total_tokens": 3616,
+            "completion_tokens_details": {
+              "reasoning_tokens": 173
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1666
+          }
+        },
+        "es-ES": {
+          "content_length": 6735,
+          "token_used": {
+            "prompt_tokens": 1431,
+            "completion_tokens": 2081,
+            "total_tokens": 3512,
+            "completion_tokens_details": {
+              "reasoning_tokens": 142
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1431
+          }
+        },
+        "de-DE": {
+          "content_length": 6626,
+          "token_used": {
+            "prompt_tokens": 1431,
+            "completion_tokens": 2174,
+            "total_tokens": 3605,
+            "completion_tokens_details": {
+              "reasoning_tokens": 201
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1431
+          }
+        }
+      },
+      "nativeMarkdownHash": "a2a6bdc9ee73646fd72aeb99e430dfc19a0ad49334cf4fb370272e25504dd21b"
+    },
+    {
+      "hash": "8f317bf29202c908e633f532b8a8cccdb9f485abe05b9a2d4056edfd764d11f2",
+      "path": "content/blog/2020-05-工作日志.md",
+      "links": [],
+      "metadata": {
+        "title": "2020年5月工作日志",
+        "description": "记录了2020年5月期间的技术工作，包括内存泄漏修复、PolyLine问题、bug修复、CI Pipeline规划等。",
+        "short_summary": "本文是2020年5月的工作日志，涵盖了内存泄漏修复、PolyLine问题、多个bug修复、OSM重构和CI Pipeline规划等技术工作。日志还记录了问题解决的方法论思考，如短期与长期方案的平衡，以及时间管理和团队协作的反思。",
+        "audience": "技术开发人员、项目经理、对软件开发和问题解决感兴趣的读者",
+        "key_points": [
+          "内存泄漏问题因野指针未删除，通过重构NaviEventProvider解决",
+          "PolyLine重复点导致几何计算异常，通过检查并抛出异常处理",
+          "修复HDMAPMDK-1211等bug，涉及产线切分不合理问题",
+          "对OSM Assembler进行重构，提高代码可读性和易编写性",
+          "规划CI Pipeline的现状、需求和方案",
+          "处理突发bug，如停车位绑定错误和红绿灯绑定问题",
+          "反思问题解决模式：短期方案快速解决，长期方案系统完善",
+          "记录面试经历和候选人评估",
+          "进行时间估计和任务优先级管理",
+          "团队协作和跨部门问题解决"
+        ],
+        "summary": "本文是2020年5月的工作日志，详细记录了在技术开发、问题解决和项目规划方面的日常工作。主要内容包括：修复内存泄漏问题，根本原因在于野指针未删除，通过重构NaviEventProvider解决；处理PolyLine重复点导致的几何计算异常；修复多个HDMAPMDK相关的bug，如产线切分不合理导致的错误；进行OSM Assembler重构；规划CI Pipeline的现状和需求；以及处理突发任务如停车位绑定错误等。日志还反映了对时间估计、问题解决模式（短期与长期方案）的思考，以及面试和团队协作的经历。",
+        "slug": "2020-05-work-log",
+        "tags": [
+          "工作日志",
+          "技术",
+          "bug修复",
+          "内存泄漏",
+          "重构",
+          "CI",
+          "面试",
+          "项目管理"
+        ],
+        "inferred_date": "2020-05-01",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 2803,
+          "completion": 495,
+          "total": 3298
+        }
+      },
+      "category": "Work Log",
+      "translations": {
+        "en-US": {
+          "content_length": 12057,
+          "token_used": {
+            "prompt_tokens": 2575,
+            "completion_tokens": 2991,
+            "total_tokens": 5566,
+            "completion_tokens_details": {
+              "reasoning_tokens": 221
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 2575
+          }
+        },
+        "ja-JP": {
+          "content_length": 6499,
+          "token_used": {
+            "prompt_tokens": 2812,
+            "completion_tokens": 3887,
+            "total_tokens": 6699,
+            "completion_tokens_details": {
+              "reasoning_tokens": 240
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 2812
+          }
+        },
+        "de-DE": {
+          "content_length": 13703,
+          "token_used": {
+            "prompt_tokens": 2577,
+            "completion_tokens": 4092,
+            "total_tokens": 6669,
+            "completion_tokens_details": {
+              "reasoning_tokens": 250
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 2577
+          }
+        },
+        "es-ES": {
+          "content_length": 13542,
+          "token_used": {
+            "prompt_tokens": 2577,
+            "completion_tokens": 3956,
+            "total_tokens": 6533,
+            "completion_tokens_details": {
+              "reasoning_tokens": 261
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 2577
+          }
+        }
+      },
+      "nativeMarkdownHash": "4390a6280d1405f8175585ed7aeb5aaf034391fe51e392951322c296e61de19c"
+    },
+    {
+      "hash": "917f17b1cfe1fd31e654a561e0963f4c2e040507f2434bc5fbd9254f67d659f3",
+      "path": "content/blog/2020-06-工作日志.md",
+      "links": [],
+      "metadata": {
+        "title": "2020年6月工作日志与反思",
+        "description": "一位软件工程师在2020年6月的工作日志，记录了技术问题解决、职业发展反思、工作心态调整以及对编程范式和工程实践的思考。",
+        "short_summary": "这是一份2020年6月的工程师工作日志，既记录了具体的技术任务和问题解决过程，也包含了深入的职业反思。作者探讨了重构的风险、工作意义的定义、编程范式的思考，以及在考虑职业变动时的心态调整。",
+        "audience": "软件工程师、开发者，尤其是对职业发展、技术反思和工作日志记录感兴趣的人群。",
+        "key_points": [
+          "在项目交付前进行大规模重构存在风险，需明确目标并控制进度。",
+          "工作意义应侧重于提出有价值问题、积累问题建模能力，而非仅解决具体任务。",
+          "应克服内向心理，勇于向他人交流求教，避免因害怕显得愚蠢而封闭自己。",
+          "对编程范式（如OOP、FP）的“银弹”思维是危险的，需用实践检验其适用性。",
+          "工作环境变化（如搬迁）可能带来不适，需主动调整心态和寻找定位。",
+          "在考虑职业变动时，应以长远眼光规划，并做好当前工作的收尾。",
+          "警惕拖延和习惯现状，对问题应及时解决而非长期搁置。",
+          "工程师常有能力否定倾向，需理性评估“最佳实践”是否真正适用。"
+        ],
+        "summary": "本文是作者2020年6月的工作日志，详细记录了每天的技术工作内容，如解决编译器导致的抓路问题、红绿灯获取bug、数据清洗、HDMAPMDK任务重构等。同时，日志包含了深刻的职业反思：作者探讨了在交付前进行大规模重构的风险，强调了明确目标和策略的重要性；反思了工作意义，认为提出有价值问题、积累建模能力比单纯解决具体问题更重要；分析了自身内向性格对交流的影响，鼓励自己勇于求教；通过阅读王垠博客和与他人交流，批判了对编程范式（如OOP、FP）的“银弹”思维，主张用实践检验真理；记录了从上海搬到北京工作的不适应感，以及对工作环境、管理方式的看法；最后，在考虑离职的背景下，讨论了如何以长远眼光规划职业生涯，并调整心态应对焦虑。",
+        "slug": "2020-06-work-log",
+        "tags": [
+          "工作日志",
+          "技术反思",
+          "职业发展",
+          "软件工程",
+          "编程范式",
+          "心态调整",
+          "重构"
+        ],
+        "inferred_date": "2020-06-01",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 4098,
+          "completion": 572,
+          "total": 4670
+        }
+      },
+      "category": "Work Log",
+      "translations": {
+        "en-US": {
+          "content_length": 20575,
+          "token_used": {
+            "prompt_tokens": 3919,
+            "completion_tokens": 4871,
+            "total_tokens": 8790,
+            "completion_tokens_details": {
+              "reasoning_tokens": 197
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 3919
+          }
+        },
+        "es-ES": {
+          "content_length": 22686,
+          "token_used": {
+            "prompt_tokens": 3921,
+            "completion_tokens": 6161,
+            "total_tokens": 10082,
+            "completion_tokens_details": {
+              "reasoning_tokens": 209
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 3921
+          }
+        },
+        "ja-JP": {
+          "content_length": 9870,
+          "token_used": {
+            "prompt_tokens": 4156,
+            "completion_tokens": 6411,
+            "total_tokens": 10567,
+            "completion_tokens_details": {
+              "reasoning_tokens": 370
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 4156
+          }
+        },
+        "de-DE": {
+          "content_length": 22897,
+          "token_used": {
+            "prompt_tokens": 3921,
+            "completion_tokens": 6462,
+            "total_tokens": 10383,
+            "completion_tokens_details": {
+              "reasoning_tokens": 208
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 3921
+          }
+        }
+      },
+      "nativeMarkdownHash": "64372b028e0ab45e8e33749dfd642757e9dd27678b7b79ea010b49e3393fcf6e"
+    },
+    {
       "hash": "fde9f7fd0b843bfd9bba7832c7baf2223cbb9f784e5eee822f850154acc06002",
       "path": "content/blog/2020-09-13-窗帘上有小爪印.md",
       "links": [
@@ -1099,6 +1536,224 @@
       "nativeMarkdownHash": "a221c6d35eb662022caf4754097ca6fcbaedfd0b1e04e8cf6910151fa7b1bd6e"
     },
     {
+      "hash": "d8e17bd629a14559f3d461c96c5f1a550176032437494ff2db3a0faef5666133",
+      "path": "content/blog/2024-05-在徐州深夜的思考.md",
+      "links": [],
+      "metadata": {
+        "title": "2024-05 在徐州深夜的思考",
+        "description": "作者反思了在Web3领域的优势与机会，探讨了不同盈利模式的感受，并分享了关于使命的个人见解。",
+        "short_summary": "作者探讨了在Web3领域的技术优势和机会，反思了多种盈利模式的利弊，并分享了对使命的个人理解。文章结合了行业分析和人生思考，旨在寻找有意义的发展方向。",
+        "audience": "对Web3、创业、金融科技感兴趣，寻求个人或职业使命的读者。",
+        "key_points": [
+          "作者具备技术优势，适合在Web3领域发展，Web3比传统金融更透明且有前景。",
+          "Web3提供了新的劳动力组织形式，支持数字游民生活方式。",
+          "跟单生意让人不舒服，投机策略风险高且寂寞。",
+          "融资做SaaS产品虽难，但Yuan作为投资操作系统是值得做的使命。",
+          "套利是稳定现金流的来源，支持其他事业。",
+          "土狗币狙击和KOL喊单考验人性，自动化不足则精力投入不划算。",
+          "基金运作需要强有力的赚钱引擎，过早引入消耗了口碑和精力。",
+          "精力分配是核心的元问题，需要选对方向。",
+          "使命是个人认为注定要做的事，无论是否有用，都贡献力量。",
+          "切格瓦拉的例子说明了使命如何指导人生，找到使命的人生是好的。"
+        ],
+        "summary": "本文是作者在2024年5月于徐州深夜的思考记录。作者首先分析了自身在Web3领域的技术优势，认为相比传统金融，Web3虽不成熟但理念更先进，前景光明。接着，作者回顾了尝试过的多种盈利方式，包括跟单生意、SaaS产品、套利、土狗币狙击和基金，并分享了主观感受，指出精力分配是核心问题。最后，作者通过切格瓦拉的例子阐述了对使命的理解，强调使命是个人认为有意义且必须贡献的事情。文章结合了行业分析、个人反思和人生哲学。",
+        "slug": "2024-05-xuzhou-midnight-thoughts",
+        "tags": [
+          "日记",
+          "反思",
+          "Web3",
+          "金融",
+          "创业",
+          "使命",
+          "技术优势",
+          "盈利模式"
+        ],
+        "inferred_date": "2024-05-01",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1681,
+          "completion": 525,
+          "total": 2206
+        }
+      },
+      "category": "Web3 and Finance",
+      "translations": {
+        "en-US": {
+          "content_length": 7800,
+          "token_used": {
+            "prompt_tokens": 1464,
+            "completion_tokens": 1809,
+            "total_tokens": 3273,
+            "completion_tokens_details": {
+              "reasoning_tokens": 201
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1464
+          }
+        },
+        "es-ES": {
+          "content_length": 8707,
+          "token_used": {
+            "prompt_tokens": 1466,
+            "completion_tokens": 2472,
+            "total_tokens": 3938,
+            "completion_tokens_details": {
+              "reasoning_tokens": 279
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1466
+          }
+        },
+        "ja-JP": {
+          "content_length": 3616,
+          "token_used": {
+            "prompt_tokens": 1701,
+            "completion_tokens": 2609,
+            "total_tokens": 4310,
+            "completion_tokens_details": {
+              "reasoning_tokens": 311
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1701
+          }
+        },
+        "de-DE": {
+          "content_length": 9166,
+          "token_used": {
+            "prompt_tokens": 1466,
+            "completion_tokens": 2664,
+            "total_tokens": 4130,
+            "completion_tokens_details": {
+              "reasoning_tokens": 225
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1466
+          }
+        }
+      },
+      "nativeMarkdownHash": "4a4b839f0e004a7f4eb979d3710bb76ae2fe438464a4c3991fd5ab13b8a69b7e"
+    },
+    {
+      "hash": "3e0b565a1d69d96e58255a31ff421c477982e6089befb869bbc26d6f27159919",
+      "path": "content/blog/2024-10-旅行中的思考.md",
+      "links": [],
+      "metadata": {
+        "title": "2024-10 旅行中的思考",
+        "description": "作者在旅行中反思工作与生活，强调喷泉策略的运维优化、现金流的重要性，以及通过平衡工作与休息实现个人发展。",
+        "short_summary": "作者在旅行中反思工作，提出优化喷泉策略的告警和调仓手段，强调现金流的重要性。同时，他探讨了个人发展目标，认为需要平衡工作与休息，将焦虑转化为前进的动力。",
+        "audience": "对个人发展、工作反思、投资策略和心理健康感兴趣的读者，尤其是创业者和自由职业者。",
+        "key_points": [
+          "喷泉策略需要优化告警和调仓手段，以应对风险并提高运维便捷性。",
+          "工作已进入Day2阶段，需重视持续维护，避免麻木。",
+          "稳定现金流是个人生活和发展其他业务的基础。",
+          "发展目标是扩大资产规模至千万级别，实现一定自由。",
+          "需要加深交流、持续发展已有优势，避免闭门造车。",
+          "平衡工具理性与价值理性，以价值理性指导发展方向。",
+          "焦虑源于对经济和文化资本的渴望，可转化为动力。",
+          "积极休息对于保持工作动力和生活平衡至关重要。"
+        ],
+        "summary": "本文是作者在2024年10月旅行期间写给朋友的一封信，主要讨论了工作、个人发展和生活态度。作者首先针对喷泉策略提出了告警和调仓手段的优化需求，强调进入Day2运维阶段后保持严谨的重要性。接着，作者反思了NTNL事业的现状与未来，认为稳定现金流是基础，并设定了将资产规模扩大十倍的目标。为此，需要加深交流、持续发展已有优势，并平衡工具理性与价值理性。最后，作者分享了对焦虑的看法，认为焦虑源于对经济和文化资本的渴望，但可以通过积极休息来转化这些焦虑为动力。",
+        "slug": "2024-10-travel-reflection",
+        "tags": [
+          "日记",
+          "反思",
+          "工作",
+          "个人发展",
+          "焦虑",
+          "休息",
+          "现金流",
+          "运维"
+        ],
+        "inferred_date": "2024-10-01",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1506,
+          "completion": 477,
+          "total": 1983
+        }
+      },
+      "category": "Personal Reflection",
+      "translations": {
+        "en-US": {
+          "content_length": 6903,
+          "token_used": {
+            "prompt_tokens": 1294,
+            "completion_tokens": 1643,
+            "total_tokens": 2937,
+            "completion_tokens_details": {
+              "reasoning_tokens": 266
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1294
+          }
+        },
+        "es-ES": {
+          "content_length": 7510,
+          "token_used": {
+            "prompt_tokens": 1296,
+            "completion_tokens": 2007,
+            "total_tokens": 3303,
+            "completion_tokens_details": {
+              "reasoning_tokens": 189
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1296
+          }
+        },
+        "ja-JP": {
+          "content_length": 3180,
+          "token_used": {
+            "prompt_tokens": 1531,
+            "completion_tokens": 2250,
+            "total_tokens": 3781,
+            "completion_tokens_details": {
+              "reasoning_tokens": 227
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1531
+          }
+        },
+        "de-DE": {
+          "content_length": 8223,
+          "token_used": {
+            "prompt_tokens": 1296,
+            "completion_tokens": 2319,
+            "total_tokens": 3615,
+            "completion_tokens_details": {
+              "reasoning_tokens": 210
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1296
+          }
+        }
+      },
+      "nativeMarkdownHash": "66598e2f4c304acf1c62adebb3683b00886361ba78f099c1073196314ec5c1c3"
+    },
+    {
       "hash": "896722e9c6feb61f365efb9361f4aafbaf76d56c6baf29709aebaa16df621700",
       "path": "content/blog/拨云见日.md",
       "links": [],
@@ -1139,6 +1794,116 @@
       },
       "category": "Personal Reflection",
       "nativeMarkdownHash": "58769baf66ce812379a062cb119ac9095ed8ca423cefddacb005b40642c85f8b"
+    },
+    {
+      "hash": "93a6b0edc46b2b11ddb20282becef69ccab077e50d89beee5778c4db46b9ea60",
+      "path": "content/blog/布迪厄-关键概念.md",
+      "links": [],
+      "metadata": {
+        "title": "布迪厄关键概念解析",
+        "description": "本文系统介绍了法国社会学家皮埃尔·布迪厄的核心概念，包括习性、场域、资本等，并探讨其思想渊源与理论应用。",
+        "short_summary": "本文系统介绍了布迪厄的社会学核心概念，如习性、场域和资本，这些概念用于分析社会结构与个体实践的关系。文章还探讨了其思想渊源及理论应用，如社会阶级区隔和符号资本斗争。",
+        "audience": "对社会学、哲学感兴趣的学生、学者，以及希望理解社会结构、文化资本和权力关系的读者。",
+        "key_points": [
+          "布迪厄反对传记研究的决定论倾向，强调生活的不确定性。",
+          "习性（Habitus）是结构化结构与结构化结构的统一，连接社会结构与个体实践。",
+          "场域（Field）是社会斗争的空间，由资本分布和权力关系定义。",
+          "资本包括经济资本、文化资本、符号资本等多种形式，其中符号资本涉及对品味的定义权。",
+          "社会阶级通过资本数量和习性的相似性形成，并涉及符号争夺和区隔。",
+          "信念是前反思的、躯体性的无意识遗传，与习性和场域紧密相关。",
+          "迟滞（Hysteresis）描述习性与场域变化不同步导致的脱节现象。",
+          "利益是场域中个体实践的核心驱动力，表现为对资本最大化的追求。",
+          "布迪厄的理论试图超越主观主义与客观主义的对立，走实在论的第三条途径。",
+          "教育、艺术等领域都是利益和资本运作的场域，体现文化再生产和社会不平等。"
+        ],
+        "summary": "本文深入解析了法国社会学家皮埃尔·布迪厄的关键社会学概念，包括习性、场域、资本以及符号资本等。文章首先概述了布迪厄的生平及其思想渊源，受马克思、韦伯、涂尔干等多位思想家影响，他试图超越主观主义与客观主义的对立。核心部分详细阐述了习性作为结构化与结构化的双重特质，场域作为社会斗争空间，以及资本的各种形式如何相互作用产生实践。文章还讨论了社会阶级、符号资本、信念、迟滞和利益等概念，揭示了布迪厄如何用这些工具分析社会结构与个体能动性的关系。最后，文章总结了布迪厄理论对于理解社会不平等、文化再生产以及社会变革的深刻见解。",
+        "slug": "bourdieu-key-concepts",
+        "tags": [
+          "布迪厄",
+          "社会学",
+          "习性",
+          "场域",
+          "资本",
+          "符号资本",
+          "社会理论",
+          "法国哲学"
+        ],
+        "inferred_date": "2024-02-18",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 3438,
+          "completion": 595,
+          "total": 4033
+        }
+      },
+      "category": "Sociology",
+      "translations": {
+        "en-US": {
+          "content_length": 15182,
+          "token_used": {
+            "prompt_tokens": 3242,
+            "completion_tokens": 3384,
+            "total_tokens": 6626,
+            "completion_tokens_details": {
+              "reasoning_tokens": 215
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 3242
+          }
+        },
+        "es-ES": {
+          "content_length": 16620,
+          "token_used": {
+            "prompt_tokens": 3244,
+            "completion_tokens": 4437,
+            "total_tokens": 7681,
+            "completion_tokens_details": {
+              "reasoning_tokens": 223
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 3244
+          }
+        },
+        "ja-JP": {
+          "content_length": 7178,
+          "token_used": {
+            "prompt_tokens": 3479,
+            "completion_tokens": 4767,
+            "total_tokens": 8246,
+            "completion_tokens_details": {
+              "reasoning_tokens": 199
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 3479
+          }
+        },
+        "de-DE": {
+          "content_length": 17033,
+          "token_used": {
+            "prompt_tokens": 3244,
+            "completion_tokens": 4719,
+            "total_tokens": 7963,
+            "completion_tokens_details": {
+              "reasoning_tokens": 204
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 3244
+          }
+        }
+      },
+      "nativeMarkdownHash": "640f4a2a9a6e935aa375a8c5b0242845ac24264f7ca3cd1b9b8af18032d43f7b"
     },
     {
       "hash": "1aa195b25fbf3ed7ded86c4d8d3d1b7d4cbd561f9b7e698b4ae2dd1f4908a9cf",
@@ -1226,6 +1991,113 @@
       },
       "category": "Concurrency",
       "nativeMarkdownHash": "94d9119302e98c32b9cd402a604d2dfada4122aa9f02e5b1b8f4c5a1113c4105"
+    },
+    {
+      "hash": "92e53d5043a808ab47258edfd421fffe1e87f87b69aff75ad47da57b6b91d286",
+      "path": "content/blog/从21世纪安全撤离影评.md",
+      "links": [],
+      "metadata": {
+        "title": "从21世纪安全撤离影评",
+        "description": "作者通过电影《从21世纪安全撤离》探讨少年梦想与成年现实之间的落差，以及成长过程中的心理转变。",
+        "short_summary": "这篇影评探讨了电影《从21世纪安全撤离》中少年梦想与成年现实的冲突。作者认为电影内核是悲剧性的，展现了成长过程中憧憬的幻灭。同时，作者结合自身经历，反思了现实中的成长与适应。",
+        "audience": "对电影评论、成长主题、心理分析感兴趣的读者，尤其是年轻人和影迷。",
+        "key_points": [
+          "电影《从21世纪安全撤离》内核是悲剧性的，展现少年梦想与成年现实的落差",
+          "三位少年进入38岁身体后，欣喜转为幻灭，揭示未来不一定如想象般美好",
+          "作者为少年诚勇被迫接受成年世界的肮脏工作感到难过，认为这种突然剥夺过于残忍",
+          "现实中成长是对未来憧憬的逐步祛魅过程，而非突然的梦想夺取",
+          "作者结合自身大四实习经历，反思如何逐步适应角色转变，珍惜最后校园时光",
+          "引用“存在大于本质”，阐释成长是通过体验现实、经受敲打形成本质的过程",
+          "电影用武力和锻炼击碎扭曲未来，现实中人们虽无法如此激烈，但仍保留部分少年珍贵之物",
+          "作者处于18岁和38岁中间，既明了又迷茫，与电影产生共鸣"
+        ],
+        "summary": "本文是一篇关于电影《从21世纪安全撤离》的影评，作者从个人观影体验出发，深入分析了电影如何展现少年对未来的憧憬与成年后残酷现实的对比。文章指出，电影前半部分充满欢笑，但内核是悲剧性的，通过三位少年突然进入38岁身体后的经历，揭示了梦想幻灭的过程。作者特别感慨于少年诚勇被迫接受成年世界的肮脏工作，认为这种突然的剥夺过于残忍。同时，作者结合自身大四实习的经历，反思了现实世界中人们如何逐步适应角色转变，并引用“存在大于本质”来阐释成长是一个不断体验现实、塑造本质的过程。最后，作者认为电影温柔地击碎了扭曲的未来，而现实中的人们虽无法像电影那样激烈反抗，但仍能保留部分少年时的珍贵之物。",
+        "slug": "cong-21-shi-ji-an-quan-che-li-ying-ping",
+        "tags": [
+          "影评",
+          "成长",
+          "梦想",
+          "现实",
+          "电影分析",
+          "心理转变",
+          "存在主义"
+        ],
+        "inferred_date": "2024-11-17",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1189,
+          "completion": 545,
+          "total": 1734
+        }
+      },
+      "category": "Film and TV Review",
+      "translations": {
+        "en-US": {
+          "content_length": 5234,
+          "token_used": {
+            "prompt_tokens": 1016,
+            "completion_tokens": 1333,
+            "total_tokens": 2349,
+            "completion_tokens_details": {
+              "reasoning_tokens": 258
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1016
+          }
+        },
+        "ja-JP": {
+          "content_length": 2355,
+          "token_used": {
+            "prompt_tokens": 1253,
+            "completion_tokens": 1760,
+            "total_tokens": 3013,
+            "completion_tokens_details": {
+              "reasoning_tokens": 224
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1253
+          }
+        },
+        "es-ES": {
+          "content_length": 5980,
+          "token_used": {
+            "prompt_tokens": 1018,
+            "completion_tokens": 1822,
+            "total_tokens": 2840,
+            "completion_tokens_details": {
+              "reasoning_tokens": 273
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1018
+          }
+        },
+        "de-DE": {
+          "content_length": 6279,
+          "token_used": {
+            "prompt_tokens": 1018,
+            "completion_tokens": 1970,
+            "total_tokens": 2988,
+            "completion_tokens_details": {
+              "reasoning_tokens": 255
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1018
+          }
+        }
+      },
+      "nativeMarkdownHash": "0693c60eae2d25d28c97cfa80f739e4c8c1271c7317e62668bdec1a1a43011cd"
     },
     {
       "hash": "5221db5c2766ca0baade64eb4959a1c4fb1596bf1294c20de8af0c1448781374",
@@ -1551,6 +2423,114 @@
       },
       "category": "System Design",
       "nativeMarkdownHash": "455b70adbbe658cc16577a38f952857c4a7fc1140f182fabd34e0a907c09952d"
+    },
+    {
+      "hash": "9bea477937e2b26cd5298a268e18234cf8600336ffe0317c1e6eb490bddd5d8d",
+      "path": "content/blog/观看水星的魔女引发的痛苦.md",
+      "links": [],
+      "metadata": {
+        "title": "观看《水星的魔女》引发的痛苦与审视",
+        "description": "作者通过《水星的魔女》中斯莱塔的感情线，深刻剖析了自身因剧情共情而产生的痛苦，并探讨了成长、存在主义危机与现实生活的联系。",
+        "short_summary": "作者观看《水星的魔女》S2E5后，因主角斯莱塔的痛苦遭遇而产生强烈共情，引发自身对过去一年创业挫折的反思。文章通过分析斯莱塔的存在主义危机和情感历程，探讨了痛苦在成长中的作用，以及现实生活与虚构故事的交织。",
+        "audience": "《水星的魔女》观众、动漫爱好者、对存在主义、情感分析和个人成长话题感兴趣的读者。",
+        "key_points": [
+          "作者因《水星的魔女》S2E5剧情产生强烈痛苦共情，联系自身创业经历。",
+          "分析了斯莱塔从‘自在’到‘自为’的存在主义危机和情感发展。",
+          "探讨痛苦源于对未知的恐惧、成长必经的挫折以及人际关系的脆弱性。",
+          "通过《霍乱时期的爱情》类比，说明时间与经历对情感理解的改变。",
+          "指出斯莱塔的‘巨婴’状态被打破是成长的必要痛苦过程。",
+          "反思自身‘不切实际的乐观’在现实挫折中面临的挑战。",
+          "强调痛苦与甜蜜相伴，是承受爱与成长的代价。",
+          "认为现实生活不同于剧本，没有集数限制，允许更漫长的成长与探索。"
+        ],
+        "summary": "本文是一篇关于动画《水星的魔女》的深度观后感，作者从斯莱塔的感情线出发，详细描述了观看第二季第五集后所感受到的强烈痛苦，并将其与自身的创业经历和人生感悟相联系。文章探讨了斯莱塔从“自在”到“自为”的存在主义危机，以及她在人际关系中经历的甜蜜与痛苦。作者通过对比《霍乱时期的爱情》中的情节，进一步审视了痛苦的本质——源于对未知的恐惧和对成长的抗拒。最终，作者认识到痛苦是成长的一部分，如同斯莱塔必须经历痛苦才能独立，自己也在现实的挫折中汲取养分，继续前行。",
+        "slug": "pain-and-reflection-from-watching-witch-from-mercury",
+        "tags": [
+          "水星的魔女",
+          "影评",
+          "存在主义",
+          "痛苦",
+          "成长",
+          "共情",
+          "动漫分析",
+          "情感反思"
+        ],
+        "inferred_date": "2023-05-21",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 2497,
+          "completion": 538,
+          "total": 3035
+        }
+      },
+      "category": "Film and TV Review",
+      "translations": {
+        "en-US": {
+          "content_length": 10336,
+          "token_used": {
+            "prompt_tokens": 2303,
+            "completion_tokens": 2799,
+            "total_tokens": 5102,
+            "completion_tokens_details": {
+              "reasoning_tokens": 277
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 2303
+          }
+        },
+        "es-ES": {
+          "content_length": 12725,
+          "token_used": {
+            "prompt_tokens": 2305,
+            "completion_tokens": 3681,
+            "total_tokens": 5986,
+            "completion_tokens_details": {
+              "reasoning_tokens": 259
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 2305
+          }
+        },
+        "ja-JP": {
+          "content_length": 5443,
+          "token_used": {
+            "prompt_tokens": 2540,
+            "completion_tokens": 3721,
+            "total_tokens": 6261,
+            "completion_tokens_details": {
+              "reasoning_tokens": 216
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 2540
+          }
+        },
+        "de-DE": {
+          "content_length": 14144,
+          "token_used": {
+            "prompt_tokens": 2305,
+            "completion_tokens": 4119,
+            "total_tokens": 6424,
+            "completion_tokens_details": {
+              "reasoning_tokens": 225
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 2305
+          }
+        }
+      },
+      "nativeMarkdownHash": "938831590c630158f9ebf4ce5ca69f79ef8b7f34c24e9e069fd86a98fde612f3"
     },
     {
       "hash": "658613fb326867bf9602b9c020c7f90293b6463d6e9669e448921d4afe396efd",
@@ -2375,6 +3355,116 @@
       "nativeMarkdownHash": "c84763dc55e4619da091c32ad0ffa2b8131f0450080b5b4e516b86389592fb53"
     },
     {
+      "hash": "713a2d7ef318576972c05b6b54d87799967c46a046ab57bb6cd006cbeb3b232c",
+      "path": "content/blog/GFS-论文笔记.md",
+      "links": [],
+      "metadata": {
+        "title": "GFS 论文笔记",
+        "description": "GFS 分布式文件系统的设计特点与假设分析，包括对机器失效建模、大文件处理和追加写优化。",
+        "short_summary": "GFS 是一个分布式文件系统，其设计针对大规模数据处理，特点包括对机器失效建模、处理大文件和优化追加写操作。文章还分析了 GFS 的设计假设，如部分失效常态和大文件优化，以支持高效可靠的存储。",
+        "audience": "对分布式系统、文件系统、大数据存储感兴趣的技术人员、学生和研究者。",
+        "key_points": [
+          "GFS 对机器失效建模，运行在便宜硬件集群上，容忍部分失效",
+          "GFS 存储大文件（几 GB 级别），优化 I/O 操作和块大小",
+          "GFS 文件操作以追加为主，为主要优化目标",
+          "GFS 设计考虑应用使用场景，提高灵活性",
+          "部分失效是常态，需要监控、容忍错误和自愈性",
+          "大文件是常态，优化大文件管理",
+          "读取工作负载包括大量流式读取和少量随机读取",
+          "写入工作负载主要是大量顺序写，很少更改",
+          "优化多个客户端并行写同一文件，通过原子操作实现",
+          "GFS 是一个封闭系统，好处是灵活性高"
+        ],
+        "summary": "本文是对 GFS（Google File System）论文的笔记，总结了 GFS 作为分布式文件系统的四个核心特点：对机器失效建模、存储大文件、文件操作以追加为主以及设计考虑应用场景。文章还详细阐述了 GFS 的设计假设，包括部分失效是常态、大文件是常态、读取工作负载分为大量流式读取和少量随机读取、写入工作负载主要是大量顺序写，以及对多个客户端并行写同一文件的优化。这些特点和假设共同构成了 GFS 高效、可靠且适应大规模数据处理的架构基础。",
+        "slug": "gfs-paper-notes",
+        "tags": [
+          "GFS",
+          "分布式系统",
+          "文件系统",
+          "论文笔记",
+          "技术",
+          "大数据",
+          "存储",
+          "Google"
+        ],
+        "inferred_date": "2020-10-29",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 799,
+          "completion": 462,
+          "total": 1261
+        }
+      },
+      "category": "System Design",
+      "translations": {
+        "en-US": {
+          "content_length": 2351,
+          "token_used": {
+            "prompt_tokens": 557,
+            "completion_tokens": 708,
+            "total_tokens": 1265,
+            "completion_tokens_details": {
+              "reasoning_tokens": 221
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 557
+          }
+        },
+        "es-ES": {
+          "content_length": 2919,
+          "token_used": {
+            "prompt_tokens": 559,
+            "completion_tokens": 965,
+            "total_tokens": 1524,
+            "completion_tokens_details": {
+              "reasoning_tokens": 235
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 559
+          }
+        },
+        "ja-JP": {
+          "content_length": 1292,
+          "token_used": {
+            "prompt_tokens": 794,
+            "completion_tokens": 1007,
+            "total_tokens": 1801,
+            "completion_tokens_details": {
+              "reasoning_tokens": 267
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 794
+          }
+        },
+        "de-DE": {
+          "content_length": 2624,
+          "token_used": {
+            "prompt_tokens": 559,
+            "completion_tokens": 989,
+            "total_tokens": 1548,
+            "completion_tokens_details": {
+              "reasoning_tokens": 242
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 559
+          }
+        }
+      },
+      "nativeMarkdownHash": "daf11653388f56b78ac81542b6f282f565c20daa2b5e92ac18b75a98c0664bca"
+    },
+    {
       "hash": "e990d0dca3e254b36af2c51a1f15eea7208aadcd80be8766e34fd4efed063402",
       "path": "content/blog/harbor-operator.md",
       "links": [
@@ -2421,6 +3511,222 @@
       },
       "category": "Kubernetes",
       "nativeMarkdownHash": "b9650fade6d22484d10bcd153c0dfb068580eb5697cefc0149f8986122e6d119"
+    },
+    {
+      "hash": "10488fd5e0b95ca02e83f9b44d54de3863e77bc231143f618bf808522d58e9dd",
+      "path": "content/blog/MapReduce-论文笔记.md",
+      "links": [],
+      "metadata": {
+        "title": "MapReduce 论文笔记",
+        "description": "本文介绍了MapReduce的起源、实现细节、容错机制和性能测试，帮助读者理解这一分布式计算框架的核心思想。",
+        "short_summary": "本文总结了MapReduce论文的核心内容，包括其起源、实现逻辑和容错机制。MapReduce通过抽象并行计算、数据分发和容错，让开发者专注于业务逻辑。文章还讨论了性能测试和优化策略，展示了其在处理大规模数据时的有效性。",
+        "audience": "对分布式系统、大数据处理或MapReduce框架感兴趣的技术人员、学生和工程师",
+        "key_points": [
+          "MapReduce起源于处理大规模数据时面临的并行计算、数据分发和容错挑战",
+          "借鉴函数式编程的Map和Reduce概念，抽象非功能性需求，让工程师专注业务逻辑",
+          "执行逻辑包括数据分片、Master调度、Map和Reduce任务处理、中间结果存储",
+          "容错机制通过Master监控worker、任务重调度和备份任务来保证可靠性",
+          "性能测试在grep和排序任务中展示了高效性，例如在1700台机器上处理10^10条记录",
+          "数据结构存储任务状态和中间文件信息，支持reduce worker拉取数据",
+          "备份任务用于解决“掉队者”问题，优化整体执行时间",
+          "Partition函数用于将相关key聚合，减少不必要的shuffling",
+          "支持本地调试，便于开发和测试"
+        ],
+        "summary": "本文是一篇关于MapReduce论文的笔记，详细解析了MapReduce的起源、执行逻辑、数据结构、容错机制和性能优化。文章指出MapReduce是为了解决大规模数据处理的并行计算、数据分发和容错挑战而提出的抽象模型，借鉴了函数式编程中的Map和Reduce概念。实现部分包括任务分片、Master调度、中间结果存储和备份任务等关键环节。容错方面通过Master监控和任务重调度来保证可靠性。性能测试展示了在grep和排序任务中的高效表现。总结强调MapReduce为分布式计算提供了简洁而强大的编程模型。",
+        "slug": "mapreduce-paper-notes",
+        "tags": [
+          "MapReduce",
+          "分布式系统",
+          "论文笔记",
+          "容错",
+          "性能优化",
+          "数据处理"
+        ],
+        "inferred_date": "2019-11-25",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1134,
+          "completion": 514,
+          "total": 1648
+        }
+      },
+      "category": "System Design",
+      "translations": {
+        "en-US": {
+          "content_length": 4416,
+          "token_used": {
+            "prompt_tokens": 902,
+            "completion_tokens": 1047,
+            "total_tokens": 1949,
+            "completion_tokens_details": {
+              "reasoning_tokens": 153
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 902
+          }
+        },
+        "ja-JP": {
+          "content_length": 2499,
+          "token_used": {
+            "prompt_tokens": 1139,
+            "completion_tokens": 1549,
+            "total_tokens": 2688,
+            "completion_tokens_details": {
+              "reasoning_tokens": 191
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1139
+          }
+        },
+        "de-DE": {
+          "content_length": 5054,
+          "token_used": {
+            "prompt_tokens": 904,
+            "completion_tokens": 1559,
+            "total_tokens": 2463,
+            "completion_tokens_details": {
+              "reasoning_tokens": 194
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 904
+          }
+        },
+        "es-ES": {
+          "content_length": 5307,
+          "token_used": {
+            "prompt_tokens": 904,
+            "completion_tokens": 1513,
+            "total_tokens": 2417,
+            "completion_tokens_details": {
+              "reasoning_tokens": 192
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 904
+          }
+        }
+      },
+      "nativeMarkdownHash": "7a1059fbd7c570177eab7ad54e6ab6444cb11f8ccc2ea4c1119d1a3cafcdcb99"
+    },
+    {
+      "hash": "0da24b7824975781da8a15cbd8bc82d50f66b6acd02d07d897688b42f57ebf25",
+      "path": "content/blog/new-life-2023.md",
+      "links": [],
+      "metadata": {
+        "title": "New_life_2023",
+        "description": "作者在2023年初通过随笔反思生活变化，探讨失控与掌控的平衡，并规划未来。",
+        "short_summary": "作者在2023年初反思生活变化，感受到失控与笨拙，但通过日常事件和哲学思考，试图在混沌中创造秩序。文章探讨了个人成长与未来规划，强调在失控中寻找掌控感的重要性。",
+        "audience": "对生活反思、个人成长、情绪管理感兴趣的读者，尤其是经历生活变化或寻求平衡的年轻人。",
+        "key_points": [
+          "作者因生活变化感到失控和沮丧，如看房子时的情绪低落。",
+          "反思过去四年的生活趋于静滞，某些方面逐渐凋零。",
+          "通过剪头发等熟悉事物缓解焦虑，强调在陌生环境中寻找熟悉感。",
+          "探讨失控与掌控的平衡，认为人需要在混沌中创造秩序。",
+          "引用孟子的话，区分内在可求与外在不可控的事物。",
+          "描述工作与生活中的失控感，并寻求解决方法。",
+          "对未来生活进行规划，尽管未完成，但抱有期望。",
+          "强调练习的重要性，笨拙需通过多练习来改善。",
+          "观察松江租房环境，认为基础设施好且房租便宜。",
+          "与朋友聚餐，从沮丧中恢复，期待未来。"
+        ],
+        "summary": "本文是作者在2023年初写的一篇生活随笔，记录了因生活变化而产生的情绪波动和反思。作者通过看房子、剪头发等日常事件，深入探讨了生活中的失控感与掌控感，认为在普遍失控中需要主动创造秩序。文章还引用了孟子的话，强调有些事物可求而得，有些则受制于外部变量。最后，作者表达了对未来生活的期望，尽管规划部分尚未完成，但整体透露出在混沌中寻找意义的积极态度。",
+        "slug": "new-life-2023",
+        "tags": [
+          "生活",
+          "随笔",
+          "反思",
+          "失控",
+          "掌控",
+          "未来规划",
+          "个人成长"
+        ],
+        "inferred_date": "2023-01-01",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1649,
+          "completion": 477,
+          "total": 2126
+        }
+      },
+      "category": "Personal Reflection",
+      "translations": {
+        "en-US": {
+          "content_length": 7615,
+          "token_used": {
+            "prompt_tokens": 1400,
+            "completion_tokens": 1937,
+            "total_tokens": 3337,
+            "completion_tokens_details": {
+              "reasoning_tokens": 285
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1400
+          }
+        },
+        "ja-JP": {
+          "content_length": 3367,
+          "token_used": {
+            "prompt_tokens": 1637,
+            "completion_tokens": 2385,
+            "total_tokens": 4022,
+            "completion_tokens_details": {
+              "reasoning_tokens": 210
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1637
+          }
+        },
+        "es-ES": {
+          "content_length": 8078,
+          "token_used": {
+            "prompt_tokens": 1402,
+            "completion_tokens": 2359,
+            "total_tokens": 3761,
+            "completion_tokens_details": {
+              "reasoning_tokens": 248
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1402
+          }
+        },
+        "de-DE": {
+          "content_length": 8862,
+          "token_used": {
+            "prompt_tokens": 1402,
+            "completion_tokens": 2634,
+            "total_tokens": 4036,
+            "completion_tokens_details": {
+              "reasoning_tokens": 202
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1402
+          }
+        }
+      },
+      "nativeMarkdownHash": "72699c4da63a91ab2c44a81dd7ef519913155e1d8cd3b9bf01b6d53a1b942fdd"
     },
     {
       "hash": "4c8029ee6e2b54fc00f8af7818f4ac314332234f411854d0c77f823f8bfddd45",
@@ -2511,6 +3817,116 @@
       "nativeMarkdownHash": "228d85df8ec435b74a576dd23b4a0ea1a14d6a3de35c0adf4b3138b66804ff42"
     },
     {
+      "hash": "2f367285594512a83174ef5eb114d0892855aee952754c7fb042c8d991953f66",
+      "path": "content/blog/RDD-论文笔记.md",
+      "links": [],
+      "metadata": {
+        "title": "RDD 论文笔记",
+        "description": "本文介绍了 Resilient Distributed Datasets (RDDs) 作为分布式系统内存抽象的核心概念、优势与限制，并探讨其在 Spark 中的实现。",
+        "short_summary": "本文分析了 Resilient Distributed Datasets (RDDs) 作为分布式系统内存抽象的关键概念。RDD 通过提供粗粒度的 transformation 操作，解决了迭代式计算中的数据复用问题，并在 Spark 中实现，显著提升了性能。文章还讨论了 RDD 的优势、限制及其在分布式计算中的通用性。",
+        "audience": "对分布式系统、大数据处理、Spark 和 RDD 感兴趣的技术人员、学生和研究者。",
+        "key_points": [
+          "RDD 是分布式系统的内存抽象，提供粗粒度的 transformation 操作。",
+          "RDD 解决了迭代式计算中的数据复用问题，避免了频繁 I/O 带来的性能瓶颈。",
+          "RDD 通过牺牲计算细粒度，实现了容错性、通用性和易用性。",
+          "RDD 在 Spark 中实现，支持类似 DryadLINQ 的编程接口。",
+          "RDD 使用 DAG 表示，依赖关系分为 narrow 和 wide dependencies。",
+          "RDD 在迭代任务上比 Hadoop 快 20 倍，在用户分析程序上快 40 倍。",
+          "RDD 不适合大量细粒度读写的异步计算，如爬虫存储系统。",
+          "RDD 的核心优势是对集群内存建模，实现快速连续计算。",
+          "硬件限制（内存比硬盘快）是软件创新的理论极限。",
+          "Spark 使用 Mesos 进行集群管理，并展示了良好的故障恢复能力。"
+        ],
+        "summary": "本文是一篇关于 Resilient Distributed Datasets (RDDs) 的论文笔记，详细阐述了 RDD 作为分布式系统内存抽象的动机、基本特性、优势与限制。RDD 通过牺牲计算的细粒度，实现了高效的迭代式计算、容错性和通用性，解决了传统分布式计算框架在数据复用上的性能瓶颈。文章还介绍了 RDD 在 Spark 中的实现，包括其编程接口、依赖关系和性能评估，展示了 RDD 在迭代任务和用户分析程序上相比 Hadoop 的显著性能提升。最后，文章总结了 RDD 的核心价值在于对集群内存的建模，使得快速连续计算成为可能，并指出硬件限制是软件创新的理论极限。",
+        "slug": "rdd-paper-notes",
+        "tags": [
+          "RDD",
+          "Spark",
+          "分布式系统",
+          "论文笔记",
+          "内存抽象",
+          "迭代计算",
+          "容错性",
+          "性能优化"
+        ],
+        "inferred_date": "2020-10-29",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1224,
+          "completion": 603,
+          "total": 1827
+        }
+      },
+      "category": "System Design",
+      "translations": {
+        "en-US": {
+          "content_length": 4836,
+          "token_used": {
+            "prompt_tokens": 1018,
+            "completion_tokens": 1145,
+            "total_tokens": 2163,
+            "completion_tokens_details": {
+              "reasoning_tokens": 187
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1018
+          }
+        },
+        "es-ES": {
+          "content_length": 5469,
+          "token_used": {
+            "prompt_tokens": 1020,
+            "completion_tokens": 1631,
+            "total_tokens": 2651,
+            "completion_tokens_details": {
+              "reasoning_tokens": 274
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1020
+          }
+        },
+        "ja-JP": {
+          "content_length": 2517,
+          "token_used": {
+            "prompt_tokens": 1255,
+            "completion_tokens": 1649,
+            "total_tokens": 2904,
+            "completion_tokens_details": {
+              "reasoning_tokens": 239
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1255
+          }
+        },
+        "de-DE": {
+          "content_length": 5520,
+          "token_used": {
+            "prompt_tokens": 1020,
+            "completion_tokens": 1729,
+            "total_tokens": 2749,
+            "completion_tokens_details": {
+              "reasoning_tokens": 253
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1020
+          }
+        }
+      },
+      "nativeMarkdownHash": "a34f65117f740d3b2079dd771f0fb6b3d9a5f459cd43ee1fcd27c9016e0c971a"
+    },
+    {
       "hash": "f680bdef35e31aa7a261d815684cd74313855fdcc52dac87ac7802793e055661",
       "path": "content/blog/Sleeping to dream.md",
       "links": [],
@@ -2551,6 +3967,113 @@
       },
       "category": "Personal Reflection",
       "nativeMarkdownHash": "77b72e6198aa90c17813484c9574fc072aa70d6d35985ec719b98030cf538223"
+    },
+    {
+      "hash": "e5f65d41c8b12a5cd0e08144ea039c9627aedd4cf1105cb820c713691bc036a9",
+      "path": "content/blog/Spark-论文笔记.md",
+      "links": [],
+      "metadata": {
+        "title": "Spark 论文笔记",
+        "description": "Spark 通过 RDD 数据结构提出了一种支持数据重用的分布式计算框架，性能显著优于 Hadoop。",
+        "short_summary": "Spark 通过引入 RDD 数据结构，提供了一种支持数据重用的分布式计算框架，性能远超 Hadoop。文章介绍了 RDD 的特性、创建方式、编程模型以及基于 Scala 的实现，并展示了其显著的性能优势。",
+        "audience": "对分布式系统、大数据处理、Spark 或 RDD 感兴趣的技术人员、学生和研究者",
+        "key_points": [
+          "Spark 通过 RDD 支持数据重用，克服 MapReduce 的局限性",
+          "RDD 是只读、可重建的分布式数据结构，具有惰性和短暂性",
+          "RDD 可通过文件系统、Scala 集合、变换和持久化方式更改创建",
+          "用户可通过 cache 或 save 持久化 RDD，在速度与存储间权衡",
+          "Spark 使用 Scala 实现，利用其函数式和面向对象特性",
+          "编程模型包括 reduce、collect、foreach 等并行操作",
+          "实验显示 Spark 比 Hadoop 快 10 倍，但数据集较小",
+          "早期工作尚未实现 shuffle，但已展示巨大潜力"
+        ],
+        "summary": "本文是对 Spark 论文的笔记，介绍了 Spark 如何通过 RDD（弹性分布式数据集）这一数据结构，克服 MapReduce 等系统在通用性上的不足，支持跨多个并行操作的数据重用。文章详细阐述了 RDD 的创建方式、持久化策略、编程模型（如并行操作），以及 Spark 在 Scala 上的实现细节，包括其惰性求值和短暂性特性。实验结果显示，Spark 在特定场景下比 Hadoop 快 10 倍。最后，文章总结了 Spark 的早期优势、局限性以及相关技术对比。",
+        "slug": "spark-paper-notes",
+        "tags": [
+          "Spark",
+          "RDD",
+          "分布式系统",
+          "论文笔记",
+          "大数据",
+          "Scala",
+          "MapReduce"
+        ],
+        "inferred_date": "2022-01-10",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1138,
+          "completion": 471,
+          "total": 1609
+        }
+      },
+      "category": "System Design",
+      "translations": {
+        "en-US": {
+          "content_length": 3629,
+          "token_used": {
+            "prompt_tokens": 896,
+            "completion_tokens": 999,
+            "total_tokens": 1895,
+            "completion_tokens_details": {
+              "reasoning_tokens": 210
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 896
+          }
+        },
+        "ja-JP": {
+          "content_length": 2090,
+          "token_used": {
+            "prompt_tokens": 1133,
+            "completion_tokens": 1242,
+            "total_tokens": 2375,
+            "completion_tokens_details": {
+              "reasoning_tokens": 164
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1133
+          }
+        },
+        "de-DE": {
+          "content_length": 4470,
+          "token_used": {
+            "prompt_tokens": 898,
+            "completion_tokens": 1424,
+            "total_tokens": 2322,
+            "completion_tokens_details": {
+              "reasoning_tokens": 221
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 898
+          }
+        },
+        "es-ES": {
+          "content_length": 4470,
+          "token_used": {
+            "prompt_tokens": 898,
+            "completion_tokens": 1368,
+            "total_tokens": 2266,
+            "completion_tokens_details": {
+              "reasoning_tokens": 210
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 898
+          }
+        }
+      },
+      "nativeMarkdownHash": "32be5fdf5f07f341730c6da73e14d15ee3f8a109011bd98202e98d35093e1e9a"
     },
     {
       "hash": "41824d75d5760caadb2137e487616eeba55cea8f19d07b9eb845d8d4d2f98fef",
