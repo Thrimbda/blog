@@ -2143,7 +2143,7 @@
           "total": 1939
         }
       },
-      "category": "Personal Reflection",
+      "category": "Blog Introduction",
       "nativeMarkdownHash": "fedcdde8580e66bd3a13fa08aa0db67d8239f3583c4df93d9fc54bd3dd7688db"
     },
     {
@@ -2243,7 +2243,7 @@
           "total": 8016
         }
       },
-      "category": "Technical Tutorial",
+      "category": "Frontend Development",
       "nativeMarkdownHash": "d7f584b340fbc8bd0864e40a6c4de72b048dfce26e544ace73379e6b65958345"
     },
     {
@@ -2619,7 +2619,7 @@
           "total": 4254
         }
       },
-      "category": "Poetry and Literature",
+      "category": "Film and TV Review",
       "nativeMarkdownHash": "216269f6ba184576cc89b1e466742ee2d27f9be817d716d032e6180e9f258918"
     },
     {
@@ -3729,6 +3729,117 @@
       "nativeMarkdownHash": "72699c4da63a91ab2c44a81dd7ef519913155e1d8cd3b9bf01b6d53a1b942fdd"
     },
     {
+      "hash": "27d0b8937436c7fd4651f729080bf74d61afae1575f92ef160cab9189ab78caf",
+      "path": "content/blog/NTNL-全职一年后的感受.md",
+      "links": [
+        "https://zh.wikipedia.org/zh-hans/%E8%B2%A8%E7%89%A9%E5%B4%87%E6%8B%9C",
+        "upload://inRWoJb02gFqO3cYa8ykFwepsGp.png"
+      ],
+      "metadata": {
+        "title": "在 NTNL 全职一周年后的感受",
+        "description": "作者回顾在量化交易创业公司 NTNL 全职一年的经历，总结失败教训、团队成长与未来规划。",
+        "short_summary": "作者回顾了在 NTNL 全职一年的创业历程，重点总结了 NTNL-001 基金的失败教训和团队后续的调整方向。文章分享了量化交易领域的实践经验、团队管理挑战以及对未来发展的思考，体现了创业者的反思与坚持。",
+        "audience": "量化交易从业者、创业者、对金融科技和团队管理感兴趣的人士",
+        "key_points": [
+          "NTNL-001 基金因方向错误、运营不成熟和主要矛盾把握不准而失败",
+          "团队调整方向，确立开发 Yuan 平台、运营多信号源基金和自研模型三条主线",
+          "Yuan 平台在量化开发、研究和部署中起到关键作用，但兼职人力逐渐流失",
+          "外部信号源质量差，最终被自研模型取代，模型多样化改善风险管理",
+          "团队财务状况紧张，通过发行债券维持运营，面临生存压力",
+          "创业实践带来 intense 体验，需坚持实事求是、从经验中学习和抓主要矛盾",
+          "未来重点为模型调优研究和 Yuan 产品商业化，寻求融资和影响更多人",
+          "创业者需比资本家更严苛且可持续地剥削自己，以创造价值"
+        ],
+        "summary": "本文是作者在量化交易创业公司 NTNL 全职工作一周年的回顾与反思。文章详细叙述了团队从早期模型尝试、NTNL-001 基金的惨痛失败，到调整方向确立新主线（开发 Yuan 平台、运营 NTNL-LTS 基金、自研模型）的历程。作者总结了关键错误，如方向选择失误、基金运营不成熟、主要矛盾把握不准，并分享了团队在工具开发、模型研究、财务状况等方面的现状与挑战。最后，文章展望未来，强调坚持实事求是、从经验中学习、抓主要矛盾等原则，并表达了在创业道路上追求 intense 人生的态度。",
+        "slug": "ntnl-full-time-one-year-retrospective",
+        "tags": [
+          "工作日志",
+          "量化交易",
+          "创业反思",
+          "NTNL",
+          "Yuan",
+          "基金运营",
+          "失败教训",
+          "团队管理"
+        ],
+        "inferred_date": "2023-07-31",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 3890,
+          "completion": 520,
+          "total": 4410
+        }
+      },
+      "category": "Quantitative Trading",
+      "translations": {
+        "en-US": {
+          "content_length": 19839,
+          "token_used": {
+            "prompt_tokens": 3692,
+            "completion_tokens": 4241,
+            "total_tokens": 7933,
+            "completion_tokens_details": {
+              "reasoning_tokens": 198
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 3692
+          }
+        },
+        "es-ES": {
+          "content_length": 22578,
+          "token_used": {
+            "prompt_tokens": 3694,
+            "completion_tokens": 5792,
+            "total_tokens": 9486,
+            "completion_tokens_details": {
+              "reasoning_tokens": 243
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 3694
+          }
+        },
+        "de-DE": {
+          "content_length": 21774,
+          "token_used": {
+            "prompt_tokens": 3694,
+            "completion_tokens": 5986,
+            "total_tokens": 9680,
+            "completion_tokens_details": {
+              "reasoning_tokens": 219
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 3694
+          }
+        },
+        "ja-JP": {
+          "content_length": 9287,
+          "token_used": {
+            "prompt_tokens": 3929,
+            "completion_tokens": 6134,
+            "total_tokens": 10063,
+            "completion_tokens_details": {
+              "reasoning_tokens": 206
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 3929
+          }
+        }
+      },
+      "nativeMarkdownHash": "3b3a4ceec2c991cf836326c2758c6ed7eda2a938f7d795a6b58b3fc2366383e1"
+    },
+    {
       "hash": "4c8029ee6e2b54fc00f8af7818f4ac314332234f411854d0c77f823f8bfddd45",
       "path": "content/blog/Ode-on-Melancholy-忧郁颂.md",
       "links": [],
@@ -4200,7 +4311,7 @@
           "total": 1767
         }
       },
-      "category": "Technical Tutorial",
+      "category": "Personal Reflection",
       "nativeMarkdownHash": "2123e227d98dee8b57a693fd8aca5cedbe62e5bd6e8fe34c4da381f699d33c41"
     },
     {
