@@ -42,6 +42,7 @@ twitter_card = true
 
 header_nav = [
   { url = "/blog", name_zh = "|博客|", name_en = "/blog/" },
+  { url = "/diary", name_zh = "|日志|", name_en = "/diary/" },
   { url = "/gcores-talks", name_zh = "|机组|", name_en = "/gcores-talk/" },
   { url = "/about", name_zh = "|关于|", name_en = "/about/" },
 ]
