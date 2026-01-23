@@ -12,113 +12,6 @@
   },
   "files": [
     {
-      "hash": "f94b1cc4519053947dfbce6688602e233ebea9d339014ac83d6666f12d7eb17c",
-      "path": "MCP_NOTION.md",
-      "links": [],
-      "metadata": {
-        "title": "Notion MCP 在 OpenCode 中的配置与使用指南",
-        "description": "本文详细介绍了如何在 OpenCode 中成功配置和使用 Notion MCP 服务器，包括认证、工具使用和故障排除。",
-        "short_summary": "本文指导用户如何在 OpenCode 中配置和使用 Notion MCP 服务器。它涵盖了从初始配置、OAuth 认证到实际使用 Notion 工具（如搜索页面、管理数据库）的完整流程。文档还提供了故障排除方法和替代的本地服务器配置方案。",
-        "audience": "使用 OpenCode 并希望集成 Notion 功能的开发者或技术用户。",
-        "key_points": [
-          "Notion MCP 已在 OpenCode 中通过远程服务器成功配置。",
-          "使用 OAuth 进行认证，令牌安全存储于本地。",
-          "可通过命令行检查 MCP 服务器状态和管理认证。",
-          "在 OpenCode 中可直接使用 Notion 工具进行页面搜索、内容检索等操作。",
-          "提供了详细的故障排除步骤，包括调试和重新认证。",
-          "作为替代，支持使用本地 MCP 服务器并配置 API 令牌。",
-          "强调了 OAuth 令牌的安全存储和远程服务器的可靠性。",
-          "文档最后标注了设置完成日期为 2026-01-18。"
-        ],
-        "summary": "本文是一份关于在 OpenCode 中设置和使用 Notion MCP 服务器的完整指南。文档首先确认了通过远程 MCP 服务器成功完成配置，并提供了存储在 `opencode.json` 中的具体配置示例。接着说明了 OAuth 认证已成功完成，认证令牌安全存储。文章核心部分详细阐述了如何使用 Notion 工具，包括检查服务器状态、在提示中引用工具、以及可用的工具范围（如搜索页面、检索内容、管理数据库等）。此外，还提供了重新认证、注销以及故障排除的步骤。文档也提到了作为替代方案的本地 MCP 服务器配置方法，并强调了安全注意事项。最后，文档标注了设置完成日期为 2026-01-18。",
-        "slug": "notion-mcp-opencode-setup-guide",
-        "tags": [
-          "Notion",
-          "MCP",
-          "OpenCode",
-          "配置指南",
-          "API 集成",
-          "自动化",
-          "开发工具"
-        ],
-        "inferred_date": "2026-01-18",
-        "inferred_lang": "zh-Hans",
-        "tokens_used": {
-          "prompt": 1141,
-          "completion": 503,
-          "total": 1644
-        }
-      },
-      "category": "Technical Tutorial",
-      "translations": {
-        "en-US": {
-          "content_length": 3599,
-          "token_used": {
-            "prompt_tokens": 999,
-            "completion_tokens": 1145,
-            "total_tokens": 2144,
-            "completion_tokens_details": {
-              "reasoning_tokens": 262
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 999
-          }
-        },
-        "es-ES": {
-          "content_length": 4081,
-          "token_used": {
-            "prompt_tokens": 1001,
-            "completion_tokens": 1291,
-            "total_tokens": 2292,
-            "completion_tokens_details": {
-              "reasoning_tokens": 163
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 1001
-          }
-        },
-        "ja-JP": {
-          "content_length": 2501,
-          "token_used": {
-            "prompt_tokens": 1236,
-            "completion_tokens": 1426,
-            "total_tokens": 2662,
-            "completion_tokens_details": {
-              "reasoning_tokens": 231
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 1236
-          }
-        },
-        "de-DE": {
-          "content_length": 4060,
-          "token_used": {
-            "prompt_tokens": 1001,
-            "completion_tokens": 1424,
-            "total_tokens": 2425,
-            "completion_tokens_details": {
-              "reasoning_tokens": 234
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 1001
-          }
-        }
-      },
-      "nativeMarkdownHash": "00ee6f6f7b240cec976505b05dc905f1609e349f7d30ac126f5a1f9972790af0"
-    },
-    {
       "hash": "c0dfa46f7ac0e02c254b30008f4d79a8c50faf77a1fae27697f1ff75d186c076",
       "path": "README.md",
       "links": [
@@ -242,7 +135,7 @@
           "total": 1753
         }
       },
-      "category": "Blog Introduction",
+      "category": "Personal Reflection",
       "nativeMarkdownHash": "2d2ea6d06b2ea46402ad1135a6838e959c453c5862c330085953e6eef09b288e"
     },
     {
@@ -676,7 +569,7 @@
           "total": 43520
         }
       },
-      "category": "Blog Content",
+      "category": "Personal Reflection",
       "translations": {
         "en-US": {
           "content_length": 25812,
@@ -781,7 +674,7 @@
           "total": 762
         }
       },
-      "category": "Blog Introduction",
+      "category": "Blog Content",
       "nativeMarkdownHash": "ef994edf57ddbdbeefa61c85c81a75700fec7865e8fdb62283bb7d49c584fc39"
     },
     {
@@ -2295,7 +2188,7 @@
           "total": 2375
         }
       },
-      "category": "Personal Reflection",
+      "category": "Poetry and Literature",
       "nativeMarkdownHash": "014a29c5b0556137a1c4f57bb5a5f80b43b166e20c340a30fee1ba444a7a02dc"
     },
     {
@@ -3706,7 +3599,7 @@
           "total": 1889
         }
       },
-      "category": "Personal Reflection",
+      "category": "Poetry and Literature",
       "nativeMarkdownHash": "77b72e6198aa90c17813484c9574fc072aa70d6d35985ec719b98030cf538223"
     },
     {
@@ -3987,6 +3880,218 @@
       },
       "category": "Project Management",
       "nativeMarkdownHash": "8ce523207f28fe23b498b9d4ca9c05f36835a14a24191bb89c2fbe9cb995e39d"
+    },
+    {
+      "hash": "152214ebfb9cf054c88ae4c8e0a6850af25208e130f9f5755b49b282c2f8d6b7",
+      "path": "content/diary/_index.md",
+      "links": [],
+      "metadata": {
+        "title": "All Diary posts",
+        "description": "A collection of diary posts sorted by date with pagination.",
+        "short_summary": "This configuration sets up a diary posts page with pagination and date-based sorting. It uses a custom template for consistent presentation.",
+        "audience": "Website developers or content managers setting up a blog section.",
+        "key_points": [
+          "Paginates content with 15 posts per page",
+          "Uses 'All Diary posts' as the page title",
+          "Sorts posts by date",
+          "Employs a custom page template 'blog-page.html'",
+          "Configures a blog or diary section"
+        ],
+        "summary": "This document configures a blog or diary section with pagination, sorting by date, and a custom page template. It sets the title to 'All Diary posts' and uses 15 posts per page, indicating a structured approach to displaying chronological content.",
+        "slug": "all-diary-posts",
+        "tags": [
+          "diary",
+          "blog",
+          "pagination",
+          "date",
+          "template",
+          "configuration"
+        ],
+        "inferred_lang": "en-US",
+        "tokens_used": {
+          "prompt": 510,
+          "completion": 234,
+          "total": 744
+        }
+      },
+      "category": "Diary Configuration",
+      "translations": {
+        "zh-Hans": {
+          "content_length": 277,
+          "token_used": {
+            "prompt_tokens": 253,
+            "completion_tokens": 299,
+            "total_tokens": 552,
+            "completion_tokens_details": {
+              "reasoning_tokens": 171
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 253
+          }
+        },
+        "de-DE": {
+          "content_length": 571,
+          "token_used": {
+            "prompt_tokens": 249,
+            "completion_tokens": 376,
+            "total_tokens": 625,
+            "completion_tokens_details": {
+              "reasoning_tokens": 207
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 249
+          }
+        },
+        "es-ES": {
+          "content_length": 578,
+          "token_used": {
+            "prompt_tokens": 249,
+            "completion_tokens": 362,
+            "total_tokens": 611,
+            "completion_tokens_details": {
+              "reasoning_tokens": 189
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 249
+          }
+        },
+        "ja-JP": {
+          "content_length": 378,
+          "token_used": {
+            "prompt_tokens": 484,
+            "completion_tokens": 403,
+            "total_tokens": 887,
+            "completion_tokens_details": {
+              "reasoning_tokens": 227
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 484
+          }
+        }
+      },
+      "nativeMarkdownHash": "f9b863b5ed9621f6b56c681995e3e3d58ebdee617d60cb6e7e87062b0b6b5870"
+    },
+    {
+      "hash": "20a1942438baca149d684b7aed9cc6f3225cc7f8eafbc87ea57e703f00dd7b00",
+      "path": "content/diary/diary-2026.md",
+      "links": [],
+      "metadata": {
+        "title": "2026 工作日志：AI 辅助与效率提升",
+        "description": "作者记录了一天的工作与思考，重点探讨如何利用 AI Agent 提升个人效率，并规划了后续的改进方向。",
+        "short_summary": "作者在日志中记录了使用 AI 多智能体进行编码、处理服务器安全等日常工作，并反思了个人任务处理能力的局限。他提出通过优化 AI Agent 的自治和提升个人管理能力来提高效率，并计划进行相关实验。核心目标是利用 AI 实现个人能力的扩展。",
+        "audience": "对 AI 辅助编程、个人效率提升、多任务管理和工作日志记录感兴趣的开发者及效率爱好者",
+        "key_points": [
+          "重构了 opencode-feishu-notifier 通知工具",
+          "使用 opencode 的多智能体模式运行 5 个 agent 进行编码，消耗了大量 tokens",
+          "处理了服务器节点因 SSH 攻击宕机的问题，提出了安全改进方向",
+          "反思个人同时只能调度 2-3 件事，即使有 AI 辅助仍易疲惫",
+          "提出优化 AI Agent 的自治程度：少打扰、多工作、高可靠性",
+          "提出提升个人能力：管理心力、增强多上下文工作能力与进度管理",
+          "计划为 legionmind 设计多智能体模板并进行实验",
+          "计划继续开发 legionmind-github-bridge 和改善集群安全",
+          "核心主线是利用 AI 扩展个人能力，然后尝试扩展他人",
+          "将继续记录工作日志以摸索心力和上下文管理方法"
+        ],
+        "summary": "本文是 2026 年 1 月 22 日的工作日志，作者回顾了当天的工作，包括重构通知工具、使用多智能体模式进行编码、处理服务器安全问题以及安排日常事务。在思考部分，作者反思了个人同时处理任务的能力上限，并提出了两个核心改进方向：一是优化 AI Agent 的自治程度，使其更少打扰、更多工作、更可靠；二是提升个人心力管理和多任务处理能力。基于此，作者计划第二天尝试设计多智能体模板并继续探索心力和上下文管理方法。文章的核心主线是利用 AI 技术扩展个人能力，进而尝试扩展他人。",
+        "slug": "2026-work-log-ai-assisted-efficiency",
+        "tags": [
+          "工作日志",
+          "AI Agent",
+          "效率提升",
+          "多任务管理",
+          "自动化",
+          "编码",
+          "服务器安全",
+          "个人成长"
+        ],
+        "inferred_date": "2026-01-22",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 987,
+          "completion": 532,
+          "total": 1519
+        }
+      },
+      "category": "Work Log",
+      "translations": {
+        "en-US": {
+          "content_length": 3420,
+          "token_used": {
+            "prompt_tokens": 822,
+            "completion_tokens": 986,
+            "total_tokens": 1808,
+            "completion_tokens_details": {
+              "reasoning_tokens": 225
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 822
+          }
+        },
+        "es-ES": {
+          "content_length": 3932,
+          "token_used": {
+            "prompt_tokens": 824,
+            "completion_tokens": 1310,
+            "total_tokens": 2134,
+            "completion_tokens_details": {
+              "reasoning_tokens": 262
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 824
+          }
+        },
+        "de-DE": {
+          "content_length": 4196,
+          "token_used": {
+            "prompt_tokens": 824,
+            "completion_tokens": 1334,
+            "total_tokens": 2158,
+            "completion_tokens_details": {
+              "reasoning_tokens": 192
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 824
+          }
+        },
+        "ja-JP": {
+          "content_length": 1843,
+          "token_used": {
+            "prompt_tokens": 1059,
+            "completion_tokens": 1417,
+            "total_tokens": 2476,
+            "completion_tokens_details": {
+              "reasoning_tokens": 261
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1059
+          }
+        }
+      },
+      "nativeMarkdownHash": "7f1e0b18be98b554b5df9780cb069c5beb1bd9563462280ec67371142d08d925"
     }
   ]
 }
