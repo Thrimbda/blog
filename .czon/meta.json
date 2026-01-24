@@ -720,336 +720,6 @@
       "nativeMarkdownHash": "602f3ea81e1c28c4d697429b0e1e4c4b0dfd3678c25266f925a55b6c772f0000"
     },
     {
-      "hash": "37752561fa61da4c5f1f3de71fc2d9290d0d3034aa82e1bd0e743d1d96dfd9fe",
-      "path": "content/blog/2020-04-工作日志.md",
-      "links": [
-        "https://github.com/scalameta/scalafmt/issues/337",
-        "https://jira.momenta.works/browse/HDMAPMDK-1111"
-      ],
-      "metadata": {
-        "title": "2020年4月工作日志",
-        "description": "记录了2020年4月期间在技术项目中的工作进展，包括限速编译、自定义限速方案、bug修复和地图数据规范同步等关键任务。",
-        "short_summary": "这篇工作日志总结了2020年4月的技术工作，重点包括限速编译和自定义限速方案的开发与验证，以及对向车道POI绑定的实现。同时，文档记录了地图数据规范的同步修改和多个bug的修复过程，反映了日常开发中的问题解决和团队协作。",
-        "audience": "技术团队成员、项目管理者、对地图数据处理和编译系统开发感兴趣的开发者。",
-        "key_points": [
-          "完成了限速编译的基本实现和验证，并讨论了自定义限速方案的技术细节。",
-          "修复了RoadBorder中的错误假设，完善了测试用例和工具链。",
-          "实现了对向车道POI绑定的功能，并进行了测试数据构造和调试。",
-          "同步修改了地图数据规范（mdm spec）和原型（proto），解决了遗留问题。",
-          "处理了多个bug（如HDMAPMDK-1111、1121、1143），以应对发版前的压力。",
-          "提出了Sectioning问题的优化算法，研究了自执行Jar原理等技术探索。",
-          "与团队成员（如广聪、逸铭、晓康等）进行了多次技术讨论和协作。",
-          "记录了日常工作中的奇思妙想，如使用Spark、OSM Context需求等。",
-          "文档以日期结构组织，清晰展示了工作进展和问题解决的时间线。",
-          "涉及编译系统、地图数据处理、性能优化等多个技术领域。"
-        ],
-        "summary": "本文档是2020年4月的工作日志，详细记录了作者在技术项目中的日常进展和问题解决过程。核心工作包括限速编译的实现与验证、自定义限速方案的讨论与算法梳理、对向车道POI绑定的完成与测试，以及地图数据规范（mdm spec）与原型（proto）的同步修改。此外，文档还涉及多个bug的修复（如HDMAPMDK-1111、1121、1143等）、性能优化方案的提出（如Sectioning问题中的edgeLifting优化），以及团队协作与知识分享（如与同事讨论接口、review代码）。文档以日期为结构，展现了从方案设计、开发实现到测试调试的全流程，突出了技术挑战的解决和项目推进的关键节点。",
-        "slug": "2020-04-work-log",
-        "tags": [
-          "工作日志",
-          "技术开发",
-          "限速编译",
-          "自定义限速",
-          "bug修复",
-          "地图数据",
-          "月度总结",
-          "性能优化"
-        ],
-        "inferred_date": "2020-04-01",
-        "inferred_lang": "zh-Hans",
-        "tokens_used": {
-          "prompt": 1604,
-          "completion": 587,
-          "total": 2191
-        }
-      },
-      "category": "Work Log",
-      "translations": {
-        "en-US": {
-          "content_length": 5658,
-          "token_used": {
-            "prompt_tokens": 1429,
-            "completion_tokens": 1529,
-            "total_tokens": 2958,
-            "completion_tokens_details": {
-              "reasoning_tokens": 161
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 1429
-          }
-        },
-        "ja-JP": {
-          "content_length": 3191,
-          "token_used": {
-            "prompt_tokens": 1666,
-            "completion_tokens": 1950,
-            "total_tokens": 3616,
-            "completion_tokens_details": {
-              "reasoning_tokens": 173
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 1666
-          }
-        },
-        "es-ES": {
-          "content_length": 6735,
-          "token_used": {
-            "prompt_tokens": 1431,
-            "completion_tokens": 2081,
-            "total_tokens": 3512,
-            "completion_tokens_details": {
-              "reasoning_tokens": 142
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 1431
-          }
-        },
-        "de-DE": {
-          "content_length": 6626,
-          "token_used": {
-            "prompt_tokens": 1431,
-            "completion_tokens": 2174,
-            "total_tokens": 3605,
-            "completion_tokens_details": {
-              "reasoning_tokens": 201
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 1431
-          }
-        }
-      },
-      "nativeMarkdownHash": "a2a6bdc9ee73646fd72aeb99e430dfc19a0ad49334cf4fb370272e25504dd21b"
-    },
-    {
-      "hash": "8f317bf29202c908e633f532b8a8cccdb9f485abe05b9a2d4056edfd764d11f2",
-      "path": "content/blog/2020-05-工作日志.md",
-      "links": [],
-      "metadata": {
-        "title": "2020年5月工作日志",
-        "description": "记录了2020年5月期间的技术工作，包括内存泄漏修复、PolyLine问题、bug修复、CI Pipeline规划等。",
-        "short_summary": "本文是2020年5月的工作日志，涵盖了内存泄漏修复、PolyLine问题、多个bug修复、OSM重构和CI Pipeline规划等技术工作。日志还记录了问题解决的方法论思考，如短期与长期方案的平衡，以及时间管理和团队协作的反思。",
-        "audience": "技术开发人员、项目经理、对软件开发和问题解决感兴趣的读者",
-        "key_points": [
-          "内存泄漏问题因野指针未删除，通过重构NaviEventProvider解决",
-          "PolyLine重复点导致几何计算异常，通过检查并抛出异常处理",
-          "修复HDMAPMDK-1211等bug，涉及产线切分不合理问题",
-          "对OSM Assembler进行重构，提高代码可读性和易编写性",
-          "规划CI Pipeline的现状、需求和方案",
-          "处理突发bug，如停车位绑定错误和红绿灯绑定问题",
-          "反思问题解决模式：短期方案快速解决，长期方案系统完善",
-          "记录面试经历和候选人评估",
-          "进行时间估计和任务优先级管理",
-          "团队协作和跨部门问题解决"
-        ],
-        "summary": "本文是2020年5月的工作日志，详细记录了在技术开发、问题解决和项目规划方面的日常工作。主要内容包括：修复内存泄漏问题，根本原因在于野指针未删除，通过重构NaviEventProvider解决；处理PolyLine重复点导致的几何计算异常；修复多个HDMAPMDK相关的bug，如产线切分不合理导致的错误；进行OSM Assembler重构；规划CI Pipeline的现状和需求；以及处理突发任务如停车位绑定错误等。日志还反映了对时间估计、问题解决模式（短期与长期方案）的思考，以及面试和团队协作的经历。",
-        "slug": "2020-05-work-log",
-        "tags": [
-          "工作日志",
-          "技术",
-          "bug修复",
-          "内存泄漏",
-          "重构",
-          "CI",
-          "面试",
-          "项目管理"
-        ],
-        "inferred_date": "2020-05-01",
-        "inferred_lang": "zh-Hans",
-        "tokens_used": {
-          "prompt": 2803,
-          "completion": 495,
-          "total": 3298
-        }
-      },
-      "category": "Work Log",
-      "translations": {
-        "en-US": {
-          "content_length": 12057,
-          "token_used": {
-            "prompt_tokens": 2575,
-            "completion_tokens": 2991,
-            "total_tokens": 5566,
-            "completion_tokens_details": {
-              "reasoning_tokens": 221
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 2575
-          }
-        },
-        "ja-JP": {
-          "content_length": 6499,
-          "token_used": {
-            "prompt_tokens": 2812,
-            "completion_tokens": 3887,
-            "total_tokens": 6699,
-            "completion_tokens_details": {
-              "reasoning_tokens": 240
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 2812
-          }
-        },
-        "de-DE": {
-          "content_length": 13703,
-          "token_used": {
-            "prompt_tokens": 2577,
-            "completion_tokens": 4092,
-            "total_tokens": 6669,
-            "completion_tokens_details": {
-              "reasoning_tokens": 250
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 2577
-          }
-        },
-        "es-ES": {
-          "content_length": 13542,
-          "token_used": {
-            "prompt_tokens": 2577,
-            "completion_tokens": 3956,
-            "total_tokens": 6533,
-            "completion_tokens_details": {
-              "reasoning_tokens": 261
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 2577
-          }
-        }
-      },
-      "nativeMarkdownHash": "4390a6280d1405f8175585ed7aeb5aaf034391fe51e392951322c296e61de19c"
-    },
-    {
-      "hash": "917f17b1cfe1fd31e654a561e0963f4c2e040507f2434bc5fbd9254f67d659f3",
-      "path": "content/blog/2020-06-工作日志.md",
-      "links": [],
-      "metadata": {
-        "title": "2020年6月工作日志与反思",
-        "description": "一位软件工程师在2020年6月的工作日志，记录了技术问题解决、职业发展反思、工作心态调整以及对编程范式和工程实践的思考。",
-        "short_summary": "这是一份2020年6月的工程师工作日志，既记录了具体的技术任务和问题解决过程，也包含了深入的职业反思。作者探讨了重构的风险、工作意义的定义、编程范式的思考，以及在考虑职业变动时的心态调整。",
-        "audience": "软件工程师、开发者，尤其是对职业发展、技术反思和工作日志记录感兴趣的人群。",
-        "key_points": [
-          "在项目交付前进行大规模重构存在风险，需明确目标并控制进度。",
-          "工作意义应侧重于提出有价值问题、积累问题建模能力，而非仅解决具体任务。",
-          "应克服内向心理，勇于向他人交流求教，避免因害怕显得愚蠢而封闭自己。",
-          "对编程范式（如OOP、FP）的“银弹”思维是危险的，需用实践检验其适用性。",
-          "工作环境变化（如搬迁）可能带来不适，需主动调整心态和寻找定位。",
-          "在考虑职业变动时，应以长远眼光规划，并做好当前工作的收尾。",
-          "警惕拖延和习惯现状，对问题应及时解决而非长期搁置。",
-          "工程师常有能力否定倾向，需理性评估“最佳实践”是否真正适用。"
-        ],
-        "summary": "本文是作者2020年6月的工作日志，详细记录了每天的技术工作内容，如解决编译器导致的抓路问题、红绿灯获取bug、数据清洗、HDMAPMDK任务重构等。同时，日志包含了深刻的职业反思：作者探讨了在交付前进行大规模重构的风险，强调了明确目标和策略的重要性；反思了工作意义，认为提出有价值问题、积累建模能力比单纯解决具体问题更重要；分析了自身内向性格对交流的影响，鼓励自己勇于求教；通过阅读王垠博客和与他人交流，批判了对编程范式（如OOP、FP）的“银弹”思维，主张用实践检验真理；记录了从上海搬到北京工作的不适应感，以及对工作环境、管理方式的看法；最后，在考虑离职的背景下，讨论了如何以长远眼光规划职业生涯，并调整心态应对焦虑。",
-        "slug": "2020-06-work-log",
-        "tags": [
-          "工作日志",
-          "技术反思",
-          "职业发展",
-          "软件工程",
-          "编程范式",
-          "心态调整",
-          "重构"
-        ],
-        "inferred_date": "2020-06-01",
-        "inferred_lang": "zh-Hans",
-        "tokens_used": {
-          "prompt": 4098,
-          "completion": 572,
-          "total": 4670
-        }
-      },
-      "category": "Work Log",
-      "translations": {
-        "en-US": {
-          "content_length": 20575,
-          "token_used": {
-            "prompt_tokens": 3919,
-            "completion_tokens": 4871,
-            "total_tokens": 8790,
-            "completion_tokens_details": {
-              "reasoning_tokens": 197
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 3919
-          }
-        },
-        "es-ES": {
-          "content_length": 22686,
-          "token_used": {
-            "prompt_tokens": 3921,
-            "completion_tokens": 6161,
-            "total_tokens": 10082,
-            "completion_tokens_details": {
-              "reasoning_tokens": 209
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 3921
-          }
-        },
-        "ja-JP": {
-          "content_length": 9870,
-          "token_used": {
-            "prompt_tokens": 4156,
-            "completion_tokens": 6411,
-            "total_tokens": 10567,
-            "completion_tokens_details": {
-              "reasoning_tokens": 370
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 4156
-          }
-        },
-        "de-DE": {
-          "content_length": 22897,
-          "token_used": {
-            "prompt_tokens": 3921,
-            "completion_tokens": 6462,
-            "total_tokens": 10383,
-            "completion_tokens_details": {
-              "reasoning_tokens": 208
-            },
-            "prompt_tokens_details": {
-              "cached_tokens": 0
-            },
-            "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 3921
-          }
-        }
-      },
-      "nativeMarkdownHash": "64372b028e0ab45e8e33749dfd642757e9dd27678b7b79ea010b49e3393fcf6e"
-    },
-    {
       "hash": "fde9f7fd0b843bfd9bba7832c7baf2223cbb9f784e5eee822f850154acc06002",
       "path": "content/blog/2020-09-13-窗帘上有小爪印.md",
       "links": [
@@ -3984,114 +3654,239 @@
       "nativeMarkdownHash": "f9b863b5ed9621f6b56c681995e3e3d58ebdee617d60cb6e7e87062b0b6b5870"
     },
     {
-      "hash": "20a1942438baca149d684b7aed9cc6f3225cc7f8eafbc87ea57e703f00dd7b00",
-      "path": "content/diary/diary-2026.md",
-      "links": [],
+      "hash": "8f039952c49def021647589f6b3348b62ed051f4510948a4fd2fc4b6e58ccb97",
+      "path": "content/diary/diary-2020.md",
+      "links": [
+        "https://github.com/scalameta/scalafmt/issues/337",
+        "https://jira.momenta.works/browse/HDMAPMDK-1111"
+      ],
       "metadata": {
-        "title": "2026 工作日志：AI 辅助与效率提升",
-        "description": "作者记录了一天的工作与思考，重点探讨如何利用 AI Agent 提升个人效率，并规划了后续的改进方向。",
-        "short_summary": "作者在日志中记录了使用 AI 多智能体进行编码、处理服务器安全等日常工作，并反思了个人任务处理能力的局限。他提出通过优化 AI Agent 的自治和提升个人管理能力来提高效率，并计划进行相关实验。核心目标是利用 AI 实现个人能力的扩展。",
-        "audience": "对 AI 辅助编程、个人效率提升、多任务管理和工作日志记录感兴趣的开发者及效率爱好者",
+        "title": "2020 工作日志",
+        "description": "一名软件工程师在2020年上半年的工作日志，记录了技术开发、问题解决、团队协作和个人反思。",
+        "short_summary": "这是一份2020年上半年的工作日志，记录了软件工程师在地图数据编译系统开发中的日常工作，包括技术开发、bug修复和团队协作。日志也反映了作者对工作意义、技术决策和职业发展的深度思考。",
+        "audience": "软件工程师、技术管理者、对职业发展和技术反思感兴趣的读者",
         "key_points": [
-          "重构了 opencode-feishu-notifier 通知工具",
-          "使用 opencode 的多智能体模式运行 5 个 agent 进行编码，消耗了大量 tokens",
-          "处理了服务器节点因 SSH 攻击宕机的问题，提出了安全改进方向",
-          "反思个人同时只能调度 2-3 件事，即使有 AI 辅助仍易疲惫",
-          "提出优化 AI Agent 的自治程度：少打扰、多工作、高可靠性",
-          "提出提升个人能力：管理心力、增强多上下文工作能力与进度管理",
-          "计划为 legionmind 设计多智能体模板并进行实验",
-          "计划继续开发 legionmind-github-bridge 和改善集群安全",
-          "核心主线是利用 AI 扩展个人能力，然后尝试扩展他人",
-          "将继续记录工作日志以摸索心力和上下文管理方法"
+          "记录了地图数据编译系统的日常开发、bug修复和技术重构任务。",
+          "涉及多个具体技术问题，如自定义限速方案、车道线绑定、内存泄漏排查和PolyLine修复。",
+          "包含与同事（如广聪、逸铭、晓康）的协作和讨论过程。",
+          "反思了工作效率、代码质量、在交付前进行大规模重构的风险。",
+          "记录了参与面试候选人的经历和思考。",
+          "表达了对工作意义、技术决策（如FP vs OOP）和职业发展的困惑与探索。",
+          "提到了个人生活事件（如考驾照、搬家）对工作的影响。",
+          "逐步展现出职业倦怠感和对当前工作环境的批判性看法。",
+          "计划并开始实施职业变动（如更新简历、面试）。",
+          "强调从长远角度规划职业生涯的重要性。"
         ],
-        "summary": "本文是 2026 年 1 月 22 日的工作日志，作者回顾了当天的工作，包括重构通知工具、使用多智能体模式进行编码、处理服务器安全问题以及安排日常事务。在思考部分，作者反思了个人同时处理任务的能力上限，并提出了两个核心改进方向：一是优化 AI Agent 的自治程度，使其更少打扰、更多工作、更可靠；二是提升个人心力管理和多任务处理能力。基于此，作者计划第二天尝试设计多智能体模板并继续探索心力和上下文管理方法。文章的核心主线是利用 AI 技术扩展个人能力，进而尝试扩展他人。",
-        "slug": "2026-work-log-ai-assisted-efficiency",
+        "summary": "本文档是作者2020年上半年的工作日志，详细记录了从4月到7月期间的工作内容，主要包括地图数据编译系统的开发、bug修复、技术重构（如TLM重构）、团队协作（如与同事讨论接口和方案）、面试以及个人职业发展的思考。文档不仅涉及具体的技术任务（如自定义限速、车道线绑定、内存泄漏修复），还包含了作者对工作效率、代码质量、项目管理（如CI/CD管道）和职业规划的反思。作者在日志中多次表达了对工作意义的探寻、对技术决策的批判性思考，以及在高压交付环境下的心态变化。",
+        "slug": "2020-work-log",
         "tags": [
           "工作日志",
-          "AI Agent",
-          "效率提升",
-          "多任务管理",
-          "自动化",
-          "编码",
-          "服务器安全",
-          "个人成长"
+          "软件开发",
+          "地图数据",
+          "技术反思",
+          "团队协作",
+          "项目管理",
+          "职业发展"
         ],
-        "inferred_date": "2026-01-22",
+        "inferred_date": "2020-01-01",
         "inferred_lang": "zh-Hans",
         "tokens_used": {
-          "prompt": 987,
-          "completion": 532,
-          "total": 1519
+          "prompt": 7389,
+          "completion": 510,
+          "total": 7899
         }
       },
-      "category": "Work Log",
+      "category": "Diary Configuration",
       "translations": {
         "en-US": {
-          "content_length": 3420,
+          "content_length": 34010,
           "token_used": {
-            "prompt_tokens": 822,
-            "completion_tokens": 986,
-            "total_tokens": 1808,
+            "prompt_tokens": 7183,
+            "completion_tokens": 8099,
+            "total_tokens": 15282,
             "completion_tokens_details": {
-              "reasoning_tokens": 225
+              "reasoning_tokens": 168
             },
             "prompt_tokens_details": {
               "cached_tokens": 0
             },
             "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 822
+            "prompt_cache_miss_tokens": 7183
           }
         },
         "es-ES": {
-          "content_length": 3932,
+          "content_length": 29973,
           "token_used": {
-            "prompt_tokens": 824,
-            "completion_tokens": 1310,
-            "total_tokens": 2134,
+            "prompt_tokens": 7185,
+            "completion_tokens": 8443,
+            "total_tokens": 15628,
             "completion_tokens_details": {
-              "reasoning_tokens": 262
+              "reasoning_tokens": 251
             },
             "prompt_tokens_details": {
               "cached_tokens": 0
             },
             "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 824
+            "prompt_cache_miss_tokens": 7185
           }
         },
         "de-DE": {
-          "content_length": 4196,
+          "content_length": 29063,
           "token_used": {
-            "prompt_tokens": 824,
-            "completion_tokens": 1334,
-            "total_tokens": 2158,
+            "prompt_tokens": 7185,
+            "completion_tokens": 8370,
+            "total_tokens": 15555,
             "completion_tokens_details": {
-              "reasoning_tokens": 192
+              "reasoning_tokens": 178
             },
             "prompt_tokens_details": {
               "cached_tokens": 0
             },
             "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 824
+            "prompt_cache_miss_tokens": 7185
           }
         },
         "ja-JP": {
-          "content_length": 1843,
+          "content_length": 14673,
           "token_used": {
-            "prompt_tokens": 1059,
-            "completion_tokens": 1417,
-            "total_tokens": 2476,
+            "prompt_tokens": 7420,
+            "completion_tokens": 8450,
+            "total_tokens": 15870,
             "completion_tokens_details": {
-              "reasoning_tokens": 261
+              "reasoning_tokens": 258
             },
             "prompt_tokens_details": {
               "cached_tokens": 0
             },
             "prompt_cache_hit_tokens": 0,
-            "prompt_cache_miss_tokens": 1059
+            "prompt_cache_miss_tokens": 7420
           }
         }
       },
-      "nativeMarkdownHash": "7f1e0b18be98b554b5df9780cb069c5beb1bd9563462280ec67371142d08d925"
+      "nativeMarkdownHash": "aa2ada491fe5b2e008e141507113e4a0912a2c803e8054f9b3c62d6d0ff5dcd1"
+    },
+    {
+      "hash": "aa901b1514b623d15cff21ea81282d99eae7e701b682c4575256b3877c00b16e",
+      "path": "content/diary/diary-2026.md",
+      "links": [
+        "#orgf3197da",
+        "#orge03e1ca",
+        "#org4d65f86",
+        "#org1006a17",
+        "#orgdb0ae87",
+        "#org750daf2",
+        "#org287b8dd",
+        "#orgf838e08",
+        "#org8998678",
+        "#orgc688fe4",
+        "#org2a15db2",
+        "#orgab0f160",
+        "#org68bf2d9",
+        "#orge3ab04d",
+        "https://medium.com/ai-software-engineer/anthropic-new-guide-shows-how-to-build-quality-ai-agents-without-getting-fooled-29f378ec2609"
+      ],
+      "metadata": {
+        "title": "2026 工作日志",
+        "description": "作者在 2026 年 1 月的工作日志，记录使用 AI Agent 进行开发、系统设计及个人效率管理的实践与思考。",
+        "short_summary": "作者记录了三天的工作，重点是利用 AI Agent 进行开发任务，如构建 multi-agent 系统和改进现有项目。他反思了如何提高 Agent 的自治能力和工作可靠性，并思考了为 Agent 提供项目上下文知识的方法。日志也涉及了个人精力管理和任务调度。",
+        "audience": "对 AI Agent 应用、自动化开发、个人效率管理和 DevOps 感兴趣的开发者、工程师及技术管理者。",
+        "key_points": [
+          "使用 opencode 和 legionmind 等 AI Agent 进行自动化开发任务。",
+          "设计并实验 multi-agent 系统以提高工作效率和自治程度。",
+          "改进 node-unit 的抢占逻辑并部署新版本。",
+          "思考如何为 AI Agent 建立有效的项目上下文知识库（外置大脑）。",
+          "探讨评估 AI Agent 工作质量的指标和方法（如 pass@k, pass^k）。",
+          "关注个人精力管理和多任务调度能力。",
+          "处理集群安全（SSH 攻击）等运维问题。",
+          "记录每日工作、想法和计划以形成反思和改进循环。"
+        ],
+        "summary": "本文是 2026 年 1 月 22 日至 24 日的工作日志，作者详细记录了使用 AI Agent（如 opencode、legionmind）进行软件开发（如 legionmind-github-bridge、node-unit 改进）和系统设计（multi-agent 系统）的日常实践。日志中包含了具体完成的任务、遇到的问题（如集群安全、Agent 知识建模）、产生的想法（如提高 Agent 自治、设计评估体系）以及次日计划。核心论点是作者正致力于通过 AI Agent 扩展个人能力（scale），并探索高效的工作流和 Agent 评估方法。结论是需要在 Agent 自治、上下文知识提供和个人精力管理之间找到平衡。",
+        "slug": "2026-work-log-january",
+        "tags": [
+          "工作日志",
+          "AI Agent",
+          "软件开发",
+          "效率管理",
+          "Multi-Agent 系统",
+          "自动化",
+          "个人生产力"
+        ],
+        "inferred_date": "2026-01-01",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 2854,
+          "completion": 492,
+          "total": 3346
+        }
+      },
+      "category": "Diary Configuration",
+      "translations": {
+        "en-US": {
+          "content_length": 11561,
+          "token_used": {
+            "prompt_tokens": 2689,
+            "completion_tokens": 2959,
+            "total_tokens": 5648,
+            "completion_tokens_details": {
+              "reasoning_tokens": 190
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 2689
+          }
+        },
+        "es-ES": {
+          "content_length": 12654,
+          "token_used": {
+            "prompt_tokens": 2691,
+            "completion_tokens": 3682,
+            "total_tokens": 6373,
+            "completion_tokens_details": {
+              "reasoning_tokens": 171
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 2691
+          }
+        },
+        "ja-JP": {
+          "content_length": 6712,
+          "token_used": {
+            "prompt_tokens": 2926,
+            "completion_tokens": 3917,
+            "total_tokens": 6843,
+            "completion_tokens_details": {
+              "reasoning_tokens": 274
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 2926
+          }
+        },
+        "de-DE": {
+          "content_length": 13368,
+          "token_used": {
+            "prompt_tokens": 2691,
+            "completion_tokens": 4084,
+            "total_tokens": 6775,
+            "completion_tokens_details": {
+              "reasoning_tokens": 270
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 2691
+          }
+        }
+      },
+      "nativeMarkdownHash": "596d02b8b21d24b789f80df59dfea77b5e2836db3b2cd9090b109b4576767a1d"
     }
   ]
 }
