@@ -1,0 +1,19 @@
+---
+"title": "Alle Blogbeiträge"
+"summary": "Dieses Dokument ist eine Listenansicht für Blogbeiträge, die alle Artikel anzeigt und nach Datum sortiert. Die Seite ist für die Paginierung konfiguriert, zeigt 15 Beiträge pro Seite und verwendet eine spezifische Seitenvorlage. Zudem bietet die Seite Links zu einer Tag-Liste, um Nutzern das Filtern von Beiträgen nach Schlagwörtern zu erleichtern."
+"tags":
+  - "blog"
+  - "posts"
+  - "list"
+  - "tags"
+  - "archive"
+---
+
++++
+paginate_by = 15
+title = "Alle Blogbeiträge"
+sort_by = "date"
+page_template = "blog-page.html"
++++
+
+> Liste aller *[Tags](/tags)*

@@ -1,0 +1,66 @@
+---
+"title": "A-"
+"summary": "Este artículo se centra en el poema 'To-' de John Keats, explorando cómo el breve enamoramiento del poeta por una joven dama inspiró su creación. A través de ricas imágenes y expresiones emocionales, el poema muestra la búsqueda obsesiva de Keats por la belleza. El artículo señala además que el tratamiento del ritmo en este poema, especialmente en los dos últimos versos, presenta similitudes con los sonetos de Shakespeare, reflejando la herencia y la influencia de Keats de la tradición poética shakespeariana. Esto no solo revela los orígenes de la creación poética de Keats, sino que también proporciona una perspectiva importante para comprender su estilo artístico."
+"tags":
+  - "John Keats"
+  - "Análisis poético"
+  - "Shakespeare"
+  - "Ritmo"
+  - "Comparación literaria"
+  - "Keats"
+  - "Soneto"
+  - "Influencia literaria"
+"date": "2018-01-07"
+---
+
+---
+title: To-
+date: 2018-01-07
+taxonomies:
+  tags:
+    - John Keats
+---
+
+> Keats vio una vez a una joven dama durante unos minutos, quedando tan fascinado e incluso afligido por ella.
+
+<!--more-->
+
+## To -
+
+```
+TIME’S sea hath been five years at its slow ebb,
+  Long hours have to and fro let creep the sand,
+Since I was tangled in thy beauty’s web,
+  And snared by the ungloving of thine hand.
+
+And yet I never look on midnight sky,
+  But I behold thine eyes’ well memoried light;
+I cannot look upon the rose’s dye,
+  But to thy cheek my soul doth take its flight.
+
+I cannot look on any budding flower,
+  But my fond ear, in fancy at thy lips
+And harkening for a love-sound, doth devour
+  Its sweets in the wrong sense:—Thou dost eclipse
+
+Every delight with sweet remembering,
+And grief unto my darling joys dost bring.
+```
+
+### Nota
+
+Posteriormente se descubrió que los dos últimos versos de este poema `To - ["Time's sea"]`:
+
+```
+Every delight with sweet remembering,
+And grief unto my darling joys dost bring.
+```
+
+y los versos del `soneto CXIII` de Shakespeare:
+
+```
+Even so, being full of your ne'er cloying sweetness,
+To bitter sauces did I frame my feeding.
+```
+
+presentan cierta similitud rítmica. No es de extrañar que en una nota al pie de este poema de Keats se mencionara: "En el tratamiento rítmico de la estructura emocional y en la creciente musicalidad, se asemeja enormemente a los sonetos de Shakespeare".

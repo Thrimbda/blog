@@ -1,0 +1,30 @@
+---
+"title": "Prueba de Embla"
+"summary": "Este documento es una página de prueba para el carrusel Embla, que muestra cómo incrustar múltiples imágenes y proporcionar descripciones simples. Incluye cinco imágenes de ejemplo, cada una con un color y número diferente, para demostrar el efecto del carrusel. Además, el documento contiene texto para probar el diseño mixto de imágenes y texto. En general, este documento tiene como objetivo proporcionar un entorno de prueba básico para ayudar a los usuarios a comprender y configurar el componente de carrusel Embla."
+"tags":
+  - "Embla"
+  - "carrusel"
+  - "prueba"
+  - "carrusel de imágenes"
+  - "prueba frontend"
+  - "ejemplo"
+"date": "2025-01-01"
+---
+
++++
+title = "Prueba de Embla"
+date = 2025-01-01
++++
+
+Página de prueba para el carrusel Embla.
+
+![Image 1](https://via.placeholder.com/600x400/FF5733/fff?text=Image+1)
+![Image 2](https://via.placeholder.com/600x400/33FF57/fff?text=Image+2)
+![Image 3](https://via.placeholder.com/600x400/3357FF/fff?text=Image+3)
+
+Algo de texto entre imágenes.
+
+![Image 4](https://via.placeholder.com/600x400/F333FF/fff?text=Image+4)
+![Image 5](https://via.placeholder.com/600x400/33FFF3/fff?text=Image+5)
+
+Fin de la prueba.
