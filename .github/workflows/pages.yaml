@@ -47,7 +47,7 @@ jobs:
 
       - name: Build Czon site (sub-path /czon)
         run: |
-          npx czon@latest build --lang zh-Hans --lang en-US --lang ja-JP --lang es-ES --lang de-DE --verbose
+          npx czon@latest build --lang zh-Hans --lang en-US --lang ja-JP --lang es-ES --lang de-DE
           mkdir -p ./final-output/czon
           cp -r ./.czon/dist/* ./final-output/czon/
 
