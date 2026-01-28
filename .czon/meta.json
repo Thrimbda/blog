@@ -3808,23 +3808,32 @@
       "nativeMarkdownHash": "aa2ada491fe5b2e008e141507113e4a0912a2c803e8054f9b3c62d6d0ff5dcd1"
     },
     {
-      "hash": "aa901b1514b623d15cff21ea81282d99eae7e701b682c4575256b3877c00b16e",
+      "hash": "89f8dfbb4f695b6ebf3ca4e80b1720aba16ee9061abf75a9b18235e000f879cd",
       "path": "content/diary/diary-2026.md",
       "links": [
-        "#orgf3197da",
-        "#orge03e1ca",
-        "#org4d65f86",
-        "#org1006a17",
-        "#orgdb0ae87",
-        "#org750daf2",
-        "#org287b8dd",
-        "#orgf838e08",
-        "#org8998678",
-        "#orgc688fe4",
-        "#org2a15db2",
-        "#orgab0f160",
-        "#org68bf2d9",
-        "#orge3ab04d",
+        "#org7a37329",
+        "#orgdf95c10",
+        "#org46a8ace",
+        "#org4842a30",
+        "#orgd3c2dea",
+        "#orgfac9005",
+        "#org53cf87b",
+        "#org420a748",
+        "#org003bc35",
+        "#org50de801",
+        "#org5af0a91",
+        "#org69bd02c",
+        "#org1f09dca",
+        "#org8a10f91",
+        "#org1d94cd3",
+        "#org1ca275c",
+        "#org48ae323",
+        "#org7111e30",
+        "#org43faf05",
+        "#org8efa648",
+        "#orga5425d1",
+        "#orge845cbe",
+        "#org3411989",
         "https://medium.com/ai-software-engineer/anthropic-new-guide-shows-how-to-build-quality-ai-agents-without-getting-fooled-29f378ec2609"
       ],
       "metadata": {
@@ -3928,7 +3937,7 @@
           }
         }
       },
-      "nativeMarkdownHash": "596d02b8b21d24b789f80df59dfea77b5e2836db3b2cd9090b109b4576767a1d"
+      "nativeMarkdownHash": "d15d07a198494e5b395f8435b7d2db9328e8ed5b8f4cacd4789601512174e728"
     }
   ]
 }
