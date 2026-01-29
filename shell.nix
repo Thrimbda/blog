@@ -20,12 +20,6 @@ mkShell {
     echo "💡 Tip: Use 'npx czon --help' & 'zola --help' for more commands"
     echo ""
 
-    # # Deepseek API configuration
-    # export OPENAI_API_KEY='sk-44ede23dbc804f81a9f8dbeb5826616d'
-
-    # silicon flow Deepseek API configuration
-    export OPENAI_API_KEY='sk-jybvfwuisbnloedovfevuroyxxdvtphueqdikmcnepqnrjhv'
-
     export OPENAI_MAX_TOKENS="8192"
 
     export PATH=$HOME/.opencode/bin:$PATH
