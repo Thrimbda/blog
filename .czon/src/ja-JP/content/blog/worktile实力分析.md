@@ -1,16 +1,15 @@
 ---
 "title": "Worktileの要求管理実力分析"
-"summary": "本稿は『人月の神話』におけるバベルの塔の失敗事例を出発点とし、プロジェクト失敗の原因はコミュニケーションと組織の欠如にあると分析しています。著者は、良好な要求管理は要求そのものとその管理プロセスの両方に向けられるべきであると指摘します。\
-  続いて、プロジェクト管理ツールであるWorktileの特性を詳細に紹介します。カンバン式タスク管理、ファイル同期、共有カレンダー、メッセージ通知、分析統計ビューなどが含まれます。Worktileを使用した要求管理のプロセス（要求の提出、審査、実施、確認、測定）の使用方法を示すことで、本稿はWorktileがコミュニケーション、組織、システム範囲の過大という問題をどのように解決するかを論証します。最後に、要求管理はプロジェクト管理全体に組み込まれるべきであり、Worktileは完全な概念的サポートを提供していることを強調しています。"
+"summary": "本稿は『人月の神話』におけるバベルの塔の失敗事例から始め、要求管理の失敗原因はコミュニケーションの欠如、組織化の欠如、システム範囲の過大さにあると指摘します。続いて、Worktileプロジェクト管理ツールの特徴、すなわちカンバン式タスク管理、ファイル同期、共有チームカレンダー、メッセージ通知、分析統計ビューを紹介します。その後、Worktileを用いた要求管理のプロセス（要求提出、審査、実施、確認、測定）を詳細に説明し、Worktileがタスクリスト、ラベル、優先度、統計分析を通じて要求管理の問題をどのように解決するかを示します。最後に、Worktileが要求管理、人員組織、コミュニケーションなどの問題を解決できると結論づけ、要求管理は他のプロジェクト管理要素と組み合わせるべきであると強調しています。"
 "tags":
   - "要求管理"
-  - "プロジェクト管理"
   - "Worktile"
-  - "チームコラボレーション"
+  - "プロジェクト管理"
   - "システム分析"
-  - "タスク管理"
+  - "タスクコラボレーション"
   - "カンバン"
-  - "コミュニケーション"
+  - "チームコラボレーション"
+  - "要求分析"
 "date": "2017-04-06"
 ---
 
@@ -25,131 +24,490 @@ taxonomies:
 
 # 要求管理
 
-まず、『人月の神話』から、プロジェクト管理に関する典型的な失敗例として挙げられている一節を抜粋します。
+まず、『人月の神話』から、プロジェクト管理に関する典型的な失敗例を一部抜粋します。
 
 <!--more-->
 
-> **バベルの塔の管理上の教訓**
+> **バベルの塔の管理教訓**
 >
-> 『創世記』によれば、バベルの塔はノアの箱舟に次ぐ人類第二の偉大な工学的偉業でしたが、同時に最初の完全な失敗プロジェクトでもありました。
+> 『創世記』によれば、バベルの塔はノアの箱舟に次ぐ人類第二の大工事でしたが、同時に最初の完全な失敗工事でもありました。
 >
-> この物語は多くの点で、さまざまなレベルにおいて非常に示唆に富み、教育的です。純粋に工学的プロジェクトとして捉え、管理上どのような教訓が学べるかを見てみましょう。このプロジェクトはどれほど良い前提条件を持っていたのでしょうか？彼らは以下を持っていましたか：
+> この物語は多くの点で、さまざまなレベルにおいて非常に示唆に富み、教育的です。純粋な工事プロジェクトとして捉え、管理面で学ぶべき教訓は何かを見てみましょう。このプロジェクトの前提条件はどれほど良かったのでしょうか？彼らは以下を持っていましたか：
 >
-> 1.  明確な目標？
+> 1. 明確な目標？
 >
->     はい。不可能に近いほど幼稚ではありましたが。そして、プロジェクトはこの基本的な制限に直面するはるか以前に失敗していました。
+>    はい。不可能に近いほど幼稚ではありましたが、プロジェクトはこの基本的な制限に直面するはるか前に失敗していました。
 >
-> 2.  人的資源？
+> 2. 人的資源？
 >
->     非常に豊富でした。
+>    非常に豊富でした。
 >
-> 3.  材料？
+> 3. 材料？
 >
->     メソポタミアには豊富な土とアスファルトがありました。
+>    メソポタミアには豊富な土とアスファルトがありました。
 >
-> 4.  十分な時間？
+> 4. 十分な時間？
 >
->     はい。時間制限の兆候は一切ありませんでした。
+>    はい。時間制限の兆候は一切ありませんでした。
 >
-> 5.  十分な技術？
+> 5. 十分な技術？
 >
->     はい。ピラミッドまたは円錐形の構造自体が安定しており、圧力負荷をうまく分散できます。レンガ積みの技術については、深く研究されていました。同様に、プロジェクトは技術的限界に達するはるか以前に失敗していました。
+>    はい。ピラミッドまたは円錐形の構造自体が安定しており、圧力負荷をうまく分散できます。煉瓦建築技術についても、人々は深く研究していました。同様に、プロジェクトは技術的限界に達するはるか前に失敗していました。
 >
-> では、これらすべての条件を備えていたのに、なぜプロジェクトは失敗したのでしょうか？彼らに欠けていたものは何でしょうか？二つの側面です——**コミュニケーション**、そしてコミュニケーションの結果としての——**組織**です。彼らは互いに話すことができず、したがって協力できませんでした。協力が進まないと、作業は停止しました。史書の行間から、コミュニケーションの欠如が論争、欲求不満、集団猜疑心を引き起こしたと推測できます。すぐに、部族は分裂し始めました—— 人々は互いに争うよりも孤立を選んだのです。
+> では、これらすべての条件を備えていたのに、なぜプロジェクトは失敗したのでしょうか？彼らに欠けていたものは何でしょうか？二つの側面です——**コミュニケーション**、そしてコミュニケーションの結果としての**組織化**です。彼らは互いに話すことができず、協力することができませんでした。協力が進まないと、作業は停滞しました。史書の行間から推測すると、コミュニケーションの欠如が論争、欲求不満、集団猜疑心を引き起こしました。すぐに、部族は分裂し始めました—— 人々は互いに争うよりも孤立を選んだのです。
 
-著者は分析の結果、この失敗したプロジェクトが失敗した原因を以下の点にあるとしています：
+著者は分析の結果、この失敗したプロジェクトの原因が以下の点にあるとしています：
 
 - コミュニケーションが取れない
-- 組織がない
-- システムの範囲が大きすぎる
+# 1. 概述
 
-したがって、良好な要求管理は二つの側面に向けられるべきです：**要求そのもの**と、**要求の管理**です。
+本文，我们来分享 MyBatis 的日志模块，对应 `logging` 包。如下图所示：[![`logging` 包](http://static.iocoder.cn/images/MyBatis/2020_01_07/01.png)](http://static.iocoder.cn/images/MyBatis/2020_01_07/01.png)`logging` 包
 
-自身の使用経験を踏まえ、私はプロジェクト管理ツールであるWorktileを分析対象として選択しました。
+在 [《精尽 MyBatis 源码解析 —— 项目结构一览》](http://svip.iocoder.cn/MyBatis/intro) 中，简单介绍了这个模块如下：
 
-## 分析
-
-では、Worktileはどのようにして上記の問題を解決するのでしょうか？
-
-### まず、Worktileとは何かを答えます
-
-公式サイトの紹介：
-
-> Worktileはカンバン式タスクコラボレーションツールです。タスクカードを簡単にドラッグ＆ドロップするだけで、チームメンバーはカンバンの変化をリアルタイムで同期し、アジャイルにコラボレーションできます。軽量なチームコラボレーションツールで、あなたのチームは5分以内に素早くコラボレーションを開始し、効率を倍増させます。シンプルで、直感的で、使いやすく、無料です。無制限のメンバー、プロジェクト、ストレージスペースを提供し、あなたのチームと共に飛躍します。
-
-整理した結果、以下の**特性**があることがわかりました：
-
-- プロジェクト指向のカンバン式タスク管理
-
-  タスクの分担を明確にし、プロジェクトの状況をタイムリーに把握できます。各タスクにはチェック項目、担当者、期限、添付ファイル、コメントなどが含まれます。
-
-- ファイル同期機能を備えている
-
-  GitHubに似ていますが、その機能ほど強力ではありません。個人的にはやや中途半端な機能だと考えています。
-
-- チームカレンダーの共有
-
-  チームの作業計画をマクロ的に把握できます。
-
-- メッセージ通知
-
-  新しいタスクが割り当てられたとき、特定のファイルへの注意喚起、または新しいコメントがあったときなどに通知を受け取ることができます。
-
-- 分析統計ビュー
-
-  タスクを視覚的に定量化し、グラフでプロジェクトの進捗状況、プロジェクトメンバーのタスク割り当て、プロジェクトのトレンドなどを直感的に確認できます。
-
-その特性を理解した後、次にWorktileを使用してどのように要求管理を行うかに注目します。
-
-### Worktileを使用した要求管理
-
-要求管理のプロセスに対して、worktileでどのように体現されるかを分析します：
-
-> - 要求の提出
+> 无论在开发测试环境中，还是在线上生产环境中，日志在整个系统中的地位都是非常重要的。良好的日志功能可以帮助开发人员和测试人员快速定位 Bug 代码，也可以帮助运维人员快速定位性能瓶颈等问题。目前的 Java 世界中存在很多优秀的日志框架，例如 Log4j、 Log4j2、Apache Commons Log、java.util.logging、slf4j 等。
 >
->   変更要求を詳細に記録します。これはメモ帳や受信箱と見なすことができます。要求の提案者は、要求の詳細情報を非常に簡単に記録できる必要があります。
->
-> - 審査
->
->   その変更要求を実施するかどうかを確認します。このプロセスでは、変更をレビューし、変更要求が必要かどうか、および要求が既存部分に与える影響を確認する必要があります。
+> MyBatis 作为一个设计优良的框架，除了提供详细的日志输出信息，还要能够集成多种日志框架，其日志模块的一个主要功能就是**集成第三方日志框架**。
 
-Worktileでは、タスクリストを通じて異なる変更プロセスを表示します。
+本文涉及的类如下图所示：<img src="http://ahaolin-public-img.oss-cn-hangzhou.aliyuncs.com/img/202201141000201.png" alt="img" style="zoom:150%;" />
 
-**受信箱：** このタスクリストでは、誰でもここに変更要求を提出できます。解決すべき要求があると感じたときは、ここに追加できます。
-**やること：** 実施することが確定した要求は、このリストの下にまとめて配置し、関連する担当者を追加できます。
-**進行中：** このリストの下では、進行中の要求を明確にし、製品の進捗状況を把握できます。
-**完了：** 完了した要求については、専用のリストの下に配置でき、後の製品の追跡に便利です。
+- 从图的**右上角**，我们可以看到 MyBatis 直接集成了很多第三方的日志框架。
+- 从图的**左下角**，我们可以看到有一个 Jdk 的日志框架，还有一个 `stderr` 标准输入输出。😈 实际上，`stderr` 不算一个日志框架，仅仅当无法找到第三方日志框架时，会使用它来打印日志。
+- 从图的**中间**，我们可以看到 `slf4j` 这个日志门面。关于这个概念，不了解的胖友，可以 Google 一下。
 
-> - 実施
->
->   要求の詳細な指示に基づいて具体的な実施を行います。これには、製品、開発、設計担当者の関与が含まれる可能性があります。
->
-> - 確認
->
->   要求の結果に対して品質保証を行い、要求の実施が正しいことを確認します。
->
-> - 測定
->
->   要求のプロセスに対して測定分析を行います。このプロセスは要求管理にとって非常に重要かつ有意義です。これらの要求を分析することで、現在のプロジェクトの進捗状況や存在する問題を知ることができます。
+下面，我们按照图的**左上角**到**右下角**的顺序，逐个日志框架来分享。
 
-タグを使用してタスクの属性を定義し、タスクの優先度を通じて要求処理の優先度を定義します。
+# 2. LogFactory
 
-変更要求を実施しないと判断した場合は、その要求をアーカイブするだけで、後からの検索が容易になります。
+`org.apache.ibatis.logging.LogFactory` ，Log 工厂类。
 
-Worktileプロジェクトの分析統計ビューでは、タグ統計を行うことができます。これは要求管理にとっての価値は、要求属性の統計分析を通じて、既存製品の進捗状況、ユーザーのどのような課題が解決されたかを把握でき、またリスト統計を通じて要求の完了状況を統計できる点にあります：
+## 2.1 构造方法
 
-### 問題の解決
+```java
+// LogFactory.java
 
-Worktileを分析した後、最初の質問に答えることができます：**Worktileは、前述の問題をどのように解決するのでしょうか？**
+/**
+ * Marker to be used by logging implementations that support markers
+ */
+public static final String MARKER = "MYBATIS";
 
-私たちはWorktileを使用して、要求管理のプロセスを柔軟に実施できます。そのタスクの直感性、議論の場の提供、および多様なプロジェクトビューの特性により、システムを定義するのが容易になり、良好な管理と組み合わせることで、システム境界の定義が曖昧になるなどの問題を回避できます。
+/**
+ * 使用的 Log 的构造方法
+ */
+private static Constructor<? extends Log> logConstructor;
 
-worktileを使用すると、変更要求の記録を簡単に行うことができ、議論や通知機能と組み合わせることで、ある程度の簡単な協調とコミュニケーションの役割を果たし、各メンバーが参加できます。
+static {
+    // <1> 逐个尝试，判断使用哪个 Log 的实现类，即初始化 logConstructor 属性
+    tryImplementation(LogFactory::useSlf4jLogging);
+    tryImplementation(LogFactory::useCommonsLogging);
+    tryImplementation(LogFactory::useLog4J2Logging);
+    tryImplementation(LogFactory::useLog4JLogging);
+    tryImplementation(LogFactory::useJdkLogging);
+    tryImplementation(LogFactory::useNoLogging);
+}
+```
 
-同時に、その統計分析機能を利用して、プロジェクトの要求を簡単に測定分析し、プロジェクト全体の現在の変更状態を分析できます。
+- `<1>` 处，在类的静态代码块中，会按照 `slf4j` -> `commonsLogging` -> `log4j2` -> `log4j` -> `jdkLogging` -> `noLogging` 的顺序，逐个尝试，判断使用哪个 Log 的实现类，即初始化 `logConstructor` 属性。
 
-これにより、Worktileは要求の管理、人員の組織化とコミュニケーションなどの問題を解決します。
+- `#tryImplementation(Runnable runnable)` 方法，尝试调用方法，如果成功，则不再尝试。代码如下：
 
-最後に、要求管理はプロジェクト管理全体の一環として、プロジェクト管理の他の要素から切り離されるべきではありません。
+  ```java
+  // LogFactory.java
+  
+  private static void tryImplementation(Runnable runnable) {
+      if (logConstructor == null) {
+          try {
+              runnable.run();
+          } catch (Throwable t) {
+              // ignore
+          }
+      }
+  }
+  ```
 
-そして、要求管理はWorktileが効果を発揮できる一つの側面に過ぎず、Worktileは上記の機能を通じて、プロジェクトライフサイクル全体の管理を実現し、概念的完全性を提供しています。
+- `#useXXXLogging()` 方法，尝试使用对应的 Log 的实现类。代码如下：
+
+  ```java
+  // LogFactory.java
+  
+  public static synchronized void useSlf4jLogging() {
+      setImplementation(org.apache.ibatis.logging.slf4j.Slf4jImpl.class);
+  }
+  
+  public static synchronized void useCommonsLogging() {
+      setImplementation(org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.class);
+  }
+  
+  public static synchronized void useLog4JLogging() {
+      setImplementation(org.apache.ibatis.logging.log4j.Log4jImpl.class);
+  }
+  
+  public static synchronized void useLog4J2Logging() {
+      setImplementation(org.apache.ibatis.logging.log4j2.Log4j2Impl.class);
+  }
+  
+  public static synchronized void useJdkLogging() {
+      setImplementation(org.apache.ibatis.logging.jdk14.Jdk14LoggingImpl.class);
+  }
+  
+  public static synchronized void useStdOutLogging() {
+      setImplementation(org.apache.ibatis.logging.stdout.StdOutImpl.class);
+  }
+  
+  public static synchronized void useNoLogging() {
+      setImplementation(org.apache.ibatis.logging.nologging.NoLoggingImpl.class);
+  }
+  ```
+
+  - 每个方法，都调用了 `#setImplementation(Class<? extends Log> implClass)` 方法，尝试初始化 `logConstructor` 属性。代码如下：
+
+    ```java
+    // LogFactory.java
+    
+    private static void setImplementation(Class<? extends Log> implClass) {
+        try {
+            // 获得参数为 String 的构造方法
+            Constructor<? extends Log> candidate = implClass.getConstructor(String.class);
+            // 创建 Log 对象
+            Log log = candidate.newInstance(LogFactory.class.getName());
+            if (log.isDebugEnabled()) {
+                log.debug("Logging initialized using '" + implClass + "' adapter.");
+            }
+            // 创建成功，意味着可以使用，设置为 logConstructor
+            logConstructor = candidate;
+        } catch (Throwable t) {
+            throw new LogException("Error setting Log implementation.  Cause: " + t, t);
+        }
+    }
+    ```
+
+    - 在该方法中，我们可以看到，Log 的实现类，需要有一个参数为 `String.class` 的构造方法。例如，`org.apache.ibatis.logging.slf4j.Slf4jImpl` 的构造方法，代码如下：
+
+      ```java
+      // Slf4jImpl.java
+      
+      public Slf4jImpl(String clazz) {
+          Logger logger = LoggerFactory.getLogger(clazz);
+      
+          if (logger instanceof LocationAwareLogger) {
+              try {
+                  // check for slf4j >= 1.6 method signature
+                  logger.getClass().getMethod("log", Marker.class, String.class, int.class, String.class, Object[].class, Throwable.class);
+                  log = new Slf4jLocationAwareLoggerImpl((LocationAwareLogger) logger);
+                  return;
+              } catch (SecurityException e) {
+                  // fail-back to Slf4jLoggerImpl
+              } catch (NoSuchMethodException e) {
+                  // fail-back to Slf4jLoggerImpl
+              }
+          }
+      
+          // Logger is not LocationAwareLogger or slf4j version < 1.6
+          log = new Slf4jLoggerImpl(logger);
+      }
+      ```
+
+      - 通过这样的方式，创建了 `log` 属性。后续，在 Slf4jImpl 中，会使用该 `log` 属性，打印日志。
+
+## 2.2 getLog
+
+`#getLog(...)` 方法，获得 Log 对象。代码如下：
+
+```java
+// LogFactory.java
+
+public static Log getLog(Class<?> aClass) {
+    return getLog(aClass.getName());
+}
+
+public static Log getLog(String logger) {
+    try {
+        return logConstructor.newInstance(logger);
+    } catch (Throwable t) {
+        throw new LogException("Error creating logger for logger " + logger + ".  Cause: " + t, t);
+    }
+}
+```
+
+- 通过调用 `logConstructor` 的构造方法，创建 Log 对象。
+
+## 2.3 小结
+
+LogFactory 负责创建 Log 对象。但是实际上，它内部管理的是 Log 实现类的构造方法。并且，通过 `tryImplementation` 方法，实现按照 `slf4j` -> `commonsLogging` -> `log4j2` -> `log4j` -> `jdkLogging` -> `noLogging` 的顺序，尝试使用对应的 Log 的实现类。
+
+# 3. Log
+
+`org.apache.ibatis.logging.Log` ，MyBatis Log 接口。代码如下：
+
+```java
+// Log.java
+
+public interface Log {
+
+    boolean isDebugEnabled();
+
+    boolean isTraceEnabled();
+
+    void error(String s, Throwable e);
+
+    void error(String s);
+
+    void debug(String s);
+
+    void trace(String s);
+
+    void warn(String s);
+
+}
+```
+
+- 和主流的日志框架的接口，基本一致。
+
+## 3.1 各实现类
+
+Log 的实现类，如下图所示：[![Log 的实现类](http://static.iocoder.cn/images/MyBatis/2020_01_07/02.png)](http://static.iocoder.cn/images/MyBatis/2020_01_07/02.png)Log 的实现类
+
+- 每个实现类，对应一个第三方的日志框架。所以，每个实现类的代码，都是非常相似的。😈 所以，我们仅仅选择 `slf4j` 包下的实现类，进行分享。
+
+## 3.2 Slf4jImpl
+
+`org.apache.ibatis.logging.slf4j.Slf4jImpl` ，实现 Log 接口，SLF4J 实现类。代码如下：
+
+```java
+// Slf4jImpl.java
+
+public class Slf4jImpl implements Log {
+
+    /**
+     * SLF4J Logger 对象
+     */
+    private Log log;
+
+    public Slf4jImpl(String clazz) {
+        // 获得 Logger 对象
+        Logger logger = LoggerFactory.getLogger(clazz);
+
+        // 如果使用 LocationAwareLogger ，则创建 Slf4jLocationAwareLoggerImpl 对象
+        if (logger instanceof LocationAwareLogger) {
+            try {
+                // check for slf4j >= 1.6 method signature
+                // 首先，检查是否存在 `log(Marker marker, String fqcn, int level, String message, Object[] argArray, Throwable t)` 方法。如果有，则意味着可以使用 LocationAwareLogger 对象。实际上，这里使用了桥接模式，Slf4jLocationAwareLoggerImpl 实现 Log 接口，内部组合 LocationAwareLogger 对象。
+                logger.getClass().getMethod("log", Marker.class, String.class, int.class, String.class, Object[].class, Throwable.class);
+                log = new Slf4jLocationAwareLoggerImpl((LocationAwareLogger) logger);
+                return;
+            } catch (SecurityException e) {
+                // fail-back to Slf4jLoggerImpl
+            } catch (NoSuchMethodException e) {
+                // fail-back to Slf4jLoggerImpl
+            }
+        }
+
+        // 否则，创建 Slf4jLoggerImpl 对象
+        // Logger is not LocationAwareLogger or slf4j version < 1.6
+        log = new Slf4jLoggerImpl(logger);
+    }
+
+    @Override
+    public boolean isDebugEnabled() {
+        return log.isDebugEnabled();
+    }
+
+    @Override
+    public boolean isTraceEnabled() {
+        return log.isTraceEnabled();
+    }
+
+    @Override
+    public void error(String s, Throwable e) {
+        log.error(s, e);
+    }
+
+    @Override
+    public void error(String s) {
+        log.error(s);
+    }
+
+    @Override
+    public void debug(String s) {
+        log.debug(s);
+    }
+
+    @Override
+    public void trace(String s) {
+        log.trace(s);
+    }
+
+    @Override
+    public void warn(String s) {
+        log.warn(s);
+    }
+
+}
+```
+
+- 在构造方法中，我们可以看到，根据不同的情况，创建 `log` 为 Slf4jLocationAwareLoggerImpl 或 Slf4jLoggerImpl 对象。那么，这两个类的区别是什么呢？答案在代码的注释上。因为 `slf4j` 有 `1.6` 的版本差异，所以要做这样的处理。😈 一般情况下，我们不会使用到 `1.6` 这么老的版本，所以可以忽略 Slf4jLocationAwareLoggerImpl 类。
+- 在方法中，调用 `log` 对应的方法。也就是说，Slf4jImpl 是对 `log` 的代理。那么，为什么要这么做呢？因为，Slf4jImpl 需要做 `1.6` 的版本兼容。
+
+### 3.2.1 Slf4jLoggerImpl
+
+`org.apache.ibatis.logging.slf4j.Slf4jLoggerImpl` ，实现 Log 接口，`slf4j` **(< 1.6)** 实现类。代码如下：
+
+```java
+// Slf4jLoggerImpl.java
+
+public class Slf4jLoggerImpl implements Log {
+
+    /**
+     * SLF4J Logger 对象
+     */
+    private Logger log;
+
+    public Slf4jLoggerImpl(Logger logger) {
+        log = logger;
+    }
+
+    @Override
+    public boolean isDebugEnabled() {
+        return log.isDebugEnabled();
+    }
+
+    @Override
+    public boolean isTraceEnabled() {
+        return log.isTraceEnabled();
+    }
+
+    @Override
+    public void error(String s, Throwable e) {
+        log.error(s, e);
+    }
+
+    @Override
+    public void error(String s) {
+        log.error(s);
+    }
+
+    @Override
+    public void debug(String s) {
+        log.debug(s);
+    }
+
+    @Override
+    public void trace(String s) {
+        log.trace(s);
+    }
+
+    @Override
+    public void warn(String s) {
+        log.warn(s);
+    }
+
+}
+```
+
+- 在方法中，调用 `log` 对应的方法。也就是说，Slf4jLoggerImpl 是对 `log` 的代理。那么，为什么要这么做呢？因为，Slf4jLoggerImpl 需要做 `1.6` 的版本兼容。
+
+### 3.2.2 Slf4jLocationAwareLoggerImpl
+
+`org.apache.ibatis.logging.slf4j.Slf4jLocationAwareLoggerImpl` ，实现 Log 接口，`slf4j` **(>= 1.6)** 实现类。代码如下：
+
+```java
+// Slf4jLocationAwareLoggerImpl.java
+
+public class Slf4jLocationAwareLoggerImpl implements Log {
+
+    /**
+     * SLF4J LocationAwareLogger 对象
+     */
+    private static final Marker MARKER = MarkerFactory.getMarker(LogFactory.MARKER);
+
+    /**
+     * LocationAwareLogger 对象
+     */
+    private static final String FQCN = Slf4jImpl.class.getName();
+
+    /**
+     * LocationAwareLogger 对象
+     */
+    private LocationAwareLogger logger;
+
+    public Slf4jLocationAwareLoggerImpl(LocationAwareLogger logger) {
+        this.logger = logger;
+    }
+
+    @Override
+    public boolean isDebugEnabled() {
+        return logger.isDebugEnabled();
+    }
+
+    @Override
+    public boolean isTraceEnabled() {
+        return logger.isTraceEnabled();
+    }
+
+    @Override
+    public void error(String s, Throwable e) {
+        logger.log(MARKER, FQCN, LocationAwareLogger.ERROR_INT, s, null, e);
+    }
+
+    @Override
+    public void error(String s) {
+        logger.log(MARKER, FQCN, LocationAwareLogger.ERROR_INT, s, null, null);
+    }
+
+    @Override
+    public void debug(String s) {
+        logger.log(MARKER, FQCN, LocationAwareLogger.DEBUG_INT, s, null, null);
+    }
+
+    @Override
+    public void trace(String s) {
+        logger.log(MARKER, FQCN, LocationAwareLogger.TRACE_INT, s, null, null);
+    }
+
+    @Override
+    public void warn(String s) {
+        logger.log(MARKER, FQCN, LocationAwareLogger.WARN_INT, s, null, null);
+    }
+
+}
+```
+
+- 在方法中，调用 `logger` 对应的方法。也就是说，Slf4jLocationAwareLoggerImpl 是对 `logger` 的代理。那么，为什么要这么做呢？因为，Slf4jLocationAwareLoggerImpl 需要做 `1.6` 的版本兼容。
+
+# 4. 日志打印
+
+在 MyBatis 中，日志的打印，主要使用 `BaseJdbcLogger`、`ConnectionLogger`、`StatementLogger`、`PreparedStatementLogger`、`ResultSetLogger` 等等。但是，实际上，我们会发现，在 `logging` 包下，还有 `jdbc` 包。😈 所以，本文暂时不分享这块内容，放在后面，我们看具体代码的时候，详细解析。
+
+# 5. 异常处理
+
+在 `logging` 包下，还有 `LogException` 异常类，被 `LogFactory` 所使用。代码如下：
+
+```java
+// LogException.java
+
+public class LogException extends RuntimeException {
+
+    private static final long serialVersionUID = 1022924004852350942L;
+
+    public LogException() {
+        super();
+    }
+
+    public LogException(String message) {
+        super(message);
+    }
+
+    public LogException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public LogException(Throwable cause) {
+        super(cause);
+    }
+
+}
+```
+
+# 6. 总结
+
+😈 日志模块，比较简单，所以内容不多。

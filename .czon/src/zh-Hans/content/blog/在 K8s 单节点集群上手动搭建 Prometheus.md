@@ -1,22 +1,20 @@
 ---
 "title": "在 K8s 单节点集群上手动搭建 Prometheus"
-"summary": "本文是一篇关于在 Kubernetes 单节点集群上手动搭建 Prometheus
-  监控系统的详细指南。文章首先通过裸机环境进行概念验证，运行 Prometheus 和 Node Exporter 以理解基本配置。然后，重点转向在 K8s
-  集群内部署，详细说明了所需的 K8s 资源（如
-  Namespace、DaemonSet、ConfigMap、ServiceAccount、ClusterRole 等），并解释了如何配置
-  Prometheus 的服务发现（特别是 kubernetes_sd_config）和重新标记（relabel_config）来监控多个目标，包括
-  Prometheus 自身、Node Exporter、Kubelet、cAdvisor 和 API Server。文章强调了手动配置（而非使用 Helm
-  或 Operator）以深入理解 Prometheus 工作原理，并提供了配置示例和权限设置。最后，文章总结了部署步骤，并留下了一个关于如何用裸机
-  Prometheus 监控 K8s 集群的思考题。"
+"summary": "本文是一篇技术教程，旨在指导读者在 Kubernetes 单节点集群上手动部署 Prometheus 监控系统，而不依赖 Helm
+  Chart 或 Prometheus Operator 等快捷工具。文章首先通过裸机概念验证介绍 Prometheus 的基本运行和配置，然后详细阐述了在
+  K8s 环境中部署所需的各项资源，包括 Namespace、DaemonSet、ConfigMap、ServiceAccount、ClusterRole
+  等。核心部分讲解了如何配置 Prometheus 的服务发现（特别是
+  kubernetes_sd_config）和重新标记（relabel_config）来监控多个目标，如 Prometheus 自身、Node
+  Exporter、Kubelet、cAdvisor 和 API Server。文章还强调了 RBAC 权限配置的重要性，并提供了具体的 YAML
+  配置示例。最后，作者分享了实战中积累的资源声明集合，帮助读者完成部署。"
 "tags":
   - "可观测性"
   - "Prometheus"
   - "Kubernetes"
   - "监控"
+  - "技术教程"
   - "服务发现"
-  - "Node Exporter"
-  - "cAdvisor"
-  - "Kubelet"
+  - "RBAC"
 "date": "2020-11-05"
 ---
 

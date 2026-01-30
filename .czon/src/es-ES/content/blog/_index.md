@@ -1,11 +1,11 @@
 ---
 "title": "Todas las entradas del blog"
-"summary": "Este documento es una página de lista de entradas de blog que muestra todas las publicaciones, ordenadas por fecha. La página está configurada con paginación, mostrando 15 entradas por página y utilizando una plantilla específica. Además, proporciona enlaces a la lista de etiquetas para facilitar el filtrado de publicaciones por etiquetas."
+"summary": "Este documento sirve como página de índice para todas las entradas del blog, configurada para mostrar 15 entradas por página ordenadas por fecha. Incluye una referencia a una página de etiquetas para una categorización adicional, facilitando a los usuarios navegar y filtrar el contenido. La página utiliza una plantilla específica para una presentación coherente."
 "tags":
   - "blog"
   - "posts"
-  - "list"
   - "tags"
+  - "pagination"
   - "archive"
 ---
 

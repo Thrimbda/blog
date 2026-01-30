@@ -1,25 +1,25 @@
 ---
-"title": "0xc1's Crew Log: Life Fragments and Emotional Records"
-"summary": "This article is a collection of 0xc1's personal logs on Gcores, spanning from 2023 to 2026. The content covers fragments of daily life, emotional stories, gaming experiences (such as *Monster Hunter*, *StarCraft 2*, *Celeste*, etc.), travelogues (like cycling around Qinghai Lake, traveling in the US, relaxing in Hangzhou, etc.), technical musings (on NixOS, Vim, CRUD, etc.), and personal reflections. Narrated in the first person with an intimate and authentic style, the logs include both trivial life records and profound emotional introspection, showcasing the author's thoughts on life, friendship, love, and ideals."
+"title": "0xc1's Crew Log: Life Fragments and Story Sharing"
+"summary": "This article is a collection of personal logs published by the author 0xc1 on the Crew platform, spanning from 2023 to 2026. The content is presented in reverse chronological order and includes snippets of daily life, travel experiences (such as travel stories with friend zl, cycling around Qinghai Lake, a trip to the USA), emotional memories (like a college love story), gaming experiences (e.g., *Monster Hunter*, *StarCraft 2*, *Celeste*), film reviews, music sharing, and personal reflections. Through text and images, the logs record the author's growth, friendships, emotional changes, and reflections on life, showcasing a rich emotional world and diverse interests."
 "tags":
-  - "Personal Log"
-  - "Life Records"
-  - "Gaming Experience"
-  - "Travelogues"
-  - "Emotional Stories"
-  - "Technical Musings"
-  - "Gcores"
-"date": "January 15, 2026"
+  - "Personal Journal"
+  - "Life Fragments"
+  - "Travel Stories"
+  - "Emotional Memories"
+  - "Gaming Experiences"
+  - "Music Sharing"
+  - "Thoughts and Reflections"
+"date": "2026-01-15"
 ---
 
-Original Link: [Thrimbda's Crew](https://www.gcores.com/users/464460/talks)
+Original link: [Thrimbda's Crew](https://www.gcores.com/users/464460/talks)
 ## 2026-1-1
 
 
 
 Happy New Year!
 
-- 🧩A Life Fragment
+- 🧩A Slice of Life
 
 
 ---
@@ -31,7 +31,7 @@ Happy New Year!
 
 Hello everyone, does anyone here use the IKEA IDÅSEN sit-stand desk?
 
-- 🧩A Life Fragment
+- 🧩A Slice of Life
 
 
 ---
@@ -41,7 +41,7 @@ Hello everyone, does anyone here use the IKEA IDÅSEN sit-stand desk?
 
 ![edea92f41dafcd310c76d8f702e77f53-2250-3000.jpg](https://0xc1.space/images/gcores/edea92f41dafcd310c76d8f702e77f53-2250-3000.jpg)
 
-Instantly gained my respect. The FamilyMart downstairs actually has this.
+Instantly gained a new level of respect for the FamilyMart downstairs—they actually have this!
 
 - 🍺It's All in the Drink
 
@@ -68,7 +68,7 @@ This is truly the most important thing in the entire universe, and also the most
 
 Gazing at each other across the distance, unheard, I wish to follow the moonlight's flow to shine upon you. ☺️
 
-- 🍂The First Touch of Autumn Color
+- 🍂The First Hint of Autumn Colors
 
 
 ---
@@ -80,7 +80,7 @@ Gazing at each other across the distance, unheard, I wish to follow the moonligh
 
 Who could be happier than him?
 
-- 🧩A Life Fragment
+- 🧩A Slice of Life
 
 
 ---
@@ -104,7 +104,7 @@ Whatever the outcome, there will only be emotion. Face destiny head-on.
 
 
 
-The most satisfying time staying up until 6 AM. I'm so hyped. Those two team fights were just too beautiful.
+The most satisfying all-nighter ever, staying up until 6 AM. I'm so hyped, those two team fights were just too beautiful.
 
 - 🛡️DOTA2 Tournament Discussion
 
@@ -116,396 +116,1174 @@ The most satisfying time staying up until 6 AM. I'm so hyped. Those two team fig
 
 
 
-Although I bet on Falcons to win, seeing Marlin type trash talk after halftime and then BB pulling off a miraculous comeback, with the whole team tipping to mock Marlin, was just too satisfying.
+Although I bet on Falcons to win, seeing Marlin open the champagne and type trash talk at halftime, only for BB to make an epic comeback and the whole team tipping/spamming Marlin in all chat was just too satisfying.
 
 All chat / loves to type.
 
-Hahahahahahahahahahahahahahaha
+Hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahah<｜fim▁begin｜>
+CodingTest
+
+
+src/Programmers/Level1/문자열내p와y의개수.java
+
+
+package Programmers.Level1;
 
-- 🛡️DOTA2 Tournament Discussion
+public class 문자열내p와y의개수 {
+    boolean solution(String s){
+        boolean answer = true;
+        int p = 0;
+        int y = 0;
+        for(int i=0; i<s.length(); i++){
+            if(s.charAt(i) == 'p' || s.charAt(i) == 'P'){
+                p++;
+            }else if(s.charAt(i) == 'y' || s.charAt(i) == 'Y'){
+                y++;
+            }
+        }
+        if(p != y){
+            answer = false;
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/문자열다루기기본.java
+
+
+package Programmers.Level1;
+
+public class 문자열다루기기본 {
+    public boolean solution(String s){
+        boolean answer = true;
+        if(s.length() == 4 || s.length() == 6){
+            for(int i=0; i<s.length(); i++){
+                if(s.charAt(i) < '0' || s.charAt(i) > '9'){
+                    answer = false;
+                }
+            }
+        }else{
+            answer = false;
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/문자열내림차순으로배치하기.java
+
+
+package Programmers.Level1;
+
+import java.util.Arrays;
+import java.util.Collections;
+
+public class 문자열내림차순으로배치하기 {
+    public String solution(String s){
+        String answer = "";
+        String[] arr = s.split("");
+        Arrays.sort(arr, Collections.reverseOrder());
+        for(int i=0; i<arr.length; i++){
+            answer += arr[i];
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/문자열내마음대로정렬하기.java
+
+
+package Programmers.Level1;
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class 문자열내마음대로정렬하기 {
+    public String[] solution(String[] strings, int n){
+        String[] answer = {};
+        Arrays.sort(strings, new Comparator<String>(){
+            @Override
+            public int compare(String s1, String s2){
+                if(s1.charAt(n) > s2.charAt(n)){
+                    return 1;
+                }else if(s1.charAt(n) == s2.charAt(n)){
+                    return s1.compareTo(s2);
+                }else if(s1.charAt(n) < s2.charAt(n)){
+                    return -1;
+                }else{
+                    return 0;
+                }
+            }
+        });
+        answer = strings;
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/제일작은수제거하기.java
+
+
+package Programmers.Level1;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class 제일작은수제거하기 {
+    public int[] solution(int[] arr){
+        int[] answer = {};
+        if(arr.length == 1){
+            answer = new int[1];
+            answer[0] = -1;
+        }else{
+            int min = arr[0];
+            for(int i=0; i<arr.length; i++){
+                if(min > arr[i]){
+                    min = arr[i];
+                }
+            }
+            ArrayList<Integer> list = new ArrayList<>();
+            for(int i=0; i<arr.length; i++){
+                if(arr[i] != min){
+                    list.add(arr[i]);
+                }
+            }
+            answer = new int[list.size()];
+            for(int i=0; i<list.size(); i++){
+                answer[i] = list.get(i);
+            }
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/정수내림차순으로배치하기.java
+
 
+package Programmers.Level1;
 
----
----
+import java.util.Arrays;
+import java.util.Collections;
 
-## 2025-9-12
+public class 정수내림차순으로배치하기 {
+    public long solution(long n){
+        long answer = 0;
+        String a = n+"";
+        String[] arr = a.split("");
+        Arrays.sort(arr, Collections.reverseOrder());
+        String b = "";
+        for(int i=0; i<arr.length; i++){
+            b += arr[i];
+        }
+        answer = Long.parseLong(b);
+        return answer;
+    }
+}
 
 
+src/Programmers/Level1/핸드폰번호가리기.java
 
-Got out-macroed, alas.
-For XG to win, they can only bet on MaoGe not making mistakes.
 
-- 🛡️DOTA2 Tournament Discussion
+package Programmers.Level1;
 
+public class 핸드폰번호가리기 {
+    public String solution(String phone_number){
+        String answer = "";
+        for(int i=0; i<phone_number.length()-4; i++){
+            answer += "*";
+        }
+        answer += phone_number.substring(phone_number.length()-4);
+        return answer;
+    }
+}
 
----
----
 
-## 2025-7-23
+src/Programmers/Level1/같은숫자는싫어.java
 
-![5e2c69d3fd0d702f2681170a2c7cea5d-3000-2250.jpg](https://0xc1.space/images/gcores/5e2c69d3fd0d702f2681170a2c7cea5d-3000-2250.jpg)
-![058782e686ff66b91d20bc70c14f8143-1349-1001.HEIC](https://0xc1.space/images/gcores/058782e686ff66b91d20bc70c14f8143-1349-1001.HEIC)
-![6cdfb06a29d11ac000b57be6089762e8-2250-3000.jpg](https://0xc1.space/images/gcores/6cdfb06a29d11ac000b57be6089762e8-2250-3000.jpg)
-![d5279a8e04fc87b80b4c72fb74f10688-3000-2250.jpg](https://0xc1.space/images/gcores/d5279a8e04fc87b80b4c72fb74f10688-3000-2250.jpg)
-![93e885feb830229d0be84168d289def8-3000-2250.jpg](https://0xc1.space/images/gcores/93e885feb830229d0be84168d289def8-3000-2250.jpg)
-![e6701abeb0ab16b7f6a7e883d8e0c43c-3000-2250.jpg](https://0xc1.space/images/gcores/e6701abeb0ab16b7f6a7e883d8e0c43c-3000-2250.jpg)
 
-Sightseeing on Mount Li
+package Programmers.Level1;
 
-- 🧳Out for a Walk
+import java.util.ArrayList;
 
-
----
----
-
-## 2025-7-23
-
-
-
-Holy shit, saw a classmate on QuantumBit, and here I am just vibing. 🥹
-
-- 🌙Emo Tree Hollow
-
-
----
----
-
-## 2025-7-20
-
-![06989f6a9aefa0498ff9356b6c1923f7-1280-960.jpg](https://0xc1.space/images/gcores/06989f6a9aefa0498ff9356b6c1923f7-1280-960.jpg)
-
-In 2016, during my sophomore to junior year, my monthly living allowance was 1000 yuan. My girlfriend at the time had 1200 yuan per month.
-
-Her school was in the far southwest of Chang'an District, mine was in Shapo Village. We met every week.
-
-There was a Holiland bakery outside the southeast gate of our school. She was from another school. When she came to visit me on weekends, she said the half-baked cheesecake was delicious, costing 8 yuan each. We could only afford to buy the two-pack. After buying it, we had to cross the street to take the bus. On the overpass, we would eat it bite by bite, sharing it.
-
-Later, in the second semester of my senior year, I found an internship paying 30 yuan per hour. With overtime and bonuses, my monthly income reached over ten thousand yuan. I had never had control over so much money before.
-
-On May Day 2018, I went alone to the bakery at the school gate and bought a box of five. I went across the street and took the same bus, eating it all by myself in silence.
-
-Her graduate school was in Zhongguancun, my internship was in Wudaokou. We never saw each other again.
-
-- 💓Emotional Wonderland
-
-
----
----
-
-## 2025-7-9
-
-
-
-Hello everyone, I'm going to drop a hot take:
-
-One cannot simultaneously own a Tesla car and possess good manners.
-
-- 🤔Raving and Raging! Lord of Frenzied Flame!
-
-
----
----
-
-## 2025-6-27
-
-![7ca04b334bd62d8d753f7a57cdf5e2c9-3000-2250.jpg](https://0xc1.space/images/gcores/7ca04b334bd62d8d753f7a57cdf5e2c9-3000-2250.jpg)
-![cedd4d2b26276ebc08cd5578cec61442-3000-2250.jpg](https://0xc1.space/images/gcores/cedd4d2b26276ebc08cd5578cec61442-3000-2250.jpg)
-![55715d26782ff5a1a3ed5bd9acdd0199-4032-3024.HEIC](https://0xc1.space/images/gcores/55715d26782ff5a1a3ed5bd9acdd0199-4032-3024.HEIC)
-
-How did you know it's my birthday today? ☺️
-
-- 🐒Black Myth: Wukong
-
-
----
----
-
-## 2025-6-21
-
-![061424172fff175b1d412ba20ad405a8-1080-1920.jpg](https://0xc1.space/images/gcores/061424172fff175b1d412ba20ad405a8-1080-1920.jpg)
-
-Arrived in Shenyang!
-Staying in Tiexi District!
-KTSG on-site investigation mission accomplished!
-
-- 🧩A Life Fragment
-
-
----
----
-
-## 2025-6-1
-
-![d7453f5674d0b9eb078f8306c8b19d6e-2250-3000.jpg](https://0xc1.space/images/gcores/d7453f5674d0b9eb078f8306c8b19d6e-2250-3000.jpg)
-
-The most homesick episode yet. 😭
-
-Suddenly craved watermelon, so I bought one online. It reminded me that every summer since childhood, my family had watermelon every day. When I was little, my parents would cut it up for me to munch on. Now when I go home, if I get a craving at night, I sneak half a watermelon from the fridge and cut it up.
-
-Anyway, being at home feels safe, like having a protective shield.
-
-Just cut up the watermelon and ate it. It's sweeter than every watermelon my parents bought this year, but I miss home so much. 😭
-
-- 🧩A Life Fragment
-
-
----
----
-
-## 2025-5-11
-
-![aaf6e00a51182ab5174ed0aead31c165-2594-1464.jpg](https://0xc1.space/images/gcores/aaf6e00a51182ab5174ed0aead31c165-2594-1464.jpg)
-![2e9d7fb4f3a89a16e1803eea46596839-2596-1470.jpeg](https://0xc1.space/images/gcores/2e9d7fb4f3a89a16e1803eea46596839-2596-1470.jpeg)
-![badc7f0b4420470d7c5cc339997496f3-2590-1460.jpeg](https://0xc1.space/images/gcores/badc7f0b4420470d7c5cc339997496f3-2590-1460.jpeg)
-
-Explore a tiny world, gather resources, and create pixel art together!
-Be a happy little deity in the Pixel Universe ✨
-
-Click to receive: Socially-awkward-friendly single-player mode / Socially-outgoing multiplayer mode!
-
-Here, it's just you + pixel blocks + infinite possibilities. Chop trees, mine, and build with your left hand; paint castles in cyber-pink and fluorescent green with your right. And when you teleport your rainbow-colored little house to the world map, the entire server will see your abstract pixel art!
-
-【Highlights for Slacking Off】
-✓ Resources grow back on their own! No more grinding like a maniac.
-✓ Press F to enter the big world: Spectate the goofy buildings of netizens worldwide.
-✓ Max out the skill tree: Instantly become a construction maniac.
-
-Cozy up on the sofa (or at your desk) building a little cabin vs. grinding materials late into the night—your slacker/grinder mode is now loaded. Click start and turn the world into your playground! (๑•̀ㅂ•́)و✧
-
-Please, everyone, come play, please! 🥺
-https://tinyrattar.github.io/SmallWorld_github.io/
-
-- 🎁BOOOM Playtest Feedback Station
-
-
----
----
-
-## 2025-3-16
-
-![f2cbf16388f939dc822ea5783be0f749-2250-3000.jpg](https://0xc1.space/images/gcores/f2cbf16388f939dc822ea5783be0f749-2250-3000.jpg)
-![fd3786b7e269c939afa325aed4ae1534-4032-3024.HEIC](https://0xc1.space/images/gcores/fd3786b7e269c939afa325aed4ae1534-4032-3024.HEIC)
-![b02dbbc6cbe6e5f31fdf35ef8b1d6960-3000-2250.jpg](https://0xc1.space/images/gcores/b02dbbc6cbe6e5f31fdf35ef8b1d6960-3000-2250.jpg)
-![a2e5dc58381511e841478d817d239366-3000-2250.jpg](https://0xc1.space/images/gcores/a2e5dc58381511e841478d817d239366-3000-2250.jpg)
-![094650364c212b394167d859905e4984-3000-2250.jpg](https://0xc1.space/images/gcores/094650364c212b394167d859905e4984-3000-2250.jpg)
-![d1eb014c0046576f4b96e76a38d9c7ab-3000-2250.jpg](https://0xc1.space/images/gcores/d1eb014c0046576f4b96e76a38d9c7ab-3000-2250.jpg)
-![aa2289d593fc157175e9a1768c1dc7a7-3000-2000.jpg](https://0xc1.space/images/gcores/aa2289d593fc157175e9a1768c1dc7a7-3000-2000.jpg)
-![0c814503d754509880ee91bec9bca4f8-3000-2250.jpg](https://0xc1.space/images/gcores/0c814503d754509880ee91bec9bca4f8-3000-2250.jpg)
-![a8ac417f1fe5d46f29d00ee00020be7f-3000-2000.jpg](https://0xc1.space/images/gcores/a8ac417f1fe5d46f29d00ee00020be7f-3000-2000.jpg)
-
-Traveling with ZL (Part Four) - Reunion After a Long Time
-
-When over seven hundred days and nights of oppressive time had crawled by on the calendar, and a glimmer of light finally shone through my work life, I decided to end this long self-exile. I planned to cross the ocean at the end of September to visit ZL, whom I hadn't seen for a full three years.
-
-I don't know when it started, but the starting point of my travels always seems to be after the journey has begun. That is to say, there's no anticipation lasting one or two weeks before departure, no lying in bed at night imagining the wonderful things that will happen on this trip. It's just packing and leaving, and I was still solving work problems right before departure. This makes the whole process too rational and lacking in emotion. This continued until I asked for a small bottle of wine on the plane. The warmth rising from my chest after drinking it dispelled this excess rationality. Only then did my anticipation for the unknown and my nervousness about reuniting with a long-unseen old friend begin to dance in my mind.
-
-After getting off the plane and out of the station, I spotted him. He had cut his hair short and was no longer skinny. Now he was a burly guy with just the right hair length. Seeing each other, we couldn't suppress our rising smiles as we gradually approached. The old flame was rekindled. The outdoor air was a bit crisp, and we ducked into his little car.
-Soon, after the joy of reunion subsided, I noticed he seemed to have armored himself with a transparent shell, whether from not seeing each other for too long or as a necessity of life in North America. This shell kept me and all the unknowns of the world at bay. What was presented to the world was an emotionally stable, burly man, but in certain moments, you could glimpse the awkward youth beneath that shell.
-Fortunately, it was an unstable shell. In ZL's little car, the scenery along the way quickly crushed the shell under the influence of time. Within 36 hours, we were once again chatting and joking like in those years in Suzhou, and shamelessly commenting on every girl who walked past us—except for Asian faces.
-
-Among my many dreams of dissolving into the river and being forgotten by the world, one was to drive on the PCH while listening to Jaden's song "PCH." Before reaching Monterey, I mentioned this to ZL. Without a word, he found the song and put it on repeat. Under the clear sunlight, by the misty, azure sea, as the intro to "PCH" spilled out, the sea breeze took shape. We chased the constantly collapsing horizon, the rolling wheels continuously grinding out new memories to patch over my lost dreams.
-
-Sometimes the sunset was ahead of us. Fatigued by jet lag, I stared at the evening glow in silence while ZL, who was driving, was also silent. Twilight and lights fell on our faces. Under the gaze of the twilight gods, we drove towards the immortal sun, and within this silence was an uninterrupted conversation. Then he broke the silence: "Tsk, need to find a song suitable for this moment," ZL said while fiddling with the main control screen.
-
-- P1: ZL has many strange little gadgets. After entering his house, I found a small round sunglasses;
-- P3: I brought the bottle of ice wine ZL gave me, which had been with me for five years, to the US and opened it with ZL to drink;
-- P7: ZL said he really likes this photo, but it makes me look fat, which I don't really like;
-- P9: Two weeks later, I stayed at ZL's place again for a night when transiting through San Francisco on my way home.
-
-- 🧩Fragment Stories
-
-
----
----
-
-## 2025-3-4
-
-![1de84051981bab775dbe16da0a24e90e-3000-1688.jpg](https://0xc1.space/images/gcores/1de84051981bab775dbe16da0a24e90e-3000-1688.jpg)
-![41d830a7d8acb3d0daa32351f9496b78-3000-1688.jpg](https://0xc1.space/images/gcores/41d830a7d8acb3d0daa32351f9496b78-3000-1688.jpg)
-![67c066a7822dc406a1c11ddac4997bc1-3000-1688.jpg](https://0xc1.space/images/gcores/67c066a7822dc406a1c11ddac4997bc1-3000-1688.jpg)
-
-Me and my grape
-
-- 🪄*Monster Hunter Wilds* Character Creation Collection
-
-
----
----
-
-## 2024-12-22
-
-![362ebbd85f928230b757f5abd5bee528-1280-720.jpg](https://0xc1.space/images/gcores/362ebbd85f928230b757f5abd5bee528-1280-720.jpg)
-![fb04cbbaea41dc1e7555428b79c9fa43-2979-821.jpg](https://0xc1.space/images/gcores/fb04cbbaea41dc1e7555428b79c9fa43-2979-821.jpg)
-![bb55c8a58c6b1ab759aa019cf279fd85-3000-2250.jpg](https://0xc1.space/images/gcores/bb55c8a58c6b1ab759aa019cf279fd85-3000-2250.jpg)
-![b6397bbb5c001cd0861c913e17e57ccb-3000-2250.jpg](https://0xc1.space/images/gcores/b6397bbb5c001cd0861c913e17e57ccb-3000-2250.jpg)
-![d6d8b788de296f365a11f8c42bb51d01-4032-3024.HEIC](https://0xc1.space/images/gcores/d6d8b788de296f365a11f8c42bb51d01-4032-3024.HEIC)
-![ed38887f0256cacf2b10bb6295e665b4-2731-1536.jpg](https://0xc1.space/images/gcores/ed38887f0256cacf2b10bb6295e665b4-2731-1536.jpg)
-![18fe9dd143f0a63ea1d1a92a854a14a2-2250-3000.jpg](https://0xc1.space/images/gcores/18fe9dd143f0a63ea1d1a92a854a14a2-2250-3000.jpg)
-![6dcb3c6e48221485abd109e86973efe4-3000-2250.jpg](https://0xc1.space/images/gcores/6dcb3c6e48221485abd109e86973efe4-3000-2250.jpg)
-
-Traveling with ZL (Part Three) - Want to Go Cycling Around Qinghai Lake?
-
-In the summer of 2021, a few weeks before ZL went abroad to study, we agreed to go cycling around Qinghai Lake. The trip was six days and five nights, with the actual cycling around the lake taking a full four days: a total of 360 km, averaging 90 km per day. Even a week after returning, with my diet back to normal, I still lost 5 kg.
-
-I had wanted to do another crazy travel plan like this ever since implementing one during the summer before starting university in 2014. Over the years, I had urged and called upon every friend around me. ZL was the only one who showed great interest and responded positively.
-
-We set off from a bike rental shop in Haiyan County (I brought my own bike, ZL rented a touring bike) and cycled clockwise around the lake.
-
-The sky and water merged into one line, under a clear sky stretching for miles. Looking out, there was only the road extending to the horizon. Under the vast blue sky was an even bluer sea, beside which were large fields of rapeseed, and on the road beside the fields, there were only the two of us.
-For four days, the world was compressed into the rhythmic pedaling left and right. Between heaven and earth, there were only the two of us, our tired bodies supporting infinitely energetic minds. We didn't even bother listening to music; our conversations were hard to end.
-
-Qinghai Lake has been expanding for seven years. A statue that stood by the shore in 2014 was half submerged in water by 2021. I wondered if, in my lifetime, Qinghai Lake would reconnect with rivers and gradually become a freshwater lake. Would we come back then? Not daring to hope for another cycling trip, but at least to drink a large pot of milk tea in a tent. And then brag about how interesting it was.
-
-Only the severe migraine from altitude sickness that lasted almost half the journey, a few continuous 30 km uphill climbs, occasional heavy rain, poor accommodation conditions, and the particular awkwardness of a 24-25-year-old artsy youth could add a little bitterness to this trip.
-
-It's worth mentioning that the cycling on the last day was accompanied by continuous heavy rain and endless uphill climbs. Our 24 Snickers bars were down to the last 6, and we were almost sick of drinking Red Bull. In the afternoon, I vaguely felt a chill at the base of my tongue, realizing it was a bad sign. While resting about 20 km from the finish line, ZL's sense of humor was still going strong, leaving behind the masterpiece "c1 Peeing Picture." Fortunately, a Tibetan truck driver asked if we needed help. The moment I sat in the warm, dry, air-conditioned cab, I realized how cold I was. I shivered for another ten minutes on the road.
-
-After returning to Xining, we fiercely ate two jin of hand-grabbed mutton. That was the last time I saw ZL before this autumn.
-
-- Met a Hong Kong uncle with a flat tire. After helping him pump it up, he took this super cool photo for us.
-- I retaliated by taking a picture of ZL peeing.
-- The hand-grabbed mutton was incredibly delicious.
-
-- 🧩Fragment Stories
-
-
----
----
-
-## 2024-12-18
-
-![8b4866919a3a4c6cbdb9b63f42ccebeb-2250-3000.jpg](https://0xc1.space/images/gcores/8b4866919a3a4c6cbdb9b63f42ccebeb-2250-3000.jpg)
-![c732ef6ad4dba90bb65d63d5482d4611-1920-1080.jpg](https://0xc1.space/images/gcores/c732ef6ad4dba90bb65d63d5482d4611-1920-1080.jpg)
-![90f9085c6ea5bdaacb5d645737f5d559-1080-1920.jpg](https://0xc1.space/images/gcores/90f9085c6ea5bdaacb5d645737f5d559-1080-1920.jpg)
-![ff5a026deb800ff917ac476c4158dbad-1080-1440.jpg](https://0xc1.space/images/gcores/ff5a026deb800ff917ac476c4158dbad-1080-1440.jpg)
-![4dca7fa517f23c72eb0e2e36ca4f2467-1280-1919.jpg](https://0xc1.space/images/gcores/4dca7fa517f23c72eb0e2e36ca4f2467-1280-1919.jpg)
-![fd663cfe1115c15f7906cc9aa2a1b5e0-2010-1054.jpg](https://0xc1.space/images/gcores/fd663cfe1115c15f7906cc9aa2a1b5e0-2010-1054.jpg)
-![43091c9346f9d9077dc7f70b9abd2502-1280-1706.jpg](https://0xc1.space/images/gcores/43091c9346f9d9077dc7f70b9abd2502-1280-1706.jpg)
-![3f9dce8827956ed17bc3270eceefe764-3000-2250.jpg](https://0xc1.space/images/gcores/3f9dce8827956ed17bc3270eceefe764-3000-2250.jpg)
-
-Traveling with ZL (Part Two) - Happy Days and Farewell
-
-"Hey, ZL, we're on a business trip in Suzhou now. If we don't stay in hotels, the monthly business trip allowance can completely cover the rent. Then the leftover rent can be used to go all out on decorations!"
-
-"Damn, you're right!"
-
-(Unfortunately, the business trip allowance was canceled a month after saying this.)
-
-Life in Suzhou was like university. We were in the High-speed Rail New Town in the far north of Suzhou, surrounded by nothing. Every night at nine, the streets were quiet everywhere, and it was hard to even see a person.
-There were very few rental options near the company. Most people chose the same apartment building, a ten-minute walk from the company. This was the dormitory of "Momenta University."
-
-ZL and I began trying to build a life. For example, I truly learned to cook. ZL also added quite a few things. Even the outbreak of the pandemic didn't affect this; instead, it brought us closer to other colleagues. That's also when we got to know @playground. Soon, we found ourselves often playing *Super Smash Bros.* together at @playground's place downstairs.
-
-Therefore, my memories of the time at MMT always feel happy and warm.
-
-ZL's girlfriend of four years was studying in Canada at the time (this was also an important reason for ZL to study abroad). Before the pandemic broke out, he went to reunite with his girlfriend and brought back a bottle of ice wine for me. In the subsequent five years, I moved a total of six times. That was one of the few things I always kept with me. At first, I just felt the timing wasn't right to open it. Later, it developed into a deliberate act. No matter where I was, it was always lying in my fridge.
-
-In the autumn of 2021, ZL set off to study abroad.
-
-- The pictures include a certain @playground who prefers not to show photos.
-- ZL said it's okay to post his photos casually.
-- This is that bottle of ice wine.
-
-- 🧩Fragment Stories
-
-
----
----
-
-## 2024-12-18
-
-![d32e4957260ac6c9674d8b158643b3a5-3000-1688.jpg](https://0xc1.space/images/gcores/d32e4957260ac6c9674d8b158643b3a5-3000-1688.jpg)
-![36fd0bff4dbd942c0e6099c8a17fc224-3000-1688.jpg](https://0xc1.space/images/gcores/36fd0bff4dbd942c0e6099c8a17fc224-3000-1688.jpg)
-![36dcbc643beed83d260a1a50b4bfb47b-3000-1688.jpg](https://0xc1.space/images/gcores/36dcbc643beed83d260a1a50b4bfb47b-3000-1688.jpg)
-
-A brand new Dark Urge, starting fresh.
-
-- ✝️Cyber Confessional
-
-
----
----
-
-## 2024-12-2
-
-![f75c890e5fd964bab9324279c7a09ed6-1170-2532.jpg](https://0xc1.space/images/gcores/f75c890e5fd964bab9324279c7a09ed6-1170-2532.jpg)
-
-Today, Zhengzheng said he's never had a traffic violation. I said, "Hehe, me neither."
-Casually opened the traffic management app 12123 and my pupils dilated in shock. 😖
-
-Thinking about it carefully, it's actually pretty impressive (lol).
-
-- ✝️Cyber Confessional
-
-
----
----
-
-## 2024-12-2
-
-![88a14b4b2fc987dd5b9c038cc5c8f37d-3000-2250.jpg](https://0xc1.space/images/gcores/88a14b4b2fc987dd5b9c038cc5c8f37d-3000-2250.jpg)
-
-Took advantage of no one being around to pluck a few little clusters of scarlet sage from the central flower bed to suck the nectar. When I came out, I awkwardly passed by a couple who had watched my sneaky behavior the whole time.
-
-- 🧩A Life Fragment
-
-
----
----
-
-## 2024-12-1
-
-![e1859c7b0e1d99a41c82297c8e947cd1-503-511.WEBP](https://0xc1.space/images/gcores/e1859c7b0e1d99a41c82297c8e947cd1-503-511.WEBP)
-
-Yesterday, I drove out without my brain. The headlight shattered, resulting in a broken right face for the car and losing driving privileges for five days.
-
-Today, I just want to slack off. I've been browsing the Crew for an hour. Browsing the Crew feels good.
-
-Now I'm hungry and want to sneak out for McDonald's.
-
-- ✝️Cyber Confessional
-
-
----
----
-
-## 2024-11-28
-
-
-
-My favorite dude @Lazzyking
-
-- 💎Gcores Treasure Content Recommendations
-
-
----
----
-
-## 2024-11-28
-
-![8cb5847698d871a29a8970290efd3890-2250-3000.jpg](https://0xc1.space/images/gcores/8cb5847698d871a29a8970290efd3890-2250-3000.jpg)
-![ecaa3d3b73c24ea0e410a1ec9a2db9d8-2250-3000.jpg](https://0xc1.space/images/gcores/ecaa3d3b73c24ea0e410a1ec9a2db9d8-2250-3000.jpg)
-
-Tiefling Sorcerer Phil Cavendish had an unusual Midwinter.
-
-Three months ago, one day, to cheer up his depressed mother, he packed his bags and set off for Waterdeep to find his wayward sister and persuade her to come home early—Alice Cavendish.
-
-As an adopted child, Phil's early life as a street performer made him understand early on that some people just don't know how good they have it. They choose to leave a comfortable noble lady's life to go out and make their way in the world.
-
-But it was also this willful sister's persistence that gave the orphan Phil, who had an uncertain future on the streets over a decade ago, a comfortable and warm home. Phil's feelings towards his sister were contradictory.
-
-However, nearly a month of searching had almost exhausted Phil's patience. Thinking of this, anger towards his sister took over again. Even! Ahem. Even Alice chose to worship Sune. The more Phil thought about it, the angrier he got. Unconsciously triggering a Wild Magic Surge, the chaotic power in his bloodline caused him to teleport in a flash to the sister he was mentally scolding at that moment.
-
-- - - - - - Dividing Line - - - - - -
-
-"Young man, although you helped heal my wound, as an elder who has sworn to eradicate evil and uphold good, I must express my opinion. Your attire seems rather inappropriate, especially in a place like the Red-Eyed Owl."
-
-"What I wear is none of your business, you creepy old man! I kindly prayed to Lady Sune to heal you, and you start lecturing me! You know..."
-
-When he found his sister, she was arguing with an aasimar old man named Allen. But that wasn't important anymore. Phil's sudden appearance startled them both. A girl in fine but ill-fitting clothes, who had been sneaking up on Alice, nearly stumbled and bumped into Phil. The two arguing didn't know who to look at.
-
-"...Phil?" Alice looked at the embarrassed Phil in confusion.
-
-"Hi! Ready to go home, my dear sister? Mom says she misses you." Phil tried to put on an awkward yet polite smile.
-
-"Not now, Philip! Allen, I'll settle with
+public class 같은숫자는싫어 {
+    public int[] solution(int[] arr){
+        int[] answer = {};
+        ArrayList<Integer> list = new ArrayList<>();
+        int a = 10;
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] != a){
+                list.add(arr[i]);
+                a = arr[i];
+            }
+        }
+        answer = new int[list.size()];
+        for(int i=0; i<list.size(); i++){
+            answer[i] = list.get(i);
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/서울에서김서방찾기.java
+
+
+package Programmers.Level1;
+
+public class 서울에서김서방찾기 {
+    public String solution(String[] seoul){
+        String answer = "";
+        for(int i=0; i<seoul.length; i++){
+            if(seoul[i].equals("Kim")){
+                answer = "김서방은 "+i+"에 있다";
+            }
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/문자열을정수로바꾸기.java
+
+
+package Programmers.Level1;
+
+public class 문자열을정수로바꾸기 {
+    public int solution(String s){
+        int answer = 0;
+        answer = Integer.parseInt(s);
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/수박수박수박수박수박수.java
+
+
+package Programmers.Level1;
+
+public class 수박수박수박수박수박수 {
+    public String solution(int n){
+        String answer = "";
+        for(int i=0; i<n; i++){
+            if(i%2 == 0){
+                answer += "수";
+            }else{
+                answer += "박";
+            }
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/자릿수더하기.java
+
+
+package Programmers.Level1;
+
+public class 자릿수더하기 {
+    public int solution(int n){
+        int answer = 0;
+        String a = n+"";
+        for(int i=0; i<a.length(); i++){
+            answer += a.charAt(i)-'0';
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/시저암호.java
+
+
+package Programmers.Level1;
+
+public class 시저암호 {
+    public String solution(String s, int n){
+        String answer = "";
+        for(int i=0; i<s.length(); i++){
+            char ch = s.charAt(i);
+            if(ch == ' '){
+                answer += ch;
+                continue;
+            }
+            if(ch >= 'a' && ch <= 'z'){
+                if(ch+n > 'z'){
+                    answer += (char)(ch-26+n);
+                }else{
+                    answer += (char)(ch+n);
+                }
+            }else if(ch >= 'A' && ch <= 'Z'){
+                if(ch+n > 'Z'){
+                    answer += (char)(ch-26+n);
+                }else{
+                    answer += (char)(ch+n);
+                }
+            }
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/정수제곱근판별.java
+
+
+package Programmers.Level1;
+
+public class 정수제곱근판별 {
+    public long solution(long n){
+        long answer = 0;
+        double a = Math.sqrt(n);
+        if(a%1 == 0){
+            answer = (long)Math.pow(a+1,2);
+        }else{
+            answer = -1;
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/나누어떨어지는숫자배열.java
+
+
+package Programmers.Level1;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class 나누어떨어지는숫자배열 {
+    public int[] solution(int[] arr, int divisor){
+        int[] answer = {};
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] % divisor == 0){
+                list.add(arr[i]);
+            }
+        }
+        if(list.size() == 0){
+            answer = new int[1];
+            answer[0] = -1;
+        }else{
+            answer = new int[list.size()];
+            for(int i=0; i<list.size(); i++){
+                answer[i] = list.get(i);
+            }
+            Arrays.sort(answer);
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/문자열내p와y의개수2.java
+
+
+package Programmers.Level1;
+
+public class 문자열내p와y의개수2 {
+    boolean solution(String s){
+        boolean answer = true;
+        s = s.toLowerCase();
+        int p = 0;
+        int y = 0;
+        for(int i=0; i<s.length(); i++){
+            if(s.charAt(i) == 'p'){
+                p++;
+            }else if(s.charAt(i) == 'y'){
+                y++;
+            }
+        }
+        if(p != y){
+            answer = false;
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/두정수사이의합.java
+
+
+package Programmers.Level1;
+
+public class 두정수사이의합 {
+    public long solution(int a, int b){
+        long answer = 0;
+        if(a<b){
+            for(int i=a; i<=b; i++){
+                answer += i;
+            }
+        }else if(a>b){
+            for(int i=b; i<=a; i++){
+                answer += i;
+            }
+        }else{
+            answer = a;
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/가운데글자가져오기.java
+
+
+package Programmers.Level1;
+
+public class 가운데글자가져오기 {
+    public String solution(String s){
+        String answer = "";
+        if(s.length()%2 == 0){
+            answer = s.substring(s.length()/2-1, s.length()/2+1);
+        }else{
+            answer = s.substring(s.length()/2, s.length()/2+1);
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/짝수와홀수.java
+
+
+package Programmers.Level1;
+
+public class 짝수와홀수 {
+    public String solution(int num){
+        String answer = "";
+        if(num%2 == 0){
+            answer = "Even";
+        }else{
+            answer = "Odd";
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/평균구하기.java
+
+
+package Programmers.Level1;
+
+public class 평균구하기 {
+    public double solution(int[] arr){
+        double answer = 0;
+        double sum = 0;
+        for(int i=0; i<arr.length; i++){
+            sum += arr[i];
+        }
+        answer = sum/arr.length;
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/자연수뒤집어배열로만들기.java
+
+
+package Programmers.Level1;
+
+public class 자연수뒤집어배열로만들기 {
+    public int[] solution(long n){
+        int[] answer = {};
+        String a = n+"";
+        answer = new int[a.length()];
+        for(int i=0; i<a.length(); i++){
+            answer[i] = (int)(n%10);
+            n /= 10;
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/약수의합.java
+
+
+package Programmers.Level1;
+
+public class 약수의합 {
+    public int solution(int n){
+        int answer = 0;
+        for(int i=1; i<=n; i++){
+            if(n%i == 0){
+                answer += i;
+            }
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/하샤드수.java
+
+
+package Programmers.Level1;
+
+public class 하샤드수 {
+    public boolean solution(int x){
+        boolean answer = true;
+        int a = x;
+        int sum = 0;
+        while(a>0){
+            sum += a%10;
+            a /= 10;
+        }
+        if(x%sum != 0){
+            answer = false;
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/콜라츠추측.java
+
+
+package Programmers.Level1;
+
+public class 콜라츠추측 {
+    public int solution(int num){
+        int answer = 0;
+        long a = num;
+        while(a != 1){
+            if(a%2 == 0){
+                a /= 2;
+            }else{
+                a = a*3+1;
+            }
+            answer++;
+            if(answer == 500){
+                answer = -1;
+                break;
+            }
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/직사각형별찍기.java
+
+
+package Programmers.Level1;
+
+import java.util.Scanner;
+
+public class 직사각형별찍기 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        for(int i=0; i<b; i++){
+            for(int j=0; j<a; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+src/Programmers/Level1/이상한문자만들기.java
+
+
+package Programmers.Level1;
+
+public class 이상한문자만들기 {
+    public String solution(String s){
+        String answer = "";
+        int cnt = 0;
+        String[] arr = s.split("");
+        for(String ss : arr){
+            cnt = ss.contains(" ") ? 0 : cnt+1;
+            answer += cnt%2 == 0 ? ss.toLowerCase() : ss.toUpperCase();
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/소수찾기.java
+
+
+package Programmers.Level1;
+
+public class 소수찾기 {
+    public int solution(int n){
+        int answer = 0;
+        int[] arr = new int[n+1];
+        for(int i=2; i<=n; i++){
+            arr[i] = i;
+        }
+        for(int i=2; i<=n; i++){
+            if(arr[i] == 0){
+                continue;
+            }
+            for(int j=i+i; j<=n; j+=i){
+                arr[j] = 0;
+            }
+        }
+        for(int i=2; i<=n; i++){
+            if(arr[i] != 0){
+                answer++;
+            }
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/행렬의덧셈.java
+
+
+package Programmers.Level1;
+
+public class 행렬의덧셈 {
+    public int[][] solution(int[][] arr1, int[][] arr2){
+        int[][] answer = {};
+        answer = new int[arr1.length][arr1[0].length];
+        for(int i=0; i<arr1.length; i++){
+            for(int j=0; j<arr1[0].length; j++){
+                answer[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/최대공약수와최소공배수.java
+
+
+package Programmers.Level1;
+
+public class 최대공약수와최소공배수 {
+    public int[] solution(int n, int m){
+        int[] answer = new int[2];
+        int a = n;
+        int b = m;
+        int r = 1;
+        while(b != 0){
+            r = a%b;
+            a = b;
+            b = r;
+        }
+        answer[0] = a;
+        answer[1] = n*m/a;
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/x만큼간격이있는n개의숫자.java
+
+
+package Programmers.Level1;
+
+public class x만큼간격이있는n개의숫자 {
+    public long[] solution(int x, int n){
+        long[] answer = new long[n];
+        long a = x;
+        for(int i=0; i<n; i++){
+            answer[i] = a;
+            a += x;
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/완주하지못한선수.java
+
+
+package Programmers.Level1;
+
+import java.util.Arrays;
+
+public class 완주하지못한선수 {
+    public String solution(String[] participant, String[] completion){
+        String answer = "";
+        Arrays.sort(participant);
+        Arrays.sort(completion);
+        int i;
+        for(i=0; i<completion.length; i++){
+            if(!participant[i].equals(completion[i])){
+                return participant[i];
+            }
+        }
+        return participant[i];
+    }
+}
+
+
+src/Programmers/Level1/2016년.java
+
+
+package Programmers.Level1;
+
+public class 2016년 {
+    public String solution(int a, int b){
+        String answer = "";
+        String[] day = {"FRI","SAT","SUN","MON","TUE","WED","THU"};
+        int[] date = {31,29,31,30,31,30,31,31,30,31,30,31};
+        int allDate = 0;
+        for(int i=0; i<a-1; i++){
+            allDate += date[i];
+        }
+        allDate += (b-1);
+        answer = day[allDate%7];
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/문자열내마음대로정렬하기2.java
+
+
+package Programmers.Level1;
+
+import java.util.Arrays;
+
+public class 문자열내마음대로정렬하기2 {
+    public String[] solution(String[] strings, int n){
+        String[] answer = {};
+        for(int i=0; i<strings.length; i++){
+            strings[i] = strings[i].charAt(n) + strings[i];
+        }
+        Arrays.sort(strings);
+        answer = new String[strings.length];
+        for(int i=0; i<strings.length; i++){
+            answer[i] = strings[i].substring(1);
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/체육복.java
+
+
+package Programmers.Level1;
+
+import java.util.Arrays;
+
+public class 체육복 {
+    public int solution(int n, int[] lost, int[] reserve){
+        int answer = n - lost.length;
+        Arrays.sort(lost);
+        Arrays.sort(reserve);
+        for(int i=0; i<lost.length; i++){
+            for(int j=0; j<reserve.length; j++){
+                if(lost[i] == reserve[j]){
+                    answer++;
+                    lost[i] = -1;
+                    reserve[j] = -1;
+                    break;
+                }
+            }
+        }
+        for(int i=0; i<lost.length; i++){
+            for(int j=0; j<reserve.length; j++){
+                if(lost[i]-1 == reserve[j] || lost[i]+1 == reserve[j]){
+                    answer++;
+                    reserve[j] = -1;
+                    break;
+                }
+            }
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/다트게임.java
+
+
+package Programmers.Level1;
+
+public class 다트게임 {
+    public int solution(String dartResult){
+        int answer = 0;
+        int[] dart = new int[3];
+        int n=0, idx=0;
+        String numStr = "";
+        for(int i=0; i<dartResult.length(); i++){
+            char c = dartResult.charAt(i);
+            if(c >= '0' && c <= '9'){
+                numStr += String.valueOf(c);
+            }else if(c == 'S' || c == 'D' || c == 'T'){
+                n = Integer.parseInt(numStr);
+                if(c == 'S'){
+                    dart[idx++] = (int)Math.pow(n,1);
+                }else if(c == 'D'){
+                    dart[idx++] = (int)Math.pow(n,2);
+                }else{
+                    dart[idx++] = (int)Math.pow(n,3);
+                }
+                numStr = "";
+            }else{
+                if(c == '*'){
+                    dart[idx-1] *= 2;
+                    if(idx-2 >= 0){
+                        dart[idx-2] *= 2;
+                    }
+                }else{
+                    dart[idx-1] *= (-1);
+                }
+            }
+        }
+        answer = dart[0] + dart[1] + dart[2];
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/모의고사.java
+
+
+package Programmers.Level1;
+
+import java.util.ArrayList;
+
+public class 모의고사 {
+    public int[] solution(int[] answers){
+        int[] answer = {};
+        int[] person1 = {1,2,3,4,5};
+        int[] person2 = {2,1,2,3,2,4,2,5};
+        int[] person3 = {3,3,1,1,2,2,4,4,5,5};
+        int answer1=0, answer2=0, answer3=0;
+        for(int i=0; i<answers.length; i++){
+            if(person1[i%person1.length] == answers[i]){
+                answer1++;
+            }
+            if(person2[i%person2.length] == answers[i]){
+                answer2++;
+            }
+            if(person3[i%person3.length] == answers[i]){
+                answer3++;
+            }
+        }
+        int max = Math.max(Math.max(answer1, answer2), answer3);
+        ArrayList<Integer> list = new ArrayList<>();
+        if(max == answer1){
+            list.add(1);
+        }
+        if(max == answer2){
+            list.add(2);
+        }
+        if(max == answer3){
+            list.add(3);
+        }
+        answer = new int[list.size()];
+        for(int i=0; i<answer.length; i++){
+            answer[i] = list.get(i);
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/두개뽑아서더하기.java
+
+
+package Programmers.Level1;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class 두개뽑아서더하기 {
+    public int[] solution(int[] numbers){
+        int[] answer = {};
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i=0; i<numbers.length; i++){
+            for(int j=i+1; j<numbers.length; j++){
+                int a = numbers[i] + numbers[j];
+                if(list.indexOf(a) < 0){
+                    list.add(a);
+                }
+            }
+        }
+        Collections.sort(list);
+        answer = new int[list.size()];
+        for(int i=0; i<list.size(); i++){
+            answer[i] = list.get(i);
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/예산.java
+
+
+package Programmers.Level1;
+
+import java.util.Arrays;
+
+public class 예산 {
+    public int solution(int[] d, int budget){
+        int answer = 0;
+        Arrays.sort(d);
+        for(int i=0; i<d.length; i++){
+            budget -= d[i];
+            if(budget < 0){
+                break;
+            }
+            answer++;
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/소수만들기.java
+
+
+package Programmers.Level1;
+
+public class 소수만들기 {
+    public int solution(int[] nums){
+        int answer = 0;
+        for(int i=0; i<nums.length; i++){
+            for(int j=i+1; j<nums.length; j++){
+                for(int k=j+1; k<nums.length; k++){
+                    int sum = nums[i] + nums[j] + nums[k];
+                    if(isPrime(sum)){
+                        answer++;
+                    }
+                }
+            }
+        }
+        return answer;
+    }
+    public boolean isPrime(int num){
+        for(int i=2; i<num; i++){
+            if(num%i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+src/Programmers/Level1/실패율.java
+
+
+package Programmers.Level1;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class 실패율 {
+    public int[] solution(int N, int[] stages){
+        int[] answer = new int[N];
+        double[] stage = new double[N+1];
+        for(int i : stages){
+            if(i == N+1){
+                continue;
+            }
+            stage[i]++;
+        }
+        ArrayList<Double> fail = new ArrayList<>();
+        double num = stages.length;
+        double tmp = 0;
+        for(int i=1; i<stage.length; i++){
+            tmp = stage[i];
+            if(num == 0){
+                stage[i] = 0;
+            }else{
+                stage[i] = stage[i]/num;
+                num = num - tmp;
+            }
+            fail.add(stage[i]);
+        }
+        Collections.sort(fail, Collections.reverseOrder());
+        for(int i=0; i<fail.size(); i++){
+            for(int j=1; j<stage.length; j++){
+                if(fail.get(i) == stage[j]){
+                    answer[i] = j;
+                    stage[j] = -1;
+                    break;
+                }
+            }
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/크레인인형뽑기게임.java
+
+
+package Programmers.Level1;
+
+import java.util.Stack;
+
+public class 크레인인형뽑기게임 {
+    public int solution(int[][] board, int[] moves){
+        int answer = 0;
+        Stack<Integer> stack = new Stack<>();
+        for(int move : moves){
+            for(int j=0; j<board.length; j++){
+                if(board[j][move-1] != 0){
+                    if(stack.isEmpty()){
+                        stack.push(board[j][move-1]);
+                        board[j][move-1] = 0;
+                        break;
+                    }
+                    if(board[j][move-1] == stack.peek()){
+                        stack.pop();
+                        answer += 2;
+                    }else{
+                        stack.push(board[j][move-1]);
+                    }
+                    board[j][move-1] = 0;
+                    break;
+                }
+            }
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/비밀지도.java
+
+
+package Programmers.Level1;
+
+public class 비밀지도 {
+    public String[] solution(int n, int[] arr1, int[] arr2){
+        String[] answer = new String[n];
+        for(int i=0; i<n; i++){
+            answer[i] = Integer.toBinaryString(arr1[i] | arr2[i]);
+        }
+        for(int i=0; i<n; i++){
+            answer[i] = String.format("%"+n+"s", answer[i]);
+            answer[i] = answer[i].replaceAll("1","#");
+            answer[i] = answer[i].replaceAll("0"," ");
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/문자열내p와y의개수3.java
+
+
+package Programmers.Level1;
+
+public class 문자열내p와y의개수3 {
+    boolean solution(String s){
+        boolean answer = true;
+        s = s.toUpperCase();
+        int count = 0;
+        for(int i=0; i<s.length(); i++){
+            if(s.charAt(i) == 'P'){
+                count++;
+            }else if(s.charAt(i) == 'Y'){
+                count--;
+            }
+        }
+        if(count != 0){
+            answer = false;
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/삼진법뒤집기.java
+
+
+package Programmers.Level1;
+
+public class 삼진법뒤집기 {
+    public int solution(int n){
+        int answer = 0;
+        String a = "";
+        while(n>0){
+            a = (n%3) + a;
+            n /= 3;
+        }
+        a = new StringBuilder(a).reverse().toString();
+        answer = Integer.parseInt(a,3);
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/키패드누르기.java
+
+
+package Programmers.Level1;
+
+public class 키패드누르기 {
+    public String solution(int[] numbers, String hand){
+        String answer = "";
+        int left = 10;
+        int right = 12;
+        for(int i=0; i<numbers.length; i++){
+            if(numbers[i] == 1 || numbers[i] == 4 || numbers[i] == 7){
+                answer += "L";
+                left = numbers[i];
+            }else if(numbers[i] == 3 || numbers[i] == 6 || numbers[i] == 9){
+                answer += "R";
+                right = numbers[i];
+            }else{
+                if(numbers[i] == 0){
+                    numbers[i] = 11;
+                }
+                int leftDist = Math.abs(numbers[i] - left) / 3 + Math.abs(numbers[i] - left) % 3;
+                int rightDist = Math.abs(numbers[i] - right) / 3 + Math.abs(numbers[i] - right) % 3;
+                if(leftDist < rightDist){
+                    answer += "L";
+                    left = numbers[i];
+                }else if(leftDist > rightDist){
+                    answer += "R";
+                    right = numbers[i];
+                }else{
+                    if(hand.equals("left")){
+                        answer += "L";
+                        left = numbers[i];
+                    }else{
+                        answer += "R";
+                        right = numbers[i];
+                    }
+                }
+            }
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/내적.java
+
+
+package Programmers.Level1;
+
+public class 내적 {
+    public int solution(int[] a, int[] b){
+        int answer = 0;
+        for(int i=0; i<a.length; i++){
+            answer += a[i] * b[i];
+        }
+        return answer;
+    }
+}
+
+
+src/Programmers/Level1/음양더하기.java
+
+
+package Programmers.

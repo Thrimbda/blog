@@ -1,13 +1,13 @@
 ---
 "title": "Thrimbda"
-"summary": "Der Autor hat nach fast einem Monat des Nachdenkens beschlossen, die neue ID „Thrimbda“ zu verwenden, was „alive and thrive“ bedeutet, und erklärt die Zusammensetzung und symbolische Bedeutung dieser ID. Der Artikel geht weiter auf die zwei Ebenen des Weltwissens ein: Dao und Technik. Dao ist der Überblick, das Gerüst und die innere Gewissheit, während Technik die Details, die Umsetzung und abstruse Kniffe sind. Der Autor reflektiert, dass er sein eigenes Dao nicht klar sieht, aber viel Mühe in Techniken gesteckt hat, was er als vergeblich empfindet."
+"summary": "Dieser Artikel stellt zunächst die neue ID des Autors, Thrimbda, vor, deren Bedeutung 'alive and thrive' ist, und erläutert ihre Etymologie und symbolische Bedeutung. Anschließend wendet sich der Artikel der Diskussion über Dao (Prinzip) und Shu (Methode) zu, unterteilt Wissen in zwei Ebenen: Dao (Überblick, Rahmen) und Shu (Details, Umsetzung), und reflektiert, dass er sich zu sehr auf Shu konzentriert und Dao vernachlässigt hat, was zu vergeblicher Mühe führte. Der Kern des Artikels liegt darin, durch die Änderung der persönlichen ID eine philosophische Reflexion über die Ebenen des Lebens oder des Wissens anzuregen und die Bedeutung von Dao zu betonen."
 "tags":
-  - "Zusammenfassung"
+  - "Thrimbda"
   - "Dao"
-  - "Technik"
+  - "Shu"
+  - "Zusammenfassung"
   - "Philosophie"
-  - "Reflexion"
-  - "ID"
+  - "Persönliche Reflexion"
 "date": "2017-05-05"
 ---
 
@@ -19,13 +19,13 @@ taxonomies:
     - Zusammenfassung
 ---
 
-Nach fast einem Monat des Grübelns und Abwägens habe ich mich entschieden, eine neue ID zu verwenden: **Thrimbda**.
+Ich habe etwa einen Monat lang darüber nachgedacht und entschieden, eine neue ID zu verwenden: **Thrimbda**.
 
 Was bedeutet das?
 
-*Alive and thrive.*
+Alive and thrive.
 
-Der Schwanz stammt von der englischen Aussprache des griechischen Buchstabens Lambda, der für große Weisheit steht, die wie Einfalt erscheint.
+Der Endteil stammt von der englischen Aussprache des griechischen Buchstabens Lambda, der für "Weisheit in der Einfachheit" steht.
 
 Also
 
@@ -33,28 +33,28 @@ Also
 
 <!--more-->
 
-Da es mir leidtut, den Artikel so kurz zu beenden, möchte ich noch ein wenig über etwas anderes plaudern.
+Da ich nicht damit zufrieden war, den Artikel so kurz zu beenden, möchte ich noch etwas anderes ansprechen.
 
-## Über Dao und Technik
+## Über Dao und Shu
 
-Zusammengefasst lässt sich das Wissen dieser Welt in zwei Ebenen einteilen: **Dao** und **Technik**.
+Zusammenfassend lässt sich sagen, dass das Wissen in dieser Welt im Wesentlichen in zwei Ebenen unterteilt werden kann: **Dao** und **Shu**.
 
-*Dao* ist der Überblick;
+Dao ist der Überblick;
 
-es ist das Gerüst;
+es ist der Rahmen;
 
-es ist die innere Gewissheit.
+es ist das klare Verständnis.
 
-*Technik* hingegen sind die Details;
+Shu hingegen sind die Details;
 
-sie ist die Umsetzung;
+es ist die Umsetzung;
 
-sie sind abstruse Kniffe;
+es sind ausgeklügelte Techniken;
 
 Ich als Person
 
-kann mein eigenes *Dao* nicht klar erkennen,
+kann meinen eigenen Dao nicht klar erkennen,
 
-habe aber viel Mühe in *Techniken* gesteckt.
+habe aber viel Mühe in Shu investiert.
 
-Wie vergeblich das doch oft ist!
+Wie vergeblich war das doch!

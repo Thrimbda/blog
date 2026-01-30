@@ -1,16 +1,17 @@
 ---
-"title": "mein Blog mit Liebe"
-"summary": "Dieses Dokument stellt kurz den persönlichen Blog des Autors vor, der mit dem Static-Site-Generator Zola erstellt wurde und das Anemone-Theme mit leichten Anpassungen nutzt. Der Kernwert des Dokuments liegt in der Darstellung des Technologie-Stacks und der Design-Entscheidungen, wodurch es Lesern eine Referenz für die Erstellung eines eigenen Blogs auf Basis von Zola und Anemone bietet."
+"title": "My Blog with Love"
+"summary": "Dieses Dokument bietet eine kurze Einführung in den Aufbau eines persönlichen Blogs, der mit dem Static-Site-Generator Zola erstellt wurde. Es verwendet das Anemone-Theme mit leichten Anpassungen. Der Kernwert liegt in der Vorstellung des verwendeten Tech-Stacks und der Designentscheidungen, um Lesern eine Referenz zu bieten."
 "tags":
   - "blog"
   - "zola"
   - "anemone"
-  - "static-site-generator"
-  - "web-development"
+  - "static site generator"
+  - "personal website"
+  - "theme customization"
 ---
 
-# Blog
+# blog
 
-mein Blog mit Liebe
+Mein Blog mit Liebe
 
-Erstellt mit [zola](https://www.getzola.org/), Theme: [anemone](https://anemone.pages.dev/) mit leichten Anpassungen.
+Erstellt mit [zola](https://www.getzola.org/), Theme basierend auf [anemone](https://anemone.pages.dev/) mit leichten Anpassungen.

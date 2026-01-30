@@ -1,60 +1,54 @@
 ---
 "title": "Thrimbda"
-"summary": "After nearly a month of contemplation, the author has decided to adopt the new ID 'Thrimbda,' which means 'alive and thrive,' and explains the composition and symbolism of this ID. The article further explores the two levels of worldly knowledge: Dao (the Way) and Shu (technique). Dao represents the overview, framework, and confidence, while Shu pertains to details, implementation, and arcane techniques. The author reflects on their own inability to see the Dao clearly despite investing considerable effort in Shu, feeling that much of it has been in vain."
+"summary": "This article first introduces the author's new ID, Thrimbda, which means 'alive and thrive,' and explains its etymology and symbolic meaning. It then shifts to a discussion of Tao (the Way) and Technique, dividing knowledge into two levels: Tao (overview, framework) and Technique (details, implementation). The author reflects on having focused too much on Technique while neglecting Tao, leading to fruitless efforts. The core of the article lies in using the change of personal ID to provoke philosophical reflection on the levels of life or knowledge, emphasizing the importance of Tao."
 "tags":
+  - "Thrimbda"
+  - "Tao"
+  - "Technique"
   - "Summary"
-  - "Dao"
-  - "Shu"
   - "Philosophy"
-  - "Reflection"
-  - "ID"
+  - "Personal Reflection"
 "date": "2017-05-05"
 ---
 
 ---
 title: Thrimbda
-date: 2017-05-05
+date: May 5, 2017
 taxonomies:
   tags:
     - Summary
 ---
 
-After pondering and considering for nearly a month, I've decided to use a new ID: **Thrimbda**.
+After thinking about and considering it for nearly a month, I've decided to use a new ID: **Thrimbda**.
 
 What does it mean?
 
 Alive and thrive.
 
-The tail is taken from the English pronunciation of the Greek letter lambda, a letter that represents great wisdom appearing as foolishness.
+The tail is taken from the English pronunciation of the Greek letter lambda (λ), a letter that represents great wisdom appearing as foolishness.
 
-Thus,
+So,
 
 **Thrimbda**!
 
 <!--more-->
 
-I wasn't content to end the post so short, so let me ramble a bit more.
+I wasn't satisfied with the article being so short, so let me ramble a bit more.
 
-## On Dao and Shu
+## On Tao and Technique
 
-To summarize, the knowledge in this world can essentially be divided into two levels: **Dao** and **Shu**.
+To summarize, the knowledge in this world can essentially be divided into two levels: **Tao** and **Technique**.
 
-Dao is the overview;
+Tao is the overview;
+it is the framework;
+it is having a well-thought-out plan.
 
-It is the framework;
-
-It is having a well-thought-out plan.
-
-Shu, on the other hand, is the detail;
-
-It is the implementation;
-
-It is the arcane techniques.
+Technique, on the other hand, is the detail;
+it is the implementation;
+it is the clever tricks and skills.
 
 As for me,
-
-I cannot clearly see my own Dao,
-
-Yet I have put considerable effort into Shu.
+I cannot clearly see my own Tao,
+yet I have put considerable effort into Technique.
 
 How much of it has been in vain!

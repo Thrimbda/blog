@@ -1,18 +1,18 @@
 ---
-"title": "Registros de la tripulación de 0xc1: Fragmentos de vida y anotaciones emocionales"
-"summary": "Este artículo es una colección de registros personales de 0xc1 en el sitio web Gcores, que abarca desde 2023 hasta 2026. El contenido incluye fragmentos de la vida cotidiana, historias emocionales, experiencias con videojuegos (como 'Monster Hunter', 'StarCraft 2', 'Celeste', etc.), relatos de viajes (como el ciclismo alrededor del lago Qinghai, viajes a Estados Unidos, paseos por Hangzhou, etc.), reflexiones técnicas (sobre NixOS, Vim, CRUD, etc.) y percepciones personales. Los registros están narrados en primera persona, con un estilo cercano y auténtico, que combina anotaciones triviales de la vida con reflexiones emocionales profundas, mostrando los pensamientos del autor sobre la vida, la amistad, el amor y los ideales."
+"title": "Registro de la tripulación de 0xc1: Fragmentos de vida y compartir historias"
+"summary": "Este artículo es una colección de registros personales publicados por el autor 0xc1 en la plataforma de la tripulación, que abarca desde 2023 hasta 2026. El contenido se presenta en orden inverso, incluyendo fragmentos de la vida cotidiana, experiencias de viaje (como historias de viaje con el amigo zl, ciclismo alrededor del lago Qinghai, viaje a EE. UU.), recuerdos emocionales (como historias de amor de la universidad), experiencias de juegos (como 'Monster Hunter', 'StarCraft 2', 'Celeste', etc.), impresiones de películas, compartir música y reflexiones personales. Los registros documentan el crecimiento del autor, amistades, cambios emocionales y reflexiones sobre la vida a través de texto e imágenes, mostrando un mundo emocional rico y una variedad de intereses y aficiones."
 "tags":
-  - "Registros personales"
-  - "Diario de vida"
-  - "Experiencias con videojuegos"
-  - "Relatos de viajes"
-  - "Historias emocionales"
-  - "Reflexiones técnicas"
-  - "Gcores"
+  - "Diario personal"
+  - "Fragmentos de vida"
+  - "Historias de viaje"
+  - "Recuerdos emocionales"
+  - "Experiencias de juego"
+  - "Compartir música"
+  - "Reflexiones y pensamientos"
 "date": "2026-01-15"
 ---
 
-Enlace original: [Tripulación de Thrimbda](https://www.gcores.com/users/464460/talks)
+Enlace original: [Thrimbda en la tripulación](https://www.gcores.com/users/464460/talks)
 ## 2026-1-1
 
 
@@ -41,9 +41,9 @@ Hola a todos, ¿alguien usa el escritorio elevable Idåsen de IKEA?
 
 ![edea92f41dafcd310c76d8f702e77f53-2250-3000.jpg](https://0xc1.space/images/gcores/edea92f41dafcd310c76d8f702e77f53-2250-3000.jpg)
 
-De repente le gané respeto a la tienda FamilyMart de abajo, ¡resulta que tienen esto!
+Instantáneamente me hizo mirar con más respeto, la tienda FamilyMart de abajo realmente tiene esto.
 
-- 🍺 Todo en el alcohol
+- 🍺 Todo está en el alcohol
 
 
 ---
@@ -66,7 +66,7 @@ Esto es realmente lo más importante en todo el universo, y también lo más ins
 
 ![961a8f9a402126fbe802256130d0d9b4-3000-2000.jpg](https://0xc1.space/images/gcores/961a8f9a402126fbe802256130d0d9b4-3000-2000.jpg)
 
-En este momento nos miramos sin oírnos, deseo seguir el resplandor lunar que te ilumina ☺️
+En este momento nos miramos sin oírnos, deseo seguir el flujo de la luz lunar para iluminarte ☺️
 
 - 🍂 El primer toque de color otoñal
 
@@ -94,7 +94,7 @@ En este momento nos miramos sin oírnos, deseo seguir el resplandor lunar que te
 
 Cualquier resultado solo traerá emoción, enfrenta tu destino.
 
-- 🛡️ Discusión sobre torneos de DOTA2
+- 🛡️ Discusión de torneos de DOTA2
 
 
 ---
@@ -104,9 +104,9 @@ Cualquier resultado solo traerá emoción, enfrenta tu destino.
 
 
 
-La vez que más disfruté quedándome hasta las seis de la mañana, estoy tan feliz, esas dos peleas de equipo fueron demasiado hermosas.
+La mejor vez que me quedé despierto hasta las seis, estoy tan feliz, estas dos peleas de equipo también fueron hermosas.
 
-- 🛡️ Discusión sobre torneos de DOTA2
+- 🛡️ Discusión de torneos de DOTA2
 
 
 ---
@@ -116,13 +116,13 @@ La vez que más disfruté quedándome hasta las seis de la mañana, estoy tan fe
 
 
 
-Aunque aposté por la victoria de Falcons, ver a Marlin abrir champán a mitad de partido y burlarse por el chat, y luego ver a BB dar la vuelta al partido en el límite y que todo el equipo le devolviera las burlas a Marlin fue demasiado satisfactorio.
+Aunque aposté por Falcons para ganar, ver a Mal'Ganis abrir champán a mitad de partido y escribir para burlarse, y luego ver a BB dar la vuelta al partido al límite y que todo el equipo le dé propinas para burlarse de Mal'Ganis fue demasiado satisfactorio.
 
-All chat / Me gusta escribir.
+All chat / Le gusta escribir.
 
 Jajajajajajajajajajajajajajajaja
 
-- 🛡️ Discusión sobre torneos de DOTA2
+- 🛡️ Discusión de torneos de DOTA2
 
 
 ---
@@ -133,9 +133,9 @@ Jajajajajajajajajajajajajajajaja
 
 
 La estrategia fue destrozada, ay.
-XG solo puede ganar si apuesta a que Mao no cometa errores.
+XG solo puede ganar si apuesta a que el hermano Mao no cometa errores.
 
-- 🛡️ Discusión sobre torneos de DOTA2
+- 🛡️ Discusión de torneos de DOTA2
 
 
 ---
@@ -162,7 +162,7 @@ Lo visto al visitar el monte Li.
 
 
 
-¡Dios mío, vi a un compañero de clase en QuantumBit, y yo aquí todavía haciendo el tonto! 🥹
+¡Dios mío, vi a un compañero de clase en Quantum Bit, y yo aquí todavía haciendo tonterías! 🥹
 
 - 🌙 El agujero del emo
 
@@ -174,17 +174,18 @@ Lo visto al visitar el monte Li.
 
 ![06989f6a9aefa0498ff9356b6c1923f7-1280-960.jpg](https://0xc1.space/images/gcores/06989f6a9aefa0498ff9356b6c1923f7-1280-960.jpg)
 
-En 2016, durante mi segundo y tercer año de universidad, mi asignación mensual era de 1000 yuanes, y la de mi novia en ese entonces era de 1200.
+En 2016, durante mi segundo y tercer año de universidad, mi asignación mensual era de 1000 yuanes, y mi novia de ese entonces recibía 1200 al mes.
 
-Su universidad estaba en el suroeste del distrito de Chang'an, la mía en el pueblo de Shapo, y nos veíamos todas las semanas.
+Su universidad estaba en el suroeste del distrito de Chang'an, la mía en el pueblo de Shapo, nos veíamos todas las semanas.
 
-Había una pastelería Holiland en la puerta sureste de mi universidad. Ella era de otra universidad, y cuando venía a verme los fines de semana decía que el queso semi-curado estaba bueno, costaba ocho yuanes cada uno. Solo nos atrevíamos a comprar la caja de dos. Después de comprarla, íbamos a tomar el autobús al otro lado de la calle, y en el puente peatonal lo comíamos a mordiscos, tú un bocado, yo otro.
+Había una Holilandia en la puerta sureste de nuestra universidad. Ella era de otra universidad, los fines de semana cuando venía a verme decía que el queso semi-curado estaba bueno, costaba ocho yuanes cada uno. Solo nos atrevíamos a comprar el paquete de dos. Después de comprarlo, íbamos a tomar el autobús al otro lado, en el puente peatonal nos lo comíamos a mordiscos, tú un bocado, yo otro.
 
-Más tarde, en el segundo semestre de mi último año, conseguí unas prácticas, a treinta yuanes la hora. Sumando horas extra y bonificaciones, mis ingresos mensuales llegaron a más de diez mil, nunca antes había tenido tanto dinero.
+Más tarde, en el segundo semestre de mi cuarto año, conseguí unas prácticas, treinta yuanes la hora. Con horas extras y bonificaciones, mis ingresos mensuales superaban los diez mil, nunca antes había tenido tanto dinero.
 
-En el Día del Trabajo de 2018, fui solo a la puerta de la universidad y compré una caja de cinco. Crucé a la otra acera y tomé el mismo autobús, comiéndomelos en silencio.
+En el Día del Trabajo de 2018, fui solo a la puerta de la universidad y compré una caja de cinco unidades. Fui al otro lado y tomé el mismo autobús, me lo comí solo en silencio.
 
-Su universidad de posgrado estaba en Zhongguancun, mis prácticas en Wudaokou, y nunca más nos volvimos a ver.
+Su universidad de posgrado estaba en Zhongguancun, mis prácticas en Wudaokou, nunca más nos volvimos a ver.
+
 
 - 💓 La casita de las emociones
 
@@ -203,7 +204,7 @@ Hola a todos, voy a soltar una afirmación polémica:
 
 Uno no puede tener simultáneamente un coche Tesla y educación.
 
-- 🤔 ¡Delirar y enloquecer! ¡Rey de la Llama Frenética!
+- 🤔 ¡Delirar y enloquecer! ¡Rey del Fuego Frenético!
 
 
 ---
@@ -229,7 +230,7 @@ Uno no puede tener simultáneamente un coche Tesla y educación.
 
 ¡Llegué a Shenyang!
 ¡Me alojo en el distrito de Tiexi!
-¡Misión de reconocimiento en terreno de ktsg completada!
+¡Misión de investigación in situ de ktsg completada!
 
 - 🧩 Un fragmento de vida
 
@@ -241,13 +242,13 @@ Uno no puede tener simultáneamente un coche Tesla y educación.
 
 ![d7453f5674d0b9eb078f8306c8b19d6e-2250-3000.jpg](https://0xc1.space/images/gcores/d7453f5674d0b9eb078f8306c8b19d6e-2250-3000.jpg)
 
-El episodio en el que más extraño a mi familia 😭
+El episodio en el que más echo de menos mi hogar 😭
 
-De repente me apeteció sandía, así que fui a comprar una por internet. Recordé que cada verano, desde pequeño, en casa siempre había sandía. De niño, mis padres la cortaban y yo la mordía; ahora, cuando vuelvo a casa, si me apetece a medianoche, voy a la nevera y me como media que haya cortada.
+De repente me apeteció sandía, así que fui a comprar una online, y recordé que cada verano en casa siempre había sandía para comer. De pequeño, mis padres la cortaban y yo la mordía; ahora, cuando vuelvo a casa, si me apetece por la noche, voy a la nevera y me como media que haya cortada.
 
 En fin, en casa me siento tranquilo, como si tuviera un escudo protector.
 
-Acabo de cortar y comer la sandía, es más dulce que todas las que compraron mis padres este año, pero ¡cuánto echo de menos mi casa! 😭
+Acabo de cortar y comer la sandía, es más dulce que todas las que compraron mis padres este año, pero ¡cuánto echo de menos mi hogar! 😭
 
 - 🧩 Un fragmento de vida
 
@@ -264,21 +265,21 @@ Acabo de cortar y comer la sandía, es más dulce que todas las que compraron mi
 ¡Explora un pequeño mundo, recolecta recursos y crea pixel art juntos!
 ¡Sé un pequeño dios feliz en el universo pixelado! ✨
 
-Clic y obtienes: ¡Modo un jugador para tímidos / Modo multijugador para sociables!
+Clic para obtener: Modo un jugador amigable para tímidos / Modo multijugador para extrovertidos sociales.
 
-Aquí solo estás tú + bloques de píxeles + posibilidades infinitas. Con la izquierda talas árboles, minas y construyes, con la derecha pintas el castillo de rosa cibernético y verde fluorescente. ¡Y cuando teletransportas tu pequeña casa arcoíris al mapa global, todo el servidor verá tu pixel art abstracto!
+¡Aquí solo estás tú + bloques de píxeles + posibilidades infinitas! Con la mano izquierda talas árboles, minas y construyes infraestructura, con la derecha pintas el castillo de rosa cibernético y verde fluorescente. ¡Y cuando teletransportas tu pequeña casa arcoíris al mapa global, todo el servidor verá tu pixel art abstracto!
 
 【Puntos destacados para procrastinar】
-✓ ¡Los recursos vuelven a crecer solos! No más necesidad de ser un granjero extremo.
-✓ Pulsa F para entrar al mundo global: observa las absurdas construcciones de internautas de todo el mundo.
-✓ Con el árbol de habilidades al máximo: conviértete en un maníaco de la construcción al instante.
+✓ ¡Los recursos vuelven a crecer solos! No más necesidad de ser un adicto al trabajo.
+✓ Presiona F para entrar al mundo global: observa las absurdas construcciones de internautas de todo el mundo.
+✓ Con el árbol de habilidades completo: conviértete en un maníaco de la construcción en el acto.
 
-¿Acurrucado en el sofá (o en tu puesto) construyendo una cabaña vs. farmeando materiales hasta tarde? ¡Tu modo de relajación/esfuerzo extremo ya está cargado! Haz clic para empezar y convierte el mundo en tu patio de recreo. (๑•̀ㅂ•́)و✧
+¿Acurrucarse en el sofá (o en el puesto de trabajo) construyendo una cabaña vs. acumular materiales hasta tarde por la noche? ¡Tu modo de holgazanear/esforzarte ya está cargado! — Haz clic para empezar, ¡convierte el mundo en tu patio de recreo! (๑•̀ㅂ•́)و✧
 
 Por favor, vengan a jugar, por favor 🥺
 https://tinyrattar.github.io/SmallWorld_github.io/
 
-- 🎁 Estación de comentarios y retroalimentación de BOOOM
+- 🎁 Punto de retroalimentación y reflexiones de juego BOOOM
 
 
 ---
@@ -296,26 +297,27 @@ https://tinyrattar.github.io/SmallWorld_github.io/
 ![0c814503d754509880ee91bec9bca4f8-3000-2250.jpg](https://0xc1.space/images/gcores/0c814503d754509880ee91bec9bca4f8-3000-2250.jpg)
 ![a8ac417f1fe5d46f29d00ee00020be7f-3000-2000.jpg](https://0xc1.space/images/gcores/a8ac417f1fe5d46f29d00ee00020be7f-3000-2000.jpg)
 
-Tiempos de viaje con zl (cuatro) - Reencuentro tras mucho tiempo
+Tiempos de viaje con zl (cuatro) - Reencuentro después de mucho tiempo
 
-Cuando los días opresivos habían pasado más de setecientos días en el calendario, y mi vida laboral finalmente comenzaba a mostrar un rayo de luz, decidí poner fin a este largo exilio autoimpuesto y planifiqué ir al otro lado del océano a finales de septiembre para visitar a ZL, a quien no veía desde hacía tres años enteros.
+Cuando los días opresivos habían pasado más de setecientas noches en el calendario y mi vida laboral finalmente mostraba un rayo de luz, decidí poner fin a este largo exilio autoimpuesto y planifiqué ir al otro lado del océano a finales de septiembre para visitar a ZL, a quien no veía desde hacía tres años enteros.
 
-No sé desde cuándo, el inicio de mis viajes siempre comienza después de que el viaje ha empezado. Es decir, no hay una o dos semanas de anticipación antes de partir, ni noches cerrando los ojos imaginando las cosas maravillosas que sucederán en este viaje. Solo empacar y partir, y justo antes de partir todavía estaba resolviendo problemas de trabajo. Esto hace que todo el proceso sea demasiado racional y carente de emoción. Esta situación continuó hasta que pedí una pequeña botella de vino en el avión, y el calor que surgió en mi pecho después de beberla disipó este exceso de racionalidad. Solo entonces, mi expectativa por lo desconocido y la inquietud antes de reencontrarme con un viejo amigo después de tanto tiempo comenzaron a bailar en mi mente.
+No sé desde cuándo, el punto de partida de mis viajes siempre ha estado después de que el viaje comenzara. Es decir, no hay una o dos semanas de anticipación antes de partir, ni noches cerrando los ojos imaginando las cosas maravillosas que sucederán en este viaje. Solo empacar y partir, y justo antes de partir todavía estaba resolviendo problemas laborales. Esto hacía que todo el proceso fuera demasiado racional y careciera de emoción. Esta situación continuó hasta que pedí una pequeña botella de vino en el avión, y el calor que surgió en mi pecho después de beberla disipó este exceso de racionalidad. Solo entonces, mi expectativa por lo desconocido y la inquietud antes de reunirme con un viejo amigo al que no veía desde hacía mucho comenzaron a bailar en mi mente.
 
-Al bajar del avión y salir de la terminal, lo vi. Se había cortado el pelo y ya no era delgado. Ahora era un tipo fornido con el pelo de la longitud justa. Al vernos, mientras nos acercábamos, no podíamos contener las sonrisas, y la antigua llama volvió a encenderse. El aire exterior era un poco fresco, y nos metimos en su coche pequeño.
-Pronto, después de que la alegría del reencuentro se calmara, no sé si por el tiempo sin vernos o por la necesidad de la vida en Norteamérica, noté que parecía haber desarrollado una capa transparente de coraza, manteniéndome a mí y a todas las incógnitas del mundo fuera. Lo que mostraba al mundo era un hombre fornido y emocionalmente estable, pero en ciertos momentos, parecía vislumbrarse bajo esa coraza al joven inexperto de antes.
-Afortunadamente, era una coraza inestable, y en el coche pequeño de zl, el paisaje a lo largo del camino, con el paso del tiempo, pronto la hizo añicos. En 36 horas volvíamos a charlar y discutir como en los años de Suzhou, y con descaro a comentar a cada chica que pasaba a nuestro lado —excepto las de rasgos asiáticos.
+Bajé del avión, salí de la terminal y lo vi. Se había cortado el pelo y ya no era delgado y pequeño. Ahora era un tipo fornido con el pelo de la longitud justa. Al vernos, mientras nos acercábamos, no pudimos contener nuestras sonrisas, la antigua llama volvió a encenderse. El aire exterior era un poco fresco, nos metimos en su pequeño coche.
+Pronto, después de que la alegría del reencuentro se calmara, no sé si por el tiempo sin vernos o por la necesidad de la vida en Norteamérica, descubrí que parecía haber desarrollado una capa transparente, manteniéndome a mí y a todo lo desconocido del mundo fuera. Lo que mostraba al mundo era un hombre fornido y emocionalmente estable, y en ciertos momentos, parecía vislumbrarse bajo esa capa al joven inexperto.
+Afortunadamente, era una capa inestable, en el pequeño coche de zl, el paisaje a lo largo del camino pronto la rompió bajo la acción del tiempo. 36 horas después, una vez más comenzamos a charlar como en los años en Suzhou, y de manera superficial a comentar sobre cada chica que pasaba a nuestro lado — excepto las caras asiáticas.
 
-Entre mis muchos sueños de convertirme en agua y olvidarme en los ríos y lagos, uno era conducir por la PCH escuchando la canción PCH de Jaden. Antes de llegar a Monterey, hablé con ZL sobre esto, y sin decir nada, puso esa canción en bucle. Bajo el sol radiante, junto al mar brumoso y azul, cuando sonaron los primeros acordes de PCH, la brisa marina tomó forma, perseguimos el horizonte que constantemente se colapsaba, y las ruedas giratorias creaban nuevos recuerdos para cubrir mis sueños perdidos.
+Entre mis muchos sueños de convertirme en agua y olvidarme en los ríos y lagos, uno era conducir por la PCH mientras escuchaba la canción PCH de Jaden. Antes de llegar a Monterey, hablé con ZL sobre esto, sin decir nada, buscó la canción y la puso en bucle. Bajo el sol despejado, junto al mar brumoso y azul, cuando sonaron los primeros acordes de PCH, el viento marino tomó forma, perseguimos el horizonte que constantemente se colapsaba, las ruedas giratorias creaban constantemente nuevos recuerdos para compensar y cubrir mis sueños perdidos.
 
-A veces el atardecer estaba frente a nosotros, y yo, agotado por el jet lag, miraba fijamente el crepúsculo sin decir nada, mientras zl, que conducía en ese momento, también guardaba silencio. El crepúsculo y las luces se reflejaban en nuestras caras, conducíamos hacia el sol inmortal bajo la mirada de los dioses del anochecer, y en ese silencio había una conversación ininterrumpida. Luego él rompió el silencio: "Tsk, tengo que encontrar una canción adecuada para este momento", dijo zl mientras manipulaba la pantalla principal.
+A veces el atardecer estaba frente a nosotros, yo, agotado por el jet lag, miraba fijamente el crepúsculo sin decir una palabra, mientras zl, que conducía en ese momento, también guardaba silencio. El crepúsculo y las luces caían sobre nuestros rostros, conducíamos hacia el sol inmortal bajo la mirada de los dioses del anochecer, y en este silencio había una conversación ininterrumpida. Luego él rompió el silencio: "Tsk, tengo que encontrar una canción adecuada para este momento", dijo zl mientras manipulaba la pantalla principal.
 
-- P1: zl tiene muchos objetos raros; cuando entré en su casa encontré unas pequeñas gafas de sol redondas;
-- P3: Llevé a Estados Unidos la botella de vino de hielo que zl me dio hace cinco años y la abrí y bebí con él;
+
+- P1: zl tiene muchos objetos extraños, cuando entré a su casa encontré unas pequeñas gafas de sol redondas;
+- P3: Llevé a EE. UU. la botella de vino de hielo que zl me dio hace cinco años y la abrí y bebí con zl;
 - P7: A zl le gusta mucho esta foto, pero en ella parezco gordo, a mí no me gusta mucho;
 - P9: Dos semanas después, hice escala en San Francisco para volver a casa y pasé otra noche en casa de zl.
 
-- 🧩 Historias fragmentadas
+- 🧩 Fragmentos de historias
 
 
 ---
@@ -327,9 +329,9 @@ A veces el atardecer estaba frente a nosotros, y yo, agotado por el jet lag, mir
 ![41d830a7d8acb3d0daa32351f9496b78-3000-1688.jpg](https://0xc1.space/images/gcores/41d830a7d8acb3d0daa32351f9496b78-3000-1688.jpg)
 ![67c066a7822dc406a1c11ddac4997bc1-3000-1688.jpg](https://0xc1.space/images/gcores/67c066a7822dc406a1c11ddac4997bc1-3000-1688.jpg)
 
-Mis uvas y yo
+Yo y mis uvas
 
-- 🪄 Convocatoria de caras para 'Monster Hunter Wilds'
+- 🪄 Convocatoria de creación de personajes para "Monster Hunter Wilds"
 
 
 ---
@@ -346,30 +348,30 @@ Mis uvas y yo
 ![18fe9dd143f0a63ea1d1a92a854a14a2-2250-3000.jpg](https://0xc1.space/images/gcores/18fe9dd143f0a63ea1d1a92a854a14a2-2250-3000.jpg)
 ![6dcb3c6e48221485abd109e86973efe4-3000-2250.jpg](https://0xc1.space/images/gcores/6dcb3c6e48221485abd109e86973efe4-3000-2250.jpg)
 
-Tiempos de viaje con zl (tres) - ¿Vamos a andar en bici alrededor del lago Qinghai?
+Tiempos de viaje con zl (tres) ¿Vamos a andar en bicicleta alrededor del lago Qinghai?
 
-En el verano de 2021, unas semanas antes de que zl se fuera a estudiar, acordamos ir a andar en bici alrededor del lago Qinghai. El viaje duró seis días y cinco noches, y el ciclismo alrededor del lago tomó exactamente cuatro días: un total de 360 km, 90 km diarios en promedio, tanto que una semana después de regresar, incluso con una dieta normal, seguí perdiendo 5 kilos.
+Verano de 2021, unas semanas antes de que zl se fuera a estudiar, acordamos ir a andar en bicicleta alrededor del lago Qinghai. El viaje era de seis días y cinco noches, y el tiempo de ciclismo alrededor del lago era exactamente cuatro días: un total de 360 km, un promedio de 90 km por día, tanto que una semana después de regresar, incluso con una dieta normal, todavía había perdido 5 kg.
 
-Este tipo de planes de viaje locos, después de hacer uno en el verano antes de empezar la universidad en 2014, siempre quise repetirlo. Durante años animé y llamé a cada amigo a mi alrededor, y zl fue el único que mostró un gran interés y respondió activamente.
+Este tipo de planes de viaje locos, después de implementar uno en el verano antes de comenzar la universidad en 2014, siempre quise hacer otro. Durante años, he estado instigando y llamando a cada amigo a mi alrededor, zl fue el único que mostró un gran interés y respondió activamente.
 
-Salimos de la tienda de alquiler de bicicletas en el condado de Haiyan (yo llevé mi propia bici, zl alquiló una bicicleta de viaje) y pedaleamos en sentido horario alrededor del lago.
+Salimos de la tienda de alquiler de bicicletas en el condado de Haiyan (yo llevé mi propia bicicleta, zl alquiló una bicicleta de turismo) y pedaleamos en sentido horario alrededor del lago.
 
-El cielo y el agua se fundían en el horizonte, bajo un cielo despejado. A lo lejos solo se veía el camino extendiéndose hasta el horizonte, y bajo el vasto cielo azul había un mar aún más azul, junto al mar había grandes campos de colza, y en el camino junto a los campos solo estábamos nosotros dos.
-Durante esos cuatro días, el mundo se comprimió en el ritmo del pedaleo izquierda-derecha, solo nosotros dos entre el cielo y la tierra. Cuerpos cansados sosteniendo mentes infinitamente vivas. Ni siquiera nos daba tiempo para escuchar música, nuestras conversaciones difícilmente terminaban.
+El cielo y el agua se unen en el horizonte, el cielo está despejado por millas. Mirando a lo lejos, solo hay el camino que se extiende hasta el horizonte, y bajo el vasto cielo azul hay un mar aún más azul, al lado del mar hay grandes campos de colza, y en el camino al lado de los campos solo estábamos nosotros dos.
+Durante esos cuatro días, el mundo se comprimió en el ritmo del pedaleo izquierda-derecha, entre el cielo y la tierra solo estábamos nosotros dos, cuerpos cansados sosteniendo cerebros infinitamente llenos de vida. Ni siquiera nos daba tiempo para escuchar música, nuestras conversaciones eran difíciles de terminar.
 
-Durante siete años, el lago Qinghai ha estado expandiéndose. La estatua que estaba en la orilla en 2014 para 2021 ya estaba medio sumergida en el agua. Me pregunto si, durante mi vida, el lago Qinghai volverá a conectarse con los ríos, convirtiéndose gradualmente en un lago de agua dulce. Si para entonces volveremos, sin atrevernos a pedir pedalear alrededor del lago, al menos beber una gran tetera de té con leche en una tienda de campaña. Y luego alardear diciendo qué divertido fue.
+Durante siete años, el lago Qinghai ha estado expandiéndose, la estatua que estaba en la orilla en 2014 en 2021 ya estaba medio sumergida en el agua. Me pregunto si en el transcurso de mi vida, el lago Qinghai se volverá a conectar con los ríos, convirtiéndose gradualmente en un lago de agua dulce. Si para entonces todavía vendremos, sin atrevernos a pedir andar en bicicleta alrededor del lago, al menos beber una gran tetera de té con leche en una tienda de campaña. Y luego presumir diciendo que fue realmente interesante.
 
-Solo el fuerte dolor de cabeza por el mal de altura que duró casi la mitad del viaje, algunas subidas continuas de treinta kilómetros, lluvias torrenciales ocasionales, condiciones de alojamiento deficientes y la típica actitud retorcida de los jóvenes veinteañeros con aires artísticos podían añadir un poco de amargura a este viaje.
+Solo el fuerte dolor de cabeza por el mal de altura que duró casi la mitad del viaje, algunas subidas continuas de treinta kilómetros, lluvias torrenciales ocasionales, condiciones de alojamiento deficientes y la típica actitud retorcida de los jóvenes artísticos de veinticuatro o veinticinco años podían agregar un poco de amargura a este viaje.
 
-Vale la pena mencionar que el último día de ciclismo estuvo acompañado de lluvia persistente e interminables subidas. Nuestras 24 barras de Snickers se habían reducido a 6, y estábamos hartos de beber Red Bull. Por la tarde, sentí un ligero frío en la base de la lengua y me di cuenta de que era una mala señal. Mientras descansábamos a 20 km de la meta, el sentido del humor de zl seguía funcionando, dejando la obra maestra eterna: la foto de c1 orinando. Afortunadamente, un joven conductor tibetano de un camión nos preguntó si necesitábamos ayuda. En el instante en que me senté en la cálida y seca cabina con aire acondicionado, supe lo frío que estaba, y seguí tiritando durante más de diez minutos en el camino.
+Vale la pena mencionar que el último día de ciclismo estuvo acompañado de lluvia continua y subidas interminables, nuestras 24 barras de Snickers solo quedaban 6, y ya estábamos hartos de beber Red Bull. Por la tarde, sentí un ligero frío en la base de la lengua, me di cuenta de que era una señal no muy buena. Al descansar a 20 km de la meta, el sentido del humor de zl todavía funcionaba, dejando la obra maestra de la generación: la foto de c1 orinando. Afortunadamente, un joven conductor tibetano de un camión nos preguntó si necesitábamos ayuda. En el instante en que me senté en la cálida y seca cabina con aire acondicionado, supe cuánto frío hacía, y todavía temblé durante más de diez minutos en el camino.
 
-De vuelta en Xining, comimos dos kilos de cordero asado con las manos. Esa fue la última vez que vi a zl antes del otoño de este año.
+Después de regresar a Xining, comimos dos kilos de cordero cocido con las manos. Esa fue la última vez que vi a zl antes del otoño de este año.
 
-- Encontramos a un señor de Hong Kong con una rueda pinchada; después de ayudarle a inflarla, nos tomó esta foto súper guay.
-- En venganza, le tomé a zl la foto orinando.
-- El cordero asado con las manos estaba increíblemente bueno.
+- Encontramos a un tío de Hong Kong con una llanta pinchada, después de ayudarlo a inflarla, él nos tomó esta foto súper genial.
+- En venganza, tomé una foto de zl orinando.
+- El cordero cocido con las manos estaba increíblemente delicioso.
 
-- 🧩 Historias fragmentadas
+- 🧩 Fragmentos de historias
 
 
 ---
@@ -386,30 +388,30 @@ De vuelta en Xining, comimos dos kilos de cordero asado con las manos. Esa fue l
 ![43091c9346f9d9077dc7f70b9abd2502-1280-1706.jpg](https://0xc1.space/images/gcores/43091c9346f9d9077dc7f70b9abd2502-1280-1706.jpg)
 ![3f9dce8827956ed17bc3270eceefe764-3000-2250.jpg](https://0xc1.space/images/gcores/3f9dce8827956ed17bc3270eceefe764-3000-2250.jpg)
 
-Tiempos de viaje con zl (dos) - Días felices y despedida
+Tiempos de viaje con zl (dos) Días felices y despedida
 
-"Oye, zl, ahora mismo estamos en Suzhou de viaje de negocios. Si no nos alojamos en hotel, la asignación mensual por viaje de negocios podría cubrir completamente el alquiler, ¡entonces el resto del alquiler podría usarse para decorar a lo grande!"
+"Oye, zl, ahora que estamos en Suzhou por trabajo, si no nos alojamos en un hotel, el subsidio mensual por viaje de negocios podría cubrir completamente el alquiler, entonces el alquiler restante podría usarse para decorar a lo grande".
 
-"¡Joder, tienes razón!"
+"¡Vaya, tienes razón!"
 
-(Lamentablemente, un mes después de decir esto, la asignación por viaje de negocios desapareció).
+(Lamentablemente, un mes después de decir esto, ya no hubo subsidio por viaje de negocios).
 
-La vida en Suzhou era como la universidad. Estábamos en la nueva ciudad de la estación de tren, en el extremo norte de Suzhou, donde no había nada alrededor. Cada noche a las nueve, las calles estaban en silencio, era difícil ver a alguien.
-Había pocos alquileres cerca de la empresa, la mayoría de la gente eligió el mismo edificio de apartamentos a diez minutos a pie de la empresa, que era como la residencia universitaria de la "Universidad Momenta".
+La vida en Suzhou era como la universidad, estábamos en la nueva ciudad de la estación de tren en el extremo norte de Suzhou, no había nada alrededor, cada noche a las nueve, las calles estaban en silencio, era difícil ver a alguien.
+Había pocas opciones de alquiler cerca de la empresa, la mayoría de la gente eligió el mismo edificio de apartamentos a diez minutos a pie de la empresa, este era el dormitorio de la universidad momenta.
 
-Zl y yo comenzamos a intentar construir una vida. Por ejemplo, realmente aprendí a cocinar. Zl también compró muchas cosas. Ni siquiera el brote de la pandemia afectó esto, sino que hizo que nuestra relación con otros colegas se volviera más estrecha. Playground también se hizo amigo nuestro en ese entonces, y pronto descubrimos que a menudo jugábamos Super Smash Bros. en casa de playground en el piso de abajo.
+Zl y yo comenzamos a intentar construir una vida, por ejemplo, realmente aprendí a cocinar. Zl también agregó muchas cosas. Ni siquiera el brote de la pandemia afectó esto, sino que hizo que nuestra relación con otros colegas fuera más estrecha. Playground también se hizo amigo nuestro en ese entonces, pronto descubrimos que a menudo jugábamos Super Smash Bros. de Nintendo en la casa de playground en el piso de abajo.
 
 Por eso, cada vez que recuerdo los tiempos en mmt, me siento feliz y cálido.
 
-La novia de zl, con quien llevaba cuatro años, estaba estudiando en Canadá en ese entonces (esta era una razón importante por la que zl quería ir a estudiar al extranjero). Antes del brote de la pandemia, fue a reunirse con ella y a su regreso me trajo una botella de vino de hielo. En los siguientes cinco años, me mudé seis veces en total, y esa fue una de las pocas cosas que siempre llevé conmigo. Al principio solo pensaba que no era el momento adecuado para abrirla, luego se convirtió en algo deliberado; dondequiera que estuviera, siempre estaba en mi nevera.
+La novia de zl, con quien había estado cuatro años, estaba estudiando en Canadá en ese entonces (esta también era una razón importante por la que zl quería ir al extranjero a estudiar). Antes del brote de la pandemia, fue a reunirse con su novia y cuando regresó me trajo una botella de vino de hielo. En los siguientes cinco años, me mudé seis veces en total, y esa fue una de las pocas cosas que siempre llevé conmigo. Al principio solo pensaba que no era el momento adecuado para abrirla, luego se convirtió en algo deliberado, sin importar dónde estuviera, siempre estaba en mi nevera.
 
 En el otoño de 2021, zl partió para estudiar.
 
-- En las fotos está @playground, que no quiere mostrar su foto.
+- En las imágenes está @playground, que no quiere mostrar su foto.
 - Zl dijo que podía publicar sus fotos libremente.
 - Esta es la botella de vino de hielo.
 
-- 🧩 Historias fragmentadas
+- 🧩 Fragmentos de historias
 
 
 ---
@@ -419,8 +421,4 @@ En el otoño de 2021, zl partió para estudiar.
 
 ![d32e4957260ac6c9674d8b158643b3a5-3000-1688.jpg](https://0xc1.space/images/gcores/d32e4957260ac6c9674d8b158643b3a5-3000-1688.jpg)
 ![36fd0bff4dbd942c0e6099c8a17fc224-3000-1688.jpg](https://0xc1.space/images/gcores/36fd0bff4dbd942c0e6099c8a17fc224-3000-1688.jpg)
-![36dcbc643beed83d260a1a50b4bfb47b-3000-1688.jpg](https://0xc1.space/images/gcores/36dcbc643beed83d260a1a50b4bfb47b-3000-1688.jpg)
-
-Nuevo Dark Urge, nuevo comienzo.
-
-- ✝️ Confesionario ciber
+![36dcbc643beed83d260a1a50b4bfb47b-3000-1688.jpg](https://0xc1.space/images/g

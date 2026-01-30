@@ -1,14 +1,13 @@
 ---
 "title": "An -"
-"summary": "Dieser Artikel konzentriert sich auf John Keats' Gedicht 'An -' und untersucht, wie die vorübergehende Faszination des Dichters für eine junge Dame seine kreative Inspiration entfachte. Das Gedicht zeigt durch reiche Bilder und emotionalen Ausdruck Keats' beharrliches Streben nach Schönheit. Der Artikel weist weiterhin darauf hin, dass das Gedicht in der rhythmischen Gestaltung, insbesondere in den letzten beiden Zeilen, Ähnlichkeiten mit Shakespeares Sonetten aufweist, was Keats' Übernahme und Anlehnung an die shakespearesche Gedichttradition widerspiegelt. Dies offenbart nicht nur die Ursprünge von Keats' poetischem Schaffen, sondern bietet auch eine wichtige Perspektive zum Verständnis seines künstlerischen Stils."
+"summary": "Dieser Artikel konzentriert sich auf John Keats' Gedicht 'To-' und untersucht, durch die Darstellung seines englischen Originaltexts und einer chinesischen Hintergrundeinführung, die darin ausgedrückte Faszination und seelische Qual um eine junge Dame. Der Artikel vergleicht weiterhin die letzten beiden Zeilen von Keats' Gedicht rhythmisch mit Shakespeares Sonett Nr. 113, weist auf Ähnlichkeiten in der emotionalen Struktur und der musikalischen Gestaltung hin und zitiert relevante Fußnoten, um diesen Standpunkt zu untermauern. Dies offenbart den möglichen Einfluss Shakespeares auf Keats' Werk sowie die Gemeinsamkeiten der beiden Dichter im emotionalen Ausdruck und ihrer poetischen Kunstfertigkeit."
 "tags":
   - "John Keats"
+  - "Keats"
   - "Gedichtanalyse"
   - "Shakespeare"
-  - "Metrik"
-  - "Literarischer Vergleich"
-  - "Keats"
   - "Sonett"
+  - "Rhythmusvergleich"
   - "Literarischer Einfluss"
 "date": "2018-01-07"
 ---
@@ -21,7 +20,7 @@ taxonomies:
     - John Keats
 ---
 
-> Keats sah einmal für einige Minuten eine junge Dame und war von ihr so fasziniert, dass er sogar Kummer empfand.
+> Keats sah einmal für einige Minuten eine junge Dame und war von ihr so fasziniert, dass er sogar seelisch darunter litt.
 
 <!--more-->
 
@@ -49,7 +48,7 @@ And grief unto my darling joys dost bring.
 
 ### Anmerkung
 
-Später wurde festgestellt, dass die letzten beiden Zeilen dieses Gedichts `An - ["Time's sea"]`
+Später stellte sich heraus, dass die letzten beiden Zeilen dieses Gedichts `An - ["Time's sea"]`
 
 ```
 Every delight with sweet remembering,
@@ -63,4 +62,4 @@ Even so, being full of your ne'er cloying sweetness,
 To bitter sauces did I frame my feeding.
 ```
 
-gewisse rhythmische Ähnlichkeiten aufweisen. Kein Wunder, dass in einer Fußnote zu Keats' Gedicht erwähnt wurde: "In der rhythmischen Gestaltung der emotionalen Struktur und in der allmählich ansteigenden Musikalität ist es Shakespeares Sonetten sehr ähnlich."
+gewisse rhythmische Ähnlichkeiten aufweisen. Kein Wunder, dass in einer Fußnote zu Keats' Gedicht erwähnt wurde: "In der rhythmischen Gestaltung der emotionalen Struktur und in der sich steigernden Musikalität ist es Shakespeares Sonetten sehr ähnlich."

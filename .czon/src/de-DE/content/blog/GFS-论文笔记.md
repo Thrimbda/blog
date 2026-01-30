@@ -1,33 +1,30 @@
 ---
-"title": "GFS-Paper-Notizen"
-"summary": "Dieser Artikel enthält Notizen zum GFS-Paper (Google File System) und fasst die vier Kernmerkmale von GFS als verteiltes Dateisystem zusammen: Modellierung von Maschinenausfällen, Speicherung großer Dateien, vorwiegend anfügende Dateioperationen und die Berücksichtigung von Anwendungsszenarien im Design. Der Artikel erläutert außerdem ausführlich die Designannahmen von GFS, darunter: Teilausfälle sind normal, große Dateien sind normal, die Lese-Arbeitslast teilt sich in viele sequenzielle Lesezugriffe und wenige zufällige Lesezugriffe, die Schreib-Arbeitslast besteht hauptsächlich aus vielen sequenziellen Schreibvorgängen, und es gibt Optimierungen für das parallele Schreiben mehrerer Clients in dieselbe Datei. Diese Merkmale und Annahmen bilden gemeinsam die Grundlage für die effiziente, zuverlässige und für die Massendatenverarbeitung geeignete Architektur von GFS."
+"title": "GFS-Papiernotizen"
+"summary": "Dieser Artikel fasst das Kerndesign des verteilten Dateisystems GFS zusammen. GFS ist für Clusterumgebungen konzipiert, die aus kostengünstiger Hardware bestehen und in denen Teilausfälle der Normalfall sind. Es speichert und verwaltet hauptsächlich große Dateien und optimiert Dateioperationen, die überwiegend auf Anhängen basieren. Das Design berücksichtigt spezifische Anwendungsszenarien, unterstützt umfangreiche Streaming-Lesevorgänge und wenige zufällige Lesevorgänge und ist für das parallele Schreiben mehrerer Clients in dieselbe Datei optimiert. Der Artikel gibt außerdem einen Überblick über die Designannahmen von GFS, einschließlich der Modellierung von Maschinenausfällen, der Optimierung der Verwaltung großer Dateien und der Merkmale der Lese- und Schreibworkloads."
 "tags":
   - "GFS"
   - "Verteiltes System"
   - "Dateisystem"
-  - "Paper-Notizen"
+  - "Papiernotizen"
   - "Technik"
-  - "Big Data"
-  - "Speicher"
-  - "Google"
-"date": "29.10.2020"
+"date": "29-10-2020"
 ---
 
 GFS ist ein verteiltes Dateisystem mit den folgenden vier Merkmalen:
 
-1.  **Modellierung von Maschinenausfällen** – GFS läuft auf einem Cluster aus vielen kostengünstigen Hardwarekomponenten, daher kommt es im Cluster aus verschiedenen Gründen zu Teilausfällen.
-2.  **Es speichert große Dateien** – (nach Maßstäben von 2003) sind Dateien im Bereich von mehreren GB die Norm, daher müssen E/A-Operationen und Blockgrößen speziell berücksichtigt werden.
-3.  **Dateioperationen erfolgen hauptsächlich durch Anfügen** – Dies ist das Hauptoptimierungsziel.
-4.  **Das Design des Dateisystems berücksichtigt Anwendungsszenarien** – Die Flexibilität wird erheblich erhöht, was ein Vorteil eines geschlossenen Systems ist.
+1.  **Modellierung von Maschinenausfällen** – GFS läuft auf einem Cluster, der aus vielen kostengünstigen Hardwarekomponenten besteht. Daher kommt es in diesem Cluster aus verschiedenen Gründen zu Teilausfällen.
+2.  **Die gespeicherten Dateien sind groß** – (Nach den Maßstäben von 2003) sind große Dateien von mehreren GB die Norm. Daher müssen E/A-Operationen und Blockgrößen speziell berücksichtigt werden.
+3.  **Dateioperationen basieren hauptsächlich auf Anhängen** – Dies ist das Hauptoptimierungsziel.
+4.  **Das Design des Dateisystems berücksichtigt die Anwendungsszenarien** – Die Flexibilität wird erheblich verbessert, das ist ein Vorteil eines geschlossenen Systems.
 
-## Design-Überblick
+## Designübersicht
 
 ### Annahmen
 
-*   Teilausfälle sind normal – Überwachung, Prüfung, Fehlertoleranz und Selbstheilung sind erforderlich.
-*   Große Dateien sind normal – Die Optimierung konzentriert sich auf die Verwaltung großer Dateien.
-*   Read Workloads bestehen hauptsächlich aus zwei Arten:
-    *   Viele sequenzielle Lesezugriffe – jeweils etwa 1 MB, kontinuierliches Lesen.
-    *   Wenige zufällige Lesezugriffe – jeweils einige KB, allerdings tolerieren Anwendungen echte Zufallszugriffe nicht wirklich.
-*   Write Workloads bestehen hauptsächlich aus vielen sequenziellen Schreibvorgängen, ähnlich wie Leseoperationen, Änderungen sind selten, daher wird hierfür nicht optimiert.
-*   Optimierung für das parallele Schreiben mehrerer Clients in dieselbe Datei – erreicht durch gut definierte atomare Operationen.
+-   Teilausfälle sind der Normalfall – Überwachung, Prüfung, Fehlertoleranz und Selbstheilung sind erforderlich.
+-   Große Dateien sind der Normalfall – Die Optimierung konzentriert sich auf die Verwaltung großer Dateien.
+-   Lese-Workloads sind hauptsächlich von zwei Arten:
+    -   Umfangreiche Streaming-Lesevorgänge – jeweils etwa 1 MB, kontinuierliches Lesen.
+    -   Wenige zufällige Lesevorgänge – jeweils einige KB, jedoch tolerieren Anwendungen echte Zufallszugriffe nicht wirklich.
+-   Schreib-Workloads bestehen hauptsächlich aus umfangreichen sequenziellen Schreibvorgängen, ähnlich wie Lesevorgänge, seltene Änderungen werden daher nicht optimiert.
+-   Optimiert für das parallele Schreiben mehrerer Clients in dieselbe Datei – erreicht durch solide atomare Operationen.

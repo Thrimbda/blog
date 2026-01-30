@@ -1,38 +1,37 @@
 ---
-"title": "Im Schlaf träumen"
-"summary": "Aus Bryans Perspektive beschreibt dieser Text, wie Traurigkeit als verzögerte Emotion sein Leben erneut überfällt. Die Traurigkeit wird als warme Flüssigkeit beschrieben, die in der Brust schwappt und das Herz zerfrisst, während Erinnerungen wie eine Fernwirkung diesen 'Abgrund-Brei' steuern. Als Bryan die Tür zum Keller voller verlassener Erinnerungen öffnet, wird er von 'Geistern' aus vermischter Freude und Groll niedergeschlagen, sodass er sich in der Zeit verliert und Vergangenheit von Gegenwart nicht mehr unterscheiden kann. Der Text zitiert Keats' 'Ode on Melancholy', um das Thema der Verflechtung von Traurigkeit, Schönheit und Freude zu vertiefen. Schließlich erkennt Bryan die Grenzen seines Wesens als eindimensionales Zeitgeschöpf, wird aber dennoch unfreiwillig zum Opfer einer spiralförmigen Tragödie – was die trostlose Menschlichkeit zwischen Göttlichkeit und Animalität offenbart."
+"title": "Im Schlaf zu träumen"
+"summary": "Dieser Text schildert aus Bryans Perspektive die verzögerte Erfahrung von Traurigkeit. Die Traurigkeit wird als warme Flüssigkeit beschrieben, die in der Brust schwappt und das Herz zerfrisst, wie ein auf kleiner Flamme köchelnder Schmerz. Die Erinnerung wirkt als Fernwirkung und kontrolliert diesen Kessel voller Abgrundsuppe. Wenn sich die Tür zum Keller voller verworfenen Erinnerungen öffnet, strömen die gebrauten Gespenster mit ihrem Duft aus Freude und Groll hervor und lassen Bryan in der Zeit verloren gehen, unfähig, Vergangenheit und Gegenwart zu unterscheiden. Der Text zitiert Keats' 'Ode on Melancholy', um das Thema der Verflechtung von Traurigkeit, Schönheit und Freude weiter zu vertiefen. Schließlich erkennt Bryan die tragische Lage der Menschheit, eingeklemmt zwischen Gott und Bestie, und wird dennoch widerstandslos zum Opferlamm dieser spiralförmigen Tragödie."
 "tags":
-  - "Forschung an außergewöhnlichen Menschen"
+  - "Anormale Humanforschung"
   - "Essay"
   - "Traurigkeit"
   - "Erinnerung"
   - "Zeit"
   - "Menschlichkeit"
   - "Melancholie"
-  - "Literatur"
 "date": "2018-08-14"
 ---
 
 ---
-title: Im Schlaf träumen
+title: Im Schlaf zu träumen
 date: 2018-08-14
 taxonomies:
   tags:
-    - Forschung an außergewöhnlichen Menschen
+    - Anormale Humanforschung
     - Essay
 ---
 
-Bryan hatte nicht erwartet, dass auch **Traurigkeit** eine Verzögerung haben könnte – die Geister der Vergangenheit kamen zurück, und dieses Mal hatte er keine Kraft mehr, sich zu wehren.
+Bryan hatte nicht gedacht, dass **Traurigkeit** auch eine Verzögerung haben könnte – die Geister der Vergangenheit kamen wieder, und dieses Mal hatte er keine Kraft mehr, sich zu wehren.
 
 <!--more-->
 
-Wenn er die Form der **Traurigkeit** beschreiben müsste, würde er sagen: wie eine Flüssigkeit, die in der Brust steht, beim Gehen schwappt und dabei ein wenig überschwappt, um sein Herz zu zerfressen. Im Liegen fließt sie ruhig, nur vom Herzschlag leicht erschüttert.
+Wenn er die Form der **Traurigkeit** beschreiben müsste, würde er sagen, sie sei wie eine Flüssigkeit, die in seiner Brust steht, beim Gehen schwappt und ein wenig überschwappt, um sein Herz zu zerfressen. Im Liegen fließt sie ruhig, nur vom Herzschlag durchzittert.
 
-Was die Temperatur betrifft, ist sie keinesfalls kalt, sondern lauwarm, etwas wärmer als die Brusthöhle, und gibt stetig Wärme ab, die das Herz langsam brät. Es fühlt sich an wie... ein Schmoren bei schwacher Hitze, zusammen mit dem Schmerz gekocht, aber es will einfach nicht gar werden, und die aktiven Nerven erinnern ihn unablässig an den Geschmack des **Leids**.
+Was die Temperatur betrifft, ist sie keinesfalls kalt, sondern lauwarm, etwas wärmer als die Brusthöhle, und gibt stetig Wärme ab, die das Herz umschmeichelt. Es fühlt sich an wie... ein langsames Köcheln auf kleiner Flamme, zusammen mit dem Schmerz gesiedet, doch es wird nie gar, die aktiven Nerven erinnern ihn ständig an den Geschmack des **Leids**.
 
-Es gibt nur eine Fernwirkung auf dieser Welt – die **Erinnerungen**, die diesen Topf mit Abgrund-Suppe von hinten in seinem Kopf steuern. Nachdem sie mehr als ein Jahr lang zusammen mit einem schicksalhaften Regen, der auf treibende Wasserlinsen fällt, gärten und reiften, strömten – in dem Moment, als er die Tür zu diesem Keller voller verlassener Erinnerungen öffnete – die fertig gebrauten Geister mit ihrem warmen, süßen Duft aus Freude und Groll hervor und trafen ihn wie ein schwerer Hammerschlag. Seine Reaktion darauf war, in meinen Augen, beschämend, oder deutlicher gesagt, so beschämend, dass man im Boden versinken möchte. Ich habe ihn noch nie so erlebt. Aufrichtig selbstbewusst und doch jung und offen, jetzt aber in der Zeit verloren, er kann nicht unterscheiden, was jetzt geschieht, was vor zwei Jahren geschah, und was er für gestern hielt, das aber bereits ein Jahr zurückliegt. Diese **Erinnerungen**, von denen er im vergangenen Jahr dachte, er hätte sie längst verloren, verbreiten sich nun in einer so deutlich sichtbaren Form unter allen anderen geordneten Erinnerungen und infizieren sie wie ein Krebs. Selbst die früheren, reinen Erinnerungen haben nun scharfe Kanten entwickelt und wandern durch seinen Geist.
+Es gibt nur eine Fernwirkung auf dieser Welt – die **Erinnerungen**, die diesen Kessel voller Abgrundsuppe von hinten in seinem Kopf steuern. Nachdem sie mehr als ein Jahr lang zusammen mit dem schicksalhaften Regen auf treibende Wasserlinsen gärt und fermentiert hatten, in der jüngeren Vergangenheit, als er die Tür zu diesem Keller voller verworfenen Erinnerungen öffnete, strömten die gebrauten Gespenster mit ihrem warmen, süßen Duft aus Freude und Groll auf einmal hervor und trafen ihn wie ein schwerer Hammerschlag – diese Reaktion war, wie ich finde, wahrlich beschämend, oder um es klarer zu sagen, so beschämend, dass man im Boden versinken möchte, ich habe ihn noch nie so gesehen. Aufrichtig, selbstbewusst und doch jung und offen, jetzt aber verloren in der Zeit, er kann nicht unterscheiden, was jetzt geschieht, was vor zwei Jahren geschah, was er für gestern hielt, aber eigentlich schon ein Jahr her ist. Diese **Erinnerungen**, von denen er im vergangenen Jahr dachte, er hätte sie längst verloren, verbreiten sich schließlich in so klarer, sichtbarer Form unter allen anderen geordneten Erinnerungen und infizieren sie wie ein Krebs. Die früheren, reinen Erinnerungen haben nun auch scharfe Kanten bekommen und wandern durch seinen Kopf.
 
-Leider ist der arme Bryan nur ein bedauernswertes, eindimensionales Zeitwesen, das nicht weiß, dass sein Gehirn in manchen Momenten nur als Übermittlungsmedium dient, das alte Informationen an die unzähligen späteren Iterationen seiner selbst weitergibt, während es gleichzeitig dumme Dinge tut, getragen von einem leisen, traurigen Selbstvertrauen. In diesem Moment wird ihm endlich die **trostlose** Menschlichkeit bewusst, eingeklemmt zwischen Gott und Tier, und doch kann er nicht anders, als dieser spiralförmigen Tragödie zum Opfer zu fallen.
+Leider ist der arme Bryan nur ein trauriges, eindimensionales Zeitwesen, das nicht weiß, dass sein Gehirn in manchen Momenten nur als Übertragungsmedium dient, um weit zurückliegende Informationen an die unzähligen Iterationen seiner selbst weiterzugeben, während es gleichzeitig dumme Dinge mit einem Hauch von Traurigkeit und Selbstvertrauen tut. In diesem Moment wird ihm endlich bewusst, die **tragische Lage** der Menschheit, eingeklemmt zwischen Gott und Bestie, und dennoch kann er sich nicht kontrollieren, muss er zum Opferlamm dieser spiralförmigen Tragödie werden.
 
 ```
 Ode on Melancholy
@@ -74,4 +73,4 @@ His soul shalt taste the sadness of her might,
                And be among her cloudy trophies hung.
 ```
 
-In diesem Moment ist er voller trostloser Angst, der arme Bryan.
+In diesem Moment ist er voller Kummer und Verzweiflung, der arme Bryan.

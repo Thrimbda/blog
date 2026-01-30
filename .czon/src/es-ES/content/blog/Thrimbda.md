@@ -1,25 +1,25 @@
 ---
 "title": "Thrimbda"
-"summary": "Tras casi un mes de reflexión, el autor decidió adoptar el nuevo ID 'Thrimbda', cuyo significado es 'alive and thrive', y explicó la composición y simbolismo de este ID. El artículo profundiza en los dos niveles del conocimiento mundial: el Tao (principio) y la Técnica (método), donde el Tao representa la visión general, el marco y la confianza, mientras que la Técnica se refiere a los detalles, la implementación y los trucos ingeniosos. El autor reflexiona sobre cómo, al no ver claramente el Tao, ha invertido mucho esfuerzo en la Técnica, sintiendo que ha sido en vano."
+"summary": "Este artículo presenta primero el nuevo ID del autor, Thrimbda, cuyo significado es 'alive and thrive' (vivir y prosperar), y explica su etimología y simbolismo. Luego, el texto se centra en la discusión sobre el Tao (principio) y la técnica, dividiendo el conocimiento en dos niveles: el Tao (visión general, marco) y la técnica (detalles, implementación), reflexionando sobre cómo el autor se ha enfocado demasiado en la técnica descuidando el Tao, lo que ha llevado a esfuerzos infructuosos. El núcleo del artículo radica en usar el cambio de ID personal para introducir una reflexión filosófica sobre los niveles de la vida o el conocimiento, enfatizando la importancia del Tao."
 "tags":
-  - "Resumen"
+  - "Thrimbda"
   - "Tao"
   - "Técnica"
+  - "Resumen"
   - "Filosofía"
-  - "Reflexión"
-  - "ID"
-"date": "05-05-2017"
+  - "Reflexión personal"
+"date": "2017-05-05"
 ---
 
 ---
 title: Thrimbda
-date: 05-05-2017
+date: 2017-05-05
 taxonomies:
   tags:
     - Resumen
 ---
 
-Después de idearlo y considerarlo durante casi un mes, decidí adoptar un nuevo ID: **Thrimbda**.
+He ideado y considerado durante casi un mes, y he decidido usar un nuevo ID: **Thrimbda**.
 
 ¿Qué significa?
 
@@ -35,26 +35,20 @@ Así que
 
 No me conformaba con que este artículo fuera tan corto, así que voy a divagar un poco más.
 
-## Sobre el Tao y la Técnica
+## Sobre el Tao y la técnica
 
-Resumiendo, el conocimiento en este mundo se divide en dos niveles: **el Tao** (principio) y **la Técnica** (método).
+Resumiendo, el conocimiento en este mundo se puede dividir en dos niveles: el **Tao** y la **técnica**.
 
 El Tao es la visión general;
-
 es el marco;
+es tener un plan claro en la mente.
 
-es tener un plan claro en mente.
-
-La Técnica, en cambio, son los detalles;
-
+La técnica son los detalles;
 es la implementación;
-
-son los trucos ingeniosos;
+son trucos ingeniosos;
 
 Yo, como persona,
-
-no logro ver con claridad mi propio Tao,
-
-pero he invertido mucho esfuerzo en la Técnica.
+no logro ver claramente mi propio Tao,
+pero he invertido mucho esfuerzo en la técnica.
 
 ¡Cuánto esfuerzo en vano!

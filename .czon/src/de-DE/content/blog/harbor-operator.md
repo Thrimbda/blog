@@ -1,15 +1,14 @@
 ---
-"title": "Quellcode-Lektüre: Harbor-Operator"
-"summary": "Dieser Artikel ist eine technische Analyse des Quellcodes des Harbor-Operators. Der Autor beginnt mit den Designprinzipien (wie 'Worse is Better') und stellt die Eigenschaften des Harbor-Operators vor, der in Golang für die Kubernetes-Plattform implementiert ist. Der Artikel analysiert schwerpunktmäßig die Kernarchitektur, einschließlich der Lösung von Abhängigkeiten zwischen Ressourcen durch einen Dependency Graph und der Implementierung der Reconcile-Logik für elf verschiedene CRDs durch einen einheitlichen Controller, was die Code-Wiederverwendung erheblich steigert. Der Artikel erläutert auch detailliert das Design wichtiger Komponenten wie ResourceManager und ProcessFunc und zeigt die hervorragenden Praktiken des Harbor-Operators im Streben nach Einfachheit, Konsistenz und Wartbarkeit."
+"title": "Quellcode-Lektüre: Analyse des Designs und der Implementierung von Harbor-Operator"
+"summary": "Dieser Artikel analysiert detailliert das Design des Harbor-Operator-Quellcodes, mit Schwerpunkt darauf, wie er Abhängigkeiten zwischen Ressourcen mithilfe eines Abhängigkeitsgraphen (Dependency Graph) löst, Code-Wiederverwendung für mehrere CRDs durch einen einheitlichen Controller erreicht und Konfiguration durch ResourceManager als Code umsetzt. Der Artikel stellt fest, dass Harbor-Operator auf der Kubernetes-Plattform, in der Programmiersprache Golang, das Prinzip 'Worse is Better' praktiziert, um ein einfaches Design zu erreichen, wobei Flexibilität für Konsistenz und Wartbarkeit geopfert wird. Durch die Analyse von Schlüsselmodulen wie HarborCluster, Dependency Graph, Controller und ResourceManager offenbart der Autor die herausragende Designphilosophie und Implementierungsdetails des Projekts."
 "tags":
-  - "Operator"
+  - "Harbor-Operator"
   - "Kubernetes"
-  - "Golang"
   - "Quellcode-Analyse"
-  - "Harbor"
-  - "Entwurfsmuster"
+  - "Design-Muster"
   - "Abhängigkeitsgraph"
   - "Controller"
+  - "Golang"
 "date": "2022-01-30"
 ---
 
@@ -31,7 +30,7 @@ Was ist gute Software?
 
 In einem berühmten Artikel aus den späten 80er Jahren, *The Rise of Worse is Better*, erwähnt der Autor, dass gutes Softwaredesign die vier Eigenschaften *Einfachheit*, *Korrektheit*, *Konsistenz* und *Vollständigkeit* berücksichtigen sollte.
 
-Der Autor erwähnt zwei Designphilosophien, die vorläufig *the right thing* und *worse is better* genannt werden (es sei darauf hingewiesen, dass diese Benennung nicht abwertend gemeint ist); beide Philosophien drehen sich um die genannten Eigenschaften, unterscheiden sich jedoch in der Priorisierung dieser Eigenschaften.
+Der Autor beschreibt zwei Designphilosophien, die wir vorläufig *the right thing* und *worse is better* nennen (wobei anzumerken ist, dass letzterer Name nicht abwertend gemeint ist); beide Philosophien drehen sich um die genannten Eigenschaften, unterscheiden sich jedoch in der Priorisierung.
 
 ---
 
@@ -39,7 +38,7 @@ Der Autor erwähnt zwei Designphilosophien, die vorläufig *the right thing* und
 
 ##### The right thing
 
--   **Einfachheit** - Das Design muss einfach und leicht verständlich sein. Einfache Schnittstellen sind wichtiger als eine einfache Implementierung.
+-   **Einfachheit** - Das Design muss einfach und verständlich sein. Einfache Schnittstellen sind wichtiger als eine einfache Implementierung.
 -   **Korrektheit** - Das Design muss korrekt sein. Hier darf es keine Kompromisse geben.
 -   **Konsistenz** - Konsistenz ist genauso wichtig wie Korrektheit. Daher können Einfachheit und Vollständigkeit etwas zurückstehen.
 -   **Vollständigkeit** - Das Design muss eine Vielzahl möglicher Szenarien berücksichtigen. Vollständigkeit darf nicht übermäßig zugunsten der Einfachheit geopfert werden.
@@ -48,16 +47,16 @@ Der Autor erwähnt zwei Designphilosophien, die vorläufig *the right thing* und
 
 ##### Worse is better
 
--   **Einfachheit** - Das Design muss einfach und leicht verständlich sein. Eine einfache Implementierung ist wichtiger als einfache Schnittstellen. Einfachheit ist die wichtigste Eigenschaft.
--   **Korrektheit** - Das Design muss korrekt sein, allerdings ist Einfachheit ein wenig wichtiger als Korrektheit.
--   **Konsistenz** - Das Design darf nicht zu inkonsistent sein. Konsistenz kann zugunsten der Einfachheit geopfert werden. Um die Einfachheit zu wahren, kann Konsistenz auch für die Vollständigkeit geopfert werden.
+-   **Einfachheit** - Das Design muss einfach und verständlich sein. Eine einfache Implementierung ist wichtiger als einfache Schnittstellen. Einfachheit ist die wichtigste Eigenschaft.
+-   **Korrektheit** - Das Design muss korrekt sein, aber Einfachheit ist noch ein wenig wichtiger als Korrektheit.
+-   **Konsistenz** - Das Design sollte nicht zu inkonsistent sein. Konsistenz kann zugunsten der Einfachheit geopfert werden. Wenn die Einfachheit gewahrt bleibt, kann Konsistenz auch für Vollständigkeit geopfert werden.
 -   **Vollständigkeit** - Das Design muss eine Vielzahl möglicher Szenarien berücksichtigen. Vollständigkeit kann jederzeit geopfert werden, um die Einfachheit des Designs zu gewährleisten.
 
 ---
 
 Anschließend führt der Autor viele Beispiele für beide Philosophien an, um zu argumentieren, warum *worse-is-better* damals die Softwarebranche eroberte.
 
-Diese beiden Philosophien sind nicht besser oder schlechter. Auch heute finden wir sie in unserer Umgebung, und die Realität bewegt sich oft zwischen ihnen. Wir möchten ein exzellentes, ästhetisch wertvolles Design schaffen, müssen aber auch Kosten und menschliche Faktoren berücksichtigen. Letztendlich müssen wir qualitativ angemessene, funktionierende Software liefern, um reale Probleme zu lösen, und die Kosten für die Entwicklung und Wartung der Software dürfen den Wert des Problems selbst auf keinen Fall übersteigen.
+Diese beiden Philosophien sind nicht besser oder schlechter. Auch heute finden wir sie in unserer Umgebung, und die Realität bewegt sich oft zwischen ihnen. Wir möchten ein exzellentes, ästhetisch wertvolles Design schaffen, müssen aber auch Kosten und menschliche Faktoren berücksichtigen. Letztendlich müssen wir funktionierende Software von ausreichender Qualität liefern, um reale Probleme zu lösen, wobei die Kosten für Entwicklung und Wartung der Software auf keinen Fall den Wert des Problems selbst übersteigen dürfen.
 
 <a id="org514ce0b"></a>
 
@@ -66,49 +65,49 @@ Diese beiden Philosophien sind nicht besser oder schlechter. Auch heute finden w
 Golang ist fast ein Paradebeispiel für die *worse is better*-Philosophie:
 
 -   Es bündelt die jahrelange praktische Erfahrung von Google mit C++.
--   Es ist so einfach, ohne komplexe Funktionen, dass es für die Lösung eines Problems im Grunde nur einen *Building Block* gibt. Das bedeutet:
-    -   Man kann es fast ohne Aufwand für die Sprache selbst leicht beherrschen.
+-   Es ist so einfach, ohne komplexe Features. Daher gibt es im Grunde nur eine Art von Baustein, um ein Problem zu lösen, was bedeutet:
+    -   Man muss sich kaum mit der Sprache selbst beschäftigen, um sie zu beherrschen.
     -   Der Code ist sehr gut lesbar.
--   Es kompiliert schnell und hat sogar Generics für die Kompiliergeschwindigkeit geopfert.
--   Parallele Aufgaben lassen sich sehr einfach über Goroutinen ausführen.
--   Es hat die Sprachfunktion der Ausnahmestapel fast vollständig aufgegeben und erzwingt die Fehlerprüfung und -behandlung.
+-   Schnelle Kompilierung, sogar auf Kosten von Generics (zur damaligen Zeit).
+-   Parallele Aufgaben können sehr einfach über Goroutinen ausgeführt werden.
+-   Das Sprachfeature der Ausnahmebehandlung (Exceptions) wurde fast vollständig aufgegeben, was eine explizite Fehlerprüfung und -behandlung erzwingt.
 -   Einmal kompiliert, überall ausführbar.
 
 <a id="org2432232"></a>
 
 #### Kubernetes - die Plattform
 
-Kubernetes ist allen bekannt, daher werde ich nicht den Besserwisser spielen und es in einem Satz zusammenfassen: Es bietet ein konzeptionell sehr einfaches API-Design, ergänzt durch einen Reconcile-Mechanismus aus der Kybernetik, der es containerisierter Software ermöglicht, sich darin automatisiert bereitzustellen, zu skalieren und zu betreiben.
+Kubernetes ist allen bekannt, daher werde ich nicht den Besserwisser spielen und es in einem Satz zusammenfassen: Es bietet ein konzeptionell sehr einfaches API-Design, ergänzt durch einen Regelmechanismus aus der Kybernetik, der die automatisierte Bereitstellung, Skalierung und den Betrieb containerisierter Software ermöglicht.
 
-K8s erlaubt Entwicklern durch die Offenlegung dieser API-Spezifikation und des Reconcile-Mechanismus, seine Fähigkeiten zu erweitern. Entwickler können das Operator-Pattern implementieren: Das Wissen über die Konfiguration, Bereitstellung (Day-1) und den Betrieb, die Sicherung, die Fehlerbehebung (Day-2) einer Software wird in Software geschrieben, die die Software bedient, um diese komplexen und fehleranfälligen Operationen zu automatisieren, die Zuverlässigkeit zu erhöhen und die Kosten zu senken.
+K8s erlaubt Entwicklern durch die Offenlegung dieser API-Spezifikation und des Regelmechanismus, seine Fähigkeiten zu erweitern. Entwickler können so das *Operator Pattern* implementieren: Das Wissen über Softwarekonfiguration, Bereitstellung (Day-1) sowie Betrieb, Backup, Failover (Day-2) wird in Software geschrieben, die die Software bedient. Diese komplexen und fehleranfälligen Operationen werden automatisiert, was die Zuverlässigkeit erhöht und die Kosten senkt.
 
 ---
 
-Der Grund für die Wahl des Harbor-Operators ist also sein hervorragendes Design. Auf einer exzellenten Plattform und mit einfachen Sprachfunktionen, ohne übermäßige Tricks, realisiert er durch einige Schlüsseldesigns, die den SOLID-Designprinzipien entsprechen, ein pragmatisches und ästhetisch wertvolles Softwaresystem, das als Praktiker der *the right thing*-Philosophie angesehen werden kann.
+Der Grund für die Wahl von Harbor Operator ist also sein exzellentes Design. Auf einer hervorragenden Plattform und mit einfachen Sprachfeatures, ohne übermäßige Tricks, realisiert es durch einige wenige, entscheidende, den SOLID-Designprinzipien entsprechende Entwürfe ein pragmatisches und ästhetisch wertvolles Softwaresystem. Es kann als Praktizierender der *the right thing*-Philosophie betrachtet werden.
 
-Der Code des Autors hat fast keine Kommentare, ist aber außergewöhnlich gut lesbar, was auch dem gesamten System zu verdanken ist.
+Der Code des Autors hat fast keine Kommentare, ist aber außergewöhnlich gut lesbar, was auch dem gesamten Systemdesign zu verdanken ist.
 
 <a id="org6815286"></a>
 
 ## Ziel
 
-Die Abstraktion und Vereinfachung von Problemen geht zwangsläufig mit dem Verlust von Flexibilität einher, während der Harbor-Operator die Flexibilität vollständig opfert, um maximale kognitive Entlastung zu bringen, sodass die Entwicklung des Operators eher der Deklaration einer Softwarekonfiguration gleicht.
+Die Abstraktion und Vereinfachung von Problemen geht zwangsläufig mit dem Verlust von Flexibilität einher. Harbor Operator verzichtet vollständig auf Flexibilität, um maximale kognitive Entlastung zu bringen, sodass die Entwicklung eines Operators eher der Deklaration einer Softwarekonfiguration gleicht.
 
-Das manuelle Schreiben eines Operators mit client-go ist dank des Fehlens von Generics in Golang eine Qual. Das gesamte Projekt wäre mit einer riesigen Menge an Boilerplate-Code (Template-Code) gefüllt. Ich glaube, selbst wenn jemand wirklich von Grund auf mit client-go schreiben würde, würde niemand wirklich bei Null anfangen.
+Das manuelle Schreiben eines Operators mit client-go ist dank des Fehlens von Generics in Golang eine Qual. Das Projekt wäre mit einer riesigen Menge an Boilerplate-Code (Template-Code) übersät. Ich glaube, selbst wenn jemand wirklich mit client-go von Hand schreiben würde, würde niemand wirklich bei Null anfangen.
 
-So entstand kubebuilder. Es abstrahiert die Erstellung des Kubernetes-Clients, das Abhören von Anfragen des Kubernetes-API-Servers und das Einreihen von Anfragen in Warteschlangen in öffentliche Bibliotheken wie controller-runtime und öffentliche Tools wie controller-tools und kann für Entwickler Gerüstcode generieren, der sich auf die Entwicklung der Geschäftslogik zur Verarbeitung von Änderungsanfragen für API-Objekte konzentriert.
+Daher entstand kubebuilder. Es abstrahiert die Erstellung des Kubernetes-Clients, das Abhören von Anfragen des Kubernetes API-Servers und deren Einreihung in Warteschlangen in eine gemeinsame Bibliothek (controller runtime) und gemeinsame Tools (controller tools). Es kann für Entwickler Gerüstcode generieren, sodass sie sich auf die Geschäftslogik zur Verarbeitung von Änderungsanfragen an API-Objekte konzentrieren können.
 
-Kubebuilder bewahrt immer noch einen Hauch von Flexibilität für die Vielfalt der Geschäftslogik, während der Harbor-Operator darauf aufbauend weiter nach Perfektion strebt und die Flexibilität vollständig opfert, um konzeptionelle Konsistenz und Einfachheit zu erreichen – und die Geschäftsanforderungen, denen er gegenübersteht, eignen sich tatsächlich sehr gut für diesen Ansatz.
+Kubebuilder bewahrt noch einen Hauch von Freiheit für die Vielfalt der Geschäftslogik. Harbor Operator strebt darauf aufbauend weiter nach Perfektion, opfert Flexibilität vollständig, um konzeptionelle Konsistenz und Einfachheit zu erreichen – und die Geschäftsanforderungen, denen es gegenübersteht, eignen sich tatsächlich sehr gut für diesen Ansatz.
 
-Daher ist unser Hauptziel in dieser Quellcode-Lektüre, vom Harbor-Operator zu lernen:
+Daher ist unser Hauptziel in dieser Quellcode-Lektüre, von Harbor Operator zu lernen:
 
--   Wie Day-1-Operationen durchgeführt werden.
--   Wie der Redundanzgrad des Operator-Codes weiter reduziert wird, indem derselbe Controller-Code verwendet wird, um den Controller für elf CRDs auf verschiedenen Ebenen zu implementieren.
--   Wie DAG genutzt wird, um Abhängigkeiten zwischen Ressourcen zu lösen – der Autor scheint dafür sogar ein Patent angemeldet zu haben.
+-   Wie es Day-1-Operationen durchführt.
+-   Wie es die Redundanz im Operator-Code weiter reduziert und denselben Controller-Code verwendet, um Controller für elf CRDs auf verschiedenen Ebenen zu implementieren.
+-   Wie es DAGs nutzt, um Abhängigkeiten zwischen Ressourcen zu lösen (der Autor scheint dafür sogar ein Patent angemeldet zu haben).
 
 Darüber hinaus werden wir uns nicht schwerpunktmäßig mit Folgendem befassen:
 
--   Den Day-2-Operationen im Harbor-Operator; tatsächlich ist dieser Teil der Funktionalität in der aktuellen Version noch nicht stabil.
+-   Day-2-Operationen in Harbor Operator (in der aktuellen Version ist dieser Teil noch nicht stabil).
 -   Dem Quellcode und den Funktionen von Harbor selbst.
 
 <a id="org345a335"></a>
@@ -205,34 +204,34 @@ Hier sind nur die Verzeichnisse aufgelistet.
 
 #### Systemarchitektur
 
-Bis Version v1.0.1 ist der Harbor-Operator hauptsächlich für die Day-1-Operationen des Harbor-Systems verantwortlich.
+Bis Version v1.0.1 ist Harbor Operator hauptsächlich für die Day-1-Operationen des Harbor-Systems verantwortlich.
 ![img](https://0xc1.space/images/2022/01/30/harbor-operator-arch.png)
 
 <a id="org41c8944"></a>
 
 ### Das Wesentliche im Blick: HarborCluster
 
-Lassen Sie uns zunächst einige weniger kritische Teile ausblenden: die HarborCluster-CRD und die Implementierung ihres Controllers.
+Lassen Sie uns zunächst einige weniger kritische Teile ausblenden: Die CRD `HarborCluster` und die Implementierung ihres Controllers.
 
-Warum ist sie besonders? Betrachten Sie zunächst ihre Position in der Systemarchitektur: Sie befindet sich auf der obersten Ebene und verwaltet das Harbor-System selbst sowie alle davon abhängigen Stateful Services. Dies muss aus der Projektgeschichte und ihrer besonderen Stellung in der Systemarchitektur erklärt werden.
+Warum ist sie besonders? Betrachten Sie zunächst ihre Position in der Systemarchitektur: Sie befindet sich auf der obersten Ebene und verwaltet das Harbor-System selbst sowie alle davon abhängigen zustandsbehafteten Dienste. Dies muss aus der Projektgeschichte und ihrer besonderen Stellung in der Systemarchitektur erklärt werden.
 
-Aus systemarchitektonischer Sicht ähnelt diese HarborCluster-CRD in ihrer Definition der Harbor-CRD stark, und der Code weist eine erhebliche Redundanz auf, was nicht sehr schön aussieht. Dies liegt daran, dass sie als die oberste (äußerste) CRD im gesamten System direkt dem Benutzer gegenübersteht; sie muss dem Benutzer alle notwendigen Konfigurationsoptionen für die Bereitstellung von Harbor zur Verfügung stellen. Da Harbor selbst ein stateless Service ist, erfordert eine vollständige Bereitstellung außerdem, dass die HarborCluster-CRD alle von Harbor abhängigen Stateful Services verwaltet, einschließlich Postgres, Minio und Redis.
+Aus Sicht der Systemarchitektur weist die `HarborCluster`-CRD in ihrer Definition große Ähnlichkeit mit der `Harbor`-CRD auf, der Code enthält viel Redundanz und sieht nicht sehr elegant aus. Das liegt daran, dass sie als die oberste (äußerste) CRD im gesamten System direkt dem Benutzer gegenübersteht. Sie muss dem Benutzer alle notwendigen Konfigurationsoptionen für die Bereitstellung von Harbor zur Verfügung stellen. Da Harbor selbst ein zustandsloser Dienst ist, erfordert eine vollständige Bereitstellung außerdem, dass die `HarborCluster`-CRD alle abhängigen zustandsbehafteten Dienste verwaltet, einschließlich Postgres, Minio und Redis.
 
-Die notwendigen Informationen für das Harbor-System selbst sind bereits in der Harbor-CRD definiert, daher besteht der redundante Teil in der HarborCluster-CRD darin, diese Informationen vollständig und korrekt an die Harbor-CRD weiterzugeben. Darüber hinaus muss die HarborCluster-CRD auch die CRDs der Stateful Services verwalten, die außerhalb ihrer eigenen Zuständigkeitsgrenzen liegen, und kann daher die Controller-Logik in Harbor und allen Unterkomponenten von Harbor nicht vollständig nutzen.
+Die notwendigen Informationen für das Harbor-System selbst sind bereits in der `Harbor`-CRD definiert. Daher besteht der redundante Teil in der `HarborCluster`-CRD darin, diese Informationen vollständig und korrekt an die `Harbor`-CRD weiterzugeben. Darüber hinaus muss die `HarborCluster`-CRD die CRDs der zustandsbehafteten Dienste verwalten, die außerhalb ihrer eigenen Zuständigkeitsgrenzen liegen, und kann daher die Controller-Logik aus Harbor und allen seinen Unterkomponenten nicht vollständig wiederverwenden.
 
-Aus historischer Sicht war der Harbor-Operator ursprünglich ein privates Projekt von OVH Cloud und wurde später der goharbor-Community gespendet. Betrachtet man also den Git-History, liegt der Grund für die so große Inkonsistenz zwischen der CRD-Definition von HarborCluster und ihrer Controller-Implementierung im Vergleich zu anderen Controllern im System darin, dass sie ein späterer Community-Beitrag ist und die ursprüngliche Design des Harbor-Operators die von ihr übernommenen Funktionen nicht berücksichtigte.
+Aus historischer Sicht war Harbor Operator ursprünglich ein privates Projekt von OVH Cloud und wurde später der goharbor-Community gespendet. Betrachtet man den Git-History, wird der Grund für die große Inkonsistenz zwischen der CRD-Definition von `HarborCluster` und ihrer Controller-Implementierung im Vergleich zu anderen Controllern im System deutlich: Sie ist ein späterer Community-Beitrag, und bei der ursprünglichen Designphase von Harbor Operator wurden die von ihr zu erfüllenden Funktionen nicht berücksichtigt.
 
-Die HarborCluster-Controller-Implementierung selbst unterscheidet sich nicht wesentlich von den meisten anderen mit Controller-Runtime implementierten Controllern, die wir normalerweise sehen, und wird daher nicht detailliert untersucht.
+Die Implementierung des `HarborCluster`-Controllers selbst unterscheidet sich nicht wesentlich von den meisten mit Controller-Runtime implementierten Controllern, die wir normalerweise sehen, und wird daher nicht detailliert untersucht.
 
 ---
 
-HarborCluster-Controller
+HarborCluster Controller
 
 ![img](https://0xc1.space/images/2022/01/30/harbor-cluster-controller.png)
 
 ---
 
-Harbor Core-Controller
+Harbor Core Controller
 
 ![img](https://0xc1.space/images/2022/01/30/harbor-core-controller.png)
 
@@ -240,9 +239,9 @@ Harbor Core-Controller
 
 <a id="orgd9c3526"></a>
 
-### Lösung von Abhängigkeiten zwischen Ressourcen: Dependency Graph
+### Abhängigkeiten zwischen Ressourcen lösen: Dependency Graph
 
-Der Abhängigkeitsgraph ist ein relativ unabhängiges Modul im gesamten Projekt, aber es fungiert tatsächlich als Ausführungs-Engine für alle Controller im Harbor-Operator. Im Wesentlichen wird beobachtet, dass verschiedene Arten von Ressourcen in Kubernetes voneinander abhängen; die Bereitstellung und Abstimmung einiger Ressourcen hängt von der Bereitstellung und Abstimmung anderer Ressourcen ab, z. B. kann eine Deployment von einem ConfigMap abhängen; letztendlich bilden diese Abhängigkeiten einen Abhängigkeitsgraphen, der eigentlich ein DAG sein sollte. Hier benötigen wir die folgende Schnittstellendefinition:
+Der Abhängigkeitsgraph ist ein relativ unabhängiges Modul im gesamten Projekt, aber es fungiert tatsächlich als Ausführungs-Engine für alle Controller im Harbor Operator. Im Wesentlichen wird beobachtet, dass zwischen verschiedenen Ressourcentypen in Kubernetes gegenseitige Abhängigkeiten bestehen. Die Bereitstellung und Regelung einiger Ressourcen hängt von der Bereitstellung und Regelung anderer Ressourcen ab, z. B. kann ein Deployment von einem ConfigMap abhängen. Letztendlich bilden diese Abhängigkeiten einen Abhängigkeitsgraphen, der eigentlich ein DAG (Directed Acyclic Graph) sein sollte. Hier benötigen wir die folgende Schnittstellendefinition:
 
 ```go
     package graph
@@ -264,21 +263,21 @@ Der Abhängigkeitsgraph ist ein relativ unabhängiges Modul im gesamten Projekt,
     }
 ```
 
--   Dabei definiert `Resource` eine abstrakte Ressource. Da sich dieses Modul nicht dafür interessiert, was eine Ressource genau darstellt, und gleichzeitig die maximale Flexibilität unter den Einschränkungen der Ausdruckskraft der Sprache bewahrt werden soll, wird der Top-Typ `interface{}` verwendet.
--   `RunFunc` ist dafür verantwortlich, die konkrete Operation für eine `Resource` durchzuführen. Hier steht `RunFunc` vor einem Typsicherheitsproblem: `interface{}` bedeutet, dass der Compiler nichts über diesen Typ weiß und daher nichts damit anfangen kann. Aber `RunFunc` muss mit diesem Typ, der alles sein kann, etwas anfangen. Daher gehen wir davon aus, dass es einen Type-Cast durchführen muss. Wenn jedes `RunFunc` für jede Ressource manuell in einen konkreten Typ umgewandelt werden müsste, wäre das sehr langweilig und widerlich. Später werden wir uns ansehen, wie der Harbor-Operator die Drecksarbeit an einer Stelle konzentriert.
+-   `Resource` definiert eine abstrakte Ressource. Da sich dieses Modul nicht dafür interessiert, was eine Ressource genau darstellt, und gleichzeitig maximale Flexibilität innerhalb der Grenzen der Ausdruckskraft der Sprache bewahren möchte, wird der Top-Typ `interface{}` verwendet.
+-   `RunFunc` ist dafür verantwortlich, die konkrete Operation für eine `Resource` durchzuführen. Hier steht `RunFunc` vor einem Typsicherheitsproblem: `interface{}` bedeutet, dass der Compiler nichts über den Typ weiß und nichts damit anfangen kann. Aber `RunFunc` muss mit diesem Typ, der alles sein kann, etwas anfangen. Daher gehen wir davon aus, dass es einen Type-Cast durchführen muss. Wenn jedes `RunFunc` für jede Ressource manuell in einen konkreten Typ umgewandelt werden müsste, wäre das sehr langweilig und ekelhaft. Später werden wir sehen, wie Harbor Operator diese Drecksarbeit an einer zentralen Stelle erledigt.
 -   `Manager` hat nur zwei Methoden: Ressource hinzufügen und diesen Graphen ausführen. Beide müssen untersucht werden.
 -   Die Datenstruktur `resourceManager`, die `Manager` implementiert, ist ebenfalls einfach definiert:
-    -   Eine `resource -> blockers` Map
-    -   Eine `resource -> runFunc` Map
-    -   Ein `lock` zur Behandlung der Nebenläufigkeit von Map-Operationen. Hier können wir sehen, dass der Autor Datenstrukturen wie `Sync.Map`, die nebenläufigkeitssicher, aber typsicher sind, nicht mag. Das macht es noch neugieriger, wie der Autor mit so vielen (11 Komponenten) `RunFunc` umgeht.
+    -   Eine Map `resource -> blockers`
+    -   Eine Map `resource -> runFunc`
+    -   Ein `lock` zur Behandlung der Nebenläufigkeit von Map-Operationen. Hier können wir sehen, dass der Autor Datenstrukturen wie `Sync.Map`, die nebenläufigkeitssicher, aber nicht typsicher sind, nicht mag. Das macht noch neugieriger, wie der Autor die vielen (11 Komponenten) `RunFunc`s handhabt.
 
-Da es sich um einen Graphen handelt, muss es eine Datenstruktur für den Graphen und eine Factory-Methode zum Erstellen dieses Graphen geben. Die Datenstruktur von `resourceManager` wirkt etwas steif, und es ist unklar, ob es sich dabei um den eigentlichen Graphen handelt.
+Da es sich um einen Graphen handelt, muss es eine Datenstruktur für den Graphen und eine Factory-Methode zum Erstellen dieses Graphen geben. Die Datenstruktur von `resourceManager` wirkt etwas starr, es ist unklar, ob dies der eigentliche Graph ist.
 
 <a id="org75cbb07"></a>
 
 #### AddResource
 
-Anhand der Signatur ist zu erkennen, dass `AddResource` die hinzuzufügende Ressource selbst, alle ihre Abhängigkeiten und die entsprechende `runFunc` hinzufügt. Es ist wichtig zu beachten, dass zuerst Ressourcen hinzugefügt werden müssen, die von keiner anderen Ressource abhängen (d. h. mit Ausgangsgrad 0).
+Anhand der Signatur ist zu erkennen, dass `AddResource` die hinzuzufügende Ressource selbst, alle ihre Abhängigkeiten und die entsprechende `runFunc` hinzufügt. Wichtig ist, dass zuerst Ressourcen hinzugefügt werden müssen, die von keiner anderen Ressource abhängen (d. h. mit Ausgangsgrad 0).
 
 ```go
     func (rm *resourceManager) AddResource(ctx context.Context, resource Resource, blockers []Resource, run RunFunc) error {
@@ -345,7 +344,7 @@ Fast die gesamte wichtige Logik in diesem Paket befindet sich in der Methode `Ru
        ...
 ```
 
-Da ist es! `getGraph`. Es sieht so aus, als ob der Graph erstellt werden soll. Gehen wir hinein und stellen fest, dass `resourceManager` tatsächlich nur ein Builder ist. Der eigentliche Graph ist darin versteckt und wird als Adjazenzliste dargestellt. Auf den ersten Blick sieht es sogar komplex aus:
+Da ist es! `getGraph`. Es sieht so aus, als ob der Graph erstellt werden soll. Geht man hinein, stellt man fest, dass `resourceManager` tatsächlich nur ein Builder ist. Der eigentliche Graph ist hier versteckt, ausgedrückt als Adjazenzliste. Auf den ersten Blick sieht es sogar komplex aus:
 
 ```go
     type node struct {
@@ -365,7 +364,7 @@ Da ist es! `getGraph`. Es sieht so aus, als ob der Graph erstellt werden soll. G
     func (no *node) AddChild(child *node) {...}
 ```
 
-Warum sind `parent` und `children` ein Channel? Warum sind so viele Locks notwendig? Schauen wir uns den Erstellungsprozess des Graphen an:
+Warum sind `parent` und `children` ein Channel? Warum so viele Locks? Schauen wir uns den Erstellungsprozess des Graphen an:
 
 ```go
     func (rm *resourceManager) getGraph(ctx context.Context) []*node {
@@ -412,9 +411,9 @@ Warum sind `parent` und `children` ein Channel? Warum sind so viele Locks notwen
     }
 ```
 
-Die Abhängigkeitsbeziehung wurde also umgekehrt. Jetzt zeigen die abhängigen Ressourcen auf die abhängigen Parteien. Für jede Ressource wird ein `node` erstellt, und für jede Abhängigkeit dieser Ressource wird der `parent`-Channel dieser Ressource zu den `children` der abhängigen Ressource hinzugefügt. Der endgültige Graph ist eine Sammlung von `node`s.
+Die Abhängigkeitsbeziehung wurde also umgedreht. Jetzt zeigt die abhängige Ressource auf die Ressource, von der sie abhängt. Für jede Ressource wird ein `node` konstruiert. Gleichzeitig wird für jede Abhängigkeit dieser Ressource der `parent`-Channel dieser Ressource zu den `children` der abhängigen Ressource hinzugefügt. Der endgültige Graph ist eine Sammlung von `node`s.
 
-Das ist wirklich verwirrend. Schauen wir uns also den Ausführungsprozess an:
+Das ist sicherlich verwirrend. Schauen wir uns also den Ausführungsprozess an:
 
 ```go
     for _, no := range rm.getGraph(ctx) {
@@ -441,15 +440,15 @@ Das ist wirklich verwirrend. Schauen wir uns also den Ausführungsprozess an:
     }
 ```
 
-Es ist sehr einfach und direkt: Für jeden `node` wird gewartet, bis seine eingehenden `node`s ausgeführt sind, dann wird seine eigene `runFunc` ausgeführt, und potenzielle Fehler werden an alle nachfolgenden `node`s in der Kette weitergegeben, um sie vorzeitig abzubrechen.
+Sehr einfache und direkte Vorgehensweise: Für jeden `node` wird gewartet, bis seine eingehenden `node`s ausgeführt sind, dann wird seine eigene `runFunc` ausgeführt, und potenzielle Fehler werden an alle nachfolgenden `node`s in der Kette weitergegeben, um sie vorzeitig abzubrechen.
 
-Hier verstehe ich nicht, warum nicht eine topologische Sortierung verwendet wird, um dieses klar definierte klassische Problem zu lösen.
+Ich verstehe hier nicht ganz, warum nicht eine topologische Sortierung verwendet wird, um dieses klar definierte klassische Problem zu lösen.
 
 <a id="orgdcd001c"></a>
 
 #### Initialisierung
 
-Die Initialisierung des `GraphManager` verwendet eine thread-lokale globale Variable, die nach der Initialisierung in die Luft (ctx) geworfen wird – eine gängige Methode der Abhängigkeitsinjektion in verschiedenen API-Frameworks.
+Die Initialisierung des `GraphManager` verwendet eine thread-lokale globale Variable. Nach der Initialisierung wird sie in den Äther (den `ctx`) geworfen, eine gängige Methode der Abhängigkeitsinjektion in verschiedenen API-Frameworks.
 
 ```go
     func (c *Controller) NewContext(req ctrl.Request) context.Context {
@@ -482,17 +481,17 @@ Die Initialisierung des `GraphManager` verwendet eine thread-lokale globale Vari
 
 ### Code-Wiederverwendung maximieren: Controller
 
-Abgesehen vom zuvor ausgeklammerten HarborCluster-Controller kombinieren alle Controller der Komponenten im Harbor-Operator direkt denselben Controller, extrahieren die gemeinsame Logik aller Controller und verwenden dasselbe `Run`, dasselbe `Reconcile`. Wie wird das gemacht?
+Abgesehen vom zuvor ausgeklammerten `HarborCluster`-Controller kombinieren alle Komponenten-Controller in Harbor Operator direkt denselben Controller. Sie extrahieren die gemeinsame Logik aller Controller und verwenden dasselbe `Run`, dieselbe `Reconcile`. Wie wird das gemacht?
 
 -   Welche Logik wurde extrahiert?
--   Wie werden die Unterschiede behandelt?
+-   Wie werden Unterschiede behandelt?
 -   Was wurde geopfert?
 
 <a id="orgbd581d5"></a>
 
 #### Datenstruktur
 
-Die Implementierung der Schnittstelle durch den Controller ist, abgesehen von der Implementierung von `Reconciler`, nicht besonders interessant. Schauen wir uns zunächst die Definition der Datenstruktur des Controllers an:
+Die Implementierung der Schnittstelle durch den `Controller` ist, abgesehen von der Implementierung von `Reconciler`, nicht besonders interessant. Schauen wir uns zunächst die Definition der Datenstruktur des `Controller` an:
 
 ```go
     type ResourceManager interface {
@@ -514,9 +513,9 @@ Die Implementierung der Schnittstelle durch den Controller ist, abgesehen von de
     }
 ```
 
-Die Dinge, die wir nicht gut kennen, sind nur `BaseController` und `rm`.
+Die Dinge, die wir nicht so gut kennen, sind nur `BaseController` und `rm`.
 
-Wenn wir uns `BaseController` ansehen, handelt es sich im Grunde um eine Identifikation, um Informationen über den Controller selbst und einige Label-Informationen zu identifizieren. Die unterschiedlichen logischen Unterschiede zwischen verschiedenen Controllern können also nur in `ResourceManager` liegen. `ResourceManager` scheint auch eine sehr einfache Schnittstelle zu sein, und die Implementierer von `ResourceManager` sind tatsächlich die jeweiligen konkreten Controller. Wir werden die konkreten Beispiele für `ResourceManager` am Ende untersuchen.
+`BaseController` ist im Grunde ein Identifikator, der Informationen über den Controller selbst und einige Label-Informationen enthält. Die unterschiedlichen logischen Unterschiede zwischen verschiedenen Controllern können also nur in `ResourceManager` liegen. `ResourceManager` scheint auch eine sehr einfache Schnittstelle zu sein, und tatsächlich wird sie von den jeweiligen konkreten Controllern implementiert. Wir werden uns am Ende konkrete Beispiele für `ResourceManager` ansehen.
 
 ```go
     type Controller int
@@ -563,9 +562,9 @@ Wenn wir uns `BaseController` ansehen, handelt es sich im Grunde um eine Identif
 
 #### Reconcile-Logik
 
-Wie schafft es der Controller also, mit nur einem `Reconcile` die gesamte Familie von elf Harbor-CRDs zusammen mit so vielen Systemressourcen zu reconciliieren?
+Wie schafft es der `Controller` also, mit nur einem `Reconcile` die gesamte Familie von elf Harbor-CRDs zusammen mit so vielen Systemressourcen zu reconciliieren?
 
-Basierend auf den bereits bekannten Informationen sollte für jede CRD ein `ResourceManager` verwendet werden, um die verschiedenen Ressourcen zu definieren, die diese CRD erstellen und reconciliieren muss. Diese Ressourcen definieren ihre Abhängigkeiten über den Abhängigkeitsgraphen, und für jede CRD wird eine konkrete `RunFunc` geschrieben, um die endgültige Reconcile durchzuführen.
+Basierend auf den bereits bekannten Informationen sollte für jede CRD ein `ResourceManager` verwendet werden, um die verschiedenen Ressourcen zu definieren, die diese CRD erstellen und reconciliieren muss. Diese Ressourcen definieren ihre Abhängigkeiten über den Abhängigkeitsgraphen, und für jede CRD wird eine konkrete `RunFunc` geschrieben, um die endgültige Reconciliierung durchzuführen.
 
 ```go
     func (c *Controller) Reconcile(req ctrl.Request) (ctrl.Result, error) {
@@ -614,7 +613,7 @@ Basierend auf den bereits bekannten Informationen sollte für jede CRD ein `Reso
     }
 ```
 
-Eine klassische Reconcile-Logik. Es scheint, dass die ganze Magie in `c.Run` steckt:
+Sehr klassische Reconcile-Logik. Es scheint, dass die ganze Magie in `c.Run` steckt:
 
 ```go
     func (c *Controller) Run(ctx context.Context, owner resources.Resource) error {
@@ -635,19 +634,19 @@ Eine klassische Reconcile-Logik. Es scheint, dass die ganze Magie in `c.Run` ste
     }
 ```
 
-Tatsächlich taucht `rm` hier auf. Nachdem die Ressourcen für einen bestimmten Controller hinzugefügt wurden, scheint `PrepareStatus` ein einheitlicher zu sein. In Kombination mit dem Quellcode dieser Methode und der CRD-Definition wird angenommen, dass alle Komponenten denselben Status haben – wieder ein Design, das Flexibilität für Einfachheit und Konsistenz opfert. Tatsächlich folgt dieses Design der von K8s empfohlenen Spezifikation und kann beim Entwerfen von CRDs als Referenz dienen. Darauf wird hier nicht weiter eingegangen.
+Tatsächlich taucht `rm` hier auf. Nachdem die für einen bestimmten Controller benötigten Ressourcen hinzugefügt wurden, scheint `PrepareStatus` ein einheitlicher Schritt zu sein. Eine Kombination aus dem Quellcode dieser Methode und der CRD-Definition zeigt, dass davon ausgegangen wird, dass alle Komponenten denselben Status haben – wieder ein Design, das Flexibilität für Einfachheit und Konsistenz opfert. Tatsächlich folgt dieses Design der von K8s empfohlenen Norm und kann beim Entwurf von CRDs als Referenz dienen. Hier wird nicht weiter darauf eingegangen.
 
-Letzte Zeile: `sgraph.Get(ctx).Run(ctx)` – der Abhängigkeitsgraph kommt, aus der Luft (ctx) geholt. Damit schließt sich dieser Teil der Logik. Die verbleibende Frage ist: Wie konstruieren die konkreten Controller, die `ResourceManager` implementieren, den Abhängigkeitsgraphen und ihre eigene `RunFunc`?
+Letzte Zeile: `sgraph.Get(ctx).Run(ctx)` – der Abhängigkeitsgraph kommt, aus dem Äther (`ctx`) geholt. Damit schließt sich der Kreis für diesen Teil der Logik. Die verbleibende Frage ist: Wie konstruieren die konkreten Controller, die `ResourceManager` implementieren, den Abhängigkeitsgraphen und ihre eigene `RunFunc`?
 
 <a id="orgb7ed9a6"></a>
 
-### Code als Konfiguration: ResourceManager
+### Konfiguration als Code: ResourceManager
 
 Der letzte Schritt ergibt sich fast von selbst.
 
-Alle Controller, die `ResourceManager` implementieren, sollten gleichberechtigt sein. Lassen Sie uns anhand des Beispiels von Harbor Core einen Blick darauf werfen.
+Alle Controller, die `ResourceManager` implementieren, sollten gleichberechtigt sein. Lassen Sie uns anhand des Beispiels `harbor core` einen Blick darauf werfen.
 
-Abgesehen von den Teilen, die zur Erzeugung konkreter K8s-Ressourcen verwendet werden, sollten wir uns auf die Teile konzentrieren, die die `ResourceManager`-Schnittstelle implementieren.
+Abgesehen von den Teilen, die zur Erzeugung konkreter K8s-Ressourcen dienen, sollten wir uns auf die Teile konzentrieren, die die `ResourceManager`-Schnittstelle implementieren.
 
 ```go
     func (r *Reconciler) NewEmpty(_ context.Context) resources.Resource {
@@ -706,9 +705,9 @@ Abgesehen von den Teilen, die zur Erzeugung konkreter K8s-Ressourcen verwendet w
     }
 ```
 
-Meine Güte, abgesehen davon, dass die Ressourcen in einer bestimmten Reihenfolge hinzugefügt werden müssen, entspricht dies einer deklarativen Gestaltung. Wenn Sie einen neuen Controller hinzufügen möchten, ist es ein Kinderspiel: Sie müssen nur wissen, welche Ressourcen dieser Controller reconciliieren soll, und müssen sich nicht um die konkrete Reconcile-Logik kümmern.
+Meine Güte, abgesehen davon, dass Ressourcen in einer bestimmten Reihenfolge hinzugefügt werden müssen, ist das im Grunde ein deklaratives Design. Wenn man einen neuen Controller hinzufügen möchte, ist es kinderleicht: Man muss nur wissen, welche Ressourcen der Controller reconciliieren soll, und muss sich nicht um die konkrete Reconcile-Logik kümmern.
 
-Moment, müssen wir die `RunFunc` nicht selbst implementieren? Dies ist die letzte Frage unserer Quellcode-Lektüre: Wie verallgemeinert und abstrahiert der Harbor-Operator den Reconcile-Prozess einer beliebigen Ressource zu einer einzigen Funktion.
+Moment, müssen wir die `RunFunc` nicht selbst implementieren? Dies ist die letzte Frage unserer Quellcode-Lektüre. Lassen Sie uns sehen, wie Harbor Operator den Reconcile-Prozess einer beliebigen `Resource` verallgemeinert und zu einer einzigen Funktion abstrahiert.
 
 Nehmen wir zum Beispiel `r.Controller.AddServiceToManage(ctx, service)`.
 
@@ -717,7 +716,3 @@ Nehmen wir zum Beispiel `r.Controller.AddServiceToManage(ctx, service)`.
        if resource == nil {
           return nil, nil
        }
-
-       mutate, err := c.GlobalMutateFn(ctx)
-       if err != nil {
-          return nil, err

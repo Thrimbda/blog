@@ -1,15 +1,14 @@
 ---
 "title": "Ode on Melancholy 忧郁颂"
-"summary": "This article presents the original English text of John Keats's poem 'Ode on Melancholy' alongside Tu An's Chinese translation. The author mentions the reasons for purchasing a collection of Keats's poems, including encountering a line from this poem in *Sweet Bitter* and Keats's influence on the *Hyperion* series. The poem is divided into three parts, exploring the close connection between melancholy and beauty/joy, suggesting that melancholy hides within the temple of delight and can only be perceived by those who deeply experience happiness. Through bilingual comparison, the article helps readers appreciate Keats's poetic and philosophical reflections."
+"summary": "This article presents the original English poem 'Ode on Melancholy' by the British poet John Keats, along with Tu An's Chinese translation. In the introduction, the author mentions purchasing a collection of Keats's poems partly due to an appreciation for the line 'Veiled Melancholy has her sovran shrine' from 'Ode on Melancholy,' as well as Keats's connection to the *Hyperion* series. The poem itself consists of three stanzas, advising the reader not to seek escape from melancholy through poison or symbols of death. Instead, when melancholy descends, one should turn to gaze upon the beauty of nature (such as the morning rose, rainbow, or peonies) or a lover's eyes, deeply experiencing this emotion. The poem's core argument is that melancholy is intimately linked with beauty and joy; only those who can profoundly savor happiness may glimpse the shrine of melancholy within the temple of delight and become its trophy. The conclusion emphasizes that melancholy is not entirely negative but rather part of a profound emotional experience, coexisting with transient beauty and fleeting joy."
 "tags":
   - "John Keats"
   - "Ode on Melancholy"
+  - "忧郁颂"
   - "Poetry"
-  - "Keats"
   - "Tu An"
-  - "English Poem"
-  - "Chinese Translation"
-  - "Literature"
+  - "English Literature"
+  - "Romanticism"
 "date": "2017-06-19"
 ---
 
@@ -21,7 +20,7 @@ taxonomies:
     - John Keats
 ---
 
-My collection of Keats's poems arrived today. Part of the reason I bought it was because I saw a line from *"Ode on Melancholy"* — `"Veiled Melancholy has her sovran shrine"` — in *Sweet Bitter*. Another reason is the unfinished long poem *Hyperion* and Keats himself, who permeates the entire four-book series of *The Hyperion Cantos*. Having long been captivated, I decided to transcribe this *"Ode on Melancholy"* today. The Chinese version uses Tu An's translation.
+My collection of Keats's poems arrived today. I bought it partly because I came across the line `Veiled Melancholy has her sovran shrine` from *Ode on Melancholy* in *Sweet Bitter*. Another reason is the unfinished long poem *Hyperion* and Keats's presence throughout the entire *Hyperion Cantos* tetralogy. Having long been captivated by it, I am transcribing this *Ode on Melancholy* today. The Chinese version uses Tu An's translation.
 
 <!--more-->
 
@@ -99,49 +98,76 @@ His soul shall taste the sadness of her might,
   And be among her cloudy trophies hung.
 ```
 
-## Ode on Melancholy
+## 忧郁颂
 
 ### I
 
 ```
-No, no! Do not go to Lethe, nor twist
-   The deep-rooted wolfsbane for its poisonous wine;
-Do not let your pale forehead receive the kiss
-   Of nightshade, the ruby grape of Proserpine;
-Do not make your rosary from yew-berries,
-   Nor let the beetle, nor the death-moth be
-     Your mournful Psyche, nor the downy owl
-A partner in the mysteries of your sorrow;
-   For shade approaching shade will come drowsily,
-     And drown the soul's wakeful anguish.
+不呵！不要到忘川去，也不要拧绞
+
+  根深的乌头，把它的毒汁当美酒；
+
+别让你苍白的额头把龙葵野草——
+
+  普罗赛嫔红葡萄的亲吻承受；
+
+别用紫杉的坚果做你的念珠，
+
+  别让甲虫和墓畔的飞蛾变为
+
+    你忧伤的塞吉，别让批羽的鸱鸮
+
+分享你心底隐秘的悲哀愁苦；
+
+  阴影来亲近阴影会困倦嗜睡，
+
+    会把灵魂中清醒的创痛淹没掉。
 ```
 
 ### II
 
 ```
-But when a fit of melancholy shall fall
-   Suddenly from heaven like a weeping cloud,
-That nurtures all the drooping flowers,
-   And veils the green hill in an April shroud;
-Then let your sorrow feast upon a morning rose,
-   Or upon the rainbow over the salty sand-wave,
-     Or upon the opulence of full-peony blooms;
-Or if your mistress shows some rich anger,
-   Seize her soft hand, let her vent,
-     And feed deeply, deeply upon her peerless eyes.
+但一旦忧郁的意绪突然来到，
+
+  有如阴云洒着泪自天而降，
+
+云雨滋润着垂头的花花草草，
+
+  四月的雾衣把一脉青山隐藏；
+
+你就该让哀愁痛饮早晨的玫瑰，
+
+  或者饱餐海浪上空的虹彩，
+
+    或者享足姹紫嫣红的牡丹；
+
+若是你钟情的女郎娇嗔颦眉，
+
+  就抓住她的酥手，让她说痛快，
+
+    并深深品尝她举世无双的慧眼。
 ```
 
 ### III
 
 ```
-She dwells with Beauty—Beauty that must die;
-   And Joy, whose hand is ever at his lips
-Bidding farewell; and aching Pleasure near,
-   Turning to poison as the bee's mouth sips:
-Yes, in the very temple of Delight
-   Veiled Melancholy holds her sovereign shrine,
-     Though seen by none save him whose strenuous tongue
-   Can burst Joy's grape against his fine palate;
-His soul shall taste the sadness of her might,
-   And be hung among her cloudy trophies.
+她与“美”共处——那必将消亡的“美”；
+
+  还有“喜悦”，他的手总是贴着嘴唇
+
+说再见；令人痛苦的近邻“欣慰”，
+
+  只要蜂蜜啜一口，就变成毒鸠：
+
+啊，就在“快乐”的庙堂之上，
+
+  隐藏的“忧郁”有她至尊的神龛，
+
+    虽然，只有舌头灵、味觉良好、
+
+  能咬破“快乐”果的人才能够瞧见：
+
+他灵魂一旦把“忧郁”的威力品尝，
+
+  便成为她的战利品，悬挂在云霄。
 ```

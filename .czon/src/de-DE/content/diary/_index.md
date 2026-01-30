@@ -1,20 +1,18 @@
 ---
 "title": "Alle Tagebucheinträge"
-"summary": "Dieses Dokument konfiguriert einen Blog- oder Tagebuchbereich mit Paginierung,
-  Sortierung nach Datum und einer benutzerdefinierten Seitenvorlage. Es setzt den Titel auf 'Alle Tagebucheinträge'
-  und verwendet 15 Einträge pro Seite, was auf einen strukturierten Ansatz zur Anzeige chronologischer Inhalte hinweist."
+"summary": "Dieses Dokument konfiguriert einen Blog- oder Tagebuchbereich mit einer Paginierung von 15 Beiträgen pro Seite. Es trägt den Titel 'Alle Tagebucheinträge', ist nach Datum sortiert und verwendet eine benutzerdefinierte Seitenvorlage 'blog-page.html'. Es dient als Konfigurationsausschnitt zur strukturierten Organisation und Anzeige von Tagebucheinträgen."
 "tags":
   - "Tagebuch"
   - "Blog"
   - "Paginierung"
-  - "Datum"
-  - "Vorlage"
+  - "Datumsortierung"
+  - "Seitenvorlage"
   - "Konfiguration"
 ---
 
 +++
 paginate_by = 15
-title = "Alle Tagebucheinträge"
+title = "All Diary posts"
 sort_by = "date"
 page_template = "blog-page.html"
 +++

@@ -1,50 +1,51 @@
 ---
 "title": "RDD Paper Notes"
-"summary": "This article is a set of notes on the paper about Resilient Distributed Datasets (RDDs). It details the motivation, core characteristics, advantages, and limitations of RDDs as an in-memory abstraction for distributed systems. By sacrificing fine-grained computation, RDDs achieve efficient iterative computation, fault tolerance, and generality, addressing the performance bottleneck of data reuse in traditional distributed computing frameworks. The article also introduces the implementation of RDDs in Spark, including its programming interface, dependencies, and performance evaluation, demonstrating RDD's significant performance improvements over Hadoop for iterative tasks and user analysis programs. Finally, it concludes that the core value of RDDs lies in modeling cluster memory, enabling fast, successive computations, and points out that hardware limitations are the theoretical boundary for software innovation."
+"summary": "These are notes on the Resilient Distributed Datasets (RDDs) paper, analyzing the design motivation, core concepts, and advantages of RDDs. As a distributed memory abstraction, RDDs support transformation and action operations through immutable, lazy-evaluation properties and utilize a DAG to represent dependencies. By sacrificing fine-grained operations, RDDs gain fault tolerance, generality, and performance, showing significant improvements over Hadoop in iterative computations (e.g., 20-40x). The article also outlines Spark's implementation and evaluation results, noting that RDDs are suitable for coarse-grained computations but not for fine-grained asynchronous tasks."
 "tags":
   - "RDD"
   - "Spark"
   - "Distributed Systems"
   - "Paper Notes"
-  - "In-Memory Abstraction"
+  - "Memory Abstraction"
   - "Iterative Computation"
   - "Fault Tolerance"
-  - "Performance Optimization"
 "date": "2020-10-29"
 ---
 
-Resilient Distributed Datasets (RDDs) are an in-memory abstraction for distributed systems.
+Resilient Distributed Datasets (RDDs) are a memory abstraction for distributed systems.
 
-At their core, they are a strictly constrained **shared memory** model, offering only coarse-grained transformation operations.
+Essentially, it is a strictly constrained **shared memory** model that only provides coarse-grained transformation operations.
 
 ## Motivation
 
 ### Problem
 
-Iterative distributed computations require the (efficient) ability to reuse data between iterations.
+Iterative distributed computations require the ability to (efficiently) reuse data across iterations.
 
-### Current State (circa 2012)
+### Current State
 
-- Existing distributed computing frameworks lacked an abstraction that could fully leverage (reuse) cluster memory.
+- Existing (as of 2012) distributed computing frameworks lacked an abstraction that could fully utilize (reuse) cluster memory.
 - The only way for existing frameworks to reuse data was to launch multiple distributed computations.
 
-While this solved the problem of feasibility, data reuse remained a performance bottleneck for such computations: significant resources were wasted on overly frequent I/O.
+Thus, while the solvability of problems is addressed, data reuse remains a performance bottleneck for such computations: significant resources are wasted on overly frequent I/O.
 
-Some work attempted to address these issues, but could only support specific computational patterns, lacking generality.
+Some work has attempted to address these issues, but they only support specific computational patterns and are not general enough.
 
-The main challenge was the trade-off between computational granularity, generality, and fault tolerance.
+The main challenge lies in the trade-off between computational granularity, generality, and fault tolerance.
 
 ## RDD
 
-RDDs provide an in-memory abstraction for distributed computing clusters, largely solving the above problems. Their approach was to sacrifice the least important aspect among the three: computational granularity.
+RDD provides a memory abstraction for distributed computing clusters, largely solving the above problems by sacrificing the least important aspect among the three: computational granularity.
 
 ### Basics
 
 Properties of RDDs:
+
 - Immutable
 - Lazy
 
 Operations supported by RDDs:
+
 - transformation - Lazy operations
   - map
   - filter
@@ -54,17 +55,17 @@ Operations supported by RDDs:
   - collect
   - save
   - ...
-- persist (i.e., cache)
+- persist i.e. cache
 
-Spark implements RDDs, providing a programming interface similar to DryadLINQ.
+Spark implements RDDs and provides a programming interface similar to DryadLINQ.
 
 ### Advantages of RDDs
 
-Primarily compared to similar abstractions (which model cluster memory), RDDs sacrifice fine-grained data operations to achieve significant superiority in other aspects (generality, fault tolerance, degraded performance, consistency, straggler mitigation, ease of use).
+Primarily compared to similar abstractions (modeling cluster memory), RDDs sacrifice fine-grained data operations to achieve overwhelming advantages in other aspects (generality, fault tolerance, degraded performance, consistency, straggler mitigation, ease of use).
 
 ### Limitations of RDDs
 
-RDDs are not suitable for asynchronous computations involving a large number of fine-grained reads and writes, such as storage systems for web crawlers. For similar applications, the authors suggest other frameworks, which are not detailed here.
+RDDs are not suitable for asynchronous computations with many fine-grained reads and writes, such as storage systems for web crawlers. For such applications, the authors suggest other frameworks, which are not detailed here.
 
 ## Spark's Programming Interface
 
@@ -74,12 +75,12 @@ The author provides several examples in this section, which are omitted here.
 
 ## Representation of RDDs
 
-RDDs are represented using a DAG (Directed Acyclic Graph).
+Uses a DAG to represent RDDs.
 
 ### Dependencies
 
-- Narrow dependencies - Each parent partition is depended on by at most one child partition.
-- Wide dependencies - A parent partition is depended on by at least one child partition.
+- narrow dependencies - Each parent partition is depended on by at most one child partition.
+- wide dependencies - Each parent partition is depended on by at least one child partition.
 
 ## Implementation
 
@@ -91,19 +92,19 @@ RDDs are represented using a DAG (Directed Acyclic Graph).
 ## Evaluation
 
 - 20x faster than Hadoop on iterative tasks.
-- Reported 40x faster than Hadoop for user analysis programs.
+- Reports 40x faster than Hadoop on user analytics programs.
 - Can quickly recompute data after node failures.
 - Query latency of 5-7 seconds for 1TB of data.
 
-Specific details are omitted.
+Details omitted.
 
 ## Discussion
 
 They ambitiously used Spark to mimic other distributed computing frameworks to demonstrate the generality of RDDs.
 
-Specifics are omitted.
+Specifics omitted.
 
 ## Summary
 
-- The greatest advantage of RDDs/Spark is modeling the memory of the entire cluster, allowing distributed computations to store intermediate results in memory. This makes fast, successive computations on the same dataset possible. All of this is based on one premise: memory is an order of magnitude faster than disk (hence enabling the 40x performance improvement of Spark over Hadoop).
-  This shows that the theoretical limit of software innovation is the hard constraint of hardware.
+- The greatest advantage of RDDs/Spark is modeling the memory of the entire cluster, enabling distributed computations to store intermediate results in memory. This makes rapid consecutive computations on the same dataset possible, all based on the premise that memory is an order of magnitude faster than disk (hence achieving the 40x performance improvement of Spark over Hadoop).
+  This shows that the theoretical limit of software innovation is constrained by the hard limits of hardware.

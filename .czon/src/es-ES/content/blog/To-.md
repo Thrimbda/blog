@@ -1,14 +1,12 @@
 ---
-"title": "A-"
-"summary": "Este artículo se centra en el poema 'To-' de John Keats, explorando cómo el breve enamoramiento del poeta por una joven dama inspiró su creación. A través de ricas imágenes y expresiones emocionales, el poema muestra la búsqueda obsesiva de Keats por la belleza. El artículo señala además que el tratamiento del ritmo en este poema, especialmente en los dos últimos versos, presenta similitudes con los sonetos de Shakespeare, reflejando la herencia y la influencia de Keats de la tradición poética shakespeariana. Esto no solo revela los orígenes de la creación poética de Keats, sino que también proporciona una perspectiva importante para comprender su estilo artístico."
+"title": "To-"
+"summary": "Este artículo se centra en el poema 'To-' de John Keats, presentando su texto original en inglés y una introducción contextual en chino, para explorar la fascinación y la melancolía expresadas hacia una joven dama en el poema. Además, compara los dos últimos versos del poema de Keats con el soneto 113 de Shakespeare en términos de ritmo, señalando similitudes en la estructura emocional y el tratamiento musical, y cita notas al pie relevantes para respaldar este punto de vista. Esto revela la posible influencia de Shakespeare en la creación de Keats, así como los puntos en común entre ambos poetas en la expresión emocional y la técnica poética."
 "tags":
   - "John Keats"
   - "Análisis poético"
   - "Shakespeare"
-  - "Ritmo"
-  - "Comparación literaria"
-  - "Keats"
   - "Soneto"
+  - "Comparación métrica"
   - "Influencia literaria"
 "date": "2018-01-07"
 ---
@@ -21,7 +19,7 @@ taxonomies:
     - John Keats
 ---
 
-> Keats vio una vez a una joven dama durante unos minutos, quedando tan fascinado e incluso afligido por ella.
+> Keats vio una vez a una joven dama durante unos minutos, quedando fascinado e incluso melancólico por ella.
 
 <!--more-->
 
@@ -49,18 +47,18 @@ And grief unto my darling joys dost bring.
 
 ### Nota
 
-Posteriormente se descubrió que los dos últimos versos de este poema `To - ["Time's sea"]`:
+Posteriormente, se descubrió que los dos últimos versos de este poema `To - ["Time's sea"]`:
 
 ```
 Every delight with sweet remembering,
 And grief unto my darling joys dost bring.
 ```
 
-y los versos del `soneto CXIII` de Shakespeare:
+y los de `soneto CXIII` de Shakespeare:
 
 ```
 Even so, being full of your ne'er cloying sweetness,
 To bitter sauces did I frame my feeding.
 ```
 
-presentan cierta similitud rítmica. No es de extrañar que en una nota al pie de este poema de Keats se mencionara: "En el tratamiento rítmico de la estructura emocional y en la creciente musicalidad, se asemeja enormemente a los sonetos de Shakespeare".
+presentan cierta similitud métrica. No es de extrañar que en una nota al pie de este poema de Keats se mencionara: "En el tratamiento rítmico de la estructura emocional y en la creciente musicalidad, se asemeja enormemente a los sonetos de Shakespeare".

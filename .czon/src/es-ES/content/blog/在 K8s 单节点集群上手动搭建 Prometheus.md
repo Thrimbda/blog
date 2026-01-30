@@ -1,19 +1,18 @@
 ---
 "title": "Configuración manual de Prometheus en un clúster de un solo nodo de K8s"
-"summary": "Esta es una guía detallada sobre cómo configurar manualmente el sistema de monitorización Prometheus en un clúster de Kubernetes de un solo nodo. El artículo comienza con una prueba de concepto en un entorno bare-metal, ejecutando Prometheus y Node Exporter para comprender la configuración básica. Luego, se centra en el despliegue dentro del clúster K8s, detallando los recursos de K8s necesarios (como Namespace, DaemonSet, ConfigMap, ServiceAccount, ClusterRole, etc.) y explicando cómo configurar el descubrimiento de servicios de Prometheus (especialmente kubernetes_sd_config) y el reetiquetado (relabel_config) para monitorizar múltiples objetivos, incluyendo el propio Prometheus, Node Exporter, Kubelet, cAdvisor y API Server. El artículo enfatiza la configuración manual (en lugar de usar Helm o Operator) para comprender en profundidad el funcionamiento de Prometheus, y proporciona ejemplos de configuración y configuración de permisos. Finalmente, el artículo resume los pasos de despliegue y plantea una pregunta reflexiva sobre cómo monitorizar un clúster K8s con Prometheus en bare-metal."
+"summary": "Este artículo es un tutorial técnico que guía al lector en el despliegue manual del sistema de monitorización Prometheus en un clúster de Kubernetes de un solo nodo, sin depender de herramientas rápidas como Helm Chart o Prometheus Operator. Comienza introduciendo la ejecución y configuración básica de Prometheus a través de una prueba de concepto en máquina física (bare metal), y luego detalla los recursos necesarios para el despliegue en un entorno K8s, incluyendo Namespace, DaemonSet, ConfigMap, ServiceAccount, ClusterRole, etc. La parte central explica cómo configurar el descubrimiento de servicios de Prometheus (especialmente kubernetes_sd_config) y el reetiquetado (relabel_config) para monitorizar múltiples objetivos, como el propio Prometheus, Node Exporter, Kubelet, cAdvisor y API Server. El artículo también enfatiza la importancia de la configuración de permisos RBAC y proporciona ejemplos concretos de configuración YAML. Finalmente, el autor comparte un conjunto de declaraciones de recursos acumuladas durante la práctica, para ayudar al lector a completar el despliegue."
 "tags":
   - "Observabilidad"
   - "Prometheus"
   - "Kubernetes"
   - "Monitorización"
+  - "Tutorial Técnico"
   - "Descubrimiento de Servicios"
-  - "Node Exporter"
-  - "cAdvisor"
-  - "Kubelet"
+  - "RBAC"
 "date": "2020-11-05"
 ---
 
-> El público objetivo de este artículo son aquellos que acaban de comenzar con sistemas de monitorización y los grupos con poco conocimiento sobre Prometheus (como el autor al momento de escribir este artículo).
+> El público objetivo de este artículo son aquellos que acaban de comenzar con sistemas de monitorización y el grupo desfavorecido que sabe poco sobre Prometheus (como el autor cuando escribió este artículo).
 >
 >
 >
@@ -21,14 +20,14 @@
 >
 > - Versión de K8s: 1.19.3
 > - Versión de Prometheus: 2.22.0
-> - Sistema Operativo: Archlinux a fecha de 2020.11
-> - Hosts configurados, el dominio de Devbox es devbox
+> - Sistema operativo: Archlinux a fecha de 2020.11
+> - Hosts configurados, el dominio de Devbox es `devbox`
 >
-> ⚠️ Nota: Los parámetros de línea de comandos enumerados en este artículo deben ajustarse ligeramente según el entorno actual (por ejemplo, la versión del binario de Prometheus, etc.).
+> ⚠️ Nota: Los parámetros de línea de comandos enumerados en este artículo deben ajustarse ligeramente según el entorno actual (por ejemplo, la versión del paquete binario de Prometheus, etc.).
 >
 >
 >
-> Aquí se enumeran algunas lecturas previas recomendadas:
+> Aquí se enumeran algunos elementos de lectura previa recomendados:
 >
 > 1. [Observabilidad: Conceptos y Mejores Prácticas](https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/observability/OBSV-101.md) Introduce varios conceptos básicos de observabilidad.
 > 2. [Conocimiento Inicial de Prometheus](https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/prometheus/PROM-101.md) Presenta el proyecto Prometheus.
@@ -38,11 +37,11 @@
 
 Dado que vamos a configurar Prometheus manualmente en K8s, establecemos aquí dos convenciones:
 
-1. Deliberadamente no usaremos métodos de despliegue rápidos como Helm-Chart o Prometheus Operator, aquí se enumeran como referencia:
+1. Deliberadamente no usar métodos de despliegue rápidos como Helm-Chart o Prometheus Operator. Se enumeran aquí como referencia:
    1. [Helm chart](https://github.com/prometheus-community/helm-charts) mantenido por la comunidad de Prometheus.
-   2. [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator).
-   3. [Kube-Prometheus](https://github.com/prometheus-operator/kube-prometheus).
-2. Configurar Prometheus en K8s, es decir, que K8s gestione el servicio Prometheus. A diferencia del Prometheus Operator mencionado anteriormente, aquí escribiremos nosotros mismos los archivos de configuración YAML relacionados.
+   2. [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator)
+   3. [Kube-Prometheus](https://github.com/prometheus-operator/kube-prometheus)
+2. Desplegar Prometheus en K8s, es decir, que K8s gestione el servicio Prometheus. A diferencia del Prometheus Operator mencionado anteriormente, aquí escribiremos nosotros mismos los archivos de configuración YAML relacionados.
 3. Enumerar los siguientes objetivos de monitorización:
    1. Prometheus
    2. Node exporter
@@ -54,11 +53,11 @@ Dado que vamos a configurar Prometheus manualmente en K8s, establecemos aquí do
 
 <!--more-->
 
-## Prueba de concepto: Ejecutar Prometheus en bare-metal
+## Prueba de concepto: Ejecutar Prometheus en máquina física (Bare Metal)
 
-Primero, la intuición inicial es hacer una prueba de concepto en bare-metal, ponerlo en marcha y luego experimentar con configuraciones más avanzadas. Finalmente, una vez que comprendamos los elementos de configuración de Prometheus, desplegarlo en K8s debería ser pan comido.
+Primero, la intuición inicial es hacer una prueba de concepto en máquina física, ponerlo en marcha y luego experimentar con configuraciones más avanzadas. Finalmente, una vez que comprendamos los elementos de configuración de Prometheus, desplegarlo en K8s debería ser pan comido.
 
-> Intenté ser perezoso y buscar tutoriales en blogs, pero descubrí que no estaban claros y la mayoría estaban desactualizados, así que perdí medio día y tuve que leer la documentación oficial de todos modos.
+> Intenté ser perezoso y buscar tutoriales en blogs, pero descubrí que no estaban claros y la mayoría estaban desactualizados. Perdí medio día y finalmente tuve que leer la documentación oficial concienzudamente.
 
 ### Instalar Prometheus
 
@@ -77,7 +76,7 @@ cd prometheus-2.22.0.linux-amd64
 #  platform:     linux/amd64
 ```
 
-Al revisar el directorio, se encuentra un archivo de configuración predeterminado `prometheus.yml`:
+Al revisar el directorio, se encuentra un archivo de configuración incluido llamado `prometheus.yml`:
 
 ```yaml
 # my global config
@@ -117,11 +116,11 @@ Ahora ejecutamos el Prometheus recién descargado para que se monitorice a sí m
 ./prometheus --config.file=prometheus.yml
 ```
 
-Se puede ver que Prometheus ya se ha iniciado. Accede a http://devbox:9090 para ver su interfaz de usuario. En este punto, haz clic aleatoriamente para tener una idea general de las funciones que ofrece Prometheus, permitiéndonos conocer su comportamiento cuando funciona normalmente.
+Se puede ver que Prometheus ya se ha iniciado. Accede a http://devbox:9090 para ver su interfaz de usuario. En este punto, haz clic aleatoriamente para tener una idea general de las funciones que ofrece Prometheus, permitiéndonos conocer cómo se comporta cuando funciona normalmente.
 
 ### Ejecutar Node exporter
 
-Ahora ejecutamos un Node Exporter en bare-metal para observar varias métricas de la máquina local.
+Ahora ejecutamos un Node Exporter en máquina física para observar varias métricas de la máquina local.
 
 ```bash
 curl -LO "https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz"
@@ -130,7 +129,7 @@ cd node_exporter-1.0.1.linux-amd64
 ./node_exporter
 ```
 
-A continuación, modifica la configuración para que Prometheus extraiga métricas de él.
+A continuación, modifica la configuración para que Prometheus recopile métricas desde allí.
 
 ```yaml
 # my global config
@@ -162,7 +161,7 @@ Abre la interfaz web de Prometheus y observa que se ha agregado un nuevo target 
 
 En este punto, la fase de prueba de concepto se ha completado con éxito.
 
-> Nota: Como parte de la prueba de concepto, no se recomienda usar Prometheus desplegado en bare-metal para monitorizar un clúster K8s directamente, porque el acceso a los componentes de K8s desde fuera del clúster requiere configurar certificados y un [ClusterRole](https://kubernetes.io/zh/docs/reference/access-authn-authz/rbac/) con los permisos de acceso correspondientes (aquí se omiten los diversos problemas que el autor encontró al intentar monitorizar un clúster K8s y sus componentes con Prometheus en bare-metal).
+> Nota: Como parte de la prueba de concepto, no se recomienda usar Prometheus desplegado en máquina física para monitorizar directamente un clúster K8s. La razón es que acceder a los componentes de K8s desde fuera del clúster requiere configurar certificados y tener un [ClusterRole](https://kubernetes.io/zh/docs/reference/access-authn-authz/rbac/) con los permisos de acceso correspondientes (aquí se omiten los diversos problemas que el autor encontró al intentar usar Prometheus desplegado en máquina física para monitorizar un clúster K8s y sus componentes).
 
 ## Monitorizar un clúster K8s con Prometheus
 
@@ -170,28 +169,28 @@ A continuación, vamos a monitorizar nuestro clúster K8s a través de Prometheu
 
 ### Elementos de configuración de Prometheus
 
-En la introducción a Prometheus, se puede entender que Prometheus se basa principalmente en la extracción (Pull) de datos, por lo que necesita descubrimiento de servicios, es decir, hacer que Prometheus sepa de dónde extraer los datos para que los usuarios puedan verlos.
+En la introducción a Prometheus, se puede entender que Prometheus se basa principalmente en la obtención de datos mediante "Pull", por lo que necesita descubrimiento de servicios, es decir, hacer que Prometheus sepa de dónde extraer los datos para que los usuarios puedan verlos.
 
-Entonces, primero hay que resolver un problema: **Descubrimiento de servicios para el clúster K8s** — el secreto debe estar oculto en la configuración.
+Entonces, primero hay que resolver un problema: **el descubrimiento de servicios para el clúster K8s** — el secreto debe estar escondido en la configuración.
 
 La [documentación](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/) tiene una descripción detallada de la configuración de Prometheus.
 
 Se describen brevemente los siguientes elementos de configuración (no necesariamente son ortogonales entre sí):
 
-- [`<global>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#configuration-file): Su configuración afecta a cualquier otro elemento de configuración y sirve como valor predeterminado para los elementos en otras configuraciones.
+- [`<global>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#configuration-file): La configuración aquí tiene efecto en cualquier otro elemento de configuración y sirve como valor predeterminado para los elementos en otras configuraciones.
 - [`<scrape_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#scrape_config): Define una tarea de monitorización, describiendo de dónde y cómo debe Prometheus monitorizar este objetivo, entre otra información.
 - [`<tls_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#tls_config): Describe la configuración TLS.
 - [`<*_sd_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#kubernetes_sd_config): Prometheus proporciona configuración para el descubrimiento de servicios de una serie de objetivos de monitorización predefinidos a través de esta serie de elementos de configuración (sd significa service discovery).
-- [`<static_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#static_config): Para objetivos de monitorización no predefinidos por Prometheus (como cualquier servicio desplegado manualmente en bare-metal), se puede usar este elemento de configuración para el descubrimiento de servicios. Lo usamos en la prueba de concepto anterior.
+- [`<static_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#static_config): Para objetivos de monitorización no predefinidos por Prometheus (como cualquier servicio desplegado manualmente en máquina física), se puede usar este elemento de configuración para el descubrimiento de servicios. Lo usamos en la prueba de concepto anterior.
 - [`<relabel_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#relabel_config): Antes de comenzar a extraer las métricas del objetivo de monitorización, se pueden modificar algunas etiquetas (labels) a través de este elemento de configuración. Prometheus proporciona algunas reglas de etiquetas predefinidas. El reetiquetado (relabel) se puede realizar en varios pasos. Después del reetiquetado, las etiquetas con el prefijo `__` se eliminarán.
 
-Parece que el elemento de configuración central en Prometheus es su `<scrape_config>`, cada uno define una tarea de monitorización, similar al concepto de namespace, principalmente proporcionando una agrupación de objetivos de monitorización. Dentro de él, definimos `<*_sd_config>` o `<static_config>` para decirle a Prometheus exactamente de qué endpoints extraer datos y cómo filtrar estos endpoints.
+Parece que el elemento de configuración central en Prometheus es su `<scrape_config>`. Cada uno define una tarea de monitorización, similar al concepto de namespace, proporcionando principalmente una agrupación de objetivos de monitorización. Dentro de él, definimos `<*_sd_config>` o `<static_config>` para decirle a Prometheus exactamente desde qué endpoints extraer datos y cómo filtrar estos endpoints.
 
 ¡Profundicemos en la comprensión de estos elementos de configuración a través de la práctica!
 
 ### Desplegar Prometheus
 
-El trabajo central del despliegue radica en pensar claramente qué recursos se necesitan para desplegar Prometheus en el clúster. El autor revela directamente la respuesta aquí:
+El trabajo central del despliegue radica en pensar claramente qué recursos se necesitan para desplegar Prometheus en el clúster. El autor da la respuesta directamente aquí:
 
 1. Un Namespace dedicado.
 2. Un DaemonSet para gestionar node-exporter.
@@ -203,15 +202,15 @@ El trabajo central del despliegue radica en pensar claramente qué recursos se n
 8. Un Deployment para Prometheus.
 9. Un Service para Prometheus.
 
-En un clúster K8s con RBAC aplicado, necesitamos definir un rol con permisos suficientes para Prometheus, que pueda leer el estado del clúster y varias métricas, de ahí los elementos 5-7.
+En un clúster K8s con RBAC aplicado, necesitamos definir un rol con permisos suficientes para Prometheus, que pueda leer el estado del clúster y varias métricas, de ahí la necesidad de los elementos 5-7.
 
-Aquí hay un [conjunto de declaraciones de recursos](https://github.com/Thrimbda/prometheus-set-up) acumulado por el autor durante su propio proceso de configuración, que además de los recursos anteriores incluye kube-state-metrics. Siguiendo el orden de las operaciones, se puede obtener un Prometheus desplegado.
+Aquí se proporciona un [conjunto de declaraciones de recursos](https://github.com/Thrimbda/prometheus-set-up) acumulado por el autor durante su propio proceso de configuración. Además de los recursos mencionados, incluye kube-state-metrics. Siguiendo el orden de las operaciones, se puede obtener un Prometheus desplegado.
 
 #### Node-exporter
 
 Para Node-exporter, dado que es la monitorización de la máquina en sí, el requisito es uno por Node. Dado que también queremos disfrutar de la gestión del ciclo de vida de K8s, DaemonSet es la mejor opción.
 
-Como se ejecuta dentro de un contenedor, sin configuración no puede recopilar métricas reales del Node, por lo que es necesario montar ubicaciones especiales del host en el contenedor para que Node-exporter pueda recopilar métricas.
+Al ejecutarse en un contenedor, sin configuración no puede recopilar métricas reales del Node. Por lo tanto, es necesario montar ubicaciones especiales del host en el contenedor para que Node-exporter pueda recopilar métricas.
 
 ```yaml
 args:
@@ -234,7 +233,7 @@ Luego, simplemente expón un endpoint al que Prometheus pueda acceder de forma p
 
 #### Prometheus
 
-Prometheus se despliega usando un Deployment. Antes de desplegar Prometheus, es necesario configurarle permisos suficientes para que pueda acceder a los endpoints necesarios para recopilar métricas. En un clúster K8s con RBAC configurado, esto se logra a través de ClusterRole/ServiceAccount/ClusterRoleBinding. Una vez configurado, Prometheus utiliza el ServiceAccount para realizar la autenticación correspondiente y así acceder a los endpoints necesarios.
+Prometheus se despliega usando un Deployment. Antes de desplegar Prometheus, es necesario configurarle permisos suficientes para que pueda acceder a los endpoints necesarios y recopilar métricas. En un clúster K8s con RBAC configurado, esto se logra a través de ClusterRole/ServiceAccount/ClusterRoleBinding. Una vez configurado, Prometheus utiliza el ServiceAccount para realizar la autenticación correspondiente y así acceder a los endpoints necesarios.
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -281,9 +280,9 @@ subjects:
     namespace: monitoring-system
 ```
 
-Hasta ahora, tenemos todas las condiciones previas para lograr los objetivos de monitorización. Entonces, ¿cómo impulsamos el poderoso motor de Prometheus para aprovechar al máximo el entorno que hemos preparado y lograr la monitorización?
+Hasta ahora, tenemos todas las condiciones previas para lograr los objetivos de monitorización. Entonces, ¿cómo impulsamos el poderoso motor de Prometheus para aprovechar plenamente el entorno que hemos preparado y lograr la monitorización?
 
-Combinando la introducción anterior a la configuración de Prometheus, definimos cuatro objetivos de monitorización con cuatro `<scrape_config>`:
+Combinando la introducción a la configuración de Prometheus del apartado anterior, definimos cuatro objetivos de monitorización con cuatro `<scrape_config>`:
 
 Para node-exporter:
 
@@ -301,11 +300,11 @@ Para node-exporter:
       target_label: host_ip
 ```
 
-Como está dentro del clúster, no se necesita autenticación adicional ni acceso HTTPS.
+Dado que está dentro del clúster, no se necesita autenticación adicional ni acceso HTTPS.
 
 Aquí se explica más a fondo `<relabel_configs>` usando el ejemplo de node-exporter:
 
-Una etiqueta (label) es un atributo sobre un endpoint específico, y diferentes endpoints pueden tener diferentes valores bajo la misma etiqueta. Lo que hace `<relabel_config>` es realizar algunas operaciones de modificación y filtrado sobre estas etiquetas, permitiéndonos filtrar/modificar los endpoints deseados.
+Una etiqueta (label) es un atributo sobre un endpoint específico. Diferentes endpoints pueden tener diferentes valores bajo la misma etiqueta. Lo que hace `<relabel_config>` es realizar algunas operaciones de modificación y filtrado sobre estas etiquetas, permitiéndonos filtrar/modificar los endpoints deseados.
 
 ![img](https://0xc1.space/images/2020/11/05/node-exporter-target.png)
 
@@ -352,7 +351,7 @@ Para kubelet y cadvisor, la situación se vuelve un poco más compleja:
   scheme: https
 ```
 
-Observa que el `role` se convierte en `node`, por lo que Prometheus extraerá métricas de `<node_ip>:10250/metrics` por defecto. Aquí hay un elemento de configuración adicional `bearer_token_file`. Dado que kubelet no permite el acceso anónimo a sus datos de métricas de forma predeterminada, aquí es donde se usa el ServiceAccount configurado anteriormente. Para mayor comodidad, usamos `insecure_skip_verify: true` para omitir la autenticación TLS.
+Observa que el `role` se convierte en `node`, por lo que Prometheus recopilará métricas por defecto desde `<node_ip>:10250/metrics`. Aquí hay un elemento de configuración adicional `bearer_token_file`. Dado que kubelet no permite el acceso anónimo a sus datos de métricas de forma predeterminada, aquí es donde se usa el ServiceAccount configurado anteriormente. Para facilitar las cosas, usamos `insecure_skip_verify: true` para omitir la autenticación TLS.
 
 Para ApiServer, se vuelve un poco más complejo nuevamente:
 
@@ -375,7 +374,7 @@ Aquí filtramos los endpoints del propio ApiServer a través de `<relabel_config
 
 En este punto, hemos completado el despliegue de Prometheus y la configuración de monitorización para los endpoints objetivo.
 
-Los lectores interesados pueden modificar aún más la configuración para observar el comportamiento de Prometheus bajo diferentes configuraciones y profundizar su comprensión. Aquí hay una pequeña tarea: ¿Cómo podemos monitorizar un clúster K8s con Prometheus desplegado en bare-metal?
+Los lectores interesados pueden modificar aún más la configuración para observar el comportamiento de Prometheus bajo diferentes configuraciones y profundizar su comprensión. Aquí hay una pequeña tarea: ¿Cómo podemos monitorizar un clúster K8s con Prometheus desplegado en máquina física?
 
 ## Referencias
 
@@ -383,5 +382,5 @@ Los lectores interesados pueden modificar aún más la configuración para obser
 2. [Kube-prometheus manifests](https://github.com/prometheus-operator/kube-prometheus/tree/8b0eebdd08d8926649d27d2bc23acf31144c2f6b/manifests)
 3. [TSDB v3 design](https://fabxc.org/tsdb/)
 4. [Observabilidad: Conceptos y Mejores Prácticas](https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/observability/OBSV-101.md)
-5. [Conocimiento Inicial de Prometheus](https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/observability/OBSV-101.md)
+5. [Conocimiento Inicial de Prometheus](https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/prometheus/PROM-101.md)
 6. [RBAC on K8s](https://kubernetes.io/zh/docs/reference/access-authn-authz/rbac/)

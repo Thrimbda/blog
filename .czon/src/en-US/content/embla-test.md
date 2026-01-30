@@ -1,15 +1,19 @@
 ---
 "title": "Embla Test"
-"summary": "本文档是一个针对 Embla
-  轮播的测试页面，展示了如何嵌入多张图片并进行简单描述。文档中包含了五张示例图片，每张图片都有不同的颜色和编号，用于演示轮播效果。此外，文档还包含了一些文本\
-  内容，用于测试图片与文本的混合布局。整体而言，该文档旨在提供一个基础的测试环境，帮助用户理解和配置 Embla 轮播组件。"
+"summary": "This document is a test page for the Embla carousel, featuring
+  multiple placeholder images with descriptive text labels. It includes five
+  images displayed in sequence, with brief text content interspersed between
+  them. The page serves as a demonstration or testing environment for the Embla
+  carousel functionality, showcasing how images and text can be integrated. The
+  content concludes with an end-of-test marker, indicating its purpose as a
+  sample or trial page."
 "tags":
   - "Embla"
   - "carousel"
   - "test"
-  - "图片轮播"
-  - "前端测试"
-  - "示例"
+  - "images"
+  - "placeholder"
+  - "demo"
 "date": "2025-01-01"
 ---
 

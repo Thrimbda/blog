@@ -1,38 +1,37 @@
 ---
 "title": "Durmiendo para Soñar"
-"summary": "Este texto, desde la perspectiva de Bryan, describe cómo la tristeza, como una emoción retardada, vuelve a invadir su vida. La tristeza se describe como un fluido tibio que se agita en el pecho y corroe el corazón, mientras que los recuerdos actúan como una acción a distancia manipulando este 'caldo del abismo'. Al abrir la puerta del sótano lleno de recuerdos desechados, Bryan es golpeado por 'fantasmas' mezclados de placer y resentimiento, lo que lo hace perderse en el tiempo, incapaz de distinguir entre el pasado y el presente. El texto cita la 'Oda a la Melancolía' de Keats, profundizando aún más el tema de la tristeza entrelazada con la belleza y la alegría. Finalmente, Bryan se da cuenta de sus limitaciones como un ser unidimensional en el tiempo, pero aún así se convierte involuntariamente en un sacrificio para la tragedia en espiral, mostrando la desolación de la humanidad atrapada entre lo divino y lo bestial."
+"summary": "Este texto, desde la perspectiva de Bryan, describe la experiencia diferida de la tristeza. La tristeza es descrita como un fluido tibio que se agita en el pecho y corroe el corazón, como un dolor a fuego lento. Los recuerdos actúan como una acción a distancia, manipulando este caldo del abismo; al abrir la puerta de la bodega llena de recuerdos desechados, los fantasmas fermentados llegan con un olor a placer y resentimiento, haciendo que Bryan se pierda en el tiempo, incapaz de distinguir entre el pasado y el presente. El texto cita la 'Oda a la Melancolía' de Keats, profundizando aún más en el tema de la tristeza entrelazada con la belleza y la alegría. Finalmente, Bryan se da cuenta de la desolación de la humanidad atrapada entre los dioses y las bestias, pero aún así, involuntariamente, se convierte en un sacrificio para esta tragedia en espiral."
 "tags":
-  - "Estudio de Humanos Anormales"
+  - "Estudios sobre la Condición Humana Atípica"
   - "Ensayo"
   - "Tristeza"
   - "Recuerdos"
   - "Tiempo"
   - "Humanidad"
   - "Melancolía"
-  - "Literatura"
 "date": "2018-08-14"
 ---
 
 ---
-title: Durmiendo para Soñar
-date: 2018-08-14
+title: Sleeping to Dream
+date: 14 de agosto de 2018
 taxonomies:
   tags:
-    - Estudio de Humanos Anormales
+    - Estudios sobre la Condición Humana Atípica
     - Ensayo
 ---
 
-Bryan no imaginó que la tristeza también pudiera tener un efecto retardado: los fantasmas del pasado regresaron, y esta vez, ya no tenía fuerzas para resistir.
+Bryan no imaginaba que la **tristeza** también pudiera tener un efecto diferido: los fantasmas del pasado habían regresado, y esta vez, ya no tenía fuerzas para resistirse.
 
 <!--more-->
 
-Si tuviera que describir la forma de la **tristeza** en este momento, diría que es como un fluido, contenido en el pecho, que se agita al caminar, derramándose un poco para corroer su corazón. Al acostarse, comienza a fluir con calma, solo vibrando al ritmo de los latidos.
+Si tuviera que describir la forma de la **tristeza** en este momento, diría que es como un fluido, contenido en su pecho, que se agita al caminar, derramándose un poco para corroer su corazón. Al acostarse, comienza a fluir con calma, solo vibrando al ritmo de los latidos.
 
-En cuanto a la temperatura, definitivamente no es fría, es tibia, ligeramente más caliente que la temperatura del pecho, liberando calor constantemente para asar el corazón. La sensación es como... un fuego lento, cocinándose junto con el dolor, pero nunca termina de cocinarse por completo, y los nervios activos le recuerdan continuamente el sabor del **dolor**.
+En cuanto a la temperatura, definitivamente no es fría, es tibia, ligeramente más caliente que la del pecho, liberando calor constantemente para asar el corazón. La sensación es como... cocinar a fuego lento, guisando con dolor, pero nunca termina de cocinarse por completo. Los nervios activos le recuerdan continuamente el sabor del **dolor**.
 
-Solo hay una acción a distancia en este mundo: los **recuerdos** que manipulan este caldo del abismo desde la parte posterior de su cabeza. Después de fermentar durante más de un año junto con un destino tan inestable como la lluvia golpeando lentejas de agua, en el momento en que abrió la puerta de este sótano lleno de recuerdos desechados, los fantasmas ya fermentados, con su cálido y dulce aroma de placer y resentimiento, surgieron de repente y lo golpearon como un martillazo. Su reacción me pareció vergonzosa, o para ser más claro, tan vergonzosa que quería esconderme, nunca lo había visto así. Sincero, seguro de sí mismo, joven y franco, ahora perdido en el tiempo, no podía distinguir qué cosas ocurrían en el presente, cuáles habían sucedido hace dos años, y cuáles creía que habían ocurrido ayer pero en realidad ya habían pasado un año. Estos **recuerdos** que pensó haber perdido hace mucho tiempo durante el año pasado, finalmente se dispersaron de una forma tan clara y visible entre todos los demás recuerdos ordenados, infectando como un cáncer. Los recuerdos más antiguos y puros ahora también comenzaron a tener aristas severas, vagando por su mente.
+En este mundo solo hay una acción a distancia: los **recuerdos** que manipulan este caldo del abismo desde la parte posterior de su cabeza. Después de fermentar durante más de un año junto con un destino tan inestable como la lluvia golpeando lentejas de agua, en el momento en que abrió la puerta de esta bodega llena de recuerdos desechados, los fantasmas fermentados, con su cálido y dulce aroma de placer y resentimiento, irrumpieron de repente, golpeándolo como un martillazo. Su reacción me pareció vergonzosa, o para ser más claro, tan vergonzosa que no sabía dónde esconderse; nunca lo había visto así. Sincero, seguro de sí mismo, joven y franco, ahora estaba perdido en el tiempo, incapaz de distinguir qué cosas ocurrían en el presente, cuáles habían sucedido hace dos años, y cuáles creía que habían pasado ayer pero en realidad ya tenían un año. Estos **recuerdos** que durante el último año creía haber perdido hace tiempo, finalmente se dispersaron de una forma tan clara y visible entre todos los demás recuerdos ordenados, infectándolos como un cáncer. Los recuerdos más antiguos y puros ahora también comenzaban a tener aristas severas, vagando por su mente.
 
-Lamentablemente, el pobre Bryan es solo un triste ser unidimensional en el tiempo, sin saber que su cerebro en ciertos momentos solo actúa como un medio de transmisión, pasando información lejana a sí mismo después de innumerables iteraciones, mientras comete estupideces confiadas con un leve matiz de tristeza. En este momento finalmente se dio cuenta de la **desolación** de la humanidad atrapada entre los dioses y las bestias, pero aún así, sin control, se convirtió en un sacrificio para esta tragedia en espiral.
+Lamentablemente, el pobre Bryan es solo un triste ser unidimensional en el tiempo, sin saber que en ciertos momentos su cerebro solo actúa como un medio de transmisión, enviando información lejana a sí mismo después de innumerables iteraciones, mientras comete estupideces confiadas con un leve matiz de tristeza. En este momento finalmente se dio cuenta de la **desolación** de la humanidad atrapada entre los dioses y las bestias, pero aún así, sin control, se convirtió en un sacrificio para esta tragedia en espiral.
 
 ```
 Ode on Melancholy
@@ -74,4 +73,4 @@ His soul shalt taste the sadness of her might,
                And be among her cloudy trophies hung.
 ```
 
-En este momento, está lleno de desolación, el pobre Bryan.
+En este momento, está lleno de angustia y desesperación, el pobre Bryan.

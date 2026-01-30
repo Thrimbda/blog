@@ -1,12 +1,14 @@
 ---
 "title": "All blog posts"
-"summary": "该文档是一个博客文章列表页面，用于展示所有博客文章，并按日期进行排序。页面配置了分页显示，每页显示15篇文章，使用特定的页面模板。同时\
-  ，页面提供了标签列表的链接，方便用户按标签筛选文章。"
+"summary": "This document serves as an index page for all blog posts, configured
+  to display 15 posts per page sorted by date. It includes a reference to a tags
+  page for further categorization, making it easy for users to browse and filter
+  content. The page uses a specific template for consistent presentation."
 "tags":
   - "blog"
   - "posts"
-  - "list"
   - "tags"
+  - "pagination"
   - "archive"
 ---
 

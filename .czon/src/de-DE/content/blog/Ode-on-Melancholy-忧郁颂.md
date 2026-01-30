@@ -1,15 +1,14 @@
 ---
 "title": "Ode on Melancholy 忧郁颂"
-"summary": "Dieser Artikel präsentiert den englischen Originaltext von John Keats' Gedicht 'Ode on Melancholy' sowie die chinesische Übersetzung von Tu An. Der Autor erwähnt die Gründe für den Kauf einer Keats-Gedichtsammlung, darunter eine Zeile aus diesem Gedicht, die er in *Sweet Bitter* sah, und Keats' Einfluss auf die *Hyperion*-Serie. Das Gedicht ist in drei Teile gegliedert und erforscht die enge Verbindung zwischen Melancholie, Schönheit und Freude. Es weist darauf hin, dass sich Melancholie im Tempel der Freude verbirgt und nur von denen wahrgenommen werden kann, die Freude intensiv erleben. Der Artikel hilft Lesern durch den zweisprachigen Vergleich, Keats' poetische und philosophische Gedanken zu würdigen."
+"summary": "Dieser Artikel präsentiert das englische Originalgedicht „Ode on Melancholy“ des britischen Dichters John Keats sowie die chinesische Übersetzung von Tu An. In der Einleitung erwähnt der Autor, dass der Kauf einer Keats-Anthologie teilweise auf seine Vorliebe für den Satz `Verborgene ‚Melancholie‘ hat ihr erhabenes Heiligtum` aus der „Ode on Melancholy“ zurückgeht, sowie auf den Bezug zwischen Keats und der *Hyperion*-Serie. Das Gedicht selbst besteht aus drei Strophen. Es rät dem Leser, nicht durch Gifte oder Symbole des Todes der Melancholie zu entfliehen, sondern sich, wenn sie hereinbricht, stattdessen der Schönheit der Natur (wie der Morgenrose, dem Regenbogen, der Pfingstrose) oder den Augen der Geliebten zuzuwenden, um diese Emotion tief zu erfahren. Die zentrale These des Gedichts ist, dass Melancholie eng mit Schönheit und Freude verbunden ist. Nur wer Freude intensiv zu schmecken vermag, kann im Tempel der Freude das Heiligtum der Melancholie erblicken und zu ihrer Trophäe werden. Die Schlussfolgerung betont, dass Melancholie nicht gänzlich negativ ist, sondern Teil einer tiefen emotionalen Erfahrung, die mit vergänglicher Schönheit und flüchtiger Freude koexistiert."
 "tags":
   - "John Keats"
   - "Ode on Melancholy"
+  - "Ode an die Melancholie"
   - "Gedicht"
-  - "Poesie"
   - "Tu An"
-  - "Englisches Gedicht"
-  - "Chinesische Übersetzung"
-  - "Literatur"
+  - "Britische Literatur"
+  - "Romantik"
 "date": "2017-06-19"
 ---
 
@@ -21,7 +20,7 @@ taxonomies:
     - John Keats
 ---
 
-Heute ist meine Gedichtauswahl von John Keats angekommen. Ein Teil des Grundes, sie zu kaufen, war, dass ich in *Sweet Bitter* die Zeile `隐藏的“忧郁”有她至尊的神龛` („Verhüllte 'Melancholie' hat ihr erhabenes Heiligtum") aus der *Ode on Melancholy* gesehen habe. Ein weiterer Grund waren das unvollendete lange Gedicht *Hyperion* und Keats selbst, der durch alle vier Bände von *Die Hyperion-Gesänge* hindurch präsent ist. Schon lange habe ich mich danach gesehnt, und so schreibe ich heute diese *Ode on Melancholy* ab. Für die chinesische Version wird die Übersetzung von Tu An verwendet.
+Heute ist meine John-Keats-Anthologie angekommen. Ein Grund für den Kauf war, dass ich in *Sweet Bitter* die Zeile `Verborgene ‚Melancholie‘ hat ihr erhabenes Heiligtum` aus der *„Ode an die Melancholie“* gesehen habe. Ein weiterer Grund war das unvollendete Langgedicht *Hyperion* und die Tatsache, dass Keats selbst durch alle vier Bände von *„Die Hyperion-Gesänge“* weht. Schon lange habe ich mich danach gesehnt, und so schreibe ich heute diese *„Ode an die Melancholie“* ab. Die chinesische Fassung folgt der Übersetzung von Tu An.
 
 <!--more-->
 
@@ -56,7 +55,7 @@ A partner in your sorrow's mysteries;
 ```
 But when the melancholy fit shall fall
 
-  Sudden from heaven like a weeping cloud,
+  Sudden from heaven like a weeping cloud, 
 
 That fosters the droop-headed flowers all,
 
@@ -99,7 +98,7 @@ His soul shall taste the sadness of her might,
   And be among her cloudy trophies hung.
 ```
 
-## 忧郁颂 (Ode an die Melancholie)
+## 忧郁颂
 
 ### I
 

@@ -1,19 +1,18 @@
 ---
-"title": "源码阅读：Harbor-Operator"
-"summary": "本文是一篇关于Harbor-Operator源码的技术分析文章。作者从设计理念（如'Worse is
-  Better'）入手，介绍了Harbor-Operator在Kubernetes平台上使用Golang实现的特点。文章重点剖析了其核心架构，包括如何通过D\
-  ependency
-  Graph解决资源间依赖关系，以及如何通过一个统一的Controller实现十一个不同CRD的调谐逻辑，从而极大提高代码复用率。文章还详细解读了Resou\
-  rceManager和ProcessFunc等关键组件的设计，展示了Harbor-Operator在追求简单性、一致性和可维护性方面的优秀实践。"
+"title": "源码阅读：Harbor-Operator 设计与实现分析"
+"summary": "本文详细解析了 Harbor-Operator 的源码设计，重点探讨了其如何利用依赖图（Dependency
+  Graph）解决资源间依赖关系，通过统一的 Controller 实现多个 CRD 的代码复用，以及采用 ResourceManager
+  将配置代码化。文章指出 Harbor-Operator 在 Kubernetes 平台上，使用 Golang 语言，以 'Worse is Better'
+  理念实践简洁设计，牺牲灵活性以换取一致性和可维护性。作者通过分析关键模块如 HarborCluster、Dependency
+  Graph、Controller 和 ResourceManager，揭示了该项目的优秀设计哲学和实现细节。"
 "tags":
-  - "Operator"
+  - "Harbor-Operator"
   - "Kubernetes"
-  - "Golang"
   - "源码分析"
-  - "Harbor"
   - "设计模式"
   - "依赖图"
   - "Controller"
+  - "Golang"
 "date": "2022-01-30"
 ---
 
