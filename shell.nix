@@ -25,6 +25,7 @@ mkShell {
     export PATH=$HOME/.opencode/bin:$PATH
     export PUB=$(cat ~/.ssh/id_ed25519.pub 2>/dev/null || echo \'\')
     export OPENAI_API_KEY=$(sops -d secrets/api_key_encrypted || echo 'NONE')
+    alias czongen="npx czon build --lang zh-Hans --lang en-US --lang es-ES --lang ja-JP --lang de-DE"
   '';
 
   env = {

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "currentTask": "czon-embla-get-gcores-talkts",
+  "currentTask": "czon-css",
   "settings": {
     "autoRemind": true,
     "remindBeforeReset": true,
@@ -10,9 +10,16 @@
     {
       "id": "czon-embla-get-gcores-talkts",
       "name": "调研 CZON embla 轮播图并修改 get-gcores-talk.ts",
-      "status": "active",
+      "status": "paused",
       "createdAt": "2026-01-15T09:35:59.369Z",
-      "updatedAt": "2026-01-15T10:44:57.828Z"
+      "updatedAt": "2026-01-30T08:21:13.842Z"
+    },
+    {
+      "id": "czon-css",
+      "name": "实现 czon 风格 CSS 主题",
+      "status": "active",
+      "createdAt": "2026-01-30T08:21:13.842Z",
+      "updatedAt": "2026-01-30T08:49:02.327Z"
     }
   ],
   "pendingProposals": [
@@ -103,6 +110,78 @@
       "decidedAt": "2026-01-15T09:35:59.369Z",
       "decidedBy": "Claude",
       "createdTaskId": "czon-embla-get-gcores-talkts"
+    },
+    {
+      "id": "proposal-ml0m5wab-879018",
+      "name": "实现 czon 风格 CSS 主题",
+      "goal": "为 Zola 站点实现 czon 风格的 CSS 主题系统和页面布局",
+      "rationale": "用户希望将 czon 站点的自定义样式指南应用到当前 Zola 站点。czon 提供了完整的 CSS 变量系统（支持亮色/暗色模式）、品牌色自定义、内容宽度调整、代码块样式等特性。当前站点的 suCSS.css 已有基础主题系统，但需要升级以支持更丰富的主题定制功能。这是一个涉及多文件修改的复杂重构任务，需要设计文档指导实现。",
+      "points": [
+        "当前 suCSS.css 已有一套 CSS 变量系统",
+        "Czon 使用 Tailwind CSS 生成的样式",
+        "需要保持 zola 模板兼容性",
+        "主题切换需要考虑 zola 模板的数据传递"
+      ],
+      "scope": [
+        "static/css/suCSS.css",
+        "static/css/style.css",
+        "templates/*.html"
+      ],
+      "phases": [
+        {
+          "name": "设计阶段",
+          "tasks": [
+            {
+              "acceptance": "RFC 文档完成并通过用户确认",
+              "description": "创建 RFC 设计文档，分析 czon 样式指南并制定迁移方案"
+            },
+            {
+              "acceptance": "设计评审通过",
+              "description": "执行 design review 确保方案可行"
+            }
+          ]
+        },
+        {
+          "name": "实现阶段",
+          "tasks": [
+            {
+              "acceptance": "CSS 变量系统迁移完成",
+              "description": "重构 suCSS.css，集成 czon CSS 变量系统"
+            },
+            {
+              "acceptance": "主题切换功能可用",
+              "description": "实现亮色/暗色主题切换功能"
+            },
+            {
+              "acceptance": "页面布局适配完成",
+              "description": "调整 content 区域宽度和其他布局样式"
+            },
+            {
+              "acceptance": "代码块样式优化",
+              "description": "优化代码块显示效果"
+            },
+            {
+              "acceptance": "本地预览验证通过",
+              "description": "运行 zola serve 验证样式效果"
+            }
+          ]
+        },
+        {
+          "name": "验收阶段",
+          "tasks": [
+            {
+              "acceptance": "所有样式正常显示",
+              "description": "视觉回归测试"
+            }
+          ]
+        }
+      ],
+      "proposedBy": "Claude",
+      "proposedAt": "2026-01-30T08:21:05.849Z",
+      "status": "approved",
+      "decidedAt": "2026-01-30T08:21:13.842Z",
+      "decidedBy": "Claude",
+      "createdTaskId": "czon-css"
     }
   ]
 }
