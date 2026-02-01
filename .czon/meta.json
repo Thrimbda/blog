@@ -7,7 +7,26 @@
       "es-ES",
       "ja-JP",
       "de-DE"
-    ]
+    ],
+    "site": {
+      "baseUrl": "https://0xc1.space",
+      "title": "c1 的博客",
+      "gaID": "G-8DQTX42T4P",
+      "navLinks": [
+        {
+          "title": "首页",
+          "href": "index.html"
+        },
+        {
+          "title": "机组",
+          "href": "0xc1-crew-log.html"
+        },
+        {
+          "title": "关于",
+          "href": "about-wangsiyuan.html"
+        }
+      ]
+    }
   },
   "files": [
     {
