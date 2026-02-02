@@ -4,8 +4,8 @@
     "langs": [
       "zh-Hans",
       "en-US",
-      "es-ES",
       "ja-JP",
+      "es-ES",
       "de-DE"
     ],
     "site": {
@@ -2791,32 +2791,39 @@
       "nativeMarkdownHash": "8748ca65d71d735d8f2ad2f651988c21622b4950e812fe32e9628fe157d50692"
     },
     {
-      "hash": "89f8dfbb4f695b6ebf3ca4e80b1720aba16ee9061abf75a9b18235e000f879cd",
+      "hash": "28d70b0e58694e334846941aa321774aa50c6e8c60d6ddfaab7901ceaf5d6023",
       "path": "content/diary/diary-2026.md",
       "links": [
-        "#org7a37329",
-        "#orgdf95c10",
-        "#org46a8ace",
-        "#org4842a30",
-        "#orgd3c2dea",
-        "#orgfac9005",
-        "#org53cf87b",
-        "#org420a748",
-        "#org003bc35",
-        "#org50de801",
-        "#org5af0a91",
-        "#org69bd02c",
-        "#org1f09dca",
-        "#org8a10f91",
-        "#org1d94cd3",
-        "#org1ca275c",
-        "#org48ae323",
-        "#org7111e30",
-        "#org43faf05",
-        "#org8efa648",
-        "#orga5425d1",
-        "#orge845cbe",
-        "#org3411989",
+        "#org5ee6b7c",
+        "#org45f3c96",
+        "#org3212356",
+        "#orgedcd975",
+        "#orgd861555",
+        "#org6508baf",
+        "#orge794f8c",
+        "#org983b200",
+        "#org745e411",
+        "#orgd141df3",
+        "#org9073c8a",
+        "#org1a919b7",
+        "#orga4c58b1",
+        "#org40d8af6",
+        "#org8472491",
+        "#orge1fb7a5",
+        "#orgae54535",
+        "#orgd08b296",
+        "#org59008a3",
+        "#org0ff4e76",
+        "#org6827fba",
+        "#org884441d",
+        "#orge656d95",
+        "#orgef7cc98",
+        "#org1c7254e",
+        "#orgb6eb713",
+        "#org896307c",
+        "#org71706c0",
+        "#org28106d7",
+        "#orgf8b0675",
         "https://medium.com/ai-software-engineer/anthropic-new-guide-shows-how-to-build-quality-ai-agents-without-getting-fooled-29f378ec2609"
       ],
       "metadata": {
@@ -2857,7 +2864,7 @@
         }
       },
       "category": "Work Log",
-      "nativeMarkdownHash": "643d753450f222fba3e16d9df05a0e5c9a3e7cc967092a0fd742b12991507026"
+      "nativeMarkdownHash": "6d29861b1429e54c23755aabf1d76ad73b401d591f451153574be2e2c224fa41"
     }
   ]
 }
