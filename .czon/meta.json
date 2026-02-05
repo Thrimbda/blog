@@ -4,8 +4,8 @@
     "langs": [
       "zh-Hans",
       "en-US",
-      "ja-JP",
       "es-ES",
+      "ja-JP",
       "de-DE"
     ],
     "site": {
@@ -2791,80 +2791,403 @@
       "nativeMarkdownHash": "8748ca65d71d735d8f2ad2f651988c21622b4950e812fe32e9628fe157d50692"
     },
     {
-      "hash": "28d70b0e58694e334846941aa321774aa50c6e8c60d6ddfaab7901ceaf5d6023",
+      "hash": "e90d069f2c700a3983eb0ca08c872a9faa26d08e95643a6687e4e4a5031c607c",
       "path": "content/diary/diary-2026.md",
       "links": [
-        "#org5ee6b7c",
-        "#org45f3c96",
-        "#org3212356",
-        "#orgedcd975",
-        "#orgd861555",
-        "#org6508baf",
-        "#orge794f8c",
-        "#org983b200",
-        "#org745e411",
-        "#orgd141df3",
-        "#org9073c8a",
-        "#org1a919b7",
-        "#orga4c58b1",
-        "#org40d8af6",
-        "#org8472491",
-        "#orge1fb7a5",
-        "#orgae54535",
-        "#orgd08b296",
-        "#org59008a3",
-        "#org0ff4e76",
-        "#org6827fba",
-        "#org884441d",
-        "#orge656d95",
-        "#orgef7cc98",
-        "#org1c7254e",
-        "#orgb6eb713",
-        "#org896307c",
-        "#org71706c0",
-        "#org28106d7",
-        "#orgf8b0675",
+        "#org91ae5f8",
+        "#org14e7d23",
+        "#org987e5de",
+        "#orgb693af8",
+        "#orgbbe0c52",
+        "#org4c1530c",
+        "#org9670646",
+        "#org5b02719",
+        "#orgcd67dde",
+        "#org55c5e88",
+        "#org93f4e20",
+        "#orgabed47d",
+        "#orgdb4d8bb",
+        "#org1e207dc",
+        "#org7ceb7a6",
+        "#org1fc8b40",
+        "#orgbbaf9e2",
+        "#org3c32f7f",
+        "#org80b755f",
+        "#org80224a0",
+        "#org5b61931",
+        "#orga6c35c5",
+        "#org98d2dad",
+        "#org756539f",
+        "#org57e9aa8",
+        "#orgcaa37f7",
+        "#orgf2eb618",
+        "#org0700b38",
+        "#org1f4b65c",
+        "#org149a83d",
+        "#org6221927",
+        "#org68b3fdf",
+        "#org2f33c3f",
+        "#org43f0ced",
         "https://medium.com/ai-software-engineer/anthropic-new-guide-shows-how-to-build-quality-ai-agents-without-getting-fooled-29f378ec2609"
       ],
       "metadata": {
-        "title": "2026年工作日志：AI Agent协作与系统开发实践",
-        "description": "作者记录2026年1月的工作日志，重点探讨如何通过AI Agent提升工作效率，包括多智能体系统设计、集群安全与开发流程优化。",
-        "short_summary": "这篇工作日志记录了作者在2026年1月使用AI Agent进行系统开发和效率提升的实践。重点包括设计多智能体系统、处理集群安全、优化开发流程，并反思了AI协作中的挑战如意图对齐和知识库构建。日志也体现了作者对个人精力管理和情绪控制的思考。",
-        "audience": "对AI Agent协作、自动化开发、系统架构和个人效率管理感兴趣的开发者、工程师和技术管理者。",
+        "title": "2026 工作日志：AI 协作与个人效率探索",
+        "description": "作者记录 2026 年 1 月至 2 月初的工作日志，重点探讨与 AI 协作提升个人效率、多智能体系统设计及工具链优化。",
+        "short_summary": "作者通过工作日志记录与 AI 协作提升个人效率的实践，包括设计多智能体系统 Legionmind 和优化开发工具链。同时反思了 AI 协作的挑战，如意图对齐和知识库构建，并分享了技术问题解决和生活体验。",
+        "audience": "对 AI 协作、个人效率提升、工具链优化和技术反思感兴趣的开发者及知识工作者。",
         "key_points": [
-          "使用AI Agent（如opencode、legionmind）进行编码任务自动化，设计multi-agent系统提升自治能力。",
-          "处理集群安全问题，尝试迁移到NAT后面并设计http proxy机制。",
-          "反思AI协作的关键：意图对齐、分层验证、知识库构建和Agent评估（如pass@k指标）。",
-          "探讨瀑布流开发模式在AI协作中的适用性与局限性。",
-          "记录个人精力管理和情绪控制的心得，强调在多个上下文中工作的能力。",
-          "实践具体项目：node-unit抢占设计、vendor-gate earn账户接入、midas净值更新脚本。",
-          "关注AI Agent的服务可用性和汇报机制（如Citation Agent）。",
-          "通过工作日志进行心力和上下文管理，优化每日总结方式。",
-          "平衡工作与生活事件（如朋友来访、健康管理）。",
-          "思考如何为AI Agent提供项目上下文作为外置大脑（如AGENT.md文档）。"
+          "使用多智能体系统（Legionmind）与 AI 协作编码，提升开发效率。",
+          "反思 AI 协作的挑战：意图对齐、知识库构建和评估机制。",
+          "工具链优化：从 Emacs 切换到 Neovim，提升开发体验。",
+          "技术实践：解决集群安全问题、实现 HTTP 代理功能。",
+          "精力管理：认识到个人同时处理任务的能力有限，需优化调度。",
+          "购买 ChatGPT Pro 的经验分享，关注全球价格差异。",
+          "通过工作日志进行深度思考，强调记录过程本身的价值。",
+          "社交与生活平衡：参与桌游、锻炼等活动，影响工作节奏。",
+          "对 AI 能力演进的展望：未来 AI 可能自主设计工作流程。",
+          "持续迭代个人工作方法，追求效率与心力的平衡。"
         ],
-        "summary": "本文是2026年1月的工作日志，作者详细记录了每天的工作内容、想法和计划。核心围绕如何利用AI Agent（特别是多智能体系统）来提升个人工作效率和系统自治能力。日志中涉及多个技术实践，如重构opencode-feishu-notifier、开发legionmind-github-bridge、设计multi-agent模板、处理集群安全迁移（如NAT配置）、实现Yuan的http proxy机制等。作者反思了与AI协作的关键问题，包括意图对齐、分层验证、知识库构建和Agent评估方法，并探讨了瀑布流开发模式在AI协作中的适用性。日志还穿插了个人生活事件（如朋友来访、健康管理）和对情绪管理的思考。",
+        "summary": "本文是作者 2026 年 1 月至 2 月初的工作日志，详细记录了日常开发、思考与生活。核心围绕如何与 AI 协作提升个人效率，包括设计多智能体系统（Legionmind）、优化工作流（如使用 Neovim）、解决技术问题（如集群安全、HTTP 代理）。作者反思了 AI 协作的挑战（如意图对齐、知识库构建）和自身精力管理，并分享了工具使用体验（如 ChatGPT Pro 购买）和社交活动。日志体现了对技术迭代、效率提升和人生平衡的持续探索。",
         "slug": "2026-work-log-ai-agent-collaboration",
         "tags": [
           "工作日志",
-          "AI Agent",
+          "AI 协作",
           "多智能体系统",
-          "系统开发",
-          "集群安全",
           "效率提升",
-          "自动化",
-          "个人管理"
+          "工具链",
+          "个人成长",
+          "技术反思",
+          "Neovim"
         ],
-        "inferred_date": "2026-01-01",
+        "inferred_date": "2026-02-05",
         "inferred_lang": "zh-Hans",
         "tokens_used": {
-          "prompt": 4591,
-          "completion": 610,
-          "total": 5201
+          "prompt": 7597,
+          "completion": 520,
+          "total": 8117
         }
       },
       "category": "Work Log",
-      "nativeMarkdownHash": "6d29861b1429e54c23755aabf1d76ad73b401d591f451153574be2e2c224fa41"
+      "nativeMarkdownHash": "867179c0e02a5f3dffe1982472751195792b86fc980ea5e5e5b9f35e51eba31d"
     }
-  ]
+  ],
+  "categoryTranslations": {
+    "Blog Setup": {
+      "zh-Hans": "博客设置",
+      "en-US": "Blog Setup",
+      "es-ES": "Configuración del Blog",
+      "ja-JP": "ブログ設定",
+      "de-DE": "Blog-Einrichtung"
+    },
+    "Blog Introduction": {
+      "zh-Hans": "博客介绍",
+      "en-US": "Blog Introduction",
+      "es-ES": "Introducción al Blog",
+      "ja-JP": "ブログ紹介",
+      "de-DE": "Blog-Einführung"
+    },
+    "Personal Introduction": {
+      "zh-Hans": "个人介绍",
+      "en-US": "Personal Introduction",
+      "es-ES": "Introducción Personal",
+      "ja-JP": "自己紹介",
+      "de-DE": "Persönliche Vorstellung"
+    },
+    "Technical Demo": {
+      "zh-Hans": "技术演示",
+      "en-US": "Technical Demo",
+      "es-ES": "Demostración Técnica",
+      "ja-JP": "技術デモ",
+      "de-DE": "Technische Demo"
+    },
+    "Personal Journal": {
+      "zh-Hans": "个人日志",
+      "en-US": "Personal Journal",
+      "es-ES": "Diario Personal",
+      "ja-JP": "個人日誌",
+      "de-DE": "Persönliches Tagebuch"
+    },
+    "Blog Index": {
+      "zh-Hans": "博客索引",
+      "en-US": "Blog Index",
+      "es-ES": "Índice del Blog",
+      "ja-JP": "ブログ索引",
+      "de-DE": "Blog-Index"
+    },
+    "Personal Reflection": {
+      "zh-Hans": "个人反思",
+      "en-US": "Personal Reflection",
+      "es-ES": "Reflexión Personal",
+      "ja-JP": "個人の振り返り",
+      "de-DE": "Persönliche Reflexion"
+    },
+    "Life Philosophy": {
+      "zh-Hans": "人生哲学",
+      "en-US": "Life Philosophy",
+      "es-ES": "Filosofía de Vida",
+      "ja-JP": "人生哲学",
+      "de-DE": "Lebensphilosophie"
+    },
+    "Entrepreneurship": {
+      "zh-Hans": "创业",
+      "en-US": "Entrepreneurship",
+      "es-ES": "Emprendimiento",
+      "ja-JP": "起業",
+      "de-DE": "Unternehmertum"
+    },
+    "Personal Development": {
+      "zh-Hans": "个人发展",
+      "en-US": "Personal Development",
+      "es-ES": "Desarrollo Personal",
+      "ja-JP": "自己啓発",
+      "de-DE": "Persönliche Entwicklung"
+    },
+    "Friendship": {
+      "zh-Hans": "友谊",
+      "en-US": "Friendship",
+      "es-ES": "Amistad",
+      "ja-JP": "友情",
+      "de-DE": "Freundschaft"
+    },
+    "Sociology": {
+      "zh-Hans": "社会学",
+      "en-US": "Sociology",
+      "es-ES": "Sociología",
+      "ja-JP": "社会学",
+      "de-DE": "Soziologie"
+    },
+    "Travel": {
+      "zh-Hans": "旅行",
+      "en-US": "Travel",
+      "es-ES": "Viajes",
+      "ja-JP": "旅行",
+      "de-DE": "Reisen"
+    },
+    "Programming": {
+      "zh-Hans": "编程",
+      "en-US": "Programming",
+      "es-ES": "Programación",
+      "ja-JP": "プログラミング",
+      "de-DE": "Programmierung"
+    },
+    "Movie Review": {
+      "zh-Hans": "电影评论",
+      "en-US": "Movie Review",
+      "es-ES": "Reseña de Película",
+      "ja-JP": "映画レビュー",
+      "de-DE": "Filmkritik"
+    },
+    "Project Reflection": {
+      "zh-Hans": "项目反思",
+      "en-US": "Project Reflection",
+      "es-ES": "Reflexión del Proyecto",
+      "ja-JP": "プロジェクト振り返り",
+      "de-DE": "Projektreflexion"
+    },
+    "Technical Blog": {
+      "zh-Hans": "技术博客",
+      "en-US": "Technical Blog",
+      "es-ES": "Blog Técnico",
+      "ja-JP": "技術ブログ",
+      "de-DE": "Technischer Blog"
+    },
+    "Self-Reflection": {
+      "zh-Hans": "自我反思",
+      "en-US": "Self-Reflection",
+      "es-ES": "Autorreflexión",
+      "ja-JP": "自己反省",
+      "de-DE": "Selbstreflexion"
+    },
+    "Design Patterns": {
+      "zh-Hans": "设计模式",
+      "en-US": "Design Patterns",
+      "es-ES": "Patrones de Diseño",
+      "ja-JP": "デザインパターン",
+      "de-DE": "Entwurfsmuster"
+    },
+    "Anime Review": {
+      "zh-Hans": "动漫评论",
+      "en-US": "Anime Review",
+      "es-ES": "Reseña de Anime",
+      "ja-JP": "アニメレビュー",
+      "de-DE": "Anime-Kritik"
+    },
+    "Theater Review": {
+      "zh-Hans": "戏剧评论",
+      "en-US": "Theater Review",
+      "es-ES": "Reseña de Teatro",
+      "ja-JP": "演劇レビュー",
+      "de-DE": "Theaterkritik"
+    },
+    "Philosophy": {
+      "zh-Hans": "哲学",
+      "en-US": "Philosophy",
+      "es-ES": "Filosofía",
+      "ja-JP": "哲学",
+      "de-DE": "Philosophie"
+    },
+    "Personal Growth": {
+      "zh-Hans": "个人成长",
+      "en-US": "Personal Growth",
+      "es-ES": "Crecimiento Personal",
+      "ja-JP": "個人の成長",
+      "de-DE": "Persönliches Wachstum"
+    },
+    "University Life": {
+      "zh-Hans": "大学生活",
+      "en-US": "University Life",
+      "es-ES": "Vida Universitaria",
+      "ja-JP": "大学生活",
+      "de-DE": "Universitätsleben"
+    },
+    "Open Source": {
+      "zh-Hans": "开源",
+      "en-US": "Open Source",
+      "es-ES": "Código Abierto",
+      "ja-JP": "オープンソース",
+      "de-DE": "Open Source"
+    },
+    "Project Management": {
+      "zh-Hans": "项目管理",
+      "en-US": "Project Management",
+      "es-ES": "Gestión de Proyectos",
+      "ja-JP": "プロジェクト管理",
+      "de-DE": "Projektmanagement"
+    },
+    "Web Development": {
+      "zh-Hans": "网站开发",
+      "en-US": "Web Development",
+      "es-ES": "Desarrollo Web",
+      "ja-JP": "ウェブ開発",
+      "de-DE": "Webentwicklung"
+    },
+    "Education": {
+      "zh-Hans": "教育",
+      "en-US": "Education",
+      "es-ES": "Educación",
+      "ja-JP": "教育",
+      "de-DE": "Bildung"
+    },
+    "Graduation": {
+      "zh-Hans": "毕业",
+      "en-US": "Graduation",
+      "es-ES": "Graduación",
+      "ja-JP": "卒業",
+      "de-DE": "Abschluss"
+    },
+    "Learning Reflection": {
+      "zh-Hans": "学习反思",
+      "en-US": "Learning Reflection",
+      "es-ES": "Reflexión de Aprendizaje",
+      "ja-JP": "学習振り返り",
+      "de-DE": "Lernreflexion"
+    },
+    "System Design": {
+      "zh-Hans": "系统设计",
+      "en-US": "System Design",
+      "es-ES": "Diseño de Sistemas",
+      "ja-JP": "システム設計",
+      "de-DE": "Systemdesign"
+    },
+    "Systems Thinking": {
+      "zh-Hans": "系统思考",
+      "en-US": "Systems Thinking",
+      "es-ES": "Pensamiento Sistémico",
+      "ja-JP": "システム思考",
+      "de-DE": "Systemdenken"
+    },
+    "Technical Tutorial": {
+      "zh-Hans": "技术教程",
+      "en-US": "Technical Tutorial",
+      "es-ES": "Tutorial Técnico",
+      "ja-JP": "技術チュートリアル",
+      "de-DE": "Technisches Tutorial"
+    },
+    "Paper Notes": {
+      "zh-Hans": "论文笔记",
+      "en-US": "Paper Notes",
+      "es-ES": "Notas de Artículo",
+      "ja-JP": "論文ノート",
+      "de-DE": "Artikelnotizen"
+    },
+    "Source Code Analysis": {
+      "zh-Hans": "源代码分析",
+      "en-US": "Source Code Analysis",
+      "es-ES": "Análisis de Código Fuente",
+      "ja-JP": "ソースコード分析",
+      "de-DE": "Quellcodeanalyse"
+    },
+    "Life Reflection": {
+      "zh-Hans": "生活反思",
+      "en-US": "Life Reflection",
+      "es-ES": "Reflexión de Vida",
+      "ja-JP": "生活の振り返り",
+      "de-DE": "Lebensreflexion"
+    },
+    "Poetry": {
+      "zh-Hans": "诗歌",
+      "en-US": "Poetry",
+      "es-ES": "Poesía",
+      "ja-JP": "詩",
+      "de-DE": "Poesie"
+    },
+    "Personal Essay": {
+      "zh-Hans": "个人随笔",
+      "en-US": "Personal Essay",
+      "es-ES": "Ensayo Personal",
+      "ja-JP": "個人随筆",
+      "de-DE": "Persönlicher Essay"
+    },
+    "Poetry Analysis": {
+      "zh-Hans": "诗歌分析",
+      "en-US": "Poetry Analysis",
+      "es-ES": "Análisis de Poesía",
+      "ja-JP": "詩の分析",
+      "de-DE": "Poesieanalyse"
+    },
+    "Productivity Tools": {
+      "zh-Hans": "效率工具",
+      "en-US": "Productivity Tools",
+      "es-ES": "Herramientas de Productividad",
+      "ja-JP": "生産性ツール",
+      "de-DE": "Produktivitätstools"
+    },
+    "Diary Index": {
+      "zh-Hans": "日记索引",
+      "en-US": "Diary Index",
+      "es-ES": "Índice de Diario",
+      "ja-JP": "日記索引",
+      "de-DE": "Tagebuchindex"
+    },
+    "Work Log": {
+      "zh-Hans": "工作日志",
+      "en-US": "Work Log",
+      "es-ES": "Registro de Trabajo",
+      "ja-JP": "作業記録",
+      "de-DE": "Arbeitsprotokoll"
+    }
+  },
+  "navLinkTranslations": {
+    "首页": {
+      "zh-Hans": "首页",
+      "en-US": "Home",
+      "es-ES": "Inicio",
+      "ja-JP": "ホーム",
+      "de-DE": "Startseite"
+    },
+    "机组": {
+      "zh-Hans": "机组",
+      "en-US": "Crew",
+      "es-ES": "Tripulación",
+      "ja-JP": "乗組員",
+      "de-DE": "Besatzung"
+    },
+    "关于": {
+      "zh-Hans": "关于",
+      "en-US": "About",
+      "es-ES": "Acerca de",
+      "ja-JP": "について",
+      "de-DE": "Über"
+    }
+  }
 }
