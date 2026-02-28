@@ -1,19 +1,111 @@
 ---
-"title": "源码阅读：Harbor-Operator 设计与实现分析"
-"summary": "本文详细解析了 Harbor-Operator 的源码设计，重点探讨了其如何利用依赖图（Dependency
-  Graph）解决资源间依赖关系，通过统一的 Controller 实现多个 CRD 的代码复用，以及采用 ResourceManager
-  将配置代码化。文章指出 Harbor-Operator 在 Kubernetes 平台上，使用 Golang 语言，以 'Worse is Better'
-  理念实践简洁设计，牺牲灵活性以换取一致性和可维护性。作者通过分析关键模块如 HarborCluster、Dependency
-  Graph、Controller 和 ResourceManager，揭示了该项目的优秀设计哲学和实现细节。"
-"tags":
-  - "Harbor-Operator"
-  - "Kubernetes"
-  - "源码分析"
-  - "设计模式"
-  - "依赖图"
-  - "Controller"
-  - "Golang"
-"date": "2022-01-30"
+title: 源码阅读：Harbor-Operator
+date: 2022-01-30
+taxonomies:
+  tags:
+    - Operator
+    - 技术
+extra:
+  toc:
+    - level: 1
+      title: 开始前的准备
+      id: orgdafefdb
+      permalink: orgdafefdb
+      children:
+        - level: 2
+          title: 为什么是 Harbor-Operator
+          id: org081213e
+          permalink: org081213e
+          children:
+            - level: 3
+              title: Worse is Better?
+              id: org55a74c9
+              permalink: org55a74c9
+              children:
+                - level: 4
+                  title: The right thing
+                  id: orgbebeeee
+                  permalink: orgbebeeee
+                - level: 4
+                  title: Worse is better
+                  id: org948c614
+                  permalink: org948c614
+            - level: 3
+              title: Golang - the language
+              id: org55a74c9
+              permalink: org55a74c9
+            - level: 3
+              title: Kubernetes - the platform
+              id: org2432232
+              permalink: org2432232
+    - level: 1
+      title: 目标
+      id: org6815286
+      permalink: org6815286
+    - level: 1
+      title: 源码阅读
+      id: org1198d5f
+      permalink: org1198d5f
+      children:
+        - level: 2
+          title: 静态结构
+          id: orgfc0f08e
+          permalink: orgfc0f08e
+          children:
+            - level: 3
+              title: 目录结构
+              id: orgb32de77
+              permalink: orgb32de77
+            - level: 3
+              title: 关键接口
+              id: org290c6c2
+              permalink: org290c6c2
+            - level: 3
+              title: 系统架构
+              id: org41c8944
+              permalink: org41c8944
+        - level: 2
+          title: 抓大放小：HarborCluster
+          id: orgd9c3526
+          permalink: orgd9c3526
+        - level: 2
+          title: 解决资源间的依赖关系： Dependency Graph
+          id: org75cbb07
+          permalink: org75cbb07
+          children:
+            - level: 3
+              title: AddResource
+              id: org4cb9f3a
+              permalink: org4cb9f3a
+            - level: 3
+              title: Run
+              id: orgdcd001c
+              permalink: orgdcd001c
+            - level: 3
+              title: 初始化
+              id: org73ef8b0
+              permalink: org73ef8b0
+        - level: 2
+          title: 将代码复用率提高到极致：Controller
+          id: orgbd581d5
+          permalink: orgbd581d5
+          children:
+            - level: 3
+              title: 数据结构
+              id: org73ef8b0
+              permalink: org73ef8b0
+            - level: 3
+              title: Reconcile 逻辑
+              id: orgdcd001c
+              permalink: orgdcd001c
+        - level: 2
+          title: 代码即配置：ResourceManager
+          id: orgdcd001c
+          permalink: orgdcd001c
+        - level: 2
+          title: 最后的迷团：ProcessFunc
+          id: orgdcd001c
+          permalink: orgdcd001c
 ---
 
 <!--more-->

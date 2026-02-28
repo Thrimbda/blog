@@ -1,18 +1,4 @@
 ---
-"title": "Ode on Melancholy 忧郁颂"
-"summary": "Dieser Artikel präsentiert das englische Originalgedicht „Ode on Melancholy“ des britischen Dichters John Keats sowie die chinesische Übersetzung von Tu An. In der Einleitung erwähnt der Autor, dass der Kauf einer Keats-Anthologie teilweise auf seine Vorliebe für den Satz `Verborgene ‚Melancholie‘ hat ihr erhabenes Heiligtum` aus der „Ode on Melancholy“ zurückgeht, sowie auf den Bezug zwischen Keats und der *Hyperion*-Serie. Das Gedicht selbst besteht aus drei Strophen. Es rät dem Leser, nicht durch Gifte oder Symbole des Todes der Melancholie zu entfliehen, sondern sich, wenn sie hereinbricht, stattdessen der Schönheit der Natur (wie der Morgenrose, dem Regenbogen, der Pfingstrose) oder den Augen der Geliebten zuzuwenden, um diese Emotion tief zu erfahren. Die zentrale These des Gedichts ist, dass Melancholie eng mit Schönheit und Freude verbunden ist. Nur wer Freude intensiv zu schmecken vermag, kann im Tempel der Freude das Heiligtum der Melancholie erblicken und zu ihrer Trophäe werden. Die Schlussfolgerung betont, dass Melancholie nicht gänzlich negativ ist, sondern Teil einer tiefen emotionalen Erfahrung, die mit vergänglicher Schönheit und flüchtiger Freude koexistiert."
-"tags":
-  - "John Keats"
-  - "Ode on Melancholy"
-  - "Ode an die Melancholie"
-  - "Gedicht"
-  - "Tu An"
-  - "Britische Literatur"
-  - "Romantik"
-"date": "2017-06-19"
----
-
----
 title: Ode on Melancholy 忧郁颂
 date: 2017-06-19
 taxonomies:
@@ -20,7 +6,7 @@ taxonomies:
     - John Keats
 ---
 
-Heute ist meine John-Keats-Anthologie angekommen. Ein Grund für den Kauf war, dass ich in *Sweet Bitter* die Zeile `Verborgene ‚Melancholie‘ hat ihr erhabenes Heiligtum` aus der *„Ode an die Melancholie“* gesehen habe. Ein weiterer Grund war das unvollendete Langgedicht *Hyperion* und die Tatsache, dass Keats selbst durch alle vier Bände von *„Die Hyperion-Gesänge“* weht. Schon lange habe ich mich danach gesehnt, und so schreibe ich heute diese *„Ode an die Melancholie“* ab. Die chinesische Fassung folgt der Übersetzung von Tu An.
+Heute ist meine Auswahl von Keats' Gedichten angekommen. Ein Grund, sie zu kaufen, war, dass ich in *Sweet Bitter* eine Zeile aus der *Ode on Melancholy* gesehen habe: `隐藏的“忧郁”有她至尊的神龛` („Verhüllte Melancholie hat ihr erhabenes Heiligtum“). Ein weiterer Grund waren das unvollendete Langgedicht *Hyperion* und die Tatsache, dass Keats selbst durch alle vier Bände von *Die Hyperion-Gesänge* hindurch präsent ist. Schon lange habe ich mich danach gesehnt, und so habe ich heute diese *Ode on Melancholy* abgeschrieben. Die chinesische Übersetzung stammt von Tu An.
 
 <!--more-->
 
@@ -98,76 +84,76 @@ His soul shall taste the sadness of her might,
   And be among her cloudy trophies hung.
 ```
 
-## 忧郁颂
+## Ode an die Melancholie
 
 ### I
 
 ```
-不呵！不要到忘川去，也不要拧绞
+Nein, nein, geh nicht zum Lethe, dreh auch nicht
 
-  根深的乌头，把它的毒汁当美酒；
+  Den Eisenhut, tiefwurzelnd, zu gift'gem Wein;
 
-别让你苍白的额头把龙葵野草——
+Lass nicht dein bleich Gesicht vom Nachtschatten küssen,
 
-  普罗赛嫔红葡萄的亲吻承受；
+  Der Proserpina rubinrote Traube sein;
 
-别用紫杉的坚果做你的念珠，
+Mach nicht aus Eibenbeeren deinen Rosenkranz,
 
-  别让甲虫和墓畔的飞蛾变为
+  Lass Käfer nicht, nicht Totenschmetterling
 
-    你忧伤的塞吉，别让批羽的鸱鸮
+    Dein traurig Psyche sein, nicht flaumig Eule
 
-分享你心底隐秘的悲哀愁苦；
+Teilhaber deines Kummers Geheimnis sein;
 
-  阴影来亲近阴影会困倦嗜睡，
+  Denn Schatten naht dem Schatten schläfrig sich,
 
-    会把灵魂中清醒的创痛淹没掉。
+    Und ertränkt der Seele wache Qual und Pein.
 ```
 
 ### II
 
 ```
-但一旦忧郁的意绪突然来到，
+Doch wenn der Melancholie Anfall fällt
 
-  有如阴云洒着泪自天而降，
+  Plötzlich vom Himmel wie ein weinend' Wolke,
 
-云雨滋润着垂头的花花草草，
+Die alle hängenden Blumen nährt und hält,
 
-  四月的雾衣把一脉青山隐藏；
+  Und grüne Hügel in Aprils Hülle hüllt;
 
-你就该让哀愁痛饮早晨的玫瑰，
+Dann sättige dein Leid an einer Morgenrose,
 
-  或者饱餐海浪上空的虹彩，
+  Oder am Regenbogen salz'ger Sandeswelle,
 
-    或者享足姹紫嫣红的牡丹；
+    Oder am Reichtum kugelrunder Pfingstrosen;
 
-若是你钟情的女郎娇嗔颦眉，
+Oder zeigt deine Herrin reichen Zorn zur Stelle,
 
-  就抓住她的酥手，让她说痛快，
+  Fang ihre weiche Hand, lass sie sich ausweinen,
 
-    并深深品尝她举世无双的慧眼。
+    Und nähre tief, tief dich an ihren einzig' Augen.
 ```
 
 ### III
 
 ```
-她与“美”共处——那必将消亡的“美”；
+Sie wohnt bei Schönheit – Schönheit, die vergeht;
 
-  还有“喜悦”，他的手总是贴着嘴唇
+  Und Freude, deren Hand stets an den Lippen weilt,
 
-说再见；令人痛苦的近邻“欣慰”，
+Lebwohl zu sagen; und bei schmerzhaft Lust, die steht
 
-  只要蜂蜜啜一口，就变成毒鸠：
+  Bereit, zu Gift zu werden, wenn der Bienenmund sie teilt:
 
-啊，就在“快乐”的庙堂之上，
+Ja, in des Wonnentempels heiligem Raum
 
-  隐藏的“忧郁”有她至尊的神龛，
+  Hat sich verhüllte Melancholie ihr höchstes Heiligtum,
 
-    虽然，只有舌头灵、味觉良好、
+    Gesehen nur von dem, dessen angestrengte Zung'
 
-  能咬破“快乐”果的人才能够瞧见：
+  Der Freude Traube an dem feinen Gaumen sprengt;
 
-他灵魂一旦把“忧郁”的威力品尝，
+Seine Seele wird die Traurigkeit von ihrer Macht erschmecken,
 
-  便成为她的战利品，悬挂在云霄。
+  Und unter ihren wolk'gen Trophäen hängen bleiben.
 ```

@@ -1,19 +1,12 @@
 ---
-"title": "MapReduce 论文笔记"
-"summary": "本文是一篇关于MapReduce论文的笔记，详细阐述了MapReduce的起源、实现细节、容错机制和性能表现。文章指出，MapRedu\
-  ce是为了解决大规模数据处理的并行计算、数据分发和容错等挑战而提出的抽象模型，借鉴了函数式编程中的Map和Reduce概念。实现部分包括执行逻辑、数据结构\
-  和容错处理，其中Master调度任务，Worker执行Map和Reduce操作，并通过备份任务解决“掉队者”问题。性能测试展示了在grep和排序任务中的高\
-  效性。总结认为MapReduce是一个底气十足的分布式计算框架。"
-"tags":
-  - "MapReduce"
-  - "分布式系统"
-  - "论文笔记"
-  - "容错"
-  - "并行计算"
-  - "数据处理"
-  - "Google"
-  - "大数据"
-"date": "2019-11-25"
+title: MapReduce 论文笔记
+date: 2019-11-25
+taxonomies:
+  tags:
+    - 技术
+    - 分布式系统
+    - 论文笔记
+    - MapReduce
 ---
 
 ## 起源

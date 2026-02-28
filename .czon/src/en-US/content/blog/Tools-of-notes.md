@@ -1,20 +1,9 @@
 ---
-"title": "Tools of notes"
-"summary": "本文作者回顾了自己尝试多种时间记录和笔记工具的过程，包括 Excel、自定义 JSON
-  模式、自动时间追踪应用等，但均未成功形成习惯。在朋友的建议下，作者开始认真考虑使用 Emacs 的 Org Mode，并作为 Vim 用户选择了
-  Spacemacs 以兼容 Vim 键绑定。作者分享了使用 Org Mode
-  记录每日笔记的体验，同时提到输入中文时的不便，因此改用英文写作。文章还探讨了工具的历史背景和设计哲学，并表达了在博客中使用 Org Mode 替代
-  Markdown 的未解难题。"
-"tags":
-  - "Tools"
-  - "笔记"
-  - "Org Mode"
-  - "Spacemacs"
-  - "时间记录"
-  - "Emacs"
-  - "Vim"
-  - "效率"
-"date": "2021-02-22"
+date: 2021-02-22
+title: Tools of notes
+taxonomies:
+  tags:
+    - Tools
 ---
 
 Hi everyone! It's been a looooong time since we met the last time, how have you been?

@@ -1,18 +1,13 @@
 ---
-"title": "RDD 论文笔记"
-"summary": "本文是对 Resilient Distributed Datasets (RDDs) 论文的笔记，分析了 RDD
-  的设计动机、核心概念和优势。RDD 作为一种分布式内存抽象，通过不可变、惰性计算的特性，支持 transformation 和 action 操作，并利用
-  DAG 表示依赖关系。它牺牲了细粒度操作，换取了容错性、通用性和性能，在迭代计算中相比 Hadoop 有显著提升（如 20-40 倍）。文章还概述了
-  Spark 的实现和评估结果，指出 RDD 适用于粗粒度计算，但不适合细粒度异步任务。"
-"tags":
-  - "RDD"
-  - "Spark"
-  - "分布式系统"
-  - "论文笔记"
-  - "内存抽象"
-  - "迭代计算"
-  - "容错性"
-"date": "2020-10-29"
+title: RDD 论文笔记
+date: 2020-10-29
+taxonomies:
+  tags:
+    - 技术
+    - 分布式系统
+    - 论文笔记
+    - RDD
+    - Spark
 ---
 
 Resilient Distributed Datasets (RDDs) 就是一个对分布式系统的内存抽象。

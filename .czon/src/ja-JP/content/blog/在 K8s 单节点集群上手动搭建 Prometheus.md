@@ -1,49 +1,44 @@
 ---
-"title": "K8sシングルノードクラスタで手動でPrometheusを構築する"
-"summary": "本稿は技術チュートリアルであり、Helm ChartやPrometheus Operatorなどの簡易ツールに依存せず、Kubernetesシングルノードクラスタ上でPrometheus監視システムを手動でデプロイする方法を読者に指導することを目的としています。記事はまず、ベアメタルでの概念実証を通じてPrometheusの基本的な動作と設定を紹介し、その後、K8s環境でのデプロイに必要なNamespace、DaemonSet、ConfigMap、ServiceAccount、ClusterRoleなどの各種リソースについて詳細に説明します。中核部分では、Prometheus自身、Node Exporter、Kubelet、cAdvisor、API Serverなど複数のターゲットを監視するために、Prometheusのサービスディスカバリ（特にkubernetes_sd_config）とリラベル設定（relabel_config）をどのように構成するかを解説しています。記事はまた、RBAC権限設定の重要性を強調し、具体的なYAML設定例を提供します。最後に、著者は実戦で蓄積したリソース宣言の集合を共有し、読者がデプロイを完了するのを支援します。"
-"tags":
-  - "可観測性"
-  - "Prometheus"
-  - "Kubernetes"
-  - "監視"
-  - "技術チュートリアル"
-  - "サービスディスカバリ"
-  - "RBAC"
-"date": "2020-11-05"
+date: 2020-11-05
+title: K8s シングルノードクラスタ上での Prometheus 手動構築
+taxonomies:
+  tags:
+    - オブザーバビリティ
+    - Prometheus
+    - 技術
 ---
-
-> 本稿の対象読者は、監視システムに触れ始めたばかりで、Prometheusについてほとんど知識がない方々（本稿を執筆した時点の筆者もその一人でした）です。
+> この記事の対象読者は、監視システムに触れ始めたばかりの方や、Prometheus についてあまり詳しくない方（本記事を執筆した時点の筆者も含む）です。
 >
 >
 >
-> 本稿でPrometheusを構築するために使用した環境：
+> 本記事で Prometheus を構築するために使用した環境：
 >
 > - K8s バージョン: 1.19.3
 > - Prometheus バージョン: 2.22.0
 > - オペレーティングシステム: Archlinux at 2020.11
-> - hostsを設定し、Devboxのドメイン名をdevboxとしています
+> - hosts ファイルを設定済み、Devbox のドメイン名は devbox
 >
-> ⚠️ ご注意ください：本稿で列挙されているコマンドライン引数は、現在の環境（例えばPrometheusのバイナリパッケージのバージョンなど）に応じて若干調整する必要があります。
+> ⚠️ ご注意ください：本記事で記載されているコマンドライン引数は、現在の環境に合わせて若干調整する必要があります（例：Prometheus バイナリパッケージのバージョンなど）。
 >
 >
 >
-> 以下に、推奨される前提読書項目をいくつか挙げます：
+> 以下に、推奨する事前読了項目をいくつか挙げます：
 >
-> 1. [可観測性：概念とベストプラクティス](https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/observability/OBSV-101.md) 可観測性に関する様々な基本概念を紹介しています。
-> 2. [Prometheusの初歩的な理解](https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/prometheus/PROM-101.md) Prometheusプロジェクトを紹介しています。
-> 3. [Prometheus公式サイトの紹介](https://prometheus.io/docs/introduction/overview/)
+> 1. [オブザーバビリティ：概念とベストプラクティス](https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/observability/OBSV-101.md) オブザーバビリティに関する基本的な概念を紹介しています。
+> 2. [Prometheus の初歩的な理解](https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/prometheus/PROM-101.md) Prometheus プロジェクトを紹介しています。
+> 3. [Prometheus 公式サイトの紹介](https://prometheus.io/docs/introduction/overview/)
 
 ## 目標
 
-K8s上で手動でPrometheusを構築するにあたり、ここでは2点の規約を設けます。
+K8s 上で手動で Prometheus を構築するにあたり、ここでは2つの規約を設けます。
 
-1. 意図的にHelm-ChartやPrometheus Operatorなどの簡易デプロイ方法を使用しないこと。参考までに以下を列挙します：
-   1. Prometheusコミュニティがメンテナンスする [Helm chart](https://github.com/prometheus-community/helm-charts)
+1. 意図的に Helm-Chart や Prometheus Operator などの迅速なデプロイ方法を使用しません。参考までに以下を挙げます：
+   1. Prometheus コミュニティがメンテナンスする [Helm chart](https://github.com/prometheus-community/helm-charts)
    2. [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator)
    3. [Kube-Prometheus](https://github.com/prometheus-operator/kube-prometheus)
-2. K8s上でPrometheusを構築すること。つまり、K8sがPrometheusサービスを管理する責任を持ち、上記で言及したPrometheus Operatorとは異なり、ここでは関連する様々なYAML設定ファイルを自分で記述します。
-3. 以下の監視ターゲットを列挙します：
-   1. Prometheus自身
+2. K8s 上で Prometheus を構築する、つまり K8s が Prometheus サービスの管理を担当します。上記の Prometheus Operator とは異なり、ここでは関連する各種 YAML 設定ファイルを自分で記述します。
+3. 以下の監視対象を列挙します：
+   1. Prometheus 自身
    2. Node exporter
    3. Kubelet
    4. Cadvisor
@@ -53,15 +48,15 @@ K8s上で手動でPrometheusを構築するにあたり、ここでは2点の規
 
 <!--more-->
 
-## ベアメタルでのPrometheus概念実証
+## ベアメタルでの Prometheus 概念実証
 
-まず最初の直感は、ベアメタル上で概念実証を行い、まずは動かしてみて、その後の設定を実験し、最終的にPrometheusの各設定項目を理解した後で、K8s上に再デプロイするのは容易であるはずだということです。
+まず最初の直感は、ベアメタル上で概念実証を行い、まずは起動させてから、さらに詳細な設定を実験することです。最終的に、Prometheus の各設定項目を理解した後、K8s 上に再デプロイすることは容易なはずです。
 
-> 私は怠けようと試みましたが、チュートリアルブログを検索したところ、どれも不明瞭で、ほとんどがすでに古くなっていることがわかり、結局半日を無駄にして公式サイトのドキュメントを読むことになりました。
+> 手抜きを試みようとしましたが、チュートリアルブログを検索したところ、どれも不明瞭で、ほとんどがすでに古くなっていることがわかり、結局半日を無駄にして公式ドキュメントを読む羽目になりました。
 
-### Prometheusのインストール
+### Prometheus のインストール
 
-[ドキュメント](https://prometheus.io/docs/prometheus/2.22/getting_started/)の説明に従い、直接[ここ](https://prometheus.io/download/)から対応するプリコンパイル済みバイナリパッケージをダウンロードします：
+[ドキュメント](https://prometheus.io/docs/prometheus/2.22/getting_started/)の説明に従い、[ここ](https://prometheus.io/download/)から対応するプリコンパイル済みバイナリパッケージをダウンロードします：
 
 ```bash
 curl -LO "https://github.com/prometheus/prometheus/releases/download/v2.22.0/prometheus-2.22.0.linux-amd64.tar.gz"
@@ -76,7 +71,7 @@ cd prometheus-2.22.0.linux-amd64
 #  platform:     linux/amd64
 ```
 
-ディレクトリを確認すると、設定ファイルprometheus.ymlが付属していることがわかります：
+ディレクトリを確認すると、設定ファイル prometheus.yml が付属していることがわかります：
 
 ```yaml
 # my global config
@@ -105,17 +100,17 @@ scrape_configs:
   - targets: ['localhost:9090']
 ```
 
-次に、先ほどダウンロードしたPrometheusを実行して、自分自身を監視し、小さな達成感のフィードバックループを得ます：
+ここで、先ほどダウンロードした Prometheus を実行して、自分自身を監視し、小さな達成感のフィードバックループを得ます：
 
 ```bash
 ./prometheus --config.file=prometheus.yml
 ```
 
-この時点でPrometheusが起動したことがわかります。http://devbox:9090 にアクセスするとそのユーザーインターフェースが表示され、ここでランダムにクリックすることで、Prometheusが提供する機能について大まかな感覚を得ることができ、Prometheusが正常に動作しているときの挙動について認識を持つことができます。
+この時点で Prometheus が起動したことがわかります。http://devbox:9090 にアクセスするとそのユーザーインターフェースが表示され、ここでランダムにクリックすることで、Prometheus が提供する機能について大まかな感覚を得ることができ、Prometheus が正常に動作しているときの挙動について認識を持つことができます。
 
-### Node exporterの実行
+### Node exporter の実行
 
-次に、ベアメタルでNode Exporterを実行し、マシン自体の様々なメトリクスを観察します。
+次に、ベアメタル上で Node Exporter を実行し、本機の各種メトリクスを観察します。
 
 ```bash
 curl -LO "https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz"
@@ -124,7 +119,7 @@ cd node_exporter-1.0.1.linux-amd64
 ./node_exporter
 ```
 
-次に、Prometheusがそこからメトリクスを収集できるように設定を変更します。
+次に、設定を変更して Prometheus がそこからメトリクスを収集するようにします。
 
 ```yaml
 # my global config
@@ -146,62 +141,62 @@ scrape_configs:
   - targets: ['localhost:9100']
 ```
 
-PrometheusのWeb UIを開くと、`node-exporter`という名前の新しいターゲットが追加されていることが確認できます。ワークロードを確認してみましょう（すべてのコアを占有する、永遠にフィボナッチ数列を計算する[プログラム](https://github.com/Thrimbda/fiber)を1つ実行しています）：
+Prometheus の Web UI を開くと、`node-exporter` という名前の新しいターゲットが追加されていることが確認できます。ワークロードを確認してみましょう（すべてのコアを占有する、永遠にフィボナッチ数列を計算する[プログラム](https://github.com/Thrimbda/fiber)を実行しています）：
 
 ![img](https://0xc1.space/images/2020/11/05/node-load.png)
 
 これで、概念実証フェーズは無事完了しました。
 
-> 注意：概念実証の段階として、ここではベアメタルにデプロイしたPrometheusでK8sクラスタを監視することは推奨しません。その理由は、クラスタ外からK8sコンポーネントにアクセスするには、証明書の設定と適切なアクセス権限を持つ[ClusterRole](https://kubernetes.io/zh/docs/reference/access-authn-authz/rbac/)が必要だからです（ここでは、筆者がどうしてもベアメタルにデプロイしたPrometheusでK8sクラスタおよびその中の様々なコンポーネントを監視しようとして踏んだ様々な落とし穴については省略します）。
+> 注意：概念実証の段階として、ここではベアメタルにデプロイされた Prometheus を使用して K8s クラスタを直接監視することは推奨しません。その理由は、クラスタ外部から K8s コンポーネントにアクセスするには、証明書の設定と適切なアクセス権限を持つ [ClusterRole](https://kubernetes.io/zh/docs/reference/access-authn-authz/rbac/) が必要だからです（ここでは、筆者がベアメタルにデプロイした Prometheus を使用して K8s クラスタおよびその中の各種コンポーネントを監視しようと試みた際に踏んだ様々な落とし穴は省略します）。
 
-## PrometheusでK8sクラスタを監視する
+## Prometheus による K8s クラスタの監視
 
-次に、Prometheusを通じてK8sクラスタを監視します。
+次に、Prometheus を使用して K8s クラスタを監視します。
 
-### Prometheusの設定項目
+### Prometheus の設定項目
 
-Prometheusの紹介から、Prometheusは主にPullベースのデータ取得方式であることがわかります。したがって、サービスディスカバリが必要です。つまり、Prometheusにどこからデータを取得するかを知らせ、ユーザーが確認できるようにする必要があります。
+Prometheus の紹介で理解できるように、Prometheus は主に Pull ベースのデータ取得方式であるため、サービスディスカバリが必要です。つまり、Prometheus にどこからデータを取得するかを知らせ、ユーザーが確認できるようにする必要があります。
 
-では、まず最初に解決すべき問題は、**K8sクラスタのサービスディスカバリ**です。その秘密は設定の中に隠されているに違いありません。
+では、まず最初に解決すべき問題は、**K8s クラスタのサービスディスカバリ**です。その秘密は必ず設定の中に隠されています。
 
-[ドキュメント](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/)には、Prometheusの設定に関する詳細な説明があります。
+[ドキュメント](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/)には、Prometheus の設定に関する詳細な説明があります。
 
 その中の以下の設定項目について簡単に説明します（必ずしも互いに直交しているわけではありません）：
 
-- [`<global>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#configuration-file)：この中の設定は他のどの設定項目にも作用し、他の設定中の項目のデフォルト値として機能します。
-- [`<scrape_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#scrape_config)：監視ジョブを定義し、Prometheusがどこから、どのようにこのターゲットを監視すべきかなどの情報を記述します。
-- [`<tls_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#tls_config)：TLS設定を記述します。
-- [`<*_sd_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#kubernetes_sd_config)：Prometheusはこの一連の設定項目を通じて、一連の事前定義された監視ターゲットに対するサービスディスカバリの設定を提供します（sdはservice discoveryを表します）。
-- [`<static_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#static_config)：Prometheusが事前定義していない監視ターゲット（例えば、ベアメタルに手動でデプロイされた任意のサービス）に対しては、この設定項目を使用してサービスディスカバリを行うことができます。上記で概念実証を行った際に、この設定項目を使用しました。
-- [`<relabel_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#relabel_config)：監視ターゲットの様々なメトリクスの取得を開始する前に、この設定項目を使用していくつかのラベルを変更することができます。Prometheusはいくつかの事前定義されたラベルルールを提供しており、relabelは複数段階で行うことができます。relabelが終了した後、`__`で始まるラベルは削除されます。
+- [`<global>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#configuration-file)：この中の設定は他のすべての設定項目に影響し、他の設定項目のデフォルト値として機能します。
+- [`<scrape_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#scrape_config)：監視タスクを定義し、Prometheus がどこからどのようにこのターゲットを監視すべきかなどの情報を記述します。
+- [`<tls_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#tls_config)：TLS 設定を記述します。
+- [`<*_sd_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#kubernetes_sd_config)：Prometheus はこの一連の設定項目を通じて、一連の事前定義された監視ターゲットのサービスディスカバリ設定を提供します（sd は service discovery を表します）。
+- [`<static_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#static_config)：Prometheus に事前定義されていない監視ターゲット（例えば、ベアメタルに手動でデプロイされた任意のサービス）に対しては、この設定項目を使用してサービスディスカバリを行うことができます。上記で概念実証を行った際に、この設定項目を使用しました。
+- [`<relabel_config>`](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#relabel_config)：監視ターゲットの各種メトリクスの取得を開始する前に、この設定項目を使用していくつかのラベルを変更することができます。Prometheus はいくつかの事前定義されたラベルルールを提供しており、relabel は複数段階で行うことができます。relabel が終了した後、`__` で始まるラベルは削除されます。
 
-Prometheusの中核となる設定項目は`<scrape_config>`のようです。それぞれが監視ジョブを定義しており、namespaceのような概念で、主に監視ターゲットの集約を提供します。その中で、`<*_sd_config>`または`<static_config>`を定義することで、Prometheusに具体的にどのエンドポイントからデータを取得するか、およびこれらのエンドポイントをどのようにフィルタリングするかを伝えます。
+Prometheus の中核となる設定項目は `<scrape_config>` のようです。それぞれが監視タスクを定義し、namespace のような概念で、主に監視ターゲットの集約を提供します。その中で、`<*_sd_config>` または `<static_config>` を定義することで、Prometheus に具体的にどのエンドポイントからデータを取得するか、およびこれらのエンドポイントをどのようにフィルタリングするかを伝えます。
 
-次に、実戦を通じてこれらの設定項目への理解を深めましょう！
+次に、実践を通じてこれらの設定項目への理解を深めましょう！
 
-### Prometheusのデプロイ
+### Prometheus のデプロイ
 
-デプロイの核心となる作業は、クラスタ内にPrometheusをデプロイするためにどのようなリソースが必要かを明確に考えることです。筆者はここで直接答えを公開します：
+デプロイの核心となる作業は、クラスタ内に Prometheus をデプロイするためにどのようなリソースが必要かを明確に考えることです。筆者はここで直接答えを公開します：
 
-1. 専用のNamespace
-2. node-exporterを管理するためのDaemonSet
+1. 専用の Namespace
+2. node-exporter を管理するための DaemonSet
 3. Node-exporter Service
-4. ConfigMapを使用したPrometheusの設定管理
-5. Prometheus専用のServiceAccount
-6. 十分な権限を持つClusterRole
-7. ServiceAccountとClusterRoleを結びつけるClusterRoleBinding
+4. Prometheus の設定を管理する ConfigMap
+5. Prometheus 専用の ServiceAccount
+6. 十分な権限を持つ ClusterRole
+7. ServiceAccount と ClusterRole を結びつける ClusterRoleBinding
 8. Prometheus Deployment
 9. Prometheus Service
 
-RBACが適用されたK8sクラスタでは、Prometheusにクラスタの状態や様々なメトリクスを読み取るのに十分な権限を持つロールを定義する必要があります。したがって、5〜7の項目が必要です。
+RBAC が適用された K8s クラスタでは、Prometheus にクラスタの状態や各種メトリクスを読み取るための十分な権限を持つロールを定義する必要があるため、5〜7番目の項目が必要です。
 
-ここでは、筆者が自身の構築プロセスで蓄積した[リソース宣言の集合](https://github.com/Thrimbda/prometheus-set-up)を提供します。上記のリソースに加えてkube-state-metricsも含まれており、順番に操作することでデプロイされたPrometheusを得ることができます。
+ここで、筆者が自身の構築過程で蓄積した[リソース宣言の集合](https://github.com/Thrimbda/prometheus-set-up)を提供します。上記のリソースに加えて kube-state-metrics も含まれており、順番に操作することでデプロイされた Prometheus を得ることができます。
 
 #### Node-exporter
 
-Node-exporterについては、マシン自体の監視であるため、各Nodeに1つ必要です。同時にK8sのライフサイクル管理の恩恵を受けたいため、DaemonSetが最適な選択です。
+Node-exporter については、マシン自体の監視であるため、各 Node に1つずつ必要です。同時に K8s のライフサイクル管理の恩恵を受けたいため、DaemonSet が最適な選択です。
 
-コンテナ内で実行されるため、設定を行わないと実際のNodeメトリクスを収集できません。したがって、Node-exporterがメトリクスを収集できるように、ホスト上の特殊な場所をコンテナ内にマウントする必要があります。
+コンテナ内で実行されるため、設定を行わないと実際の Node メトリクスを収集できません。そのため、Node-exporter がメトリクスを収集できるように、ホスト上の特殊な場所をコンテナ内にマウントする必要があります。
 
 ```yaml
 args:
@@ -220,11 +215,11 @@ volumes:
  name: roo
 ```
 
-そして、Serviceを通じてPrometheusが長期間アクセスできるエンドポイントを公開します。
+そして、Service を通じて Prometheus が長期間アクセスできるエンドポイントを公開します。
 
 #### Prometheus
 
-PrometheusはDeploymentを使用してデプロイします。Prometheusをデプロイする前に、必要なエンドポイントにアクセスしてメトリクスを収集できるように十分な権限を設定する必要があります。RBACが設定されたK8sクラスタでは、ClusterRole/ServiceAccount/ClusterRoleBindingを通じてこの目標を達成します。設定が完了すると、PrometheusはServiceAccountを使用して適切な認証を行い、必要なエンドポイントにアクセスします。
+Prometheus は Deployment を使用してデプロイします。Prometheus をデプロイする前に、必要なエンドポイントにアクセスしてメトリクスを収集できるように十分な権限を設定する必要があります。RBAC が設定された K8s クラスタでは、ClusterRole/ServiceAccount/ClusterRoleBinding を通じてこの目標を達成します。設定が完了すると、Prometheus は ServiceAccount を使用して適切な認証を行い、必要なエンドポイントにアクセスします。
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -271,11 +266,11 @@ subjects:
  namespace: monitoring-system
 ```
 
-ここまでで、監視目標を実現するためのすべての前提条件が整いました。では、どのようにしてこの強力なエンジンであるPrometheusを駆動し、整えた環境を十分に活用して監視を実現するのでしょうか？
+ここまでで、監視目標を実現するためのすべての前提条件が整いました。では、どのようにしてこの強力なエンジンである Prometheus を駆動し、整備された環境を十分に活用して監視を実現するのでしょうか？
 
-前文でのPrometheus設定の紹介を組み合わせると、4つの監視ターゲットは4つの`<scrape_config>`で定義されます：
+前文での Prometheus 設定の紹介と組み合わせて、4つの監視目標を4つの `<scrape_config>` で定義します：
 
-node-exporterの場合：
+node-exporter の場合：
 
 ```yaml
 - job_name: 'node-exporter'
@@ -291,17 +286,17 @@ node-exporterの場合：
   target_label: host_ip
 ```
 
-クラスタ内部であるため、追加の認証は不要で、httpsアクセスを有効にする必要もありません。
+クラスタ内部であるため、追加の認証は不要で、https アクセスを有効にする必要もありません。
 
-ここでは、node-exporterの例を通じて`<relabel_configs>`についてさらに説明します：
+ここでは、node-exporter の例を通じて `<relabel_configs>` についてさらに説明します：
 
-ラベルとは、あるエンドポイントに関する属性であり、異なるエンドポイントは同じラベルの下で異なる値を持つ可能性があります。`<relabel_config>`が行うことは、これらのラベルに対して変更やフィルタリングの操作を行い、必要なエンドポイントをフィルタリング/変更できるようにすることです。
+ラベルとは、あるエンドポイントに関する属性であり、異なるエンドポイントは同じラベルの下で異なる値を持つ可能性があります。`<relabel_config>` が行うことは、これらのラベルに対して変更やフィルタリングの操作を行い、必要なエンドポイントをフィルタリング/変更できるようにすることです。
 
 ![img](https://0xc1.space/images/2020/11/05/node-exporter-target.png)
 
-上記のconfigには3つのrelabelアクションがあることがわかります。そのうち最初のものは、K8sサービスディスカバリで**事前定義**されたラベル`__meta_kubernetes_service_name`のすべての値から、指定された正規表現"node-exporter"に従ってフィルタリングし、`action`に基づいて一致したターゲットエンドポイントを保持し、同じラベルの残りの値を破棄するという意味です。後の2つのrelabelアクションは、nodeとhost_ipという2つの意味的ラベルを、名前を変更する方法で保持するためです。（覚えていますか？`__`で始まるラベルは最終的にすべて削除されます）
+上記の config には、3つの relabel アクションがあることがわかります。最初のアクションの意味は、K8s サービスディスカバリによって**事前定義**されたラベル `__meta_kubernetes_service_name` のすべての値から、指定された正規表現 "node-exporter" に従ってフィルタリングし、`action` に基づいて、一致したターゲットエンドポイントを保持し、同じラベルの残りの値を破棄することです。後の2つの relabel アクションは、node と host_ip という意味的なラベルを、名前を変更する方法で保持するためです。（覚えていますか？二重アンダースコアで始まるラベルは最終的にすべて削除されます）
 
-Prometheus自身の場合：
+Prometheus 自身の場合：
 
 ```yaml
 - job_name: 'prometheus'
@@ -315,7 +310,7 @@ Prometheus自身の場合：
 
 同じパターンを使用してエンドポイントをフィルタリングします。
 
-kubeletとcadvisorの場合、状況は少し複雑になります：
+kubelet と cadvisor の場合、状況が少し複雑になります：
 
 ```yaml
 - job_name: 'kubelet'
@@ -341,9 +336,9 @@ kubeletとcadvisorの場合、状況は少し複雑になります：
  scheme: https
 ```
 
-roleがnodeに変わったことに注意してください。したがって、Prometheusはデフォルトで`<node_ip>:10250/metrics`からメトリクスを収集します。ここには`bearer_token_file`設定項目が追加されています。kubeletはデフォルトで匿名アクセスをそのメトリクスデータに許可しないため、ここが前に設定したServiceAccountを使用する場所です。ここでは便宜上、`insecure_skip_verify: true`の方法でTLS認証をスキップします。
+role が node に変わったことに注意してください。したがって、Prometheus はデフォルトで `<node_ip>:10250/metrics` からメトリクスを収集します。ここには `bearer_token_file` 設定項目が追加されています。kubelet はデフォルトで匿名アクセスを許可していないため、ここで前に設定した ServiceAccount が使用されます。ここでは便宜上、`insecure_skip_verify: true` の方法を使用して TLS 認証をスキップします。
 
-ApiServerの場合、再び少し複雑になります：
+ApiServer の場合、また少し複雑になります：
 
 ```yaml
 scrape_configs:
@@ -360,17 +355,17 @@ scrape_configs:
   regex: default;kubernetes;https
 ```
 
-ここでは、`<relabel_config>`を通じてApiServer自身のエンドポイントのフィルタリングを完了し、トークン認証を提供すると同時に、CAファイルを追加して身元を認証します。これで、ApiServerにアクセスできるようになります。
+ここでは、`<relabel_config>` を通じて ApiServer 自身のエンドポイントのフィルタリングを完了し、トークン認証を提供すると同時に、CA ファイルを追加して身元を認証します。これで、ApiServer にアクセスできるようになります。
 
-これで、Prometheusのデプロイとターゲットエンドポイントの監視設定が完了しました。
+これで、Prometheus のデプロイとターゲットエンドポイントの監視設定が完了しました。
 
-興味のある読者は、さらにconfigを変更して、異なる設定下でのPrometheusの動作を観察し、理解を深めることができます。ここで小さな課題を残します：ベアメタルにデプロイしたPrometheusでK8sクラスタを監視するにはどうすればよいでしょうか？
+興味のある読者は、さらに config を変更して、異なる設定下での Prometheus の挙動を観察し、理解を深めることができます。ここで小さな課題を残します：ベアメタルにデプロイされた Prometheus を使用して K8s クラスタを監視するにはどうすればよいでしょうか？
 
 ## 参考資料
 
 1. [Prometheus Configuration](https://prometheus.io/docs/prometheus/2.22/configuration/configuration/#configuration)
 2. [Kube-prometheus manifests](https://github.com/prometheus-operator/kube-prometheus/tree/8b0eebdd08d8926649d27d2bc23acf31144c2f6b/manifests)
 3. [TSDB v3 design](https://fabxc.org/tsdb/)
-4. [可観測性：概念とベストプラクティス](https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/observability/OBSV-101.md)
-5. [Prometheusの初歩的な理解](https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/observability/OBSV-101.md)
-6. [RBAC on K8s](https://kubernetes.io/zh/docs/reference/access-authn-authz/rbac/)
+4. [オブザーバビリティ：概念とベストプラクティス](https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/observability/OBSV-101.md)
+5. [Prometheus の初歩的な理解](https://github.com/lichuan0620/k8s-sre-learning-notes/blob/master/observability/OBSV-101.md)
+6. [K8s における RBAC](https://kubernetes.io/zh/docs/reference/access-authn-authz/rbac/)

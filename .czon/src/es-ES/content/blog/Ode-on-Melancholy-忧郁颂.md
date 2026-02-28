@@ -1,104 +1,90 @@
 ---
-"title": "Oda a la Melancolía 忧郁颂"
-"summary": "Este artículo presenta el poema original en inglés *Ode on Melancholy* del poeta británico John Keats, junto con la traducción al chino de Tu An. En la introducción, el autor menciona que compró una antología de Keats en parte por su aprecio hacia el verso `la oculta 'Melancolía' tiene su santuario soberano` de este poema, y también por la conexión de Keats con la serie *Hyperion*. El poema, dividido en tres estrofas, aconseja al lector no sumergirse en venenos o símbolos de muerte para evadir la melancolía, sino que, cuando esta llegue, contemple la belleza de la naturaleza (como la rosa matutina, el arcoíris, la peonía) o los ojos de la amada, para experimentar profundamente esta emoción. La tesis central del poema es que la melancolía está intrínsecamente ligada a la belleza y la alegría; solo quien pueda saborear intensamente la dicha podrá vislumbrar el santuario de la melancolía en el templo del placer y convertirse en su trofeo. La conclusión enfatiza que la melancolía no es totalmente negativa, sino parte de una experiencia emocional profunda, que coexiste con la belleza fugaz y la alegría efímera."
-"tags":
-  - "John Keats"
-  - "Ode on Melancholy"
-  - "忧郁颂"
-  - "Poesía"
-  - "Tu An"
-  - "Literatura británica"
-  - "Romanticismo"
-"date": "2017-06-19"
----
-
----
-title: Oda a la Melancolía 忧郁颂
+title: Oda a la Melancolía
 date: 2017-06-19
 taxonomies:
   tags:
     - John Keats
 ---
 
-Hoy llegó mi antología de poemas de Keats. En realidad, la compré en parte porque en *Sweet Bitter* leí el verso `la oculta 'Melancolía' tiene su santuario soberano` de *Oda a la Melancolía*. La otra razón fue el poema épico inacabado *Hyperion* y la presencia del propio Keats a lo largo de la tetralogía *Los Cantos de Hyperion*. Llevaba mucho tiempo anhelando esto, así que hoy transcribo esta *Oda a la Melancolía*. La versión en chino es la traducción de Tu An.
+Hoy me llegó mi antología de poemas de Keats. En realidad, una de las razones por las que la compré fue porque en *Sweet Bitter* vi una línea de *Oda a la Melancolía*: `la "Melancolía" velada tiene su santuario soberano`. Otra razón fue por el poema épico inacabado *Hyperion* y por el propio Keats, cuya presencia impregna toda la tetralogía de *Los Cantos de Hyperion*. Llevaba mucho tiempo deseando leerlo, así que hoy transcribo esta *Oda a la Melancolía*. La versión en chino es la traducción de Tu An.
 
 <!--more-->
 
-## Ode on Melancholy
+## Oda a la Melancolía
 
 ### I
 
 ```
-No, no, go not to Lethe, neither twist
+No, no, no vayas al Leteo, ni retuerzas
 
-  Wolf's-bane, tight-rooted, for its poisonous wine;
-     
-Nor suffer thy pale forehead to be kissed
+  el acónito, de raíz profunda, por su vino venenoso;
 
-  By nightshade, ruby grape of Proserpine;
+Ni permitas que tu pálida frente sea besada
 
-Make not your rosary of yew-berries,
+  por la belladona, uva rubí de Proserpina;
 
-  Nor let the beetle, nor the death-moth be
+No hagas tu rosario de bayas de tejo,
 
-    Your mournful Psyche, nor the downy owl
+  ni dejes que el escarabajo, ni la polilla de la muerte sean
 
-A partner in your sorrow's mysteries;
+    tu lúgubre Psique, ni que el búho plumoso
 
-  For shade to shade will come to drowsily,
+sea compañero en los misterios de tu dolor;
 
-    And drown the wakeful anguish of the soul.
+  Pues sombra a sombra llegará somnolienta,
+
+    y ahogará la angustia vigilante del alma.
 ```
 
 ### II
 
 ```
-But when the melancholy fit shall fall
+Pero cuando el acceso de melancolía caiga
 
-  Sudden from heaven like a weeping cloud, 
+  de repente del cielo como una nube llorosa,
 
-That fosters the droop-headed flowers all,
+que nutre a todas las flores cabizbajas,
 
-  And hides the green hill in an April shroud;
+  y oculta la colina verde en un sudario de abril;
 
-Then glut thy sorrow on a morning rose,
+Entonces sacia tu dolor con una rosa matutina,
 
-  Or on the rainbow of the salt sand-wave,
+  o con el arcoíris de la ola de arena salada,
 
-    Or on the wealth of globed peonies;
+    o con la riqueza de las peonías globulares;
 
-Or if thy mistress some rich anger shows,
+O si tu amada muestra alguna rica ira,
 
-  Imprison her soft hand, and let her rave,
+  aprisiona su suave mano, y déjala desvariar,
 
-    And feed deep, deep upon her peerless eyes.
+    y aliméntate hondo, hondo, en sus ojos sin par.
 ```
 
 ### III
 
 ```
-She dwells with Beauty—Beauty that must die;
+Ella mora con la Belleza—Belleza que ha de morir;
 
-  And joy, whose hand is ever at his lips
+  y con el Gozo, cuya mano está siempre en sus labios
 
-Bidding adieu; and aching Pleasure nigh,
+diciendo adiós; y con el Placer doloroso cercano,
 
-  Turning to poison while the bee-mouth sips:
+  que se vuelve veneno mientras la boca de abeja sorbe:
 
-Aye, in the very temple of Delight
+Sí, en el mismísimo templo del Deleite
 
-  Veiled Melancholy has her sovran shrine,
+  la Melancolía velada tiene su santuario soberano,
 
-    Though seen of none save him whose strenuous tongue
+    aunque sólo lo vea aquel cuya lengua esforzada
 
-  Can burst Joy's grape against his palate fine;
+  puede reventar la uva del Gozo contra su fino paladar;
 
-His soul shall taste the sadness of her might,
+Su alma probará la tristeza de su poder,
 
-  And be among her cloudy trophies hung.
+  y quedará colgada entre sus nublados trofeos.
 ```
 
-## 忧郁颂
+## Oda a la Melancolía (Traducción al chino por Tu An)
 
 ### I
 

@@ -1,26 +1,12 @@
 ---
-"title": "Ode on Melancholy 忧郁颂"
-"summary": "This article presents the original English poem 'Ode on Melancholy' by the British poet John Keats, along with Tu An's Chinese translation. In the introduction, the author mentions purchasing a collection of Keats's poems partly due to an appreciation for the line 'Veiled Melancholy has her sovran shrine' from 'Ode on Melancholy,' as well as Keats's connection to the *Hyperion* series. The poem itself consists of three stanzas, advising the reader not to seek escape from melancholy through poison or symbols of death. Instead, when melancholy descends, one should turn to gaze upon the beauty of nature (such as the morning rose, rainbow, or peonies) or a lover's eyes, deeply experiencing this emotion. The poem's core argument is that melancholy is intimately linked with beauty and joy; only those who can profoundly savor happiness may glimpse the shrine of melancholy within the temple of delight and become its trophy. The conclusion emphasizes that melancholy is not entirely negative but rather part of a profound emotional experience, coexisting with transient beauty and fleeting joy."
-"tags":
-  - "John Keats"
-  - "Ode on Melancholy"
-  - "忧郁颂"
-  - "Poetry"
-  - "Tu An"
-  - "English Literature"
-  - "Romanticism"
-"date": "2017-06-19"
----
-
----
-title: Ode on Melancholy 忧郁颂
+title: Ode on Melancholy
 date: 2017-06-19
 taxonomies:
   tags:
     - John Keats
 ---
 
-My collection of Keats's poems arrived today. I bought it partly because I came across the line `Veiled Melancholy has her sovran shrine` from *Ode on Melancholy* in *Sweet Bitter*. Another reason is the unfinished long poem *Hyperion* and Keats's presence throughout the entire *Hyperion Cantos* tetralogy. Having long been captivated by it, I am transcribing this *Ode on Melancholy* today. The Chinese version uses Tu An's translation.
+My selected poems of Keats arrived today. Part of the reason I bought it was because I came across a line from *"Ode on Melancholy"* — `Veiled Melancholy has her sovran shrine` — in *Sweet Bitter*. Another reason is the unfinished long poem *Hyperion* and Keats himself, who appears throughout the four books of *The Hyperion Cantos*. Having long been fascinated by it, I decided to transcribe *"Ode on Melancholy"* today. The Chinese translation used is Tu An's version.
 
 <!--more-->
 
@@ -55,7 +41,7 @@ A partner in your sorrow's mysteries;
 ```
 But when the melancholy fit shall fall
 
-  Sudden from heaven like a weeping cloud,
+  Sudden from heaven like a weeping cloud, 
 
 That fosters the droop-headed flowers all,
 
@@ -98,7 +84,7 @@ His soul shall taste the sadness of her might,
   And be among her cloudy trophies hung.
 ```
 
-## 忧郁颂
+## Ode on Melancholy
 
 ### I
 

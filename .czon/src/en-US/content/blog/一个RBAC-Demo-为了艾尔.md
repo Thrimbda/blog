@@ -1,18 +1,4 @@
 ---
-"title": "An RBAC Demo: For Aiur"
-"summary": "This article details a demo project named 'For Aiur' developed by the author to understand the RBAC model. The project simulates a simplified scenario from the StarCraft game, using Python's Flask framework to build a RESTful service and implementing the RBAC model within it. The article explains the design approach of the demo, including the definitions of subjects, roles, resources, and permissions, as well as the assignment relationships between subjects-roles and roles-permissions. It also describes how RBAC relationships are managed through file configuration without using a database, and how RBAC is integrated with a RESTful architecture. Finally, the article introduces the business logic and core code implementation of the demo, showing how roles control operations on game resources to achieve the game's objectives."
-"tags":
-  - "RBAC"
-  - "RESTful"
-  - "Flask"
-  - "Python"
-  - "System Design"
-  - "Access Control"
-  - "StarCraft"
-"date": "2017-05-11"
----
-
----
 title: An RBAC Demo: For Aiur
 date: 2017-05-11
 taxonomies:
@@ -22,66 +8,66 @@ taxonomies:
     - RBAC
 ---
 
-Based on the understanding of RBAC from the previous article, and due to assignment requirements, I will create a simple demo as a practical implementation of RBAC.
+Based on the understanding of RBAC from the previous article, and due to assignment requirements, I will write a simple Demo as a practice of RBAC.
 
-I have no intention of making the demo overly complex. My goal is to illustrate the concepts, so it remains "small but complete."
+I have no intention of making the Demo excessively large. My goal is to illustrate the concepts, so it remains "small but complete."
 
-So, what is the goal of this demo, and what can it do?
+So, what is the goal of this Demo, and what can it do?
 
 <!--more-->
 
 ## Analysis and Design
 
-To make it interesting and fully illustrate the concepts, my demo will simulate a greatly simplified scenario from a StarCraft battle, where each unit miraculously possesses agency, from the perspective of a Protoss player.
+To make it interesting and fully reflect the problem, I will simulate a greatly simplified scenario in my Demo, where each unit miraculously possesses subjective initiative, set in a StarCraft battle from the perspective of a Protoss player.
 
-A good demo needs a good name, so this demo is called: **For Aiur!** (Aiur is the Protoss homeworld. Every Zealot says this impassioned line when warping into battle: "For Aiur!")
+A good Demo needs a good name, so this Demo is called: **For Aiur!** (Aiur is the Protoss homeworld, and every Zealot says this impassioned phrase when warped onto the battlefield: "For Aiur!")
 
-In **For Aiur**, you must lead your forces to produce enough Zealot warriors to destroy the Destroyer Amon and save the universe. If you don't have enough Zealots, you will fail, the stars will whisper, and all will be annihilated.
+In **For Aiur**, you will lead your team to produce enough Zealot warriors to destroy the Destroyer Amon and save the entire universe. If you don't have enough Zealots, you will fail, the stars will whisper, and all things will vanish.
 
-All of this is embodied in a RESTful service built with Python's Flask framework.
+All of this is embodied in a RESTful service written with Python's Flask framework.
 
-> In a real scenario, every entity except the player could be created, thus they could all be considered resources. To demonstrate RBAC, I've added the following constraints:
+> In a real scenario, every entity except the player could be created, thus they can all be seen as resources. To reflect RBAC, I have added the following constraints:
 >
-> - The few subjects provided in this demo are unique and always exist, as if they were one-of-a-kind, thus removing any possibility of subjects being recursively created (e.g., a Probe can produce a Nexus, and a Nexus can produce Probes).
-> - In reality, Gateways require Pylon energy to function, but this is not reflected here. I explain it as our Gateways receiving energy support from the Spear of Adun, the legendary Protoss mothership in synchronous orbit, thus treating Pylons only as resources providing population cap.
+> - The few entities provided by this Demo are unique and always exist, as if they were one-of-a-kind, thus removing any possibility of entities being recursively created (e.g., a Probe can produce a Nexus, and a Nexus can produce Probes).
+> - In reality, Gateways require energy from Pylons to operate, but this is not reflected here. I explain it as our Gateways receiving energy support from the Protoss legendary mothership, the Spear of Adun, in synchronous orbit, thus treating Pylons only as resources providing population cap.
 
 This battle scenario contains the following objects:
 
-### Subjects
+### Subject
 
-- Player (You) - thrimbda
-- Probe (Basic worker unit, can gather resources and construct buildings) - probe
-- Gateway (Produces Zealots, a combat unit) - gateway
+- Player (you) thrimbda
+- Probe (basic worker unit, can gather production resources and construct buildings) probe
+- Gateway (produces Zealots, a combat unit) gateway
 
-#### Roles
+#### Role
 
-- Archon (Supreme commander, allocates all resources) - archon
-- Crystal Collector (Only Probes can take this role) - crystal_collector
-- Portal for Zealot Warp-in (Beacon supporting the teleportation of Protoss warriors) - portal
-- Pylon Builder (With Pylons, we can have enough population cap to warp in Zealots) - pylon_transporter
+- Archon (Supreme Commander, allocates all resources) archon
+- Crystal Collector (only Probes can take on this role) crystal_collector
+- Portal for Zealot Warp-in (beacon supporting the teleportation of Protoss warriors) portal
+- Pylon Transporter (with Pylons, we can have enough population cap to warp in Zealots) pylon_transporter
 
-### Resources
+### Resource
 
-- Unharvested Crystal (Used to build Pylons and warp in Zealots, initial amount unknown)
-- Harvested Crystal (Used to build Pylons and warp in Zealots, initial amount 0)
-- Population Cap (Provides energy for warping, i.e., the population we talk about, initial amount 0)
-- Zealots (Combat units, the warriors you use to save the universe, initial amount 0)
+- Unmined Crystal (used to build Pylons and warp in Zealots, initial value unknown)
+- Mined Crystal (used to build Pylons and warp in Zealots, initial value 0)
+- Population Cap (provides energy for warping, i.e., what we call supply, initial value 0)
+- Zealot (combat unit, the warriors you use to save the universe, initial value 0)
 
-### Permissions
+### Permission
 
-> Since each operation on a resource is a permission, we won't list operations separately here but directly give the permissions and their descriptions.
+> Since each operation on a resource is a permission, we do not list operations separately here but directly give the permissions and their descriptions.
 
-- Harvest Crystal (Can harvest up to 1000 units at a time)
-- Observe Unharvested Crystal (Observe total amount)
-- Status Report (Report current resource amounts you possess)
-- Scout Amon's Strength (Calculate the required number of Zealots)
-- Build Pylon (Each Pylon provides 10 population cap and costs 100 Crystal)
-- Produce Zealot (Each Zealot consumes 2 population cap and 100 Crystal)
+- Mine Crystal (up to 1000 units per collection)
+- Observe Unmined Crystal (observe total amount)
+- Status Report (report the current amount of resources you own)
+- Scout Amon's Strength (calculate the required number of Zealots)
+- Build Pylon (each Pylon provides 10 population cap units and costs 100 Crystal)
+- Produce Zealot (each Zealot consumes 2 population cap units and 100 Crystal)
 - Attack Amon (Victory or death!)
 
-### SA (Subject-Role Assignment)
+### SA
 
-> The many-to-many relationships between subjects-roles and roles-permissions are represented using Python's tuple data structure, and this is also how it's implemented in the application. Therefore, this application does not use a database.
+> The many-to-many relationships between Subject-Role and Role-Permission are represented using Python's tuple data structure, and this is also the case in the implementation. Therefore, this application does not use a database.
 
 ```python
 subject_role = (('thrimbda', 'archon'),
@@ -90,7 +76,7 @@ subject_role = (('thrimbda', 'archon'),
                 ('gateway', 'portal'))
 ```
 
-### PA (Role-Permission Assignment)
+### PA
 
 ```python
 role_permission = (('archon', 'get_status'),
@@ -104,6 +90,8 @@ role_permission = (('archon', 'get_status'),
                    ('portal', 'get_status'))
 ```
 
+
+
 ## Implementation
 
 [Repository URL](https://github.com/Thrimbda/my-life-for-Aiur)
@@ -112,32 +100,32 @@ role_permission = (('archon', 'get_status'),
 
 ### Overview
 
-In summary, I used Python's Flask framework to build a RESTful-style service. The entire application does not involve a frontend, so there are no security issues like bypassing the frontend.
+In summary, I used Python's Flask framework to write a RESTful-style service. The entire application does not involve a frontend, so there are no security issues like bypassing the frontend.
 
-A key feature of this demo is that it does not use a database. RBAC does not mandate the use of a database, and using a database with RBAC is an intuitive and natural choice. However, in **For Aiur**, we don't use a database; instead, we use files to represent the RBAC `subject-role-permission` relationships. Databases themselves evolved from file systems. Using files here is because the system is simple enough, and it further reduces complexity to illustrate the point. The specific file format is shown in the SA and PA relationship descriptions above.
+First, a characteristic of this Demo is that it does not use a database. RBAC does not mandate the use of a database, and using a database in RBAC is an intuitive and natural thing. However, in **For Aiur**, we do not use a database; instead, we use files to represent the RBAC `Subject-Role-Permission` relationships. Databases themselves evolved from file systems. Files are used here because the system is simple enough, and to further reduce system complexity for illustrative purposes. The specific file format is as described in the SA and PA relationship sections above.
 
 ### Regarding RESTful
 
-Let's briefly mention RESTful (**Re**presentational **S**tate **T**ransfer).
+Here's a brief mention of RESTful (**Re**presentational **S**tate **T**ransfer).
 
-As the name suggests, it's about the (Resource) Representational State Transfer.
+As the name suggests, (Resource) Representational State Transfer.
 
-In a web service, the services provided are the system's resources, represented as URIs. The form of the service is the operation on the resources (state transfer), represented by HTTP verbs. These concepts map well to the resources and operations in RBAC. Therefore, what I need to do is apply RBAC's permission management to the operations on resources in REST.
+In a web service, the services provided are the system's resources, represented in the form of URIs, and the form of the service is the operation on the resources (state transfer), represented in the form of HTTP verbs. Several concepts here correspond well to resources and operations in RBAC. Therefore, what I need to do is apply RBAC's permission management to the operations on resources in REST.
 
 ### Objects in RBAC
 
-As seen in the two configuration files, besides SA and PA, we can implicitly derive S, R, P:
+As can be seen in these two configuration files, besides SA and PA, we can implicitly derive S, R, P:
 
 ```python
-# Derive S, R lists from the subject_role tuple above
+# Derive S and R lists from the above tuple subject_role
 subjects = list(set([item[0] for item in subject_role]))
 roles = list(set([item[1] for item in subject_role]))
 ```
 
-SE (Session) can correspond well to the session in a web application, serving as a temporary object for a subject during a single login:
+And SE can correspond well to the session in a web application, serving as a temporary object for a subject during a single login:
 
 ```python
-# The subject uses this to log into the Spear of Adun tactical management system API. Here, session is a global object in Flask; its implementation details are not elaborated.
+# The subject uses this to log into the Spear of Adun tactical management system API. Here, session is a global object in Flask, and its implementation details are not elaborated.
 class SpearOfAdun(Resource):
     
     def post(self):
@@ -152,7 +140,7 @@ class SpearOfAdun(Resource):
         return {'message': 'login as %s using %s' % (session['subject'], session['role'])}, 201
 ```
 
-The ultimate purpose of modeling subjects-roles is to isolate and assign permissions, ensuring proper use and protection of system resources.
+The ultimate purpose of Subject-Role modeling is to isolate and assign permissions, ensuring proper use and protection of system resources.
 
 In **For Aiur**, I treat permissions as internal properties of the web API, for example:
 
@@ -169,26 +157,26 @@ class Zealot(Resource):
         return {'message': 'transport %d zealot warriors, En Taro Tassadar!' % amount}, 200
 ```
 
-In the two API classes used as examples above, each class exists as a resource in the system, and the provided HTTP methods are the operations on the resource.
+In the two API classes used as examples above, each class exists as a resource in the system, and the provided HTTP methods are operations on the resources.
 
-**Thus, all the key objects in RBAC are now in place.**
+**Thus, all the objects in RBAC are now present.**
 
 ### Business Logic
 
 Since **For Aiur** is a real, playable online real-time strategy game API, it's necessary to explain its business logic:
 
-The player's goal is: **Gather resources, build your base, and then create an army that strikes fear into the heart of your enemy to defeat the Dark One, Amon.**
+The player's goal is: **Gather resources, build your base, and then create an army that will strike fear into the heart of your enemy to defeat the Dark One, Amon.**
 
-The only condition to defeat Amon is to have a sufficient number of Zealots. This number is a randomly generated integer between 20 and 100. Simultaneously, the system generates just enough unharvested crystal for you to defeat Amon based on this number.
+The only condition to defeat Amon is to have a sufficient number of Zealots, which is a randomly generated integer between 20 and 100 by the system. Simultaneously, the system generates just enough unmined Crystal for you to defeat Amon based on this number.
 
 **Why just enough?**
 
-Since warping in Zealots requires a sufficient amount of Pylon energy and crystal, and producing Pylons also consumes crystal. Therefore, if you build too many Pylons, although you might have enough energy, **you will lose this battle that decides the fate of the universe because you don't have enough crystal to warp in Zealots.**
+Since warping in Zealots requires a sufficient amount of Pylon energy and Crystal, and producing Pylons that provide energy also consumes Crystal. Therefore, if you build too many Pylons, although you might have enough energy, you will **lose this battle that decides the fate of the entire universe because you don't have enough Crystal to warp in Zealots**.
 
-This entire logic is provided by an object whose lifecycle spans the entire battle. To prevent issues, I added a thread lock to ensure each operation is atomic.
+The entire logic is provided by an object whose lifecycle spans the entire battle. To prevent issues, I added a thread lock to ensure each operation is atomic.
 
 ```python
-# Since it's the core of the entire game, I call it the Nexus.
+# Since it is the core of the entire game, I call it the Nexus
 import random
 from threading import Lock
 
@@ -203,7 +191,7 @@ class Nexus(object):
     _amond = None
 
     def __init__(self):
-        # Initialize the object
+        # Initialize object
         self._amond = random.randint(20, 100)
         self.crestalRemain = self._amond * 100 + (self._amond // 5 + 1) * 100
         self.crestalInControl = 0
@@ -211,7 +199,7 @@ class Nexus(object):
         self.zealot = 0
 
     def collect(self, amount=1000):
-        # Harvest crystal
+        # Mine Crystal
         with self._lock:
             amount = min(amount, self.crestalRemain)
             self.crestalRemain -= amount
@@ -230,7 +218,7 @@ class Nexus(object):
             return amount
 
     def build(self, amount=1):
-        # Build Pylons
+        # Build Pylon
         with self._lock:
             available = self.crestalInControl / 100
             amount = min(amount, available)
@@ -239,7 +227,7 @@ class Nexus(object):
             return amount
 
     def forAiur(self):
-        # Fight for Aiur!
+        # For Aiur!
         with self._lock:
             if self.zealot >= self._amond:
                 return True
@@ -270,13 +258,13 @@ class Nexus(object):
             return {}
 
 
-nexus = Nexus() # Instantiate the object
+nexus = Nexus() # Instantiate object
 ```
 
 ## Conclusion
 
-Actually, each match in StarCraft II is a typical DAC (Discretionary Access Control) model: the player controls everything. All operations in the game can be seen as transforming the two basic resources, Minerals and Vespene Gas (which I simplified here), into the resources the player needs (production units, combat units) and consuming the enemy's resources to win the match. This shows that the RESTful service concept is very universal.
+Actually, the game StarCraft II in each battle is a typical DAC model: the player dominates everything, and all operations in the game can be seen as transforming the two basic resources, Crystal and Vespene Gas (simplified away here), into the resources the player needs (production units, combat units) and consuming the enemy's resources to win the battle. This shows that the RESTful service concept is very universal.
 
 In the small game **For Aiur**, I solidified several roles to construct an RBAC model.
 
-Through this practice, I gained an understanding of how RBAC is applied in a system, further learned about the excellent Flask framework, and deepened my understanding of RESTful concepts. It has been a very rewarding experience.
+Through this practice, I gained an understanding of RBAC's application in a system, further learned the excellent Flask framework, deepened my understanding of RESTful concepts, and gained a lot.

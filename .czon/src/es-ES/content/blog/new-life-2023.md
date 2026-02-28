@@ -1,91 +1,80 @@
 ---
-"title": "New_life_2023"
-"summary": "Este artículo registra las luchas internas y reflexiones del autor frente a los cambios de vida a principios de 2023. A través de eventos cotidianos como buscar piso o cortarse el pelo, el autor reflexiona sobre la sensación de pérdida de control tras cuatro años de vida estable, como la torpeza de vivir solo y el miedo al futuro. El texto explora el verdadero significado de la \"plenitud\", señalando que la vida tiene naturalmente altibajos, y cita a Mencio para distinguir entre \"lo que se busca en uno mismo\" y \"lo que se busca fuera\". El autor aboga por crear activamente un pequeño ámbito de orden dentro del descontrol general, usando la sensación de dominio para contrarrestar el caos. Finalmente, el autor encuentra consuelo en el contacto con lo familiar y en las expectativas hacia el futuro, y planea una nueva vida."
-"tags":
-  - "Vida"
-  - "Reflexiones"
-  - "Introspección"
-  - "Pérdida de control"
-  - "Control"
-  - "Crecimiento"
-  - "Planificación del futuro"
-"date": "01-01-2023"
+title: New_life_2023
+date: 2023-01-01
+taxonomies:
+  tags:
+    - Vida
+    - Ensayo
+    - Reflexión
 ---
-
 #+title: New_life_2023
+
 
 # Sobre la nueva vida
 
--   Death Stranding, la conexión entre personas.
--   La contradicción principal.
--   El amor en los tiempos del cólera.
--   Recordar: en este momento, escribir estas reflexiones también es forzarme a ordenar mis ideas para enfrentar el futuro.
--   Acompañando mi viaje para ver pisos, resumir y proyectar.
--   Pérdida de control & Control.
--   Torpeza -> Simplemente hay que practicar más.
+- Death Stranding, la conexión entre personas
+- La contradicción principal
+- El amor en los tiempos del cólera
+- Hay que recordar: en este momento, escribir este ensayo también es obligarme a organizar mis ideas para enfrentar el futuro
+- Acompañando mi viaje para ver casas, resumir y proyectar
+- Descontrol & Control
+- Torpe -> hay que practicar más.
 
 ## Uno
+El domingo pasado, en el metro camino a ver una casa, sentado en el asiento del borde, con la mano cubriendo mi cabeza inclinada, me sentía muy triste, como un perro callejero.
 
-En el metro, el domingo pasado, camino de ver un piso, sentado en un asiento lateral con la cabeza gacha entre las manos, me sentía muy triste, como un perro callejero.
-
-Era la primera vez que sentía la sensación de la separación.
+Esta fue la primera vez que sentí la sensación de separación.
 
 ## Demasiado pleno
+Esta sensación de no plenitud no me es ajena. Lo que no está completo es mi corazón sin lugar donde reposar, por eso antes siempre estuve buscando, explorando, experimentando, lo que se convirtió en una fuerza impulsora muy importante en mi experiencia de vida.
 
-Esta sensación de no estar completo no me es ajena. Lo incompleto es mi corazón sin un lugar donde asentarse, por eso antes siempre estuve buscando, explorando, experimentando, lo que se convirtió en una fuerza motriz muy importante en mi experiencia vital.
+En los casi cuatro años pasados, no hubo falta de plenitud, sino una tranquilidad de conciencia, pereza y desenfreno.
 
-En los casi cuatro años pasados, no hubo incompletud, sino una tranquilidad de conciencia, indolente y despreocupada.
+Plenitud no significa perfección total. Quiero alterar un poco el significado de esta palabra: las personas tienen alegrías y tristezas, encuentros y despedidas; la luna tiene fases de luna nueva y llena, claridad y oscuridad. Todas estas fases juntas son la verdad. No creo que todo **deba** ser pleno. Si solo hubiera plenitud, esta plenitud se volvería completamente sin sentido.
 
-Plenitud no es perfección total. Quiero alterar un poco el significado de esta palabra: las personas tienen alegrías y penas, encuentros y separaciones; la luna tiene fases de llena y menguante, nublada y clara. Todas estas fases juntas son la verdad. No creo que todo **deba** ser pleno por naturaleza. Si solo hubiera plenitud, esta plenitud perdería todo significado.
+La parte de mi vida aparte del trabajo, en el tiempo pasado, tendía a la estancación. El tiempo que dedicábamos a gestionarla era cada vez menos. Concretamente, los palillos se pudrían en el fregadero sin que nadie tuviera ánimo de limpiarlos. Nuestra vida parecía también estar siendo amortiguada y desgastada, perdiendo vitalidad, en un medio como el agua.
 
-Aparte del trabajo, mi vida en el tiempo pasado tendió a estancarse. El tiempo que dedicábamos a cultivarla era cada vez menos. Concretamente, los palillos podían enmohecerse en el fregadero sin que nadie tuviera ánimo de limpiarlos. Nuestra vida parecía también desgastarse, perder vitalidad, amortiguada en un medio como el agua.
+En pocas palabras, ciertas cosas en la vida se marchitaron gradualmente. Esto es lo único que puedo confirmar en este momento. Del resto de problemas no sé nada. Estar dentro de la montaña, solo veo rocas extrañas, raíces enredadas y un clima inconstante, y lo único que no veo es la montaña en sí.
 
-En pocas palabras, ciertas cosas en la vida se marchitaron gradualmente. Esto es lo único que puedo confirmar ahora. Del resto de problemas no sé nada. Estar en la montaña y solo ver rocas extrañas, raíces enredadas y tiempo inestable, sin poder ver la montaña en sí.
-
-Tampoco sé de dónde viene esta sensación de asfixia. ¿Fue por nuestro mal manejo? ¿Es que el entusiasmo debía apagarse? ¿O no estábamos preparados? No lo sé. Sé que todo influyó.
+Tampoco sé de dónde viene esta sensación de asfixia. ¿Fue por nuestra mala gestión? ¿Es que el entusiasmo debía apagarse? ¿O no estábamos preparados? No lo sé, sé que en realidad es todo.
 
 ## Dos
+En realidad, la noche anterior contacté al administrador de Ziroom, acordamos ver casas cerca de Songjiang University Town el domingo por la tarde alrededor de las dos y media. Songjiang está muy lejos de Yangpu, casi dos horas de viaje. La razón por la que no seguí el plan no fue solo levantarme tarde, sino que al mediodía vimos un rato de televisión juntos y salimos a la una y media de la tarde. Así que avisé al administrador para dejarlo para otra vez, pero aún así salí a cortarme el pelo.
 
-En realidad, la noche anterior contacté con un agente de Ziroom y quedamos para ver algunos pisos cerca de Songjiang University Town el domingo por la tarde, alrededor de las dos y media. Songjiang está muy lejos de Yangpu, casi dos horas de viaje. No salí según lo planeado no solo porque me levanté tarde, sino también porque al mediodía vimos un rato la televisión juntos y no salí hasta la una y media de la tarde. Así que avisé al agente para quedar otra vez, pero aun así salí para cortarme el pelo.
+Estar demasiado deprimido en el camino no es bueno para la salud mental. Una dosis demasiado grande de entorno desconocido de una vez puede causar una reacción de estrés. Además, como quedaba de paso, se me ocurrió de repente ir a ver al peluquero conocido para cortarme el pelo.
 
-Estar demasiado abatido en el camino no es bueno para la salud mental. Una dosis demasiado grande de entorno desconocido de una vez puede causar una reacción de estrés. Además, como quedaba de paso, se me ocurrió de improviso ir a cortarme el pelo con el peluquero de siempre, con quien ya tenía hora.
+## Descontrol
+El ser humano es un recipiente, pero el corazón quiere cosas que exceden su capacidad. No poder contenerlas es perder el control. ¿Cómo sabe la sensación de descontrol?
 
-## Pérdida de control
+Torpeza. Pensar que en el próximo período de tiempo necesitaré torpemente retomar la vida en solitario me da dolor de cabeza. Antes estaba familiarizado con esta vida y la manejaba con soltura. Sin embargo, después de cuatro años de falta de práctica, ya no estoy acostumbrado. El resultado es torpeza, torpeza hasta para saber por dónde empezar este artículo.
 
-El ser humano es un recipiente, pero el corazón desea cosas que exceden su capacidad. No poder contenerlas es perder el control. ¿A qué sabe esta sensación?
+Miedo. Miedo a que mi corazón, a veces angustiado, se sienta perdido en la habitación oscura después de la siesta, agitado, incluso gritando en silencio, y luego lleno de una sensación de vacío, sin poder hacer nada, hasta empezar a arrepentirme de no haber hecho nada en todo el día.
 
-Torpeza. Pensar que en el próximo período tendré que retomar torpemente la vida en solitario me da dolor de cabeza. Antes estaba familiarizado con esta vida y la manejaba con soltura. Sin embargo, tras cuatro años de falta de práctica, ya no estoy acostumbrado. El resultado es torpeza, tanta que ni siquiera sé por dónde empezar este artículo.
+La sensación de descontrol es dolorosa, pero en el fondo no es ajena. Es similar a la sensación que se tiene cuando en la lista de TODO del trabajo escribes un ítem que no sabes cómo implementar. En la mayoría de los casos, a medida que aumentas la comprensión del asunto, surgen soluciones, la sensación de control va erosionando la de descontrol y el corazón se siente mucho más tranquilo.
 
-Miedo. Miedo a que mi corazón, a veces angustiado, se sienta perdido en la penumbra de la habitación tras la siesta, agitado, incluso gritando en silencio, y luego lleno de una sensación de vacío, sin poder hacer nada, hasta empezar a arrepentirme de no haber hecho nada en todo el día.
+Mencius dijo: "Buscarlo y obtenerlo, abandonarlo y perderlo, es que buscar beneficia la obtención, buscar está en mí mismo. Buscarlo con método, obtenerlo con destino, es que buscar no beneficia la obtención, buscar está fuera de mí."
 
-La sensación de pérdida de control es dolorosa, pero en el fondo no es ajena. Es como cuando en la lista de tareas del trabajo escribes un punto que no sabes cómo implementar. En la mayoría de los casos, a medida que comprendes más el asunto, surgen soluciones, la sensación de control va erosionando la de descontrol y el corazón se siente mucho más tranquilo.
+Cuanto más saboreo estas palabras, más significado encuentro: hay cosas que con esfuerzo se pueden obtener, simple y llanamente, las variables que las afectan son tan pocas, llenas de orden. Otras cosas tienen un método para obtenerlas con esfuerzo, pero no una razón para obtenerlas necesariamente; entre buscar y obtener existen innumerables variables, incluso inexplicables, verdaderamente un caos.
 
-Mencius dijo: "Buscarlo y obtenerlo, abandonarlo y perderlo: esto es buscar lo que beneficia la obtención, buscar está en mí mismo. Buscarlo con un método, obtenerlo con el destino: esto es buscar lo que no beneficia la obtención, buscar está fuera de uno."
+El cielo y la tierra no son benevolentes, tratan a los diez mil seres como perros de paja; el universo no tiene mala intención hacia el hombre. En este mundo objetivo, el hombre necesita manejar la relación con su interior, expandir su capacidad como ser humano en el descontrol general, y en este proceso, para no hundirse en el caos, necesita buscar activamente cierta sensación de control. Resumiendo de manera abstracta: necesito sumergirme artificialmente en el abismo del caos, mientras creo innumerables pequeños universos llenos de orden dentro del caos.
 
-Cuanto más saboreo estas palabras, más significado encuentro: hay cosas que se pueden obtener con esfuerzo, simple y llanamente, las variables que las afectan son tan pocas, rebosantes de orden. Otras cosas tienen un método para esforzarse por obtenerlas, pero no una razón para obtenerlas necesariamente; entre la búsqueda y la obtención existen innumerables variables, incluso inexplicables, un verdadero caos.
+La vida es así, el trabajo en realidad ya lo es desde hace tiempo.
 
-El cielo y la tierra no son benevolentes, tratan a los seres como perros de paja; el universo no tiene mala intención hacia el hombre. En este mundo objetivo, el ser humano necesita manejar la relación con su interior, expandir su capacidad como persona en medio del descontrol general. En este proceso, para no hundirse en el caos, necesita buscar activamente cierta sensación de control. Resumiendo de forma abstracta: necesito sumergirme artificialmente en el abismo del caos, y al mismo tiempo crear dentro de él innumerables pequeños universos rebosantes de orden.
-
-Así es la vida, y el trabajo ya lo ha sido desde hace tiempo.
-
-Arrepentirse del pasado no sirve de nada, saber que el futuro se puede perseguir. Todos emprenderemos un nuevo viaje vital, y el tiempo hará crecer las semillas plantadas.
+Arrepentirse del pasado no sirve de nada, saber que lo por venir se puede perseguir. Todos emprenderemos un nuevo viaje en la vida, y el tiempo hará crecer las semillas plantadas.
 
 ## Tres
+Hacía mucho que no iba. El peluquero Jiawen y su equipo se mudaron a una nueva tienda en Jiuting. Finalmente ver una cara familiar fue realmente alegre. Mi cabello, que llevaba más de medio año creciendo, también estaba contento, finalmente iba a levantarse.
 
-Hacía mucho que no iba. El peluquero Jiawen y su equipo se mudaron a una nueva tienda en Jiuting. Finalmente ver caras familiares fue una alegría. Mi cabello, que llevaba más de medio año sin cortar, también estaba contento; por fin iba a levantarse.
-
-Jiawen me sirvió un vaso de agua, sorprendido de que pareciera un salvaje. Luego me cortó el pelo al estilo Oguri Shun. Como he engordado unos kilos, parezco más bien Gao Xiaosong. Tengo que adelgazar.
+Jiawen me sirvió un vaso de agua, sorprendido de cómo me había vuelto como un salvaje, luego me cortó el peinado de Oguri Shun. Como engordé unos kilos, en cambio parezco Gao Xiaosong, definitivamente tengo que adelgazar.
 
 ## Tres punto cinco
-
-La sensación de pérdida de control también viene del trabajo.
+La sensación de descontrol también viene del trabajo.
 
 ## Cuatro
+Aún así insistí en concertar citas con algunos agentes de Lianjia para ver casas. Songjiang es mucho mejor de lo que imaginaba, la infraestructura es muy buena, y parece que no será demasiado bullicioso, el alquiler también es bastante más barato que en la ciudad.
 
-Aun así, insistí y quedé con varios agentes de Lianjia para ver pisos. Songjiang es mucho mejor de lo que imaginaba, la infraestructura es buena, no parece excesivamente bullicioso y el alquiler es bastante más barato que en el centro.
+Después de ver las casas, cené con CZ en un restaurante de fideos de Shaanxi. Lo deprimente de este día fue la sensación de descontrol, pero algunas cosas familiares y las expectativas sobre el futuro me sostuvieron. Tal vez sea: "O saltar en el abismo, sin culpa".
 
-Después de ver los pisos, cené con CZ en un restaurante de fideos de Shaanxi. Lo deprimente de este día fue la sensación de pérdida de control, pero ciertas cosas familiares y las expectativas hacia el futuro me sostuvieron. Quizás sea esto: "O saltas en el abismo, sin culpa."
+## Planes futuros
 
-## Planificación del futuro
-
-No está terminado, continuará...
+No terminado, continuará...

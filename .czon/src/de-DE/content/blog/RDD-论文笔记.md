@@ -1,110 +1,109 @@
 ---
-"title": "RDD-Paper-Notizen"
-"summary": "Dieser Artikel enthält Notizen zum Paper 'Resilient Distributed Datasets (RDDs)'. Er analysiert die Designmotivation, die Kernkonzepte und die Vorteile von RDDs. RDDs sind eine Abstraktion für verteilten Speicher, die durch Unveränderlichkeit (Immutable) und verzögerte Berechnung (Lazy Evaluation) charakterisiert sind. Sie unterstützen Transformationen und Aktionen und nutzen einen DAG, um Abhängigkeiten darzustellen. Durch den Verzicht auf feingranulare Operationen erreichen sie Fehlertoleranz, Allgemeingültigkeit und Leistung, was bei iterativen Berechnungen im Vergleich zu Hadoop zu erheblichen Verbesserungen führt (z.B. 20-40x). Der Artikel gibt außerdem einen Überblick über die Spark-Implementierung und Evaluierungsergebnisse und stellt fest, dass RDDs für grobgranulare Berechnungen geeignet sind, jedoch nicht für feingranulare asynchrone Aufgaben."
-"tags":
-  - "RDD"
-  - "Spark"
-  - "Verteiltes System"
-  - "Paper-Notizen"
-  - "Speicherabstraktion"
-  - "Iterative Berechnung"
-  - "Fehlertoleranz"
-"date": "2020-10-29"
+title: RDD-Papiernotizen
+date: 2020-10-29
+taxonomies:
+  tags:
+    - Technologie
+    - Verteilte Systeme
+    - Papiernotizen
+    - RDD
+    - Spark
+
 ---
 
-Resilient Distributed Datasets (RDDs) sind eine Abstraktion für den Speicher in verteilten Systemen.
+Resilient Distributed Datasets (RDDs) sind eine Abstraktion für den Arbeitsspeicher in verteilten Systemen.
 
-Im Wesentlichen handelt es sich um ein restriktives **Shared-Memory**-Modell, das nur grobgranulare Transformationsoperationen bereitstellt.
+Im Wesentlichen handelt es sich um ein restriktives **Shared-Memory**-Modell, das nur grobkörnige Transformation-Operationen bereitstellt.
 
 ## Motivation
 
 ### Problem
 
-Iterative verteilte Berechnungen erfordern die Fähigkeit, Daten zwischen Iterationen (effizient) wiederzuverwenden.
+Iterative verteilte Berechnungen benötigen die Fähigkeit, Daten zwischen Iterationen (effizient) wiederzuverwenden.
 
 ### Aktueller Stand
 
-- Die existierenden (Stand 2012) verteilten Rechenframeworks fehlte eine Abstraktion, die den Clusterspeicher (für Wiederverwendung) optimal nutzen konnte.
-- Der einzige Weg, Daten in bestehenden Frameworks wiederzuverwenden, bestand darin, mehrere verteilte Berechnungen zu starten.
+- Die existierenden (2012) verteilten Rechenframeworks fehlt eine Abstraktion, die den (Wiederverwendungs-)Vorteil des Clusterspeichers voll ausnutzen kann.
+- Der einzige Weg, Daten in bestehenden Frameworks wiederzuverwenden, ist das mehrfache Starten verteilter Berechnungen.
 
-Daher war, obwohl das Problem der Lösbarkeit gelöst war, die Datenwiederverwendung nach wie vor der Leistungsengpass für diese Art von Berechnungen: Zu viele Ressourcen wurden für übermäßig häufige I/O-Vorgänge aufgewendet.
+Daher ist, obwohl das Problem der Lösbarkeit gelöst ist, die Datenwiederverwendung nach wie vor der Leistungsengpass für diese Art von Berechnungen: Zu viele Ressourcen werden für zu häufige I/O-Vorgänge verbraucht.
 
-Einige Arbeiten versuchten, diese Probleme zu lösen, konnten jedoch nur bestimmte Berechnungsmuster unterstützen und waren nicht allgemeingültig genug.
+Einige Arbeiten haben versucht, diese Probleme zu lösen, konnten aber nur bestimmte Berechnungsmuster unterstützen und waren nicht allgemein genug.
 
-Die Hauptherausforderung bestand in der Abwägung zwischen der Granularität der Berechnung, der Allgemeingültigkeit und der Fehlertoleranz.
+Die Hauptherausforderung ist der Kompromiss zwischen der Granularität der Berechnung, der Allgemeingültigkeit und der Fehlertoleranz.
 
 ## RDD
 
-RDDs bieten eine Abstraktion für den Speicher in verteilten Rechenclustern und lösen die oben genannten Probleme weitgehend, indem sie den relativ unwichtigsten der drei Punkte opfern: die Granularität der Berechnung.
+RDD bietet eine Abstraktion für den Arbeitsspeicher von Rechenclustern, die das oben genannte Problem weitgehend löst, und zwar durch den Verzicht auf den relativ unwichtigsten der drei Punkte: die Granularität der Berechnung.
 
 ### Grundlagen
 
-Eigenschaften von RDDs:
+Eigenschaften von RDD:
 
 - Unveränderlich (Immutable)
-- Verzögert (Lazy)
+- Träge Auswertung (Lazy)
 
-Von RDDs unterstützte Operationen:
+Von RDD unterstützte Operationen:
 
-- Transformationen - Verzögerte Operationen (Lazy operations)
+- Transformation - Träge Operationen
   - map
   - filter
   - ...
-- Aktionen - Starten von Berechnungen (Launch computations)
+- Aktionen - Starten von Berechnungen
   - count
   - collect
   - save
   - ...
-- Persistieren, d.h. Cachen (persist i.e. cache)
+- Persistieren, d.h. Zwischenspeichern (cache)
 
-Spark implementiert RDDs und bietet eine Programmier-Schnittstelle ähnlich zu DryadLINQ.
+Spark implementiert RDD und bietet eine Programmier-Schnittstelle ähnlich wie DryadLINQ.
 
-### Vorteile von RDDs
+### Vorteile von RDD
 
-Hauptsächlich im Vergleich zu ähnlichen Abstraktionen (die Clusterspeicher modellieren) opfern RDDs feingranulare Datenoperationen, um in anderen Aspekten (Allgemeingültigkeit, Fehlertoleranz, Leistung bei Herabstufung, Konsistenz, Straggler-Problem, Benutzerfreundlichkeit) deutlich besser abzuschneiden.
+Hauptsächlich im Vergleich zu ähnlichen Abstraktionen (die den Clusterspeicher modellieren) opfert RDD feinkörnige Datenoperationen, um in anderen Aspekten (Allgemeingültigkeit, Fehlertoleranz, Leistung bei Herabstufung, Konsistenz, Straggler-Problem, Benutzerfreundlichkeit) deutlich besser abzuschneiden.
 
-### Einschränkungen von RDDs
+### Einschränkungen von RDD
 
-RDDs eignen sich nicht für asynchrone Berechnungen mit vielen feingranularen Lese-/Schreibvorgängen, wie z.B. Speichersysteme für Webcrawler. Für ähnliche Anwendungen schlagen die Autoren andere Frameworks vor, die hier nicht weiter erläutert werden.
+RDD eignet sich nicht für asynchrone Berechnungen mit vielen feinkörnigen Lese-/Schreibvorgängen, wie z.B. Speichersysteme für Webcrawler. Für ähnliche Anwendungen schlagen die Autoren andere Frameworks vor, die hier nicht weiter erläutert werden.
 
 ## Spark-Programmierschnittstelle
 
 Implementiert in Scala, da Scala prägnant und effizient ist.
 
-Der Autor gibt hier einige Beispiele, die hier ausgelassen werden.
+Der Autor gibt in diesem Abschnitt einige Beispiele, die hier ausgelassen werden.
 
-## Darstellung von RDDs
+## Darstellung von RDD
 
-Verwendung eines DAG (Directed Acyclic Graph) zur Darstellung eines RDD.
+Ein DAG wird verwendet, um RDD darzustellen.
 
-### Abhängigkeiten (Dependencies)
+### Abhängigkeiten
 
-- Enge Abhängigkeiten (narrow dependencies) - Jedes Eltern-RDD wird von höchstens einem Kind-RDD abhängig.
-- Weite Abhängigkeiten (wide dependencies) - Ein Eltern-RDD wird von mindestens einem Kind-RDD abhängig.
+- Enge Abhängigkeiten (narrow dependencies) - Jedes Elternelement wird von höchstens einem Kindelement abhängig gemacht.
+- Breite Abhängigkeiten (wide dependencies) - Ein Elternelement wird von mindestens einem Kindelement abhängig gemacht.
 
 ## Implementierung
 
-- Verwendung von Mesos für das Cluster-Management.
-- Job-Scheduling wird ausgelassen.
-- Interpreter-Integration wird ausgelassen.
-- Speicherverwaltung wird ausgelassen.
+- Verwendung von Mesos für das Cluster-Management
+- Job-Scheduling wird ausgelassen
+- Interpreter-Integration wird ausgelassen
+- Speicherverwaltung wird ausgelassen
 
-## Evaluierung
+## Bewertung
 
-- Bei iterativen Aufgaben 20x schneller als Hadoop.
-- Bei einem Benutzeranalyseprogramm wird über 40x schneller als Hadoop berichtet.
-- Nach einem Knotenausfall kann schnell neu berechnet werden.
-- Abfrage von 1 TB Daten mit 5-7 Sekunden Latenz.
+- 20x schneller als Hadoop bei iterativen Aufgaben
+- 40x schneller als Hadoop bei Benutzeranalyseprogrammen (laut Bericht)
+- Kann nach einem Knotenausfall schnell neu berechnet werden
+- 5-7 Sekunden Latenz bei der Abfrage von 1 TB Daten
 
 Details werden ausgelassen.
 
 ## Diskussion
 
-Sie haben (fast schon übertrieben) Spark verwendet, um andere verteilte Rechenframeworks nachzuahmen, um die Allgemeingültigkeit von RDDs zu demonstrieren.
+Sie haben in bemerkenswerter Weise Spark verwendet, um andere verteilte Rechenframeworks nachzuahmen, um die allgemeine Natur von RDD zu demonstrieren.
 
-Konkretes wird ausgelassen.
+Details werden ausgelassen.
 
 ## Zusammenfassung
 
-- Der größte Vorteil von RDDs/Spark ist die Modellierung des gesamten Clusterspeichers, wodurch verteilte Berechnungen Zwischenergebnisse im Speicher halten können. Dies ermöglicht schnelle aufeinanderfolgende Berechnungen auf demselben Datensatz. All dies basiert auf einer Voraussetzung: Speicher ist um eine Größenordnung schneller als Festplatten (daher ist die 40x Leistungssteigerung von Spark gegenüber Hadoop möglich).
-  Man sieht: Die theoretische Grenze für Software-Innovationen sind die harten Grenzen der Hardware.
+- Der größte Vorteil von RDD/Spark ist die Modellierung des gesamten Clusterspeichers, die es verteilten Berechnungen ermöglicht, Zwischenergebnisse im Arbeitsspeicher zu speichern. Dadurch werden schnelle aufeinanderfolgende Berechnungen auf demselben Dataset möglich. All dies basiert auf einer Voraussetzung: Arbeitsspeicher ist um eine Größenordnung schneller als Festplatten (daher die 40x Leistungssteigerung von Spark gegenüber Hadoop).
+  Es zeigt sich, dass die theoretische Grenze für Software-Innovationen durch die harten Grenzen der Hardware gesetzt ist.

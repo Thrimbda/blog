@@ -1,29 +1,16 @@
 ---
-"title": "To-"
-"summary": "Este artículo se centra en el poema 'To-' de John Keats, presentando su texto original en inglés y una introducción contextual en chino, para explorar la fascinación y la melancolía expresadas hacia una joven dama en el poema. Además, compara los dos últimos versos del poema de Keats con el soneto 113 de Shakespeare en términos de ritmo, señalando similitudes en la estructura emocional y el tratamiento musical, y cita notas al pie relevantes para respaldar este punto de vista. Esto revela la posible influencia de Shakespeare en la creación de Keats, así como los puntos en común entre ambos poetas en la expresión emocional y la técnica poética."
-"tags":
-  - "John Keats"
-  - "Análisis poético"
-  - "Shakespeare"
-  - "Soneto"
-  - "Comparación métrica"
-  - "Influencia literaria"
-"date": "2018-01-07"
----
-
----
-title: To-
-date: 2018-01-07
+title: A -
+date: 7 de enero de 2018
 taxonomies:
   tags:
     - John Keats
 ---
 
-> Keats vio una vez a una joven dama durante unos minutos, quedando fascinado e incluso melancólico por ella.
+> Keats una vez vio a una joven dama durante unos minutos, quedando tan cautivado que incluso se sintió afligido.
 
 <!--more-->
 
-## To -
+## A -
 
 ```
 TIME’S sea hath been five years at its slow ebb,
@@ -45,20 +32,20 @@ Every delight with sweet remembering,
 And grief unto my darling joys dost bring.
 ```
 
-### Nota
+### Nota breve
 
-Posteriormente, se descubrió que los dos últimos versos de este poema `To - ["Time's sea"]`:
+Más tarde se descubrió que los dos últimos versos de este poema `A - ["Time's sea"]`
 
 ```
 Every delight with sweet remembering,
 And grief unto my darling joys dost bring.
 ```
 
-y los de `soneto CXIII` de Shakespeare:
+y los de Shakespeare en el `soneto CXIII`
 
 ```
 Even so, being full of your ne'er cloying sweetness,
 To bitter sauces did I frame my feeding.
 ```
 
-presentan cierta similitud métrica. No es de extrañar que en una nota al pie de este poema de Keats se mencionara: "En el tratamiento rítmico de la estructura emocional y en la creciente musicalidad, se asemeja enormemente a los sonetos de Shakespeare".
+tienen cierta similitud rítmica. No es de extrañar que en una nota al pie de este poema de Keats se mencione: "En el tratamiento rítmico de la estructura emocional y en la creciente musicalidad, se asemeja mucho a los sonetos de Shakespeare".

@@ -1,18 +1,4 @@
 ---
-"title": "To-"
-"summary": "This article centers on John Keats' poem 'To-', presenting its original English text alongside a Chinese contextual introduction. It explores the infatuation and melancholy expressed in the poem toward a young lady. The article further compares the rhythmic patterns of the final two lines of Keats' poem with those in Shakespeare's Sonnet 113, noting similarities in emotional structure and musicality. It cites relevant footnotes to support this perspective, revealing Keats' possible influence by Shakespeare and the commonalities between the two poets in emotional expression and poetic craftsmanship."
-"tags":
-  - "John Keats"
-  - "Keats"
-  - "Poetry Analysis"
-  - "Shakespeare"
-  - "Sonnet"
-  - "Rhythmic Comparison"
-  - "Literary Influence"
-"date": "2018-01-07"
----
-
----
 title: To-
 date: 2018-01-07
 taxonomies:
@@ -20,7 +6,7 @@ taxonomies:
     - John Keats
 ---
 
-> Keats once saw a young lady for a few minutes and was so captivated and even heartbroken by her.
+> Keats once saw a young lady for a few minutes and was so captivated by her that he even felt heartbroken.
 
 <!--more-->
 
@@ -48,18 +34,18 @@ And grief unto my darling joys dost bring.
 
 ### Note
 
-Later, it was discovered that the final two lines of this poem, `To - ["Time's sea"]`:
+Later, it was discovered that the last two lines of this poem `To - ["Time's sea"]`
 
 ```
 Every delight with sweet remembering,
 And grief unto my darling joys dost bring.
 ```
 
-share a rhythmic similarity with these lines from Shakespeare's `sonnet CXIII`:
+bear some rhythmic resemblance to these lines from Shakespeare's `sonnet CXIII`:
 
 ```
 Even so, being full of your ne'er cloying sweetness,
 To bitter sauces did I frame my feeding.
 ```
 
-No wonder a footnote to Keats' poem once mentioned, "In the rhythmic handling of emotional structure and in the gradually intensifying musicality, it closely resembles Shakespeare's sonnets."
+No wonder a footnote to Keats' poem once mentioned, "In the rhythmic handling of emotional structure and the gradually intensifying musicality, it closely resembles Shakespeare's sonnets."

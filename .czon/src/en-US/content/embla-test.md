@@ -1,22 +1,3 @@
----
-"title": "Embla Test"
-"summary": "This document is a test page for the Embla carousel, featuring
-  multiple placeholder images with descriptive text labels. It includes five
-  images displayed in sequence, with brief text content interspersed between
-  them. The page serves as a demonstration or testing environment for the Embla
-  carousel functionality, showcasing how images and text can be integrated. The
-  content concludes with an end-of-test marker, indicating its purpose as a
-  sample or trial page."
-"tags":
-  - "Embla"
-  - "carousel"
-  - "test"
-  - "images"
-  - "placeholder"
-  - "demo"
-"date": "2025-01-01"
----
-
 +++
 title = "Embla Test"
 date = 2025-01-01

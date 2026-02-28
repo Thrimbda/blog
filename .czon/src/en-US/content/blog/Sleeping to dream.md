@@ -1,18 +1,4 @@
 ---
-"title": "Sleeping to Dream"
-"summary": "This article, from Bryan's perspective, depicts the delayed nature of sorrow. Sorrow is described as a warm fluid, sloshing in the chest and corroding the heart, akin to pain simmering over a low heat. Memory acts as a spooky action at a distance, stirring this pot of abyssal soup. When the door to the cellar filled with discarded memories is opened, the brewed ghosts surge forth with the scent of both pleasure and resentment, causing Bryan to lose himself in time, unable to distinguish past from present. The article references Keats' 'Ode on Melancholy,' further deepening the theme of sorrow intertwined with beauty and joy. Ultimately, Bryan realizes the bleakness of human nature caught between gods and beasts, yet he remains an unwitting sacrifice to this spiraling tragedy."
-"tags":
-  - "Abnormal Human Studies"
-  - "Essay"
-  - "Sorrow"
-  - "Memory"
-  - "Time"
-  - "Human Nature"
-  - "Melancholy"
-"date": "2018-08-14"
----
-
----
 title: Sleeping to Dream
 date: 2018-08-14
 taxonomies:
@@ -21,17 +7,17 @@ taxonomies:
     - Essay
 ---
 
-Bryan never imagined that sorrow could also have a delayed nature—the ghosts of the past have come calling again, and this time, he no longer has the strength to resist.
+Bryan never expected that sorrow could be delayed—the ghosts of the past had returned, and this time, he no longer had the strength to resist.
 
 <!--more-->
 
-If asked to describe the **shape of sorrow** now, he would say it's like a fluid, contained within his chest, sloshing as he walks, spilling a little to corrode his heart. When lying down, it flows steadily, only trembling in sync with his heartbeat.
+If asked to describe the **shape of sorrow** now, he would say it’s like a fluid, held within his chest, sloshing as he walks, spilling out bit by bit to corrode his heart. When lying down, it flows steadily, trembling only with each heartbeat.
 
-As for its temperature, it's certainly not cold; it's warm, slightly hotter than the temperature of his chest, continuously releasing heat to slowly roast his heart. The sensation is like... simmering over a low heat, stewing together with pain, yet never fully cooked. His active nerves persistently remind him of the taste of **pain**.
+As for its temperature, it’s certainly not cold—it’s warm, slightly hotter than the temperature of his chest, slowly releasing heat that simmers his heart. It feels like... a slow simmer over low heat, stewing with pain, yet never fully cooked. His active nerves keep reminding him of the taste of **pain**.
 
-There is only one kind of spooky action at a distance in this world—the **memories** that stir this pot of abyssal soup from the back of his head. After brewing and fermenting for over a year alongside a fate as fragile as raindrops on duckweed, the moment he opened the door to this cellar filled with discarded memories, the brewed ghosts, carrying the warm, sweet scent of pleasure and the odor of resentment, surged up and struck him like a heavy blow—a reaction that, in my view, is truly shameful, or to put it plainly, shameful to the point of utter humiliation. I have never seen him like this before. Once sincere, confident, youthful, and candid, he is now lost in the flow of time. He can no longer distinguish which events are happening now, which happened two years ago, or which he thought occurred yesterday but have actually been over for a year. These **memories**, which he believed he had long lost over the past year, have ultimately dispersed among all other orderly memories in such a vividly clear form, infecting them like cancer. Even earlier, cleaner memories have now begun to take on sharp edges, wandering through his mind.
+There is only one kind of action at a distance in this world—the **memories** that stir this cauldron of abyssal soup from the back of his head. After fermenting for over a year alongside a fate as fragile as raindrops on duckweed, the moment he opened the cellar door filled with discarded memories, the brewed ghosts surged up with the warm, sweet scent of pleasure and resentment, hitting him like a heavy hammer. To me, his reaction seemed shameful—or, to put it plainly, shameful to the point of unbearable embarrassment. I had never seen him like this before. Once sincere, confident, and youthful, now lost in the flow of time, he could no longer distinguish what happened now, what happened two years ago, or what he thought happened yesterday but had actually passed a year ago. These **memories**, which he believed he had long lost over the past year, ultimately dispersed in such a clear and visible form among all other orderly memories, infecting them like cancer. Even earlier, cleaner memories now began to take on sharp edges, wandering in his mind.
 
-Unfortunately, poor Bryan is merely a pitiful one-dimensional temporal being, unaware that his mind, at certain moments, merely serves as a medium for transmitting messages, delivering ancient information to his self after countless iterations, all while engaging in foolish acts of confidence tinged with faint sorrow. At this moment, he finally realizes the **bleakness** of human nature, caught between gods and beasts, yet he remains uncontrollably destined to be a sacrifice to this spiraling tragedy.
+Unfortunately, poor Bryan is merely a pitiful one-dimensional creature of time, unaware that his mind sometimes serves only as a medium, transmitting distant messages to his future self after countless iterations, all while performing foolish acts of confidence tinged with faint sorrow. At this moment, he finally realized the **bleakness** of humanity, caught between gods and beasts, yet still unable to resist becoming a sacrifice to this spiraling tragedy.
 
 ```
 Ode on Melancholy
