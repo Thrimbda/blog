@@ -160,206 +160,203 @@
             "個人ウェブサイト",
             "テーマカスタマイズ"
           ]
+        },
+        "zh-Hans": {
+          "title": "我的博客，用心构建",
+          "description": "介绍使用 Zola 构建的个人博客，并采用 Anemone 主题进行定制。",
+          "summary": "本文档简要介绍了一个个人博客的构建方式，使用 Zola 静态网站生成器搭建，并采用了 Anemone 主题，同时进行了一些轻微的修改。核心价值在于分享博客的技术栈和设计选择，为读者提供参考。",
+          "short_summary": "这是一个使用 Zola 构建的个人博客，主题基于 Anemone 并进行了微调。文档简洁地说明了博客的技术实现和设计来源。",
+          "key_points": [
+            "博客使用 Zola 静态网站生成器构建",
+            "主题采用 Anemone 并进行微调",
+            "文档简洁介绍技术栈",
+            "强调个人博客的构建方式",
+            "提供主题定制参考",
+            "适合静态网站爱好者"
+          ],
+          "audience": "对静态网站生成、博客搭建和主题定制感兴趣的技术爱好者",
+          "tags": [
+            "博客",
+            "Zola",
+            "Anemone",
+            "静态网站生成器",
+            "个人网站",
+            "主题定制"
+          ]
         }
       },
       "metadataTranslationHash": "8e05a8d20ee95c1e953773e560bfe8a1f6d441aa823f96912a99520d60d7e05b"
     },
     {
-      "hash": "1868f92f6f4b1edeedb75aa693b41f0f94a4e62f09a61f2bc18707d011871a17",
+      "hash": "85edd22af5f4aa94a4b0f59e83a440e29abfc203cace9a73aa101affa850f53b",
       "path": "content/_index.md",
       "links": [
         "./tags",
         "mailto:siyuan.arc@gmail.com",
         "https://github.com/Thrimbda",
+        "https://gaocegege.com/",
+        "https://peiguang.space/",
+        "https://readme.zccz14.com/",
+        "https://zxk.one/",
         "https://github.com/zccz14/blog/tree/master/src/posts"
       ],
       "metadata": {
         "title": "博客重建与个人表达",
-        "description": "作者分享重新搭建博客的思考过程，选择 Zola 静态网站生成器的原因，以及对个人表达的反思。",
-        "short_summary": "作者在 2024 年重新搭建博客，选择了 Zola 静态网站生成器，看重其长期可维护性和简洁性。文章回顾了 2017 年开始写博客的初衷，并分享了联系方式。",
-        "audience": "对个人博客搭建、静态网站生成器感兴趣的技术爱好者或写作者",
+        "description": "作者分享重新翻修博客的经历，选择 Zola 静态网站生成器的原因，并回顾个人博客的初衷与变化。",
+        "short_summary": "作者在 2024 年翻修博客，选择 Zola 静态网站生成器以实现简单、长期可维护的写作环境。文章回顾了博客的建立初衷，并分享了联系方式与朋友链接，体现了个人表达的持续兴趣。",
+        "audience": "对个人博客建设、静态网站生成器（如 Zola、Hexo）感兴趣的技术爱好者或博客作者。",
         "key_points": [
-          "作者在 2024 年重新翻修博客",
-          "选择 Zola 静态网站生成器",
-          "原因包括支持 Markdown、长期可维护性、主题简单",
-          "之前使用 Hexo 但 CI 挂掉",
-          "表达欲在线下释放，写文章变得奢侈",
-          "回顾 2017 年开始写博客的初衷",
-          "提供了多种联系方式",
-          "提及朋友阿铮的博客作为参考",
-          "强调博客的简单性和可维护性",
-          "未来可能尝试更花哨的博客"
+          "作者在 2024 年重新翻修博客，选择 Zola 静态网站生成器以满足简单、长期可维护的需求。",
+          "文章回顾了 2017 年建立博客的初衷，对比了不同工具（如 NextJS、Gatsby、Hexo）的优缺点。",
+          "作者强调博客的轻量化和易维护性，以适应线下表达欲释放的生活阶段。",
+          "包含联系方式、朋友链接和脚注，展现了个人博客的社交与历史维度。",
+          "通过引用 2017 年的文字，体现了博客的演变与个人成长的连续性。"
         ],
-        "summary": "本文作者在 2024 年决定重新翻修博客，因为之前的 Hexo CI 挂掉，且自己处于表达欲可线下释放的阶段，写文章变得奢侈。经过简单考察，选择了单 binary 静态网站生成器 Zola，主要因为它支持 Markdown、长期可维护性以及简单的主题。作者回顾了 2017 年刚开始写博客时的想法，并留下了当时的引文。文章还提供了联系方式，并提及了朋友阿铮的博客作为参考。整体上，这是一篇关于个人博客重建、工具选择和对写作态度的随笔。",
+        "summary": "本文记录了作者在 2024 年重新翻修博客的过程，表达了对维护博客的懒散态度，但最终选择 Zola 静态网站生成器以满足简单、长期可维护的需求。作者回顾了 2017 年建立博客的初衷，对比了不同工具（如 NextJS、Gatsby、Hexo），强调了 Zola 的轻量、依赖少和易维护性。文章还包含联系方式、朋友链接和脚注，展现了个人博客的演变与持续表达的兴趣。",
         "slug": "blog-rebuild-and-personal-expression",
         "tags": [
-          "博客",
+          "博客翻修",
           "Zola",
           "静态网站生成器",
-          "个人表达",
+          "个人博客",
           "Markdown",
-          "Hexo",
-          "NextJS",
-          "Gatsby"
+          "技术选择",
+          "表达欲",
+          "Hexo"
         ],
         "inferred_date": "2024-01-01",
         "inferred_lang": "zh-Hans",
         "tokens_used": {
-          "prompt": 1017,
-          "completion": 426,
-          "total": 1443
+          "prompt": 1023,
+          "completion": 430,
+          "total": 1453
         }
       },
       "category": "Blog Introduction",
-      "nativeMarkdownHash": "1868f92f6f4b1edeedb75aa693b41f0f94a4e62f09a61f2bc18707d011871a17",
+      "nativeMarkdownHash": "85edd22af5f4aa94a4b0f59e83a440e29abfc203cace9a73aa101affa850f53b",
       "metadataTranslations": {
         "zh-Hans": {
           "title": "博客重建与个人表达",
-          "description": "作者分享重新搭建博客的思考过程，选择 Zola 静态网站生成器的原因，以及对个人表达的反思。",
-          "summary": "本文作者在 2024 年决定重新翻修博客，因为之前的 Hexo CI 挂掉，且自己处于表达欲可线下释放的阶段，写文章变得奢侈。经过简单考察，选择了单 binary 静态网站生成器 Zola，主要因为它支持 Markdown、长期可维护性以及简单的主题。作者回顾了 2017 年刚开始写博客时的想法，并留下了当时的引文。文章还提供了联系方式，并提及了朋友阿铮的博客作为参考。整体上，这是一篇关于个人博客重建、工具选择和对写作态度的随笔。",
-          "short_summary": "作者在 2024 年重新搭建博客，选择了 Zola 静态网站生成器，看重其长期可维护性和简洁性。文章回顾了 2017 年开始写博客的初衷，并分享了联系方式。",
+          "description": "作者分享重新翻修博客的经历，选择 Zola 静态网站生成器的原因，并回顾个人博客的初衷与变化。",
+          "summary": "本文记录了作者在 2024 年重新翻修博客的过程，表达了对维护博客的懒散态度，但最终选择 Zola 静态网站生成器以满足简单、长期可维护的需求。作者回顾了 2017 年建立博客的初衷，对比了不同工具（如 NextJS、Gatsby、Hexo），强调了 Zola 的轻量、依赖少和易维护性。文章还包含联系方式、朋友链接和脚注，展现了个人博客的演变与持续表达的兴趣。",
+          "short_summary": "作者在 2024 年翻修博客，选择 Zola 静态网站生成器以实现简单、长期可维护的写作环境。文章回顾了博客的建立初衷，并分享了联系方式与朋友链接，体现了个人表达的持续兴趣。",
           "key_points": [
-            "作者在 2024 年重新翻修博客",
-            "选择 Zola 静态网站生成器",
-            "原因包括支持 Markdown、长期可维护性、主题简单",
-            "之前使用 Hexo 但 CI 挂掉",
-            "表达欲在线下释放，写文章变得奢侈",
-            "回顾 2017 年开始写博客的初衷",
-            "提供了多种联系方式",
-            "提及朋友阿铮的博客作为参考",
-            "强调博客的简单性和可维护性",
-            "未来可能尝试更花哨的博客"
+            "作者在 2024 年重新翻修博客，选择 Zola 静态网站生成器以满足简单、长期可维护的需求。",
+            "文章回顾了 2017 年建立博客的初衷，对比了不同工具（如 NextJS、Gatsby、Hexo）的优缺点。",
+            "作者强调博客的轻量化和易维护性，以适应线下表达欲释放的生活阶段。",
+            "包含联系方式、朋友链接和脚注，展现了个人博客的社交与历史维度。",
+            "通过引用 2017 年的文字，体现了博客的演变与个人成长的连续性。"
           ],
-          "audience": "对个人博客搭建、静态网站生成器感兴趣的技术爱好者或写作者",
+          "audience": "对个人博客建设、静态网站生成器（如 Zola、Hexo）感兴趣的技术爱好者或博客作者。",
           "tags": [
-            "博客",
+            "博客翻修",
             "Zola",
             "静态网站生成器",
-            "个人表达",
+            "个人博客",
             "Markdown",
-            "Hexo",
-            "NextJS",
-            "Gatsby"
+            "技术选择",
+            "表达欲",
+            "Hexo"
           ]
         },
         "en-US": {
-          "title": "Blog Rebuild and Personal Expression",
-          "description": "The author shares the thought process behind rebuilding the blog, the reasons for choosing the Zola static site generator, and reflections on personal expression.",
-          "summary": "In 2024, the author decided to renovate the blog because the previous Hexo CI failed, and they were in a phase where the desire for expression could be released offline, making writing articles a luxury. After a brief investigation, they chose the single-binary static site generator Zola, mainly for its support of Markdown, long-term maintainability, and simple themes. The author recalls the thoughts from when they started blogging in 2017 and includes the original quote from that time. The article also provides contact information and mentions a friend's blog as a reference. Overall, this is an essay about personal blog rebuilding, tool selection, and attitudes toward writing.",
-          "short_summary": "In 2024, the author rebuilt the blog, choosing the Zola static site generator for its long-term maintainability and simplicity. The article reflects on the original intention of starting the blog in 2017 and shares contact information.",
+          "title": "Blog Reconstruction and Personal Expression",
+          "description": "The author shares the experience of renovating their blog, the reasons for choosing the Zola static site generator, and reflects on the original purpose and evolution of their personal blog.",
+          "summary": "This article documents the author's process of renovating their blog in 2024, expressing a laid-back attitude towards blog maintenance but ultimately choosing the Zola static site generator to meet the needs of simplicity and long-term maintainability. The author revisits the original intent behind starting the blog in 2017, compares different tools (such as NextJS, Gatsby, Hexo), and emphasizes Zola's lightweight nature, minimal dependencies, and ease of maintenance. The article also includes contact information, friend links, and footnotes, showcasing the evolution of the personal blog and the ongoing interest in personal expression.",
+          "short_summary": "The author renovated their blog in 2024, choosing the Zola static site generator to create a simple, long-term maintainable writing environment. The article reflects on the blog's founding purpose and shares contact information and friend links, demonstrating a continued interest in personal expression.",
           "key_points": [
-            "The author renovated the blog in 2024.",
-            "Chose the Zola static site generator.",
-            "Reasons include Markdown support, long-term maintainability, and simple themes.",
-            "Previously used Hexo, but its CI failed.",
-            "The desire for expression is released offline, making writing articles a luxury.",
-            "Reflects on the original intention of starting the blog in 2017.",
-            "Provides multiple contact methods.",
-            "Mentions a friend's blog as a reference.",
-            "Emphasizes the blog's simplicity and maintainability.",
-            "May try a more fancy blog in the future."
+            "The author renovated their blog in 2024, choosing the Zola static site generator to meet the needs of simplicity and long-term maintainability.",
+            "The article revisits the original intent behind starting the blog in 2017, comparing the pros and cons of different tools (such as NextJS, Gatsby, Hexo).",
+            "The author emphasizes the blog's lightweight design and ease of maintenance to adapt to a life stage focused on offline expression.",
+            "Includes contact information, friend links, and footnotes, showcasing the social and historical dimensions of the personal blog.",
+            "By quoting text from 2017, it reflects the blog's evolution and the continuity of personal growth."
           ],
-          "audience": "Tech enthusiasts or writers interested in personal blog setup and static site generators.",
+          "audience": "Tech enthusiasts or bloggers interested in personal blog development and static site generators (such as Zola, Hexo).",
           "tags": [
-            "Blog",
+            "Blog Renovation",
             "Zola",
             "Static Site Generator",
-            "Personal Expression",
+            "Personal Blog",
             "Markdown",
-            "Hexo",
-            "NextJS",
-            "Gatsby"
+            "Technology Selection",
+            "Desire for Expression",
+            "Hexo"
           ]
         },
         "ja-JP": {
           "title": "ブログ再構築と個人表現",
-          "description": "著者がブログを再構築する思考プロセス、静的サイトジェネレーターZolaを選んだ理由、そして個人表現についての考察を共有しています。",
-          "summary": "本記事の著者は、以前使用していたHexoのCIが停止し、また自身の表現欲がオフラインで満たされる段階にあったため、2024年にブログの再構築を決意しました。簡単な調査の後、Markdownサポート、長期的な保守性、シンプルなテーマを主な理由として、単一バイナリの静的サイトジェネレーターZolaを選択しました。著者は2017年にブログを始めた頃の考えを振り返り、当時の引用を残しています。連絡先も提供されており、友人阿錚のブログが参考として言及されています。全体として、これは個人ブログの再構築、ツール選択、執筆に対する姿勢についての随筆です。",
-          "short_summary": "著者は2024年にブログを再構築し、長期的な保守性とシンプルさを重視して静的サイトジェネレーターZolaを選択しました。記事では2017年にブログを始めた動機を振り返り、連絡先を共有しています。",
+          "description": "著者がブログを再構築した経験を共有し、Zola静的サイトジェネレーターを選んだ理由、個人ブログの当初の目的と変化を振り返る。",
+          "summary": "本稿は、著者が2024年にブログを再構築した過程を記録し、ブログ維持への怠惰な態度を表明しながらも、最終的にシンプルで長期的に維持可能なニーズを満たすためにZola静的サイトジェネレーターを選択した。著者は2017年にブログを設立した当初の目的を振り返り、NextJS、Gatsby、Hexoなどの異なるツールを比較し、Zolaの軽量性、依存関係の少なさ、維持の容易さを強調している。また、連絡先、友人リンク、脚注を含み、個人ブログの進化と継続的な表現への興味を示している。",
+          "short_summary": "著者は2024年にブログを再構築し、シンプルで長期的に維持可能な執筆環境を実現するためにZola静的サイトジェネレーターを選択した。記事ではブログ設立の当初の目的を振り返り、連絡先と友人リンクを共有し、個人表現への継続的な興味を体現している。",
           "key_points": [
-            "著者は2024年にブログを再構築しました",
-            "静的サイトジェネレーターZolaを選択しました",
-            "選択理由はMarkdownサポート、長期的な保守性、シンプルなテーマを含みます",
-            "以前はHexoを使用していましたがCIが停止しました",
-            "表現欲はオフラインで満たされ、記事執筆は贅沢な行為になりました",
-            "2017年にブログを始めた動機を振り返っています",
-            "複数の連絡先を提供しています",
-            "友人阿錚のブログを参考として言及しています",
-            "ブログのシンプルさと保守性を強調しています",
-            "将来的にはより派手なブログを試す可能性があります"
+            "著者は2024年にブログを再構築し、シンプルで長期的に維持可能なニーズを満たすためにZola静的サイトジェネレーターを選択した。",
+            "記事では2017年にブログを設立した当初の目的を振り返り、NextJS、Gatsby、Hexoなどの異なるツールの長所と短所を比較している。",
+            "著者はオフラインでの表現欲を解放する生活段階に適応するため、ブログの軽量化と維持の容易さを強調している。",
+            "連絡先、友人リンク、脚注を含み、個人ブログの社会的および歴史的側面を示している。",
+            "2017年の文章を引用することで、ブログの進化と個人の成長の連続性を体現している。"
           ],
-          "audience": "個人ブログ構築、静的サイトジェネレーターに興味のある技術愛好家または執筆者",
+          "audience": "個人ブログ構築、静的サイトジェネレーター（Zola、Hexoなど）に興味のある技術愛好家またはブログ著者。",
           "tags": [
-            "ブログ",
+            "ブログ再構築",
             "Zola",
             "静的サイトジェネレーター",
-            "個人表現",
+            "個人ブログ",
             "Markdown",
-            "Hexo",
-            "NextJS",
-            "Gatsby"
+            "技術選択",
+            "表現欲",
+            "Hexo"
           ]
         },
         "es-ES": {
           "title": "Reconstrucción del Blog y Expresión Personal",
-          "description": "El autor comparte su proceso de reflexión al reconstruir su blog, las razones para elegir el generador de sitios estáticos Zola y sus reflexiones sobre la expresión personal.",
-          "summary": "En 2024, el autor decidió renovar su blog porque el CI de Hexo anterior falló y, al estar en una etapa en la que su deseo de expresarse podía liberarse en persona, escribir artículos se volvió un lujo. Tras una breve investigación, eligió el generador de sitios estáticos Zola, principalmente por su soporte para Markdown, mantenibilidad a largo plazo y temas simples. El autor recuerda sus pensamientos cuando comenzó a escribir el blog en 2017 y deja la cita de esa época. El artículo también proporciona información de contacto y menciona el blog de su amigo Azheng como referencia. En general, es un ensayo sobre la reconstrucción de un blog personal, la elección de herramientas y la actitud hacia la escritura.",
-          "short_summary": "En 2024, el autor reconstruyó su blog eligiendo el generador de sitios estáticos Zola, valorando su mantenibilidad a largo plazo y simplicidad. El artículo revisa la intención original de comenzar a escribir el blog en 2017 y comparte información de contacto.",
+          "description": "El autor comparte su experiencia al renovar su blog, las razones para elegir el generador de sitios estáticos Zola, y reflexiona sobre el propósito original y los cambios de su blog personal.",
+          "summary": "Este artículo documenta el proceso de renovación del blog del autor en 2024, expresando una actitud perezosa hacia su mantenimiento, pero finalmente eligiendo el generador de sitios estáticos Zola para satisfacer la necesidad de simplicidad y mantenibilidad a largo plazo. El autor revisa el propósito original de crear el blog en 2017, compara diferentes herramientas (como NextJS, Gatsby, Hexo) y enfatiza la ligereza, pocas dependencias y facilidad de mantenimiento de Zola. El artículo también incluye información de contacto, enlaces de amigos y notas al pie, mostrando la evolución del blog personal y el interés continuo en la expresión.",
+          "short_summary": "El autor renovó su blog en 2024, eligiendo el generador de sitios estáticos Zola para crear un entorno de escritura simple y fácil de mantener a largo plazo. El artículo revisa el propósito original del blog y comparte información de contacto y enlaces de amigos, reflejando un interés continuo en la expresión personal.",
           "key_points": [
-            "El autor renovó su blog en 2024",
-            "Eligió el generador de sitios estáticos Zola",
-            "Las razones incluyen soporte para Markdown, mantenibilidad a largo plazo y temas simples",
-            "Antes usaba Hexo, pero su CI falló",
-            "El deseo de expresarse se libera en persona, escribir artículos se volvió un lujo",
-            "Revisa la intención original de comenzar a escribir el blog en 2017",
-            "Proporciona múltiples formas de contacto",
-            "Menciona el blog de su amigo Azheng como referencia",
-            "Enfatiza la simplicidad y mantenibilidad del blog",
-            "En el futuro podría probar un blog más llamativo"
+            "El autor renovó su blog en 2024, eligiendo el generador de sitios estáticos Zola para satisfacer la necesidad de simplicidad y mantenibilidad a largo plazo.",
+            "El artículo revisa el propósito original de crear el blog en 2017, comparando las ventajas y desventajas de diferentes herramientas (como NextJS, Gatsby, Hexo).",
+            "El autor enfatiza la ligereza y facilidad de mantenimiento del blog para adaptarse a una etapa de vida donde libera su deseo de expresión offline.",
+            "Incluye información de contacto, enlaces de amigos y notas al pie, mostrando las dimensiones sociales e históricas del blog personal.",
+            "Al citar textos de 2017, se refleja la evolución del blog y la continuidad del crecimiento personal."
           ],
-          "audience": "Entusiastas de la tecnología o escritores interesados en la creación de blogs personales y generadores de sitios estáticos",
+          "audience": "Entusiastas de la tecnología o autores de blogs interesados en la creación de blogs personales y generadores de sitios estáticos (como Zola, Hexo).",
           "tags": [
-            "Blog",
+            "Renovación de Blog",
             "Zola",
-            "Generador de sitios estáticos",
-            "Expresión personal",
+            "Generador de Sitios Estáticos",
+            "Blog Personal",
             "Markdown",
-            "Hexo",
-            "NextJS",
-            "Gatsby"
+            "Elección Tecnológica",
+            "Deseo de Expresión",
+            "Hexo"
           ]
         },
         "de-DE": {
           "title": "Blog-Relaunch und persönlicher Ausdruck",
-          "description": "Der Autor teilt den Denkprozess hinter dem erneuten Aufbau seines Blogs, die Gründe für die Wahl des statischen Site-Generators Zola und Reflexionen über persönlichen Ausdruck.",
-          "summary": "Der Autor beschloss 2024, seinen Blog zu überarbeiten, da die vorherige Hexo-CI ausgefallen war und er sich in einer Phase befand, in der sein Mitteilungsbedürfnis offline erfüllt werden konnte, was das Schreiben von Artikeln zu einem Luxus machte. Nach einer kurzen Recherche wählte er den statischen Site-Generator Zola mit einer einzigen Binary-Datei, hauptsächlich wegen seiner Markdown-Unterstützung, langfristigen Wartbarkeit und einfachen Themes. Der Autor blickt auf seine Gedanken von 2017 zurück, als er mit dem Bloggen begann, und zitiert diese. Der Artikel enthält Kontaktinformationen und verweist auf den Blog seines Freundes Azheng als Referenz. Insgesamt ist es ein Essay über den persönlichen Blog-Relaunch, die Werkzeugauswahl und die Einstellung zum Schreiben.",
-          "short_summary": "Der Autor baute 2024 seinen Blog mit dem statischen Site-Generator Zola neu auf und schätzt dessen langfristige Wartbarkeit und Einfachheit. Der Artikel erinnert an die ursprüngliche Motivation für das Bloggen ab 2017 und teilt Kontaktinformationen.",
+          "description": "Der Autor teilt seine Erfahrungen mit der Renovierung seines Blogs, die Gründe für die Wahl des statischen Site-Generators Zola und blickt auf die ursprüngliche Motivation und Veränderungen seines persönlichen Blogs zurück.",
+          "summary": "Dieser Artikel dokumentiert den Prozess der Renovierung des Blogs durch den Autor im Jahr 2024 und drückt eine gewisse Nachlässigkeit bei der Blogpflege aus, wobei letztlich der statische Site-Generator Zola gewählt wurde, um einfache und langfristig wartbare Anforderungen zu erfüllen. Der Autor blickt auf die ursprüngliche Motivation zur Gründung des Blogs im Jahr 2017 zurück, vergleicht verschiedene Tools (wie NextJS, Gatsby, Hexo) und betont die Leichtigkeit, geringe Abhängigkeiten und einfache Wartbarkeit von Zola. Der Artikel enthält auch Kontaktinformationen, Freundeslinks und Fußnoten, die die Entwicklung des persönlichen Blogs und das anhaltende Interesse am Ausdruck zeigen.",
+          "short_summary": "Der Autor renovierte seinen Blog im Jahr 2024 und wählte den statischen Site-Generator Zola, um eine einfache und langfristig wartbare Schreibumgebung zu schaffen. Der Artikel blickt auf die ursprüngliche Motivation zur Bloggründung zurück und teilt Kontaktinformationen sowie Freundeslinks, was das anhaltende Interesse am persönlichen Ausdruck widerspiegelt.",
           "key_points": [
-            "Der Autor überarbeitete 2024 seinen Blog erneut",
-            "Wahl des statischen Site-Generators Zola",
-            "Gründe: Markdown-Unterstützung, langfristige Wartbarkeit, einfache Themes",
-            "Vorherige Nutzung von Hexo, aber CI fiel aus",
-            "Mitteilungsbedürfnis wird offline erfüllt, Artikel schreiben ist Luxus",
-            "Rückblick auf die ursprüngliche Motivation für das Bloggen ab 2017",
-            "Bietet verschiedene Kontaktmöglichkeiten",
-            "Erwähnt den Blog des Freundes Azheng als Referenz",
-            "Betont Einfachheit und Wartbarkeit des Blogs",
-            "Mögliche Experimente mit aufwendigeren Blogs in der Zukunft"
+            "Der Autor renovierte seinen Blog im Jahr 2024 und wählte den statischen Site-Generator Zola, um einfache und langfristig wartbare Anforderungen zu erfüllen.",
+            "Der Artikel blickt auf die ursprüngliche Motivation zur Gründung des Blogs im Jahr 2017 zurück und vergleicht die Vor- und Nachteile verschiedener Tools (wie NextJS, Gatsby, Hexo).",
+            "Der Autor betont die Leichtigkeit und einfache Wartbarkeit des Blogs, um der Lebensphase gerecht zu werden, in der der Drang zum Ausdruck offline freigesetzt wird.",
+            "Enthält Kontaktinformationen, Freundeslinks und Fußnoten, die die sozialen und historischen Dimensionen des persönlichen Blogs zeigen.",
+            "Durch das Zitieren von Texten aus dem Jahr 2017 wird die Entwicklung des Blogs und die Kontinuität des persönlichen Wachstums verdeutlicht."
           ],
-          "audience": "Technikbegeisterte oder Autoren, die sich für persönliches Bloggen oder statische Site-Generatoren interessieren",
+          "audience": "Technikbegeisterte oder Blog-Autoren, die sich für den Aufbau persönlicher Blogs oder statische Site-Generatoren (wie Zola, Hexo) interessieren.",
           "tags": [
-            "Blog",
+            "Blog-Renovierung",
             "Zola",
             "Statischer Site-Generator",
-            "Persönlicher Ausdruck",
+            "Persönlicher Blog",
             "Markdown",
-            "Hexo",
-            "NextJS",
-            "Gatsby"
+            "Technologieauswahl",
+            "Ausdrucksdrang",
+            "Hexo"
           ]
         }
       },
-      "metadataTranslationHash": "7ed7dd8a73d7b8da26f0e2ae68dfe2a7f47ecba0dfd0eab2ea8228056e308b24"
+      "metadataTranslationHash": "4d1f248fb5ccec8d9fcc5c791c6ff8d6a2078f47322c92055f5b355e5b1cd6ff"
     },
     {
       "hash": "8d589b257fc275741645b96e35f74ac33d582bf23a0db377ac971c084b6a28f5",
@@ -8986,6 +8983,35 @@
             "Rolle",
             "Prinzip der geringsten Rechte"
           ]
+        },
+        "en-US": {
+          "title": "RBAC Concepts and System Design",
+          "description": "This article introduces the concepts, object relationships, application scenarios of the RBAC (Role-Based Access Control) model, and its comparison with the DAC model.",
+          "summary": "This article elaborates on the core concepts of the RBAC (Role-Based Access Control) model, including subjects, roles, permissions, sessions, and their many-to-many relationships. It explains RBAC as a mandatory access control model, uniformly managed by system administrators for user roles, and emphasizes that a subject can only exercise the permissions of one role during a session. The author further explores the application scenarios of RBAC, which are systems where resources are shared and have multiple hierarchical roles, such as business companies and operating systems adhering to the principle of least privilege. Meanwhile, the article contrasts the DAC (Discretionary Access Control) model, pointing out that DAC is more suitable in systems where resources are individually owned, and suggests mixing both models in practical scenarios. Finally, it uses WeChat as an example to illustrate the practical application of the hybrid model.",
+          "short_summary": "This article introduces the basic concepts and object relationships of the RBAC (Role-Based Access Control) model, emphasizing its applicability in scenarios with shared system resources and hierarchical roles. It also contrasts the DAC model, noting that DAC is more suitable for personal resource scenarios, and suggests mixing both models in practice, such as in WeChat's permission management.",
+          "key_points": [
+            "RBAC is a role-based access control model, more flexible than MAC and DAC.",
+            "RBAC includes objects such as subjects, roles, permissions, sessions, subject assignments, permission assignments, and role hierarchies.",
+            "Subjects and roles have a many-to-many relationship, and roles and permissions also have a many-to-many relationship.",
+            "RBAC is uniformly managed by system administrators, and a subject can only exercise the permissions of one role during a session.",
+            "RBAC is suitable for systems where resources are shared and roles are hierarchical, such as business companies and operating systems.",
+            "DAC is suitable for systems where resources are individually owned, such as social networks.",
+            "In practical scenarios, RBAC and DAC models are often mixed, for example, in WeChat's permission management.",
+            "Permissions are combinations of resources and operations, giving the concept of permissions meaning.",
+            "Role hierarchy represents inheritance relationships between roles (x ≥ y means x inherits y's permissions).",
+            "RBAC can effectively allocate rights and responsibilities, protecting and utilizing system resources."
+          ],
+          "audience": "System designers, software developers, security engineers, and technical personnel interested in access control models.",
+          "tags": [
+            "RBAC",
+            "System Design",
+            "Access Control",
+            "Permission Management",
+            "MAC",
+            "DAC",
+            "Roles",
+            "Principle of Least Privilege"
+          ]
         }
       },
       "metadataTranslationHash": "625dbf82a6eef44817c10197d19ba7af8749d008cfdf0bdd73bd99a477e297ab"
@@ -10368,6 +10394,29 @@
             "Datums-Sortierung",
             "Seitenvorlage",
             "Konfiguration"
+          ]
+        },
+        "es-ES": {
+          "title": "Todas las entradas del diario",
+          "description": "Una colección de entradas de diario ordenadas por fecha, con paginación y una plantilla de página personalizada.",
+          "summary": "Este documento configura una sección de blog o diario con paginación establecida en 15 entradas por página, titulada 'Todas las entradas del diario', ordenada por fecha y utilizando una plantilla de página personalizada 'blog-page.html'. Sirve como un fragmento de configuración para organizar y mostrar entradas de diario de manera estructurada.",
+          "short_summary": "Esta configuración establece una página de entradas de diario con paginación y ordenación por fecha. Utiliza una plantilla personalizada para la visualización y organiza las entradas de manera eficiente.",
+          "key_points": [
+            "Paginación de 15 entradas por página",
+            "El título es 'Todas las entradas del diario'",
+            "Ordenar entradas por fecha",
+            "Usar plantilla de página personalizada 'blog-page.html'",
+            "Configuración para sección de blog/diario",
+            "Organización estructurada del contenido"
+          ],
+          "audience": "Desarrolladores web o gestores de contenido que configuran una sección de blog o diario.",
+          "tags": [
+            "diario",
+            "blog",
+            "paginación",
+            "ordenación por fecha",
+            "plantilla de página",
+            "configuración"
           ]
         }
       },
