@@ -40,6 +40,13 @@ insert_recent_blogs = true
 - 微信: Gantrithor
 - 在任何地方看到 Thrimbda，可以断定是我。
 
+## 朋友们
+
+- [gaocegege](https://gaocegege.com/)
+- [playgroud](https://peiguang.space/)
+- [zccz14](https://readme.zccz14.com/)
+- [ZL](https://zxk.one/)
+
 ## 脚注
 
 [^1]: 阿铮说: “正经人谁写日记啊！” 虽然他的博客链接已经失效，但好在他够懒，以至于懒得删源码。所以感兴趣的话还是可以一看：[zccz14 的博客](https://github.com/zccz14/blog/tree/master/src/posts)，但这篇文章被他看到之后就说不定了。
