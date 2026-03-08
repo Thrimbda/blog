@@ -8108,161 +8108,143 @@
       "metadata": {
         "title": "Legion 的成长轨迹：从任务记录器到多 Agent 工程操作系统",
         "description": "Legion 如何从简单的任务记录器演变为成熟的多 Agent 工程操作系统，实现少打扰、多产出、可验证、可交接的协作系统。",
-        "short_summary": "Legion 从一个简单的任务记录器逐步成长为成熟的多 Agent 工程操作系统，通过任务持久化、隐含知识外置、设计门禁、工程流水线和治理系统等阶段，实现了少打扰、多产出、可验证、可交接的协作。该系统不仅改变了 Agent 的工作方式，也重新定义了人的角色，从执行者转变为审阅者和决策者。最新方向是将其产品化为可安装、可 benchmark 的通用系统。",
-        "audience": "AI Agent 开发者、工程团队负责人、对多 Agent 协作和工程流程优化感兴趣的技术人员。",
+        "short_summary": "Legion 从一个简单的任务记录器逐步成长为多 Agent 工程操作系统，通过外置隐含知识、建立设计门禁和工程化验证汇报，实现了受控自治。该系统将 Agent 能力工程化，使人从执行者转变为审阅者和决策者。",
+        "audience": "AI Agent 开发者、工程团队负责人、对多 Agent 协作和工程化流程感兴趣的技术人员。",
         "key_points": [
-          "Legion 的演进从任务记录器开始，逐步发展为多 Agent 工程操作系统，核心是构建少打扰、多产出、可验证、可交接的协作系统。",
-          "关键阶段包括任务持久化、隐含知识外置、设计门禁、工程流水线和治理系统，最终实现受控自治。",
-          "Legion 改变了人机分工，让人从执行者转变为目标设定、边界约束和关键决策者。",
-          "最新演化方向是将 Legion 产品化为可安装、可迁移、可 benchmark 的通用 Autopilot Kit，强调命令化、角色化和 Playbook 化。",
-          "Legion 的成长轨迹与博客《对于 AI Agent 的思考》中的原则相互印证，展示了从原则到工程实践的完整故事。"
+          "Legion 从任务记录器演变为多 Agent 工程操作系统，核心是工程化 Agent 能力。",
+          "通过外置隐含知识、设计门禁和结构化 review，降低返工和注意力泄漏。",
+          "成熟系统支持受控自治，将人的角色从执行者转变为审阅者、决策者和系统迭代者。"
         ],
-        "summary": "本文详细追溯了 Legion 系统的成长轨迹，从最初作为任务记录器，逐步演变为多 Agent 工程操作系统的过程。文章基于 .legion/ 的 git 历史、配置文件、审计记录以及相关博客思考，将 Legion 的演进分为多个阶段：从基础的任务持久化，到隐含知识外置，再到设计门禁、工程流水线，最终成为治理系统。关键论点是 Legion 的核心价值不在于增强单个 Agent 的能力，而在于构建一套工程系统，使多 Agent 协作能够实现“少打扰、多产出、可验证、可交接”，并改变人机分工，让人从执行者转变为审阅者和决策者。文章还展望了 Legion 的最新演化方向，即从项目经验提炼为可安装、可迁移、可 benchmark 的通用 Autopilot Kit。",
+        "summary": "本文详细追溯了 Legion 系统的成长轨迹，从最初作为任务记录器，逐步演变为一个成熟的多 Agent 工程操作系统。文章通过分析 .legion/ 目录的 git 历史、配置文件及审计记录，揭示了 Legion 如何从解决“任务不丢”的基本需求，发展到外置隐含知识、建立设计门禁、工程化验证与汇报，最终形成受控自治的治理系统。关键论点包括：Legion 的核心价值在于将 Agent 能力工程化，通过持久化任务状态、结构化 review、RFC 流程和完整产物链，实现“少打扰、多产出、可验证、可交接”的目标。结论是 Legion 不仅改变了 Agent 的工作方式，也重新定义了人机分工，使人从执行者转变为审阅者、决策者和系统迭代者。",
         "slug": "legion-evolution-from-task-recorder-to-multi-agent-engineering-os",
         "tags": [
           "Legion",
-          "多 Agent 系统",
-          "工程操作系统",
-          "任务管理",
-          "协作流程",
           "AI Agent",
-          "工程治理",
-          "Autopilot Kit"
+          "工程操作系统",
+          "多 Agent 协作",
+          "任务管理",
+          "设计门禁",
+          "工程化验证"
         ],
         "inferred_date": "2026-03-08",
         "inferred_lang": "zh-Hans",
         "tokens_used": {
-          "prompt": 7270,
-          "completion": 595,
-          "total": 7865
+          "prompt": 7288,
+          "completion": 457,
+          "total": 7745
         }
       },
-      "hash": "dab14061ad18e3b620da864d3c00d419e8b137c95212e8e3a72eba66cf09a893",
+      "hash": "c30f1d9647a7fa76635ebcc96150c1ffe1757bc5287175646fb98b30d767c4fd",
       "metadataTranslations": {
         "zh-Hans": {
           "title": "Legion 的成长轨迹：从任务记录器到多 Agent 工程操作系统",
           "description": "Legion 如何从简单的任务记录器演变为成熟的多 Agent 工程操作系统，实现少打扰、多产出、可验证、可交接的协作系统。",
-          "summary": "本文详细追溯了 Legion 系统的成长轨迹，从最初作为任务记录器，逐步演变为多 Agent 工程操作系统的过程。文章基于 .legion/ 的 git 历史、配置文件、审计记录以及相关博客思考，将 Legion 的演进分为多个阶段：从基础的任务持久化，到隐含知识外置，再到设计门禁、工程流水线，最终成为治理系统。关键论点是 Legion 的核心价值不在于增强单个 Agent 的能力，而在于构建一套工程系统，使多 Agent 协作能够实现“少打扰、多产出、可验证、可交接”，并改变人机分工，让人从执行者转变为审阅者和决策者。文章还展望了 Legion 的最新演化方向，即从项目经验提炼为可安装、可迁移、可 benchmark 的通用 Autopilot Kit。",
-          "short_summary": "Legion 从一个简单的任务记录器逐步成长为成熟的多 Agent 工程操作系统，通过任务持久化、隐含知识外置、设计门禁、工程流水线和治理系统等阶段，实现了少打扰、多产出、可验证、可交接的协作。该系统不仅改变了 Agent 的工作方式，也重新定义了人的角色，从执行者转变为审阅者和决策者。最新方向是将其产品化为可安装、可 benchmark 的通用系统。",
+          "summary": "本文详细追溯了 Legion 系统的成长轨迹，从最初作为任务记录器，逐步演变为一个成熟的多 Agent 工程操作系统。文章通过分析 .legion/ 目录的 git 历史、配置文件及审计记录，揭示了 Legion 如何从解决“任务不丢”的基本需求，发展到外置隐含知识、建立设计门禁、工程化验证与汇报，最终形成受控自治的治理系统。关键论点包括：Legion 的核心价值在于将 Agent 能力工程化，通过持久化任务状态、结构化 review、RFC 流程和完整产物链，实现“少打扰、多产出、可验证、可交接”的目标。结论是 Legion 不仅改变了 Agent 的工作方式，也重新定义了人机分工，使人从执行者转变为审阅者、决策者和系统迭代者。",
+          "short_summary": "Legion 从一个简单的任务记录器逐步成长为多 Agent 工程操作系统，通过外置隐含知识、建立设计门禁和工程化验证汇报，实现了受控自治。该系统将 Agent 能力工程化，使人从执行者转变为审阅者和决策者。",
           "key_points": [
-            "Legion 的演进从任务记录器开始，逐步发展为多 Agent 工程操作系统，核心是构建少打扰、多产出、可验证、可交接的协作系统。",
-            "关键阶段包括任务持久化、隐含知识外置、设计门禁、工程流水线和治理系统，最终实现受控自治。",
-            "Legion 改变了人机分工，让人从执行者转变为目标设定、边界约束和关键决策者。",
-            "最新演化方向是将 Legion 产品化为可安装、可迁移、可 benchmark 的通用 Autopilot Kit，强调命令化、角色化和 Playbook 化。",
-            "Legion 的成长轨迹与博客《对于 AI Agent 的思考》中的原则相互印证，展示了从原则到工程实践的完整故事。"
+            "Legion 从任务记录器演变为多 Agent 工程操作系统，核心是工程化 Agent 能力。",
+            "通过外置隐含知识、设计门禁和结构化 review，降低返工和注意力泄漏。",
+            "成熟系统支持受控自治，将人的角色从执行者转变为审阅者、决策者和系统迭代者。"
           ],
-          "audience": "AI Agent 开发者、工程团队负责人、对多 Agent 协作和工程流程优化感兴趣的技术人员。",
+          "audience": "AI Agent 开发者、工程团队负责人、对多 Agent 协作和工程化流程感兴趣的技术人员。",
           "tags": [
             "Legion",
-            "多 Agent 系统",
-            "工程操作系统",
-            "任务管理",
-            "协作流程",
             "AI Agent",
-            "工程治理",
-            "Autopilot Kit"
+            "工程操作系统",
+            "多 Agent 协作",
+            "任务管理",
+            "设计门禁",
+            "工程化验证"
           ]
         },
         "en-US": {
-          "title": "Legion's Evolution: From Task Logger to Multi-Agent Engineering Operating System",
-          "description": "How Legion evolved from a simple task logger into a mature multi-agent engineering operating system, achieving a collaborative system that is less intrusive, more productive, verifiable, and handover-ready.",
-          "summary": "This article traces the growth trajectory of the Legion system, detailing its evolution from an initial task logger to a multi-agent engineering operating system. Based on the git history of .legion/, configuration files, audit logs, and related blog reflections, the evolution of Legion is divided into several stages: from basic task persistence, to externalizing implicit knowledge, to designing guardrails and engineering pipelines, and finally becoming a governance system. The key argument is that Legion's core value lies not in enhancing individual Agent capabilities, but in building an engineering system that enables multi-agent collaboration to achieve 'less intrusive, more productive, verifiable, and handover-ready' outcomes, and changes the human-machine division of labor, transforming humans from executors to reviewers and decision-makers. The article also looks ahead to Legion's latest evolution direction, which is to distill project experience into a general-purpose Autopilot Kit that is installable, migratable, and benchmarkable.",
-          "short_summary": "Legion has evolved from a simple task logger into a mature multi-agent engineering operating system. Through stages like task persistence, externalizing implicit knowledge, designing guardrails, engineering pipelines, and governance systems, it achieves collaboration that is less intrusive, more productive, verifiable, and handover-ready. This system not only changes how Agents work but also redefines the human role, shifting from executor to reviewer and decision-maker. The latest direction is to productize it into a general-purpose system that is installable and benchmarkable.",
+          "title": "Legion's Evolution: From Task Logger to Multi-Agent Engineering OS",
+          "description": "How Legion evolved from a simple task logger into a mature multi-agent engineering operating system, achieving a collaborative system that is less disruptive, more productive, verifiable, and transferable.",
+          "summary": "This article traces the growth trajectory of the Legion system, from its origins as a task logger to its evolution into a mature multi-agent engineering operating system. By analyzing the git history, configuration files, and audit logs in the .legion/ directory, it reveals how Legion progressed from addressing the basic need of 'not losing tasks' to externalizing implicit knowledge, establishing design gates, engineering verification and reporting, and ultimately forming a governance system of controlled autonomy. Key arguments include: Legion's core value lies in engineering Agent capabilities, achieving the goals of 'less disruption, more output, verifiability, and transferability' through persistent task states, structured reviews, RFC processes, and complete artifact chains. The conclusion is that Legion not only changes how Agents work but also redefines human-machine division of labor, transforming humans from executors into reviewers, decision-makers, and system iterators.",
+          "short_summary": "Legion evolved from a simple task logger into a multi-agent engineering operating system, achieving controlled autonomy by externalizing implicit knowledge, establishing design gates, and engineering verification and reporting. The system engineers Agent capabilities, transforming humans from executors into reviewers and decision-makers.",
           "key_points": [
-            "Legion's evolution began as a task logger and gradually developed into a multi-agent engineering operating system, with the core goal of building a collaborative system that is less intrusive, more productive, verifiable, and handover-ready.",
-            "Key stages include task persistence, externalizing implicit knowledge, designing guardrails, engineering pipelines, and governance systems, ultimately achieving controlled autonomy.",
-            "Legion changes the human-machine division of labor, transforming humans from executors into goal setters, boundary definers, and key decision-makers.",
-            "The latest evolution direction is to productize Legion into a general-purpose Autopilot Kit that is installable, migratable, and benchmarkable, emphasizing commandification, role specialization, and Playbook-ization.",
-            "Legion's growth trajectory aligns with the principles outlined in the blog post 'Thoughts on AI Agents,' presenting a complete story from principles to engineering practice."
+            "Legion evolved from a task logger to a multi-agent engineering operating system, with its core being the engineering of Agent capabilities.",
+            "By externalizing implicit knowledge, implementing design gates, and structured reviews, it reduces rework and attention leakage.",
+            "The mature system supports controlled autonomy, shifting the human role from executor to reviewer, decision-maker, and system iterator."
           ],
-          "audience": "AI Agent developers, engineering team leads, and technical personnel interested in multi-agent collaboration and engineering process optimization.",
+          "audience": "AI Agent developers, engineering team leads, and technical personnel interested in multi-agent collaboration and engineering processes.",
           "tags": [
             "Legion",
-            "Multi-Agent Systems",
-            "Engineering Operating System",
-            "Task Management",
-            "Collaboration Workflow",
             "AI Agent",
-            "Engineering Governance",
-            "Autopilot Kit"
+            "Engineering Operating System",
+            "Multi-Agent Collaboration",
+            "Task Management",
+            "Design Gates",
+            "Engineering Verification"
           ]
         },
         "ja-JP": {
           "title": "Legionの成長軌跡：タスク記録ツールからマルチエージェント工学オペレーティングシステムへ",
-          "description": "Legionが、単純なタスク記録ツールから、成熟したマルチエージェント工学オペレーティングシステムへと進化し、低干渉、高生産性、検証可能、引継ぎ可能なコラボレーションシステムを実現するまでの道のり。",
-          "summary": "本稿は、Legionシステムの成長軌跡を詳細に辿り、最初のタスク記録ツールとしての始まりから、マルチエージェント工学オペレーティングシステムへと段階的に進化していった過程を記述する。.legion/のgit履歴、設定ファイル、監査記録、および関連するブログでの考察に基づき、Legionの進化を複数の段階に分けて分析する：基本的なタスク永続化から、暗黙知の外在化、設計ゲートの導入、エンジニアリングパイプラインの構築を経て、最終的にはガバナンスシステムへと至る。核心的な論点は、Legionの本質的価値が個々のエージェントの能力強化にあるのではなく、むしろ「低干渉、高生産性、検証可能、引継ぎ可能」を実現するマルチエージェントコラボレーションのための工学システムを構築することにあり、それにより人と機械の役割分担を変革し、人間を実行者からレビュアーおよび意思決定者へと転換させる点にある。さらに、Legionの最新の進化方向、すなわちプロジェクト経験から、インストール可能、移行可能、ベンチマーク可能な汎用Autopilot Kitへと精錬する取り組みについても展望する。",
-          "short_summary": "Legionは、単純なタスク記録ツールから、成熟したマルチエージェント工学オペレーティングシステムへと成長した。タスク永続化、暗黙知の外在化、設計ゲート、エンジニアリングパイプライン、ガバナンスシステムなどの段階を経て、低干渉、高生産性、検証可能、引継ぎ可能なコラボレーションを実現している。このシステムは、エージェントの作業方法を変えただけでなく、人間の役割を再定義し、実行者からレビュアーおよび意思決定者へと転換させた。最新の方向性は、インストール可能、ベンチマーク可能な汎用システムとして製品化することである。",
+          "description": "Legionが、単純なタスク記録ツールから、成熟したマルチエージェント工学オペレーティングシステムへと進化し、干渉を減らし生産性を高め、検証可能で引き継ぎ可能なコラボレーションシステムを実現した道筋を解説します。",
+          "summary": "本稿では、Legionシステムの成長軌跡を詳細に辿り、最初は単なるタスク記録ツールとして始まり、徐々に成熟したマルチエージェント工学オペレーティングシステムへと進化した過程を分析します。.legion/ディレクトリのgit履歴、設定ファイル、監査記録を分析することで、Legionが「タスクを見失わない」という基本的なニーズの解決から始まり、暗黙知の外在化、設計ゲートの確立、工学的な検証と報告の実装を経て、最終的に制御された自律性を持つガバナンスシステムを形成するに至った経緯を明らかにします。主な論点は以下の通りです：Legionの中核的価値は、エージェントの能力を工学的に体系化することにあり、タスク状態の永続化、構造化されたレビュー、RFCプロセス、完全な成果物チェーンを通じて、「干渉を減らし生産性を高め、検証可能で引き継ぎ可能」という目標を実現しています。結論として、Legionはエージェントの働き方を変えただけでなく、人間と機械の役割分担を再定義し、人間を実行者から、審査者、意思決定者、システムの反復改良者へと変容させたと言えます。",
+          "short_summary": "Legionは、単純なタスク記録ツールから、マルチエージェント工学オペレーティングシステムへと段階的に成長しました。暗黙知の外在化、設計ゲートの確立、工学的な検証と報告を通じて、制御された自律性を実現しています。このシステムはエージェントの能力を工学的に体系化し、人間の役割を実行者から審査者および意思決定者へと転換させます。",
           "key_points": [
-            "Legionの進化はタスク記録ツールから始まり、マルチエージェント工学オペレーティングシステムへと発展。その核心は、低干渉、高生産性、検証可能、引継ぎ可能なコラボレーションシステムの構築にある。",
-            "主要な段階として、タスク永続化、暗黙知の外在化、設計ゲート、エンジニアリングパイプライン、ガバナンスシステムがあり、最終的に制御された自律を実現。",
-            "Legionは人と機械の役割分担を変革し、人間を目標設定、境界制約、重要な意思決定を行う存在へと転換させた。",
-            "最新の進化方向は、Legionをインストール可能、移行可能、ベンチマーク可能な汎用Autopilot Kitとして製品化することであり、コマンド化、ロール化、Playbook化を強調。",
-            "Legionの成長軌跡は、ブログ『AIエージェントに関する考察』で述べられた原則と相互に裏付けられており、原則から工学実践までの完全なストーリーを示している。"
+            "Legionはタスク記録ツールからマルチエージェント工学オペレーティングシステムへと進化し、その中核はエージェント能力の工学的体系化にあります。",
+            "暗黙知の外在化、設計ゲート、構造化されたレビューを通じて、手戻りと注意散漫を低減します。",
+            "成熟したシステムは制御された自律性をサポートし、人間の役割を実行者から、審査者、意思決定者、システムの反復改良者へと変容させます。"
           ],
-          "audience": "AIエージェント開発者、エンジニアリングチームリーダー、マルチエージェントコラボレーションおよびエンジニアリングプロセス最適化に関心のある技術者。",
+          "audience": "AIエージェント開発者、エンジニアリングチームリーダー、マルチエージェントコラボレーションと工学的プロセスに興味を持つ技術者。",
           "tags": [
             "Legion",
-            "マルチエージェントシステム",
-            "工学オペレーティングシステム",
-            "タスク管理",
-            "コラボレーションプロセス",
             "AIエージェント",
-            "エンジニアリングガバナンス",
-            "Autopilot Kit"
+            "工学オペレーティングシステム",
+            "マルチエージェントコラボレーション",
+            "タスク管理",
+            "設計ゲート",
+            "工学的検証"
           ]
         },
         "es-ES": {
-          "title": "La trayectoria de crecimiento de Legion: del registrador de tareas al sistema operativo de ingeniería multiagente",
+          "title": "La trayectoria de crecimiento de Legion: de registrador de tareas a sistema operativo de ingeniería multiagente",
           "description": "Cómo Legion evolucionó de un simple registrador de tareas a un sistema operativo de ingeniería multiagente maduro, logrando un sistema de colaboración con menos interrupciones, mayor productividad, verificable y transferible.",
-          "summary": "Este artículo detalla la trayectoria de crecimiento del sistema Legion, desde su inicio como registrador de tareas hasta su evolución gradual hacia un sistema operativo de ingeniería multiagente. Basándose en el historial de git de .legion/, archivos de configuración, registros de auditoría y reflexiones en blogs relacionados, la evolución de Legion se divide en varias etapas: desde la persistencia básica de tareas, hasta la externalización de conocimiento implícito, pasando por puertas de diseño, pipelines de ingeniería, hasta convertirse finalmente en un sistema de gobernanza. El argumento clave es que el valor central de Legion no radica en mejorar la capacidad de un solo agente, sino en construir un sistema de ingeniería que permita a múltiples agentes colaborar logrando \"menos interrupciones, mayor productividad, verificable y transferible\", y cambiar la división del trabajo entre humanos y máquinas, transformando a las personas de ejecutores en revisores y tomadores de decisiones. El artículo también explora la dirección más reciente de evolución de Legion: refinarse a partir de la experiencia del proyecto para convertirse en un Autopilot Kit genérico, instalable, migrable y con capacidad de benchmark.",
-          "short_summary": "Legion ha crecido desde un simple registrador de tareas hasta convertirse en un sistema operativo de ingeniería multiagente maduro. A través de etapas como persistencia de tareas, externalización de conocimiento implícito, puertas de diseño, pipelines de ingeniería y sistemas de gobernanza, logra una colaboración con menos interrupciones, mayor productividad, verificable y transferible. Este sistema no solo cambia la forma de trabajar de los agentes, sino que también redefine el rol humano, transformándolo de ejecutor a revisor y tomador de decisiones. La dirección más reciente es su productización como un sistema genérico instalable y con capacidad de benchmark.",
+          "summary": "Este artículo detalla la trayectoria de crecimiento del sistema Legion, desde su inicio como registrador de tareas hasta su evolución gradual hacia un sistema operativo de ingeniería multiagente maduro. Mediante el análisis del historial de git del directorio .legion/, los archivos de configuración y los registros de auditoría, el artículo revela cómo Legion pasó de satisfacer la necesidad básica de 'no perder tareas' a externalizar conocimientos implícitos, establecer puertas de diseño, verificación y reporte de ingeniería, culminando en un sistema de gobernanza de autonomía controlada. Los puntos clave incluyen: el valor central de Legion radica en la ingenierización de capacidades de agentes, logrando el objetivo de 'menos interrupciones, mayor productividad, verificable y transferible' mediante la persistencia del estado de tareas, revisiones estructuradas, procesos RFC y cadenas completas de entregables. La conclusión es que Legion no solo cambia la forma de trabajar de los agentes, sino que redefine la división del trabajo entre humanos y máquinas, transformando a las personas de ejecutores en revisores, decisores e iteradores del sistema.",
+          "short_summary": "Legion evolucionó de un simple registrador de tareas a un sistema operativo de ingeniería multiagente, logrando autonomía controlada mediante la externalización de conocimientos implícitos, el establecimiento de puertas de diseño y la verificación y reporte de ingeniería. Este sistema ingenieriza las capacidades de los agentes, transformando a las personas de ejecutores en revisores y decisores.",
           "key_points": [
-            "La evolución de Legion comenzó como registrador de tareas y se desarrolló gradualmente hacia un sistema operativo de ingeniería multiagente, cuyo núcleo es construir un sistema de colaboración con menos interrupciones, mayor productividad, verificable y transferible.",
-            "Las etapas clave incluyen persistencia de tareas, externalización de conocimiento implícito, puertas de diseño, pipelines de ingeniería y sistemas de gobernanza, logrando finalmente una autonomía controlada.",
-            "Legion cambia la división del trabajo entre humanos y máquinas, transformando a las personas de ejecutores en definidores de objetivos, establecedores de límites y tomadores de decisiones clave.",
-            "La dirección de evolución más reciente es productizar Legion como un Autopilot Kit genérico, instalable, migrable y con capacidad de benchmark, enfatizando su comandificación, rolificación y Playbookificación.",
-            "La trayectoria de crecimiento de Legion se correlaciona con los principios del blog \"Reflexiones sobre los Agentes de IA\", mostrando una historia completa desde los principios hasta la práctica de ingeniería."
+            "Legion evolucionó de registrador de tareas a sistema operativo de ingeniería multiagente, centrándose en la ingenierización de capacidades de agentes.",
+            "Mediante la externalización de conocimientos implícitos, puertas de diseño y revisiones estructuradas, se reduce el retrabajo y las fugas de atención.",
+            "El sistema maduro soporta autonomía controlada, transformando el rol humano de ejecutor a revisor, decisor e iterador del sistema."
           ],
-          "audience": "Desarrolladores de Agentes de IA, líderes de equipos de ingeniería, profesionales técnicos interesados en la colaboración multiagente y la optimización de flujos de ingeniería.",
+          "audience": "Desarrolladores de AI Agent, líderes de equipos de ingeniería, profesionales técnicos interesados en colaboración multiagente y procesos de ingeniería.",
           "tags": [
             "Legion",
-            "Sistemas multiagente",
-            "Sistema operativo de ingeniería",
-            "Gestión de tareas",
-            "Flujo de colaboración",
-            "Agente de IA",
-            "Gobernanza de ingeniería",
-            "Autopilot Kit"
+            "AI Agent",
+            "Sistema Operativo de Ingeniería",
+            "Colaboración Multiagente",
+            "Gestión de Tareas",
+            "Puertas de Diseño",
+            "Verificación de Ingeniería"
           ]
         },
         "de-DE": {
-          "title": "Legions Entwicklungspfad: Vom Aufgabenprotokollierer zum Multi-Agenten-Engineering-Betriebssystem",
-          "description": "Wie Legion sich von einem einfachen Aufgabenprotokollierer zu einem ausgereiften Multi-Agenten-Engineering-Betriebssystem entwickelt hat, das ein kooperatives System mit minimalen Unterbrechungen, hoher Produktivität, Überprüfbarkeit und Übergabefähigkeit ermöglicht.",
-          "summary": "Dieser Artikel zeichnet detailliert den Entwicklungsweg des Legion-Systems nach, von seinen Anfängen als Aufgabenprotokollierer bis hin zu einem Multi-Agenten-Engineering-Betriebssystem. Basierend auf der Git-Historie von .legion/, Konfigurationsdateien, Audit-Logs und verwandten Blog-Reflexionen wird die Evolution von Legion in mehrere Phasen unterteilt: von der grundlegenden Aufgabenpersistenz über die Externalisierung impliziten Wissens bis hin zu Design-Gates, Engineering-Pipelines und schließlich einem Governance-System. Die zentrale These ist, dass der Kernwert von Legion nicht in der Steigerung der Fähigkeiten einzelner Agenten liegt, sondern im Aufbau eines Engineering-Systems, das die Zusammenarbeit mehrerer Agenten ermöglicht – mit 'wenig Unterbrechungen, viel Output, Überprüfbarkeit und Übergabefähigkeit' – und die Mensch-Maschine-Arbeitsteilung verändert, indem Menschen von Ausführenden zu Prüfern und Entscheidungsträgern werden. Der Artikel wirft auch einen Blick auf die neueste Entwicklungsrichtung von Legion: die Verfeinerung von Projekterfahrungen zu einem allgemeinen, installierbaren, migrierbaren und benchmarkfähigen Autopilot Kit.",
-          "short_summary": "Legion hat sich von einem einfachen Aufgabenprotokollierer schrittweise zu einem ausgereiften Multi-Agenten-Engineering-Betriebssystem entwickelt. Durch Phasen wie Aufgabenpersistenz, Externalisierung impliziten Wissens, Design-Gates, Engineering-Pipelines und Governance-Systeme ermöglicht es eine Zusammenarbeit mit minimalen Unterbrechungen, hoher Produktivität, Überprüfbarkeit und Übergabefähigkeit. Das System verändert nicht nur die Arbeitsweise von Agenten, sondern definiert auch die Rolle des Menschen neu – vom Ausführenden zum Prüfer und Entscheidungsträger. Die neueste Richtung ist die Produktisierung zu einem installierbaren, benchmarkfähigen universellen System.",
+          "title": "Legions Entwicklungspfad: Vom Aufgabenrecorder zum Multi-Agenten-Engineering-Betriebssystem",
+          "description": "Wie sich Legion von einem einfachen Aufgabenrecorder zu einem ausgereiften Multi-Agenten-Engineering-Betriebssystem entwickelt hat, das ein kollaboratives System mit minimaler Störung, hoher Produktivität, Verifizierbarkeit und Übergabefähigkeit realisiert.",
+          "summary": "Dieser Artikel zeichnet detailliert den Entwicklungsweg des Legion-Systems nach, von seinen Anfängen als Aufgabenrecorder bis hin zu einem ausgereiften Multi-Agenten-Engineering-Betriebssystem. Durch die Analyse des Git-Verlaufs des .legion/-Verzeichnisses, der Konfigurationsdateien und Audit-Protokolle wird aufgezeigt, wie Legion sich von der Lösung des grundlegenden Bedarfs 'Aufgaben nicht zu verlieren' weiterentwickelt hat, hin zur Externalisierung impliziten Wissens, der Einrichtung von Design-Gates, der Engineering-gestützten Verifizierung und Berichterstattung, um schließlich ein System der kontrollierten Autonomie zu bilden. Zu den Kernargumenten gehört, dass der zentrale Wert von Legion in der Engineering-gestützten Umsetzung von Agenten-Fähigkeiten liegt, die durch Persistierung des Aufgabenstatus, strukturierte Reviews, RFC-Prozesse und eine vollständige Produktkette das Ziel 'wenig Störung, hohe Produktivität, verifizierbar, übergabefähig' erreicht. Die Schlussfolgerung ist, dass Legion nicht nur die Arbeitsweise von Agenten verändert, sondern auch die Mensch-Maschine-Arbeitsteilung neu definiert, indem der Mensch vom Ausführenden zum Prüfer, Entscheider und System-Iterator wird.",
+          "short_summary": "Legion entwickelte sich von einem einfachen Aufgabenrecorder schrittweise zu einem Multi-Agenten-Engineering-Betriebssystem. Durch Externalisierung impliziten Wissens, Einrichtung von Design-Gates und Engineering-gestützter Verifizierung und Berichterstattung wurde kontrollierte Autonomie erreicht. Das System setzt Agenten-Fähigkeiten Engineering-gestützt um und wandelt die Rolle des Menschen vom Ausführenden zum Prüfer und Entscheider.",
           "key_points": [
-            "Legions Entwicklung begann als Aufgabenprotokollierer und mündete in einem Multi-Agenten-Engineering-Betriebssystem, dessen Kern der Aufbau eines kooperativen Systems mit minimalen Unterbrechungen, hoher Produktivität, Überprüfbarkeit und Übergabefähigkeit ist.",
-            "Zu den Schlüsselphasen gehören Aufgabenpersistenz, Externalisierung impliziten Wissens, Design-Gates, Engineering-Pipelines und Governance-Systeme, die letztendlich kontrollierte Autonomie ermöglichen.",
-            "Legion verändert die Mensch-Maschine-Arbeitsteilung, indem Menschen von Ausführenden zu Zielsetzern, Grenzendefinierern und wichtigen Entscheidungsträgern werden.",
-            "Die neueste Entwicklungsrichtung ist die Produktisierung von Legion zu einem installierbaren, migrierbaren und benchmarkfähigen universellen Autopilot Kit, wobei Befehlsorientierung, Rollenorientierung und Playbook-Orientierung betont werden.",
-            "Legions Entwicklungspfad bestätigt die Prinzipien aus dem Blogbeitrag 'Überlegungen zu AI Agents' und zeigt eine vollständige Geschichte von Prinzipien bis hin zur Engineering-Praxis."
+            "Legion entwickelte sich vom Aufgabenrecorder zum Multi-Agenten-Engineering-Betriebssystem, wobei die Kernidee die Engineering-gestützte Umsetzung von Agenten-Fähigkeiten ist.",
+            "Durch Externalisierung impliziten Wissens, Design-Gates und strukturierte Reviews werden Nacharbeit und Aufmerksamkeitslecks reduziert.",
+            "Das ausgereifte System unterstützt kontrollierte Autonomie und wandelt die Rolle des Menschen vom Ausführenden zum Prüfer, Entscheider und System-Iterator."
           ],
-          "audience": "AI-Agent-Entwickler, Engineering-Teamleiter, Techniker mit Interesse an Multi-Agenten-Kollaboration und Engineering-Prozessoptimierung.",
+          "audience": "AI-Agenten-Entwickler, Engineering-Teamleiter, Techniker mit Interesse an Multi-Agenten-Kollaboration und Engineering-Prozessen.",
           "tags": [
             "Legion",
-            "Multi-Agenten-System",
+            "KI-Agent",
             "Engineering-Betriebssystem",
+            "Multi-Agenten-Kollaboration",
             "Aufgabenmanagement",
-            "Kollaborationsprozess",
-            "AI Agent",
-            "Engineering-Governance",
-            "Autopilot Kit"
+            "Design-Gate",
+            "Engineering-Verifizierung"
           ]
         }
       },
-      "metadataTranslationHash": "7a73b8e121230e04248f9983722a1b047857246cd7166f844ffe1baa07e6cb36",
+      "metadataTranslationHash": "a4f7772eb347ce4d6c93ad9332e09d985fb96d9ab8064968e33ae5e134278625",
       "category": "AI Agent",
-      "nativeMarkdownHash": "dab14061ad18e3b620da864d3c00d419e8b137c95212e8e3a72eba66cf09a893"
+      "nativeMarkdownHash": "c30f1d9647a7fa76635ebcc96150c1ffe1757bc5287175646fb98b30d767c4fd"
     },
     {
       "hash": "10488fd5e0b95ca02e83f9b44d54de3863e77bc231143f618bf808522d58e9dd",
