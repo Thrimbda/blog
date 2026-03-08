@@ -1,57 +1,56 @@
 ---
-title: Die Entwicklungsbahn von Legion: Vom Aufgabenprotokollierer zum Multi-Agenten-Engineering-Betriebssystem
-date: 8. März 2026
+title: Die Entwicklungslinie von Legion: Vom Task-Recorder zum Multi-Agent-Engineering-Betriebssystem
+date: 2026-03-08
 ---
 
 ## Einleitung
 
-Dieses Dokument versucht, eine konkrete Frage zu beantworten: Wie sind wir von "am Anfang fast nichts" dazu gekommen, Legion zu dem relativ ausgereiften Multi-Agenten-Engineering-Kollaborationssystem zu machen, das es heute ist?
+Dieses Dokument versucht, eine konkrete Frage zu beantworten: Wie sind wir von "fast nichts am Anfang" dazu gekommen, Legion zu dem relativ ausgereiften Multi-Agent-Engineering-Kollaborationssystem zu machen, das es heute ist?
 
-Das Material hier stammt hauptsächlich aus drei Teilen:
+Das Material hier stammt hauptsächlich aus drei Quellen:
 
 - Die Git-Historie von `.legion/`
-- Der Status und die Prüfprotokolle von `.legion/config.json` und `.legion/ledger.csv`
-- Das in dem Blogbeitrag "[Gedanken zu AI Agents](https://0xc1.space/blog/dui-yu-ai-agent-de-si-kao/)" bereits klar dargelegte Denkgerüst
+- Der Zustand und die Audit-Logs von `.legion/config.json` und `.legion/ledger.csv`
+- Das im Blogbeitrag "[Gedanken zu AI Agents](https://0xc1.space/blog/dui-yu-ai-agent-de-si-kao/)" bereits klar formulierte Denkgerüst
 
-Wenn man diese Entwicklung in einem Satz zusammenfassen müsste, dann wäre es ungefähr so:
+Wenn man diese Entwicklungslinie in einem Satz zusammenfassen müsste, dann wäre es ungefähr so:
 
-> Am Anfang wollten wir nur, dass der Agent mehr für uns erledigt; später stellten wir fest, dass es nicht um den Aufbau "stärkerer Programmierfähigkeiten" geht, sondern um ein ganzes Engineering-System, das "Agenten weniger stört, mehr Output liefert, überprüfbar und übergabefähig" ist. Legion ist in diesem Prozess Schritt für Schritt von einem Aufgabenprotokollierer zu einem Multi-Agenten-Engineering-Betriebssystem herangewachsen.
+> Am Anfang wollten wir nur, dass der Agent mehr für uns erledigt; später erkannten wir, dass es nicht um "stärkere Programmierfähigkeiten" geht, sondern um den Aufbau eines gesamten Engineering-Systems, das "Agenten weniger stört, mehr Output liefert, verifizierbar und übergabefähig" ist. Legion ist in diesem Prozess aus einem simplen Task-Recorder Schritt für Schritt zu einem Multi-Agent-Engineering-Betriebssystem herangewachsen.
 
 ---
 
-## I. Zuerst der aktuelle Stand: Was Legion bereits ist
+## I. Zuerst der Status Quo: Was Legion heute ist
 
-Beginnen wir nicht am Anfang, sondern schauen wir uns zuerst die aktuelle Form an.
+Beginnen wir nicht am Anfang, sondern beim aktuellen Stand.
+Vom Repository-Zustand her ist Legion kein loses Dokumentensammelsurium mehr, sondern ein kontinuierlich laufendes Workflow-System:
 
-Vom Zustand des Repositories aus betrachtet ist Legion kein loses Dokumentensammelsurium mehr, sondern ein laufendes Workflow-System:
-
-- `.legion/config.json` enthält bereits 33 Aufgabeneinträge.
+- `.legion/config.json` enthält bereits 33 Task-Einträge.
 - Die Statusverteilung ist ungefähr: 9 `archived`, 22 `paused`, 2 `active`.
-- `.legion/ledger.csv` enthält kumuliert 2339 Prüfeinträge.
+- `.legion/ledger.csv` enthält kumuliert 2339 Audit-Einträge.
 - Häufige Aktionen sind: `legion_update_context`, `legion_update_tasks`, `legion_get_status`, `legion_read_context`, `legion_list_reviews`, `legion_respond_review`.
-- Die aktuelle Strategie zur Aufgabenerstellung ist `agent-with-approval`, d.h. ein Agent kann zunächst nur einen Vorschlag machen, keine Aufgabe direkt erstellen; es muss eine explizite Genehmigung erfolgen.
+- Die aktuelle Task-Erstellungsstrategie ist `agent-with-approval`, d.h. ein Agent kann zunächst nur einen Vorschlag machen, keinen Task direkt erstellen; es muss eine explizite Genehmigung erfolgen.
 
 Diese Fakten zusammengenommen zeigen, dass Legion heute bereits mehrere stabile Fähigkeiten besitzt:
 
-1.  **Aufgabenpersistenz**: Aufgaben, Kontext und Fortschritt werden extern gespeichert, nicht nur in der Sitzung.
-2.  **Design-Gates**: Komplexe Aufgaben können nicht einfach losgelegt werden; es muss zuerst einen Vorschlag, einen Plan, ein RFC geben, bevor die Ausführung beginnt.
-3.  **Review-Schleife**: Kommentare sind keine Chat-Protokolle, sondern strukturierte Review-Einträge mit Status.
-4.  **Nachweisbare Artefakte**: Viele Aufgaben haben nicht nur `plan/context/tasks`, sondern generieren auch `rfc`, `review-code`, `review-security`, `report-walkthrough`, `pr-body`.
-5.  **Prüfung und Governance**: Das System weiß, wer wann welche Entscheidung getroffen, welche Phase vorangetrieben oder auf welches Review geantwortet hat.
+1.  **Task-Persistenz**: Tasks, Kontext und Fortschritt werden extern gespeichert, nicht nur in der Sitzung.
+2.  **Design-Gates**: Komplexe Tasks können nicht einfach losgelegt werden; es braucht zuerst Vorschlag, Plan, RFC, bevor die Ausführung beginnt.
+3.  **Review-Zyklus**: Kommentare sind keine Chat-Historie, sondern strukturierte Review-Einträge mit Status.
+4.  **Nachweisbare Artefakte**: Viele Tasks haben nicht nur `plan/context/tasks`, sondern generieren auch `rfc`, `review-code`, `review-security`, `report-walkthrough`, `pr-body`.
+5.  **Audit und Governance**: Das System weiß, wer wann welche Entscheidung getroffen, welche Phase vorangetrieben oder welches Review beantwortet hat.
 
-Dies entspricht im Wesentlichen bereits der im Blogbeitrag beschriebenen Pipeline:
+Das entspricht im Wesentlichen bereits der im Blog beschriebenen Pipeline:
 
 `Intent -> Plan -> Execute -> Verify -> Report -> Memory`
 
-Das bedeutet, Legion heute ist kein "Notizsystem zur Unterstützung beim Programmieren" mehr, sondern eine "Protokollschicht, die festlegt, wie mehrere Agenten zusammenarbeiten".
+Mit anderen Worten: Legion heute ist kein "Notizsystem zur Programmierunterstützung" mehr, sondern eine "Protokollschicht, die festlegt, wie mehrere Agenten zusammenarbeiten".
 
 ---
 
-## II. Der Ausgangspunkt: Zuerst die Aufgaben aus dem Kopf holen
+## II. Der Ausgangspunkt: Zuerst die Tasks aus dem Kopf holen
 
-Der Ausgangspunkt von Legion war sehr schlicht.
+Der Startpunkt von Legion war sehr schlicht.
 
-Aus der Git-Historie geht hervor, dass `.legion` erstmals am 15.12.2025 mit `implement-quote-service` in größerem Umfang ins Repository aufgenommen wurde. Dieser Commit führte gleichzeitig ein:
+Der Git-Historie nach tauchte `.legion` erstmals umfangreich im Repository im Commit `implement-quote-service` am 15.12.2025 auf. Dieser Commit brachte gleichzeitig ein:
 
 - `.legion/config.json`
 - `.legion/ledger.csv`
@@ -59,23 +58,23 @@ Aus der Git-Historie geht hervor, dass `.legion` erstmals am 15.12.2025 mit `imp
 - `.legion/tasks/implement-quote-service/context.md`
 - `.legion/tasks/implement-quote-service/tasks.md`
 
-Dieser Startpunkt ist entscheidend, denn er etablierte das minimale Trio von Legion:
+Dieser Startpunkt ist entscheidend, denn er etablierte das minimale Drei-Komponenten-Set von Legion:
 
 ### 1. `plan.md`
 
 Beantwortet die Frage "Was soll getan werden?".
 
-In `implement-quote-service` war `plan.md` keine einfache To-Do-Liste mehr, sondern beschrieb relativ vollständig:
+In `implement-quote-service` war `plan.md` keine einfache To-do-Liste mehr, sondern enthielt relativ vollständig:
 
 - Ziel
-- Hintergrund und Motivation
+- Hintergrund & Motivation
 - Nicht-Ziele
 - Umfang
 - Phasenplanung
 - Vertragszusammenfassung
-- Design pro Anbieter
+- Vendor-spezifisches Design
 
-Das heißt, von Anfang an war es kein "Todo-Liste", sondern ein leichtgewichtiges Designdokument.
+Das heißt, von Anfang an war es kein "Todo List", sondern ein leichtgewichtiges Designdokument.
 
 ### 2. `context.md`
 
@@ -83,9 +82,9 @@ Beantwortet die Frage "Was ist passiert, warum wurde das so gemacht?".
 
 In dieser Phase war der offensichtlichste Wert von `context.md`:
 
-- Wichtige Dateien protokollieren
-- Wichtige Entscheidungen protokollieren
-- Verifizierungsergebnisse protokollieren
+- Wichtige Dateien festhalten
+- Wichtige Entscheidungen festhalten
+- Verifizierungsergebnisse festhalten
 - Schnelle Übergabe ermöglichen
 
 Im Wesentlichen ersetzte es "das, was ich mir gerade im Kopf zurechtgelegt habe".
@@ -94,27 +93,27 @@ Im Wesentlichen ersetzte es "das, was ich mir gerade im Kopf zurechtgelegt habe"
 
 Beantwortet die Frage "Wo stehen wir gerade?".
 
-Dieser Schritt ist wichtig, denn sobald Multi-Agenten- oder Mehrfachsitzungen beginnen, verzerrt sich zuerst nicht der Code, sondern der Fortschrittsstatus.
+Dieser Schritt ist wichtig, denn sobald Multi-Agent- oder Multi-Runden-Sitzungen beginnen, verzerrt sich zuerst nicht der Code, sondern der Fortschrittsstatus.
 
-Der Blogbeitrag erwähnt, dass ein Mensch nur stabil zwei bis drei Kontexte pro Tag verwalten kann; darüber hinaus kommt es zu Planungsfehlern. Der erste Schritt von Legion bestand im Wesentlichen darin, den "Aufgabenstatus" aus dem menschlichen Gehirn auszulagern.
+Der Blog erwähnt, dass ein Mensch nur stabil zwei bis drei Kontexte pro Tag verwalten kann; darüber hinaus kommt es zu Planungsfehlern. Der erste Schritt von Legion bestand im Wesentlichen darin, den "Task-Status" aus dem menschlichen Gehirn auszulagern.
 
-Die Anfangsphase von Legion kann man also verstehen als:
+Die Legion der Startphase kann man also verstehen als:
 
-> Zuerst dafür sorgen, dass Aufgaben nicht verloren gehen, der Kontext wiederhergestellt werden kann und Agenten nicht nach der Ausführung alles vergessen.
+> Zuerst dafür sorgen, dass Tasks nicht verloren gehen, dass der Kontext wiederhergestellt werden kann, dass Agenten nicht nach Erledigung alles vergessen.
 
-Dies deckt sich vollständig mit der im Blogbeitrag genannten Anforderung, "den Kontext aus dem Kopf auszulagern".
+Das entspricht vollständig der im Blog genannten Anforderung, "den Kontext aus dem Kopf auszulagern".
 
 ---
 
-## III. Die erste Evolution: Vom Aufgabenprotokoll zur Externalisierung impliziten Wissens
+## III. Die erste Evolution: Vom Task-Recording zur Externalisierung impliziten Wissens
 
-Wenn die erste Phase das Problem "Nicht vergessen, was gerade getan wird" löste, dann löste die zweite Phase das, was im Blogbeitrag als "Mauer des impliziten Wissens" bezeichnet wurde.
+Wenn die erste Phase "Nicht vergessen, was gerade getan wird" löste, dann löste die zweite Phase das, was im Blog als "Mauer des impliziten Wissens" bezeichnet wurde.
 
-### 1. Aufgaben werden komplexer, Reviews tauchen massiv auf
+### 1. Tasks wurden komplexer, Reviews tauchten massiv auf
 
-Ab Mitte/Ende Dezember 2025 begannen in Legion-Plan-Dokumenten zahlreiche `> [REVIEW]`-Blöcke aufzutauchen.
+Ab Mitte/Ende Dezember 2025 begannen in Legion-Plan-Dokumenten viele `> [REVIEW]`-Blöcke aufzutauchen.
 
-Typische Aufgaben waren:
+Typische Tasks waren:
 
 - `yuantsexchange-ohlcinterestrate`
 - `vendors-ingest-ohlc-interest-rate`
@@ -122,62 +121,62 @@ Typische Aufgaben waren:
 - `task-vex-quote-upstream-refactor`
 - `vex-series-data-ohlcinterestrate-ohlc-v2`
 
-Die gemeinsamen Merkmale dieser Aufgaben waren:
+Gemeinsames Merkmal dieser Tasks:
 
-- Sie waren nicht einfach durch "Kopieren einer Vorlage" zu erledigen.
+- Sie waren nicht einfach "nach einer Vorlage abzuschreiben".
 - Sie betrafen alte Implementierungen, Entwicklungsgeschichte, Stilpräferenzen, lokale Best Practices.
-- Über Erfolg oder Misserfolg entschied nicht die Syntaxfähigkeit, sondern das "Wissen, was übernommen werden sollte und was nicht".
+- Über Erfolg oder Misserfolg entschied nicht die Syntaxfähigkeit, sondern "zu wissen, was übernommen werden sollte und was nicht".
 
-Zum Beispiel sieht man im Review von `vex-series-data-ohlcinterestrate-ohlc-v2` einen sehr typischen Prozess der "Explizitmachung impliziten Wissens":
+Zum Beispiel zeigt sich im Review von `vex-series-data-ohlcinterestrate-ohlc-v2` ein typischer Prozess der "Explizitmachung impliziten Wissens":
 
-- An dieser Stelle sollte nicht auf die bestehende Implementierung verwiesen werden, da diese fehlerhaft ist.
-- Zunächst dachte man, VEX bräuchte keine komplexe Ratenbegrenzung, später kam man zu einer neuen Einschätzung, dass bestimmte Ratenbegrenzungsstrategien beibehalten werden sollten.
-- Die Codierungsregeln für `series_id`, Merge-Semantik, Fairness der Warteschlange usw. waren kein "Weltwissen", das das Modell natürlich aus dem Code ableiten konnte, sondern lokal im Projekt evolviertes Wissen.
+- An dieser Stelle sollte nicht auf die bestehende Implementierung verwiesen werden, weil diese fehlerhaft ist.
+- Zuerst dachte man, VEX bräuchte keine komplexe Ratenbegrenzung, später revidierte man das und entschied, bestimmte Ratenbegrenzungsstrategien beizubehalten.
+- Die Codierungsregeln für `series_id`, Merge-Semantik, Fairness der Warteschlange usw. sind kein "Weltwissen", das das Modell natürlich aus dem Code ableiten kann, sondern lokal im Projekt evolviertes Wissen.
 
-Dies entspricht genau der im Blogbeitrag genannten Schichtung:
+Das entspricht genau der im Blog beschriebenen Schichtung:
 
-- Die 1. Ebene sind die Anweisungen für die aktuelle Aufgabe.
-- Die 2. Ebene sind technische Projektentscheidungen und lokale Best Practices.
-- Genau diese 2. Ebene ist es, die Agenten am ehesten zum Scheitern bringt.
+- Schicht 1 sind die aktuellen Task-Anweisungen;
+- Schicht 2 sind projektinterne technische Entscheidungen und lokale Best Practices;
+- Genau Schicht 2 ist es, die Agenten am ehesten zum Scheitern bringt.
 
-Die Rolle von Legion in dieser Phase bestand darin, diese 2. Ebene gewaltsam aufzuschreiben.
+Die Rolle von Legion in dieser Phase bestand darin, Schicht 2 gewaltsam aufzuschreiben.
 
-### 2. Kommentare sind nicht mehr nur Kommentare, sondern eine Kollaborationsschnittstelle
+### 2. Kommentare waren nicht mehr nur Kommentare, sondern eine Kollaborationsschnittstelle
 
-Eine weitere entscheidende Veränderung in dieser Phase: Kommentare wurden nicht mehr nur zu "vorübergehenden Anmerkungen", sondern entwickelten sich allmählich zu strukturierten Eingaben, die einen Abschluss ermöglichen.
+Eine weitere entscheidende Veränderung in dieser Phase: Kommentare wurden nicht mehr zu "temporären Anmerkungen", sondern entwickelten sich allmählich zu strukturierten, in sich geschlossenen Inputs.
 
 Zum Beispiel:
 
-- Einige Reviews änderten direkt die Designrichtung.
+- Manche Reviews änderten direkt die Designrichtung.
 - Andere forderten, Fehlersemantik zu ergänzen.
 - Wieder andere forderten, Over-Engineering zu entfernen.
-- Und einige forderten, nicht auf bestehende fehlerhafte Implementierungen zu verweisen.
+- Oder sie forderten, nicht auf bestehende fehlerhafte Implementierungen zu verweisen.
 
-Wenn dieser Inhalt nur im Chat-Protokoll verbliebe, würde der nächste Agent ihn mit Sicherheit verlieren; sobald er in `plan.md` oder `context.md` landet, wird er vom "mündlichen Wissen" zu einem "Teil der Aufgabentatsache".
+Wenn dieser Inhalt nur im Chat blieb, ging er in der nächsten Runde beim Agenten mit Sicherheit verloren; sobald er in `plan.md` oder `context.md` landete, wurde er vom "mündlichen Wissen" zu einem "Teil der Task-Wahrheit".
 
-Daher war Legion in der zweiten Phase im Wesentlichen nicht mehr nur ein Task-Tracker, sondern begann, die Funktion eines **externen Gehirns** zu übernehmen.
+Die Legion der zweiten Phase war also im Wesentlichen nicht mehr nur ein Task-Tracker, sondern begann, die Funktion eines **externalisierten Gehirns** zu übernehmen.
 
-Dieser Schritt ist sehr wichtig, denn er entspricht einer zentralen Wende in Ihrem Blogbeitrag:
+Dieser Schritt ist sehr wichtig, denn er entspricht einer im Blog betonten Kernwende:
 
-> Ein externes Gehirn ist kein nettes Extra, sondern eine Notwendigkeit bei komplexen Projekten.
+> Ein externalisiertes Gehirn ist kein "nice-to-have", sondern bei komplexen Projekten eine Notwendigkeit.
 
 ---
 
-## IV. Die zweite Evolution: Vom externen Gehirn zum Design-Gate
+## IV. Die zweite Evolution: Vom externalisierten Gehirn zu Design-Gates
 
-Als die Aufgaben immer komplexer wurden, reichte das bloße "Aufschreiben von Wissen" nicht mehr aus. Das neue Problem wurde:
+Als die Tasks immer komplexer wurden, reichte das bloße "Aufschreiben von Wissen" nicht mehr aus. Das neue Problem wurde:
 
-> Was passiert, wenn mehrere Agenten gleichzeitig loslegen, aber die Richtung selbst falsch ist?
+> Was, wenn mehrere Agenten gleichzeitig loslegen, aber die Richtung selbst falsch ist?
 
-Hier trat Legion in die dritte Phase ein: Vom "Protokollsystem" zum "Design-Gate-System".
+Hier trat Legion in die dritte Phase ein: Vom "Aufzeichnungssystem" zum "Design-Gate-System".
 
-### 1. RFCs und Specs werden Teil des Hauptprozesses
+### 1. RFCs und Specs wurden Teil des Hauptprozesses
 
 Ein entscheidender Wendepunkt war `http-proxy-service`.
 
-In dieser Aufgabe war Legion eindeutig nicht mehr "zuerst machen, dann protokollieren", sondern "zuerst designen, zuerst prüfen, zuerst das Gate passieren, dann machen".
+In diesem Task war Legion offensichtlich nicht mehr "zuerst machen, dann aufschreiben", sondern "zuerst designen, zuerst reviewen, zuerst das Gate passieren, dann machen".
 
-Diese Aufgabe enthielt:
+Dieser Task enthielt:
 
 - `docs/rfc.md`
 - `docs/spec-dev.md`
@@ -188,66 +187,66 @@ Diese Aufgabe enthielt:
 - Sicherheitsprüfungs-Blocker
 - Walkthrough und PR-Body
 
-Das bedeutete, dass Legion begann, eine komplexe Aufgabe in mehrere stabile Ebenen zu zerlegen:
+Das bedeutet, Legion begann, einen komplexen Task in mehrere stabile Schichten zu zerlegen:
 
-1.  **RFC**: Absicht ausrichten
-2.  **Dev/Test/Bench/Obs Spec**: Vorab klarstellen, "wie wird verifiziert?"
-3.  **Review**: Richtungsprobleme möglichst vor Arbeitsbeginn aufdecken
-4.  **Implementierung und Verifizierung**: Günstige Checks nach vorne verlagern
-5.  **Bericht und PR-Artefakte**: Der Abnahme dienen
+1.  **RFC**: Intent-Abgleich
+2.  **Dev/Test/Bench/Obs Spec**: Vorab klarstellen, "wie wird verifiziert"
+3.  **Review**: Möglichst vor Arbeitsbeginn Richtungsprobleme aufdecken
+4.  **Implementierung & Verifikation**: Günstige Checks nach vorne verlagern
+5.  **Bericht & PR-Artefakte**: Dem Abnahme-Prozess dienen
 
-Dies entspricht genau der im Blogbeitrag erwähnten "Absichtsausrichtung + geschichtete Verifizierung".
+Das entspricht genau dem im Blog erwähnten "Intent-Abgleich + geschichtete Verifikation".
 
-### 2. Sicherheits- und Ressourcenprobleme treten als vorgelagerte Blocker auf
+### 2. Sicherheits- und Ressourcenprobleme traten als vorgelagerte Blocker auf
 
-In Aufgaben wie `http-proxy-service` und `http-proxy-app-implementation` waren Reviews nicht mehr nur Vorschläge, sondern enthielten direkt `blocking`-Einträge.
+In Tasks wie `http-proxy-service` und `http-proxy-app-implementation` waren Reviews nicht mehr nur Vorschläge, sondern enthielten direkt `blocking`-Einträge.
 
 Zum Beispiel:
 
 - SSRF-Risiko
 - DoS-Risiko
-- Nicht begrenzte Antwortkörpergröße
-- Nebenläufigkeits- und Warteschlangenparameter nicht secure-by-default
-- Unklare Grenzen der Umgebungsvariablenkonfiguration
+- Nicht begrenzte Response-Body-Größe
+- Concurrency- und Queue-Parameter nicht secure-by-default
+- Unklare Grenzen der Environment-Variable-Konfiguration
 
-Dies zeigt, dass Legion begann, eine neue Verantwortung zu übernehmen:
+Das zeigt, dass Legion begann, eine neue Verantwortung zu übernehmen:
 
-> Nicht nur protokollieren, "warum das so gemacht wurde", sondern auch, "warum es jetzt nicht gemacht werden kann, es sei denn, diese Bedingungen werden zuerst erfüllt".
+> Nicht nur aufzeichnen, "warum das so gemacht wurde", sondern auch, "warum es jetzt nicht gemacht werden kann, es sei denn, diese Bedingungen werden zuerst erfüllt".
 
-Das ist ein Design-Gate.
+Das sind Design-Gates.
 
-Der Blogbeitrag sagt, wenn Multi-Agenten-Systeme anfangen zu scheitern, ist der erste menschliche Impuls oft, längere RFCs zu schreiben, strengere Reviews durchzuführen und das Risiko ganz nach vorne zu verlagern. In dieser Phase institutionalisierte Legion genau diesen Instinkt.
+Der Blog sagt: Wenn Multi-Agent-Systeme anfangen zu scheitern, ist der erste menschliche Impuls oft, längere RFCs zu schreiben, strengere Reviews durchzuführen und Risiken ganz nach vorne zu verlagern. Legion institutionalisierte in dieser Phase genau diesen Instinkt.
 
 ### 3. Es begann, einer kleinen Produktionspipeline zu ähneln
 
-In dieser Phase war die Rolle von Legion nicht mehr "helfen, sich zu erinnern", sondern "helfen, die Arbeitsreihenfolge einzuschränken".
+In dieser Phase war die Rolle von Legion nicht mehr "helfen, sich zu erinnern", sondern "helfen, die Arbeitsabfolge zu steuern".
 
-Entsprechend der Pipeline im Blogbeitrag:
+Entsprechend der Blog-Pipeline:
 
-- `Intent`: Benutzerziele, Nicht-Ziele, Einschränkungen
-- `Plan`: Aufgabenzerlegung, Meilensteine, Grenzen
+- `Intent`: Nutzerziele, Nicht-Ziele, Einschränkungen
+- `Plan`: Task-Zerlegung, Meilensteine, Grenzen
 - `Execute`: Implementierung
-- `Verify`: Build / Test / Benchmark / Review
-- `Report`: Walkthrough / PR-Body
-- `Memory`: Kontext / Entscheidungsprotokoll / archivierte Aufgabe
+- `Verify`: build / test / benchmark / review
+- `Report`: walkthrough / PR body
+- `Memory`: context / decision log / archived task
 
 Dieser Schritt ist entscheidend, denn er bedeutet:
 
-> Legion trägt nicht mehr nur den Kontext, sondern beginnt, den Prozess zu tragen.
+> Legion trug nicht mehr nur den Kontext, sondern begann, den Prozess zu tragen.
 
 ---
 
-## V. Meilenstein: Die HTTP-Proxy-Serie macht Legion wirklich engineering-tauglich
+## V. Meilenstein: Die HTTP-Proxy-Serie machte Legion wirklich engineering-tauglich
 
-Wenn die vorherigen Phasen noch ein experimentelles Gefühl von "wachsen während der Arbeit" hatten, dann waren die `http-proxy`-bezogenen Aufgaben im Grunde der erste echte Meilenstein der Reife von Legion.
+Wenn die vorherigen Phasen noch experimentellen Charakter hatten, dann war die `http-proxy`-bezogene Task-Serie im Grunde der erste echte Reifemeilenstein für Legion.
 
-Dies deckt sich mit der Beschreibung im Blogbeitrag: Sie erwähnen ausdrücklich, dass die `http-proxy`-Aufgabe über mehrere Projekte hinweg der Punkt war, an dem Sie das Gefühl hatten, "ich kann mich im Wesentlichen vom Programmieren lösen und nur wenige Review-Kommentare hinterlassen".
+Das deckt sich mit meiner Beschreibung im Blog: Die `http-proxy`-Tasks über mehrere Projekte hinweg waren tatsächlich der Punkt, an dem ich deutlich das Gefühl bekam, "ich kann mich im Wesentlichen vom Coden zurückziehen und nur noch wenige Review-Kommentare hinterlassen".
 
 Aus der `.legion`-Historie heraus ist diese Einschätzung gut belegt.
 
-### 1. Es war keine einzelne Aufgabe, sondern ein Aufgaben-Cluster
+### 1. Es war kein einzelner Task, sondern ein Task-Cluster
 
-Zugehörige Aufgaben umfassten mindestens:
+Zugehörige Tasks umfassten mindestens:
 
 - `http-proxy-service`
 - `http-proxy-app-implementation`
@@ -256,40 +255,40 @@ Zugehörige Aufgaben umfassten mindestens:
 - `http-services-terminalinfos-ready`
 - `vendor-tokenbucket-proxy-ip`
 
-Das war kein punktueller Bedarf, sondern eine Reihe sich gegenseitig bedingender Engineering-Aufgaben:
+Das war kein punktuelles Bedürfnis, sondern eine Reihe sich gegenseitig bedingender Engineering-Tasks:
 
-- Zuerst die Basisbibliothek
-- Dann die Anwendungsschicht
+- Zuerst die Basis-Bibliothek
+- Dann die Applikationsschicht
 - Dann das Rollout
-- Dann Metriken ergänzen
-- Dann Routing / IP-Readiness ergänzen
-- Dann mit anbieterseitiger Ratenbegrenzungs- und Lastlogik verknüpfen
+- Dann die Metriken
+- Dann Routing / IP-Readiness
+- Schließlich die Verknüpfung mit Vendor-seitiger Ratenbegrenzungs- und Lastlogik
 
-Das heißt, Legion begann bereits, eine echte **aufgaben-, paket- und phasenübergreifende Entwicklung** zu unterstützen.
+Mit anderen Worten: Legion begann bereits, eine echte **übergreifende, paket- und phasenübergreifende Evolution** zu unterstützen.
 
-### 2. Die Review-Schleife wurde deutlich länger, aber gleichzeitig stabiler
+### 2. Der Review-Zyklus wurde deutlich länger, aber gleichzeitig stabiler
 
 Besonders `http-proxy-app-implementation` veranschaulicht die Reife von Legion sehr gut:
 
-- Einerseits gab es viele Reviews und viele Streitpunkte;
-- Andererseits blieben diese Streitpunkte nicht im Chat-Protokoll, sondern wurden zu RFC-Updates, Review-Ergebnissen und Kontextentscheidungen.
+- Einerseits gab es viele Reviews und viele Kontroversen;
+- Andererseits blieben diese Kontroversen nicht im Chat, sondern wurden zu RFC-Updates, Review-Ergebnissen und Kontext-Entscheidungen.
 
-In dieser Aufgabe sieht man sehr typische Engineering-Debatten:
+In diesem Task sieht man sehr typische Engineering-Debatten:
 
-- Beeinflusst `allowedHosts` das Anfrageverhalten oder nur die Metriken?
+- Beeinflusst `allowedHosts` das Request-Verhalten oder nur die Metriken?
 - Muss `absolute-form` der einzig unterstützte Pfad sein?
 - Wie werden die Grenzen von `invalid_url`, `blocked`, `error` definiert?
 - Wie kontrolliert man das High-Cardinality-Risiko von `target_host` / `target_path`?
 
-Das sind keine Probleme, die durch "Programmierfähigkeit" direkt gelöst werden können, sondern Probleme der **Normgrenzen, Verifizierungsgrenzen und Semantikgrenzen**.
+Das sind keine Probleme, die "Programmierfähigkeit" direkt lösen kann, sondern Fragen der **Normgrenzen, Verifizierungsgrenzen und Semantikgrenzen**.
 
-Der Wert von Legion lag hier nicht darin, beim Programmieren zu helfen, sondern darin, diese Grenzen zu stabilisieren.
+Der Wert von Legion lag hier nicht darin, beim Coden zu helfen, sondern darin, diese Grenzen zu stabilisieren.
 
 ### 3. Es begann, echte für die Abnahme nutzbare Artefakte zu generieren
 
-Dieser Schritt entspricht auch genau dem im Blogbeitrag genannten Punkt "Berichtsschnittstellen sind ein unterschätztes Engineering-Problem".
+Dieser Schritt entspricht auch genau dem Blog-Punkt "Reporting-Schnittstellen sind ein unterschätztes Engineering-Problem".
 
-In der http-proxy-Aufgabenserie generierte Legion bereits stabil:
+In der http-proxy-Serie generierte Legion bereits stabil:
 
 - RFC
 - review-rfc
@@ -299,15 +298,15 @@ In der http-proxy-Aufgabenserie generierte Legion bereits stabil:
 - pr-body
 - spec-test / spec-bench / spec-obs
 
-Dies zeigt, dass Legion nicht mehr damit zufrieden war, "die Dinge zu erledigen", sondern begann, "die Dinge klar darzulegen, die Beweise daran zu binden und die Risiken zu benennen" zu unterstützen.
+Das zeigt, dass Legion nicht mehr damit zufrieden war, "die Dinge zu erledigen", sondern begann, "die Dinge klar darzulegen, die Beweise anzuhängen, die Risiken zu benennen" zu unterstützen.
 
-Mit anderen Worten:
+Anders gesagt:
 
-> Zu diesem Zeitpunkt begann Legion, wirklich der "kostengünstigen Abnahme" zu dienen, nicht nur der "effizienten Ausführung".
+> Zu diesem Zeitpunkt begann Legion, wirklich "kostengünstiger Abnahme" zu dienen, nicht nur "effizienter Ausführung".
 
-Dies ist auch eine besonders wichtige Erkenntnis im Blogbeitrag: Das Teuerste sind nicht die Tokens, sondern Nacharbeit und Aufmerksamkeitsverlust.
+Das ist auch eine besonders wichtige Erkenntnis aus dem Blog: Das Teuerste sind nicht die Tokens, sondern Nacharbeit und Aufmerksamkeitsverlust.
 
-Solange die Berichtsschnittstelle nicht engineering-tauglich ist, muss der Mensch immer noch viel Energie darauf verwenden, zu erraten, was der Agent tatsächlich getan hat. In dieser Phase löste Legion dieses Problem offensichtlich bereits aktiv.
+Solange Reporting-Schnittstellen nicht engineering-tauglich sind, muss man immer noch viel Energie darauf verwenden, zu erraten, was der Agent eigentlich getan hat. Legion löste dieses Problem in dieser Phase offensichtlich bereits aktiv.
 
 ---
 
@@ -315,64 +314,64 @@ Solange die Berichtsschnittstelle nicht engineering-tauglich ist, muss der Mensc
 
 Betrachtet man die weitere Entwicklung, zeigt sich die Reife von Legion nicht nur in "immer mehr Dokumenten", sondern darin, dass sich **Governance-Strukturen** zu verfestigen begannen.
 
-### 1. Die Aufgabenerstellung wird durch Genehmigungsstrategien eingeschränkt
+### 1. Die Task-Erstellung wurde durch Genehmigungsstrategien eingeschränkt
 
-Die aktuelle `taskCreationPolicy` in `.legion/config.json` ist bereits `agent-with-approval`.
+Der aktuelle `taskCreationPolicy` in `.legion/config.json` ist bereits `agent-with-approval`.
 
-Dieser Schritt ist sehr symbolträchtig.
+Dieser Schritt hat große symbolische Bedeutung.
 
 Er bedeutet, dass Legion begann, eine Tatsache anzuerkennen:
 
-> Nicht alle komplexen Aufgaben sollten vom Agenten selbst entschieden werden, wann sie erstellt und vorangetrieben werden.
+> Nicht alle komplexen Tasks sollten vom Agenten selbst entschieden werden, wann sie erstellt und vorangetrieben werden.
 
-Dahinter steckt genau das im Blogbeitrag beschriebene, tiefer liegende Problem:
+Dahinter steckt genau das im Blog beschriebene, tieferliegende Problem:
 
-- Wenn Modelle immer leistungsfähiger werden, sollte der Prozess dann mehr Freiheiten geben?
+- Wenn Modelle immer leistungsfähiger werden, sollte der Prozess dann Macht abgeben?
 - Wenn ja, wo liegen die Grenzen?
-- Was muss zuerst menschlich genehmigt werden, was kann automatisch vorangetrieben werden?
+- Was muss zuerst menschliche Genehmigung durchlaufen, was kann automatisch vorangetrieben werden?
 
 Die Antwort von Legion ist keine vollständige Autonomie, sondern **kontrollierte Autonomie**.
 
-Das heißt:
+Also:
 
-- Agenten können erkunden, organisieren, vorschlagen;
-- Aber bevor komplexe Arbeiten in die offizielle Ausführung gehen, muss immer noch eine menschliche Genehmigung erfolgen.
+- Agenten können erkunden, strukturieren, vorschlagen;
+- Aber komplexe Arbeiten müssen vor dem offiziellen Start noch menschlich genehmigt werden.
 
-Dies kommt den Arbeitsmechanismen in einer echten Organisation bereits sehr nahe.
+Das kommt den Arbeitsmechanismen in einer echten Organisation schon sehr nahe.
 
-### 2. Reviews sind nicht mehr nur Vorschläge, sondern zustandsbehaftete Kollaborationsprotokolle
+### 2. Reviews waren nicht mehr nur Vorschläge, sondern statusbehaftete Kollaborationsprotokolle
 
-Aus der Ledger-Statistik geht hervor, dass `legion_list_reviews` und `legion_respond_review` bereits zahlreiche Einträge verzeichneten.
+Den Ledger-Statistiken zufolge gab es bereits viele Einträge für `legion_list_reviews` und `legion_respond_review`.
 
-Dies zeigt, dass Reviews in Legion keine Nebenfunktion sind, sondern eine Hauptfunktion.
+Das zeigt, dass Reviews in Legion keine Nebenfunktion sind, sondern eine Hauptfunktion.
 
-Noch wichtiger ist, dass es nicht um "Kommentare lesen" geht, sondern um:
+Noch wichtiger: Es geht nicht um "Kommentare lesen", sondern um:
 
-- Unerledigte Punkte auflisten
-- Auf ein bestimmtes Review antworten
+- Ungelöste Punkte auflisten
+- Auf ein Review antworten
 - Als resolved / wontfix / need-info markieren
 - Review-Abschluss bestätigen
 
-Dies unterscheidet sich sehr von gewöhnlichen Markdown-Anmerkungen. Es verwandelt "Kommentare" von Text in eine zustandsverfolgbare Maschine.
+Das unterscheidet sich stark von normalen Markdown-Kommentaren. Es verwandelt "Kommentare" von Text in eine nachverfolgbare Zustandsmaschine.
 
 Die Bedeutung dieses Schrittes ist:
 
-> Die Kommunikation zwischen Mensch und Agent ist nicht mehr nur Sitzungsnachrichten, sondern protokollierbare, nachverfolgbare, prüfbare Protokollaktionen.
+> Die Kommunikation zwischen Mensch und Agent ist nicht mehr nur Sitzungsnachrichten, sondern protokollierbare, nachverfolgbare, auditierbare Protokollaktionen.
 
 ### 3. Es begann, "Risikoakzeptanz" zu tragen, nicht nur "Problembehebung"
 
 Ein weiteres Zeichen eines reifen Systems ist nicht, "alle Risiken sind gelöst", sondern "das System kann unterscheiden, welche Risiken jetzt gelöst werden und welche jetzt akzeptiert werden".
 
-In Aufgaben wie `http-proxy-app-implementation`, `vendor-tokenbucket-proxy-ip` usw. war bereits zu sehen:
+In Tasks wie `http-proxy-app-implementation`, `vendor-tokenbucket-proxy-ip` usw. sieht man bereits:
 
-- Einige Sicherheitsprobleme wurden nach Prüfung als `wontfix` markiert.
-- Einige Risiken wurden explizit als vom Benutzer akzeptiert protokolliert.
-- Einige Verhaltensweisen wurden als verbleibendes Risiko beibehalten, nicht vage vergessen.
+- Einige Sicherheitsprobleme wurden nach Review als `wontfix` markiert.
+- Einige Risiken wurden explizit als vom Nutzer akzeptiert dokumentiert.
+- Einige Verhaltensweisen wurden als verbleibendes Risiko (residual risk) festgehalten, nicht einfach vergessen.
 
-Dies zeigt, dass Legion nicht mehr nur ein "Tool zum Beheben von Bugs" war, sondern begann, die Realität von Engineering-Entscheidungen zu tragen:
+Das zeigt, dass Legion nicht mehr nur ein "Werkzeug zum Bugfixen" ist, sondern begann, die Realität von Engineering-Entscheidungen zu tragen:
 
 - Einige Probleme müssen sofort behoben werden.
-- Einige Probleme werden zuerst protokolliert, später verwaltet.
+- Einige Probleme werden zuerst dokumentiert, später behandelt.
 - Einige Probleme werden durch aktuelle Umgebungsannahmen abgefedert.
 
 Das ist Governance.
@@ -381,23 +380,23 @@ Das ist Governance.
 
 ## VII. Aktuellstes Beispiel höchster Reife: `heavy-rfc`
 
-Wenn man aus den bestehenden Aufgaben einen Repräsentanten wählen müsste, der den Reifegrad von Legion am besten verkörpert, würde ich `heavy-rfc` wählen.
+Wenn man aus den bestehenden Tasks einen auswählen müsste, der die Reife von Legion am besten verkörpert, würde ich `heavy-rfc` wählen.
 
-Diese Aufgabe kann fast als vollständiges Paradigma des aktuellen Legion-Workflows betrachtet werden.
+Dieser Task kann fast als vollständiges Paradigma des aktuellen Legion-Workflows betrachtet werden.
 
-### 1. Von Anfang an gab es Risikostufung und Phasendeklaration
+### 1. Von Anfang an gab es Risikostufen und Phasendeklarationen
 
-Es wurde nicht einfach "Live Trading implementieren" geschrieben, sondern von Anfang an klar festgelegt:
+Es wurde nicht einfach "live trading implementieren" geschrieben, sondern von Anfang an klar festgelegt:
 
 - `rfcProfile=heavy`
 - `stage=design-only`
 - `risk=high`
 
-Das heißt, diese Aufgabe war nicht "zuerst implementieren, dann Dokumentation ergänzen", sondern sie erkannte zuerst an, dass es sich um eine Hochrisikoaufgabe handelt, daher musste zuerst der Heavy-RFC-Prozess durchlaufen werden.
+Das heißt, dieser Task war nicht "zuerst implementieren, dann Dokumentation nachschieben", sondern erkannte zuerst an, dass es sich um einen Hochrisiko-Task handelt, der daher zunächst den heavy-RFC-Prozess durchlaufen muss.
 
-### 2. Es hatte bereits eine vollständige Artefaktkette
+### 2. Es gab bereits eine vollständige Artefaktkette
 
-Unter `heavy-rfc` waren bereits enthalten:
+`heavy-rfc` enthielt bereits:
 
 - `task-brief.md`
 - `research.md`
@@ -409,46 +408,46 @@ Unter `heavy-rfc` waren bereits enthalten:
 - `report-walkthrough.md`
 - `pr-body.md`
 
-Diese Artefaktkette selbst zeigt, dass Legion bereits eine Hochrisiko-Engineering-Aufgabe in mehrere prüfbare, verifizierbare, übergabefähige Ebenen zerlegt hatte.
+Diese Artefaktkette allein zeigt, dass Legion bereits einen Hochrisiko-Engineering-Task in mehrere überprüfbare, verifizierbare, übergabefähige Schichten zerlegt hat.
 
-### 3. Es verkörpert die im Blogbeitrag beschriebene Arbeitsweise "zuerst Absicht bündeln, dann Ausführung freigeben"
+### 3. Es verkörpert die im Blog beschriebene Arbeitsweise "zuerst Intent konsolidieren, dann Ausführung freigeben"
 
-Der Blogbeitrag enthält eine sehr zentrale Erkenntnis:
+Im Blog gibt es eine sehr zentrale Erkenntnis:
 
-> Autonomie bedeutet nicht, klug genug zu sein, sondern wenig zu stören, viel Output zu liefern und überprüfbar zu sein.
+> Autonomie bedeutet nicht nur Klugheit, sondern weniger Störung, mehr Output, Verifizierbarkeit.
 
 `heavy-rfc` verkörpert genau das:
 
-- Zuerst die Richtung durch Designdokumente und Reviews festlegen
-- Dann das Implementierungsrisiko durch Tests und Prüfungen senken
-- Schließlich die Abnahmekosten durch Report / PR-Body senken
+- Zuerst Richtung durch Designdokumente und Reviews festlegen
+- Dann Implementierungsrisiken durch Tests und Reviews senken
+- Schließlich Abnahmekosten durch Report / PR body senken
 
-Das bedeutet, dass Legion inzwischen in der Lage ist, eine neue Arbeitshaltung zu unterstützen:
+Das bedeutet, Legion kann mittlerweile eine neue Arbeitshaltung unterstützen:
 
-> Der Mensch setzt hauptsächlich Ziele, Grenzen, wichtige Reviews; der Agent ist verantwortlich für die Umsetzung, Verifizierung und Berichterstattung innerhalb institutionalisierter Bahnen.
+> Der Mensch setzt hauptsächlich Ziele, Grenzen, wichtige Reviews; der Agent ist verantwortlich für Implementierung, Verifikation und Reporting innerhalb institutionalisierter Bahnen.
 
-Genau das ist die im Blogbeitrag am Ende beschriebene Rollenveränderung: Vom Ausführenden zum Prüfenden, Entscheidenden, Systemweiterentwickelnden.
+Genau das ist der im Blog abschließend beschriebene Rollenwechsel: Vom Ausführenden zum Prüfenden, Entscheidenden, System-Iterierenden.
 
 ---
 
-## VIII. Betrachtung der Reifeentwicklung anhand des "Ausmaßes und Umfangs" von Tasks
+## VIII. Reifegrad-Upgrade aus Sicht von "Ausmaß und Umfang" der Tasks
 
-Betrachtet man alle Tasks zusammen, erkennt man, dass die Reife von Legion nicht nur in der zunehmenden Prozesskomplexität liegt, sondern auch darin, dass sich der Aufgabentyp selbst weiterentwickelt.
+Betrachtet man alle Tasks zusammen, erkennt man, dass die Reife von Legion nicht nur in höherer Prozesskomplexität liegt, sondern auch darin, dass sich der Task-Typ selbst weiterentwickelt hat.
 
-### 1. Frühe Phase: Punktuelle Implementierungsaufgaben
+### 1. Frühe Phase: Punktuelle Implementierungs-Tasks
 
-Repräsentant: `implement-quote-service`
+Beispiel: `implement-quote-service`
 
 Merkmale:
 
 - Einzelthema
 - Grenzen relativ klar
 - Dokumentation dient hauptsächlich dem Verständnis und der Übergabe
-- Legion dient hauptsächlich dem Task-Tracking
+- Legion dient hauptsächlich als Task-Tracking
 
-### 2. Mittlere Phase: Design-kontroverse Aufgaben
+### 2. Mittlere Phase: Design-kontroverse Tasks
 
-Repräsentanten: `vex-series-data-ohlcinterestrate-ohlc-v2`, `yuantsexchange-ohlcinterestrate`
+Beispiel: `vex-series-data-ohlcinterestrate-ohlc-v2`, `yuantsexchange-ohlcinterestrate`
 
 Merkmale:
 
@@ -457,44 +456,44 @@ Merkmale:
 - Dichte an Kommentaren / Reviews
 - Legion dient hauptsächlich der Externalisierung impliziten Wissens
 
-### 3. Meilensteinphase: Projektübergreifende Engineering-Aufgaben
+### 3. Meilenstein-Phase: Projektübergreifende Engineering-Tasks
 
-Repräsentanten: `http-proxy-*` Serie
+Beispiel: `http-proxy-*` Serie
 
 Merkmale:
 
 - Paketübergreifend
-- Enthalten RFC / Spec / Benchmark / Security Review
-- Enthalten Rollout, Beobachtung, Rollback, Bericht
-- Legion dient hauptsächlich der vollständigen Engineering-Pipeline
+- Enthalten RFC / spec / benchmark / security review
+- Enthalten Rollout, Observability, Rollback, Reporting
+- Legion dient hauptsächlich als vollständige Engineering-Pipeline
 
-### 4. Aktuelle Phase: Hochrisiko-Governance-Aufgaben
+### 4. Aktuelle Phase: Hochrisiko-Governance-Tasks
 
-Repräsentant: `heavy-rfc`
+Beispiel: `heavy-rfc`
 
 Merkmale:
 
 - Klare Risikostufung
 - Klare Genehmigungs-Gates
-- Klare Review-Schleife
-- Vollständige Dokumenten- und Beweiskette
+- Klarer Review-Zyklus
+- Vollständige Dokumentations- und Beweiskette
 - Legion dient hauptsächlich der Governance und dem Lieferprotokoll
 
-Mit anderen Worten, das "Ausmaß und der Umfang" der Tasks selbst sind der Spiegel des Reifegrads von Legion.
+Anders gesagt: Das "Ausmaß und der Umfang" der Tasks selbst sind der Spiegel des Reifegrads von Legion.
 
-Am Anfang bearbeitete es nur "eine Funktion implementieren"; später begann es, "eine Art komplexes Engineering" zu bearbeiten; heute bearbeitet es bereits "wie man Hochrisikoarbeiten auf kontrollierte Weise vorantreibt".
+Am Anfang behandelte es nur "eine Funktion implementieren"; später begann es, "eine Art komplexes Engineering" zu behandeln; heute behandelt es bereits "wie man Hochrisiko-Arbeiten auf kontrollierte Weise vorantreibt".
 
 ---
 
-## IX. Wie diese Entwicklung mit den Gedanken im Blogbeitrag korrespondiert
+## IX. Wie diese Linie mit den Gedanken aus dem Blog übereinstimmt
 
-Wenn man jetzt auf "[Gedanken zu AI Agents](https://0xc1.space/blog/dui-yu-ai-agent-de-si-kao/)" zurückblickt, stellt man fest, dass viele der im Blogbeitrag getroffenen Einschätzungen in der Geschichte von Legion bereits umgesetzt wurden.
+Schaut man jetzt zurück auf "Gedanken zu AI Agents", erkennt man, dass viele der im Blog formulierten Erkenntnisse bereits in der Geschichte von Legion umgesetzt wurden.
 
 ### 1. "Erster Geschmack des Scale-Sweet-Spots"
 
-Im Blogbeitrag heißt es: Mehrere Agenten, die parallel Aufgaben vorantreiben, vermitteln kurzfristig ein Gefühl mechanisierter Ernte.
+Im Blog stand: Mehrere Agenten, die parallel Tasks vorantreiben, geben einem kurzfristig ein Gefühl mechanisierter Ernte.
 
-In der Legion-Historie entspricht dies dem schnellen Wachstum der Tasks ab Dezember 2025:
+In der Legion-Historie entspricht das dem schnellen Wachstum der Tasks ab Dezember 2025:
 
 - quote service
 - quote routing
@@ -503,67 +502,67 @@ In der Legion-Historie entspricht dies dem schnellen Wachstum der Tasks ab Dezem
 - OHLC / interest rate
 - token bucket
 
-Dies zeigt, dass das anfängliche Kernziel tatsächlich war: **Zuerst den Agenten mehr Arbeit machen lassen**.
+Das zeigt, das ursprüngliche Kernziel war tatsächlich: **Zuerst den Agenten mehr Arbeit machen lassen**.
 
 ### 2. "Der Engpass bin ich selbst"
 
-Der Blogbeitrag sagt, nachdem die Ausführungsarbeit an Agenten delegiert wurde, werden die wahren menschlichen Engpässe Kontextmanagement, Abnahme und Entscheidungsfindung.
+Der Blog sagte, nachdem Ausführungsarbeit an Agenten delegiert wurde, wird der echte menschliche Engpass Kontextmanagement, Abnahme und Entscheidungsfindung.
 
-Das frühe Trio von Legion löste genau dieses Problem:
+Das frühe Drei-Komponenten-Set von Legion löste genau dieses Problem:
 
-- `tasks.md` reduziert Kontextverlust
-- `context.md` protokolliert Entscheidungen und wichtige Dateien
-- `plan.md` verhindert, dass Aufgabenziele abdriften
+- `tasks.md` reduzierte Kontextverlust
+- `context.md` hielt Entscheidungen und wichtige Dateien fest
+- `plan.md` verhinderte, dass Task-Ziele abdriften
 
-### 3. "Mauer des impliziten Wissens"
+### 3. "Die Mauer des impliziten Wissens"
 
-Der Blogbeitrag sagt, Agenten lernen oft sichtbare Beispiele, wissen aber nicht, was der aktuelle Standard ist.
+Der Blog sagte, Agenten lernen oft sichtbare Beispiele, wissen aber nicht, was der aktuelle Standard ist.
 
 Legions Antwort war:
 
 - Reviews in den Plan schreiben
 - Einschränkungen in den Kontext schreiben
-- Designkontroversen als strukturierte Dokumente schreiben
+- Design-Kontroversen in strukturierte Dokumente schreiben
 
 Also: Implizites Wissen externalisieren.
 
-### 4. "Absichtsausrichtung + geschichtete Verifizierung"
+### 4. "Intent-Abgleich + geschichtete Verifikation"
 
-Die Pipeline aus dem Blogbeitrag wurde in `http-proxy` und `heavy-rfc` fast wortwörtlich umgesetzt:
+Die Blog-Pipeline wurde in `http-proxy` und `heavy-rfc` fast wortwörtlich umgesetzt:
 
-- Intent: Ziel / Nicht-Ziele / Umfang
-- Plan: Phase / RFC / Design-Zusammenfassung
+- Intent: Goal / Non-goals / Scope
+- Plan: Phase / RFC / Design Summary
 - Execute: Implementierung
-- Verify: Test / review-code / review-security / Bench
-- Report: Walkthrough / pr-body
-- Memory: Kontext / archivierte Aufgabe / Ledger
+- Verify: test / review-code / review-security / bench
+- Report: walkthrough / pr-body
+- Memory: context / archived task / ledger
 
-### 5. "Berichtsschnittstellen sind ein unterschätztes Engineering-Problem"
+### 5. "Reporting-Schnittstellen sind ein unterschätztes Engineering-Problem"
 
-Der Blogbeitrag betont, dass Schlussfolgerungen möglichst an Artefakte gebunden sein sollten.
+Der Blog betonte, Schlussfolgerungen sollten möglichst an Artefakte gebunden sein.
 
-Die Praxis von Legion geht bereits deutlich in diese Richtung:
+Legions Praxis ging bereits deutlich in diese Richtung:
 
 - Eine Schlussfolgerung ist nicht nur ein Satz, sondern entspricht Report, Review, Test-Report, PR-Body
 - Der Mensch muss nicht den gesamten Code neu lesen, sondern kann zuerst die verdichteten Artefakte lesen
 
-Auch wenn es noch nicht der vorgestellte Citation Agent ist, die Richtung ist bereits klar.
+Auch wenn es noch nicht der im Blog angedachte Citation Agent ist, die Richtung ist klar.
 
 ### 6. "Benchmarks werden zur Notwendigkeit"
 
-Der Blogbeitrag sagt, in Zukunft muss man verschiedene Workflows oder Modellversionen vergleichen können, nicht nach Gefühl.
+Der Blog sagte, in Zukunft muss man verschiedene Workflows oder Modellversionen vergleichen können, nicht nach Gefühl.
 
-In Legion gibt es dafür bereits frühe Implementierungen:
+In Legion gab es dazu bereits frühe Implementierungen:
 
 - `spec-bench.md`
 - Benchmark-Szenarien und Schwellenwerte
-- Bench-Output und Berichte
+- Benchmark-Output und Berichte
 
 Das heißt, dieser Weg ist keine Idee mehr, sondern beginnt, engineering-tauglich zu werden.
 
 ---
 
-## X. Die wichtigste Veränderung: Legion verändert nicht nur Agenten, sondern auch die Rolle des Menschen
+## X. Die wichtigste Veränderung: Legion veränderte nicht nur Agenten, sondern auch die menschliche Rolle
 
 Oberflächlich betrachtet scheint das Wachstum von Legion zu sein:
 
@@ -577,88 +576,113 @@ In früheren Zeiten war die menschliche Rolle ungefähr:
 
 - Persönlich ausführen
 - Persönlich erinnern
-- Persönlich den gesamten Kontext abfangen
+- Persönlich den gesamten Kontext halten
 
 Als Legion allmählich reifte, wurde die menschliche Rolle langsam zu:
 
 - Ziele und Einschränkungen setzen
-- Designgrenzen prüfen
+- Design-Grenzen prüfen
 - Blockierende Reviews bearbeiten
 - Artefakte und Risiken abnehmen
-- Das gesamte Kollaborationssystem weiterentwickeln
+- Das gesamte Kollaborationssystem iterieren
 
-Das ist auch der letzte Satz der Zusammenfassung im Blogbeitrag:
+Das ist auch der abschließende Satz im Blog:
 
-> Was ich jetzt tue, ist nicht "mit KI mehr Code schreiben", sondern "mit KI mich selbst skalieren".
+> Was ich heute tue, ist nicht "mit KI mehr Code schreiben", sondern "mit KI mich selbst skalieren".
 
 Legion ist die Engineering-Umsetzung dieses Ziels.
 
-Es verwandelt "sich selbst skalieren" von einem abstrakten Wunsch in eine kollaborative Struktur, die umgesetzt, geprüft, nachbereitet und kontinuierlich optimiert werden kann.
+Es verwandelte "sich selbst skalieren" von einem abstrakten Wunsch in eine umsetzbare, auditierbare, nachvollziehbare, kontinuierlich optimierbare Kollaborationsstruktur.
 
 ---
 
-## XI. Letzte Zusammenfassung: Wie Legion Schritt für Schritt gewachsen ist
+## XI. Vom heutigen Stand aus gesehen: Die neueste Entwicklungsrichtung, repräsentiert durch `~/Work/legion-mind`
 
-Verdichtet man die gesamte Entwicklung noch einmal, erhält man eine klare Fünf-Stufen-Theorie.
+Betrachtet man nur die `.legion/`-Historie im Yuan-Repository, sieht man, wie Legion in einem realen Projekt Stück für Stück erzwungen wurde; schaut man sich aber das aktuelle `~/Work/legion-mind` an, erkennt man, dass Legion bereits in die nächste Evolutionsstufe übergeht.
 
-### Erste Stufe: Zuerst nichts vergessen
+Dieser Schritt ist sehr wichtig, denn er zeigt, dass Legions Ziel nicht mehr nur "in einem Repository gut funktionieren" ist, sondern beginnt, diese Erfahrung in ein **installierbares, migrierbares, benchmarkfähiges, wiederverwendbares** generisches Autopilot Kit zu destillieren.
 
-Zuerst mit `plan/context/tasks` Aufgaben, Fortschritt und Übergabe aus dem Kopf holen.
+Aus `~/Work/legion-mind/README.md` und `docs/legionmind-usage.md` lassen sich mindestens fünf Merkmale der neuesten Richtung ablesen.
 
-### Zweite Stufe: Implizites Wissen aufschreiben
+### 1. Vom "Repository-internen Workflow" zu "generischen Orchestrierungs-Templates"
 
-Durch `REVIEW`, Entscheidungsprotokolle und Kontextaufzeichnungen lokales Projektwissen externalisieren, um die Fehlerwahrscheinlichkeit von Agenten beim Anpassen alter Beispiele zu verringern.
+In Yuan wuchs Legion anfangs mit konkreten Tasks; in `legion-mind` wurde es explizit zu einem Satz generischer Agent-Orchestrierungs-Templates abstrahiert:
 
-### Dritte Stufe: Zuerst designen, dann ausführen
+- primary agent: `legion`
+- subagents: `engineer`, `spec-rfc`, `review-rfc`, `review-code`, `review-security`, `run-tests`, `report-walkthrough`
+- skill: `skills/legionmind`
 
-Durch RFC, Spec, Review Design-Gates festlegen, teure Nacharbeit nach vorne verlagern.
+Das zeigt, die neueste Version von Legion versteht "Multi-Agent-Kollaboration" nicht mehr als temporäres Zusammenziehen einiger Agenten, sondern beginnt, es zu modellieren als:
 
-### Vierte Stufe: Verifizierung und Berichterstattung engineering-tauglich machen
+- Ein Orchestrator, der den Prozess vorantreibt
+- Subagents mit Einzelverantwortung
+- `.legion/`, das persistente Zustände und Audits verwaltet
 
-Durch Test, Bench, Review-Code, Review-Security, Walkthrough, PR-Body Verifizierung und Abnahme kostengünstig machen.
+Mit anderen Worten: Legion entwickelt sich von einem "erfahrungsbasierten Workflow" zu einem "Rollen-klaren Orchestrierungssystem".
 
-### Fünfte Stufe: Autonomie in kontrollierte Autonomie verwandeln
+### 2. Von manuellen Aufrufen zu kommandobasierten Einstiegspunkten
 
-Durch Vorschlag, Genehmigung, Review-Status, Ledger-Prüfung Multi-Agenten-Kollaboration von "funktioniert" zu "governance-fähig" vorantreiben.
+Eine der offensichtlichsten Veränderungen in `legion-mind` ist die Kommandobasierung häufiger Workflows:
 
-Die endgültige Schlussfolgerung ist also nicht "Legion macht Agenten stärker", sondern:
+- `/legion`
+- `/legion-impl`
+- `/legion-rfc-heavy`
+- `/legion-pr`
+- `/legion-bootstrap`
+- `/evolve`
 
-> Legion ermöglicht es, die Fähigkeiten von Agenten erstmals auf engineering-taugliche Weise stabil zu nutzen.
+Das scheint nur eine Optimierung der Nutzererfahrung zu sein, ist es aber im Kern nicht.
 
-Es ist kein punktuelles Effizienztool, sondern ein System, das sich allmählich um "wenig stören, viel Output liefern, überprüfbar, übergabefähig, wenig Verschleiß" herum entwickelt hat.
+Es bedeutet, dass Legion beginnt, Vereinbarungen wie "welche Phasen, in welcher Reihenfolge, wann nur Design, wann Implementierung fortsetzen, wann Erfahrungen dokumentieren" weiter von impliziten SOPs zu expliziten Kommandos zu verfestigen.
 
-Deshalb kann seine Entwicklungsbahn fast direkt als Engineering-Fußnote zu diesem Blogbeitrag dienen:
+Anders gesagt: Frühes Legion beschränkte Prozesse hauptsächlich auf Dokumentationsebene; die aktuelle Richtung schiebt den Prozess selbst eine Schicht weiter nach vorne und verfestigt ihn zu einer direkt aufrufbaren Operationsschnittstelle.
 
-- Der Blogbeitrag schreibt Prinzipien;
-- Die Legion-Historie zeigt, wie diese Prinzipien zu Systemen, Dokumenten, Prozessen und Artefakten werden.
+### 3. Vom Task-Gedächtnis zu übergreifenden Playbooks
 
-Beides zusammen ergibt die vollständige Geschichte.
+Legion im Yuan-Repository konnte bereits den Kontext einzelner Tasks persistieren; `legion-mind` geht noch einen Schritt weiter: Es führt `.legion/playbook.md` und `/evolve` ein.
 
----
+Das ist entscheidend, denn es löst ein Problem auf einer anderen Ebene:
 
-## Anhang: Einige Aufgaben, die als Meilenstein-Beobachtungspunkte dienen können
+- `plan/context/tasks` lösen "wie läuft dieser Task weiter";
+- `playbook` löst "wie vermeidet man bei solchen Tasks in Zukunft Umwege".
 
-Wenn man die Entwicklung von Legion schnell nachvollziehen möchte, würde ich mir zuerst diese Aufgaben ansehen:
+Aktuell zeichnet das `playbook` bereits Muster wie diese auf:
 
-1.  `implement-quote-service`
-    - Ausgangsbeispiel von Legion
-    - Früheste Formung des Trios
+- Benchmark-Output muss im Repository bleiben
+- Benchmarks müssen zuerst ein deterministisches Profil festlegen
+- Fehlende Summaries müssen als Fehler in den Nenner eingehen, nicht stillschweigend den Nenner verkleinern
 
-2.  `vex-series-data-ohlcinterestrate-ohlc-v2`
-    - Typischste Externalisierung impliziten Wissens
-    - Extrem hohe Dichte an Reviews/Kommentaren
+Das zeigt, Legions neuestes Gedächtnismodell ist nicht mehr nur Task-Memory, sondern beginnt, **Organisationsgedächtnis (Organizational Memory)** zu werden.
 
-3.  `http-proxy-service`
-    - Design-Gates und Spec-Formung beginnen
+Also:
 
-4.  `http-proxy-app-implementation`
-    - Sehr vollständig: Gegenprüfung, Semantikgrenzen, Risikoakzeptanz, Artefakt-Output
+> Nicht nur merken, "wo war man das letzte Mal", sondern auch "wie sollte man solche Tasks in Zukunft stabiler angehen".
 
-5.  `vendor-tokenbucket-proxy-ip`
-    - Vollständige Kette: Mehrere RFC-Gegenprüfungen -> Implementierung -> Verifizierung -> PR -> externe Review-Behebung
+### 4. Von "funktionsfähig" zu "installierbar, veröffentlichbar, migrierbar"
 
-6.  `heavy-rfc`
-    - Aktuellstes Beispiel höchster Reife
-    - Sehr vollständig: Risikostufung, Design-Only, Review-Schleife, Lieferartefakte
+Eine weitere besonders bemerkenswerte Richtung in `legion-mind`: Es bietet bereits Installation, Verifikation, Rollback und Sicherheits-Überschreibungsstrategien.
 
-Wenn `implement-quote-service` für "Legion ist geboren" steht, dann steht `http-proxy-*` für "Legion ist erwachsen geworden", und `heavy-rfc` steht dafür, dass "Legion bereits wie ein reifes System arbeitet".
+Zum Beispiel enthält die README bereits:
+
+- `install`
+- `verify --strict`
+- `rollback`
+- `safe-overwrite`
+- managed files / backup index
+
+Das bedeutet, Legion entwickelt sich von "meiner eigenen Arbeitsmethode" zu einem "produktisierten Asset, das andere ebenfalls installieren und nutzen können".
+
+Dieser Schritt ist sehr bedeutend.
+
+Denn sobald man die Installations-/Veröffentlichungsebene betritt, ist Legions Designziel nicht mehr nur, mir selbst zu dienen, sondern muss auch berücksichtigen:
+
+- Wie Assets sicher synchronisiert werden
+- Wie Überschreibungen eigener Nutzeränderungen vermieden werden
+- Wie der Installationsstatus verifiziert wird
+- Wie bei Fehlern zurückgerollt wird
+
+Das zeigt, die neueste Richtung von Legion ist nicht mehr nur das Kollaborationssystem selbst, sondern die **Verteilungs- und Replikationsfähigkeit des Kollaborationssystems**.
+
+### 5. Von Erfahrungszusammenfassung zu Benchmark-gesteuerter Systemiteration
+
+Im Blog schrieb ich, eine der wichtigsten zukünftigen Aufgaben sei, Work

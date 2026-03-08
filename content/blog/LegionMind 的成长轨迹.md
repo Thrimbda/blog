@@ -22,7 +22,6 @@ date: 2026-03-08
 ## 一、先看现在：Legion 已经是什么
 
 先不从起点讲，先看当前的形态。
-
 从仓库现状来看，Legion 已经不是零散文档，而是一套持续运行的工作流系统：
 
 - `.legion/config.json` 中已有 33 个任务条目。
@@ -157,7 +156,7 @@ Legion 在这个阶段承担的角色，就是把第 2 层强行写出来。
 
 所以第二阶段的 Legion，本质上已经不只是 task tracker，而是开始承担 **外置大脑** 的功能。
 
-这一步非常重要，因为它对应了你博客里的一个核心转折：
+这一步非常重要，因为它对应了我在博客里强调过的一个核心转折：
 
 > 外置大脑不是锦上添花，而是 complex project 下的必需品。
 
@@ -241,7 +240,7 @@ Legion 在这个阶段承担的角色，就是把第 2 层强行写出来。
 
 如果说之前的阶段仍然带有“边做边长”的实验感，那么 `http-proxy` 相关任务基本上就是 Legion 真正成熟的第一座里程碑。
 
-这和博客里的描述是吻合的：你明确提到，跨多个 project 的 `http-proxy` 任务，是一个让你感觉“我基本可以脱离编码，只留下少量 review comment”的节点。
+这和我在博客里的描述是吻合的：跨多个 project 的 `http-proxy` 任务，确实是一个让我开始明显感觉“我基本可以脱离编码，只留下少量 review comment”的节点。
 
 从 `.legion` 里看，这个判断是有充分证据的。
 
@@ -274,7 +273,7 @@ Legion 在这个阶段承担的角色，就是把第 2 层强行写出来。
 - 一方面 review 数量很多，争议点也很多；
 - 另一方面，这些争议都没有留在聊天记录里，而是变成了 RFC 更新、review 结论和 context 决策。
 
-这个任务里你能看到非常典型的工程化争论：
+这个任务里可以看到非常典型的工程化争论：
 
 - allowedHosts 究竟影响请求行为，还是只影响 metrics？
 - absolute-form 是否必须唯一支持路径？
@@ -427,7 +426,7 @@ Legion 给出的答案不是完全自治，而是 **受控自治**。
 
 > 人主要做目标设定、边界约束、关键 review；Agent 负责在制度化轨道内推进实现、验证和汇报。
 
-这正是你博客最后说的那个身份转变：从执行者变成审阅者、决策者、系统迭代者。
+这正是我在博客最后总结的那个身份转变：从执行者变成审阅者、决策者、系统迭代者。
 
 ---
 
@@ -547,7 +546,7 @@ Legion 的实践已经明显朝这个方向走：
 - 结论不是一句话，而是对应 report、review、test-report、PR body
 - 人不需要重新读全部代码，而是可以先读凝练后的 artifact
 
-虽然它还不是你设想中的 Citation Agent，但方向已经很明确了。
+虽然它还不是我设想中的 Citation Agent，但方向已经很明确了。
 
 ### 6. “benchmark 会成为刚需”
 
@@ -597,7 +596,136 @@ Legion 正是这个目标的工程实现。
 
 ---
 
-## 十一、最后的归纳：Legion 是如何一步一步长出来的
+## 十一、站在现在看下一步：`~/Work/legion-mind` 代表的最新演化方向
+
+如果只看 Yuan 仓库里的 `.legion/` 历史，能看到 Legion 是怎样在真实项目里被一点点逼出来的；但如果再看现在的 `~/Work/legion-mind`，就会发现 Legion 已经开始往下一阶段演化了。
+
+这一步非常重要，因为它说明 Legion 的目标已经不只是“在一个仓库里好用”，而是开始尝试把这套经验提炼成一套 **可安装、可迁移、可 benchmark、可复用** 的通用 Autopilot Kit。
+
+从 `~/Work/legion-mind/README.md` 和 `docs/legionmind-usage.md` 可以看出，最新方向至少有五个特征。
+
+### 1. 从“仓库内工作流”走向“通用编排模板”
+
+在 Yuan 里，Legion 一开始是跟着具体任务长出来的；到了 `legion-mind`，它已经被显式抽象成一套通用 Agent 编排模板：
+
+- primary agent：`legion`
+- subagents：`engineer`、`spec-rfc`、`review-rfc`、`review-code`、`review-security`、`run-tests`、`report-walkthrough`
+- skill：`skills/legionmind`
+
+这说明最新版本的 Legion，已经不再把“多 Agent 协作”理解成临时拉几个 agent 干活，而是开始把它建模成：
+
+- orchestrator 负责流程推进
+- subagent 负责单一职责
+- `.legion/` 负责持久化状态和审计
+
+也就是说，Legion 正在从“经验型 workflow”变成“角色清晰的编排系统”。
+
+### 2. 从手工调用走向命令化入口
+
+`legion-mind` 里最明显的变化之一，是把常见工作流命令化了：
+
+- `/legion`
+- `/legion-impl`
+- `/legion-rfc-heavy`
+- `/legion-pr`
+- `/legion-bootstrap`
+- `/evolve`
+
+这件事看起来只是使用体验优化，但本质上不是。
+
+它意味着 Legion 正在把“哪些阶段、按什么顺序跑、何时只做设计、何时继续实现、何时沉淀经验”这些约定，进一步从隐性 SOP 变成显式命令。
+
+换句话说，早期 Legion 主要是在文档层约束流程；而现在的方向，是把流程本身再往前推一层，固化成可以直接触发的操作界面。
+
+### 3. 从任务记忆走向跨任务 Playbook
+
+Yuan 仓库里的 Legion，已经能把单个任务的上下文持久化；而 `legion-mind` 里又向前走了一步：开始引入 `.legion/playbook.md` 和 `/evolve`。
+
+这很关键，因为它解决的是另一个层级的问题：
+
+- `plan/context/tasks` 解决的是“这个任务如何续跑”；
+- `playbook` 解决的是“这类任务以后怎么少走弯路”。
+
+现在 `playbook` 里已经开始记录类似这样的模式：
+
+- benchmark 输出必须留在仓库内
+- benchmark 必须先固定 deterministic profile
+- 缺失 summary 必须按 error 计入分母，不能静默缩小分母
+
+这说明 Legion 最新的记忆模型，已经不只是 task memory，而是开始尝试做 **organizational memory**。
+
+也就是：
+
+> 不只记住“上次做到哪”，还要记住“以后同类任务应该怎么做更稳”。
+
+### 4. 从“能用”走向“可安装、可发布、可迁移”
+
+`legion-mind` 里还有一个特别值得注意的方向：它已经开始提供安装、校验、回滚和安全覆盖策略。
+
+比如 README 里已经有：
+
+- `install`
+- `verify --strict`
+- `rollback`
+- `safe-overwrite`
+- managed files / backup index
+
+这意味着 Legion 正在从“我自己的工作方法”演化为“别人也能装进去用的一套产品化资产”。
+
+这一步的意义很大。
+
+因为一旦进入安装/发布层，Legion 的设计目标就不只是服务我自己，还要考虑：
+
+- 如何安全地同步资产
+- 如何避免覆盖用户自己的修改
+- 如何验证安装状态
+- 如何在失败时回滚
+
+这说明 Legion 的最新方向，已经不只是协作系统本身，而是 **协作系统的分发与复制能力**。
+
+### 5. 从经验总结走向 benchmark 驱动的系统迭代
+
+我在博客里写过，未来最重要的事情之一，就是要能科学比较不同版本的 workflow，而不是凭感觉说“这版更聪明”。
+
+`legion-mind` 基本已经把这件事正式立项了。
+
+仓库里已经有：
+
+- `docs/benchmark.md`
+- benchmark baseline 命令
+- benchmark-runs 目录
+- 明确的 preflight / smoke / full / score / report 流程
+
+这意味着 Legion 的下一阶段，已经不是单纯继续堆流程，而是要开始回答更硬的问题：
+
+- 哪种流程真的更稳？
+- 哪种设计门禁更划算？
+- 哪种 agent 编排在 pass@k 和 pass^k 上表现更好？
+- 哪些环节只是增加仪式感，哪些环节真的减少返工？
+
+到这里，Legion 的演化目标其实已经非常明确了：
+
+> 从“把多 Agent 用起来”，走向“把多 Agent 系统作为一个可测量、可迭代、可复制的工程产品来建设”。
+
+### 小结：`legion-mind` 让我更清楚地看到 Legion 的下一阶段
+
+如果说 Yuan 里的 Legion 历史，主要回答的是“这套东西是怎么被真实需求逼出来的”；那么 `legion-mind` 则在回答另一个问题：
+
+> 既然这套东西已经被逼出来了，下一步能不能把它从项目经验，变成一个通用系统？
+
+我现在理解的最新方向，大概可以概括成下面这几条：
+
+1. **命令化**：把高频流程变成稳定入口，而不是每次靠临场组织。
+2. **角色化**：把 orchestrator / subagent 的职责彻底拉开。
+3. **Playbook 化**：把跨任务经验从 task memory 提升到 organizational memory。
+4. **产品化**：让 Legion 能被安装、验证、回滚，而不是只存在于一个仓库里。
+5. **Benchmark 化**：让 Legion 的迭代不再靠感觉，而是靠基线和评分体系。
+
+也就是说，Legion 的最新演化方向，已经不只是“更成熟地使用 Agent”，而是开始把“如何工程化地使用 Agent”本身做成一个可以持续演进的系统。
+
+---
+
+## 十二、最后的归纳：Legion 是如何一步一步长出来的
 
 把整条轨迹再压缩一下，可以得到一个很清晰的五段论。
 
