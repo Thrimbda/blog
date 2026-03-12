@@ -1,337 +1,517 @@
-/**
- * Czon Style Overrides (Ported from Zola Theme)
- * 
- * Based on suCSS.css and static/css/style.css
- */
-
-/* ==========================================================================
-   CSS Variables & Colors
-   ========================================================================== */
-
-:root {
-  /* Zola Variables (Light) */
-  --bg: #EEEEEE;
-  --bg-light: #CBCDCD;
-  --text: #41474E;
-  --text-light: #646868;
-  --accent: #D26878;
-  --accent-light: #e08f67;
-  --accent-text: var(--bg);
-  --border: #646868;
-  --link: #5690AF;
-  
-  --standard-border-radius: 5px;
-
-  /* Fonts */
-  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
-    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
-    "Helvetica Neue", sans-serif;
-  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-
-  /* Czon Mappings */
-  --bg-primary: var(--bg);
-  --bg-secondary: var(--bg-light);
-  --bg-tertiary: #f1f5f9; 
-  
-  --text-primary: var(--text);
-  --text-secondary: var(--text-light);
-  --text-muted: var(--text-light);
-
-  --link-color: var(--link);
-  --link-hover-color: var(--accent);
-  
-  --border-color: var(--border);
-  --border-focus: var(--accent);
-
-  --code-bg: var(--bg-light);
-  --code-text: var(--text);
-
-  /* Layout */
-  --content-width: 45rem;
+@font-face {
+  font-family: "Dashes";
+  src: local("Georgia"), local("Times New Roman"),
+       local("DejaVu Serif"), local("Liberation Serif"), local("Nimbus Roman");
+  unicode-range: U+2010, U+2013-2014, U+2212;
 }
 
-:root[data-theme="dark"] {
-  /* Zola Variables (Dark) */
-  --bg: #222529;
-  --bg-light: #464949;
-  --text: #D6D6D6;
-  --text-light: #DBD5BC;
-  --accent: #78B6AD;
-  --accent-light: #87C9E5;
-  --accent-text: var(--bg);
-  --border: #DBD5BC;
-  --link: #E2AEA2;
-
-  /* Czon Mappings */
-  --bg-primary: var(--bg);
-  --bg-secondary: var(--bg-light);
-  --bg-tertiary: #334155;
-
-  --text-primary: var(--text);
-  --text-secondary: var(--text-light);
-  --text-muted: var(--text-light);
-
-  --link-color: var(--link);
-  --link-hover-color: var(--accent);
-  
-  --border-color: var(--border);
-  --border-focus: var(--accent);
-
-  --code-bg: var(--bg-light);
-  --code-text: var(--text);
+:root {
+  --czon-bg: #f6f1e8;
+  --czon-bg-elevated: #fbf8f2;
+  --czon-fg: #171411;
+  --czon-muted: #6c655c;
+  --czon-muted-strong: #555047;
+  --czon-link: #1f4d8f;
+  --czon-visited: #6a537d;
+  --czon-border: #d4ccbf;
+  --czon-code-bg: #ebe5db;
+  --czon-content-width: 72ch;
+  --czon-shell-width: 1040px;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]):not([data-theme="dark"]) {
-    /* Auto-dark mode fallback */
-    --bg: #222529;
-    --bg-light: #464949;
-    --text: #D6D6D6;
-    --text-light: #DBD5BC;
-    --accent: #78B6AD;
-    --accent-light: #87C9E5;
-    --accent-text: #222529;
-    --border: #DBD5BC;
-    --link: #E2AEA2;
-
-    --bg-primary: var(--bg);
-    --bg-secondary: var(--bg-light);
-    --text-primary: var(--text);
-    --text-secondary: var(--text-light);
-    --link-color: var(--link);
-    --border-color: var(--border);
-    --code-bg: var(--bg-light);
-    --code-text: var(--text);
+  :root:not([data-theme="light"]) {
+    --czon-bg: #171311;
+    --czon-bg-elevated: #221b17;
+    --czon-fg: #efe2d2;
+    --czon-muted: #aa9f92;
+    --czon-muted-strong: #cbc0b1;
+    --czon-link: #9ab8df;
+    --czon-visited: #c6afd8;
+    --czon-border: #4a4038;
+    --czon-code-bg: #261e19;
   }
 }
 
-/* ==========================================================================
-   Global Styles & Typography
-   ========================================================================== */
-
-body {
-  font-family: var(--mono-font);
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  
-  /* Layout: Center Everything */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
+:root[data-theme="dark"] {
+  --czon-bg: #171311;
+  --czon-bg-elevated: #221b17;
+  --czon-fg: #efe2d2;
+  --czon-muted: #aa9f92;
+  --czon-muted-strong: #cbc0b1;
+  --czon-link: #9ab8df;
+  --czon-visited: #c6afd8;
+  --czon-border: #4a4038;
+  --czon-code-bg: #261e19;
 }
 
-/* ==========================================================================
-   Layout Overrides (Hide Sidebar & Center)
-   ========================================================================== */
+html,
+body {
+  min-height: 100%;
+}
 
-/* Hide Sidebar */
-aside, 
-.sidebar, 
-.czon-sidebar, 
-nav.sidebar {
+html {
+  background: var(--czon-bg);
+}
+
+body {
+  margin: 0;
+  padding: 2.25rem;
+  background: var(--czon-bg);
+  color: var(--czon-fg);
+  font-family: "Dashes", monospace;
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+a {
+  color: var(--czon-link);
+  text-decoration: none;
+  text-underline-offset: 0.08em;
+}
+
+a:visited {
+  color: var(--czon-visited);
+}
+
+a:hover,
+a:focus {
+  color: var(--czon-link);
+  text-decoration: underline;
+}
+
+body > div:first-child {
+  min-height: calc(100vh - 4.5rem);
+}
+
+body > div:first-child > header:first-child {
+  position: static !important;
+  height: auto !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+}
+
+.czon-header {
+  width: 100%;
+  max-width: var(--czon-shell-width);
+  margin: 0 auto 2.5rem;
+  padding: 0 !important;
+  border: none !important;
+  display: block !important;
+}
+
+.czon-header > div:first-child {
+  position: relative;
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  width: fit-content;
+  max-width: 100%;
+  padding-bottom: 1.35rem;
+}
+
+.czon-header > div:first-child::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid var(--czon-border);
+}
+
+.czon-header > div:last-child {
+  display: flex !important;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 0.6rem;
+  color: var(--czon-muted-strong);
+}
+
+.nav-links-mobile,
+.share-float-btn,
+.share-modal-overlay {
   display: none !important;
 }
 
-/* Constrain Widths (Header, Main, Footer) */
-header, 
-main, 
-footer, 
-.content, 
-.czon-header, 
-.czon-footer {
-  width: 100%;
-  max-width: var(--content-width);
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+.nav-links-desktop {
+  display: flex !important;
 }
 
-/* Header Styling (Match Zola #nav-bar) */
-header {
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
+.nav-links-desktop-list {
   display: flex;
-  flex-direction: row;
+  gap: 0.85rem;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
 }
 
-/* Attempt to target header internal structure if it uses a wrapper */
-header > div {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.nav-link-item,
+.nav-link-mobile-item {
+  color: var(--czon-link) !important;
 }
 
-/* Header Title (Approximate) */
-header h1, header .title, header .brand {
-  font-size: 1.5rem; /* Zola h3 size approx */
-  font-weight: bold;
-  color: var(--accent);
+.czon-header h1 {
   margin: 0;
-}
-header h1 a, header .title a {
-  color: var(--accent);
-}
-
-/* Header Links (Approximate) */
-header nav, header .links {
-  display: flex;
-  gap: 1rem;
+  font-size: 0;
+  line-height: 0;
 }
 
-/* ==========================================================================
-   Component Styling
-   ========================================================================== */
-
-/* Zola-style Headings */
-h1, h2, h3, h4, h5, h6 {
-  margin: .5em 0 .5em 0;
-  line-height: 1.1;
-}
-
-h1::before, h2::before,
-h3::before, h4::before, 
-h5::before, h6::before {
-  color: var(--accent);
-  content: '# ';
-}
-
-/* Zola-style Links */
-a, a:visited {
-  text-decoration: none;
-  border-radius: .125rem;
-  color: var(--link-color);
-  transition: color 0.2s ease, background-color 0.2s ease;
-}
-
-a:hover {
-  background-color: var(--link-color);
-  color: var(--bg-primary);
-}
-
-/* Zola-style Blockquotes */
-blockquote {
-  margin: 0 0 0 1.25rem;
-  padding: .5rem 0 0 .5rem;
-  border-left: .375rem solid var(--accent);
-  color: var(--text-secondary);
-  font-style: italic;
-}
-
-/* Code Blocks & Inline Code */
-pre {
-  background-color: var(--bg-light);
-  color: var(--text-primary);
-  padding: 1rem;
-  border-radius: var(--standard-border-radius);
-  border: 1px solid var(--accent);
-  overflow-x: auto;
-  margin: 1rem 0;
-}
-
-p code,
-li code,
-div code,
-td code {
-  padding: 0 .125rem 0 .125rem;
-  border-radius: 3px;
-  color: var(--bg);
-  background-color: var(--text);
-  font-family: var(--mono-font);
-}
-
-pre code {
-  background-color: transparent;
-  color: inherit;
-  padding: 0;
-  border-radius: 0;
-}
-
-/* Images */
-img, video {
-  max-width: 100%;
-  height: auto;
-  padding: .125rem;
-  border: dashed 2px var(--accent);
-  border-radius: 15px;
+.czon-header h1 a {
   display: block;
-  margin: 1rem auto;
+  font-size: 0;
+  line-height: 0;
+  color: var(--czon-fg);
 }
 
-/* Lists */
-ul {
-  list-style: none;
-}
-
-ul li::marker {
-  content: '» ';
-  color: var(--accent);
-}
-
-ul li:hover::marker {
-  content: '# ';
+.czon-header h1 a::before {
+  content: "   ___           _\A  / _ \\__  _____/ |\A | | | \\ \/ / __| |\A | |_| |>  < (__| |\A  \\___//_/\\_\\___|_|";
+  white-space: pre;
+  font-size: 12px;
   font-weight: 700;
-  color: var(--link-color);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--czon-fg);
 }
 
-ol li::marker {
-  color: var(--accent);
+.czon-header h1 a:hover::before,
+.czon-header h1 a:focus::before {
+  color: var(--czon-link);
 }
 
-ol li:hover::marker {
-  font-weight: 700;
-  color: var(--link-color);
+.dark-mode-switch-trigger,
+.language-switch-trigger {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  color: var(--czon-muted-strong) !important;
+  font: inherit;
+  font-size: 0.9rem !important;
 }
 
-/* Table styles */
+.dark-mode-switch-trigger svg,
+.language-switch-trigger svg {
+  display: none !important;
+}
+
+.dark-mode-switch-trigger::before {
+  content: "[dark]";
+}
+
+html[data-theme="dark"] .dark-mode-switch-trigger::before {
+  content: "[light]";
+}
+
+html[data-theme="auto"] .dark-mode-switch-trigger::before,
+html:not([data-theme]) .dark-mode-switch-trigger::before {
+  content: "[theme]";
+}
+
+.language-switch-trigger::before {
+  content: "[";
+  color: var(--czon-muted);
+}
+
+.language-switch-trigger::after {
+  content: "]";
+  color: var(--czon-muted);
+}
+
+#language-dropdown {
+  background: var(--czon-bg) !important;
+  border: 1px solid var(--czon-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--czon-fg) !important;
+  max-width: min(28rem, calc(100vw - 2.5rem));
+}
+
+.language-switch-count,
+.language-switch-info {
+  color: var(--czon-muted) !important;
+}
+
+body > div:first-child > div.flex.mt-18 {
+  display: block !important;
+  margin-top: 0 !important;
+  overflow: visible !important;
+}
+
+body > div:first-child > div.flex.mt-18 > nav {
+  display: none !important;
+}
+
+body > div:first-child > div.flex.mt-18 > aside.sidebar-right {
+  display: none !important;
+}
+
+body > div:first-child > div.flex.mt-18 > main,
+body > div:first-child > div.flex.mt-18 > main > main {
+  width: 100%;
+  max-width: var(--czon-shell-width);
+  margin: 0 auto;
+  overflow: visible !important;
+}
+
+article,
+.content {
+  width: 100%;
+  max-width: var(--czon-content-width);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.5rem 0 0.55rem;
+  color: var(--czon-fg);
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 1.52em;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.24em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+p,
+ul,
+ol,
+pre,
+blockquote,
+table {
+  margin: 1.1rem 0;
+}
+
+ul,
+ol {
+  padding-left: 1.6rem;
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 1px solid var(--czon-border);
+  color: var(--czon-muted-strong);
+}
+
+pre {
+  padding: 1rem 1.1rem;
+  background: var(--czon-code-bg);
+  border: 1px solid var(--czon-border);
+  color: var(--czon-fg);
+  overflow-x: auto;
+}
+
+code:not(pre code) {
+  background: var(--czon-code-bg);
+  padding: 0.08rem 0.25rem;
+}
+
+pre code,
+code {
+  font-family: inherit;
+}
+
 table {
   border-collapse: collapse;
-  margin: 1.5rem 0;
   display: block;
   overflow-x: auto;
-  white-space: nowrap;
 }
 
-td, th {
-  border: 1px solid var(--border-color);
-  text-align: start;
+th,
+td {
+  border: 1px solid var(--czon-border);
   padding: 0.5rem;
+  text-align: left;
 }
 
 th {
-  background-color: var(--bg-secondary);
-  font-weight: bold;
+  background: var(--czon-bg-elevated);
 }
 
-tr:nth-child(even) {
-  background-color: var(--bg-secondary);
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
 }
 
-/* Horizontal Rule */
 hr {
-  border: 1px dashed var(--accent);
-  margin: .5rem 0 .5rem 0;
+  border: none;
+  border-top: 1px solid var(--czon-border);
+  margin: 2rem 0;
 }
 
-/* Scrollbars */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  overflow: visible;
+.footer {
+  width: 100%;
+  max-width: var(--czon-shell-width);
+  margin: 3rem auto 0;
+  padding-top: 1rem;
+  position: relative;
 }
-::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  width: 12px;
+
+.footer::before {
+  content: "";
+  display: block;
+  width: 8rem;
+  margin-bottom: 1.1rem;
+  border-top: 1px solid var(--czon-border);
 }
-::-webkit-scrollbar-track {
-  background: var(--bg-light);
+
+.footer p,
+.footer li,
+.footer a,
+.lang-list,
+.lang-list li {
+  color: var(--czon-muted-strong);
 }
-* {
-  scrollbar-color: var(--accent) var(--bg-light);
-  scrollbar-width: thin;
+
+.lang-list {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  justify-content: flex-start !important;
+  padding: 0;
+}
+
+.lang-list li {
+  list-style: none;
+}
+
+.footer p:last-of-type {
+  font-size: 0.9rem;
+}
+
+.tags-list {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.tags-list li,
+.tag-item {
+  list-style: none;
+  margin: 0;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  color: var(--czon-muted-strong) !important;
+  font-size: 0.88em;
+}
+
+.tags-list a,
+.tag-item a,
+.tag-item {
+  color: var(--czon-link) !important;
+  text-decoration: none;
+}
+
+.tags-list a::before,
+.tag-item a::before,
+.tag-item::before {
+  content: "/";
+  color: var(--czon-muted);
+}
+
+.tags-list a::after,
+.tag-item a::after,
+.tag-item::after {
+  content: "/";
+  color: var(--czon-muted);
+}
+
+.tags-list a:hover,
+.tag-item a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 1180px) {
+  body > div:first-child > div.flex.mt-18 > aside.sidebar-right {
+    display: block !important;
+    position: fixed !important;
+    top: 8.75rem !important;
+    left: max(1rem, calc(50% - 37rem));
+    bottom: auto !important;
+    width: 14rem !important;
+    max-height: calc(100vh - 10rem);
+    overflow: auto !important;
+  }
+
+  body > div:first-child > div.flex.mt-18 > aside.sidebar-right > aside.sidebar {
+    display: block !important;
+    border: none !important;
+    padding-right: 1.4rem;
+    border-right: 1px solid var(--czon-border) !important;
+  }
+
+  body > div:first-child > div.flex.mt-18 > aside.sidebar-right h2 {
+    margin: 0 0 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    color: var(--czon-muted-strong);
+  }
+
+  body > div:first-child > div.flex.mt-18 > aside.sidebar-right a {
+    display: block;
+    margin-bottom: 0.4rem !important;
+    border-bottom: none !important;
+    color: var(--czon-muted-strong) !important;
+    font-size: 0.92rem;
+    line-height: 1.58;
+  }
+
+  body > div:first-child > div.flex.mt-18 > aside.sidebar-right a:hover,
+  body > div:first-child > div.flex.mt-18 > aside.sidebar-right a:focus {
+    color: var(--czon-fg) !important;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1.15rem;
+  }
+
+  .czon-header h1 a::before {
+    font-size: 9px;
+  }
+
+  .czon-header > div:first-child,
+  .czon-header > div:last-child {
+    width: 100%;
+  }
+
+  article,
+  .content,
+  .footer,
+  .czon-header {
+    max-width: 100%;
+  }
+
+  #language-dropdown {
+    max-width: calc(100vw - 2.3rem);
+  }
 }

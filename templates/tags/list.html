@@ -2,9 +2,16 @@
 
 {% block content %}
 <h1>{{ taxonomy.name }}</h1>
-<p>
-{% for term in terms %}
-<a href="{{ term.permalink | safe }}">#{{ term.name }}</a>[{{ term.pages | length }}]
-{% endfor %}
-</p>
+<div class="list-shell">
+  <ul class="post-list post-list-index">
+  {% for term in terms %}
+    <li>
+      <span class="post-marker" aria-hidden="true">&raquo;</span>
+      <a class="post-link" href="{{ term.permalink | safe }}">#{{ term.name }}</a>
+      <span class="post-filler" aria-hidden="true"></span>
+      <span class="post-date">{{ term.pages | length }} posts</span>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
 {% endblock content %}

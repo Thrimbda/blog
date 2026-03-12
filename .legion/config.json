@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "currentTask": "czon-css",
+  "currentTask": "granda",
   "settings": {
     "autoRemind": true,
     "remindBeforeReset": true,
@@ -17,9 +17,30 @@
     {
       "id": "czon-css",
       "name": "实现 czon 风格 CSS 主题",
-      "status": "active",
+      "status": "archived",
       "createdAt": "2026-01-30T08:21:13.842Z",
-      "updatedAt": "2026-01-30T08:49:02.327Z"
+      "updatedAt": "2026-03-11T13:50:53.634Z"
+    },
+    {
+      "id": "granda-ascii-logo",
+      "name": "Granda 主题左侧大纲与 ASCII Logo 调整",
+      "status": "archived",
+      "createdAt": "2026-03-11T13:51:21.091Z",
+      "updatedAt": "2026-03-11T14:35:09.853Z"
+    },
+    {
+      "id": "granda-toc",
+      "name": "Granda 主题视觉打磨与 TOC 重构",
+      "status": "archived",
+      "createdAt": "2026-03-11T14:35:14.605Z",
+      "updatedAt": "2026-03-11T14:46:29.679Z"
+    },
+    {
+      "id": "granda",
+      "name": "Granda 主题细节收口",
+      "status": "active",
+      "createdAt": "2026-03-11T14:46:37.013Z",
+      "updatedAt": "2026-03-12T10:08:43.973Z"
     }
   ],
   "pendingProposals": [
@@ -182,6 +203,269 @@
       "decidedAt": "2026-01-30T08:21:13.842Z",
       "decidedBy": "Claude",
       "createdTaskId": "czon-css"
+    },
+    {
+      "id": "proposal-mmhqjlq6-79d3db",
+      "name": "改造博客主题为 Granda 风格",
+      "goal": "分析 granda.org 的视觉与信息架构，并将当前 Zola 博客主题改造成相同的极简终端风格。",
+      "rationale": "这是一次涉及多模板、多样式文件的主题重构，需要持久化记录分析结论、实施范围和验证结果，便于后续继续迭代与审查。",
+      "points": [
+        "保留现有内容与主要功能",
+        "对齐 granda.org 的布局、字体、配色、列表样式与明暗主题切换",
+        "兼容首页、列表页、文章页、页脚与移动端"
+      ],
+      "scope": [
+        "templates/base.html",
+        "templates/head.html",
+        "templates/header.html",
+        "templates/footer.html",
+        "templates/index.html",
+        "templates/section.html",
+        "templates/page.html",
+        "templates/blog-page.html",
+        "static/css/reset.css",
+        "static/css/style.css"
+      ],
+      "phases": [
+        {
+          "name": "分析与设计",
+          "tasks": [
+            {
+              "description": "分析 granda.org 的首页结构与核心视觉规则",
+              "acceptance": "整理出可映射到当前站点的布局、配色、字体和组件规则"
+            },
+            {
+              "description": "盘点当前主题模板与样式入口",
+              "acceptance": "确认需要调整的模板和 CSS 文件"
+            }
+          ]
+        },
+        {
+          "name": "实现主题改造",
+          "tasks": [
+            {
+              "description": "重构基础模板与导航页脚结构",
+              "acceptance": "全站头尾结构与 granda 风格一致"
+            },
+            {
+              "description": "重写全局 CSS 与响应式规则",
+              "acceptance": "首页、列表页、文章页在桌面和移动端都呈现目标风格"
+            },
+            {
+              "description": "调整文章与列表模板细节",
+              "acceptance": "文章元信息、列表项、内容排版与目标站点一致"
+            }
+          ]
+        },
+        {
+          "name": "验证",
+          "tasks": [
+            {
+              "description": "检查改动结果并给出验证说明",
+              "acceptance": "说明已完成的改动与建议的本地验证步骤"
+            }
+          ]
+        }
+      ],
+      "proposedBy": "Claude",
+      "proposedAt": "2026-03-08T12:35:31.135Z",
+      "status": "pending"
+    },
+    {
+      "id": "proposal-mmm3k3cu-c6a4b0",
+      "name": "Granda 主题左侧大纲与 ASCII Logo 调整",
+      "goal": "在当前 Granda 风格主题上增加可显示/隐藏的左侧文章大纲，并将站点标题 ASCII Logo 调整为 0xc1 风格。",
+      "rationale": "这是一次已有主题上的增量交付，涉及模板、样式、脚本和本地预览验证，需要持久化记录设计、实现和验证结论，并生成可直接用于 PR 的文档产物。",
+      "points": [
+        "归档已完成的 czon-css 任务",
+        "新增符合当前极简主题的左侧 TOC 侧栏，并支持显示/隐藏",
+        "将 header ASCII 标题改成 0xc1，并换用新的 ASCII 风格",
+        "用 zola serve/build 做本地验证，产出 test-report/review-code/pr-body"
+      ],
+      "scope": [
+        "templates/header.html",
+        "templates/page.html",
+        "templates/blog-page.html",
+        "templates/base.html",
+        "templates/head.html",
+        "static/css/style.css",
+        "static/js/script.js"
+      ],
+      "phases": [
+        {
+          "name": "设计与任务初始化",
+          "tasks": [
+            {
+              "description": "整理 task brief、验收标准和低风险设计方案",
+              "acceptance": "task-brief.md 完成，风险分级为 Low 且设计方案可实施"
+            }
+          ]
+        },
+        {
+          "name": "实现",
+          "tasks": [
+            {
+              "description": "实现左侧可切换文章大纲",
+              "acceptance": "文章页存在 headings 时显示可展开/收起的左侧 TOC，移动端不破版"
+            },
+            {
+              "description": "更新站点 ASCII Logo 为 0xc1 风格",
+              "acceptance": "header 显示新的 0xc1 ASCII 标题，视觉与主题一致"
+            },
+            {
+              "description": "联调样式与脚本",
+              "acceptance": "TOC 显隐、明暗主题与现有脚本共同工作"
+            }
+          ]
+        },
+        {
+          "name": "验证与报告",
+          "tasks": [
+            {
+              "description": "运行站点预览与构建验证",
+              "acceptance": "zola serve/build 可运行，结果写入 test-report.md"
+            },
+            {
+              "description": "生成代码评审和 walkthrough/PR body",
+              "acceptance": "review-code.md、report-walkthrough.md、pr-body.md 落盘"
+            }
+          ]
+        }
+      ],
+      "proposedBy": "Claude",
+      "proposedAt": "2026-03-11T13:50:53.696Z",
+      "status": "approved",
+      "decidedAt": "2026-03-11T13:51:21.091Z",
+      "decidedBy": "Claude",
+      "createdTaskId": "granda-ascii-logo"
+    },
+    {
+      "id": "proposal-mmm550v5-942f24",
+      "name": "Granda 主题视觉打磨与 TOC 重构",
+      "goal": "在保留当前 Granda 风格基调的前提下，打磨整体视觉细节，重做更精致的 Logo，并将 TOC 改造成贯穿页高的左侧导览栏。",
+      "rationale": "用户明确给出新一轮设计反馈，这次工作已经从功能补齐进入整体视觉 refinement 阶段，需要围绕统一审美基准调整 Logo、TOC 结构与全站细节，并再次通过 Playwright 做浏览器级验收。",
+      "points": [
+        "保留当前简约克制的整体基调",
+        "Logo 更硬朗、更清晰地表达 0xc1",
+        "TOC 去掉盒状边框，改为更自然的左侧导览栏并延展到整页高度",
+        "从整体视觉一致性出发，微调色彩、留白、线条和排版细节",
+        "完成 Playwright 截图复查"
+      ],
+      "scope": [
+        "templates/header.html",
+        "templates/page.html",
+        "templates/blog-page.html",
+        "templates/partials/page-outline.html",
+        "static/css/style.css"
+      ],
+      "phases": [
+        {
+          "name": "设计",
+          "tasks": [
+            {
+              "description": "整理 design-lite 与视觉基准",
+              "acceptance": "task-brief.md 明确整体审美方向、细节原则与验收标准"
+            }
+          ]
+        },
+        {
+          "name": "实现",
+          "tasks": [
+            {
+              "description": "重做 Logo 与头部细节",
+              "acceptance": "Logo 更硬朗清晰，头部比例和留白更协调"
+            },
+            {
+              "description": "重构 TOC 为整页左侧导览栏",
+              "acceptance": "桌面端 TOC 不再是盒子，导览栏贯穿页高且可显隐，移动端仍然自然"
+            },
+            {
+              "description": "微调全站视觉细节",
+              "acceptance": "色彩、线条、字号、间距更精致但不破坏当前基调"
+            }
+          ]
+        },
+        {
+          "name": "验证",
+          "tasks": [
+            {
+              "description": "运行构建和浏览器级截图验证",
+              "acceptance": "zola build 通过，Playwright 截图验证桌面/移动端效果"
+            }
+          ]
+        }
+      ],
+      "proposedBy": "Claude",
+      "proposedAt": "2026-03-11T14:35:09.859Z",
+      "status": "approved",
+      "decidedAt": "2026-03-11T14:35:14.605Z",
+      "decidedBy": "Claude",
+      "createdTaskId": "granda-toc"
+    },
+    {
+      "id": "proposal-mmm5jlfi-b96b11",
+      "name": "Granda 主题细节收口",
+      "goal": "收掉 Granda 主题剩余细节问题：去除博客列表违和白底，统一 Edit 链接样式，将 TOC 改成递归渲染，并完成首页列表与节奏细调。",
+      "rationale": "用户已经确认整体方向成立，这一轮是典型的 polish pass，需要围绕现有视觉系统做小范围但互相关联的样式和模板收口，并再次做浏览器级验收。",
+      "points": [
+        "去除博客列表违和的浅色底块，改成更自然的列表节奏",
+        "把普通页和博客页的 [Edit] 链接样式统一到全局 CSS",
+        "将 TOC 从手写 h1-h4 模板改为递归 macro/partial，降低维护成本",
+        "继续微调首页信息密度与列表细节，使整体更精致",
+        "完成构建和 Playwright 截图复查"
+      ],
+      "scope": [
+        "templates/index.html",
+        "templates/section.html",
+        "templates/page.html",
+        "templates/blog-page.html",
+        "templates/partials/page-outline.html",
+        "templates/macros/page_outline.html",
+        "static/css/style.css"
+      ],
+      "phases": [
+        {
+          "name": "设计",
+          "tasks": [
+            {
+              "description": "整理本轮细节收口的 design-lite 与验收标准",
+              "acceptance": "task-brief.md 明确四项细节问题和视觉收口原则"
+            }
+          ]
+        },
+        {
+          "name": "实现",
+          "tasks": [
+            {
+              "description": "重构 TOC 为递归渲染",
+              "acceptance": "TOC 模板不再手写到 h4，页面功能保持一致"
+            },
+            {
+              "description": "统一 Edit 链接与博客列表样式",
+              "acceptance": "Edit 样式全局统一，列表去除违和底色并保持清晰节奏"
+            },
+            {
+              "description": "微调首页节奏与列表细节",
+              "acceptance": "首页在不破坏当前基调的前提下更舒展、更协调"
+            }
+          ]
+        },
+        {
+          "name": "验证",
+          "tasks": [
+            {
+              "description": "运行构建和 Playwright 复查",
+              "acceptance": "zola build 通过，首页和文章页截图验证通过"
+            }
+          ]
+        }
+      ],
+      "proposedBy": "Claude",
+      "proposedAt": "2026-03-11T14:46:29.695Z",
+      "status": "approved",
+      "decidedAt": "2026-03-11T14:46:37.013Z",
+      "decidedBy": "Claude",
+      "createdTaskId": "granda"
     }
   ]
 }

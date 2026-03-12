@@ -1,0 +1,9 @@
+{% import "macros/page_outline.html" as page_outline %}
+<aside class="page-outline" aria-label="Page outline">
+  <details class="page-outline-panel" open>
+    <summary>outline</summary>
+    <nav class="page-outline-nav" aria-label="Table of contents">
+      {{ page_outline::render_nodes(nodes=page.toc) }}
+    </nav>
+  </details>
+</aside>

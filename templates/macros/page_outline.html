@@ -1,0 +1,14 @@
+{% macro render_nodes(nodes) %}
+{% if nodes %}
+<ol>
+  {% for node in nodes %}
+  <li>
+    <a href="{{ node.permalink | safe }}">{{ node.title }}</a>
+    {% if node.children %}
+    {{ self::render_nodes(nodes=node.children) }}
+    {% endif %}
+  </li>
+  {% endfor %}
+</ol>
+{% endif %}
+{% endmacro render_nodes %}

@@ -1,32 +1,13 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% import "macros/page_outline.html" as page_outline %} {% block content %}
+{% set show_outline = page.extra.toc | default(value=true) %}
+<div class="page-shell{% if page.toc and show_outline %} has-outline{% endif %}">
+{% if page.toc and show_outline %}
+{% include "partials/page-outline.html" %}
+{% endif %}
+<article class="page-article{% if page.relative_path == "about.md" %} page-article-about{% endif %}">
 <h1>{{ page.title }}</h1>
 
-{% if page.toc and page.extra.toc %}
-<h2>Table of contents</h2>
-<ul>
-  {% for h1 in page.toc %}
-  <li>
-    <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
-    {% if h1.children %}
-    <ul>
-      {% for h2 in h1.children %}
-      <li>
-        <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
-        <ul>
-          {% for h3 in h2.children %}
-          <li>
-            <a href="{{ h3.permalink | safe }}">{{ h3.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-  </li>
-  {% endfor %}
-</ul>
-{% endif %} {{ page.content | safe }}
+{{ page.content | safe }}
 
 <p class="tags-data">
   {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags %}
@@ -34,12 +15,7 @@
   {% endfor %} {% endif %}
 </p>
 
-<div>
-  <a
-    href="/admin?path={{ page.relative_path }}"
-    class="admin-edit-link"
-    style="font-size: 0.8em; opacity: 0.6"
-    >[Edit]</a
-  >
+<p class="admin-edit"><a href="/admin?path={{ page.relative_path }}" class="admin-edit-link">[Edit]</a></p>
+</article>
 </div>
 {% endblock content %}

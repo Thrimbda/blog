@@ -91,12 +91,10 @@
 {% endif %}
 {% block css %}
 <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/reset.css', trailing_slash=false)}}"/>
-<link rel="stylesheet" type="text/css" href="{{ get_url(path='css/suCSS.css', trailing_slash=false)}}"/>
 <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/style.css', trailing_slash=false) | safe }}"/>
 {% endblock css %}
 <script src="{{ get_url(path='js/script.js', trailing_slash=false) | safe }}" defer></script>
 
-<script src="https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js"></script>
 <!-- highlight.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
 <script defer>hljs.highlightAll();</script>

@@ -1,20 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ term.name }}</h1>
 {% if paginator %}
 {% set pages = paginator.pages %}
 {% else %}
 {% set pages = term.pages %}
 {% endif %}
-<ul>
-{% for page in pages %}
-  <li>
-    <a href="{{ page.permalink | safe }}">{% if page.date %}{{ page.date }} - {% endif %}{{ page.title }}</a>
-  </li>
-{% endfor %}
-</ul>
-{% if paginator %}
-<p>{% if paginator.previous %}<a href="{{ paginator.first }}">&lt;&lt; First</a> <a href="{{ paginator.previous }}">&lt; Previous</a>{% endif %} [{{ paginator.current_index }}/{{ paginator.number_pagers }}] {% if paginator.next %}<a href="{{ paginator.next }}">Next &gt;</a> <a href="{{ paginator.last }}">Last &gt;&gt;</a>{% endif %}</p>
-{% endif %}
+<h1>{{ term.name }}</h1>
+<div class="list-shell">
+  <ul class="post-list post-list-index">
+  {% for page in pages %}
+    <li>
+      <span class="post-marker" aria-hidden="true">&raquo;</span>
+      <a class="post-link" href="{{ page.permalink | safe }}">{{ page.title }}</a>
+      <span class="post-filler" aria-hidden="true"></span>
+      {% if page.date %}<span class="post-date">{{ page.date }}</span>{% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+  {% if paginator %}
+  <nav class="post-nav" aria-label="Pagination">
+    {% if paginator.previous %}<a href="{{ paginator.previous }}">previous</a>{% endif %}
+    <span>{{ paginator.current_index }} / {{ paginator.number_pagers }}</span>
+    {% if paginator.next %}<a class="post-nav-next" href="{{ paginator.next }}">next</a>{% endif %}
+  </nav>
+  {% endif %}
+</div>
 {% endblock content %}

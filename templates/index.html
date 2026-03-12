@@ -2,55 +2,36 @@
 
 {% block content %}
 
-{# 巨牛逼的最近博客内容生成器 #}
 {% if section.extra.insert_recent_blogs %}
-    {# 使用 split 分割内容并分别渲染 #}
-    {% set content_parts = section.content | split(pat="<!-- RECENT_BLOGS_PLACEHOLDER -->") %}
-    {# 渲染第一部分内容 #}
+  {% set content_parts = section.content | split(pat="<!-- RECENT_BLOGS_PLACEHOLDER -->") %}
+  <section class="home-copy home-intro">
     {{ content_parts[0] | safe }}
-    {# 插入动态博客列表 #}
-    {% set blog_section = get_section(path="blog/_index.md") %}
-    {% if blog_section %}
-        {% set recent_posts = blog_section.pages | sort(attribute="date") | reverse | slice(end=3) %}
-        {% if recent_posts %}
-            <h2>博客</h2>
-            <p><strong>改天我一定会写一些有意思的东西的。</strong></p>
-            <ul>
-            {% for post in recent_posts %}
-                <li><a href="{{ post.permalink | safe }}">{{ post.title }}</a></li>
-            {% endfor %}
-            </ul>
-        {% endif %}
+  </section>
+  {% set blog_section = get_section(path="blog/_index.md") %}
+  {% if blog_section %}
+    {% set recent_posts = blog_section.pages | sort(attribute="date") | reverse | slice(end=5) %}
+    {% if recent_posts %}
+      <section class="home-posts list-shell" aria-labelledby="home-posts-heading">
+        <h2 id="home-posts-heading">[posts]</h2>
+        <ul class="post-list post-list-home">
+          {% for post in recent_posts %}
+            <li>
+              <span class="post-marker" aria-hidden="true">&raquo;</span>
+              <a class="post-link" href="{{ post.permalink | safe }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
     {% endif %}
-    {# 渲染第二部分内容 #}
-    {% if content_parts[1] %}
-        {{ content_parts[1] | safe }}
-    {% endif %}
+  {% endif %}
+  {% if content_parts[1] %}
+    <section class="home-copy home-secondary">
+      {{ content_parts[1] | safe }}
+    </section>
+  {% endif %}
 {% else %}
+  <section class="home-copy home-intro">
     {{ section.content | safe }}
-{% endif %}
-
-{% if config.extra.list_pages %}
-
-{% if paginator %}
-{% set pages = paginator.pages %}
-{% else %}
-{% set pages = section.pages %}
-{% endif %}
-
-<ul class="titleList">
-{% for page in pages %}
-  <li>
-    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
-    <br />
-    {{ page.description }}
-  </li>
-{% endfor %}
-</ul>
-
-{% if paginator %}
-<div class="metaData">{% if paginator.previous %}<a href="{{ paginator.first }}">⥶</a> &nbsp <a href="{{ paginator.previous }}"><</a>{% endif %} &nbsp {{ paginator.current_index }} / {{ paginator.number_pagers }} &nbsp {% if paginator.next %}<a href="{{ paginator.next }}">></a> &nbsp <a href="{{ paginator.last }}">⥸</a>{% endif %}</div>
-{% endif %}
-
+  </section>
 {% endif %}
 {% endblock content %}
