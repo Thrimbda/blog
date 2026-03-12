@@ -4,8 +4,8 @@
     "langs": [
       "zh-Hans",
       "en-US",
-      "es-ES",
       "ja-JP",
+      "es-ES",
       "de-DE"
     ],
     "site": {
@@ -188,7 +188,7 @@
       "metadataTranslationHash": "8e05a8d20ee95c1e953773e560bfe8a1f6d441aa823f96912a99520d60d7e05b"
     },
     {
-      "hash": "85edd22af5f4aa94a4b0f59e83a440e29abfc203cace9a73aa101affa850f53b",
+      "hash": "f7545e99dcca1a74b8e5143bd836a0a1387e40d293214796aee0dae43eb2b154",
       "path": "content/_index.md",
       "links": [
         "./tags",
@@ -202,161 +202,137 @@
       ],
       "metadata": {
         "title": "博客重建与个人表达",
-        "description": "作者分享重新翻修博客的经历，选择 Zola 静态网站生成器的原因，并回顾个人博客的初衷与变化。",
-        "short_summary": "作者在 2024 年翻修博客，选择 Zola 静态网站生成器以实现简单、长期可维护的写作环境。文章回顾了博客的建立初衷，并分享了联系方式与朋友链接，体现了个人表达的持续兴趣。",
-        "audience": "对个人博客建设、静态网站生成器（如 Zola、Hexo）感兴趣的技术爱好者或博客作者。",
+        "description": "作者分享重新搭建个人博客的心路历程，选择Zola静态网站生成器的原因，并回顾早年博客文章。",
+        "short_summary": "作者在2024年重新搭建博客，选择了Zola静态网站生成器，看重其长期可维护性和简单性。文章回顾了早年写博客的初衷，并分享了联系方式和朋友链接。",
+        "audience": "对个人博客搭建、静态网站生成器感兴趣的技术爱好者或博客作者",
         "key_points": [
-          "作者在 2024 年重新翻修博客，选择 Zola 静态网站生成器以满足简单、长期可维护的需求。",
-          "文章回顾了 2017 年建立博客的初衷，对比了不同工具（如 NextJS、Gatsby、Hexo）的优缺点。",
-          "作者强调博客的轻量化和易维护性，以适应线下表达欲释放的生活阶段。",
-          "包含联系方式、朋友链接和脚注，展现了个人博客的社交与历史维度。",
-          "通过引用 2017 年的文字，体现了博客的演变与个人成长的连续性。"
+          "作者在2024年翻修博客，选择Zola静态网站生成器",
+          "选择Zola的原因包括写Markdown、长期可维护和主题简单",
+          "回顾2017年刚开始写博客时的文章和心路历程"
         ],
-        "summary": "本文记录了作者在 2024 年重新翻修博客的过程，表达了对维护博客的懒散态度，但最终选择 Zola 静态网站生成器以满足简单、长期可维护的需求。作者回顾了 2017 年建立博客的初衷，对比了不同工具（如 NextJS、Gatsby、Hexo），强调了 Zola 的轻量、依赖少和易维护性。文章还包含联系方式、朋友链接和脚注，展现了个人博客的演变与持续表达的兴趣。",
+        "summary": "本文作者在2024年决定翻修年久失修的博客，因线下表达欲已能快速释放，写文章变得奢侈。经过简单考察，选择了单二进制静态网站生成器Zola，主要满足写Markdown、长期可维护和主题简单易维护的需求。作者回顾了2017年刚开始写博客时的文章，并分享了联系方式、朋友博客链接和脚注。文章核心在于个人博客的维护选择与心路历程。",
         "slug": "blog-rebuild-and-personal-expression",
         "tags": [
-          "博客翻修",
+          "个人博客",
           "Zola",
           "静态网站生成器",
-          "个人博客",
           "Markdown",
-          "技术选择",
-          "表达欲",
-          "Hexo"
+          "博客维护",
+          "技术选择"
         ],
         "inferred_date": "2024-01-01",
         "inferred_lang": "zh-Hans",
         "tokens_used": {
-          "prompt": 1023,
-          "completion": 430,
-          "total": 1453
+          "prompt": 1047,
+          "completion": 308,
+          "total": 1355
         }
       },
       "category": "Blog Introduction",
-      "nativeMarkdownHash": "85edd22af5f4aa94a4b0f59e83a440e29abfc203cace9a73aa101affa850f53b",
+      "nativeMarkdownHash": "f7545e99dcca1a74b8e5143bd836a0a1387e40d293214796aee0dae43eb2b154",
       "metadataTranslations": {
         "zh-Hans": {
           "title": "博客重建与个人表达",
-          "description": "作者分享重新翻修博客的经历，选择 Zola 静态网站生成器的原因，并回顾个人博客的初衷与变化。",
-          "summary": "本文记录了作者在 2024 年重新翻修博客的过程，表达了对维护博客的懒散态度，但最终选择 Zola 静态网站生成器以满足简单、长期可维护的需求。作者回顾了 2017 年建立博客的初衷，对比了不同工具（如 NextJS、Gatsby、Hexo），强调了 Zola 的轻量、依赖少和易维护性。文章还包含联系方式、朋友链接和脚注，展现了个人博客的演变与持续表达的兴趣。",
-          "short_summary": "作者在 2024 年翻修博客，选择 Zola 静态网站生成器以实现简单、长期可维护的写作环境。文章回顾了博客的建立初衷，并分享了联系方式与朋友链接，体现了个人表达的持续兴趣。",
+          "description": "作者分享重新搭建个人博客的心路历程，选择Zola静态网站生成器的原因，并回顾早年博客文章。",
+          "summary": "本文作者在2024年决定翻修年久失修的博客，因线下表达欲已能快速释放，写文章变得奢侈。经过简单考察，选择了单二进制静态网站生成器Zola，主要满足写Markdown、长期可维护和主题简单易维护的需求。作者回顾了2017年刚开始写博客时的文章，并分享了联系方式、朋友博客链接和脚注。文章核心在于个人博客的维护选择与心路历程。",
+          "short_summary": "作者在2024年重新搭建博客，选择了Zola静态网站生成器，看重其长期可维护性和简单性。文章回顾了早年写博客的初衷，并分享了联系方式和朋友链接。",
           "key_points": [
-            "作者在 2024 年重新翻修博客，选择 Zola 静态网站生成器以满足简单、长期可维护的需求。",
-            "文章回顾了 2017 年建立博客的初衷，对比了不同工具（如 NextJS、Gatsby、Hexo）的优缺点。",
-            "作者强调博客的轻量化和易维护性，以适应线下表达欲释放的生活阶段。",
-            "包含联系方式、朋友链接和脚注，展现了个人博客的社交与历史维度。",
-            "通过引用 2017 年的文字，体现了博客的演变与个人成长的连续性。"
+            "作者在2024年翻修博客，选择Zola静态网站生成器",
+            "选择Zola的原因包括写Markdown、长期可维护和主题简单",
+            "回顾2017年刚开始写博客时的文章和心路历程"
           ],
-          "audience": "对个人博客建设、静态网站生成器（如 Zola、Hexo）感兴趣的技术爱好者或博客作者。",
+          "audience": "对个人博客搭建、静态网站生成器感兴趣的技术爱好者或博客作者",
           "tags": [
-            "博客翻修",
+            "个人博客",
             "Zola",
             "静态网站生成器",
-            "个人博客",
             "Markdown",
-            "技术选择",
-            "表达欲",
-            "Hexo"
+            "博客维护",
+            "技术选择"
           ]
         },
         "en-US": {
-          "title": "Blog Reconstruction and Personal Expression",
-          "description": "The author shares the experience of renovating their blog, the reasons for choosing the Zola static site generator, and reflects on the original purpose and evolution of their personal blog.",
-          "summary": "This article documents the author's process of renovating their blog in 2024, expressing a laid-back attitude towards blog maintenance but ultimately choosing the Zola static site generator to meet the needs of simplicity and long-term maintainability. The author revisits the original intent behind starting the blog in 2017, compares different tools (such as NextJS, Gatsby, Hexo), and emphasizes Zola's lightweight nature, minimal dependencies, and ease of maintenance. The article also includes contact information, friend links, and footnotes, showcasing the evolution of the personal blog and the ongoing interest in personal expression.",
-          "short_summary": "The author renovated their blog in 2024, choosing the Zola static site generator to create a simple, long-term maintainable writing environment. The article reflects on the blog's founding purpose and shares contact information and friend links, demonstrating a continued interest in personal expression.",
+          "title": "Blog Rebuild and Personal Expression",
+          "description": "The author shares the journey of rebuilding a personal blog, the reasons for choosing the Zola static site generator, and a look back at early blog posts.",
+          "summary": "In 2024, the author decided to renovate a long-neglected blog, as offline expression could quickly satisfy the urge to write, making article writing a luxury. After a brief evaluation, the single-binary static site generator Zola was chosen, primarily to meet the needs of writing in Markdown, long-term maintainability, and simple, easy-to-maintain themes. The author revisits posts from 2017 when blogging began and shares contact information, links to friends' blogs, and footnotes. The core of the article lies in the choices and reflections on maintaining a personal blog.",
+          "short_summary": "In 2024, the author rebuilt the blog using the Zola static site generator, valuing its long-term maintainability and simplicity. The article reflects on the original intent of early blogging and shares contact details and friend links.",
           "key_points": [
-            "The author renovated their blog in 2024, choosing the Zola static site generator to meet the needs of simplicity and long-term maintainability.",
-            "The article revisits the original intent behind starting the blog in 2017, comparing the pros and cons of different tools (such as NextJS, Gatsby, Hexo).",
-            "The author emphasizes the blog's lightweight design and ease of maintenance to adapt to a life stage focused on offline expression.",
-            "Includes contact information, friend links, and footnotes, showcasing the social and historical dimensions of the personal blog.",
-            "By quoting text from 2017, it reflects the blog's evolution and the continuity of personal growth."
+            "The author renovated the blog in 2024, choosing the Zola static site generator.",
+            "Reasons for choosing Zola include writing in Markdown, long-term maintainability, and simple themes.",
+            "A look back at posts and reflections from 2017 when blogging started."
           ],
-          "audience": "Tech enthusiasts or bloggers interested in personal blog development and static site generators (such as Zola, Hexo).",
+          "audience": "Tech enthusiasts or bloggers interested in personal blog setup and static site generators.",
           "tags": [
-            "Blog Renovation",
+            "Personal Blog",
             "Zola",
             "Static Site Generator",
-            "Personal Blog",
             "Markdown",
-            "Technology Selection",
-            "Desire for Expression",
-            "Hexo"
+            "Blog Maintenance",
+            "Technology Choice"
           ]
         },
         "ja-JP": {
           "title": "ブログ再構築と個人表現",
-          "description": "著者がブログを再構築した経験を共有し、Zola静的サイトジェネレーターを選んだ理由、個人ブログの当初の目的と変化を振り返る。",
-          "summary": "本稿は、著者が2024年にブログを再構築した過程を記録し、ブログ維持への怠惰な態度を表明しながらも、最終的にシンプルで長期的に維持可能なニーズを満たすためにZola静的サイトジェネレーターを選択した。著者は2017年にブログを設立した当初の目的を振り返り、NextJS、Gatsby、Hexoなどの異なるツールを比較し、Zolaの軽量性、依存関係の少なさ、維持の容易さを強調している。また、連絡先、友人リンク、脚注を含み、個人ブログの進化と継続的な表現への興味を示している。",
-          "short_summary": "著者は2024年にブログを再構築し、シンプルで長期的に維持可能な執筆環境を実現するためにZola静的サイトジェネレーターを選択した。記事ではブログ設立の当初の目的を振り返り、連絡先と友人リンクを共有し、個人表現への継続的な興味を体現している。",
+          "description": "著者が個人ブログを再構築した経緯、静的サイトジェネレーターZolaを選んだ理由、そして初期のブログ記事を振り返る。",
+          "summary": "本記事の著者は2024年に長年放置されていたブログの改修を決意した。オフラインでの表現欲は既に迅速に発散できるため、記事を書くことが贅沢な行為となっていた。簡単な調査の後、単一バイナリの静的サイトジェネレーターであるZolaを選択した。主な要件はMarkdownで執筆できること、長期的にメンテナンス可能であること、そしてシンプルでメンテナンスしやすいテーマであることだった。著者は2017年にブログを書き始めた頃の記事を振り返り、連絡先、友人ブログのリンク、脚注を共有している。記事の核心は、個人ブログのメンテナンスに関する選択とその心の軌跡にある。",
+          "short_summary": "著者は2024年にブログを再構築し、長期的なメンテナンス性とシンプルさを重視して静的サイトジェネレーターZolaを選択した。記事ではブログを始めた当初の動機を振り返り、連絡先や友人リンクを共有している。",
           "key_points": [
-            "著者は2024年にブログを再構築し、シンプルで長期的に維持可能なニーズを満たすためにZola静的サイトジェネレーターを選択した。",
-            "記事では2017年にブログを設立した当初の目的を振り返り、NextJS、Gatsby、Hexoなどの異なるツールの長所と短所を比較している。",
-            "著者はオフラインでの表現欲を解放する生活段階に適応するため、ブログの軽量化と維持の容易さを強調している。",
-            "連絡先、友人リンク、脚注を含み、個人ブログの社会的および歴史的側面を示している。",
-            "2017年の文章を引用することで、ブログの進化と個人の成長の連続性を体現している。"
+            "著者は2024年にブログを改修し、静的サイトジェネレーターZolaを選択した",
+            "Zolaを選んだ理由は、Markdown執筆、長期的なメンテナンス性、シンプルでメンテナンスしやすいテーマを含む",
+            "2017年にブログを書き始めた頃の記事と心の軌跡を振り返る"
           ],
-          "audience": "個人ブログ構築、静的サイトジェネレーター（Zola、Hexoなど）に興味のある技術愛好家またはブログ著者。",
+          "audience": "個人ブログ構築、静的サイトジェネレーターに興味のある技術愛好家またはブロガー",
           "tags": [
-            "ブログ再構築",
+            "個人ブログ",
             "Zola",
             "静的サイトジェネレーター",
-            "個人ブログ",
             "Markdown",
-            "技術選択",
-            "表現欲",
-            "Hexo"
+            "ブログメンテナンス",
+            "技術選定"
           ]
         },
         "es-ES": {
           "title": "Reconstrucción del Blog y Expresión Personal",
-          "description": "El autor comparte su experiencia al renovar su blog, las razones para elegir el generador de sitios estáticos Zola, y reflexiona sobre el propósito original y los cambios de su blog personal.",
-          "summary": "Este artículo documenta el proceso de renovación del blog del autor en 2024, expresando una actitud perezosa hacia su mantenimiento, pero finalmente eligiendo el generador de sitios estáticos Zola para satisfacer la necesidad de simplicidad y mantenibilidad a largo plazo. El autor revisa el propósito original de crear el blog en 2017, compara diferentes herramientas (como NextJS, Gatsby, Hexo) y enfatiza la ligereza, pocas dependencias y facilidad de mantenimiento de Zola. El artículo también incluye información de contacto, enlaces de amigos y notas al pie, mostrando la evolución del blog personal y el interés continuo en la expresión.",
-          "short_summary": "El autor renovó su blog en 2024, eligiendo el generador de sitios estáticos Zola para crear un entorno de escritura simple y fácil de mantener a largo plazo. El artículo revisa el propósito original del blog y comparte información de contacto y enlaces de amigos, reflejando un interés continuo en la expresión personal.",
+          "description": "El autor comparte su experiencia al reconstruir su blog personal, las razones para elegir el generador de sitios estáticos Zola y revisa sus primeras publicaciones en el blog.",
+          "summary": "En 2024, el autor decidió renovar su blog, que estaba desactualizado, ya que la necesidad de expresión offline se liberaba rápidamente, haciendo que escribir artículos se volviera un lujo. Tras una breve investigación, eligió Zola, un generador de sitios estáticos de un solo binario, principalmente para satisfacer la necesidad de escribir en Markdown, mantenibilidad a largo plazo y un tema simple y fácil de mantener. El autor revisó sus artículos de 2017, cuando comenzó a escribir el blog, y compartió sus datos de contacto, enlaces a blogs de amigos y notas al pie. El núcleo del artículo radica en las elecciones de mantenimiento y la experiencia personal con el blog.",
+          "short_summary": "En 2024, el autor reconstruyó su blog eligiendo el generador de sitios estáticos Zola, valorando su mantenibilidad a largo plazo y simplicidad. El artículo revisa la motivación inicial para escribir el blog y comparte datos de contacto y enlaces de amigos.",
           "key_points": [
-            "El autor renovó su blog en 2024, eligiendo el generador de sitios estáticos Zola para satisfacer la necesidad de simplicidad y mantenibilidad a largo plazo.",
-            "El artículo revisa el propósito original de crear el blog en 2017, comparando las ventajas y desventajas de diferentes herramientas (como NextJS, Gatsby, Hexo).",
-            "El autor enfatiza la ligereza y facilidad de mantenimiento del blog para adaptarse a una etapa de vida donde libera su deseo de expresión offline.",
-            "Incluye información de contacto, enlaces de amigos y notas al pie, mostrando las dimensiones sociales e históricas del blog personal.",
-            "Al citar textos de 2017, se refleja la evolución del blog y la continuidad del crecimiento personal."
+            "En 2024, el autor renovó su blog y eligió el generador de sitios estáticos Zola",
+            "Las razones para elegir Zola incluyen escribir en Markdown, mantenibilidad a largo plazo y un tema simple",
+            "Revisión de los artículos y experiencias personales al comenzar a escribir el blog en 2017"
           ],
-          "audience": "Entusiastas de la tecnología o autores de blogs interesados en la creación de blogs personales y generadores de sitios estáticos (como Zola, Hexo).",
+          "audience": "Entusiastas de la tecnología o autores de blogs interesados en la creación de blogs personales o generadores de sitios estáticos",
           "tags": [
-            "Renovación de Blog",
+            "Blog personal",
             "Zola",
-            "Generador de Sitios Estáticos",
-            "Blog Personal",
+            "Generador de sitios estáticos",
             "Markdown",
-            "Elección Tecnológica",
-            "Deseo de Expresión",
-            "Hexo"
+            "Mantenimiento de blogs",
+            "Elección tecnológica"
           ]
         },
         "de-DE": {
-          "title": "Blog-Relaunch und persönlicher Ausdruck",
-          "description": "Der Autor teilt seine Erfahrungen mit der Renovierung seines Blogs, die Gründe für die Wahl des statischen Site-Generators Zola und blickt auf die ursprüngliche Motivation und Veränderungen seines persönlichen Blogs zurück.",
-          "summary": "Dieser Artikel dokumentiert den Prozess der Renovierung des Blogs durch den Autor im Jahr 2024 und drückt eine gewisse Nachlässigkeit bei der Blogpflege aus, wobei letztlich der statische Site-Generator Zola gewählt wurde, um einfache und langfristig wartbare Anforderungen zu erfüllen. Der Autor blickt auf die ursprüngliche Motivation zur Gründung des Blogs im Jahr 2017 zurück, vergleicht verschiedene Tools (wie NextJS, Gatsby, Hexo) und betont die Leichtigkeit, geringe Abhängigkeiten und einfache Wartbarkeit von Zola. Der Artikel enthält auch Kontaktinformationen, Freundeslinks und Fußnoten, die die Entwicklung des persönlichen Blogs und das anhaltende Interesse am Ausdruck zeigen.",
-          "short_summary": "Der Autor renovierte seinen Blog im Jahr 2024 und wählte den statischen Site-Generator Zola, um eine einfache und langfristig wartbare Schreibumgebung zu schaffen. Der Artikel blickt auf die ursprüngliche Motivation zur Bloggründung zurück und teilt Kontaktinformationen sowie Freundeslinks, was das anhaltende Interesse am persönlichen Ausdruck widerspiegelt.",
+          "title": "Blog-Rekonstruktion und persönlicher Ausdruck",
+          "description": "Der Autor teilt seine Gedanken und Erfahrungen beim erneuten Aufbau seines persönlichen Blogs, erklärt die Gründe für die Wahl des statischen Website-Generators Zola und blickt auf frühere Blogbeiträge zurück.",
+          "summary": "Im Jahr 2024 beschloss der Autor, seinen veralteten Blog zu überarbeiten, da der Ausdruck offline bereits schnell erfüllt werden konnte und das Schreiben von Artikeln zu einem Luxus geworden war. Nach einer kurzen Recherche wählte er den statischen Website-Generator Zola, der als einzelne Binärdatei ausgeliefert wird, hauptsächlich weil er das Schreiben in Markdown, langfristige Wartbarkeit und ein einfaches, leicht zu pflegendes Theme ermöglicht. Der Autor blickt auf Artikel aus dem Jahr 2017 zurück, als er mit dem Bloggen begann, und teilt Kontaktinformationen, Links zu Blogs von Freunden sowie Fußnoten. Der Kern des Artikels liegt in der Wahl der Blog-Wartung und den persönlichen Gedankengängen.",
+          "short_summary": "Der Autor baute seinen Blog 2024 mit dem statischen Website-Generator Zola neu auf, wobei er auf langfristige Wartbarkeit und Einfachheit Wert legte. Der Artikel blickt auf die ursprüngliche Motivation für das Bloggen zurück und teilt Kontaktinformationen sowie Links von Freunden.",
           "key_points": [
-            "Der Autor renovierte seinen Blog im Jahr 2024 und wählte den statischen Site-Generator Zola, um einfache und langfristig wartbare Anforderungen zu erfüllen.",
-            "Der Artikel blickt auf die ursprüngliche Motivation zur Gründung des Blogs im Jahr 2017 zurück und vergleicht die Vor- und Nachteile verschiedener Tools (wie NextJS, Gatsby, Hexo).",
-            "Der Autor betont die Leichtigkeit und einfache Wartbarkeit des Blogs, um der Lebensphase gerecht zu werden, in der der Drang zum Ausdruck offline freigesetzt wird.",
-            "Enthält Kontaktinformationen, Freundeslinks und Fußnoten, die die sozialen und historischen Dimensionen des persönlichen Blogs zeigen.",
-            "Durch das Zitieren von Texten aus dem Jahr 2017 wird die Entwicklung des Blogs und die Kontinuität des persönlichen Wachstums verdeutlicht."
+            "Der Autor renovierte 2024 seinen Blog und wählte den statischen Website-Generator Zola",
+            "Gründe für die Wahl von Zola sind das Schreiben in Markdown, langfristige Wartbarkeit und ein einfaches Theme",
+            "Rückblick auf Artikel und Gedankengänge aus dem Jahr 2017, als das Bloggen begann"
           ],
-          "audience": "Technikbegeisterte oder Blog-Autoren, die sich für den Aufbau persönlicher Blogs oder statische Site-Generatoren (wie Zola, Hexo) interessieren.",
+          "audience": "Technikbegeisterte oder Blog-Autoren, die sich für den Aufbau persönlicher Blogs oder statische Website-Generatoren interessieren",
           "tags": [
-            "Blog-Renovierung",
-            "Zola",
-            "Statischer Site-Generator",
             "Persönlicher Blog",
+            "Zola",
+            "Statischer Website-Generator",
             "Markdown",
-            "Technologieauswahl",
-            "Ausdrucksdrang",
-            "Hexo"
+            "Blog-Wartung",
+            "Technische Auswahl"
           ]
         }
       },
-      "metadataTranslationHash": "4d1f248fb5ccec8d9fcc5c791c6ff8d6a2078f47322c92055f5b355e5b1cd6ff"
+      "metadataTranslationHash": "bafb91cc0321d8ad09d35090ff95732cb385ed3b3e2651f74e27de1bd3ac70f7"
     },
     {
       "hash": "8d589b257fc275741645b96e35f74ac33d582bf23a0db377ac971c084b6a28f5",
@@ -8103,148 +8079,215 @@
     {
       "path": "content/blog/LegionMind 的成长轨迹.md",
       "links": [
-        "https://0xc1.space/blog/dui-yu-ai-agent-de-si-kao/"
+        "https://0xc1.space/blog/dui-yu-ai-agent-de-si-kao/",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/config.json",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/implement-quote-service/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/implement-quote-service/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/implement-quote-service/context.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/implement-quote-service/tasks.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/implement-quote-service/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/implement-quote-service/context.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/yuantsexchange-ohlcinterestrate/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/vendors-ingest-ohlc-interest-rate/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/task-vex-queryquotes-swr/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/task-vex-quote-upstream-refactor/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/vex-series-data-ohlcinterestrate-ohlc-v2/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/vex-series-data-ohlcinterestrate-ohlc-v2/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-service/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-service/docs/rfc.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-service/docs/spec-dev.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-service/docs/spec-test.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-service/docs/spec-bench.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-service/docs/spec-obs.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-service/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-app-implementation/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-service/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-app-implementation/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/vendor-http-services-rollout/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-app-implementation/docs/rfc-metrics.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-services-terminalinfos-ready/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/vendor-tokenbucket-proxy-ip/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-app-implementation/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/config.json",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-app-implementation/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/vendor-tokenbucket-proxy-ip/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/heavy-rfc/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/signal-trader/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/heavy-rfc/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/heavy-rfc/docs/task-brief.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/heavy-rfc/docs/research.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/heavy-rfc/docs/rfc.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/heavy-rfc/docs/review-rfc.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/heavy-rfc/docs/report-walkthrough.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/heavy-rfc/docs/pr-body.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/signal-trader/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/signal-trader/tasks.md",
+        "https://0xc1.space/blog/dui-yu-ai-agent-de-si-kao/",
+        "https://github.com/Thrimbda/legion-mind/blob/main/README.md",
+        "https://github.com/Thrimbda/legion-mind/blob/main/docs/legionmind-usage.md",
+        "https://github.com/Thrimbda/legion-mind/blob/main/.legion/playbook.md",
+        "https://github.com/Thrimbda/legion-mind/blob/main/.opencode/commands/evolve.md",
+        "https://github.com/Thrimbda/legion-mind/blob/main/docs/benchmark.md",
+        "https://github.com/Thrimbda/legion-mind/blob/main/.legion/playbook.md",
+        "https://github.com/Thrimbda/legion-mind/blob/main/docs/benchmark.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/implement-quote-service/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/vex-series-data-ohlcinterestrate-ohlc-v2/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-service/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/http-proxy-app-implementation/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/vendor-tokenbucket-proxy-ip/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/heavy-rfc/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/signal-trader/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/implement-quote-service/plan.md",
+        "https://github.com/No-Trade-No-Life/Yuan/tree/main/.legion/tasks",
+        "https://github.com/No-Trade-No-Life/Yuan/blob/main/.legion/tasks/signal-trader/plan.md",
+        "https://github.com/Thrimbda/legion-mind"
       ],
       "metadata": {
         "title": "Legion 的成长轨迹：从任务记录器到多 Agent 工程操作系统",
-        "description": "Legion 如何从简单的任务记录器演变为成熟的多 Agent 工程操作系统，实现少打扰、多产出、可验证、可交接的协作系统。",
-        "short_summary": "Legion 从一个简单的任务记录器逐步成长为多 Agent 工程操作系统，通过外置隐含知识、建立设计门禁和工程化验证汇报，实现了受控自治。该系统将 Agent 能力工程化，使人从执行者转变为审阅者和决策者。",
-        "audience": "AI Agent 开发者、工程团队负责人、对多 Agent 协作和工程化流程感兴趣的技术人员。",
+        "description": "Legion 如何从简单的任务记录器演化成支持多 Agent 协作的工程操作系统，解决上下文管理、隐含知识外置和设计门禁等核心问题。",
+        "short_summary": "Legion 是一个多 Agent 工程操作系统，它从解决任务上下文丢失问题开始，逐步演化出设计门禁、隐含知识外置和验证工程化等能力。其演进历程展示了如何将 AI Agent 协作从临时对话转变为可治理、可审计的工程流程。目前 Legion 正朝着通用化、可测量和产品化的方向发展。",
+        "audience": "AI 工程师、多 Agent 系统研究者、工程团队负责人，以及对 AI 协作工具和工程流程优化感兴趣的技术人员。",
         "key_points": [
-          "Legion 从任务记录器演变为多 Agent 工程操作系统，核心是工程化 Agent 能力。",
-          "通过外置隐含知识、设计门禁和结构化 review，降低返工和注意力泄漏。",
-          "成熟系统支持受控自治，将人的角色从执行者转变为审阅者、决策者和系统迭代者。"
+          "Legion 的演进分为五个阶段：从任务持久化到受控自治，逐步解决上下文管理、隐含知识外置和设计验证等问题。",
+          "Legion 的核心价值在于将多 Agent 协作制度化，通过 RFC、Review、Spec 等机制降低返工成本，实现工程化协作。",
+          "Legion 的最新发展方向是通用化和产品化（legion-mind），强调 benchmark 驱动迭代和可复制性。"
         ],
-        "summary": "本文详细追溯了 Legion 系统的成长轨迹，从最初作为任务记录器，逐步演变为一个成熟的多 Agent 工程操作系统。文章通过分析 .legion/ 目录的 git 历史、配置文件及审计记录，揭示了 Legion 如何从解决“任务不丢”的基本需求，发展到外置隐含知识、建立设计门禁、工程化验证与汇报，最终形成受控自治的治理系统。关键论点包括：Legion 的核心价值在于将 Agent 能力工程化，通过持久化任务状态、结构化 review、RFC 流程和完整产物链，实现“少打扰、多产出、可验证、可交接”的目标。结论是 Legion 不仅改变了 Agent 的工作方式，也重新定义了人机分工，使人从执行者转变为审阅者、决策者和系统迭代者。",
+        "summary": "本文通过分析 Legion 在 Yuan 项目中的历史演进，详细阐述了其如何从一个简单的任务记录器逐步发展成一套成熟的多 Agent 工程协作系统。文章将演进过程分为五个阶段：从解决任务遗忘问题，到外置隐含知识，再到引入设计门禁，进而工程化验证与汇报，最终实现受控自治。作者结合博客中的思考框架，指出 Legion 的核心价值在于将 Agent 的能力以工程系统的方式稳定使用，减少返工、提高协作效率。文章还展望了 Legion 的最新发展方向，即从项目经验提炼为通用系统（legion-mind），并强调 benchmark 驱动迭代的重要性。",
         "slug": "legion-evolution-from-task-recorder-to-multi-agent-engineering-os",
         "tags": [
-          "Legion",
           "AI Agent",
-          "工程操作系统",
-          "多 Agent 协作",
-          "任务管理",
+          "工程协作系统",
+          "多 Agent 系统",
+          "Legion",
+          "上下文管理",
           "设计门禁",
-          "工程化验证"
+          "隐含知识",
+          "工程化"
         ],
         "inferred_date": "2026-03-08",
         "inferred_lang": "zh-Hans",
         "tokens_used": {
-          "prompt": 7288,
-          "completion": 457,
-          "total": 7745
+          "prompt": 7744,
+          "completion": 476,
+          "total": 8220
         }
       },
-      "hash": "c30f1d9647a7fa76635ebcc96150c1ffe1757bc5287175646fb98b30d767c4fd",
+      "hash": "2a8ab4ef1160314ad343378aa6e618884f87c5b5e7e208905bfc138a0a065117",
       "metadataTranslations": {
         "zh-Hans": {
           "title": "Legion 的成长轨迹：从任务记录器到多 Agent 工程操作系统",
-          "description": "Legion 如何从简单的任务记录器演变为成熟的多 Agent 工程操作系统，实现少打扰、多产出、可验证、可交接的协作系统。",
-          "summary": "本文详细追溯了 Legion 系统的成长轨迹，从最初作为任务记录器，逐步演变为一个成熟的多 Agent 工程操作系统。文章通过分析 .legion/ 目录的 git 历史、配置文件及审计记录，揭示了 Legion 如何从解决“任务不丢”的基本需求，发展到外置隐含知识、建立设计门禁、工程化验证与汇报，最终形成受控自治的治理系统。关键论点包括：Legion 的核心价值在于将 Agent 能力工程化，通过持久化任务状态、结构化 review、RFC 流程和完整产物链，实现“少打扰、多产出、可验证、可交接”的目标。结论是 Legion 不仅改变了 Agent 的工作方式，也重新定义了人机分工，使人从执行者转变为审阅者、决策者和系统迭代者。",
-          "short_summary": "Legion 从一个简单的任务记录器逐步成长为多 Agent 工程操作系统，通过外置隐含知识、建立设计门禁和工程化验证汇报，实现了受控自治。该系统将 Agent 能力工程化，使人从执行者转变为审阅者和决策者。",
+          "description": "Legion 如何从简单的任务记录器演化成支持多 Agent 协作的工程操作系统，解决上下文管理、隐含知识外置和设计门禁等核心问题。",
+          "summary": "本文通过分析 Legion 在 Yuan 项目中的历史演进，详细阐述了其如何从一个简单的任务记录器逐步发展成一套成熟的多 Agent 工程协作系统。文章将演进过程分为五个阶段：从解决任务遗忘问题，到外置隐含知识，再到引入设计门禁，进而工程化验证与汇报，最终实现受控自治。作者结合博客中的思考框架，指出 Legion 的核心价值在于将 Agent 的能力以工程系统的方式稳定使用，减少返工、提高协作效率。文章还展望了 Legion 的最新发展方向，即从项目经验提炼为通用系统（legion-mind），并强调 benchmark 驱动迭代的重要性。",
+          "short_summary": "Legion 是一个多 Agent 工程操作系统，它从解决任务上下文丢失问题开始，逐步演化出设计门禁、隐含知识外置和验证工程化等能力。其演进历程展示了如何将 AI Agent 协作从临时对话转变为可治理、可审计的工程流程。目前 Legion 正朝着通用化、可测量和产品化的方向发展。",
           "key_points": [
-            "Legion 从任务记录器演变为多 Agent 工程操作系统，核心是工程化 Agent 能力。",
-            "通过外置隐含知识、设计门禁和结构化 review，降低返工和注意力泄漏。",
-            "成熟系统支持受控自治，将人的角色从执行者转变为审阅者、决策者和系统迭代者。"
+            "Legion 的演进分为五个阶段：从任务持久化到受控自治，逐步解决上下文管理、隐含知识外置和设计验证等问题。",
+            "Legion 的核心价值在于将多 Agent 协作制度化，通过 RFC、Review、Spec 等机制降低返工成本，实现工程化协作。",
+            "Legion 的最新发展方向是通用化和产品化（legion-mind），强调 benchmark 驱动迭代和可复制性。"
           ],
-          "audience": "AI Agent 开发者、工程团队负责人、对多 Agent 协作和工程化流程感兴趣的技术人员。",
+          "audience": "AI 工程师、多 Agent 系统研究者、工程团队负责人，以及对 AI 协作工具和工程流程优化感兴趣的技术人员。",
           "tags": [
-            "Legion",
             "AI Agent",
-            "工程操作系统",
-            "多 Agent 协作",
-            "任务管理",
+            "工程协作系统",
+            "多 Agent 系统",
+            "Legion",
+            "上下文管理",
             "设计门禁",
-            "工程化验证"
+            "隐含知识",
+            "工程化"
           ]
         },
         "en-US": {
           "title": "Legion's Evolution: From Task Logger to Multi-Agent Engineering OS",
-          "description": "How Legion evolved from a simple task logger into a mature multi-agent engineering operating system, achieving a collaborative system that is less disruptive, more productive, verifiable, and transferable.",
-          "summary": "This article traces the growth trajectory of the Legion system, from its origins as a task logger to its evolution into a mature multi-agent engineering operating system. By analyzing the git history, configuration files, and audit logs in the .legion/ directory, it reveals how Legion progressed from addressing the basic need of 'not losing tasks' to externalizing implicit knowledge, establishing design gates, engineering verification and reporting, and ultimately forming a governance system of controlled autonomy. Key arguments include: Legion's core value lies in engineering Agent capabilities, achieving the goals of 'less disruption, more output, verifiability, and transferability' through persistent task states, structured reviews, RFC processes, and complete artifact chains. The conclusion is that Legion not only changes how Agents work but also redefines human-machine division of labor, transforming humans from executors into reviewers, decision-makers, and system iterators.",
-          "short_summary": "Legion evolved from a simple task logger into a multi-agent engineering operating system, achieving controlled autonomy by externalizing implicit knowledge, establishing design gates, and engineering verification and reporting. The system engineers Agent capabilities, transforming humans from executors into reviewers and decision-makers.",
+          "description": "How Legion evolved from a simple task logger into an engineering operating system supporting multi-agent collaboration, addressing core issues like context management, externalizing tacit knowledge, and design gating.",
+          "summary": "This article analyzes the historical evolution of Legion within the Yuan project, detailing its progression from a simple task logger to a mature multi-agent engineering collaboration system. The evolution is divided into five stages: from solving task-forgetting issues, to externalizing tacit knowledge, introducing design gates, engineering verification and reporting, and finally achieving controlled autonomy. Drawing on frameworks from the blog, the author highlights Legion's core value in stabilizing Agent capabilities through engineering systems, reducing rework, and improving collaboration efficiency. The article also looks ahead to Legion's latest development direction—generalizing project experience into a universal system (legion-mind)—and emphasizes the importance of benchmark-driven iteration.",
+          "short_summary": "Legion is a multi-agent engineering operating system that started by solving task context loss and gradually evolved capabilities like design gating, externalizing tacit knowledge, and engineering verification. Its evolution demonstrates how to transform AI Agent collaboration from ad-hoc conversations into a governable, auditable engineering process. Legion is currently moving toward generalization, measurability, and productization.",
           "key_points": [
-            "Legion evolved from a task logger to a multi-agent engineering operating system, with its core being the engineering of Agent capabilities.",
-            "By externalizing implicit knowledge, implementing design gates, and structured reviews, it reduces rework and attention leakage.",
-            "The mature system supports controlled autonomy, shifting the human role from executor to reviewer, decision-maker, and system iterator."
+            "Legion's evolution is divided into five stages: from task persistence to controlled autonomy, progressively addressing context management, externalizing tacit knowledge, and design verification.",
+            "Legion's core value lies in institutionalizing multi-agent collaboration through mechanisms like RFCs, Reviews, and Specs to reduce rework costs and achieve engineered collaboration.",
+            "Legion's latest development direction is generalization and productization (legion-mind), emphasizing benchmark-driven iteration and reproducibility."
           ],
-          "audience": "AI Agent developers, engineering team leads, and technical personnel interested in multi-agent collaboration and engineering processes.",
+          "audience": "AI Engineers, Multi-Agent System Researchers, Engineering Team Leads, and technical professionals interested in AI collaboration tools and engineering process optimization.",
           "tags": [
-            "Legion",
             "AI Agent",
-            "Engineering Operating System",
-            "Multi-Agent Collaboration",
-            "Task Management",
-            "Design Gates",
-            "Engineering Verification"
+            "Engineering Collaboration System",
+            "Multi-Agent System",
+            "Legion",
+            "Context Management",
+            "Design Gate",
+            "Tacit Knowledge",
+            "Engineering"
           ]
         },
         "ja-JP": {
           "title": "Legionの成長軌跡：タスク記録ツールからマルチエージェント工学オペレーティングシステムへ",
-          "description": "Legionが、単純なタスク記録ツールから、成熟したマルチエージェント工学オペレーティングシステムへと進化し、干渉を減らし生産性を高め、検証可能で引き継ぎ可能なコラボレーションシステムを実現した道筋を解説します。",
-          "summary": "本稿では、Legionシステムの成長軌跡を詳細に辿り、最初は単なるタスク記録ツールとして始まり、徐々に成熟したマルチエージェント工学オペレーティングシステムへと進化した過程を分析します。.legion/ディレクトリのgit履歴、設定ファイル、監査記録を分析することで、Legionが「タスクを見失わない」という基本的なニーズの解決から始まり、暗黙知の外在化、設計ゲートの確立、工学的な検証と報告の実装を経て、最終的に制御された自律性を持つガバナンスシステムを形成するに至った経緯を明らかにします。主な論点は以下の通りです：Legionの中核的価値は、エージェントの能力を工学的に体系化することにあり、タスク状態の永続化、構造化されたレビュー、RFCプロセス、完全な成果物チェーンを通じて、「干渉を減らし生産性を高め、検証可能で引き継ぎ可能」という目標を実現しています。結論として、Legionはエージェントの働き方を変えただけでなく、人間と機械の役割分担を再定義し、人間を実行者から、審査者、意思決定者、システムの反復改良者へと変容させたと言えます。",
-          "short_summary": "Legionは、単純なタスク記録ツールから、マルチエージェント工学オペレーティングシステムへと段階的に成長しました。暗黙知の外在化、設計ゲートの確立、工学的な検証と報告を通じて、制御された自律性を実現しています。このシステムはエージェントの能力を工学的に体系化し、人間の役割を実行者から審査者および意思決定者へと転換させます。",
+          "description": "Legionが、単純なタスク記録ツールから、コンテキスト管理、暗黙知の外在化、設計ゲートキーパーなどの核心的問題を解決する、マルチエージェント協調をサポートする工学オペレーティングシステムへとどのように進化したかを解説します。",
+          "summary": "本稿では、YuanプロジェクトにおけるLegionの歴史的進化を分析し、単純なタスク記録ツールから成熟したマルチエージェント工学協調システムへと段階的に発展した過程を詳細に説明します。進化過程は5つの段階に分けられます：タスクの忘却問題の解決から、暗黙知の外在化、設計ゲートキーパーの導入、さらに工学的な検証と報告、最終的には制御された自律の実現へ。著者はブログでの思考フレームワークを踏まえ、Legionの核心的価値は、エージェントの能力を工学的システムとして安定的に活用し、手戻りを減らし、協調効率を向上させる点にあると指摘します。また、Legionの最新の発展方向、すなわちプロジェクト経験から汎用システム（legion-mind）への昇華を展望し、ベンチマーク駆動型の反復の重要性を強調しています。",
+          "short_summary": "Legionはマルチエージェント工学オペレーティングシステムであり、タスクコンテキストの喪失問題の解決から始まり、設計ゲートキーパー、暗黙知の外在化、検証の工学的実装などの能力を段階的に進化させてきました。その進化の歴史は、AIエージェントの協調を一時的な対話から、ガバナンス可能で監査可能な工学的プロセスへと変革する方法を示しています。現在、Legionは汎用化、測定可能性、製品化の方向へと発展を進めています。",
           "key_points": [
-            "Legionはタスク記録ツールからマルチエージェント工学オペレーティングシステムへと進化し、その中核はエージェント能力の工学的体系化にあります。",
-            "暗黙知の外在化、設計ゲート、構造化されたレビューを通じて、手戻りと注意散漫を低減します。",
-            "成熟したシステムは制御された自律性をサポートし、人間の役割を実行者から、審査者、意思決定者、システムの反復改良者へと変容させます。"
+            "Legionの進化は5段階に分けられる：タスクの永続化から制御された自律へ、段階的にコンテキスト管理、暗黙知の外在化、設計検証などの問題を解決。",
+            "Legionの核心的価値は、RFC、レビュー、仕様書などのメカニズムを通じてマルチエージェント協調を制度化し、手戻りコストを削減し、工学的な協調を実現することにある。",
+            "Legionの最新の発展方向は汎用化と製品化（legion-mind）であり、ベンチマーク駆動型の反復と再現可能性を重視している。"
           ],
-          "audience": "AIエージェント開発者、エンジニアリングチームリーダー、マルチエージェントコラボレーションと工学的プロセスに興味を持つ技術者。",
+          "audience": "AIエンジニア、マルチエージェントシステム研究者、エンジニアリングチームリーダー、およびAI協調ツールや工学的プロセス最適化に関心のある技術者。",
           "tags": [
-            "Legion",
             "AIエージェント",
-            "工学オペレーティングシステム",
-            "マルチエージェントコラボレーション",
-            "タスク管理",
-            "設計ゲート",
-            "工学的検証"
+            "工学協調システム",
+            "マルチエージェントシステム",
+            "Legion",
+            "コンテキスト管理",
+            "設計ゲートキーパー",
+            "暗黙知",
+            "工学的実装"
           ]
         },
         "es-ES": {
-          "title": "La trayectoria de crecimiento de Legion: de registrador de tareas a sistema operativo de ingeniería multiagente",
-          "description": "Cómo Legion evolucionó de un simple registrador de tareas a un sistema operativo de ingeniería multiagente maduro, logrando un sistema de colaboración con menos interrupciones, mayor productividad, verificable y transferible.",
-          "summary": "Este artículo detalla la trayectoria de crecimiento del sistema Legion, desde su inicio como registrador de tareas hasta su evolución gradual hacia un sistema operativo de ingeniería multiagente maduro. Mediante el análisis del historial de git del directorio .legion/, los archivos de configuración y los registros de auditoría, el artículo revela cómo Legion pasó de satisfacer la necesidad básica de 'no perder tareas' a externalizar conocimientos implícitos, establecer puertas de diseño, verificación y reporte de ingeniería, culminando en un sistema de gobernanza de autonomía controlada. Los puntos clave incluyen: el valor central de Legion radica en la ingenierización de capacidades de agentes, logrando el objetivo de 'menos interrupciones, mayor productividad, verificable y transferible' mediante la persistencia del estado de tareas, revisiones estructuradas, procesos RFC y cadenas completas de entregables. La conclusión es que Legion no solo cambia la forma de trabajar de los agentes, sino que redefine la división del trabajo entre humanos y máquinas, transformando a las personas de ejecutores en revisores, decisores e iteradores del sistema.",
-          "short_summary": "Legion evolucionó de un simple registrador de tareas a un sistema operativo de ingeniería multiagente, logrando autonomía controlada mediante la externalización de conocimientos implícitos, el establecimiento de puertas de diseño y la verificación y reporte de ingeniería. Este sistema ingenieriza las capacidades de los agentes, transformando a las personas de ejecutores en revisores y decisores.",
+          "title": "La trayectoria de crecimiento de Legion: del registrador de tareas al sistema operativo de ingeniería multiagente",
+          "description": "Cómo Legion evolucionó de un simple registrador de tareas a un sistema operativo de ingeniería que soporta la colaboración multiagente, resolviendo problemas centrales como la gestión de contexto, la externalización de conocimiento implícito y los controles de diseño.",
+          "summary": "Este artículo analiza la evolución histórica de Legion en el proyecto Yuan, detallando cómo pasó de ser un simple registrador de tareas a convertirse en un sistema maduro de colaboración de ingeniería multiagente. El proceso evolutivo se divide en cinco etapas: desde resolver el problema del olvido de tareas, hasta externalizar el conocimiento implícito, introducir controles de diseño, luego la verificación y reporte de ingeniería, y finalmente lograr una autonomía controlada. Combinando marcos de reflexión del blog, el autor señala que el valor central de Legion radica en utilizar las capacidades de los agentes de manera estable como un sistema de ingeniería, reduciendo retrabajos y mejorando la eficiencia colaborativa. El artículo también explora las direcciones más recientes de Legion, es decir, refinar la experiencia del proyecto en un sistema general (legion-mind), y enfatiza la importancia de la iteración impulsada por benchmarks.",
+          "short_summary": "Legion es un sistema operativo de ingeniería multiagente que comenzó resolviendo la pérdida de contexto en tareas, y evolucionó gradualmente para incluir capacidades como controles de diseño, externalización de conocimiento implícito y verificación de ingeniería. Su trayectoria evolutiva muestra cómo transformar la colaboración de agentes de IA de conversaciones temporales en flujos de ingeniería gobernables y auditables. Actualmente, Legion avanza hacia la generalización, la medibilidad y la productización.",
           "key_points": [
-            "Legion evolucionó de registrador de tareas a sistema operativo de ingeniería multiagente, centrándose en la ingenierización de capacidades de agentes.",
-            "Mediante la externalización de conocimientos implícitos, puertas de diseño y revisiones estructuradas, se reduce el retrabajo y las fugas de atención.",
-            "El sistema maduro soporta autonomía controlada, transformando el rol humano de ejecutor a revisor, decisor e iterador del sistema."
+            "La evolución de Legion se divide en cinco etapas: desde la persistencia de tareas hasta la autonomía controlada, resolviendo gradualmente problemas como la gestión de contexto, la externalización de conocimiento implícito y la verificación de diseño.",
+            "El valor central de Legion radica en institucionalizar la colaboración multiagente, reduciendo costos de retrabajo mediante mecanismos como RFC, Review y Spec, logrando así una colaboración de ingeniería.",
+            "La dirección más reciente de desarrollo de Legion es la generalización y productización (legion-mind), enfatizando la iteración impulsada por benchmarks y la replicabilidad."
           ],
-          "audience": "Desarrolladores de AI Agent, líderes de equipos de ingeniería, profesionales técnicos interesados en colaboración multiagente y procesos de ingeniería.",
+          "audience": "Ingenieros de IA, investigadores de sistemas multiagente, líderes de equipos de ingeniería, y profesionales técnicos interesados en herramientas de colaboración con IA y optimización de flujos de ingeniería.",
           "tags": [
+            "Agente de IA",
+            "Sistema de colaboración de ingeniería",
+            "Sistema multiagente",
             "Legion",
-            "AI Agent",
-            "Sistema Operativo de Ingeniería",
-            "Colaboración Multiagente",
-            "Gestión de Tareas",
-            "Puertas de Diseño",
-            "Verificación de Ingeniería"
+            "Gestión de contexto",
+            "Controles de diseño",
+            "Conocimiento implícito",
+            "Ingenierización"
           ]
         },
         "de-DE": {
-          "title": "Legions Entwicklungspfad: Vom Aufgabenrecorder zum Multi-Agenten-Engineering-Betriebssystem",
-          "description": "Wie sich Legion von einem einfachen Aufgabenrecorder zu einem ausgereiften Multi-Agenten-Engineering-Betriebssystem entwickelt hat, das ein kollaboratives System mit minimaler Störung, hoher Produktivität, Verifizierbarkeit und Übergabefähigkeit realisiert.",
-          "summary": "Dieser Artikel zeichnet detailliert den Entwicklungsweg des Legion-Systems nach, von seinen Anfängen als Aufgabenrecorder bis hin zu einem ausgereiften Multi-Agenten-Engineering-Betriebssystem. Durch die Analyse des Git-Verlaufs des .legion/-Verzeichnisses, der Konfigurationsdateien und Audit-Protokolle wird aufgezeigt, wie Legion sich von der Lösung des grundlegenden Bedarfs 'Aufgaben nicht zu verlieren' weiterentwickelt hat, hin zur Externalisierung impliziten Wissens, der Einrichtung von Design-Gates, der Engineering-gestützten Verifizierung und Berichterstattung, um schließlich ein System der kontrollierten Autonomie zu bilden. Zu den Kernargumenten gehört, dass der zentrale Wert von Legion in der Engineering-gestützten Umsetzung von Agenten-Fähigkeiten liegt, die durch Persistierung des Aufgabenstatus, strukturierte Reviews, RFC-Prozesse und eine vollständige Produktkette das Ziel 'wenig Störung, hohe Produktivität, verifizierbar, übergabefähig' erreicht. Die Schlussfolgerung ist, dass Legion nicht nur die Arbeitsweise von Agenten verändert, sondern auch die Mensch-Maschine-Arbeitsteilung neu definiert, indem der Mensch vom Ausführenden zum Prüfer, Entscheider und System-Iterator wird.",
-          "short_summary": "Legion entwickelte sich von einem einfachen Aufgabenrecorder schrittweise zu einem Multi-Agenten-Engineering-Betriebssystem. Durch Externalisierung impliziten Wissens, Einrichtung von Design-Gates und Engineering-gestützter Verifizierung und Berichterstattung wurde kontrollierte Autonomie erreicht. Das System setzt Agenten-Fähigkeiten Engineering-gestützt um und wandelt die Rolle des Menschen vom Ausführenden zum Prüfer und Entscheider.",
+          "title": "Legions Entwicklungsweg: Vom Aufgabenprotokollierer zum Multi-Agenten-Engineering-Betriebssystem",
+          "description": "Wie sich Legion von einem einfachen Aufgabenprotokollierer zu einem Engineering-Betriebssystem entwickelt hat, das die Zusammenarbeit mehrerer Agenten unterstützt und Kernprobleme wie Kontextmanagement, Externalisierung impliziten Wissens und Design-Gates löst.",
+          "summary": "Dieser Artikel analysiert die historische Entwicklung von Legion im Yuan-Projekt und erläutert detailliert, wie es sich von einem einfachen Aufgabenprotokollierer schrittweise zu einem ausgereiften Multi-Agenten-Engineering-Kollaborationssystem entwickelt hat. Der Artikel unterteilt den Entwicklungsprozess in fünf Phasen: von der Lösung des Problems des Aufgabenvergessens über die Externalisierung impliziten Wissens bis zur Einführung von Design-Gates, dann zur Engineering-Validierung und Berichterstattung und schließlich zur kontrollierten Autonomie. Der Autor verweist auf Denkrahmen aus Blogbeiträgen und weist darauf hin, dass der Kernwert von Legion darin liegt, die Fähigkeiten von Agenten auf eine Weise stabil nutzbar zu machen, die einem Engineering-System entspricht, um Nacharbeit zu reduzieren und die Zusammenarbeits effizienz zu steigern. Der Artikel gibt auch einen Ausblick auf die neuesten Entwicklungsrichtungen von Legion, nämlich die Verallgemeinerung von Projekterfahrungen zu einem universellen System (legion-mind), und betont die Bedeutung einer Benchmark-gesteuerten Iteration.",
+          "short_summary": "Legion ist ein Multi-Agenten-Engineering-Betriebssystem, das mit der Lösung des Problems des Verlusts von Aufgabenkontext begann und schrittweise Fähigkeiten wie Design-Gates, Externalisierung impliziten Wissens und Engineering-Validierung entwickelte. Seine Entwicklungsgeschichte zeigt, wie die Zusammenarbeit von KI-Agenten von temporären Dialogen in einen verwaltbaren, überprüfbaren Engineering-Prozess umgewandelt werden kann. Derzeit entwickelt sich Legion in Richtung Verallgemeinerung, Messbarkeit und Produktreife.",
           "key_points": [
-            "Legion entwickelte sich vom Aufgabenrecorder zum Multi-Agenten-Engineering-Betriebssystem, wobei die Kernidee die Engineering-gestützte Umsetzung von Agenten-Fähigkeiten ist.",
-            "Durch Externalisierung impliziten Wissens, Design-Gates und strukturierte Reviews werden Nacharbeit und Aufmerksamkeitslecks reduziert.",
-            "Das ausgereifte System unterstützt kontrollierte Autonomie und wandelt die Rolle des Menschen vom Ausführenden zum Prüfer, Entscheider und System-Iterator."
+            "Die Entwicklung von Legion lässt sich in fünf Phasen unterteilen: Von der Aufgabenpersistenz bis zur kontrollierten Autonomie, wobei schrittweise Probleme wie Kontextmanagement, Externalisierung impliziten Wissens und Designvalidierung gelöst werden.",
+            "Der Kernwert von Legion liegt in der Institutionalisierung der Multi-Agenten-Kollaboration durch Mechanismen wie RFC, Review und Spec, um die Kosten für Nacharbeit zu senken und eine Engineering-gerechte Zusammenarbeit zu ermöglichen.",
+            "Die neueste Entwicklungsrichtung von Legion ist die Verallgemeinerung und Produktreife (legion-mind), wobei Benchmark-gesteuerte Iteration und Reproduzierbarkeit betont werden."
           ],
-          "audience": "AI-Agenten-Entwickler, Engineering-Teamleiter, Techniker mit Interesse an Multi-Agenten-Kollaboration und Engineering-Prozessen.",
+          "audience": "KI-Ingenieure, Multi-Agenten-Systemforscher, Engineering-Teamleiter sowie technisches Personal, das an KI-Kollaborationstools und der Optimierung von Engineering-Prozessen interessiert ist.",
           "tags": [
-            "Legion",
             "KI-Agent",
-            "Engineering-Betriebssystem",
-            "Multi-Agenten-Kollaboration",
-            "Aufgabenmanagement",
+            "Engineering-Kollaborationssystem",
+            "Multi-Agenten-System",
+            "Legion",
+            "Kontextmanagement",
             "Design-Gate",
-            "Engineering-Verifizierung"
+            "implizites Wissen",
+            "Engineering-Prozess"
           ]
         }
       },
-      "metadataTranslationHash": "a4f7772eb347ce4d6c93ad9332e09d985fb96d9ab8064968e33ae5e134278625",
+      "metadataTranslationHash": "6136760d25d388365852eb3a19ace7a9505a9ae4108a257bea354c8b12ad0a91",
       "category": "AI Agent",
-      "nativeMarkdownHash": "c30f1d9647a7fa76635ebcc96150c1ffe1757bc5287175646fb98b30d767c4fd"
+      "nativeMarkdownHash": "2a8ab4ef1160314ad343378aa6e618884f87c5b5e7e208905bfc138a0a065117"
     },
     {
       "hash": "10488fd5e0b95ca02e83f9b44d54de3863e77bc231143f618bf808522d58e9dd",

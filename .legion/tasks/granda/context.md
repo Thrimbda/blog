@@ -29,6 +29,7 @@
 - 去掉 Czon tags / metadata 的 chip 化背景和盒状外观
 - 同步 `.czon/style.css` 到 `.czon/dist/style.css` 进行本地预览验证
 - 完成 Czon 页面桌面/移动端截图复查与复审
+- 排查线上 `/czon` 是否部署新样式，确认 live `style.css` 与仓库 `.czon/style.css` 内容完全一致；当前差异属于设计感知问题，不是发布失败。
 
 
 ### 🟡 进行中
@@ -65,6 +66,7 @@
 | 将 critique 输出从 advisory 提升为 RFC 4.5 的可执行门禁，再据此实施最高杠杆修复 | 用户要求先压到 granda task 的 RFC 再按优先级开始修改；只有把 critique 结论转成允许/禁止/证据规则，才能避免再次滑回主观微调 | 直接按 critique 改代码而不更新 gate；只更新 RFC 不落地实现 | 2026-03-12 |
 | 将 `.czon/style.css` 迁移到与主站一致的 Granda 视觉语言，但保留 Czon 生成页自身的信息结构 | 用户要求 Czon style 也统一到当前主题；直接照搬主站模板不可行，因为 Czon 输出结构不同，因此应统一设计原语而不是模板层级 | 保持独立的旧 czon 蓝白文档风格；尝试完全覆盖 Czon 布局使其与主站 HTML 一致 | 2026-03-12 |
 | Czon 页面统一设计原语，但不强行复刻主站模板层级；对 Czon 独有结构采取低声量适配 | Czon 生成 DOM 与主站模板差异较大，直接套用主站模板不可持续；统一配色、排版、header/footer、TOC 和 tags 语言更稳 | 保持独立旧风格；完全重写 Czon 生成 DOM 的布局 | 2026-03-12 |
+| 线上 `https://0xc1.space/czon` 已经部署了当前 Czon 样式；通过 GitHub Pages 最新成功 run（2026-03-12 11:37Z）、线上 `style.css` 与仓库 `.czon/style.css` 的 SHA256 一致、`last-modified` 时间与部署时间一致可确认不是“未上线”问题。 | 用户反馈线上看起来不像本地预期，排查发现问题不在部署链路，而在于 `/czon` 根页仍保留 CZON 自身的 Multilingual Site Navigator 结构与文案，视觉变化主要体现在配色/间距/字体等设计原语，而不是改造成主站同构页面。 | 若要让用户一眼看出和主站统一，需要继续改 `/czon` 根 landing 的信息架构/文案或更强的 CSS 覆盖，而不是继续排查部署。 | 2026-03-12 |
 
 ---
 
@@ -83,7 +85,7 @@
 
 ---
 
-*最后更新: 2026-03-12 18:08 by Claude*
+*最后更新: 2026-03-12 21:09 by Claude*
 ，我可以继续做一轮只针对字重/间距的毫米级微调
 
 **注意事项：**

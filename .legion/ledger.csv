@@ -136,3 +136,6 @@
 2026-03-12T09:44:27.088Z,legion_update_plan,granda,Granda 主题细节收口,Claude,,success
 2026-03-12T09:44:27.088Z,legion_update_context,granda,Granda 主题细节收口,Claude,addDecision: 将 `.czon/style.css` 迁移到与主站一致的 Granda 视觉语言，但保留 Czon 生成页自身的信息结构,success
 2026-03-12T10:08:43.975Z,legion_update_context,granda,Granda 主题细节收口,Claude,addDecision: Czon 页面统一设计原语，但不强行复刻主站模板层级；对 Czon 独有结构采取低声量适配,success
+2026-03-12T12:53:21.437Z,legion_get_status,granda,Granda 主题细节收口,Claude,,success
+2026-03-12T13:09:23.881Z,legion_update_context,granda,Granda 主题细节收口,Claude,addDecision: 线上 `https://0xc1.space/czon` 已经部署了当前 Czon 样式；通过 GitHub Pages 最新成功 run（2026-03-12 11:37Z）、线上 `style.css` 与仓库 `.czon/style.css` 的 SHA256 一致、`last-modified` 时间与部署时,success
+2026-03-12T13:09:23.973Z,legion_update_context,granda,Granda 主题细节收口,Claude,progress.completed: 排查线上 `/czon` 是否部署新样式，确认 live `style.css` 与仓库 `.czon/style.css` 内容完全一致；当前差异属于设计感知问题，不是发布失败。,success
