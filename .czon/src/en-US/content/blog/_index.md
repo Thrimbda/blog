@@ -1,8 +1,8 @@
 +++
 paginate_by = 15
-title = "All blog posts"
+title = "Blog Archive"
 sort_by = "date"
 page_template = "blog-page.html"
 +++
 
-> List of all *[tags](/tags)*
+> Read chronologically, or browse by *[tags](/tags)*.

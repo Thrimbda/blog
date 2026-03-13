@@ -1,8 +1,8 @@
 +++
 paginate_by = 15
-title = "Alle Blogbeiträge"
+title = "Blog-Archiv"
 sort_by = "date"
 page_template = "blog-page.html"
 +++
 
-> Liste aller *[Schlagwörter](/tags)*
+> Chronologisch lesen oder nach *[Tags](/tags)* suchen.

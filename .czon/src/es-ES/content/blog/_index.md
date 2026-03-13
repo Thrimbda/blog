@@ -1,8 +1,8 @@
 +++
 paginate_by = 15
-title = "Todas las entradas del blog"
+title = "Archivo del blog"
 sort_by = "date"
 page_template = "blog-page.html"
 +++
 
-> Lista de todas las *[etiquetas](/tags)*
+> Lee en orden cronológico, o buscar entradas por *[etiquetas](/tags)*.

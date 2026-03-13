@@ -188,7 +188,7 @@
       "metadataTranslationHash": "8e05a8d20ee95c1e953773e560bfe8a1f6d441aa823f96912a99520d60d7e05b"
     },
     {
-      "hash": "f7545e99dcca1a74b8e5143bd836a0a1387e40d293214796aee0dae43eb2b154",
+      "hash": "0a2f28e769fe762e7d1abdfc43f51d5e51600c664acfc42ec1392a5c52b0ebc5",
       "path": "content/_index.md",
       "links": [
         "./tags",
@@ -202,304 +202,280 @@
       ],
       "metadata": {
         "title": "博客重建与个人表达",
-        "description": "作者分享重新搭建个人博客的心路历程，选择Zola静态网站生成器的原因，并回顾早年博客文章。",
-        "short_summary": "作者在2024年重新搭建博客，选择了Zola静态网站生成器，看重其长期可维护性和简单性。文章回顾了早年写博客的初衷，并分享了联系方式和朋友链接。",
-        "audience": "对个人博客搭建、静态网站生成器感兴趣的技术爱好者或博客作者",
+        "description": "作者分享重新搭建个人博客的动机、技术选型（Zola）以及个人表达与博客维护的思考。",
+        "short_summary": "作者因Hexo CI故障，选择Zola重新搭建博客，强调其简单、可长期维护的特点。文章回顾了博客历史，分享了联系方式和朋友链接，体现了对个人独立博客的坚持。",
+        "audience": "对个人博客搭建、静态网站生成器感兴趣的技术爱好者，尤其是寻求简单、可维护博客解决方案的读者。",
         "key_points": [
-          "作者在2024年翻修博客，选择Zola静态网站生成器",
-          "选择Zola的原因包括写Markdown、长期可维护和主题简单",
-          "回顾2017年刚开始写博客时的文章和心路历程"
+          "选择Zola作为博客生成器，因其简单、支持Markdown且可长期维护",
+          "回顾博客历史，从简书到自建博客，追求表达自由",
+          "分享联系方式和朋友博客链接，体现社区互动"
         ],
-        "summary": "本文作者在2024年决定翻修年久失修的博客，因线下表达欲已能快速释放，写文章变得奢侈。经过简单考察，选择了单二进制静态网站生成器Zola，主要满足写Markdown、长期可维护和主题简单易维护的需求。作者回顾了2017年刚开始写博客时的文章，并分享了联系方式、朋友博客链接和脚注。文章核心在于个人博客的维护选择与心路历程。",
+        "summary": "本文作者因Hexo CI故障，决定重新搭建博客，选择了静态网站生成器Zola。文章回顾了从简书到自建博客的历程，解释了选择Zola的原因：支持Markdown、长期可维护性、主题简单。作者还分享了联系方式、朋友博客链接，并保留了2017年的旧文，表达了对个人博客自由表达的重视。",
         "slug": "blog-rebuild-and-personal-expression",
         "tags": [
-          "个人博客",
+          "博客搭建",
           "Zola",
           "静态网站生成器",
-          "Markdown",
-          "博客维护",
-          "技术选择"
+          "个人博客",
+          "技术选型",
+          "Markdown"
         ],
         "inferred_date": "2024-01-01",
         "inferred_lang": "zh-Hans",
         "tokens_used": {
-          "prompt": 1047,
-          "completion": 308,
-          "total": 1355
+          "prompt": 1039,
+          "completion": 298,
+          "total": 1337
         }
       },
       "category": "Blog Introduction",
-      "nativeMarkdownHash": "f7545e99dcca1a74b8e5143bd836a0a1387e40d293214796aee0dae43eb2b154",
+      "nativeMarkdownHash": "0a2f28e769fe762e7d1abdfc43f51d5e51600c664acfc42ec1392a5c52b0ebc5",
       "metadataTranslations": {
         "zh-Hans": {
           "title": "博客重建与个人表达",
-          "description": "作者分享重新搭建个人博客的心路历程，选择Zola静态网站生成器的原因，并回顾早年博客文章。",
-          "summary": "本文作者在2024年决定翻修年久失修的博客，因线下表达欲已能快速释放，写文章变得奢侈。经过简单考察，选择了单二进制静态网站生成器Zola，主要满足写Markdown、长期可维护和主题简单易维护的需求。作者回顾了2017年刚开始写博客时的文章，并分享了联系方式、朋友博客链接和脚注。文章核心在于个人博客的维护选择与心路历程。",
-          "short_summary": "作者在2024年重新搭建博客，选择了Zola静态网站生成器，看重其长期可维护性和简单性。文章回顾了早年写博客的初衷，并分享了联系方式和朋友链接。",
+          "description": "作者分享重新搭建个人博客的动机、技术选型（Zola）以及个人表达与博客维护的思考。",
+          "summary": "本文作者因Hexo CI故障，决定重新搭建博客，选择了静态网站生成器Zola。文章回顾了从简书到自建博客的历程，解释了选择Zola的原因：支持Markdown、长期可维护性、主题简单。作者还分享了联系方式、朋友博客链接，并保留了2017年的旧文，表达了对个人博客自由表达的重视。",
+          "short_summary": "作者因Hexo CI故障，选择Zola重新搭建博客，强调其简单、可长期维护的特点。文章回顾了博客历史，分享了联系方式和朋友链接，体现了对个人独立博客的坚持。",
           "key_points": [
-            "作者在2024年翻修博客，选择Zola静态网站生成器",
-            "选择Zola的原因包括写Markdown、长期可维护和主题简单",
-            "回顾2017年刚开始写博客时的文章和心路历程"
+            "选择Zola作为博客生成器，因其简单、支持Markdown且可长期维护",
+            "回顾博客历史，从简书到自建博客，追求表达自由",
+            "分享联系方式和朋友博客链接，体现社区互动"
           ],
-          "audience": "对个人博客搭建、静态网站生成器感兴趣的技术爱好者或博客作者",
+          "audience": "对个人博客搭建、静态网站生成器感兴趣的技术爱好者，尤其是寻求简单、可维护博客解决方案的读者。",
           "tags": [
-            "个人博客",
+            "博客搭建",
             "Zola",
             "静态网站生成器",
-            "Markdown",
-            "博客维护",
-            "技术选择"
+            "个人博客",
+            "技术选型",
+            "Markdown"
           ]
         },
         "en-US": {
-          "title": "Blog Rebuild and Personal Expression",
-          "description": "The author shares the journey of rebuilding a personal blog, the reasons for choosing the Zola static site generator, and a look back at early blog posts.",
-          "summary": "In 2024, the author decided to renovate a long-neglected blog, as offline expression could quickly satisfy the urge to write, making article writing a luxury. After a brief evaluation, the single-binary static site generator Zola was chosen, primarily to meet the needs of writing in Markdown, long-term maintainability, and simple, easy-to-maintain themes. The author revisits posts from 2017 when blogging began and shares contact information, links to friends' blogs, and footnotes. The core of the article lies in the choices and reflections on maintaining a personal blog.",
-          "short_summary": "In 2024, the author rebuilt the blog using the Zola static site generator, valuing its long-term maintainability and simplicity. The article reflects on the original intent of early blogging and shares contact details and friend links.",
+          "title": "Blog Reconstruction and Personal Expression",
+          "description": "The author shares the motivation for rebuilding a personal blog, the technology selection (Zola), and reflections on personal expression and blog maintenance.",
+          "summary": "Due to a Hexo CI failure, the author decided to rebuild the blog and chose the static site generator Zola. The article reviews the journey from JianShu to self-hosted blogging, explaining the reasons for choosing Zola: Markdown support, long-term maintainability, and simple themes. The author also shares contact information, links to friends' blogs, and retains old posts from 2017, emphasizing the importance of free expression on personal blogs.",
+          "short_summary": "Due to a Hexo CI failure, the author chose Zola to rebuild the blog, highlighting its simplicity and long-term maintainability. The article reviews the blog's history, shares contact information and friend links, reflecting a commitment to independent personal blogging.",
           "key_points": [
-            "The author renovated the blog in 2024, choosing the Zola static site generator.",
-            "Reasons for choosing Zola include writing in Markdown, long-term maintainability, and simple themes.",
-            "A look back at posts and reflections from 2017 when blogging started."
+            "Chose Zola as the blog generator for its simplicity, Markdown support, and long-term maintainability",
+            "Reviewed blog history, from JianShu to self-hosted blogging, pursuing freedom of expression",
+            "Shared contact information and links to friends' blogs, reflecting community interaction"
           ],
-          "audience": "Tech enthusiasts or bloggers interested in personal blog setup and static site generators.",
+          "audience": "Tech enthusiasts interested in personal blog setup and static site generators, especially readers seeking simple, maintainable blog solutions.",
           "tags": [
-            "Personal Blog",
+            "Blog Setup",
             "Zola",
             "Static Site Generator",
-            "Markdown",
-            "Blog Maintenance",
-            "Technology Choice"
+            "Personal Blog",
+            "Technology Selection",
+            "Markdown"
           ]
         },
         "ja-JP": {
           "title": "ブログ再構築と個人表現",
-          "description": "著者が個人ブログを再構築した経緯、静的サイトジェネレーターZolaを選んだ理由、そして初期のブログ記事を振り返る。",
-          "summary": "本記事の著者は2024年に長年放置されていたブログの改修を決意した。オフラインでの表現欲は既に迅速に発散できるため、記事を書くことが贅沢な行為となっていた。簡単な調査の後、単一バイナリの静的サイトジェネレーターであるZolaを選択した。主な要件はMarkdownで執筆できること、長期的にメンテナンス可能であること、そしてシンプルでメンテナンスしやすいテーマであることだった。著者は2017年にブログを書き始めた頃の記事を振り返り、連絡先、友人ブログのリンク、脚注を共有している。記事の核心は、個人ブログのメンテナンスに関する選択とその心の軌跡にある。",
-          "short_summary": "著者は2024年にブログを再構築し、長期的なメンテナンス性とシンプルさを重視して静的サイトジェネレーターZolaを選択した。記事ではブログを始めた当初の動機を振り返り、連絡先や友人リンクを共有している。",
+          "description": "著者が個人ブログを再構築する動機、技術選定（Zola）、および個人表現とブログ維持に関する考察を共有しています。",
+          "summary": "本記事の著者はHexo CIの障害をきっかけに、ブログを再構築することを決め、静的サイトジェネレーターのZolaを選択しました。記事では、簡書から自前のブログ構築までの経緯を振り返り、Zolaを選んだ理由（Markdownサポート、長期的な保守性、シンプルなテーマ）を説明しています。また、連絡先や友人ブログのリンクを共有し、2017年の古い記事を残すことで、個人ブログにおける自由な表現の重要性を強調しています。",
+          "short_summary": "著者はHexo CIの障害を機にZolaを選択してブログを再構築し、そのシンプルさと長期的な保守性を強調しています。ブログの歴史を振り返り、連絡先や友人リンクを共有することで、個人の独立したブログへのこだわりを示しています。",
           "key_points": [
-            "著者は2024年にブログを改修し、静的サイトジェネレーターZolaを選択した",
-            "Zolaを選んだ理由は、Markdown執筆、長期的なメンテナンス性、シンプルでメンテナンスしやすいテーマを含む",
-            "2017年にブログを書き始めた頃の記事と心の軌跡を振り返る"
+            "シンプルでMarkdownをサポートし、長期的に保守可能なため、ブログジェネレーターとしてZolaを選択",
+            "簡書から自前のブログ構築までの歴史を振り返り、表現の自由を追求",
+            "連絡先や友人ブログのリンクを共有し、コミュニティとの交流を重視"
           ],
-          "audience": "個人ブログ構築、静的サイトジェネレーターに興味のある技術愛好家またはブロガー",
+          "audience": "個人ブログ構築や静的サイトジェネレーターに興味のある技術愛好家、特にシンプルで保守可能なブログソリューションを求める読者向け。",
           "tags": [
-            "個人ブログ",
+            "ブログ構築",
             "Zola",
             "静的サイトジェネレーター",
-            "Markdown",
-            "ブログメンテナンス",
-            "技術選定"
+            "個人ブログ",
+            "技術選定",
+            "Markdown"
           ]
         },
         "es-ES": {
           "title": "Reconstrucción del Blog y Expresión Personal",
-          "description": "El autor comparte su experiencia al reconstruir su blog personal, las razones para elegir el generador de sitios estáticos Zola y revisa sus primeras publicaciones en el blog.",
-          "summary": "En 2024, el autor decidió renovar su blog, que estaba desactualizado, ya que la necesidad de expresión offline se liberaba rápidamente, haciendo que escribir artículos se volviera un lujo. Tras una breve investigación, eligió Zola, un generador de sitios estáticos de un solo binario, principalmente para satisfacer la necesidad de escribir en Markdown, mantenibilidad a largo plazo y un tema simple y fácil de mantener. El autor revisó sus artículos de 2017, cuando comenzó a escribir el blog, y compartió sus datos de contacto, enlaces a blogs de amigos y notas al pie. El núcleo del artículo radica en las elecciones de mantenimiento y la experiencia personal con el blog.",
-          "short_summary": "En 2024, el autor reconstruyó su blog eligiendo el generador de sitios estáticos Zola, valorando su mantenibilidad a largo plazo y simplicidad. El artículo revisa la motivación inicial para escribir el blog y comparte datos de contacto y enlaces de amigos.",
+          "description": "El autor comparte la motivación para reconstruir su blog personal, la elección tecnológica (Zola) y reflexiones sobre la expresión personal y el mantenimiento del blog.",
+          "summary": "Debido a una falla en el CI de Hexo, el autor decidió reconstruir su blog y eligió el generador de sitios estáticos Zola. El artículo repasa su trayectoria desde JianShu hasta un blog autogestionado, explicando las razones para elegir Zola: soporte para Markdown, mantenibilidad a largo plazo y temas sencillos. El autor también comparte sus datos de contacto, enlaces a blogs de amigos y conserva publicaciones antiguas de 2017, expresando la importancia de la libre expresión en los blogs personales.",
+          "short_summary": "El autor eligió Zola para reconstruir su blog tras una falla en el CI de Hexo, destacando su simplicidad y mantenibilidad a largo plazo. El artículo repasa la historia del blog, comparte datos de contacto y enlaces de amigos, reflejando su compromiso con los blogs personales independientes.",
           "key_points": [
-            "En 2024, el autor renovó su blog y eligió el generador de sitios estáticos Zola",
-            "Las razones para elegir Zola incluyen escribir en Markdown, mantenibilidad a largo plazo y un tema simple",
-            "Revisión de los artículos y experiencias personales al comenzar a escribir el blog en 2017"
+            "Elegir Zola como generador de blogs por su simplicidad, soporte para Markdown y mantenibilidad a largo plazo",
+            "Repasar la historia del blog, desde JianShu hasta un blog autogestionado, en busca de libertad de expresión",
+            "Compartir datos de contacto y enlaces a blogs de amigos, reflejando la interacción comunitaria"
           ],
-          "audience": "Entusiastas de la tecnología o autores de blogs interesados en la creación de blogs personales o generadores de sitios estáticos",
+          "audience": "Entusiastas de la tecnología interesados en la creación de blogs personales y generadores de sitios estáticos, especialmente lectores que buscan soluciones de blogs simples y mantenibles.",
           "tags": [
-            "Blog personal",
+            "Construcción de blogs",
             "Zola",
             "Generador de sitios estáticos",
-            "Markdown",
-            "Mantenimiento de blogs",
-            "Elección tecnológica"
+            "Blog personal",
+            "Selección tecnológica",
+            "Markdown"
           ]
         },
         "de-DE": {
           "title": "Blog-Rekonstruktion und persönlicher Ausdruck",
-          "description": "Der Autor teilt seine Gedanken und Erfahrungen beim erneuten Aufbau seines persönlichen Blogs, erklärt die Gründe für die Wahl des statischen Website-Generators Zola und blickt auf frühere Blogbeiträge zurück.",
-          "summary": "Im Jahr 2024 beschloss der Autor, seinen veralteten Blog zu überarbeiten, da der Ausdruck offline bereits schnell erfüllt werden konnte und das Schreiben von Artikeln zu einem Luxus geworden war. Nach einer kurzen Recherche wählte er den statischen Website-Generator Zola, der als einzelne Binärdatei ausgeliefert wird, hauptsächlich weil er das Schreiben in Markdown, langfristige Wartbarkeit und ein einfaches, leicht zu pflegendes Theme ermöglicht. Der Autor blickt auf Artikel aus dem Jahr 2017 zurück, als er mit dem Bloggen begann, und teilt Kontaktinformationen, Links zu Blogs von Freunden sowie Fußnoten. Der Kern des Artikels liegt in der Wahl der Blog-Wartung und den persönlichen Gedankengängen.",
-          "short_summary": "Der Autor baute seinen Blog 2024 mit dem statischen Website-Generator Zola neu auf, wobei er auf langfristige Wartbarkeit und Einfachheit Wert legte. Der Artikel blickt auf die ursprüngliche Motivation für das Bloggen zurück und teilt Kontaktinformationen sowie Links von Freunden.",
+          "description": "Der Autor teilt die Motivation für den Neuaufbau seines persönlichen Blogs, die Technologieauswahl (Zola) sowie Gedanken zum persönlichen Ausdruck und zur Blog-Pflege.",
+          "summary": "Aufgrund eines Hexo-CI-Fehlers beschloss der Autor, seinen Blog neu aufzubauen, und wählte den statischen Website-Generator Zola. Der Artikel blickt auf die Entwicklung von JianShu zum selbst gehosteten Blog zurück und erklärt die Gründe für die Wahl von Zola: Markdown-Unterstützung, langfristige Wartbarkeit, einfache Themes. Der Autor teilt auch Kontaktmöglichkeiten, Links zu Blogs von Freunden und bewahrt alte Artikel aus dem Jahr 2017 auf, um die Bedeutung freier persönlicher Ausdrucksmöglichkeiten im Blog zu betonen.",
+          "short_summary": "Aufgrund eines Hexo-CI-Fehlers wählte der Autor Zola für den Neuaufbau seines Blogs und betont dessen Einfachheit und langfristige Wartbarkeit. Der Artikel rekapituliert die Blog-Geschichte, teilt Kontaktmöglichkeiten und Freundeslinks und zeigt das Festhalten an einem unabhängigen persönlichen Blog.",
           "key_points": [
-            "Der Autor renovierte 2024 seinen Blog und wählte den statischen Website-Generator Zola",
-            "Gründe für die Wahl von Zola sind das Schreiben in Markdown, langfristige Wartbarkeit und ein einfaches Theme",
-            "Rückblick auf Artikel und Gedankengänge aus dem Jahr 2017, als das Bloggen begann"
+            "Wahl von Zola als Blog-Generator aufgrund seiner Einfachheit, Markdown-Unterstützung und langfristigen Wartbarkeit",
+            "Rückblick auf die Blog-Geschichte: von JianShu zum selbst gehosteten Blog, auf der Suche nach Ausdrucksfreiheit",
+            "Teilen von Kontaktmöglichkeiten und Links zu Blogs von Freunden, um Community-Interaktion zu fördern"
           ],
-          "audience": "Technikbegeisterte oder Blog-Autoren, die sich für den Aufbau persönlicher Blogs oder statische Website-Generatoren interessieren",
+          "audience": "Technikbegeisterte, die sich für den Aufbau persönlicher Blogs und statische Website-Generatoren interessieren, insbesondere Leser, die nach einfachen, wartbaren Blog-Lösungen suchen.",
           "tags": [
-            "Persönlicher Blog",
+            "Blog-Aufbau",
             "Zola",
             "Statischer Website-Generator",
-            "Markdown",
-            "Blog-Wartung",
-            "Technische Auswahl"
+            "Persönlicher Blog",
+            "Technologieauswahl",
+            "Markdown"
           ]
         }
       },
-      "metadataTranslationHash": "bafb91cc0321d8ad09d35090ff95732cb385ed3b3e2651f74e27de1bd3ac70f7"
+      "metadataTranslationHash": "9ca03565b39eff0db1022ba0f0f5185a21e1ded2dcfe573f435062d982e7e34b"
     },
     {
-      "hash": "8d589b257fc275741645b96e35f74ac33d582bf23a0db377ac971c084b6a28f5",
+      "hash": "5da916135bf2ab01fffa09d9714d8b204000b92e7fa45728b795b2e0c0b58422",
       "path": "content/about.md",
       "links": [],
       "metadata": {
         "title": "About",
-        "description": "王思远分享个人经历与思考，探讨技术、艺术、游戏与生活的交织，展现对真实生活的追求。",
-        "short_summary": "王思远是一名开发者，他分享了自己对技术、艺术和生活的思考。他认为技术应作为工具促进公平，而非建造围墙；艺术和游戏为他提供了勇气和反思；而生活中的具体瞬间，如照顾猫咪或骑行观景，让他更深刻地理解存在。",
-        "audience": "对个人成长、技术哲学、生活反思感兴趣的读者，尤其是开发者和创意工作者。",
+        "description": "王思远分享个人生活与思考，探讨技术、艺术、游戏如何交织成真实的人生体验",
+        "short_summary": "王思远是一位开发者，用技术理解世界，但更关注其社会价值。他通过游戏、艺术和日常生活寻找真实，强调实践的重要性。文章传达了对理想与现实的反思，以及具体生活细节中的哲学思考。",
+        "audience": "对技术人文、个人成长、生活哲学感兴趣的读者，尤其是开发者和创意工作者",
         "key_points": [
-          "王思远毕业于XJTU，是一名居住在上海的开发者。",
-          "他认为技术是理解世界的语言，但应作为工具促进公平，而非建造围墙。",
-          "游戏和艺术为他提供了勇气、反思和情感共鸣。",
-          "他通过照顾猫咪、骑行等具体生活体验，认识到生活不是可优化的算法。",
-          "他重视实践，认为具体的生活细节比抽象的哲学更值得关注。",
-          "他仍在学习如何诚实地存在，从理想主义转向关注微小的现实光斑。",
-          "他可能出现在核聚变展会、开源社区或苏州河边等场景。",
-          "文章以第一人称叙述，语言平实而富有反思性。"
+          "技术应服务于公平，而非建造围墙",
+          "虚拟世界和艺术提供真实的情感与勇气",
+          "具体生活细节比抽象理想更值得关注",
+          "通过实践而非空想寻找人生方向"
         ],
-        "summary": "本文是王思远的个人简介，他毕业于XJTU，现居上海，是一名开发者。文章通过描述他的日常生活、技术工作、艺术爱好、游戏体验以及生活观察，展现了他对技术作为工具的理解、对虚拟与现实世界的思考，以及对具体生活细节的珍视。他认识到技术应服务于公平，艺术和游戏提供勇气与反思，而生活中的微小瞬间往往比抽象理想更值得关注。文章以平实的语言传达了一种在理想与现实之间寻找平衡的生活态度。",
+        "summary": "本文是王思远的个人简介，他是一位开发者，白天用代码构建秩序，夜晚沉浸在游戏和艺术中。他反思技术不仅是谋生工具，更应服务于公平；虚拟世界给予真实勇气，艺术提供呼吸通道。通过养猫、骑行等具体生活，他学会从焦虑中抽离，关注细微光斑。文章展现了一个理想主义者如何在现实中寻找平衡，诚实地存在。",
         "slug": "about-wangsiyuan",
         "tags": [
           "个人简介",
-          "技术思考",
+          "技术反思",
+          "游戏文化",
+          "艺术体验",
           "生活哲学",
-          "游戏",
-          "艺术",
           "开发者"
         ],
         "inferred_lang": "zh-Hans",
         "tokens_used": {
-          "prompt": 1256,
-          "completion": 431,
-          "total": 1687
+          "prompt": 1201,
+          "completion": 285,
+          "total": 1486
         }
       },
       "category": "Personal Introduction",
-      "nativeMarkdownHash": "8d589b257fc275741645b96e35f74ac33d582bf23a0db377ac971c084b6a28f5",
+      "nativeMarkdownHash": "5da916135bf2ab01fffa09d9714d8b204000b92e7fa45728b795b2e0c0b58422",
       "metadataTranslations": {
         "en-US": {
           "title": "About",
-          "description": "Wang Siyuan shares personal experiences and reflections, exploring the interplay of technology, art, gaming, and life, showcasing a pursuit of authentic living.",
-          "summary": "This article is a personal introduction of Wang Siyuan, a graduate of XJTU now living in Shanghai as a developer. Through descriptions of his daily life, technical work, artistic hobbies, gaming experiences, and life observations, it reveals his understanding of technology as a tool, his reflections on virtual and real worlds, and his appreciation for concrete life details. He recognizes that technology should serve fairness, art and games provide courage and reflection, and the small moments in life are often more worthy of attention than abstract ideals. The article conveys, in plain language, a life attitude of seeking balance between ideals and reality.",
-          "short_summary": "Wang Siyuan is a developer who shares his thoughts on technology, art, and life. He believes technology should be a tool to promote fairness, not build walls; art and games provide him with courage and reflection; and concrete moments in life, such as caring for cats or cycling to enjoy the scenery, help him understand existence more deeply.",
+          "description": "Wang Siyuan shares personal life and reflections, exploring how technology, art, and games intertwine to form genuine life experiences.",
+          "summary": "This article is a personal introduction of Wang Siyuan, a developer who builds order with code by day and immerses himself in games and art by night. He reflects that technology should not only be a means of livelihood but also serve fairness; virtual worlds provide real courage, and art offers a channel for breathing. Through concrete aspects of life like raising cats and cycling, he learns to detach from anxiety and focus on subtle glimmers of light. The article portrays an idealist seeking balance in reality and existing honestly.",
+          "short_summary": "Wang Siyuan is a developer who uses technology to understand the world but places greater emphasis on its social value. He seeks authenticity through games, art, and daily life, highlighting the importance of practice. The article conveys reflections on ideals versus reality and philosophical musings found in the details of everyday life.",
           "key_points": [
-            "Wang Siyuan graduated from XJTU and is a developer living in Shanghai.",
-            "He views technology as a language to understand the world, but it should serve as a tool to promote fairness, not build walls.",
-            "Gaming and art provide him with courage, reflection, and emotional resonance.",
-            "Through concrete life experiences like caring for cats and cycling, he realizes life is not an algorithm to be optimized.",
-            "He values practice, believing that concrete life details are more worthy of attention than abstract philosophy.",
-            "He is still learning how to exist honestly, shifting from idealism to focusing on small, real glimmers of reality.",
-            "He might be found at events like Fusion Expo, open-source communities, or by the Suzhou River.",
-            "The article is narrated in the first person, with plain yet reflective language."
+            "Technology should serve fairness, not build walls",
+            "Virtual worlds and art provide genuine emotions and courage",
+            "Concrete details of life deserve more attention than abstract ideals",
+            "Find life direction through practice, not mere speculation"
           ],
-          "audience": "Readers interested in personal growth, philosophy of technology, and life reflections, especially developers and creative professionals.",
+          "audience": "Readers interested in technology and humanities, personal growth, and life philosophy, especially developers and creative professionals.",
           "tags": [
             "Personal Introduction",
             "Technology Reflection",
+            "Gaming Culture",
+            "Art Experience",
             "Life Philosophy",
-            "Gaming",
-            "Art",
             "Developer"
           ]
         },
         "zh-Hans": {
           "title": "关于",
-          "description": "王思远分享个人经历与思考，探讨技术、艺术、游戏与生活的交织，展现对真实生活的追求。",
-          "summary": "本文是王思远的个人简介，他毕业于XJTU，现居上海，是一名开发者。文章通过描述他的日常生活、技术工作、艺术爱好、游戏体验以及生活观察，展现了他对技术作为工具的理解、对虚拟与现实世界的思考，以及对具体生活细节的珍视。他认识到技术应服务于公平，艺术和游戏提供勇气与反思，而生活中的微小瞬间往往比抽象理想更值得关注。文章以平实的语言传达了一种在理想与现实之间寻找平衡的生活态度。",
-          "short_summary": "王思远是一名开发者，他分享了自己对技术、艺术和生活的思考。他认为技术应作为工具促进公平，而非建造围墙；艺术和游戏为他提供了勇气和反思；而生活中的具体瞬间，如照顾猫咪或骑行观景，让他更深刻地理解存在。",
+          "description": "王思远分享个人生活与思考，探讨技术、艺术、游戏如何交织成真实的人生体验",
+          "summary": "本文是王思远的个人简介，他是一位开发者，白天用代码构建秩序，夜晚沉浸在游戏和艺术中。他反思技术不仅是谋生工具，更应服务于公平；虚拟世界给予真实勇气，艺术提供呼吸通道。通过养猫、骑行等具体生活，他学会从焦虑中抽离，关注细微光斑。文章展现了一个理想主义者如何在现实中寻找平衡，诚实地存在。",
+          "short_summary": "王思远是一位开发者，用技术理解世界，但更关注其社会价值。他通过游戏、艺术和日常生活寻找真实，强调实践的重要性。文章传达了对理想与现实的反思，以及具体生活细节中的哲学思考。",
           "key_points": [
-            "王思远毕业于XJTU，是一名居住在上海的开发者。",
-            "他认为技术是理解世界的语言，但应作为工具促进公平，而非建造围墙。",
-            "游戏和艺术为他提供了勇气、反思和情感共鸣。",
-            "他通过照顾猫咪、骑行等具体生活体验，认识到生活不是可优化的算法。",
-            "他重视实践，认为具体的生活细节比抽象的哲学更值得关注。",
-            "他仍在学习如何诚实地存在，从理想主义转向关注微小的现实光斑。",
-            "他可能出现在核聚变展会、开源社区或苏州河边等场景。",
-            "文章以第一人称叙述，语言平实而富有反思性。"
+            "技术应服务于公平，而非建造围墙",
+            "虚拟世界和艺术提供真实的情感与勇气",
+            "具体生活细节比抽象理想更值得关注",
+            "通过实践而非空想寻找人生方向"
           ],
-          "audience": "对个人成长、技术哲学、生活反思感兴趣的读者，尤其是开发者和创意工作者。",
+          "audience": "对技术人文、个人成长、生活哲学感兴趣的读者，尤其是开发者和创意工作者",
           "tags": [
             "个人简介",
-            "技术思考",
+            "技术反思",
+            "游戏文化",
+            "艺术体验",
             "生活哲学",
-            "游戏",
-            "艺术",
             "开发者"
           ]
         },
         "ja-JP": {
-          "title": "About",
-          "description": "王思遠が個人の経験と思索を共有し、技術、芸術、ゲーム、生活の交錯を探り、真実の生活への追求を描き出す。",
-          "summary": "本稿は王思遠の個人紹介である。彼はXJTUを卒業し、現在上海在住の開発者だ。文章は、彼の日常生活、技術業務、芸術への愛好、ゲーム体験、生活観察を通じて、技術を道具としての理解、仮想と現実世界への思索、具体的な生活の細部を大切にする姿勢を示している。彼は、技術は公平に奉仕すべきであり、芸術とゲームは勇気と内省を提供し、生活の中の些細な瞬間こそが抽象的な理想よりも注目に値することを認識している。文章は平易な言葉で、理想と現実の間でバランスを見出す生活態度を伝えている。",
-          "short_summary": "王思遠は開発者であり、技術、芸術、生活についての思索を共有している。彼は、技術は壁を築くのではなく、公平を促進する道具としてあるべきだと考える。芸術とゲームは彼に勇気と内省を与え、猫の世話やサイクリングなどの具体的な生活の瞬間を通じて、存在をより深く理解している。",
+          "title": "自己紹介",
+          "description": "王思遠が個人の生活と思索を共有し、技術、芸術、ゲームがどのように絡み合って真実の人生経験を形成するかを探求する",
+          "summary": "この文章は王思遠の自己紹介である。彼は開発者であり、昼はコードで秩序を構築し、夜はゲームと芸術に没頭する。技術は単なる生計の手段ではなく、公平さに奉仕すべきだと反省し、仮想世界は真実の勇気を与え、芸術は呼吸の通路を提供する。猫を飼う、自転車に乗るなどの具体的な生活を通じて、彼は不安から離れ、細やかな光の斑点に注目することを学んだ。文章は理想主義者が現実の中でバランスを見つけ、誠実に存在する方法を示している。",
+          "short_summary": "王思遠は開発者であり、技術で世界を理解するが、その社会的価値により注目している。彼はゲーム、芸術、日常生活を通じて真実を探し、実践の重要性を強調する。文章は理想と現実への反省、および具体的な生活の細部における哲学的思考を伝えている。",
           "key_points": [
-            "王思遠はXJTU卒業で、上海在住の開発者である。",
-            "彼は技術を世界を理解する言語と考えるが、壁を築くのではなく、公平を促進する道具としてあるべきだと考えている。",
-            "ゲームと芸術は彼に勇気、内省、感情の共鳴を提供している。",
-            "猫の世話やサイクリングなどの具体的な生活体験を通じて、生活は最適化可能なアルゴリズムではないと認識している。",
-            "彼は実践を重視し、具体的な生活の細部は抽象的な哲学よりも注目に値すると考えている。",
-            "彼はまだ、誠実に存在する方法を学んでおり、理想主義から微かな現実の光へと関心を移している。",
-            "核融合展示会、オープンソースコミュニティ、蘇州河のほとりなどで彼を見かけるかもしれない。",
-            "文章は一人称で語られ、平易で内省的な言葉が特徴である。"
+            "技術は公平さに奉仕すべきであり、壁を築くためではない",
+            "仮想世界と芸術は真実の感情と勇気を提供する",
+            "具体的な生活の細部は抽象的な理想よりも注目に値する",
+            "空想ではなく実践を通じて人生の方向を見つける"
           ],
-          "audience": "個人の成長、技術哲学、生活への内省に関心のある読者、特に開発者やクリエイティブワーカー。",
+          "audience": "技術人文、個人成長、生活哲学に興味のある読者、特に開発者とクリエイティブワーカー",
           "tags": [
             "自己紹介",
-            "技術的思索",
+            "技術反省",
+            "ゲーム文化",
+            "芸術体験",
             "生活哲学",
-            "ゲーム",
-            "芸術",
             "開発者"
           ]
         },
         "de-DE": {
           "title": "Über mich",
-          "description": "Wang Siyuan teilt persönliche Erfahrungen und Gedanken, erkundet das Zusammenspiel von Technologie, Kunst, Spielen und Leben und zeigt das Streben nach einem authentischen Leben.",
-          "summary": "Dieser Text ist eine persönliche Vorstellung von Wang Siyuan, einem Absolventen der XJTU, der jetzt als Entwickler in Shanghai lebt. Durch die Beschreibung seines Alltags, seiner technischen Arbeit, künstlerischen Interessen, Spielerfahrungen und Lebensbeobachtungen zeigt er sein Verständnis von Technologie als Werkzeug, seine Gedanken über virtuelle und reale Welten und seine Wertschätzung für konkrete Lebensdetails. Er erkennt, dass Technologie der Fairness dienen sollte, Kunst und Spiele Mut und Reflexion bieten und die kleinen Momente im Leben oft mehr Aufmerksamkeit verdienen als abstrakte Ideale. In einfacher Sprache vermittelt der Text eine Lebenshaltung, die nach einem Gleichgewicht zwischen Ideal und Realität sucht.",
-          "short_summary": "Wang Siyuan ist ein Entwickler, der seine Gedanken zu Technologie, Kunst und Leben teilt. Er glaubt, dass Technologie als Werkzeug Fairness fördern sollte, nicht Mauern bauen; Kunst und Spiele geben ihm Mut und Raum für Reflexion; und konkrete Momente im Leben, wie die Pflege seiner Katze oder Fahrradtouren, lassen ihn die Existenz tiefer verstehen.",
+          "description": "Wang Siyuan teilt persönliche Erfahrungen und Gedanken, erkundet, wie Technologie, Kunst und Spiele sich zu authentischen Lebenserfahrungen verweben",
+          "summary": "Dieser Text ist eine persönliche Vorstellung von Wang Siyuan, einem Entwickler, der tagsüber mit Code Ordnung schafft und abends in Spiele und Kunst eintaucht. Er reflektiert, dass Technologie nicht nur ein Werkzeug zum Lebensunterhalt sein sollte, sondern auch der Gerechtigkeit dienen muss; virtuelle Welten geben echten Mut, Kunst bietet Atemwege. Durch konkrete Lebensaspekte wie Katzenhaltung und Radfahren lernt er, sich aus Ängsten zu lösen und auf feine Lichtpunkte zu achten. Der Artikel zeigt, wie ein Idealist im realen Leben Balance findet und ehrlich existiert.",
+          "short_summary": "Wang Siyuan ist ein Entwickler, der die Welt durch Technologie versteht, aber ihren gesellschaftlichen Wert stärker betont. Er sucht Authentizität durch Spiele, Kunst und Alltagsleben und unterstreicht die Bedeutung der Praxis. Der Artikel vermittelt Reflexionen über Ideale und Realität sowie philosophische Gedanken in konkreten Lebensdetails.",
           "key_points": [
-            "Wang Siyuan ist Absolvent der XJTU und lebt als Entwickler in Shanghai.",
-            "Er sieht Technologie als Sprache, um die Welt zu verstehen, die aber als Werkzeug Fairness fördern, nicht Mauern bauen sollte.",
-            "Spiele und Kunst bieten ihm Mut, Reflexion und emotionale Resonanz.",
-            "Durch konkrete Lebenserfahrungen wie Katzenpflege oder Fahrradfahren erkennt er, dass Leben kein zu optimierender Algorithmus ist.",
-            "Er schätzt Praxis und findet, dass konkrete Lebensdetails mehr Aufmerksamkeit verdienen als abstrakte Philosophie.",
-            "Er lernt noch, wie man ehrlich existiert, und wendet sich vom Idealismus kleinen, realen Lichtpunkten zu.",
-            "Man könnte ihn auf Messen wie der 'Nuclear Fusion', in Open-Source-Communities oder am Ufer des Suzhou-Flusses antreffen.",
-            "Der Text ist in der Ich-Perspektive verfasst, in einfacher und reflektierender Sprache."
+            "Technologie sollte der Gerechtigkeit dienen, nicht Mauern errichten",
+            "Virtuelle Welten und Kunst bieten echte Emotionen und Mut",
+            "Konkrete Lebensdetails verdienen mehr Aufmerksamkeit als abstrakte Ideale",
+            "Lebensrichtung durch Praxis statt leere Gedanken finden"
           ],
-          "audience": "Leser, die an persönlichem Wachstum, Technologiephilosophie und Lebensreflexion interessiert sind, insbesondere Entwickler und Kreative.",
+          "audience": "Leser mit Interesse an Technologie und Geisteswissenschaften, persönlichem Wachstum, Lebensphilosophie, insbesondere Entwickler und Kreative",
           "tags": [
             "Persönliche Vorstellung",
             "Technologie-Reflexion",
+            "Spielekultur",
+            "Kunsterfahrung",
             "Lebensphilosophie",
-            "Spiele",
-            "Kunst",
             "Entwickler"
           ]
         },
         "es-ES": {
           "title": "Acerca de",
-          "description": "Wang Siyuan comparte sus experiencias personales y reflexiones, explorando la interconexión entre tecnología, arte, videojuegos y la vida, mostrando su búsqueda de una vida auténtica.",
-          "summary": "Este texto es una breve biografía personal de Wang Siyuan, graduado de XJTU, residente en Shanghái y desarrollador. A través de la descripción de su vida cotidiana, su trabajo tecnológico, su afición por el arte, sus experiencias con videojuegos y sus observaciones sobre la vida, expresa su comprensión de la tecnología como herramienta, sus reflexiones sobre los mundos virtual y real, y su aprecio por los detalles concretos de la vida. Reconoce que la tecnología debe servir a la equidad, que el arte y los videojuegos ofrecen valor y reflexión, y que los pequeños momentos de la vida suelen merecer más atención que los ideales abstractos. Con un lenguaje sencillo, el texto transmite una actitud vital que busca el equilibrio entre el idealismo y la realidad.",
-          "short_summary": "Wang Siyuan es un desarrollador que comparte sus reflexiones sobre tecnología, arte y vida. Cree que la tecnología debe ser una herramienta para promover la equidad, no para construir muros; el arte y los videojuegos le proporcionan valor y reflexión; y los momentos concretos de la vida, como cuidar a su gato o pasear en bicicleta, le permiten comprender la existencia de manera más profunda.",
+          "description": "Wang Siyuan comparte su vida personal y reflexiones, explorando cómo la tecnología, el arte y los videojuegos se entrelazan para formar experiencias de vida auténticas",
+          "summary": "Este artículo es una presentación personal de Wang Siyuan, un desarrollador que construye orden con código durante el día y se sumerge en videojuegos y arte por la noche. Reflexiona sobre cómo la tecnología no debería ser solo una herramienta de subsistencia, sino servir a la equidad; los mundos virtuales brindan valor real y el arte ofrece un canal para respirar. A través de aspectos concretos de la vida como tener un gato y montar en bicicleta, aprende a distanciarse de la ansiedad y a enfocarse en los pequeños destellos de luz. El artículo muestra cómo un idealista busca equilibrio en la realidad, existiendo con honestidad.",
+          "short_summary": "Wang Siyuan es un desarrollador que usa la tecnología para comprender el mundo, pero se preocupa más por su valor social. Encuentra autenticidad a través de videojuegos, arte y la vida cotidiana, enfatizando la importancia de la práctica. El artículo transmite reflexiones sobre ideales y realidad, así como pensamientos filosóficos en los detalles concretos de la vida.",
           "key_points": [
-            "Wang Siyuan se graduó en XJTU y es un desarrollador que vive en Shanghái.",
-            "Considera que la tecnología es el lenguaje para entender el mundo, pero debe servir como herramienta para promover la equidad, no para construir muros.",
-            "Los videojuegos y el arte le proporcionan valor, reflexión y resonancia emocional.",
-            "A través de experiencias concretas como cuidar a su gato o pasear en bicicleta, se da cuenta de que la vida no es un algoritmo optimizable.",
-            "Valora la práctica, considerando que los detalles concretos de la vida merecen más atención que la filosofía abstracta.",
-            "Sigue aprendiendo a existir con honestidad, pasando del idealismo a enfocarse en los pequeños destellos de la realidad.",
-            "Es posible encontrarlo en eventos como la feria Fusion, comunidades de código abierto o a orillas del río Suzhou.",
-            "El texto está narrado en primera persona, con un lenguaje sencillo y reflexivo."
+            "La tecnología debe servir a la equidad, no construir muros",
+            "Los mundos virtuales y el arte proporcionan emociones y valor reales",
+            "Los detalles concretos de la vida merecen más atención que los ideales abstractos",
+            "Encontrar la dirección en la vida a través de la práctica, no de la fantasía"
           ],
-          "audience": "Lectores interesados en el crecimiento personal, la filosofía de la tecnología y la reflexión sobre la vida, especialmente desarrolladores y profesionales creativos.",
+          "audience": "Lectores interesados en humanidades tecnológicas, crecimiento personal y filosofía de vida, especialmente desarrolladores y trabajadores creativos",
           "tags": [
-            "Biografía personal",
+            "Presentación personal",
             "Reflexión tecnológica",
+            "Cultura de videojuegos",
+            "Experiencia artística",
             "Filosofía de vida",
-            "Videojuegos",
-            "Arte",
             "Desarrollador"
           ]
         }
       },
-      "metadataTranslationHash": "e2d83a945645c981edcb83aea75fb9d2c3887079c36bfc363a27ca4a813cb66d"
+      "metadataTranslationHash": "c29af0204fce526e1d77b0c96f760c1e78cd71653069f9c917d0237ed77abbd8"
     },
     {
       "hash": "a10ec12196d196dcb6c83841403b202aa6002d35dd1144f1764a9ef0ef9afe37",
@@ -1123,149 +1099,137 @@
       "metadataTranslationHash": "a965bc1d45f301794309dc6928a60915285fbda2ce2a20110c8c270d16cd612d"
     },
     {
-      "hash": "a55abaeddee43e2f4ee45c3d0a0f24db1b8f8f1fc1726bff28ac9a701624487e",
+      "hash": "0df9bd5fa1a83b07f5dd37dda6397148689f14b813984baaf41bd6b09dd63689",
       "path": "content/blog/_index.md",
       "links": [
         "/tags"
       ],
       "metadata": {
         "title": "All blog posts",
-        "description": "A list of all blog posts sorted by date, with tags for categorization.",
-        "short_summary": "This page lists all blog posts in a paginated format, sorted by date. It also provides access to tags for better content organization.",
-        "audience": "Website visitors looking to browse all blog posts or find content by tags.",
+        "description": "博客归档页面，提供按时间顺序和标签分类的博客文章浏览方式。",
+        "short_summary": "这是一个博客归档页面，允许用户按时间顺序浏览文章或通过标签筛选内容。页面配置了分页和排序设置，便于导航。",
+        "audience": "博客读者，希望按时间或主题浏览文章的用户",
         "key_points": [
-          "Paginated display of blog posts",
-          "Sorting by date",
-          "Reference to tags for categorization",
-          "Use of a custom page template",
-          "Title indicates it's a comprehensive list"
+          "博客归档页面按日期排序显示文章",
+          "支持通过标签分类查找文章",
+          "每页显示15篇文章的分页设置"
         ],
-        "summary": "This document serves as an index page for all blog posts, configured to display 15 posts per page sorted by date. It includes a reference to a tags page for further categorization, making it easy for users to browse and filter content. The page uses a specific template for consistent presentation.",
+        "summary": "该文档是一个博客归档页面的配置和说明，设置了每页显示15篇文章，页面标题为“博客归档”，按日期排序，使用特定的页面模板。文档还提供了浏览建议：用户可以按时间顺序阅读，也可以通过标签页面查找感兴趣的文章。",
         "slug": "all-blog-posts",
         "tags": [
-          "blog",
-          "posts",
-          "tags",
-          "pagination",
-          "archive"
+          "博客归档",
+          "标签分类",
+          "时间顺序",
+          "页面配置",
+          "内容浏览"
         ],
-        "inferred_lang": "en-US",
+        "inferred_lang": "zh-Hans",
         "tokens_used": {
-          "prompt": 521,
-          "completion": 229,
-          "total": 750
+          "prompt": 473,
+          "completion": 208,
+          "total": 681
         }
       },
       "category": "Blog Index",
-      "nativeMarkdownHash": "a55abaeddee43e2f4ee45c3d0a0f24db1b8f8f1fc1726bff28ac9a701624487e",
+      "nativeMarkdownHash": "0df9bd5fa1a83b07f5dd37dda6397148689f14b813984baaf41bd6b09dd63689",
       "metadataTranslations": {
         "zh-Hans": {
           "title": "所有博客文章",
-          "description": "按日期排序的所有博客文章列表，并带有用于分类的标签。",
-          "summary": "本文档作为所有博客文章的索引页，配置为每页显示15篇文章并按日期排序。它包含一个指向标签页的引用，以便进一步分类，使用户能够轻松浏览和筛选内容。该页面使用特定模板以确保一致的呈现效果。",
-          "short_summary": "此页面以分页格式列出所有博客文章，并按日期排序。同时提供标签访问功能，以便更好地组织内容。",
+          "description": "博客归档页面，提供按时间顺序和标签分类的博客文章浏览方式。",
+          "summary": "该文档是一个博客归档页面的配置和说明，设置了每页显示15篇文章，页面标题为“博客归档”，按日期排序，使用特定的页面模板。文档还提供了浏览建议：用户可以按时间顺序阅读，也可以通过标签页面查找感兴趣的文章。",
+          "short_summary": "这是一个博客归档页面，允许用户按时间顺序浏览文章或通过标签筛选内容。页面配置了分页和排序设置，便于导航。",
           "key_points": [
-            "博客文章的分页显示",
-            "按日期排序",
-            "引用标签进行分类",
-            "使用自定义页面模板",
-            "标题表明这是一个完整的列表"
+            "博客归档页面按日期排序显示文章",
+            "支持通过标签分类查找文章",
+            "每页显示15篇文章的分页设置"
           ],
-          "audience": "希望浏览所有博客文章或通过标签查找内容的网站访问者。",
+          "audience": "博客读者，希望按时间或主题浏览文章的用户",
           "tags": [
-            "博客",
-            "文章",
-            "标签",
-            "分页",
-            "归档"
+            "博客归档",
+            "标签分类",
+            "时间顺序",
+            "页面配置",
+            "内容浏览"
           ]
         },
         "en-US": {
           "title": "All blog posts",
-          "description": "A list of all blog posts sorted by date, with tags for categorization.",
-          "summary": "This document serves as an index page for all blog posts, configured to display 15 posts per page sorted by date. It includes a reference to a tags page for further categorization, making it easy for users to browse and filter content. The page uses a specific template for consistent presentation.",
-          "short_summary": "This page lists all blog posts in a paginated format, sorted by date. It also provides access to tags for better content organization.",
+          "description": "Blog archive page, providing chronological and tag-based browsing of blog posts.",
+          "summary": "This document is a configuration and description of a blog archive page, set to display 15 posts per page, with the page title 'Blog Archive', sorted by date, using a specific page template. The document also provides browsing suggestions: users can read in chronological order or find articles of interest through the tag page.",
+          "short_summary": "This is a blog archive page that allows users to browse articles chronologically or filter content by tags. The page is configured with pagination and sorting settings for easy navigation.",
           "key_points": [
-            "Paginated display of blog posts",
-            "Sorting by date",
-            "Reference to tags for categorization",
-            "Use of a custom page template",
-            "Title indicates it's a comprehensive list"
+            "Blog archive page displays articles sorted by date",
+            "Supports finding articles through tag classification",
+            "Pagination setting of 15 articles per page"
           ],
-          "audience": "Website visitors looking to browse all blog posts or find content by tags.",
+          "audience": "Blog readers, users who want to browse articles by time or topic",
           "tags": [
-            "blog",
-            "posts",
-            "tags",
-            "pagination",
-            "archive"
+            "Blog Archive",
+            "Tag Classification",
+            "Chronological Order",
+            "Page Configuration",
+            "Content Browsing"
           ]
         },
         "es-ES": {
           "title": "Todas las entradas del blog",
-          "description": "Una lista de todas las entradas del blog ordenadas por fecha, con etiquetas para su categorización.",
-          "summary": "Este documento sirve como página de índice para todas las entradas del blog, configurada para mostrar 15 entradas por página ordenadas por fecha. Incluye una referencia a una página de etiquetas para una categorización más detallada, facilitando a los usuarios la navegación y el filtrado del contenido. La página utiliza una plantilla específica para una presentación consistente.",
-          "short_summary": "Esta página enumera todas las entradas del blog en un formato paginado, ordenadas por fecha. También proporciona acceso a etiquetas para una mejor organización del contenido.",
+          "description": "Página de archivo del blog que ofrece formas de navegar por las entradas en orden cronológico y por etiquetas.",
+          "summary": "Este documento es una configuración y descripción de una página de archivo de blog. Establece la visualización de 15 entradas por página, con el título \"Archivo del Blog\", ordenadas por fecha y utilizando una plantilla de página específica. También proporciona sugerencias de navegación: los usuarios pueden leer en orden cronológico o buscar entradas de interés a través de la página de etiquetas.",
+          "short_summary": "Esta es una página de archivo de blog que permite a los usuarios navegar por las entradas en orden cronológico o filtrar contenido por etiquetas. La página está configurada con paginación y ordenación para facilitar la navegación.",
           "key_points": [
-            "Visualización paginada de las entradas del blog",
-            "Ordenación por fecha",
-            "Referencia a etiquetas para categorización",
-            "Uso de una plantilla de página personalizada",
-            "El título indica que es una lista completa"
+            "La página de archivo del blog muestra las entradas ordenadas por fecha",
+            "Permite buscar entradas clasificadas por etiquetas",
+            "Configuración de paginación con 15 entradas por página"
           ],
-          "audience": "Visitantes del sitio web que buscan explorar todas las entradas del blog o encontrar contenido por etiquetas.",
+          "audience": "Lectores del blog que desean navegar por las entradas por fecha o tema",
           "tags": [
-            "blog",
-            "entradas",
-            "etiquetas",
-            "paginación",
-            "archivo"
+            "Archivo del blog",
+            "Clasificación por etiquetas",
+            "Orden cronológico",
+            "Configuración de página",
+            "Navegación de contenido"
           ]
         },
         "de-DE": {
           "title": "Alle Blogbeiträge",
-          "description": "Eine Liste aller Blogbeiträge, sortiert nach Datum, mit Tags zur Kategorisierung.",
-          "summary": "Dieses Dokument dient als Indexseite für alle Blogbeiträge, konfiguriert zur Anzeige von 15 Beiträgen pro Seite, sortiert nach Datum. Es enthält einen Verweis auf eine Tags-Seite für eine weitere Kategorisierung, was es Nutzern erleichtert, Inhalte zu durchsuchen und zu filtern. Die Seite verwendet eine spezifische Vorlage für eine einheitliche Darstellung.",
-          "short_summary": "Diese Seite listet alle Blogbeiträge in einem paginierten Format, sortiert nach Datum. Sie bietet auch Zugang zu Tags für eine bessere Inhaltsorganisation.",
+          "description": "Blog-Archivseite, die eine chronologische und nach Tags kategorisierte Ansicht der Blogbeiträge bietet.",
+          "summary": "Dieses Dokument beschreibt die Konfiguration und Anleitung für eine Blog-Archivseite. Es legt fest, dass 15 Beiträge pro Seite angezeigt werden, der Seitentitel „Blog-Archiv“ lautet, die Sortierung nach Datum erfolgt und ein bestimmtes Seiten-Template verwendet wird. Das Dokument gibt auch Navigationsempfehlungen: Benutzer können Beiträge chronologisch lesen oder über die Tag-Seiten nach interessanten Artikeln suchen.",
+          "short_summary": "Dies ist eine Blog-Archivseite, die es Benutzern ermöglicht, Beiträge chronologisch zu durchsuchen oder nach Tags zu filtern. Die Seite ist mit Paginierung und Sortiereinstellungen konfiguriert, um die Navigation zu erleichtern.",
           "key_points": [
-            "Paginierte Anzeige von Blogbeiträgen",
-            "Sortierung nach Datum",
-            "Verweis auf Tags zur Kategorisierung",
-            "Verwendung einer benutzerdefinierten Seitenvorlage",
-            "Der Titel zeigt an, dass es sich um eine vollständige Liste handelt"
+            "Die Blog-Archivseite zeigt Beiträge nach Datum sortiert an",
+            "Ermöglicht die Suche nach Beiträgen über Tag-Kategorien",
+            "Paginierungseinstellung mit 15 Beiträgen pro Seite"
           ],
-          "audience": "Website-Besucher, die alle Blogbeiträge durchsuchen oder Inhalte über Tags finden möchten.",
+          "audience": "Blog-Leser, die Beiträge nach Zeit oder Thema durchsuchen möchten",
           "tags": [
-            "Blog",
-            "Beiträge",
-            "Tags",
-            "Paginierung",
-            "Archiv"
+            "Blog-Archiv",
+            "Tag-Kategorisierung",
+            "Chronologische Reihenfolge",
+            "Seitenkonfiguration",
+            "Inhaltsdurchsicht"
           ]
         },
         "ja-JP": {
-          "title": "すべてのブログ投稿",
-          "description": "日付順に並べられ、カテゴリ分けのためのタグが付いたすべてのブログ投稿の一覧です。",
-          "summary": "このドキュメントはすべてのブログ投稿のインデックスページとして機能し、日付順に並べた1ページあたり15件の投稿を表示するように設定されています。さらにカテゴリ分けのためのタグページへの参照を含み、ユーザーがコンテンツを閲覧・絞り込みやすくしています。ページは一貫した表示のために特定のテンプレートを使用しています。",
-          "short_summary": "このページは、日付順に並べられたすべてのブログ投稿をページネーション形式で一覧表示します。また、コンテンツ整理を容易にするためのタグへのアクセスも提供します。",
+          "title": "すべてのブログ記事",
+          "description": "ブログアーカイブページ。時系列順およびタグ別に分類されたブログ記事の閲覧方法を提供します。",
+          "summary": "このドキュメントは、ブログアーカイブページの設定と説明です。1ページあたり15記事を表示し、ページタイトルは「ブログアーカイブ」、日付順にソートされ、特定のページテンプレートを使用します。また、閲覧の提案として、ユーザーは時系列順に読むことも、タグページから興味のある記事を探すこともできます。",
+          "short_summary": "これはブログアーカイブページで、ユーザーが時系列順に記事を閲覧したり、タグでフィルタリングしたりできます。ページネーションとソート設定が構成されており、ナビゲーションが容易です。",
           "key_points": [
-            "ブログ投稿のページネーション表示",
-            "日付による並べ替え",
-            "カテゴリ分けのためのタグへの参照",
-            "カスタムページテンプレートの使用",
-            "タイトルが包括的な一覧であることを示している"
+            "ブログアーカイブページは日付順に記事を表示",
+            "タグ分類による記事検索をサポート",
+            "1ページあたり15記事のページネーション設定"
           ],
-          "audience": "すべてのブログ投稿を閲覧したい、またはタグでコンテンツを探したいウェブサイト訪問者。",
+          "audience": "ブログ読者、時系列またはトピック別に記事を閲覧したいユーザー",
           "tags": [
-            "ブログ",
-            "投稿",
-            "タグ",
-            "ページネーション",
-            "アーカイブ"
+            "ブログアーカイブ",
+            "タグ分類",
+            "時系列順",
+            "ページ設定",
+            "コンテンツ閲覧"
           ]
         }
       },
-      "metadataTranslationHash": "7d876f7b0cfc44c26123ec969f816ecb03683df6182aa8828d743911a5bee971"
+      "metadataTranslationHash": "78d3d59109dd7a291fd848c82b412ed283de1930086159c637792afff858e0f5"
     },
     {
       "hash": "476892934ea8996e1925defebc1a2a58b12894c674a0b17ff8651575d1b83e7f",
@@ -10457,159 +10421,147 @@
       "metadataTranslationHash": "cdfb258a23e39f856798152786c42b6353d51e306ac60323fd02196c420be402"
     },
     {
-      "hash": "152214ebfb9cf054c88ae4c8e0a6850af25208e130f9f5755b49b282c2f8d6b7",
+      "hash": "4d6f55b98eadadb5464b2dc217fa2bb3d6450a815b2f248e14b01aed99d6bb71",
       "path": "content/diary/_index.md",
       "links": [],
       "metadata": {
         "title": "All Diary posts",
-        "description": "A collection of diary posts sorted by date, with pagination and a custom page template.",
-        "short_summary": "This configuration sets up a diary posts page with pagination and date sorting. It uses a custom template for display and organizes posts efficiently.",
-        "audience": "Website developers or content managers configuring a blog or diary section.",
+        "description": "这是一个日志归档页面，按时间顺序展示阶段性的工作与生活记录。",
+        "short_summary": "这是一个日志归档页面，按日期排序展示历史记录。用户可以通过分页功能浏览阶段性的工作与生活日志。",
+        "audience": "对作者工作与生活记录感兴趣的读者，或需要查看历史日志的用户。",
         "key_points": [
-          "Paginate by 15 posts per page",
-          "Title is 'All Diary posts'",
-          "Sort posts by date",
-          "Use custom page template 'blog-page.html'",
-          "Configuration for blog/diary section",
-          "Structured content organization"
+          "页面标题为'日志归档'，用于展示历史记录",
+          "内容按日期排序，支持分页浏览",
+          "使用特定模板渲染页面，提供结构化查看体验"
         ],
-        "summary": "This document configures a blog or diary section with pagination set to 15 posts per page, titled 'All Diary posts', sorted by date, and using a custom page template 'blog-page.html'. It serves as a configuration snippet for organizing and displaying diary entries in a structured manner.",
+        "summary": "该文档是一个日志归档页面的配置说明，设置了分页、标题、排序方式和页面模板等参数，旨在帮助用户按时间顺序浏览历史日志。核心功能是提供结构化的日志查看体验，方便回顾过去的工作与生活记录。",
         "slug": "all-diary-posts",
         "tags": [
-          "diary",
-          "blog",
-          "pagination",
-          "date sorting",
-          "page template",
-          "configuration"
+          "日志归档",
+          "博客",
+          "时间排序",
+          "分页",
+          "工作记录",
+          "生活记录",
+          "静态网站"
         ],
-        "inferred_lang": "en-US",
+        "inferred_lang": "zh-Hans",
         "tokens_used": {
-          "prompt": 510,
-          "completion": 249,
-          "total": 759
+          "prompt": 468,
+          "completion": 220,
+          "total": 688
         }
       },
       "category": "Diary Index",
-      "nativeMarkdownHash": "152214ebfb9cf054c88ae4c8e0a6850af25208e130f9f5755b49b282c2f8d6b7",
+      "nativeMarkdownHash": "4d6f55b98eadadb5464b2dc217fa2bb3d6450a815b2f248e14b01aed99d6bb71",
       "metadataTranslations": {
         "zh-Hans": {
-          "title": "所有日记文章",
-          "description": "按日期排序的日记文章集合，支持分页并使用自定义页面模板。",
-          "summary": "本文档配置了一个博客或日记板块，分页设置为每页15篇文章，标题为'所有日记文章'，按日期排序，并使用自定义页面模板'blog-page.html'。它作为一段配置代码片段，用于以结构化方式组织和显示日记条目。",
-          "short_summary": "此配置设置了一个带有分页和日期排序的日记文章页面。它使用自定义模板进行展示，并高效地组织文章。",
+          "title": "All Diary posts",
+          "description": "这是一个日志归档页面，按时间顺序展示阶段性的工作与生活记录。",
+          "summary": "该文档是一个日志归档页面的配置说明，设置了分页、标题、排序方式和页面模板等参数，旨在帮助用户按时间顺序浏览历史日志。核心功能是提供结构化的日志查看体验，方便回顾过去的工作与生活记录。",
+          "short_summary": "这是一个日志归档页面，按日期排序展示历史记录。用户可以通过分页功能浏览阶段性的工作与生活日志。",
           "key_points": [
-            "每页分页显示15篇文章",
-            "标题为'所有日记文章'",
-            "按日期对文章进行排序",
-            "使用自定义页面模板'blog-page.html'",
-            "用于博客/日记板块的配置",
-            "结构化的内容组织"
+            "页面标题为'日志归档'，用于展示历史记录",
+            "内容按日期排序，支持分页浏览",
+            "使用特定模板渲染页面，提供结构化查看体验"
           ],
-          "audience": "配置博客或日记板块的网站开发人员或内容管理员。",
+          "audience": "对作者工作与生活记录感兴趣的读者，或需要查看历史日志的用户。",
           "tags": [
-            "日记",
+            "日志归档",
             "博客",
+            "时间排序",
             "分页",
-            "日期排序",
-            "页面模板",
-            "配置"
+            "工作记录",
+            "生活记录",
+            "静态网站"
           ]
         },
         "en-US": {
           "title": "All Diary posts",
-          "description": "A collection of diary posts sorted by date, with pagination and a custom page template.",
-          "summary": "This document configures a blog or diary section with pagination set to 15 posts per page, titled 'All Diary posts', sorted by date, and using a custom page template 'blog-page.html'. It serves as a configuration snippet for organizing and displaying diary entries in a structured manner.",
-          "short_summary": "This configuration sets up a diary posts page with pagination and date sorting. It uses a custom template for display and organizes posts efficiently.",
+          "description": "This is a diary archive page that displays periodic work and life records in chronological order.",
+          "summary": "This document provides configuration instructions for a diary archive page, including settings for pagination, title, sorting method, and page template. It aims to help users browse historical diary entries in chronological order. The core function is to offer a structured diary viewing experience, making it convenient to review past work and life records.",
+          "short_summary": "This is a diary archive page that displays historical records sorted by date. Users can browse periodic work and life diary entries through pagination.",
           "key_points": [
-            "Paginate by 15 posts per page",
-            "Title is 'All Diary posts'",
-            "Sort posts by date",
-            "Use custom page template 'blog-page.html'",
-            "Configuration for blog/diary section",
-            "Structured content organization"
+            "The page title is 'Diary Archive', used to display historical records.",
+            "Content is sorted by date and supports paginated browsing.",
+            "A specific template is used to render the page, providing a structured viewing experience."
           ],
-          "audience": "Website developers or content managers configuring a blog or diary section.",
+          "audience": "Readers interested in the author's work and life records, or users who need to view historical diary entries.",
           "tags": [
-            "diary",
-            "blog",
-            "pagination",
-            "date sorting",
-            "page template",
-            "configuration"
+            "Diary Archive",
+            "Blog",
+            "Chronological Order",
+            "Pagination",
+            "Work Records",
+            "Life Records",
+            "Static Website"
           ]
         },
         "ja-JP": {
-          "title": "すべての日記投稿",
-          "description": "日付順にソートされ、ページネーションとカスタムページテンプレートを備えた日記投稿のコレクションです。",
-          "summary": "このドキュメントは、1ページあたり15件の投稿でページネーションを設定し、タイトルを「すべての日記投稿」とし、日付順にソートし、カスタムページテンプレート「blog-page.html」を使用するブログまたは日記セクションの設定を構成します。これは、日記エントリを構造化された方法で整理して表示するための設定スニペットとして機能します。",
-          "short_summary": "この設定は、ページネーションと日付ソートを備えた日記投稿ページをセットアップします。表示にはカスタムテンプレートを使用し、投稿を効率的に整理します。",
+          "title": "All Diary posts",
+          "description": "これは日記アーカイブページで、時系列順に段階的な仕事と生活の記録を表示します。",
+          "summary": "このドキュメントは日記アーカイブページの設定説明であり、ページネーション、タイトル、ソート方法、ページテンプレートなどのパラメータを設定しています。ユーザーが時系列順に過去の日記を閲覧できるようにすることを目的としています。コア機能は、構造化された日記閲覧体験を提供し、過去の仕事と生活の記録を振り返りやすくすることです。",
+          "short_summary": "これは日記アーカイブページで、日付順に過去の記録を表示します。ユーザーはページネーション機能を使用して、段階的な仕事と生活の日記を閲覧できます。",
           "key_points": [
-            "1ページあたり15件の投稿でページネーション",
-            "タイトルは「すべての日記投稿」",
-            "投稿を日付順にソート",
-            "カスタムページテンプレート「blog-page.html」を使用",
-            "ブログ/日記セクションの設定",
-            "構造化されたコンテンツ整理"
+            "ページタイトルは「日記アーカイブ」で、過去の記録を表示するために使用されます",
+            "コンテンツは日付順にソートされ、ページネーションによる閲覧をサポートします",
+            "特定のテンプレートを使用してページをレンダリングし、構造化された閲覧体験を提供します"
           ],
-          "audience": "ブログまたは日記セクションを設定するウェブサイト開発者またはコンテンツ管理者。",
+          "audience": "著者の仕事と生活の記録に興味がある読者、または過去の日記を確認する必要があるユーザー。",
           "tags": [
-            "日記",
+            "日記アーカイブ",
             "ブログ",
+            "時系列ソート",
             "ページネーション",
-            "日付ソート",
-            "ページテンプレート",
-            "設定"
+            "仕事記録",
+            "生活記録",
+            "静的サイト"
           ]
         },
         "de-DE": {
           "title": "Alle Tagebucheinträge",
-          "description": "Eine Sammlung von Tagebucheinträgen, nach Datum sortiert, mit Paginierung und einer benutzerdefinierten Seitenvorlage.",
-          "summary": "Dieses Dokument konfiguriert einen Blog- oder Tagebuchbereich mit einer Paginierung von 15 Beiträgen pro Seite, dem Titel 'Alle Tagebucheinträge', Sortierung nach Datum und der Verwendung einer benutzerdefinierten Seitenvorlage 'blog-page.html'. Es dient als Konfigurationssnippet zur strukturierten Organisation und Anzeige von Tagebucheinträgen.",
-          "short_summary": "Diese Konfiguration richtet eine Seite für Tagebucheinträge mit Paginierung und Datumssortierung ein. Sie verwendet eine benutzerdefinierte Vorlage zur Anzeige und organisiert Beiträge effizient.",
+          "description": "Dies ist eine Archivseite für Tagebucheinträge, die in chronologischer Reihenfolge periodische Arbeits- und Lebensaufzeichnungen anzeigt.",
+          "summary": "Dieses Dokument ist eine Konfigurationsbeschreibung für eine Tagebuch-Archivseite. Es legt Parameter wie Paginierung, Titel, Sortierreihenfolge und Seitenvorlage fest, um Benutzern zu helfen, historische Tagebucheinträge chronologisch zu durchsuchen. Die Kernfunktion besteht darin, eine strukturierte Anzeigeerfahrung für Tagebucheinträge zu bieten und die Überprüfung vergangener Arbeits- und Lebensaufzeichnungen zu erleichtern.",
+          "short_summary": "Dies ist eine Archivseite für Tagebucheinträge, die historische Aufzeichnungen nach Datum sortiert anzeigt. Benutzer können über die Paginierungsfunktion periodische Arbeits- und Lebensaufzeichnungen durchblättern.",
           "key_points": [
-            "Paginierung mit 15 Beiträgen pro Seite",
-            "Titel lautet 'Alle Tagebucheinträge'",
-            "Beiträge nach Datum sortieren",
-            "Benutzerdefinierte Seitenvorlage 'blog-page.html' verwenden",
-            "Konfiguration für Blog-/Tagebuchbereich",
-            "Strukturierte Inhaltsorganisation"
+            "Der Seitentitel lautet 'Tagebucharchiv' und dient zur Anzeige historischer Aufzeichnungen.",
+            "Die Inhalte sind nach Datum sortiert und unterstützen das Blättern über Seiten.",
+            "Eine spezifische Vorlage rendert die Seite und bietet eine strukturierte Anzeigeerfahrung."
           ],
-          "audience": "Webentwickler oder Content-Manager, die einen Blog- oder Tagebuchbereich konfigurieren.",
+          "audience": "Leser, die an den Arbeits- und Lebensaufzeichnungen des Autors interessiert sind, oder Benutzer, die historische Tagebucheinträge einsehen müssen.",
           "tags": [
-            "Tagebuch",
+            "Tagebucharchiv",
             "Blog",
+            "Chronologische Sortierung",
             "Paginierung",
-            "Datums-Sortierung",
-            "Seitenvorlage",
-            "Konfiguration"
+            "Arbeitsaufzeichnungen",
+            "Lebensaufzeichnungen",
+            "Statische Website"
           ]
         },
         "es-ES": {
           "title": "Todas las entradas del diario",
-          "description": "Una colección de entradas de diario ordenadas por fecha, con paginación y una plantilla de página personalizada.",
-          "summary": "Este documento configura una sección de blog o diario con paginación establecida en 15 entradas por página, titulada 'Todas las entradas del diario', ordenada por fecha y utilizando una plantilla de página personalizada 'blog-page.html'. Sirve como un fragmento de configuración para organizar y mostrar entradas de diario de manera estructurada.",
-          "short_summary": "Esta configuración establece una página de entradas de diario con paginación y ordenación por fecha. Utiliza una plantilla personalizada para la visualización y organiza las entradas de manera eficiente.",
+          "description": "Esta es una página de archivo de diario que muestra registros periódicos de trabajo y vida en orden cronológico.",
+          "summary": "Este documento es una explicación de configuración para una página de archivo de diario, que establece parámetros como paginación, título, método de ordenación y plantilla de página, con el objetivo de ayudar a los usuarios a navegar por los registros históricos en orden cronológico. La función principal es proporcionar una experiencia estructurada de visualización de diarios, facilitando la revisión de registros pasados de trabajo y vida.",
+          "short_summary": "Esta es una página de archivo de diario que muestra registros históricos ordenados por fecha. Los usuarios pueden navegar por registros periódicos de trabajo y vida a través de la función de paginación.",
           "key_points": [
-            "Paginación de 15 entradas por página",
-            "El título es 'Todas las entradas del diario'",
-            "Ordenar entradas por fecha",
-            "Usar plantilla de página personalizada 'blog-page.html'",
-            "Configuración para sección de blog/diario",
-            "Organización estructurada del contenido"
+            "El título de la página es 'Archivo de diario', utilizado para mostrar registros históricos",
+            "El contenido se ordena por fecha y admite navegación paginada",
+            "Utiliza una plantilla específica para renderizar la página, proporcionando una experiencia de visualización estructurada"
           ],
-          "audience": "Desarrolladores web o gestores de contenido que configuran una sección de blog o diario.",
+          "audience": "Lectores interesados en los registros de trabajo y vida del autor, o usuarios que necesiten consultar diarios históricos.",
           "tags": [
-            "diario",
-            "blog",
-            "paginación",
-            "ordenación por fecha",
-            "plantilla de página",
-            "configuración"
+            "Archivo de diario",
+            "Blog",
+            "Orden cronológico",
+            "Paginación",
+            "Registros de trabajo",
+            "Registros de vida",
+            "Sitio web estático"
           ]
         }
       },
-      "metadataTranslationHash": "32923ec881ef7f5d1f900fd3d339693a7ef2dbb737ff313b40becef42fb82d26"
+      "metadataTranslationHash": "02ddc7e72f3b2efbed88cf0a7baac626cac208311a076661b0319ffb1414b27f"
     },
     {
       "hash": "8f039952c49def021647589f6b3348b62ed051f4510948a4fd2fc4b6e58ccb97",
