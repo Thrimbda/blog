@@ -165,3 +165,7 @@
 2026-03-13T08:27:02.533Z,legion_update_context,granda,Granda 主题细节收口,Claude,addFile: /Users/c1/Work/blog/config.toml,success
 2026-03-13T08:27:02.533Z,legion_update_context,granda,Granda 主题细节收口,Claude,progress.completed: 移除 `config.toml` 中的 `[languages.en]`，确认重新构建后 `public/en/**` 不再生成,success
 2026-03-13T08:27:02.533Z,legion_update_context,granda,Granda 主题细节收口,Claude,handoff: 如后续再次恢复英文入口，需要给 `templates/header.html` 的导航取值补 `name_zh` fallback 或重新引入多语言字段,success
+2026-03-13T08:33:56.815Z,legion_get_status,granda,Granda 主题细节收口,Claude,,success
+2026-03-13T08:34:35.022Z,legion_update_context,granda,Granda 主题细节收口,Claude,progress.completed: 用户确认当前结果满意且无需继续修改，请求关闭并归档 `granda` 任务,success
+2026-03-13T08:35:12.158Z,legion_archive_task,granda,Granda 主题细节收口,Claude,taskId: granda,success
+2026-03-13T08:35:59.632Z,legion_list_tasks,,,Claude,,success

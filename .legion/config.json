@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "currentTask": "granda",
+  "currentTask": null,
   "settings": {
     "autoRemind": true,
     "remindBeforeReset": true,
@@ -38,9 +38,9 @@
     {
       "id": "granda",
       "name": "Granda 主题细节收口",
-      "status": "active",
+      "status": "archived",
       "createdAt": "2026-03-11T14:46:37.013Z",
-      "updatedAt": "2026-03-13T08:27:02.530Z"
+      "updatedAt": "2026-03-13T08:35:12.103Z"
     }
   ],
   "pendingProposals": [
