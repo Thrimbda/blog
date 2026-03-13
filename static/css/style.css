@@ -273,9 +273,17 @@ footer nav + p {
     border-right: 1px solid var(--border);
   }
 
-  .page-shell.has-outline .page-outline-panel {
+  .page-shell.page-shell-blog.has-outline .page-outline-panel {
     position: sticky;
     top: 1.75rem;
+    max-height: calc(100vh - 3.5rem);
+  }
+
+  .page-shell.page-shell-blog.has-outline .page-outline-nav {
+    max-height: calc(100vh - 6.5rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-right: 0.65rem;
   }
 
   .page-shell.has-outline .page-article {

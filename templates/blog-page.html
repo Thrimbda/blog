@@ -17,7 +17,7 @@
     {% set back_text = "返回博客" %}
   {% endif %}
 {% endif %}
-<div class="page-shell{% if page.toc and show_outline %} has-outline{% endif %}">
+<div class="page-shell page-shell-blog{% if page.toc and show_outline %} has-outline{% endif %}">
 {% if page.toc and show_outline %}
 {% include "partials/page-outline.html" %}
 {% endif %}

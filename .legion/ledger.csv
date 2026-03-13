@@ -157,3 +157,11 @@
 2026-03-13T03:55:27.454Z,legion_update_context,granda,Granda 主题细节收口,Claude,addFile: /Users/c1/Work/blog/templates/macros/post_list.html,success
 2026-03-13T03:56:27.445Z,legion_update_context,granda,Granda 主题细节收口,Claude,addFile: /Users/c1/Work/blog/.legion/playbook.md,success
 2026-03-13T03:58:28.645Z,legion_update_context,granda,Granda 主题细节收口,Claude,progress.completed: 针对本轮 UI shell refinement 运行 focused review-code，结果 PASS；随后补齐 aria 文案本地化并复审仍为 PASS,success
+2026-03-13T08:20:05.089Z,legion_update_plan,granda,Granda 主题细节收口,Claude,,success
+2026-03-13T08:20:05.093Z,legion_update_context,granda,Granda 主题细节收口,Claude,addDecision: 本轮优先移除 `/en/` 入口并修复长 TOC 的可滚动性，不继续扩展其他列表或 hierarchy 改动,success
+2026-03-13T08:20:05.101Z,legion_update_tasks,granda,Granda 主题细节收口,Claude,setCurrentTask: 移除 /en/ 并让长 TOC 独立滚动,success
+2026-03-13T08:27:02.533Z,legion_update_tasks,granda,Granda 主题细节收口,Claude,completeTask: 移除 /en/ 并让长 TOC 独立滚动,success
+2026-03-13T08:27:02.533Z,legion_update_context,granda,Granda 主题细节收口,Claude,addFile: /Users/c1/Work/blog/static/css/style.css,success
+2026-03-13T08:27:02.533Z,legion_update_context,granda,Granda 主题细节收口,Claude,addFile: /Users/c1/Work/blog/config.toml,success
+2026-03-13T08:27:02.533Z,legion_update_context,granda,Granda 主题细节收口,Claude,progress.completed: 移除 `config.toml` 中的 `[languages.en]`，确认重新构建后 `public/en/**` 不再生成,success
+2026-03-13T08:27:02.533Z,legion_update_context,granda,Granda 主题细节收口,Claude,handoff: 如后续再次恢复英文入口，需要给 `templates/header.html` 的导航取值补 `name_zh` fallback 或重新引入多语言字段,success

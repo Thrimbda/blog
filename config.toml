@@ -9,10 +9,6 @@ default_language = "zh"
 
 taxonomies = [{ name = "tags", feed = true }]
 
-[languages.en]
-title = "c1's blog"
-description = "c1's blog"
-
 [markdown]
 render_emoji = true
 external_links_target_blank = true
@@ -41,10 +37,10 @@ list_pages = false
 twitter_card = true
 
 header_nav = [
-  { url = "/blog", name_zh = "|博客|", name_en = "/blog/" },
-  { url = "/diary", name_zh = "|日志|", name_en = "/diary/" },
-  { url = "/gcores-talks", name_zh = "|机组|", name_en = "/gcores-talk/" },
-  { url = "/about", name_zh = "|关于|", name_en = "/about/" },
+  { url = "/blog", name_zh = "|博客|" },
+  { url = "/diary", name_zh = "|日志|" },
+  { url = "/gcores-talks", name_zh = "|机组|" },
+  { url = "/about", name_zh = "|关于|" },
 ]
 
 # Optional footer license text. It will only show, when using footer_content_license.
