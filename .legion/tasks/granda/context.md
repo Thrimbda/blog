@@ -30,6 +30,13 @@
 - 同步 `.czon/style.css` 到 `.czon/dist/style.css` 进行本地预览验证
 - 完成 Czon 页面桌面/移动端截图复查与复审
 - 排查线上 `/czon` 是否部署新样式，确认 live `style.css` 与仓库 `.czon/style.css` 内容完全一致；当前差异属于设计感知问题，不是发布失败。
+- 按用户确认的 critique 优先级，将本轮范围收窄为 UI 文案一致性、列表低声量内容气味和更明确的文章返回链接
+- 统一 header/footer/TOC/pagination/edit/about/blog/diary/tags 等可见壳层文案，减少默认英文残留
+- 将 theme toggle 改为显示当前状态文本，并保持行内低声量 affordance
+- 为博客/日志/tag-entry 列表增加一行 muted 的 tags/摘要气味，不引入卡片、缩略图或高声量 metadata
+- 将文章页 `../slug` 改为更明确的返回博客/返回日志链接，并保留低声量 slug 提示
+- 运行 `zola build` 并刷新 blog list / article 的桌面与移动端 Playwright 截图
+- 针对本轮 UI shell refinement 运行 focused review-code，结果 PASS；随后补齐 aria 文案本地化并复审仍为 PASS
 
 
 ### 🟡 进行中
@@ -74,18 +81,17 @@
 
 **下次继续从这里开始：**
 
-1. 将 `.legion/tasks/granda/docs/pr-body.md` 用作当前 PR 描述
-2. 后续 theme work 继续以 `.legion/tasks/granda/docs/rfc.md` 第 4.5 节和对应截图证据作为 reviewer gate
+1. 如继续深挖 clarity，可决定是否处理 taxonomy 页面未来多语言壳层一致性，以及是否逐步为旧文补显式 summary/description
+2. 当前说明材料可引用 `.legion/tasks/granda/docs/review-focused-ui-shell.md`、更新后的 `rfc.md` 与 refreshed Playwright 截图
 
 **注意事项：**
 
-- `review-rfc.md` 为 PASS，`review-code.md` 为 PASS
-- 本轮未生成 `review-security`；改动不涉及新的安全面变更
-- 后续若继续打磨，优先考虑 theme toggle 文案语义、About 节奏的显式语义标记，以及移动端 meta 收束
+- focused review-code 当前仅剩两个非阻塞建议：taxonomy 模板未来多语言一致性、列表摘要回退到 `page.content` 的长期稳健性
+- 本轮用户明确要求机组页不改，已遵守
 
 ---
 
-*最后更新: 2026-03-12 21:09 by Claude*
+*最后更新: 2026-03-13 11:58 by Claude*
 ，我可以继续做一轮只针对字重/间距的毫米级微调
 
 **注意事项：**
@@ -97,3 +103,4 @@
 ---
 
 *最后更新: 2026-03-11 22:55 by Claude*
+�: 2026-03-11 22:55 by Claude*

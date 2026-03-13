@@ -1,16 +1,33 @@
 {% extends "base.html" %} {% import "macros/page_outline.html" as page_outline %} {% block content %}
 {% set show_outline = page.extra.toc | default(value=true) %}
+{% set current_lang = page.lang | default(value=config.default_language) %}
+{% set is_en = current_lang == "en" %}
+{% if page.relative_path | split(pat="/") | first == "diary" %}
+  {% set back_href = "/diary" %}
+  {% if is_en %}
+    {% set back_text = "Back to diary" %}
+  {% else %}
+    {% set back_text = "返回日志" %}
+  {% endif %}
+{% else %}
+  {% set back_href = "/blog" %}
+  {% if is_en %}
+    {% set back_text = "Back to blog" %}
+  {% else %}
+    {% set back_text = "返回博客" %}
+  {% endif %}
+{% endif %}
 <div class="page-shell{% if page.toc and show_outline %} has-outline{% endif %}">
 {% if page.toc and show_outline %}
 {% include "partials/page-outline.html" %}
 {% endif %}
 <article class="page-article">
 <div class="post-meta-stack">
-  <div class="post-meta"><a href="..">..</a>{% if page.slug %}/{{ page.slug }}{% endif %}</div>
-  {% if page.date %}<time class="post-meta" datetime="{{ page.date }}">发布于 {{ page.date }}</time>{% endif %}
+  <div class="post-meta post-backlink"><a href="{{ back_href }}">&larr; {{ back_text }}</a>{% if page.slug %}<span class="post-meta-slug">/{{ page.slug }}</span>{% endif %}</div>
+  {% if page.date %}<time class="post-meta" datetime="{{ page.date }}">{% if is_en %}Published{% else %}发布于{% endif %} {{ page.date }}</time>{% endif %}
   {% if config.extra.author and config.extra.display_author == true %}
   <address rel="author" class="post-meta">
-    作者 {{ config.extra.author }}
+    {% if is_en %}Author{% else %}作者{% endif %} {{ config.extra.author }}
   </address>
   {% endif %}
 </div>
@@ -41,7 +58,7 @@
   async
 ></script>
 
-<p class="admin-edit"><a href="/admin?path={{ page.relative_path }}" class="admin-edit-link">[Edit]</a></p>
+<p class="admin-edit"><a href="/admin?path={{ page.relative_path }}" class="admin-edit-link">[{% if is_en %}Edit{% else %}编辑{% endif %}]</a></p>
 
 </article>
   </div>

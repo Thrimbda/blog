@@ -526,6 +526,26 @@ select {
   margin: 0;
 }
 
+.post-backlink a {
+  color: var(--muted-strong);
+  text-decoration: none;
+}
+
+.post-backlink a:visited {
+  color: var(--muted-strong);
+}
+
+.post-backlink a:hover,
+.post-backlink a:focus {
+  color: var(--fg);
+  text-decoration: underline;
+}
+
+.post-meta-slug {
+  margin-left: 0.45rem;
+  color: var(--muted);
+}
+
 address.post-meta {
   font-style: normal;
 }
@@ -610,16 +630,61 @@ address.post-meta {
   grid-template-columns: auto minmax(0, auto) minmax(2rem, 1fr) auto;
   align-items: baseline;
   column-gap: 0.55rem;
-  padding: 0.22rem 0;
+  padding: 0.24rem 0 0.38rem;
+}
+
+.post-list-index .post-marker {
+  grid-column: 1;
+}
+
+.post-list-index .post-link {
+  grid-column: 2;
 }
 
 .post-list-index .post-filler {
+  grid-column: 3;
   border-bottom: 1px solid var(--border);
   transform: translateY(-0.15rem);
 }
 
+.post-list-index .post-date {
+  grid-column: 4;
+}
+
 .post-list-index .post-description {
   display: none;
+}
+
+.post-note {
+  grid-column: 2 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.5rem;
+  margin: 0.12rem 0 0;
+  max-width: 58ch;
+  color: var(--muted);
+  font-size: 0.84em;
+  line-height: 1.5;
+}
+
+.post-note-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  color: var(--muted-strong);
+}
+
+.post-note-tag {
+  white-space: nowrap;
+}
+
+.post-note-divider {
+  color: var(--border);
+}
+
+.post-note-summary {
+  min-width: 0;
 }
 
 .home-copy + .home-posts,
@@ -698,6 +763,11 @@ address.post-meta {
   .post-list-index .post-date {
     grid-column: 2;
     font-size: 0.82em;
+  }
+
+  .post-note {
+    grid-column: 2;
+    max-width: none;
   }
 
   .home-intro h2:first-child {

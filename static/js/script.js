@@ -30,7 +30,11 @@
       return;
     }
 
-    button.textContent = theme === "dark" ? "light" : "dark";
+    const prefix = button.getAttribute("data-theme-prefix") || "theme";
+    const lightState = button.getAttribute("data-light-state") || "light";
+    const darkState = button.getAttribute("data-dark-state") || "dark";
+
+    button.textContent = prefix + ": " + (theme === "dark" ? darkState : lightState);
     button.setAttribute("data-theme-state", theme);
     button.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
     button.setAttribute(

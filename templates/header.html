@@ -4,6 +4,7 @@
 {% elif section %}
   {% set current_lang = section.lang %}
 {% endif %}
+{% set is_en = current_lang == "en" %}
 {% if config.extra.header_nav %}
 <div class="header-block">
   <a href="/" class="logo" aria-label="{{ config.title }}">
@@ -13,7 +14,7 @@
  | |_| |&gt;  &lt; (__| |
   \___//_/\_\___|_|</pre>
   </a>
-  <nav aria-label="Main navigation">
+  <nav aria-label="{% if is_en %}Main navigation{% else %}主导航{% endif %}">
     {% for nav_item in config.extra.header_nav %}
       <a href="{{ nav_item.url }}">
         {% set language_key = 'name_' ~ current_lang %}
@@ -23,7 +24,7 @@
     {% if config.generate_feeds %}
       <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}">rss</a>
     {% endif %}
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换主题" data-light-label="切换到浅色模式" data-dark-label="切换到深色模式">theme</button>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="{% if is_en %}Switch to dark mode{% else %}切换到深色模式{% endif %}" data-theme-prefix="{% if is_en %}theme{% else %}主题{% endif %}" data-light-state="{% if is_en %}light{% else %}浅色{% endif %}" data-dark-state="{% if is_en %}dark{% else %}深色{% endif %}" data-light-label="{% if is_en %}Switch to light mode{% else %}切换到浅色模式{% endif %}" data-dark-label="{% if is_en %}Switch to dark mode{% else %}切换到深色模式{% endif %}">{% if is_en %}theme{% else %}主题{% endif %}</button>
   </nav>
 </div>
 {% endif %}

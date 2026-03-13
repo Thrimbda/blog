@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ taxonomy.name }}</h1>
+{% set current_lang = config.default_language %}
+{% set is_en = current_lang == "en" %}
+<h1>{% if is_en %}tags{% else %}标签{% endif %}</h1>
 <div class="list-shell">
   <ul class="post-list post-list-index">
   {% for term in terms %}
@@ -9,7 +11,7 @@
       <span class="post-marker" aria-hidden="true">&raquo;</span>
       <a class="post-link" href="{{ term.permalink | safe }}">#{{ term.name }}</a>
       <span class="post-filler" aria-hidden="true"></span>
-      <span class="post-date">{{ term.pages | length }} posts</span>
+      <span class="post-date">{% if is_en %}{{ term.pages | length }} posts{% else %}{{ term.pages | length }} 篇{% endif %}</span>
     </li>
   {% endfor %}
   </ul>

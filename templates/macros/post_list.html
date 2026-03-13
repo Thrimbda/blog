@@ -1,0 +1,39 @@
+{% macro render_post_item(page, show_note=true) %}
+<li>
+  <span class="post-marker" aria-hidden="true">&raquo;</span>
+  <a class="post-link" href="{{ page.permalink | safe }}">{{ page.title }}</a>
+  <span class="post-filler" aria-hidden="true"></span>
+  {% if page.date %}<span class="post-date">{{ page.date }}</span>{% endif %}
+  {% if show_note %}
+    {% set note_text = "" %}
+    {% if page.summary %}
+      {% set note_text = page.summary | striptags | replace(from="\n", to=" ") | trim | truncate(length=88) %}
+    {% elif page.description %}
+      {% set note_text = page.description | striptags | replace(from="\n", to=" ") | trim | truncate(length=88) %}
+    {% elif page.content %}
+      {% set note_text = page.content | striptags | replace(from="\n", to=" ") | trim | truncate(length=88) %}
+    {% endif %}
+    {% set preview_tags = [] %}
+    {% if page.taxonomies.tags %}
+      {% set preview_tags = page.taxonomies.tags | slice(end=2) %}
+    {% endif %}
+    {% if preview_tags | length > 0 or note_text %}
+      <p class="post-note">
+        {% if preview_tags | length > 0 %}
+          <span class="post-note-tags">
+            {% for tag in preview_tags %}
+              <span class="post-note-tag">/{{ tag }}/</span>
+            {% endfor %}
+          </span>
+        {% endif %}
+        {% if preview_tags | length > 0 and note_text %}
+          <span class="post-note-divider" aria-hidden="true">·</span>
+        {% endif %}
+        {% if note_text %}
+          <span class="post-note-summary">{{ note_text }}</span>
+        {% endif %}
+      </p>
+    {% endif %}
+  {% endif %}
+</li>
+{% endmacro render_post_item %}

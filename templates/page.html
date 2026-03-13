@@ -1,5 +1,7 @@
 {% extends "base.html" %} {% import "macros/page_outline.html" as page_outline %} {% block content %}
 {% set show_outline = page.extra.toc | default(value=true) %}
+{% set current_lang = page.lang | default(value=config.default_language) %}
+{% set is_en = current_lang == "en" %}
 <div class="page-shell{% if page.toc and show_outline %} has-outline{% endif %}">
 {% if page.toc and show_outline %}
 {% include "partials/page-outline.html" %}
@@ -15,7 +17,7 @@
   {% endfor %} {% endif %}
 </p>
 
-<p class="admin-edit"><a href="/admin?path={{ page.relative_path }}" class="admin-edit-link">[Edit]</a></p>
+<p class="admin-edit"><a href="/admin?path={{ page.relative_path }}" class="admin-edit-link">[{% if is_en %}Edit{% else %}编辑{% endif %}]</a></p>
 </article>
 </div>
 {% endblock content %}

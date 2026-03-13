@@ -1,3 +1,10 @@
+{% set current_lang = config.default_language %}
+{% if page %}
+  {% set current_lang = page.lang %}
+{% elif section %}
+  {% set current_lang = section.lang %}
+{% endif %}
+{% set is_en = current_lang == "en" %}
 {% if config.extra.footer_content_license %}
   <p>
     Except where otherwise noted, content on this site is licensed under
@@ -8,9 +15,13 @@
     {% endif %}
   </p>
 {% endif %}
-<p>Built with <a target="_blank" rel="noopener noreferrer" href="https://www.getzola.org">Zola</a>.</p>
-<nav aria-label="Footer navigation">
-  <a href="/blog">posts</a>
-  <a href="/about">about</a>
-  <a href="/tags">tags</a>
+{% if is_en %}
+  <p>Built with <a target="_blank" rel="noopener noreferrer" href="https://www.getzola.org">Zola</a>.</p>
+{% else %}
+  <p>由 <a target="_blank" rel="noopener noreferrer" href="https://www.getzola.org">Zola</a> 构建。</p>
+{% endif %}
+<nav aria-label="{% if is_en %}Footer navigation{% else %}页脚导航{% endif %}">
+  <a href="/blog">{% if is_en %}posts{% else %}博客{% endif %}</a>
+  <a href="/about">{% if is_en %}about{% else %}关于{% endif %}</a>
+  <a href="/tags">{% if is_en %}tags{% else %}标签{% endif %}</a>
 </nav>

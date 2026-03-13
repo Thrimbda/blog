@@ -1,8 +1,8 @@
 +++
 paginate_by = 15
-title = "All blog posts"
+title = "博客归档"
 sort_by = "date"
 page_template = "blog-page.html"
 +++
 
-> List of all *[tags](/tags)*
+> 按时间顺着读，也可以按 *[标签](/tags)* 找入口。

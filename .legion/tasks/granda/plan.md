@@ -2,27 +2,37 @@
 
 ## 目标
 
-在已建立的 Granda 主题设计门禁基础上，补充并实现“无 TOC 页面重心”设计，使首页、列表页和无 TOC 的普通页面在保持当前气质的前提下获得更平衡的版心。
+在保留当前 Granda 美学基础的前提下，统一站点可见 UI 文案，为博客/日志类列表补充低声量内容线索，并把文章页的返回路径改成更明确的人话导航。
 
 
 ## 要点
 
-- 先在 RFC 中固化无 TOC 页面应采用的重心规则，再修改实现
-- 保持当前 warm paper/ink 配色、ASCII logo、局部短 rule 和列表语言不变
-- 让首页、archive/tag list、无 TOC page/article 的内容列在 shell 内获得更平衡的居中关系
-- 保留有 TOC 页面当前的非对称阅读结构
-- 完成 Playwright 桌面/移动端复查并更新 PR 产物
+- 不再优先处理 hierarchy/重心问题，本轮以 clarity / ux writing 收口为主
+- 统一 header、footer、list、TOC、utility links 等可见文案的语言与语气
+- 列表页只通过轻量摘要/标签气味增强可发现性，不引入卡片、缩略图或高声量元数据
+- 将 `../slug` 式返回提示改成更明确的返回博客/返回日志文案
+- 机组页保持不改
 
 
 ## 范围
 
+- templates/header.html
+- templates/footer.html
 - templates/index.html
 - templates/section.html
 - templates/page.html
 - templates/blog-page.html
 - templates/partials/page-outline.html
+- templates/tags/list.html
+- templates/tags/single.html
 - templates/macros/page_outline.html
+- templates/macros/post_list.html
 - static/css/style.css
+- static/js/script.js
+- content/about.md
+- content/blog/_index.md
+- content/diary/_index.md
+- .legion/tasks/granda/docs/rfc.md
 
 ## 阶段概览
 
@@ -32,4 +42,4 @@
 
 ---
 
-*创建于: 2026-03-11 | 最后更新: 2026-03-12*
+*创建于: 2026-03-11 | 最后更新: 2026-03-13*

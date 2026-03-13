@@ -139,3 +139,21 @@
 2026-03-12T12:53:21.437Z,legion_get_status,granda,Granda 主题细节收口,Claude,,success
 2026-03-12T13:09:23.881Z,legion_update_context,granda,Granda 主题细节收口,Claude,addDecision: 线上 `https://0xc1.space/czon` 已经部署了当前 Czon 样式；通过 GitHub Pages 最新成功 run（2026-03-12 11:37Z）、线上 `style.css` 与仓库 `.czon/style.css` 的 SHA256 一致、`last-modified` 时间与部署时,success
 2026-03-12T13:09:23.973Z,legion_update_context,granda,Granda 主题细节收口,Claude,progress.completed: 排查线上 `/czon` 是否部署新样式，确认 live `style.css` 与仓库 `.czon/style.css` 内容完全一致；当前差异属于设计感知问题，不是发布失败。,success
+2026-03-12T13:47:01.110Z,legion_read_context,granda,Granda 主题细节收口,Claude,"section: all, includeReviews: true",success
+2026-03-12T13:47:01.112Z,legion_get_status,granda,Granda 主题细节收口,Claude,,success
+2026-03-12T13:56:39.986Z,legion_update_tasks,granda,Granda 主题细节收口,Claude,addDiscoveredTask: 统一站点可见 UI 文案并清理中英混杂的壳层标签,success
+2026-03-12T13:56:39.989Z,legion_update_tasks,granda,Granda 主题细节收口,Claude,addDiscoveredTask: 将文章页 `../slug` 返回提示改成更明确的人话导航,success
+2026-03-12T13:56:39.989Z,legion_update_tasks,granda,Granda 主题细节收口,Claude,addDiscoveredTask: 为博客/日志列表补充低声量内容气味，同时保持当前 Granda 列表基线,success
+2026-03-12T13:56:39.989Z,legion_update_plan,granda,Granda 主题细节收口,Claude,,success
+2026-03-12T13:57:08.378Z,legion_update_tasks,granda,Granda 主题细节收口,Claude,setCurrentTask: 统一 UI 文案并设计列表页低声量内容线索,success
+2026-03-13T00:47:09.005Z,legion_update_plan,granda,Granda 主题细节收口,Claude,,success
+2026-03-13T03:54:54.945Z,legion_update_tasks,granda,Granda 主题细节收口,Claude,addDiscoveredTask: 统一 UI 文案、theme 状态文案与文章返回链接语义,success
+2026-03-13T03:54:54.946Z,legion_update_tasks,granda,Granda 主题细节收口,Claude,completeTask: 为博客/日志列表补充低声量内容气味，同时保持当前 Granda 列表基线,success
+2026-03-13T03:54:54.950Z,legion_update_tasks,granda,Granda 主题细节收口,Claude,completeTask: 统一 UI 文案、theme 状态文案与文章返回链接语义,success
+2026-03-13T03:55:27.453Z,legion_update_context,granda,Granda 主题细节收口,Claude,progress.completed: 按用户确认的 critique 优先级，将本轮范围收窄为 UI 文案一致性、列表低声量内容气味和更明确的文章返回链接,success
+2026-03-13T03:55:27.454Z,legion_update_context,granda,Granda 主题细节收口,Claude,addDecision: Archive/tag-entry 列表允许增加一行 muted 的 tags/摘要气味，但必须服从 `marker + title + filler + date/count` 主轴,success
+2026-03-13T03:55:27.454Z,legion_update_context,granda,Granda 主题细节收口,Claude,addDecision: 本轮不继续追 hierarchy/重心问题，而是优先收口壳层文案一致性、列表发现成本和文章返回路径语义,success
+2026-03-13T03:55:27.454Z,legion_update_context,granda,Granda 主题细节收口,Claude,handoff: 若继续细修，可优先决定是否处理 `/en/` 壳层的误导性问题，以及是否为缺失 `summary` 的旧文逐步补显式摘要,success
+2026-03-13T03:55:27.454Z,legion_update_context,granda,Granda 主题细节收口,Claude,addFile: /Users/c1/Work/blog/templates/macros/post_list.html,success
+2026-03-13T03:56:27.445Z,legion_update_context,granda,Granda 主题细节收口,Claude,addFile: /Users/c1/Work/blog/.legion/playbook.md,success
+2026-03-13T03:58:28.645Z,legion_update_context,granda,Granda 主题细节收口,Claude,progress.completed: 针对本轮 UI shell refinement 运行 focused review-code，结果 PASS；随后补齐 aria 文案本地化并复审仍为 PASS,success

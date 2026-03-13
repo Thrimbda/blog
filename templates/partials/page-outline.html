@@ -1,8 +1,10 @@
 {% import "macros/page_outline.html" as page_outline %}
-<aside class="page-outline" aria-label="Page outline">
+{% set current_lang = page.lang | default(value=config.default_language) %}
+{% set is_en = current_lang == "en" %}
+<aside class="page-outline" aria-label="{% if is_en %}table of contents{% else %}文章目录{% endif %}">
   <details class="page-outline-panel" open>
-    <summary>outline</summary>
-    <nav class="page-outline-nav" aria-label="Table of contents">
+    <summary>{% if is_en %}outline{% else %}目录{% endif %}</summary>
+    <nav class="page-outline-nav" aria-label="{% if is_en %}table of contents{% else %}文章目录{% endif %}">
       {{ page_outline::render_nodes(nodes=page.toc) }}
     </nav>
   </details>

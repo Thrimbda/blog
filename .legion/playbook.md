@@ -9,3 +9,9 @@
 - 评审时要求提供与 surface 对应的证据：受影响的模板/CSS 文件，以及该 surface 的对应截图。
 - 如果某个变更 surface 破坏了必须保留的特征、引入了禁止特征，或缺少要求的证据，则该主题评审失败。
 - 当前最高优先级不是重做大框架，而是收口：首页层级、About 编辑节奏、文本化 theme toggle、可用但安静的 TOC/meta、以及更有材料感的暗色模式。
+
+## [Convention] 壳层文案与列表气味
+
+- 默认中文站点的可见壳层文案（header/footer/pagination/TOC/utility links/section titles）应保持中文一致，不再漏出主题默认英文残留。
+- archive / tag-entry 列表允许增加一行 muted 的 tags/摘要气味，帮助新访客判断内容方向。
+- 这行气味必须退后于 `marker + title + filler + date/count` 的主轴，且不得演化成 cards、badges、缩略图或高声量摘要块。

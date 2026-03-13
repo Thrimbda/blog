@@ -179,6 +179,7 @@ header 应当是安静的框架，而不是 hero banner。`templates/header.html
 - Archive 和 tag-entry 列表使用四段式结构：marker、title、filler rule、date-or-count。
 - 列表项必须直接放在页面背景上，不能出现带底色的行容器。
 - 日期和计数保持 muted、次要。
+- 在 archive 和 tag-entry 列表中，允许在标题行下方追加一行低声量的内容气味（例如 1-2 个 tag 或一句被截断的摘要），前提是它仍然是 muted 的次级信息，不与标题或 date/count 竞争。
 - 在移动端，索引列表可以折叠 filler rule，并将 date/count 放到第二行；应与当前响应式列表样式一致。
 - Tags 列表应当像术语索引，而不是 pills 或 chips 的云状集合。
 - 首页应建立明确顺序：自我介绍在前、recent posts 为主要锚点、其他模块为次级补充。
@@ -280,6 +281,20 @@ footer 应当像温和的收束。
 - 不得怎么做：不得另起一套高饱和暗色主题，不得回到纯黑背景、霓虹蓝链、强 glow 或终端式反差。
 - 证据要求：`playwright-home-dark.png`、`playwright-article-dark.png`、`static/css/style.css` 中暗色 token 规则。
 
+#### Priority 6: 壳层文案保持语言一致
+
+- 目标：header、footer、分页、TOC、utility links 和 section 标题等可见壳层文案在默认中文站点上保持一致，不再漏出主题默认英文残留。
+- 允许怎么做：只允许替换局部 UI 文案、返回链接、分页语气、theme 状态词和内容索引页标题；可在保持语气克制的前提下把 `theme`、`outline`、`About`、`tags` 等统一到站点主语言。
+- 不得怎么做：不得借文案统一为名改写正文内容语气、重做信息架构或引入营销式说明文案。
+- 证据要求：关键页面截图、`templates/header.html`、`templates/footer.html`、`templates/section.html`、`templates/blog-page.html`、`templates/partials/page-outline.html` 与相关 content 文件。
+
+#### Priority 7: 列表提供低声量内容气味
+
+- 目标：新访客在 archive / tag-entry 列表中能先感知文章大致主题或气质，而不是只能依赖标题猜测内容类型。
+- 允许怎么做：仅允许在现有索引列表语法下添加一行 muted 的 tags / 摘要线索；其位置必须退后于 title 和 date/count，且不能破坏 `marker + title + filler + date/count` 的扫描主轴。
+- 不得怎么做：不得引入卡片、缩略图、badge、摘要段落块、强对比标签或桌面端高声量元数据堆叠。
+- 证据要求：`playwright-blog-list-desktop.png`、`playwright-blog-list-mobile.png`、tag-entry 截图、`templates/section.html`、`templates/tags/single.html` 与相关 `static/css/style.css` 规则。
+
 ### 5. 漂移边界与反模式
 
 除非未来有新的 RFC 明确替代本 RFC，下列变化均视为设计回退：
@@ -305,7 +320,7 @@ footer 应当像温和的收束。
 | --- | --- | --- | --- |
 | Header | `<pre>` 中的 ASCII logo；行内文本链接 nav；局部短 framing rule | graphic logo、盒状 nav、badge row、全宽 chrome rule | header 区域渲染截图 + `templates/header.html` |
 | Home list | 基于纯背景的 `»` 标题行；每行无附加元数据；收窄的索引节奏 | cards、thumbnails、逐行底色填充、桌面端堆叠元数据 | 首页桌面/移动端截图 + `templates/index.html` |
-| Archive/tag list | marker + title + filler rule + date/count 结构；muted 的次级元数据 | pill tags、chip clouds、card rows、装饰性 bullet、桌面端密集多行堆叠 | 列表表面桌面/移动端截图 + `templates/section.html` 或 `templates/tags/*.html` |
+| Archive/tag list | marker + title + filler rule + date/count 结构；如需补充内容气味，只能使用一行 muted 的 tags/摘要提示 | pill tags、chip clouds、card rows、装饰性 bullet、高声量多行元数据堆叠 | 列表表面桌面/移动端截图 + `templates/section.html` 或 `templates/tags/*.html` |
 | Article | 收窄且可读的正文；紧凑标题；muted 的元数据和 utility links | 宽阅读列、盒状正文区块、高声量元数据框架、装饰性排版 | 文章桌面/移动端截图 + `templates/page.html` 或 `templates/blog-page.html` |
 | TOC | 简短 summary 标签；可折叠的次级 rail；muted 链接 | 高声量盒状 widget、sticky card 处理、比正文更强的视觉权重 | TOC 展开时的文章截图 + `templates/partials/page-outline.html` |
 | Footer | 纯文本 footer；顶部短 rule；简单的收尾结构 | 多列 footer、社交图标行、newsletter 模块、全宽重分隔线 | footer 渲染截图 + `templates/footer.html` |
@@ -321,6 +336,7 @@ footer 应当像温和的收束。
 - TOC summary 文案可以从 `outline` 变为其他同样简短的小写标签，只要它仍是次级阅读辅助。
 - 首页和 archive 列表密度可以通过细微的 gap 和 rule 长度调整来微调，但纯背景索引语法必须保持不变。
 - taxonomy count 的文案可在紧凑文本形式之间变化，只要计数仍保持 muted，并且次于 tag 名称。
+- archive / tag-entry 列表可以增加一行低声量的 tags/摘要线索，只要它仍服从标题与日期的主次关系，并且不形成卡片化或高声量元数据层。
 
 任何超出这些边界的变化，都需要更新 RFC，或获得与本契约挂钩的明确评审批准。
 
