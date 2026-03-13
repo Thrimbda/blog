@@ -15,3 +15,9 @@
 - 默认中文站点的可见壳层文案（header/footer/pagination/TOC/utility links/section titles）应保持中文一致，不再漏出主题默认英文残留。
 - archive / tag-entry 列表允许增加一行 muted 的 tags/摘要气味，帮助新访客判断内容方向。
 - 这行气味必须退后于 `marker + title + filler + date/count` 的主轴，且不得演化成 cards、badges、缩略图或高声量摘要块。
+
+## [Pitfall] Czon 文章壳层的残留侧向 padding
+
+- Czon 文章页即使覆盖了 `.content` 宽度，也常常仍保留外层 `main.w-full.lg:pl-88.xl:pr-88` 的桌面侧向 padding；如果不先清掉这层预留，正文会看起来异常狭窄。
+- 做 Czon 文章页视觉同步时，优先检查 `.czon/dist/*.html` 的真实 shell，而不是只盯着 `.czon/style.css` 里的 `max-width` 变量。
+- 若只想影响带 TOC 的文章页，优先把 widening/rail 规则绑定到 `aside.sidebar-right` 存在的场景，避免误伤首页、列表页和 About。

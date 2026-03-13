@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "currentTask": null,
+  "currentTask": "czon",
   "settings": {
     "autoRemind": true,
     "remindBeforeReset": true,
@@ -41,6 +41,13 @@
       "status": "archived",
       "createdAt": "2026-03-11T14:46:37.013Z",
       "updatedAt": "2026-03-13T08:35:12.103Z"
+    },
+    {
+      "id": "czon",
+      "name": "同步 Czon 文章页到主站视觉基线",
+      "status": "active",
+      "createdAt": "2026-03-13T13:18:45.902Z",
+      "updatedAt": "2026-03-13T13:40:15.406Z"
     }
   ],
   "pendingProposals": [
@@ -466,6 +473,61 @@
       "decidedAt": "2026-03-11T14:46:37.013Z",
       "decidedBy": "Claude",
       "createdTaskId": "granda"
+    },
+    {
+      "id": "proposal-mmoxac4w-a2703e",
+      "name": "同步 Czon 文章页到主站视觉基线",
+      "goal": "让 Czon 站点的正文宽度与 TOC 结构感尽量对齐主站 Granda 基线，并在定制能力不足时明确说明缺口",
+      "rationale": "用户要求在最少人类打断下完成一次端到端交付，并明确指出当前 Czon 版本的正文过窄、TOC 感受不对，需要同步到主站视觉效果。这项工作涉及读取既有 Granda 设计基线、修改 `.czon/style.css`、验证 Czon DOM 可定制自由度，并产出 LegionMind 文档与 PR body，因此属于多步骤、多产物任务，适合以 LegionMind 任务承载。",
+      "points": [
+        "以主站当前 Granda 视觉为 source of truth，同步正文宽度、TOC rail 语气和页面结构节奏",
+        "优先修改 `.czon/style.css`，避免越界到主站模板或内容",
+        "保留 Czon 可用性与移动端表现，不引入盒状 TOC 或通栏阅读列",
+        "若 Czon DOM/自定义能力不足以完全复刻，需要在任务文档和 PR body 中写明限制与所需挂载点"
+      ],
+      "scope": [
+        ".czon/style.css",
+        ".legion/playbook.md"
+      ],
+      "phases": [
+        {
+          "name": "设计",
+          "tasks": [
+            {
+              "description": "梳理主站 Granda 与当前 Czon 文章页在正文宽度和 TOC 结构上的差异，形成摘要级 plan/design-lite",
+              "acceptance": "plan.md 写明问题定义、验收、假设、约束、风险与允许 scope"
+            }
+          ]
+        },
+        {
+          "name": "实现",
+          "tasks": [
+            {
+              "description": "调整 Czon 文章页相关样式，使正文宽度、桌面 TOC rail、移动端目录入口尽量贴近主站",
+              "acceptance": "`.czon/style.css` 完成改动，且不破坏首页/列表/页脚等既有 Czon surface"
+            },
+            {
+              "description": "如果存在可复用经验，更新 `.legion/playbook.md`",
+              "acceptance": "playbook 追加可复用约束或踩坑，且不记录一次性细节"
+            }
+          ]
+        },
+        {
+          "name": "验证与报告",
+          "tasks": [
+            {
+              "description": "运行验证、代码评审并生成 walkthrough / PR body",
+              "acceptance": "生成 `docs/test-report.md`、`docs/review-code.md`、`docs/report-walkthrough.md`、`docs/pr-body.md`，并在文档中说明是否存在 Czon 自由度限制"
+            }
+          ]
+        }
+      ],
+      "proposedBy": "Claude",
+      "proposedAt": "2026-03-13T13:18:39.350Z",
+      "status": "approved",
+      "decidedAt": "2026-03-13T13:18:45.902Z",
+      "decidedBy": "Claude",
+      "createdTaskId": "czon"
     }
   ]
 }

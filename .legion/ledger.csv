@@ -169,3 +169,25 @@
 2026-03-13T08:34:35.022Z,legion_update_context,granda,Granda 主题细节收口,Claude,progress.completed: 用户确认当前结果满意且无需继续修改，请求关闭并归档 `granda` 任务,success
 2026-03-13T08:35:12.158Z,legion_archive_task,granda,Granda 主题细节收口,Claude,taskId: granda,success
 2026-03-13T08:35:59.632Z,legion_list_tasks,,,Claude,,success
+2026-03-13T13:17:18.080Z,legion_get_status,,,Claude,,success
+2026-03-13T13:17:27.261Z,legion_list_tasks,,,Claude,,success
+2026-03-13T13:18:20.790Z,legion_create_task,,,Claude,goal: 让 Czon 站点的正文宽度与 TOC 结构感尽量对齐主站 Granda 基线，并在定制能力不足时明确说明缺口,failed
+2026-03-13T13:18:39.353Z,legion_propose_task,,,Claude,name: 同步 Czon 文章页到主站视觉基线,success
+2026-03-13T13:18:45.916Z,legion_approve_proposal,czon,同步 Czon 文章页到主站视觉基线,Claude,proposalId: proposal-mmoxac4w-a2703e,success
+2026-03-13T13:18:56.202Z,legion_get_status,czon,同步 Czon 文章页到主站视觉基线,Claude,,success
+2026-03-13T13:22:43.424Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,,success
+2026-03-13T13:22:43.428Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addDecision: 本轮风险定级为 Low，采用 design-lite 直接实现，不单独生成 RFC,success
+2026-03-13T13:22:43.428Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .czon/style.css,success
+2026-03-13T13:28:16.475Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,progress.completed: 完成 design-lite，明确正文变窄由 Czon 文章外层残留的 `lg:pl-88 xl:pr-88` 侧向 padding 触发,success
+2026-03-13T13:28:16.475Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addDecision: 桌面文章页改用 article-only CSS 作用域，基于 `aside.sidebar-right` 存在性重建正文宽度与 TOC rail,success
+2026-03-13T13:28:16.475Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .legion/playbook.md,success
+2026-03-13T13:28:39.948Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,completeTask: phase 1,success
+2026-03-13T13:28:39.959Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,completeTask: phase 2,success
+2026-03-13T13:28:39.975Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,completeTask: phase 2,success
+2026-03-13T13:28:40.581Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,setCurrentTask: phase 3,success
+2026-03-13T13:40:03.642Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,progress.completed: 生成 `docs/test-report.md` 并完成静态结构校验 + `npx czon@latest build --lang en-US` 验证,success
+2026-03-13T13:40:03.642Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,handoff: 将 `.legion/tasks/czon/docs/pr-body.md` 作为 PR 描述进行 Review/合并,success
+2026-03-13T13:40:03.642Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .legion/tasks/czon/docs/test-report.md,success
+2026-03-13T13:40:03.642Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .legion/tasks/czon/docs/review-code.md,success
+2026-03-13T13:40:15.413Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,completeTask: phase 3,success
+2026-03-13T13:40:18.683Z,legion_get_status,czon,同步 Czon 文章页到主站视觉基线,Claude,,success

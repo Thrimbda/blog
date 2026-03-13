@@ -17,6 +17,9 @@
   --czon-code-bg: #ebe5db;
   --czon-content-width: 72ch;
   --czon-shell-width: 1040px;
+  --czon-article-shell-width: 1160px;
+  --czon-article-rail-width: 11rem;
+  --czon-article-rail-gap: 3.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -259,8 +262,8 @@ body > div:first-child > div.flex.mt-18 > main > main {
   overflow: visible !important;
 }
 
-article,
-.content {
+body > div:first-child > div.flex.mt-18:has(> aside.sidebar-right) article,
+body > div:first-child > div.flex.mt-18:has(> aside.sidebar-right) .content {
   width: 100%;
   max-width: var(--czon-content-width);
   margin: 0 auto;
@@ -448,45 +451,87 @@ hr {
 }
 
 @media (min-width: 1180px) {
+  body > div:first-child > div.flex.mt-18:has(> aside.sidebar-right) > main,
+  body > div:first-child > div.flex.mt-18:has(> aside.sidebar-right) > main > main {
+    max-width: var(--czon-article-shell-width);
+    padding-left: calc(var(--czon-article-rail-width) + var(--czon-article-rail-gap)) !important;
+    padding-right: 2.25rem !important;
+    box-sizing: border-box;
+  }
+
+  body > div:first-child > div.flex.mt-18:has(> aside.sidebar-right) .content {
+    max-width: 70ch;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   body > div:first-child > div.flex.mt-18 > aside.sidebar-right {
     display: block !important;
     position: fixed !important;
-    top: 8.75rem !important;
-    left: max(1rem, calc(50% - 37rem));
+    top: 9rem !important;
+    left: max(1rem, calc(50% - 36.5rem));
     bottom: auto !important;
-    width: 14rem !important;
-    max-height: calc(100vh - 10rem);
+    width: var(--czon-article-rail-width) !important;
+    max-height: calc(100vh - 11rem);
     overflow: auto !important;
+    padding-right: 0.25rem;
   }
 
   body > div:first-child > div.flex.mt-18 > aside.sidebar-right > aside.sidebar {
     display: block !important;
     border: none !important;
-    padding-right: 1.4rem;
+    padding: 0 1.25rem 0 0;
+    background: transparent !important;
     border-right: 1px solid var(--czon-border) !important;
   }
 
   body > div:first-child > div.flex.mt-18 > aside.sidebar-right h2 {
-    margin: 0 0 0.75rem;
-    font-size: 0.8rem;
+    margin: 0 0 0.9rem;
+    font-size: 0.68rem;
     line-height: 1.2;
-    letter-spacing: 0.08em;
-    color: var(--czon-muted-strong);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--czon-muted);
   }
 
   body > div:first-child > div.flex.mt-18 > aside.sidebar-right a {
     display: block;
-    margin-bottom: 0.4rem !important;
+    margin-bottom: 0.34rem !important;
+    margin-inline-start: 0 !important;
+    padding: 0.08rem 0;
     border-bottom: none !important;
-    color: var(--czon-muted-strong) !important;
-    font-size: 0.92rem;
-    line-height: 1.58;
+    color: var(--czon-muted) !important;
+    font-size: 0.84rem;
+    line-height: 1.45;
+    text-decoration: none;
   }
 
   body > div:first-child > div.flex.mt-18 > aside.sidebar-right a:hover,
   body > div:first-child > div.flex.mt-18 > aside.sidebar-right a:focus {
     color: var(--czon-fg) !important;
-    text-decoration: underline;
+    text-decoration: none;
+  }
+
+  body > div:first-child > div.flex.mt-18 > aside.sidebar-right a.ms-0 {
+    padding-left: 0;
+  }
+
+  body > div:first-child > div.flex.mt-18 > aside.sidebar-right a.ms-4 {
+    padding-left: 0.75rem;
+  }
+
+  body > div:first-child > div.flex.mt-18 > aside.sidebar-right a.ms-8 {
+    padding-left: 1.35rem;
+  }
+
+  body > div:first-child > div.flex.mt-18 > aside.sidebar-right a.ms-12 {
+    padding-left: 1.95rem;
+  }
+
+  body > div:first-child > div.flex.mt-18 > aside.sidebar-right a.ms-16 {
+    padding-left: 2.55rem;
   }
 }
 
