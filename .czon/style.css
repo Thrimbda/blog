@@ -17,9 +17,15 @@
   --czon-code-bg: #ebe5db;
   --czon-content-width: 72ch;
   --czon-shell-width: 1040px;
-  --czon-article-shell-width: 1160px;
-  --czon-article-rail-width: 11rem;
-  --czon-article-rail-gap: 3.5rem;
+  --czon-header-block-width: 23rem;
+  --czon-home-width: 44rem;
+  --czon-page-width: 40rem;
+  --czon-list-width: 47rem;
+  --czon-article-shell-width: 1040px;
+  --czon-article-content-width: 69ch;
+  --czon-article-rail-width: 15.5rem;
+  --czon-article-rail-gap: 3rem;
+  --czon-article-offset: 0.25rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -111,7 +117,7 @@ body > div:first-child > header:first-child {
   align-items: flex-start;
   gap: 0.8rem;
   width: fit-content;
-  max-width: 100%;
+  max-width: min(100%, var(--czon-header-block-width));
   padding-bottom: 1.35rem;
 }
 
@@ -130,6 +136,8 @@ body > div:first-child > header:first-child {
   gap: 0.85rem;
   flex-wrap: wrap;
   margin-top: 0.6rem;
+  width: fit-content;
+  max-width: min(100%, var(--czon-header-block-width));
   color: var(--czon-muted-strong);
 }
 
@@ -260,6 +268,75 @@ body > div:first-child > div.flex.mt-18 > main > main {
   max-width: var(--czon-shell-width);
   margin: 0 auto;
   overflow: visible !important;
+}
+
+body > div:first-child > div.flex.mt-18:not(:has(> nav)):not(:has(> aside.sidebar-right)) > main,
+body > div:first-child > div.flex.mt-18:not(:has(> nav)):not(:has(> aside.sidebar-right)) > main > main {
+  display: block;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body > div:first-child > div.flex.mt-18:not(:has(> nav)):not(:has(> aside.sidebar-right)) > main > div {
+  width: min(100%, var(--czon-home-width));
+  max-width: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+body > div:first-child > div.flex.mt-18:not(:has(> nav)):not(:has(> aside.sidebar-right)) > main > div > div:first-child {
+  width: 100%;
+}
+
+body > div:first-child > div.flex.mt-18:not(:has(> nav)):not(:has(> aside.sidebar-right)) > main > div > div:first-child > .mb-6 {
+  width: 100%;
+  margin: 0 0 1.9rem !important;
+  gap: 0.6rem 1rem !important;
+  align-items: baseline;
+}
+
+body > div:first-child > div.flex.mt-18:not(:has(> nav)):not(:has(> aside.sidebar-right)) > main > div > div:first-child > .mb-6 > span {
+  display: inline-flex;
+  max-width: 100%;
+}
+
+body > div:first-child > div.flex.mt-18:not(:has(> nav)):not(:has(> aside.sidebar-right)) > main > div > div:first-child > .mb-6 > span > a,
+body > div:first-child > div.flex.mt-18:not(:has(> nav)):not(:has(> aside.sidebar-right)) > main > div > div:first-child > .mb-6 > span > span {
+  white-space: nowrap;
+}
+
+body > div:first-child > div.flex.mt-18:has(> nav):not(:has(> aside.sidebar-right)) > main,
+body > div:first-child > div.flex.mt-18:has(> nav):not(:has(> aside.sidebar-right)) > main > main {
+  max-width: var(--czon-shell-width);
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body > div:first-child > div.flex.mt-18:has(> nav):not(:has(> aside.sidebar-right)) article {
+  width: 100%;
+  max-width: var(--czon-page-width);
+  margin: 0;
+}
+
+body > div:first-child > div.flex.mt-18:has(> nav):not(:has(> aside.sidebar-right)) article .content-header {
+  margin-bottom: 1.75rem;
+  padding-bottom: 0;
+}
+
+body > div:first-child > div.flex.mt-18:has(> nav):not(:has(> aside.sidebar-right)) article .content-header h1 {
+  margin-bottom: 0.6rem;
+  font-size: 1.42rem;
+  line-height: 1.12;
+}
+
+body > div:first-child > div.flex.mt-18:has(> nav):not(:has(> aside.sidebar-right)) article .content-header .meta {
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+body > div:first-child > div.flex.mt-18:has(> nav):not(:has(> aside.sidebar-right)):has(a[href$="all-blog-posts.html"].active) article,
+body > div:first-child > div.flex.mt-18:has(> nav):not(:has(> aside.sidebar-right)):has(a[href$="all-diary-posts.html"].active) article {
+  max-width: var(--czon-list-width);
 }
 
 body > div:first-child > div.flex.mt-18:has(> aside.sidebar-right) article,
@@ -454,13 +531,13 @@ hr {
   body > div:first-child > div.flex.mt-18:has(> aside.sidebar-right) > main,
   body > div:first-child > div.flex.mt-18:has(> aside.sidebar-right) > main > main {
     max-width: var(--czon-article-shell-width);
-    padding-left: calc(var(--czon-article-rail-width) + var(--czon-article-rail-gap)) !important;
+    padding-left: calc(var(--czon-article-rail-width) + var(--czon-article-rail-gap) + var(--czon-article-offset)) !important;
     padding-right: 2.25rem !important;
     box-sizing: border-box;
   }
 
   body > div:first-child > div.flex.mt-18:has(> aside.sidebar-right) .content {
-    max-width: 70ch;
+    max-width: var(--czon-article-content-width);
     margin-left: 0;
     margin-right: auto;
     padding-left: 0 !important;
@@ -471,7 +548,7 @@ hr {
     display: block !important;
     position: fixed !important;
     top: 9rem !important;
-    left: max(1rem, calc(50% - 36.5rem));
+    left: max(1rem, calc(50% - (var(--czon-article-shell-width) / 2)));
     bottom: auto !important;
     width: var(--czon-article-rail-width) !important;
     max-height: calc(100vh - 11rem);
@@ -554,6 +631,12 @@ hr {
   .footer,
   .czon-header {
     max-width: 100%;
+  }
+
+  body > div:first-child > div.flex.mt-18:not(:has(> nav)):not(:has(> aside.sidebar-right)) > main > div,
+  body > div:first-child > div.flex.mt-18:has(> nav):not(:has(> aside.sidebar-right)) article {
+    width: 100%;
+    max-width: 100% !important;
   }
 
   #language-dropdown {

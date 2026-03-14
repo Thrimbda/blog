@@ -191,3 +191,43 @@
 2026-03-13T13:40:03.642Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .legion/tasks/czon/docs/review-code.md,success
 2026-03-13T13:40:15.413Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,completeTask: phase 3,success
 2026-03-13T13:40:18.683Z,legion_get_status,czon,同步 Czon 文章页到主站视觉基线,Claude,,success
+2026-03-13T14:32:18.716Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,addTask: 使用 playwright-cli 做浏览器级视觉审查,success
+2026-03-13T14:32:18.716Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,setCurrentTask: 使用 playwright-cli 做浏览器级视觉审查,success
+2026-03-13T14:32:22.936Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,,success
+2026-03-13T14:44:57.115Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,completeTask: 使用 playwright-cli 做浏览器级视觉审查,success
+2026-03-13T14:44:57.120Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,progress.completed: 已按 `playwright-cli` 指南完成浏览器级审查，新增桌面/移动文章与首页/列表/About 截图证据,success
+2026-03-13T14:44:57.121Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .legion/tasks/czon/docs/playwright-review.md,success
+2026-03-13T14:44:57.123Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,handoff: 若只以修正“正文过窄 + TOC 感觉不对”为目标，可以按当前结果继续 Review/合并,success
+2026-03-13T14:56:17.438Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addDecision: 仅靠 `.czon/style.css` 无法让 Czon 在 home/about/list 上达到可替代主站的完全对齐,success
+2026-03-13T14:56:17.439Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,addDiscoveredTask: 若目标升级为“Czon 直接替代主站”，需要推动 CZON framework 提供页面级主题/模板能力,success
+2026-03-13T14:56:17.501Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .legion/tasks/czon/docs/czon-framework-gap.md,success
+2026-03-13T15:01:03.581Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,addTask: 用 critique + playwright 做主站/Czon 比例审计,success
+2026-03-13T15:01:03.581Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,setCurrentTask: 用 critique + playwright 做主站/Czon 比例审计,success
+2026-03-13T15:01:03.581Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,,success
+2026-03-13T15:09:39.481Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,progress.completed: 已结合 critique 与 playwright-cli 完成逐页比例审计，确认用户感受到的“不一致、很怪”主要来自跨页面比例系统失配,success
+2026-03-13T15:09:39.481Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .legion/tasks/czon/docs/proportion-critique.md,success
+2026-03-13T15:09:39.481Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,completeTask: 用 critique + playwright 做主站/Czon 比例审计,success
+2026-03-13T15:09:39.481Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,handoff: 将 `.legion/tasks/czon/docs/proportion-critique.md` 与 `.legion/tasks/czon/docs/czon-framework-gap.md` 合并成对 CZON 上游的 issue / RFC 草案,success
+2026-03-13T15:15:44.988Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addDecision: 将“比例问题”和“替代主站级结构问题”拆开记录：前者大部分仍可由 `.czon/style.css` 修复，后者需要框架能力,success
+2026-03-13T15:15:44.988Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .legion/tasks/czon/docs/proportion-critique.md,success
+2026-03-13T15:19:34.673Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,setCurrentTask: 按比例审查清单继续修正 Czon 的 home/about/list/article 宽度与对位,success
+2026-03-13T15:19:34.673Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,,success
+2026-03-13T15:19:34.673Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,addDiscoveredTask: 按比例审查清单继续修正 Czon 的 home/about/list/article 宽度与对位,success
+2026-03-13T15:29:57.792Z,legion_get_status,czon,同步 Czon 文章页到主站视觉基线,Claude,,success
+2026-03-13T15:34:44.445Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,completeTask: 按比例审查清单继续修正 Czon 的 home/about/list/article 宽度与对位,success
+2026-03-13T15:34:44.471Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,progress.completed: 已在 `.czon/style.css` 中为 home/about/list/article 建立 page-family 宽度变量，并把跨页面主列宽度家族从 2.07x 收敛到 1.27x,success
+2026-03-13T15:34:44.480Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addDecision: 比例问题继续优先通过 `.czon/style.css` 收口，先把 page-family 宽度族与左锚统一到接近主站，再把剩余差异归因到模板层,success
+2026-03-13T15:34:44.496Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .czon/style.css,success
+2026-03-13T15:35:08.668Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,handoff: 基于 `.legion/tasks/czon/docs/proportion-critique.md` 的最新数据，决定是否继续微调 article 的 rail/offset，或把剩余差异归因为模板层,success
+2026-03-13T15:39:54.002Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,addDiscoveredTask: 继续微调 article 的 rail / offset，使文章页与主站更接近,success
+2026-03-13T15:39:54.010Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,addDiscoveredTask: 整理一份可发给 CZON 上游的 issue / RFC 草案,success
+2026-03-13T15:39:54.197Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,setCurrentTask: 继续微调 article 的 rail / offset，使文章页与主站更接近,success
+2026-03-13T15:39:54.199Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,,success
+2026-03-13T15:43:07.525Z,legion_get_status,czon,同步 Czon 文章页到主站视觉基线,Claude,,success
+2026-03-13T15:43:07.526Z,legion_read_context,czon,同步 Czon 文章页到主站视觉基线,Claude,"section: all, includeReviews: true",success
+2026-03-13T15:49:00.160Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,completeTask: 继续微调 article 的 rail / offset，使文章页与主站更接近,success
+2026-03-13T15:49:00.255Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addDecision: article 二次收口采用 `1040px / 69ch / 15.5rem / 3rem / 0.25rem` 变量组合，使 shell、正文与 TOC 起点重新贴回主站,success
+2026-03-13T15:49:00.255Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,progress.completed: 已继续微调 article 的 rail / offset，使文章页回到主站级别的 `621px / x=500 / TOC 248px / x=200` 组合,success
+2026-03-13T15:49:00.255Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,completeTask: 整理一份可发给 CZON 上游的 issue / RFC 草案,success
+2026-03-13T15:49:00.255Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .legion/tasks/czon/docs/czon-upstream-issue.md,success
+2026-03-13T15:49:11.877Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,handoff: 如需继续推进主站替代级对齐，优先把 `.legion/tasks/czon/docs/czon-upstream-issue.md` 发给 CZON 上游，争取 page-level theme/template hooks,success
