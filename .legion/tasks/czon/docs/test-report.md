@@ -17,6 +17,7 @@ PASS
 - 最新 `.czon/style.css` 的 article 变量已收口到更贴近主站的组合：`1040px / 69ch / 15.5rem / 3rem / 0.25rem`，且同样被复制到 `.czon/dist/style.css`。
 - 对照主站 `static/css/style.css` 的 `max-width: 1040px` 与 article `max-width: 69ch`，当前 Czon article 已回到同一几何基线。
 - 按 1440px 桌面视口静态推导，article shell 左缘为 `x=200`，TOC 为 `248px / x=200`，正文起点为 `x=500`；结合本轮已知最新测量，`article 621px / x=500` 的结论成立。
+- 最新浏览器复核表明文章页头部遮挡问题已消除：header 高度约 `150px`，TOC 起点约 `y=252`，已经完整落在 header 下方；语言选择器展开后位于右上 `x=888 / y=190`，不再压住 TOC 或正文。
 - `.czon/meta.json` 在构建过程中会被 Czon 临时改写为单语言产物元数据；该文件已由 orchestrator 在验证后恢复，因此不构成最终交付差异。
 
 ## 失败项（如有）

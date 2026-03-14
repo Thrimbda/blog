@@ -17,7 +17,8 @@
   --czon-code-bg: #ebe5db;
   --czon-content-width: 72ch;
   --czon-shell-width: 1040px;
-  --czon-header-block-width: 23rem;
+  --czon-header-block-width: 25rem;
+  --czon-header-clearance: 15.75rem;
   --czon-home-width: 44rem;
   --czon-page-width: 40rem;
   --czon-list-width: 47rem;
@@ -163,6 +164,10 @@ body > div:first-child > header:first-child {
   color: var(--czon-link) !important;
 }
 
+.nav-link-item {
+  font-size: 0.96rem;
+}
+
 .czon-header h1 {
   margin: 0;
   font-size: 0;
@@ -179,7 +184,7 @@ body > div:first-child > header:first-child {
 .czon-header h1 a::before {
   content: "   ___           _\A  / _ \\__  _____/ |\A | | | \\ \/ / __| |\A | |_| |>  < (__| |\A  \\___//_/\\_\\___|_|";
   white-space: pre;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.02em;
@@ -240,7 +245,10 @@ html:not([data-theme]) .dark-mode-switch-trigger::before {
   border-radius: 0 !important;
   box-shadow: none !important;
   color: var(--czon-fg) !important;
-  max-width: min(28rem, calc(100vw - 2.5rem));
+  left: auto !important;
+  right: 0 !important;
+  width: min(22rem, calc(100vw - 2.5rem)) !important;
+  max-width: min(22rem, calc(100vw - 2.5rem));
 }
 
 .language-switch-count,
@@ -527,6 +535,29 @@ hr {
   text-decoration: underline;
 }
 
+@media (min-width: 960px) {
+  .czon-header {
+    display: grid !important;
+    grid-template-columns: minmax(22rem, var(--czon-header-block-width)) 1fr;
+    align-items: start;
+    column-gap: 2rem;
+  }
+
+  .czon-header > div:last-child {
+    justify-self: end;
+    align-self: end;
+    margin-top: 0.2rem;
+    width: auto;
+    max-width: none;
+  }
+
+  .dark-mode-switch-container,
+  .language-switch-container {
+    position: relative;
+    z-index: 30;
+  }
+}
+
 @media (min-width: 1180px) {
   body > div:first-child > div.flex.mt-18:has(> aside.sidebar-right) > main,
   body > div:first-child > div.flex.mt-18:has(> aside.sidebar-right) > main > main {
@@ -547,13 +578,14 @@ hr {
   body > div:first-child > div.flex.mt-18 > aside.sidebar-right {
     display: block !important;
     position: fixed !important;
-    top: 9rem !important;
+    top: var(--czon-header-clearance) !important;
     left: max(1rem, calc(50% - (var(--czon-article-shell-width) / 2)));
     bottom: auto !important;
     width: var(--czon-article-rail-width) !important;
-    max-height: calc(100vh - 11rem);
+    max-height: calc(100vh - var(--czon-header-clearance) - 1.5rem);
     overflow: auto !important;
     padding-right: 0.25rem;
+    z-index: 2;
   }
 
   body > div:first-child > div.flex.mt-18 > aside.sidebar-right > aside.sidebar {

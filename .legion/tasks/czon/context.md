@@ -36,6 +36,7 @@
 | 桌面文章页改用 article-only CSS 作用域，基于 `aside.sidebar-right` 存在性重建正文宽度与 TOC rail | 这样可以只命中带 TOC 的文章页，清掉 Czon 默认文章 shell 的残留 padding，同时避免误伤首页、列表页与 About | 全局覆盖 `.content`/`main` 宽度；但会波及没有 TOC 的其他 Czon surface | 2026-03-13 |
 | 仅靠 `.czon/style.css` 无法让 Czon 在 home/about/list 上达到可替代主站的完全对齐 | 首页输出的是 category explorer 而不是 `_index.md` landing page；About 与 archive 页面被渲染成 article shell，并额外注入 metadata/nav/footer/share 结构，甚至出现 frontmatter 泄漏 | 继续只用 CSS 打磨；但这只能逼近 article，无法创造缺失的页面模板与语义结构 | 2026-03-13 |
 | 比例问题继续优先通过 `.czon/style.css` 收口，先把 page-family 宽度族与左锚统一到接近主站，再把剩余差异归因到模板层 | Playwright 复测表明 home/about/list/article 的宽度与对位在现有 DOM 下仍有足够 CSS 可修空间；完成这一步后，跨页面宽度家族已从 2.07x 收敛到 1.27x | 直接停止 CSS 调整并立即上升为框架问题；但这会错过当前可低成本修掉的比例失配 | 2026-03-13 |
+| 文章页 header 改为桌面双列布局，utility row 右置，并通过 `--czon-header-clearance` 把 TOC 固定起点整体下移到 header 下方 | 这样同时解决了三个用户可感知问题：logo/header 比例失衡、TOC 被头部遮住、语言/文章选择器展开时被左 rail 或正文压住 | 仅单独调大 TOC top 或只缩小 header；但会留下 dropdown 遮挡或 header 比例依旧发虚的问题 | 2026-03-14 |
 
 ---
 
@@ -53,7 +54,7 @@
 
 ---
 
-*最后更新: 2026-03-13 23:49 by Claude*
+*最后更新: 2026-03-14 09:49 by Claude*
 开始：**
 
 1. (待填写)

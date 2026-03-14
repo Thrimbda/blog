@@ -231,3 +231,6 @@
 2026-03-13T15:49:00.255Z,legion_update_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,completeTask: 整理一份可发给 CZON 上游的 issue / RFC 草案,success
 2026-03-13T15:49:00.255Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .legion/tasks/czon/docs/czon-upstream-issue.md,success
 2026-03-13T15:49:11.877Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,handoff: 如需继续推进主站替代级对齐，优先把 `.legion/tasks/czon/docs/czon-upstream-issue.md` 发给 CZON 上游，争取 page-level theme/template hooks,success
+2026-03-14T01:49:14.768Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,progress.completed: 已整体修复文章页 header / logo 比例、TOC 遮挡和语言选择器展开遮挡问题,success
+2026-03-14T01:49:14.769Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addDecision: 文章页 header 改为桌面双列布局，utility row 右置，并通过 `--czon-header-clearance` 把 TOC 固定起点整体下移到 header 下方,success
+2026-03-14T01:49:14.879Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .czon/style.css,success
