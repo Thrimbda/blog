@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "currentTask": "czon",
+  "currentTask": "cone-scroll-folder",
   "settings": {
     "autoRemind": true,
     "remindBeforeReset": true,
@@ -45,9 +45,16 @@
     {
       "id": "czon",
       "name": "同步 Czon 文章页到主站视觉基线",
-      "status": "active",
+      "status": "paused",
       "createdAt": "2026-03-13T13:18:45.902Z",
-      "updatedAt": "2026-03-14T01:49:14.878Z"
+      "updatedAt": "2026-03-14T02:10:34.807Z"
+    },
+    {
+      "id": "cone-scroll-folder",
+      "name": "提取 Cone Scroll 主题为独立 folder 并切换站点配置",
+      "status": "active",
+      "createdAt": "2026-03-14T02:10:34.807Z",
+      "updatedAt": "2026-03-14T02:51:21.357Z"
     }
   ],
   "pendingProposals": [
@@ -528,6 +535,68 @@
       "decidedAt": "2026-03-13T13:18:45.902Z",
       "decidedBy": "Claude",
       "createdTaskId": "czon"
+    },
+    {
+      "id": "proposal-mmpouy2i-62f16e",
+      "name": "提取 Cone Scroll 主题为独立 folder 并切换站点配置",
+      "goal": "将当前 Cone Scroll 风格的 Zola 主题按 anemone 的主题仓库组织方式抽取到独立 `themes/cone-scroll/` 目录，并让站点通过 `theme = \"cone-scroll\"` 使用它。",
+      "rationale": "用户明确要求参考 `granda` 任务和 Speyll/anemone 的组织方式，将当前站点的 Cone Scroll 主题从站点根目录抽取为可复用的独立主题 folder，并同步修改本仓库的 theme 配置。这项工作涉及目录结构重组、模板/静态资源迁移、配置切换、构建验证以及 PR 文档产出，属于典型的多步骤端到端交付，适合以新的 LegionMind 任务承载。",
+      "points": [
+        "参考既有 `granda` 任务产物，把当前主站 Cone Scroll 视觉作为 source of truth",
+        "按 anemone 的组织方式提取主题：主题元数据、templates、theme-level static 资源进入独立 folder",
+        "站点根目录保留内容与站点配置，主题相关模板/样式/脚本改由 `themes/cone-scroll/` 提供",
+        "确保提取后构建结果保持现有视觉和功能，最终生成测试/评审/PR body 文档"
+      ],
+      "scope": [
+        "config.toml",
+        "theme.toml",
+        "templates/",
+        "static/css/",
+        "static/js/",
+        "static/icons.svg",
+        "static/favicon.ico",
+        "static/click.ogg",
+        "themes/cone-scroll/"
+      ],
+      "phases": [
+        {
+          "name": "设计",
+          "tasks": [
+            {
+              "description": "梳理当前 Cone Scroll 主题资产边界、目标目录结构与风险分级，形成摘要级任务契约与 RFC",
+              "acceptance": "plan.md 明确问题定义、验收、假设、约束、风险、允许 scope，并产出可执行 RFC"
+            }
+          ]
+        },
+        {
+          "name": "实现",
+          "tasks": [
+            {
+              "description": "提取主题文件到 `themes/cone-scroll/` 并更新主题元数据",
+              "acceptance": "`themes/cone-scroll/` 具备可独立复用的 `theme.toml`、templates 与 theme-level static 资源"
+            },
+            {
+              "description": "修改站点配置并清理根目录中的重复主题入口",
+              "acceptance": "`config.toml` 通过 `theme = \"cone-scroll\"` 加载主题，站点根目录仅保留内容级资源和配置"
+            }
+          ]
+        },
+        {
+          "name": "验证与报告",
+          "tasks": [
+            {
+              "description": "运行构建/验证并生成代码评审、walkthrough 与 PR body",
+              "acceptance": "输出 `docs/test-report.md`、`docs/review-code.md`、`docs/report-walkthrough.md`、`docs/pr-body.md`，并说明提取方式与回滚方式"
+            }
+          ]
+        }
+      ],
+      "proposedBy": "Claude",
+      "proposedAt": "2026-03-14T02:10:30.524Z",
+      "status": "approved",
+      "decidedAt": "2026-03-14T02:10:34.807Z",
+      "decidedBy": "Claude",
+      "createdTaskId": "cone-scroll-folder"
     }
   ]
 }

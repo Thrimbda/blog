@@ -1,0 +1,13 @@
+name = "cone-scroll"
+description = "A custom Zola theme extracted from the Cone Scroll blog implementation, preserving its existing layout, typography, and interactions."
+license = "MIT"
+homepage = "https://0xc1.space"
+min_version = "0.21.0"
+demo = "https://0xc1.space"
+
+[extra]
+
+
+[author]
+name = "0xc1"
+homepage = "https://0xc1.space"

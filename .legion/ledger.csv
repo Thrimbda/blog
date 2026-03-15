@@ -234,3 +234,29 @@
 2026-03-14T01:49:14.768Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,progress.completed: 已整体修复文章页 header / logo 比例、TOC 遮挡和语言选择器展开遮挡问题,success
 2026-03-14T01:49:14.769Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addDecision: 文章页 header 改为桌面双列布局，utility row 右置，并通过 `--czon-header-clearance` 把 TOC 固定起点整体下移到 header 下方,success
 2026-03-14T01:49:14.879Z,legion_update_context,czon,同步 Czon 文章页到主站视觉基线,Claude,addFile: .czon/style.css,success
+2026-03-14T02:08:14.467Z,legion_list_tasks,czon,同步 Czon 文章页到主站视觉基线,Claude,,success
+2026-03-14T02:08:14.468Z,legion_get_status,czon,同步 Czon 文章页到主站视觉基线,Claude,,success
+2026-03-14T02:10:16.376Z,legion_create_task,czon,同步 Czon 文章页到主站视觉基线,Claude,"goal: 将当前 Granda 风格的 Zola 主题按 anemone 的主题仓库组织方式抽取到独立 `themes/granda/` 目录，并让站点通过 `theme = ""granda""` 使用它。",failed
+2026-03-14T02:10:30.527Z,legion_propose_task,czon,同步 Czon 文章页到主站视觉基线,Claude,name: 提取 Granda 主题为独立 folder 并切换站点配置,success
+2026-03-14T02:10:34.822Z,legion_approve_proposal,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,proposalId: proposal-mmpouy2i-62f16e,success
+2026-03-14T02:10:38.543Z,legion_get_status,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,,success
+2026-03-14T02:11:30.535Z,legion_update_context,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,addDecision: 将本任务定级为 Medium，并要求先产出 RFC 再实施,success
+2026-03-14T02:11:30.536Z,legion_update_tasks,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,setCurrentTask: phase 1,success
+2026-03-14T02:19:24.903Z,legion_update_context,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,addDecision: `static/favicon.ico` 保留在根目录，`static/click.ogg` 不纳入本次主题抽取 scope,success
+2026-03-14T02:19:47.920Z,legion_get_status,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,,success
+2026-03-14T02:21:20.079Z,legion_update_tasks,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,completeTask: phase 1,success
+2026-03-14T02:21:20.092Z,legion_update_tasks,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,setCurrentTask: phase 2,success
+2026-03-14T02:21:20.094Z,legion_update_context,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,addFile: .legion/tasks/granda-folder/docs/rfc.md,success
+2026-03-14T02:24:13.002Z,legion_get_status,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,,success
+2026-03-14T02:24:13.003Z,legion_read_context,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,"section: all, includeReviews: true",success
+2026-03-14T02:26:36.431Z,legion_update_tasks,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,setCurrentTask: phase 3,success
+2026-03-14T02:26:36.432Z,legion_update_tasks,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,completeTask: phase 3,success
+2026-03-14T02:30:59.659Z,legion_update_context,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,addFile: themes/granda/theme.toml,success
+2026-03-14T02:30:59.659Z,legion_update_context,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,addFile: themes/granda/static/,success
+2026-03-14T02:30:59.659Z,legion_update_context,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,addDecision: 主题抽取后保留 `themes/granda/` 作为唯一主题来源，根目录不再保留重复模板或 theme-level 静态入口,success
+2026-03-14T02:30:59.660Z,legion_update_context,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,addFile: themes/granda/templates/,success
+2026-03-14T02:31:06.437Z,legion_get_status,granda-folder,提取 Granda 主题为独立 folder 并切换站点配置,Claude,,success
+2026-03-14T02:50:08.135Z,legion_get_status,granda-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,,success
+2026-03-14T02:51:12.901Z,legion_get_status,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,,success
+2026-03-14T02:51:21.355Z,legion_update_context,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,addDecision: 保留既有基线任务 `granda` 的历史命名，但当前抽取任务与实际主题目录统一改名为 `cone-scroll` / `cone-scroll-folder`,success
+2026-03-14T02:51:21.357Z,legion_update_context,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,addFile: themes/cone-scroll/,success
