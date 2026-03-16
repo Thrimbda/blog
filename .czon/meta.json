@@ -10967,6 +10967,174 @@
         }
       },
       "metadataTranslationHash": "4d3b158ea3b62597035d23e110920c962309bdd9b6e4d7d08ed765568ca7b598"
+    },
+    {
+      "path": "themes/cone-scroll/README.md",
+      "links": [
+        "https://github.com/Speyll/anemone",
+        "https://granda.org",
+        "./screenshot.svg",
+        "./screenshot-post.svg"
+      ],
+      "metadata": {
+        "title": "cone-scroll",
+        "description": "cone-scroll 是一个为 Zola 设计的博客主题，强调阅读体验，提供暖色配色、窄阅读宽度和索引式页面。",
+        "short_summary": "cone-scroll 是 Zola 的博客主题，专注于阅读体验，提供暖色配色和窄阅读宽度。它采用索引式设计，避免卡片布局，适合喜欢安静阅读的用户。主题安装简单，支持中英文配置，并包含文章模板和 TOC 功能。",
+        "audience": "使用 Zola 搭建博客的用户，特别是喜欢简洁阅读体验和中文界面的博主",
+        "key_points": [
+          "专为 Zola 设计的博客主题，强调阅读体验和索引式设计",
+          "提供暖色 paper/ink 配色，支持亮色和暗色主题",
+          "安装简单，通过复制主题目录和配置 config.toml 即可使用",
+          "默认偏好中文语境，适合中文博客站点",
+          "主题结构简单，无构建链，基于模板和 CSS 实现"
+        ],
+        "summary": "cone-scroll 是一个专为 Zola 静态网站生成器开发的博客主题，最初受 anemone 和 granda 启发，现已发展成独特风格。它注重阅读体验，采用暖纸色背景、窄正文列和安静目录，避免卡片和华丽设计。主题包含亮色/暗色两套配色、索引式首页、归档页和标签页，以及文本化功能切换。安装简单，通过复制主题目录并配置 config.toml 即可使用。主题默认偏好中文语境，适合中文站点，并提供文章模板、TOC 控制等特性。",
+        "slug": "cone-scroll-zola-blog-theme",
+        "tags": [
+          "Zola",
+          "博客主题",
+          "静态网站",
+          "阅读体验",
+          "中文博客",
+          "开源",
+          "MIT 许可证"
+        ],
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1364,
+          "completion": 412,
+          "total": 1776
+        }
+      },
+      "hash": "009f6415e6d50e4bdaee5647a55f0f8019719f3645d719dc7441b841e0815d3f",
+      "metadataTranslations": {
+        "en-US": {
+          "title": "cone-scroll",
+          "description": "cone-scroll is a blog theme designed for Zola, emphasizing reading experience with warm color schemes, narrow reading width, and index-style pages.",
+          "summary": "cone-scroll is a blog theme specifically developed for the Zola static site generator, initially inspired by anemone and granda, and has evolved into a unique style. It focuses on reading experience, using warm paper-like background colors, narrow text columns, and a quiet table of contents, avoiding cards and flashy designs. The theme includes light/dark color schemes, an index-style homepage, archive and tag pages, as well as text-based feature toggles. Installation is simple, requiring only copying the theme directory and configuring config.toml. The theme defaults to a Chinese context, suitable for Chinese sites, and provides article templates, TOC control, and other features.",
+          "short_summary": "cone-scroll is a blog theme for Zola, focusing on reading experience with warm color schemes and narrow reading width. It uses an index-style design, avoiding card layouts, and is suitable for users who prefer quiet reading. The theme is easy to install, supports Chinese and English configurations, and includes article templates and TOC functionality.",
+          "key_points": [
+            "A blog theme designed for Zola, emphasizing reading experience and index-style design",
+            "Provides warm paper/ink color schemes, supporting both light and dark themes",
+            "Simple installation by copying the theme directory and configuring config.toml",
+            "Defaults to a Chinese context, suitable for Chinese blog sites",
+            "Simple theme structure with no build chain, implemented based on templates and CSS"
+          ],
+          "audience": "Users building blogs with Zola, especially bloggers who prefer a clean reading experience and Chinese interface",
+          "tags": [
+            "Zola",
+            "Blog Theme",
+            "Static Site",
+            "Reading Experience",
+            "Chinese Blog",
+            "Open Source",
+            "MIT License"
+          ]
+        },
+        "es-ES": {
+          "title": "cone-scroll",
+          "description": "cone-scroll es un tema de blog diseñado para Zola, que enfatiza la experiencia de lectura, ofreciendo una paleta de colores cálidos, un ancho de lectura reducido y páginas de índice.",
+          "summary": "cone-scroll es un tema de blog desarrollado específicamente para el generador de sitios estáticos Zola, inspirado inicialmente por anemone y granda, y que ha evolucionado hacia un estilo único. Se centra en la experiencia de lectura, utilizando un fondo de color papel cálido, una columna de texto estrecha y un índice silencioso, evitando tarjetas y diseños ornamentados. El tema incluye dos conjuntos de colores (claro/oscuro), una página de inicio tipo índice, páginas de archivo y de etiquetas, así como conmutadores de funciones textuales. La instalación es sencilla: copia el directorio del tema y configura config.toml. El tema está predispuesto para el contexto chino, es adecuado para sitios en chino y ofrece características como plantillas de artículos y control de TOC.",
+          "short_summary": "cone-scroll es un tema de blog para Zola que se centra en la experiencia de lectura, ofreciendo una paleta de colores cálidos y un ancho de lectura reducido. Utiliza un diseño tipo índice, evita el diseño basado en tarjetas y es adecuado para usuarios que prefieren una lectura tranquila. La instalación es sencilla, admite configuración en chino e inglés, e incluye plantillas de artículos y funcionalidad TOC.",
+          "key_points": [
+            "Tema de blog diseñado específicamente para Zola, que enfatiza la experiencia de lectura y el diseño tipo índice",
+            "Ofrece una paleta de colores cálidos paper/ink, compatible con temas claro y oscuro",
+            "Instalación sencilla, copiando el directorio del tema y configurando config.toml",
+            "Predispuesto para el contexto chino, adecuado para sitios de blog en chino",
+            "Estructura del tema simple, sin cadena de construcción, implementado basándose en plantillas y CSS"
+          ],
+          "audience": "Usuarios que construyen blogs con Zola, especialmente blogueros que prefieren una experiencia de lectura minimalista y una interfaz en chino",
+          "tags": [
+            "Zola",
+            "Tema de blog",
+            "Sitio web estático",
+            "Experiencia de lectura",
+            "Blog en chino",
+            "Código abierto",
+            "Licencia MIT"
+          ]
+        },
+        "zh-Hans": {
+          "title": "cone-scroll",
+          "description": "cone-scroll 是一个为 Zola 设计的博客主题，强调阅读体验，提供暖色配色、窄阅读宽度和索引式页面。",
+          "summary": "cone-scroll 是一个专为 Zola 静态网站生成器开发的博客主题，最初受 anemone 和 granda 启发，现已发展成独特风格。它注重阅读体验，采用暖纸色背景、窄正文列和安静目录，避免卡片和华丽设计。主题包含亮色/暗色两套配色、索引式首页、归档页和标签页，以及文本化功能切换。安装简单，通过复制主题目录并配置 config.toml 即可使用。主题默认偏好中文语境，适合中文站点，并提供文章模板、TOC 控制等特性。",
+          "short_summary": "cone-scroll 是 Zola 的博客主题，专注于阅读体验，提供暖色配色和窄阅读宽度。它采用索引式设计，避免卡片布局，适合喜欢安静阅读的用户。主题安装简单，支持中英文配置，并包含文章模板和 TOC 功能。",
+          "key_points": [
+            "专为 Zola 设计的博客主题，强调阅读体验和索引式设计",
+            "提供暖色 paper/ink 配色，支持亮色和暗色主题",
+            "安装简单，通过复制主题目录和配置 config.toml 即可使用",
+            "默认偏好中文语境，适合中文博客站点",
+            "主题结构简单，无构建链，基于模板和 CSS 实现"
+          ],
+          "audience": "使用 Zola 搭建博客的用户，特别是喜欢简洁阅读体验和中文界面的博主",
+          "tags": [
+            "Zola",
+            "博客主题",
+            "静态网站",
+            "阅读体验",
+            "中文博客",
+            "开源",
+            "MIT 许可证"
+          ]
+        },
+        "ja-JP": {
+          "title": "cone-scroll",
+          "description": "cone-scroll は Zola 向けに設計されたブログテーマで、読書体験を重視し、暖色の配色、狭い読書幅、インデックス式ページを提供します。",
+          "summary": "cone-scroll は、Zola 静的サイトジェネレーター専用に開発されたブログテーマで、当初は anemone と granda に触発されましたが、現在は独自のスタイルに発展しています。読書体験を重視し、暖かい紙色の背景、狭い本文列、静かな目次を採用し、カードや派手なデザインを避けています。テーマには、ライト/ダークの2つの配色、インデックス式ホームページ、アーカイブページ、タグページ、およびテキストベースの機能切り替えが含まれています。インストールは簡単で、テーマディレクトリをコピーし、config.toml を設定するだけで使用できます。テーマはデフォルトで中国語コンテキストを好み、中国語サイトに適しており、記事テンプレート、TOC 制御などの機能を提供します。",
+          "short_summary": "cone-scroll は Zola のブログテーマで、読書体験に焦点を当て、暖色の配色と狭い読書幅を提供します。インデックス式デザインを採用し、カードレイアウトを避け、静かな読書を好むユーザーに適しています。テーマのインストールは簡単で、中国語と英語の設定をサポートし、記事テンプレートと TOC 機能を含みます。",
+          "key_points": [
+            "Zola 専用に設計されたブログテーマで、読書体験とインデックス式デザインを強調",
+            "暖色の paper/ink 配色を提供し、ライトテーマとダークテーマをサポート",
+            "インストールが簡単で、テーマディレクトリのコピーと config.toml の設定のみで使用可能",
+            "デフォルトで中国語コンテキストを好み、中国語ブログサイトに適している",
+            "テーマ構造がシンプルで、ビルドチェーンがなく、テンプレートと CSS に基づいて実装"
+          ],
+          "audience": "Zola を使用してブログを構築するユーザー、特にシンプルな読書体験と中国語インターフェースを好むブロガー",
+          "tags": [
+            "Zola",
+            "ブログテーマ",
+            "静的サイト",
+            "読書体験",
+            "中国語ブログ",
+            "オープンソース",
+            "MIT ライセンス"
+          ]
+        },
+        "de-DE": {
+          "title": "cone-scroll",
+          "description": "cone-scroll ist ein Blog-Thema für Zola, das die Leseerfahrung betont und warme Farbpaletten, schmale Lesebreiten und indexbasierte Seiten bietet.",
+          "summary": "cone-scroll ist ein Blog-Thema, das speziell für den statischen Site-Generator Zola entwickelt wurde. Ursprünglich von anemone und granda inspiriert, hat es sich zu einem einzigartigen Stil entwickelt. Es legt Wert auf die Leseerfahrung, verwendet einen warmen Papierfarbton-Hintergrund, schmale Textspalten und eine ruhige Inhaltsübersicht, vermeidet Karten und aufwendiges Design. Das Thema enthält zwei Farbschemata (hell/dunkel), eine indexbasierte Startseite, Archiv- und Tag-Seiten sowie textbasierte Funktionsumschaltungen. Die Installation ist einfach: Kopieren Sie das Themenverzeichnis und konfigurieren Sie config.toml. Das Thema ist standardmäßig auf chinesische Kontexte ausgelegt, eignet sich für chinesische Websites und bietet Artikelvorlagen, TOC-Steuerung und andere Funktionen.",
+          "short_summary": "cone-scroll ist ein Blog-Thema für Zola, das sich auf die Leseerfahrung konzentriert und warme Farbpaletten sowie schmale Lesebreiten bietet. Es verwendet ein indexbasiertes Design, vermeidet Kartenlayouts und eignet sich für Benutzer, die gerne in Ruhe lesen. Das Thema ist einfach zu installieren, unterstützt chinesische und englische Konfigurationen und enthält Artikelvorlagen und TOC-Funktionen.",
+          "key_points": [
+            "Speziell für Zola entwickeltes Blog-Thema, das Leseerfahrung und indexbasiertes Design betont",
+            "Bietet warme Papier/Tinte-Farbpaletten, unterstützt helle und dunkle Themen",
+            "Einfache Installation durch Kopieren des Themenverzeichnisses und Konfigurieren von config.toml",
+            "Standardmäßig auf chinesische Kontexte ausgelegt, geeignet für chinesische Blog-Sites",
+            "Einfache Themenstruktur, keine Build-Kette, basierend auf Vorlagen und CSS"
+          ],
+          "audience": "Benutzer, die Zola für Blogs verwenden, insbesondere Blogger, die eine einfache Leseerfahrung und chinesische Oberflächen bevorzugen",
+          "tags": [
+            "Zola",
+            "Blog-Thema",
+            "Statische Website",
+            "Leseerfahrung",
+            "Chinesischer Blog",
+            "Open Source",
+            "MIT-Lizenz"
+          ]
+        }
+      },
+      "metadataTranslationHash": "e7497ad3b350ec89a8752618e35f35670a049f7cfca825fe18043e866b4978ea",
+      "category": "Blog Setup",
+      "nativeMarkdownHash": "009f6415e6d50e4bdaee5647a55f0f8019719f3645d719dc7441b841e0815d3f"
+    },
+    {
+      "path": "themes/cone-scroll/screenshot-post.svg",
+      "links": []
+    },
+    {
+      "path": "themes/cone-scroll/screenshot.svg",
+      "links": []
     }
   ],
   "categoryTranslations": {
