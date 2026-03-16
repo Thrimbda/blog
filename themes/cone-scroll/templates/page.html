@@ -1,7 +1,6 @@
 {% extends "base.html" %} {% import "macros/page_outline.html" as page_outline %} {% block content %}
 {% set show_outline = page.extra.toc | default(value=true) %}
-{% set current_lang = page.lang | default(value=config.default_language) %}
-{% set is_en = current_lang == "en" %}
+{% set current_lang = lang | default(value=config.default_language) %}
 <div class="page-shell{% if page.toc and show_outline %} has-outline{% endif %}"{% if page.toc and show_outline %} data-outline-shell data-outline-state="expanded"{% endif %}>
 {% if page.toc and show_outline %}
 {% include "partials/page-outline.html" %}
@@ -13,11 +12,13 @@
 
 <p class="tags-data">
   {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags %}
-  <a href="/tags/{{ tag | slugify }}">&#47;{{ tag }}&#47;</a>
+  <a href="{{ get_taxonomy_url(kind='tags', name=tag, lang=current_lang) }}">&#47;{{ tag }}&#47;</a>
   {% endfor %} {% endif %}
 </p>
 
-<p class="admin-edit"><a href="/admin?path={{ page.relative_path }}" class="admin-edit-link">[{% if is_en %}Edit{% else %}编辑{% endif %}]</a></p>
+{% if current_lang == config.default_language %}
+<p class="admin-edit"><a href="/admin?path={{ page.relative_path }}" class="admin-edit-link">[{{ trans(key="edit_label", lang=current_lang) }}]</a></p>
+{% endif %}
 </article>
 </div>
 {% endblock content %}

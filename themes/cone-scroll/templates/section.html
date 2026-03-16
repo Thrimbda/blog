@@ -7,8 +7,7 @@
 {% else %}
 {% set pages = section.pages %}
 {% endif %}
-{% set current_lang = section.lang | default(value=config.default_language) %}
-{% set is_en = current_lang == "en" %}
+{% set current_lang = lang | default(value=config.default_language) %}
 
 <h1>{{ section.title }}</h1>
 
@@ -22,10 +21,10 @@
   </ul>
 
   {% if paginator %}
-  <nav class="post-nav" aria-label="{% if is_en %}Pagination{% else %}分页{% endif %}">
-    {% if paginator.previous %}<a href="{{ paginator.previous }}">{% if is_en %}previous{% else %}上一页{% endif %}</a>{% endif %}
-    <span>{% if is_en %}{{ paginator.current_index }} / {{ paginator.number_pagers }}{% else %}第 {{ paginator.current_index }} / {{ paginator.number_pagers }} 页{% endif %}</span>
-    {% if paginator.next %}<a class="post-nav-next" href="{{ paginator.next }}">{% if is_en %}next{% else %}下一页{% endif %}</a>{% endif %}
+  <nav class="post-nav" aria-label="{{ trans(key='pagination', lang=current_lang) }}">
+    {% if paginator.previous %}<a href="{{ paginator.previous }}">{{ trans(key="previous", lang=current_lang) }}</a>{% endif %}
+    <span>{{ paginator.current_index }} / {{ paginator.number_pagers }}</span>
+    {% if paginator.next %}<a class="post-nav-next" href="{{ paginator.next }}">{{ trans(key="next", lang=current_lang) }}</a>{% endif %}
   </nav>
   {% endif %}
 </div>

@@ -3,6 +3,7 @@
 <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="robots" content="index, follow">
+{% set current_lang = lang | default(value=config.default_language) %}
 {% if page.title %}
 {% set title = page.title %}
 {% elif section.title %}
@@ -86,7 +87,7 @@
 {% endblock metatags %}
 {% if config.generate_feeds %}
 {% block feed %}
-<link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml", trailing_slash=false) }}"> 
+<link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml", trailing_slash=false, lang=current_lang) }}"> 
 {% endblock feed %}
 {% endif %}
 {% block css %}

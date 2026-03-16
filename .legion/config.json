@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "currentTask": "toc-rail",
+  "currentTask": "zola",
   "settings": {
     "autoRemind": true,
     "remindBeforeReset": true,
@@ -45,9 +45,9 @@
     {
       "id": "czon",
       "name": "同步 Czon 文章页到主站视觉基线",
-      "status": "paused",
+      "status": "archived",
       "createdAt": "2026-03-13T13:18:45.902Z",
-      "updatedAt": "2026-03-14T02:10:34.807Z"
+      "updatedAt": "2026-03-16T05:59:08.411Z"
     },
     {
       "id": "cone-scroll-folder",
@@ -59,9 +59,16 @@
     {
       "id": "toc-rail",
       "name": "TOC 收起时折叠左 rail 并保留展开按钮",
-      "status": "active",
+      "status": "archived",
       "createdAt": "2026-03-16T05:17:02.353Z",
-      "updatedAt": "2026-03-16T05:49:50.713Z"
+      "updatedAt": "2026-03-16T05:59:08.407Z"
+    },
+    {
+      "id": "zola",
+      "name": "接入 Zola 多语言同步脚本与语言切换",
+      "status": "active",
+      "createdAt": "2026-03-16T06:02:13.563Z",
+      "updatedAt": "2026-03-16T08:19:55.955Z"
     }
   ],
   "pendingProposals": [
@@ -664,6 +671,77 @@
       "decidedAt": "2026-03-16T05:17:02.353Z",
       "decidedBy": "Claude",
       "createdTaskId": "toc-rail"
+    },
+    {
+      "id": "proposal-mmss0ez3-ab9f3d",
+      "name": "接入 Zola 多语言同步脚本与语言切换",
+      "goal": "让主站以 `zh-Hans` 为默认语言，自动从 `.czon/src` 同步非中文翻译到 Zola 多语言内容，并在主题与 CI 中接入语言切换和预构建流程。",
+      "rationale": "用户明确要求归档旧任务后新开一项端到端交付任务，并要求最终产出 `.legion/` 任务文档和可直接作为 PR 描述的 `pr-body.md`。这项工作涉及 Zola 多语言方案调研、脚本实现、主题适配、CI 接入、构建验证与报告生成，属于典型多步骤任务，适合以新的 LegionMind 任务承载。",
+      "points": [
+        "先调研 Zola 多语言配置与内容命名规则，明确默认语言、`[languages.*]`、模板取当前语言/翻译链接的做法",
+        "新增一个 Node 24 可直接运行的 `.ts` 脚本，从 `.czon/src` 读取除 `zh-Hans` 外的语言内容并同步到 Zola `content/` 的多语言文件命名",
+        "在 CI 的 Zola build 前执行该脚本，保证 Pages 构建输出包含多语言主站",
+        "修改 Cone Scroll 主题，在 light/dark toggle 旁增加低声量语言下拉，并修正导航/壳层链接到当前语言路径"
+      ],
+      "scope": [
+        "config.toml",
+        "content/",
+        "scripts/",
+        "themes/cone-scroll/",
+        ".github/workflows/pages.yaml",
+        ".legion/playbook.md"
+      ],
+      "phases": [
+        {
+          "name": "调研与设计",
+          "tasks": [
+            {
+              "description": "梳理当前站点结构与 Zola 多语言约束，确定风险分级、默认语言与文件同步策略",
+              "acceptance": "`plan.md` 写明问题、验收、Scope、风险分级，并补充 design-lite 或 RFC 入口"
+            },
+            {
+              "description": "为多语言接入生成 RFC 并完成技术评审收敛",
+              "acceptance": "`docs/rfc.md` 与 `docs/review-rfc.md` 给出可执行方案，阻塞问题已关闭"
+            }
+          ]
+        },
+        {
+          "name": "实现",
+          "tasks": [
+            {
+              "description": "实现 `.czon/src` -> Zola 多语言内容同步脚本，并按约定生成/更新翻译文件",
+              "acceptance": "脚本可在 Node 24 下直接执行，目标语言文件同步结果稳定、可重复运行"
+            },
+            {
+              "description": "更新 Zola 配置、主题模板与前端脚本，接入默认语言和语言切换 UI",
+              "acceptance": "主站默认 `zh-Hans`，导航/标签/返回链接/主题旁语言选择可指向正确语言 URL"
+            },
+            {
+              "description": "在 CI 构建链路中接入同步脚本，在 `zola build` 前执行",
+              "acceptance": "Pages workflow 在 Zola build 前调用同步脚本，构建链路保持可用"
+            }
+          ]
+        },
+        {
+          "name": "验证与报告",
+          "tasks": [
+            {
+              "description": "运行构建/测试并完成代码评审与安全评审（如需要）",
+              "acceptance": "产出 `test-report.md`、`review-code.md`，如判定需要则补 `review-security.md`"
+            },
+            {
+              "description": "生成 walkthrough 与 PR body，整理回滚与后续说明",
+              "acceptance": "产出 `report-walkthrough.md` 与 `pr-body.md`，可直接用于 PR 描述"
+            }
+          ]
+        }
+      ],
+      "proposedBy": "Claude",
+      "proposedAt": "2026-03-16T06:02:03.087Z",
+      "status": "approved",
+      "decidedAt": "2026-03-16T06:02:13.563Z",
+      "decidedBy": "Claude",
+      "createdTaskId": "zola"
     }
   ]
 }

@@ -160,6 +160,25 @@
     window.dispatchEvent(new CustomEvent("theme-changed", { detail: { theme: next } }));
   }
 
+  function initLanguageSelect() {
+    const select = document.getElementById("language-select");
+    if (!select) {
+      return;
+    }
+
+    select.addEventListener("change", function () {
+      const next = select.value;
+      if (!next || next === window.location.href) {
+        return;
+      }
+
+      const url = new URL(next, window.location.origin);
+      if (url.origin === window.location.origin) {
+        window.location.assign(url.toString());
+      }
+    });
+  }
+
   function initEmblaCarousels() {
     if (typeof EmblaCarousel === "undefined" || typeof EmblaCarouselAutoplay === "undefined") {
       return;
@@ -223,6 +242,8 @@
     if (button) {
       button.addEventListener("click", toggleTheme);
     }
+
+    initLanguageSelect();
 
     if (window.matchMedia) {
       window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (event) {

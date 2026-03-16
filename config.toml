@@ -6,9 +6,193 @@ compile_sass = false
 minify_html = true
 generate_feeds = true
 feed_filenames = ["atom.xml"]
-default_language = "zh"
+default_language = "zh-Hans"
 
 taxonomies = [{ name = "tags", feed = true }]
+
+[translations]
+nav_blog = "博客"
+nav_diary = "日志"
+nav_gcores = "机组"
+nav_about = "关于"
+main_navigation = "主导航"
+footer_navigation = "页脚导航"
+pagination = "分页"
+previous = "上一页"
+next = "下一页"
+theme_label = "主题"
+theme_light = "浅色"
+theme_dark = "深色"
+theme_to_light = "切换到浅色模式"
+theme_to_dark = "切换到深色模式"
+language_switch = "切换语言"
+posts_heading = "[近文]"
+tags_heading = "标签"
+posts_unit = "篇"
+built_with_prefix = "由"
+built_with_suffix = " 构建。"
+outline_label = "目录"
+toc_label = "文章目录"
+back_to_blog = "返回博客"
+back_to_diary = "返回日志"
+published_label = "发布于"
+author_label = "作者"
+edit_label = "编辑"
+footer_posts = "博客"
+footer_about = "关于"
+footer_tags = "标签"
+
+[languages."en-US"]
+title = "c1's Blog"
+description = "c1's blog"
+generate_feeds = true
+taxonomies = [{ name = "tags", feed = true }]
+
+[languages."en-US".translations]
+nav_blog = "blog"
+nav_diary = "diary"
+nav_gcores = "crew"
+nav_about = "about"
+main_navigation = "Main navigation"
+footer_navigation = "Footer navigation"
+pagination = "Pagination"
+previous = "previous"
+next = "next"
+theme_label = "theme"
+theme_light = "light"
+theme_dark = "dark"
+theme_to_light = "Switch to light mode"
+theme_to_dark = "Switch to dark mode"
+language_switch = "Switch language"
+posts_heading = "[posts]"
+tags_heading = "tags"
+posts_unit = "posts"
+built_with_prefix = "Built with"
+built_with_suffix = "."
+outline_label = "outline"
+toc_label = "table of contents"
+back_to_blog = "Back to blog"
+back_to_diary = "Back to diary"
+published_label = "Published"
+author_label = "Author"
+edit_label = "Edit"
+footer_posts = "posts"
+footer_about = "about"
+footer_tags = "tags"
+
+[languages."ja-JP"]
+title = "c1 のブログ"
+description = "c1 のブログ"
+generate_feeds = true
+taxonomies = [{ name = "tags", feed = true }]
+
+[languages."ja-JP".translations]
+nav_blog = "ブログ"
+nav_diary = "日記"
+nav_gcores = "クルー"
+nav_about = "自己紹介"
+main_navigation = "メインナビゲーション"
+footer_navigation = "フッターナビゲーション"
+pagination = "ページ送り"
+previous = "前へ"
+next = "次へ"
+theme_label = "テーマ"
+theme_light = "ライト"
+theme_dark = "ダーク"
+theme_to_light = "ライトモードに切り替え"
+theme_to_dark = "ダークモードに切り替え"
+language_switch = "言語を切り替え"
+posts_heading = "[記事]"
+tags_heading = "タグ"
+posts_unit = "件"
+built_with_prefix = "Built with"
+built_with_suffix = "."
+outline_label = "目次"
+toc_label = "目次"
+back_to_blog = "ブログへ戻る"
+back_to_diary = "日記へ戻る"
+published_label = "公開"
+author_label = "著者"
+edit_label = "編集"
+footer_posts = "ブログ"
+footer_about = "自己紹介"
+footer_tags = "タグ"
+
+[languages."es-ES"]
+title = "El blog de c1"
+description = "El blog de c1"
+generate_feeds = true
+taxonomies = [{ name = "tags", feed = true }]
+
+[languages."es-ES".translations]
+nav_blog = "blog"
+nav_diary = "diario"
+nav_gcores = "crew"
+nav_about = "acerca de"
+main_navigation = "Navegacion principal"
+footer_navigation = "Navegacion del pie"
+pagination = "Paginacion"
+previous = "anterior"
+next = "siguiente"
+theme_label = "tema"
+theme_light = "claro"
+theme_dark = "oscuro"
+theme_to_light = "Cambiar al modo claro"
+theme_to_dark = "Cambiar al modo oscuro"
+language_switch = "Cambiar idioma"
+posts_heading = "[entradas]"
+tags_heading = "etiquetas"
+posts_unit = "entradas"
+built_with_prefix = "Creado con"
+built_with_suffix = "."
+outline_label = "indice"
+toc_label = "tabla de contenido"
+back_to_blog = "Volver al blog"
+back_to_diary = "Volver al diario"
+published_label = "Publicado"
+author_label = "Autor"
+edit_label = "Editar"
+footer_posts = "blog"
+footer_about = "acerca de"
+footer_tags = "etiquetas"
+
+[languages."de-DE"]
+title = "c1s Blog"
+description = "c1s Blog"
+generate_feeds = true
+taxonomies = [{ name = "tags", feed = true }]
+
+[languages."de-DE".translations]
+nav_blog = "blog"
+nav_diary = "tagebuch"
+nav_gcores = "crew"
+nav_about = "uber mich"
+main_navigation = "Hauptnavigation"
+footer_navigation = "Fussnavigation"
+pagination = "Seitennavigation"
+previous = "zuruck"
+next = "weiter"
+theme_label = "thema"
+theme_light = "hell"
+theme_dark = "dunkel"
+theme_to_light = "Zum hellen Modus wechseln"
+theme_to_dark = "Zum dunklen Modus wechseln"
+language_switch = "Sprache wechseln"
+posts_heading = "[beitrage]"
+tags_heading = "tags"
+posts_unit = "Beitrage"
+built_with_prefix = "Built with"
+built_with_suffix = "."
+outline_label = "inhalt"
+toc_label = "inhaltsverzeichnis"
+back_to_blog = "Zuruck zum Blog"
+back_to_diary = "Zuruck zum Tagebuch"
+published_label = "Veroffentlicht"
+author_label = "Autor"
+edit_label = "Bearbeiten"
+footer_posts = "blog"
+footer_about = "uber mich"
+footer_tags = "tags"
 
 [markdown]
 render_emoji = true
@@ -38,10 +222,18 @@ list_pages = false
 twitter_card = true
 
 header_nav = [
-  { url = "/blog", name_zh = "博客" },
-  { url = "/diary", name_zh = "日志" },
-  { url = "/gcores-talks", name_zh = "机组" },
-  { url = "/about", name_zh = "关于" },
+  { path = "@/blog/_index.md", label_key = "nav_blog" },
+  { path = "@/diary/_index.md", label_key = "nav_diary" },
+  { path = "@/gcores-talks.md", label_key = "nav_gcores" },
+  { path = "@/about.md", label_key = "nav_about" },
+]
+
+language_options = [
+  { code = "zh-Hans", label = "简体中文" },
+  { code = "en-US", label = "English" },
+  { code = "ja-JP", label = "日本語" },
+  { code = "es-ES", label = "Espanol" },
+  { code = "de-DE", label = "Deutsch" },
 ]
 
 # Optional footer license text. It will only show, when using footer_content_license.

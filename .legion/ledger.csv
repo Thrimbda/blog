@@ -295,3 +295,35 @@
 2026-03-16T05:49:50.367Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,addFile: themes/cone-scroll/static/js/script.js,success
 2026-03-16T05:49:50.526Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,addFile: .legion/playbook.md,success
 2026-03-16T05:49:50.714Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,handoff: 使用 `.legion/tasks/toc-rail/docs/pr-body.md` 作为 PR 描述进入 review / 合并流程,success
+2026-03-16T05:58:58.583Z,legion_list_tasks,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,,success
+2026-03-16T05:58:58.584Z,legion_get_status,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,,success
+2026-03-16T05:59:08.409Z,legion_archive_task,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,taskId: toc-rail,success
+2026-03-16T05:59:08.412Z,legion_archive_task,czon,同步 Czon 文章页到主站视觉基线,Claude,taskId: czon,success
+2026-03-16T06:01:43.967Z,legion_create_task,,,Claude,goal: 让主站以 `zh-Hans` 为默认语言，自动从 `.czon/src` 同步非中文翻译到 Zola 多语言内容，并在主题与 CI 中接入语言切换和预构建流程。,failed
+2026-03-16T06:02:03.090Z,legion_propose_task,,,Claude,name: 接入 Zola 多语言同步脚本与语言切换,success
+2026-03-16T06:02:13.569Z,legion_approve_proposal,zola,接入 Zola 多语言同步脚本与语言切换,Claude,proposalId: proposal-mmss0ez3-ab9f3d,success
+2026-03-16T06:02:20.377Z,legion_get_status,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
+2026-03-16T06:08:17.181Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDecision: 本任务定级为 Medium，需先写短 RFC 再进入实现,success
+2026-03-16T06:08:17.183Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDecision: `.czon/src/<lang>/content/**/*.md` 作为非默认语言翻译真源，脚本生成的 `content/**/*.<lang>.md` 允许完全覆盖与清理,success
+2026-03-16T06:08:17.202Z,legion_update_tasks,zola,接入 Zola 多语言同步脚本与语言切换,Claude,setCurrentTask: phase 1,success
+2026-03-16T06:24:08.906Z,legion_update_tasks,zola,接入 Zola 多语言同步脚本与语言切换,Claude,completeTask: phase 1,success
+2026-03-16T06:24:08.982Z,legion_update_tasks,zola,接入 Zola 多语言同步脚本与语言切换,Claude,completeTask: phase 1,success
+2026-03-16T06:24:08.983Z,legion_update_tasks,zola,接入 Zola 多语言同步脚本与语言切换,Claude,setCurrentTask: phase 2,success
+2026-03-16T06:24:08.992Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,progress.completed: 补齐 `plan.md`，将任务定级为 Medium，并固定默认语言、Scope、约束与验收口径,success
+2026-03-16T06:46:40.946Z,legion_get_status,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
+2026-03-16T07:02:06.490Z,legion_get_status,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
+2026-03-16T07:05:16.201Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,progress.completed: 实现 `scripts/sync-zola-i18n.ts`，从 `.czon/src` 生成 `content/**/*.<lang>.md`，并对 YAML/TOML front matter 做最小规范化,success
+2026-03-16T07:05:16.202Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDecision: 同步脚本在复制翻译内容时统一规范化 front matter：YAML/TOML 的 `title` 一律转成安全字符串，`date` 优先继承默认语言源文件日期,success
+2026-03-16T07:05:16.258Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: scripts/sync-zola-i18n.ts,success
+2026-03-16T07:05:16.258Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: config.toml,success
+2026-03-16T07:05:16.258Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDecision: 语言切换只对 page/section 使用翻译元数据精确跳转；taxonomy 与无翻译页面统一回到稳定入口,success
+2026-03-16T07:05:16.259Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: .github/workflows/pages.yaml,success
+2026-03-16T07:05:16.259Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: themes/cone-scroll/templates/partials/language-switch.html,success
+2026-03-16T07:07:12.989Z,legion_get_status,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
+2026-03-16T07:23:11.627Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDecision: 引入临时工作区构建包装脚本，并为低层同步脚本补 `--clean` 能力,success
+2026-03-16T07:23:17.587Z,legion_update_tasks,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDiscoveredTask: 改造多语言构建流程，避免本地 `content/` 被生成翻译文件污染,success
+2026-03-16T07:25:17.170Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,progress.completed: 补充 `scripts/build-zola-site.ts`，在临时工作区中生成翻译并执行 `zola build`，避免本地 `content/` 被派生文件污染,success
+2026-03-16T07:25:17.171Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDecision: 正常构建入口改为 `node scripts/build-zola-site.ts`，不再要求先把翻译文件物化到仓库 `content/`,success
+2026-03-16T07:25:17.171Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: scripts/build-zola-site.ts,success
+2026-03-16T08:19:55.958Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: scripts/zola-i18n.ts,success
+2026-03-16T08:19:55.959Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDecision: 将 `build-zola-site` 与 `sync-zola-i18n` 合并为单一入口 `scripts/zola-i18n.ts`,success

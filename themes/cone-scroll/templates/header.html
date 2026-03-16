@@ -1,30 +1,26 @@
-{% set current_lang = config.default_language %}
-{% if page %}
-  {% set current_lang = page.lang %}
-{% elif section %}
-  {% set current_lang = section.lang %}
-{% endif %}
-{% set is_en = current_lang == "en" %}
+{% set current_lang = lang | default(value=config.default_language) %}
 {% if config.extra.header_nav %}
 <div class="header-block">
-  <a href="/" class="logo" aria-label="{{ config.title }}">
+  <a href="{{ get_url(path='@/_index.md', lang=current_lang) }}" class="logo" aria-label="{{ config.title }}">
     <pre>   ___           _
   / _ \__  _____/ |
  | | | \ \/ / __| |
  | |_| |&gt;  &lt; (__| |
   \___//_/\_\___|_|</pre>
   </a>
-  <nav aria-label="{% if is_en %}Main navigation{% else %}主导航{% endif %}">
+  <nav aria-label="{{ trans(key='main_navigation', lang=current_lang) }}">
     {% for nav_item in config.extra.header_nav %}
-      <a href="{{ nav_item.url }}">
-        {% set language_key = 'name_' ~ current_lang %}
-        {{ nav_item[language_key] }}
+      <a href="{{ get_url(path=nav_item.path, lang=current_lang) }}">
+        {{ trans(key=nav_item.label_key, lang=current_lang) }}
       </a>
     {% endfor %}
     {% if config.generate_feeds %}
-      <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}">rss</a>
+      <a href="{{ get_url(path='atom.xml', trailing_slash=false, lang=current_lang) }}">rss</a>
     {% endif %}
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="{% if is_en %}Switch to dark mode{% else %}切换到深色模式{% endif %}" data-theme-prefix="{% if is_en %}theme{% else %}主题{% endif %}" data-light-state="{% if is_en %}light{% else %}浅色{% endif %}" data-dark-state="{% if is_en %}dark{% else %}深色{% endif %}" data-light-label="{% if is_en %}Switch to light mode{% else %}切换到浅色模式{% endif %}" data-dark-label="{% if is_en %}Switch to dark mode{% else %}切换到深色模式{% endif %}">{% if is_en %}theme{% else %}主题{% endif %}</button>
+    <span class="nav-controls">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="{{ trans(key='theme_to_dark', lang=current_lang) }}" data-theme-prefix="{{ trans(key='theme_label', lang=current_lang) }}" data-light-state="{{ trans(key='theme_light', lang=current_lang) }}" data-dark-state="{{ trans(key='theme_dark', lang=current_lang) }}" data-light-label="{{ trans(key='theme_to_light', lang=current_lang) }}" data-dark-label="{{ trans(key='theme_to_dark', lang=current_lang) }}">{{ trans(key='theme_label', lang=current_lang) }}</button>
+      {% include "partials/language-switch.html" %}
+    </span>
   </nav>
 </div>
 {% endif %}

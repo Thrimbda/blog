@@ -27,3 +27,9 @@
 - 在 Granda / Cone Scroll 这类 quiet article shell 里，收起 TOC 不能只隐藏目录内容；必须连同 rail 宽度、gap 和分隔线一起折叠，否则会留下“目录没了但空列还在”的视觉残影。
 - 展开入口应保持文本化、小声量，优先复用 `details/summary`，避免额外做成盒状按钮、浮层 tab 或 sticky widget。
 - 如果需要记忆开合状态，优先按 `pathname` 做本地持久化，并保留清晰的 keyboard focus 状态。
+
+## [Convention] Zola 多语言内容由 `.czon/src` 驱动
+
+- 主站默认语言固定为 `zh-Hans`；`content/**/*.md` 只承载默认语言内容，非默认语言统一生成到 `content/**/*.<lang>.md`。
+- 非默认语言内容的唯一真源是 `.czon/src/<lang>/content/**/*.md`；统一入口是 `node scripts/zola-i18n.ts`，其中 `build` 走无污染临时工作区，`sync`/`clean` 仅用于调试或清理。
+- 主题壳层文案统一走 `lang + trans()`，内部链接统一走 `get_url(..., lang=...)` / `get_taxonomy_url(..., lang=...)`；语言切换只对 page/section 做精确跳转，taxonomy 与无翻译页面回稳定入口。

@@ -40,10 +40,7 @@ jobs:
           node-version: "24.x"
 
       - name: Build Zola site (main site)
-        run: |
-          zola build
-          mkdir -p ./final-output
-          cp -r ./public/* ./final-output/
+        run: node scripts/zola-i18n.ts build --output-dir ./final-output
 
       - name: Build Czon site (sub-path /czon)
         run: |

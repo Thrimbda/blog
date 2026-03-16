@@ -1,21 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% set current_lang = lang | default(value=config.default_language) %}
 
 {% if section.extra.insert_recent_blogs %}
   {% set content_parts = section.content | split(pat="<!-- RECENT_BLOGS_PLACEHOLDER -->") %}
   <section class="home-copy home-intro">
     {{ content_parts[0] | safe }}
   </section>
-  {% set blog_section = get_section(path="blog/_index.md") %}
+  {% set blog_section = get_section(path="blog/_index.md", lang=current_lang) %}
   {% if blog_section %}
     {% set recent_posts = blog_section.pages | sort(attribute="date") | reverse | slice(end=5) %}
     {% if recent_posts %}
       <section class="home-posts list-shell" aria-labelledby="home-posts-heading">
-        <h2 id="home-posts-heading">[posts]</h2>
+        <h2 id="home-posts-heading">{{ trans(key="posts_heading", lang=current_lang) }}</h2>
         <ul class="post-list post-list-home">
-          {% for post in recent_posts %}
-            <li>
+        {% for post in recent_posts %}
+          <li>
               <span class="post-marker" aria-hidden="true">&raquo;</span>
               <a class="post-link" href="{{ post.permalink | safe }}">{{ post.title }}</a>
             </li>

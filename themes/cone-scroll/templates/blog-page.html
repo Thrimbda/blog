@@ -1,21 +1,23 @@
 {% extends "base.html" %} {% import "macros/page_outline.html" as page_outline %} {% block content %}
 {% set show_outline = page.extra.toc | default(value=true) %}
-{% set current_lang = page.lang | default(value=config.default_language) %}
-{% set is_en = current_lang == "en" %}
+{% set current_lang = lang | default(value=config.default_language) %}
 {% if page.relative_path | split(pat="/") | first == "diary" %}
-  {% set back_href = "/diary" %}
-  {% if is_en %}
-    {% set back_text = "Back to diary" %}
-  {% else %}
-    {% set back_text = "返回日志" %}
-  {% endif %}
+  {% set back_href = get_url(path='@/diary/_index.md', lang=current_lang) %}
+  {% set back_text = trans(key='back_to_diary', lang=current_lang) %}
 {% else %}
-  {% set back_href = "/blog" %}
-  {% if is_en %}
-    {% set back_text = "Back to blog" %}
-  {% else %}
-    {% set back_text = "返回博客" %}
-  {% endif %}
+  {% set back_href = get_url(path='@/blog/_index.md', lang=current_lang) %}
+  {% set back_text = trans(key='back_to_blog', lang=current_lang) %}
+{% endif %}
+{% if current_lang == "zh-Hans" %}
+  {% set giscus_lang = "zh-CN" %}
+{% elif current_lang == "ja-JP" %}
+  {% set giscus_lang = "ja" %}
+{% elif current_lang == "es-ES" %}
+  {% set giscus_lang = "es" %}
+{% elif current_lang == "de-DE" %}
+  {% set giscus_lang = "de" %}
+{% else %}
+  {% set giscus_lang = "en" %}
 {% endif %}
 <div class="page-shell page-shell-blog{% if page.toc and show_outline %} has-outline{% endif %}"{% if page.toc and show_outline %} data-outline-shell data-outline-state="expanded"{% endif %}>
 {% if page.toc and show_outline %}
@@ -24,10 +26,10 @@
 <article class="page-article">
 <div class="post-meta-stack">
   <div class="post-meta post-backlink"><a href="{{ back_href }}">&larr; {{ back_text }}</a>{% if page.slug %}<span class="post-meta-slug">/{{ page.slug }}</span>{% endif %}</div>
-  {% if page.date %}<time class="post-meta" datetime="{{ page.date }}">{% if is_en %}Published{% else %}发布于{% endif %} {{ page.date }}</time>{% endif %}
+  {% if page.date %}<time class="post-meta" datetime="{{ page.date }}">{{ trans(key="published_label", lang=current_lang) }} {{ page.date }}</time>{% endif %}
   {% if config.extra.author and config.extra.display_author == true %}
   <address rel="author" class="post-meta">
-    {% if is_en %}Author{% else %}作者{% endif %} {{ config.extra.author }}
+    {{ trans(key="author_label", lang=current_lang) }} {{ config.extra.author }}
   </address>
   {% endif %}
 </div>
@@ -37,7 +39,7 @@
 
 <p class="tags-data">
   {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags %}
-  <a href="/tags/{{ tag | slugify }}">&#47;{{ tag }}&#47;</a>
+  <a href="{{ get_taxonomy_url(kind='tags', name=tag, lang=current_lang) }}">&#47;{{ tag }}&#47;</a>
   {% endfor %} {% endif %}
 </p>
 
@@ -53,12 +55,14 @@
   data-emit-metadata="0"
   data-input-position="bottom"
   data-theme="preferred_color_scheme"
-  data-lang="zh-CN"
+  data-lang="{{ giscus_lang }}"
   crossorigin="anonymous"
   async
 ></script>
 
-<p class="admin-edit"><a href="/admin?path={{ page.relative_path }}" class="admin-edit-link">[{% if is_en %}Edit{% else %}编辑{% endif %}]</a></p>
+{% if current_lang == config.default_language %}
+<p class="admin-edit"><a href="/admin?path={{ page.relative_path }}" class="admin-edit-link">[{{ trans(key="edit_label", lang=current_lang) }}]</a></p>
+{% endif %}
 
 </article>
   </div>

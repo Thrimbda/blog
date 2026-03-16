@@ -1,0 +1,40 @@
+{% set current_lang = lang | default(value=config.default_language) %}
+<span class="language-switch-wrap">
+  <select id="language-select" class="language-switch" aria-label="{{ trans(key='language_switch', lang=current_lang) }}">
+    {% for option in config.extra.language_options %}
+      {% set option_url = get_url(path='@/_index.md', lang=option.code) %}
+      {% set translation_lang = option.code %}
+      {% if option.code == config.default_language %}
+        {% set translation_lang = "" %}
+      {% endif %}
+
+      {% if page is defined %}
+        {% if option.code == current_lang %}
+          {% set option_url = page.permalink %}
+        {% else %}
+          {% set translation = page.translations | filter(attribute="lang", value=translation_lang) | first %}
+          {% if translation %}
+            {% set option_url = translation.permalink %}
+          {% elif page.relative_path | split(pat="/") | first == "blog" %}
+            {% set option_url = get_url(path='@/blog/_index.md', lang=option.code) %}
+          {% elif page.relative_path | split(pat="/") | first == "diary" %}
+            {% set option_url = get_url(path='@/diary/_index.md', lang=option.code) %}
+          {% endif %}
+        {% endif %}
+      {% elif section is defined %}
+        {% if option.code == current_lang %}
+          {% set option_url = section.permalink %}
+        {% else %}
+          {% set translation = section.translations | filter(attribute="lang", value=translation_lang) | first %}
+          {% if translation %}
+            {% set option_url = translation.permalink %}
+          {% endif %}
+        {% endif %}
+      {% elif terms is defined or term is defined %}
+        {% set option_url = get_url(path='tags', trailing_slash=true, lang=option.code) %}
+      {% endif %}
+
+      <option value="{{ option_url }}"{% if option.code == current_lang %} selected{% endif %}>{{ option.label }}</option>
+    {% endfor %}
+  </select>
+</span>

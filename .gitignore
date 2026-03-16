@@ -1,1 +1,5 @@
 public/
+content/**/*.en-US.md
+content/**/*.ja-JP.md
+content/**/*.es-ES.md
+content/**/*.de-DE.md
