@@ -160,23 +160,14 @@
     window.dispatchEvent(new CustomEvent("theme-changed", { detail: { theme: next } }));
   }
 
-  function initLanguageSelect() {
-    const select = document.getElementById("language-select");
-    if (!select) {
+  function bindThemeToggle() {
+    const button = document.getElementById("theme-toggle");
+    if (!button || button.getAttribute("data-theme-bound") === "true") {
       return;
     }
 
-    select.addEventListener("change", function () {
-      const next = select.value;
-      if (!next || next === window.location.href) {
-        return;
-      }
-
-      const url = new URL(next, window.location.origin);
-      if (url.origin === window.location.origin) {
-        window.location.assign(url.toString());
-      }
-    });
+    button.setAttribute("data-theme-bound", "true");
+    button.addEventListener("click", toggleTheme);
   }
 
   function initEmblaCarousels() {
@@ -230,31 +221,34 @@
       });
   }
 
+  function initInteractiveControls() {
+    updateToggleButton(getResolvedTheme());
+    bindThemeToggle();
+    initEmblaCarousels();
+  }
+
   const initialTheme = getThemePreference();
   applyTheme(initialTheme);
   initPageOutline();
-  window.addEventListener("pageshow", initPageOutline);
 
-  document.addEventListener("DOMContentLoaded", function () {
-    updateToggleButton(initialTheme);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initInteractiveControls, { once: true });
+  } else {
+    initInteractiveControls();
+  }
 
-    const button = document.getElementById("theme-toggle");
-    if (button) {
-      button.addEventListener("click", toggleTheme);
-    }
-
-    initLanguageSelect();
-
-    if (window.matchMedia) {
-      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (event) {
-        if (!localStorage.getItem(storageKey)) {
-          const theme = event.matches ? "dark" : "light";
-          applyTheme(theme);
-          updateToggleButton(theme);
-        }
-      });
-    }
-
-    initEmblaCarousels();
+  window.addEventListener("pageshow", function () {
+    initPageOutline();
+    initInteractiveControls();
   });
+
+  if (window.matchMedia) {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (event) {
+      if (!localStorage.getItem(storageKey)) {
+        const theme = event.matches ? "dark" : "light";
+        applyTheme(theme);
+        updateToggleButton(theme);
+      }
+    });
+  }
 })();

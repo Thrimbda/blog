@@ -327,3 +327,6 @@
 2026-03-16T07:25:17.171Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: scripts/build-zola-site.ts,success
 2026-03-16T08:19:55.958Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: scripts/zola-i18n.ts,success
 2026-03-16T08:19:55.959Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDecision: 将 `build-zola-site` 与 `sync-zola-i18n` 合并为单一入口 `scripts/zola-i18n.ts`,success
+2026-03-16T08:43:48.235Z,legion_get_status,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
+2026-03-16T09:10:45.864Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,progress.completed: 修复语言切换在已部署站点上不跳转的脆弱点：语言下拉新增内联 same-origin 跳转兜底，主题脚本改为更稳健的即时/`pageshow` 初始化,success
+2026-03-16T09:10:45.864Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDecision: 语言切换改为模板内联 fallback + 脚本幂等初始化双保险,success

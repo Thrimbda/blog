@@ -1,6 +1,6 @@
 {% set current_lang = lang | default(value=config.default_language) %}
 <span class="language-switch-wrap">
-  <select id="language-select" class="language-switch" aria-label="{{ trans(key='language_switch', lang=current_lang) }}">
+  <select id="language-select" class="language-switch" aria-label="{{ trans(key='language_switch', lang=current_lang) }}" onchange="try{const u=new URL(this.value,window.location.origin);if(u.origin===window.location.origin&&u.href!==window.location.href){window.location.assign(u.href)}}catch(e){}">
     {% for option in config.extra.language_options %}
       {% set option_url = get_url(path='@/_index.md', lang=option.code) %}
       {% set translation_lang = option.code %}
