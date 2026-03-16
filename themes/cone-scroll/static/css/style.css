@@ -113,6 +113,18 @@ main {
   width: 100%;
 }
 
+.page-shell.has-outline {
+  --outline-rail-width: 15rem;
+  --outline-gap: 2.75rem;
+  --outline-divider-width: 1px;
+}
+
+.page-shell.has-outline[data-outline-state="collapsed"] {
+  --outline-rail-width: 0rem;
+  --outline-gap: 0rem;
+  --outline-divider-width: 0px;
+}
+
 .home-copy {
   max-width: 74ch;
 }
@@ -163,6 +175,7 @@ main {
 .page-outline {
   margin: 1rem 0 1.8rem;
   color: var(--muted);
+  min-width: 0;
 }
 
 .page-outline-panel {
@@ -185,10 +198,22 @@ main {
   letter-spacing: 0.08em;
   font-size: 0.8rem;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .page-outline summary::-webkit-details-marker {
   display: none;
+}
+
+.page-outline summary:hover,
+.page-outline summary:focus {
+  color: var(--fg);
+  text-decoration: underline;
+}
+
+.page-outline summary:focus-visible {
+  outline: 1px solid var(--border);
+  outline-offset: 0.18rem;
 }
 
 .page-outline summary::before {
@@ -205,6 +230,7 @@ main {
   padding-right: 0.35rem;
   font-size: 0.92rem;
   line-height: 1.62;
+  min-width: 0;
 }
 
 .page-outline-nav ol {
@@ -262,15 +288,18 @@ footer nav + p {
 @media (min-width: 960px) {
   .page-shell.has-outline {
     display: grid;
-    grid-template-columns: minmax(14rem, 16rem) minmax(0, 1fr);
-    gap: 2.75rem;
+    grid-template-columns: minmax(0, var(--outline-rail-width)) minmax(0, 1fr);
+    column-gap: var(--outline-gap);
     align-items: stretch;
+    transition: grid-template-columns 0.22s ease, column-gap 0.22s ease;
   }
 
   .page-shell.has-outline .page-outline {
     margin: 0;
     padding-right: 1.65rem;
-    border-right: 1px solid var(--border);
+    border-right: var(--outline-divider-width) solid var(--border);
+    overflow: visible;
+    transition: padding-right 0.22s ease, border-right-width 0.22s ease;
   }
 
   .page-shell.page-shell-blog.has-outline .page-outline-panel {
@@ -288,6 +317,55 @@ footer nav + p {
 
   .page-shell.has-outline .page-article {
     max-width: 69ch;
+  }
+
+  .page-shell.has-outline[data-outline-state="collapsed"] .page-outline {
+    padding-right: 0;
+  }
+
+  .page-shell.page-shell-blog.has-outline[data-outline-state="collapsed"] .page-outline-panel {
+    position: relative;
+    top: auto;
+    max-height: none;
+  }
+
+  .page-shell.has-outline[data-outline-state="collapsed"] .page-outline-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    white-space: nowrap;
+  }
+
+  .page-shell.has-outline[data-outline-state="collapsed"] .page-outline-nav {
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding-right: 0;
+    opacity: 0;
+    transform: translateX(-0.45rem);
+    pointer-events: none;
+  }
+
+  .page-shell.has-outline[data-outline-state="collapsed"] .page-article {
+    max-width: 70ch;
+    padding-top: 1.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .page-outline-nav,
+  .page-outline-toggle {
+    transition: opacity 0.18s ease, transform 0.18s ease, color 0.18s ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-shell.has-outline,
+  .page-outline,
+  .page-outline-nav,
+  .page-outline-toggle {
+    transition: none;
   }
 }
 
@@ -902,7 +980,12 @@ address.post-meta {
     margin: 0.65rem 0 1.4rem;
   }
 
+  .page-outline summary {
+    max-width: 100%;
+  }
+
   .page-outline-nav {
     padding-right: 0;
+    overflow-x: hidden;
   }
 }

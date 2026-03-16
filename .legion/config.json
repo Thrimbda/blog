@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "currentTask": "cone-scroll-folder",
+  "currentTask": "toc-rail",
   "settings": {
     "autoRemind": true,
     "remindBeforeReset": true,
@@ -10,9 +10,9 @@
     {
       "id": "czon-embla-get-gcores-talkts",
       "name": "调研 CZON embla 轮播图并修改 get-gcores-talk.ts",
-      "status": "paused",
+      "status": "archived",
       "createdAt": "2026-01-15T09:35:59.369Z",
-      "updatedAt": "2026-01-30T08:21:13.842Z"
+      "updatedAt": "2026-03-16T05:16:27.952Z"
     },
     {
       "id": "czon-css",
@@ -52,9 +52,16 @@
     {
       "id": "cone-scroll-folder",
       "name": "提取 Cone Scroll 主题为独立 folder 并切换站点配置",
-      "status": "active",
+      "status": "archived",
       "createdAt": "2026-03-14T02:10:34.807Z",
-      "updatedAt": "2026-03-16T04:35:45.635Z"
+      "updatedAt": "2026-03-16T05:16:27.943Z"
+    },
+    {
+      "id": "toc-rail",
+      "name": "TOC 收起时折叠左 rail 并保留展开按钮",
+      "status": "active",
+      "createdAt": "2026-03-16T05:17:02.353Z",
+      "updatedAt": "2026-03-16T05:49:50.713Z"
     }
   ],
   "pendingProposals": [
@@ -597,6 +604,66 @@
       "decidedAt": "2026-03-14T02:10:34.807Z",
       "decidedBy": "Claude",
       "createdTaskId": "cone-scroll-folder"
+    },
+    {
+      "id": "proposal-mmsqeglf-cb9c11",
+      "name": "TOC 收起时折叠左 rail 并保留展开按钮",
+      "goal": "让带 TOC 的文章页在收起目录时，左侧 rail 与占位一起折叠、正文左移，并保留可再次展开恢复状态的按钮。",
+      "rationale": "用户要求开启一个新的小任务，并明确指定交付方式为 LegionMind 端到端产物；现有历史任务已归档，需要创建新的可追踪 task 来承载 design-lite、实现、验证和 PR body。",
+      "points": [
+        "参考 `.legion/tasks/granda/docs/rfc.md` 与 `.legion/playbook.md` 保持 Granda/Cone Scroll 的低声量 TOC 语言",
+        "桌面端收起 TOC 后，页面视觉应接近无 TOC 文章；再次展开后恢复原先双列状态",
+        "必须保留一个始终可见的按钮以重新展开 TOC，并记住当前页内的折叠状态",
+        "使用 Playwright CLI 做浏览器级验证，并按 critique 设计审查思路迭代直到通过",
+        "完成后按 optimize / polish / normalize / harden 的检查项做最终收口"
+      ],
+      "scope": [
+        "themes/cone-scroll/templates/partials/page-outline.html",
+        "themes/cone-scroll/templates/blog-page.html",
+        "themes/cone-scroll/templates/page.html",
+        "themes/cone-scroll/static/css/style.css",
+        "themes/cone-scroll/static/js/script.js",
+        ".legion/playbook.md"
+      ],
+      "phases": [
+        {
+          "name": "设计",
+          "tasks": [
+            {
+              "description": "基于 granda 设计契约写摘要级 plan/design-lite，明确交互、风险、验收和 scope",
+              "acceptance": "plan.md 完整记录问题定义、验收、假设、约束、风险、Scope 与 Design Index"
+            }
+          ]
+        },
+        {
+          "name": "实现",
+          "tasks": [
+            {
+              "description": "实现 TOC 收起/展开时的布局折叠、按钮保留和状态恢复",
+              "acceptance": "相关模板/CSS/JS 完成改动，桌面与移动端行为符合设计"
+            },
+            {
+              "description": "按 critique/optimize/polish/normalize/harden 的检查点收口细节",
+              "acceptance": "代码与交互细节完成二次修正，无新增明显设计或稳健性问题"
+            }
+          ]
+        },
+        {
+          "name": "验证与报告",
+          "tasks": [
+            {
+              "description": "运行构建、Playwright 验证、代码评审并产出报告与 PR body",
+              "acceptance": "`docs/test-report.md`、`docs/review-code.md`、`docs/report-walkthrough.md`、`docs/pr-body.md` 生成完成"
+            }
+          ]
+        }
+      ],
+      "proposedBy": "Claude",
+      "proposedAt": "2026-03-16T05:16:59.144Z",
+      "status": "approved",
+      "decidedAt": "2026-03-16T05:17:02.353Z",
+      "decidedBy": "Claude",
+      "createdTaskId": "toc-rail"
     }
   ]
 }

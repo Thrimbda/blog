@@ -1,6 +1,6 @@
 # cone-scroll
 
-`cone-scroll` 是一个给 Zola 用的博客主题。最初是受到来自 [anemone](https://github.com/Speyll/anemone) 的启发，今天它已经脱胎换骨成了一个截然不同的主题了，因此它现在被单独拆出来了。
+`cone-scroll` 是一个给 Zola 用的博客主题。最初是受到来自 [anemone](https://github.com/Speyll/anemone) 和 [granda](https://granda.org) 的启发，今天它已经脱胎换骨成了一个截然不同的主题了，因此它现在被单独拆出来了。
 
 它不想把博客做成产品落地页，也不太想假装自己是终端。更接近它的比喻，也许是一张被认真排过版的索引页：暖纸色背景、窄一点的正文列、安静但好用的目录、还有一个不怎么吵闹的 ASCII 标题。
 

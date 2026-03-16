@@ -21,3 +21,9 @@
 - Czon 文章页即使覆盖了 `.content` 宽度，也常常仍保留外层 `main.w-full.lg:pl-88.xl:pr-88` 的桌面侧向 padding；如果不先清掉这层预留，正文会看起来异常狭窄。
 - 做 Czon 文章页视觉同步时，优先检查 `.czon/dist/*.html` 的真实 shell，而不是只盯着 `.czon/style.css` 里的 `max-width` 变量。
 - 若只想影响带 TOC 的文章页，优先把 widening/rail 规则绑定到 `aside.sidebar-right` 存在的场景，避免误伤首页、列表页和 About。
+
+## [Convention] 收起 TOC 时要连 rail 占位一起收起
+
+- 在 Granda / Cone Scroll 这类 quiet article shell 里，收起 TOC 不能只隐藏目录内容；必须连同 rail 宽度、gap 和分隔线一起折叠，否则会留下“目录没了但空列还在”的视觉残影。
+- 展开入口应保持文本化、小声量，优先复用 `details/summary`，避免额外做成盒状按钮、浮层 tab 或 sticky widget。
+- 如果需要记忆开合状态，优先按 `pathname` 做本地持久化，并保留清晰的 keyboard focus 状态。

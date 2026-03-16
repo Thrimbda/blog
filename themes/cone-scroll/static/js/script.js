@@ -1,6 +1,66 @@
 (function () {
   const storageKey = "theme-preference";
+  const outlineStoragePrefix = "page-outline:";
   let giscusObserver;
+
+  function getOutlineStorageKey() {
+    return outlineStoragePrefix + window.location.pathname;
+  }
+
+  function readStoredOutlineState() {
+    try {
+      const state = localStorage.getItem(getOutlineStorageKey());
+      return state === "collapsed" || state === "expanded" ? state : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function writeStoredOutlineState(state) {
+    try {
+      localStorage.setItem(getOutlineStorageKey(), state);
+    } catch (error) {
+      return;
+    }
+  }
+
+  function syncOutlineShellState(shell, details) {
+    if (!shell || !details) {
+      return;
+    }
+
+    const state = details.open ? "expanded" : "collapsed";
+    shell.setAttribute("data-outline-state", state);
+    shell.classList.toggle("is-outline-collapsed", state === "collapsed");
+    writeStoredOutlineState(state);
+  }
+
+  function initPageOutline() {
+    const shell = document.querySelector("[data-outline-shell]");
+    if (!shell) {
+      return;
+    }
+
+    const details = shell.querySelector("[data-page-outline-panel]");
+    if (!details) {
+      return;
+    }
+
+    if (readStoredOutlineState() === "collapsed") {
+      details.open = false;
+    }
+
+    syncOutlineShellState(shell, details);
+    if (shell.getAttribute("data-outline-bound") === "true") {
+      return;
+    }
+
+    shell.setAttribute("data-outline-bound", "true");
+
+    details.addEventListener("toggle", function () {
+      syncOutlineShellState(shell, details);
+    });
+  }
 
   function getThemePreference() {
     const stored = localStorage.getItem(storageKey);
@@ -153,6 +213,8 @@
 
   const initialTheme = getThemePreference();
   applyTheme(initialTheme);
+  initPageOutline();
+  window.addEventListener("pageshow", initPageOutline);
 
   document.addEventListener("DOMContentLoaded", function () {
     updateToggleButton(initialTheme);

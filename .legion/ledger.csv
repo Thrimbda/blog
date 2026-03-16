@@ -264,3 +264,34 @@
 2026-03-15T14:49:22.533Z,legion_update_context,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,addFile: themes/cone-scroll/screenshot.svg,success
 2026-03-16T04:31:40.499Z,legion_update_context,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,addDecision: README 效果图改为并排展示 light / dark 首页，而不是继续混合首页与文章页,success
 2026-03-16T04:35:45.637Z,legion_update_context,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,addFile: themes/cone-scroll/screenshot-post.svg,success
+2026-03-16T05:14:11.584Z,legion_list_tasks,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,,success
+2026-03-16T05:14:11.585Z,legion_get_status,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,,success
+2026-03-16T05:16:27.945Z,legion_archive_task,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,taskId: cone-scroll-folder,success
+2026-03-16T05:16:27.953Z,legion_archive_task,czon,同步 Czon 文章页到主站视觉基线,Claude,taskId: czon,success
+2026-03-16T05:16:27.954Z,legion_archive_task,czon-embla-get-gcores-talkts,调研 CZON embla 轮播图并修改 get-gcores-talk.ts,Claude,taskId: czon-embla-get-gcores-talkts,success
+2026-03-16T05:16:43.068Z,legion_create_task,,,Claude,goal: 让带 TOC 的文章页在收起目录时，左侧 rail 与占位一起折叠、正文左移，并保留可再次展开恢复状态的按钮。,failed
+2026-03-16T05:16:59.146Z,legion_propose_task,,,Claude,name: TOC 收起时折叠左 rail 并保留展开按钮,success
+2026-03-16T05:17:02.360Z,legion_approve_proposal,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,proposalId: proposal-mmsqeglf-cb9c11,success
+2026-03-16T05:17:07.258Z,legion_get_status,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,,success
+2026-03-16T05:19:26.228Z,legion_update_tasks,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,completeTask: 基于 granda 设计契约写摘要级 plan/design-lite，明确交互、风险、验收和 scope,success
+2026-03-16T05:19:26.230Z,legion_update_tasks,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,setCurrentTask: 实现 TOC 收起/展开时的布局折叠、按钮保留和状态恢复,success
+2026-03-16T05:19:26.239Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,addFile: .legion/tasks/toc-rail/docs/design-lite.md,success
+2026-03-16T05:19:26.239Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,addDecision: 使用 `details/summary` 继续承载 TOC 开合语义，并用页面级 collapsed state 驱动 rail 折叠,success
+2026-03-16T05:19:26.239Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,progress.completed: 补齐 `plan.md` 的问题定义、验收、假设、约束、风险与 Phase Map,success
+2026-03-16T05:19:26.240Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,addDecision: 本任务定级为 Low，采用 design-lite 而非单独 RFC,success
+2026-03-16T05:39:39.225Z,legion_get_status,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,,success
+2026-03-16T05:44:38.150Z,legion_get_status,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,,success
+2026-03-16T05:48:13.325Z,legion_update_tasks,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,completeTask: 基于 granda 设计契约写摘要级 plan/design-lite，明确交互、风险、验收和 scope,success
+2026-03-16T05:48:21.361Z,legion_update_tasks,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,completeTask: 实现 TOC 收起/展开时的布局折叠、按钮保留和状态恢复,success
+2026-03-16T05:48:36.151Z,legion_update_tasks,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,completeTask: 按 critique/optimize/polish/normalize/harden 的检查点收口细节,success
+2026-03-16T05:48:51.775Z,legion_update_tasks,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,completeTask: 运行构建、Playwright 验证、代码评审并产出报告与 PR body,success
+2026-03-16T05:49:15.608Z,legion_get_status,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,,success
+2026-03-16T05:49:50.162Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,progress.completed: 补齐 `plan.md` 与 `docs/design-lite.md`，将任务定级为 Low / design-lite,success
+2026-03-16T05:49:50.176Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,addDecision: 继续复用原生 `details/summary`，并以 `details.toggle` + `data-outline-state` 驱动 rail 折叠,success
+2026-03-16T05:49:50.206Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,addDecision: TOC 开合状态按 `page-outline:${pathname}` 持久化，并在 `pageshow` 时重新同步,success
+2026-03-16T05:49:50.244Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,addDecision: 在收起态补上 hover / focus-visible 与 `70ch` 正文宽度回收，作为 critique 后的 refine pass,success
+2026-03-16T05:49:50.292Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,addFile: themes/cone-scroll/templates/partials/page-outline.html,success
+2026-03-16T05:49:50.330Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,addFile: themes/cone-scroll/static/css/style.css,success
+2026-03-16T05:49:50.367Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,addFile: themes/cone-scroll/static/js/script.js,success
+2026-03-16T05:49:50.526Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,addFile: .legion/playbook.md,success
+2026-03-16T05:49:50.714Z,legion_update_context,toc-rail,TOC 收起时折叠左 rail 并保留展开按钮,Claude,handoff: 使用 `.legion/tasks/toc-rail/docs/pr-body.md` 作为 PR 描述进入 review / 合并流程,success
