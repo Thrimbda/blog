@@ -38,9 +38,17 @@
 
 - `theme.toml` -> `themes/cone-scroll/theme.toml`
   - 根目录误导性的主题元数据已移除
-  - 主题 metadata 已改为 `granda` 身份，并以当前站点实例作为主题说明与作者信息来源
+  - 主题 metadata 已改为 `cone-scroll` 身份，并以当前站点实例作为主题说明与作者信息来源
 
-### 3. 模板目录收拢
+### 3. 主题说明文档
+
+- `themes/cone-scroll/README.md`
+  - 参考 anemone 的 README 结构补了一份主题说明，但文风改成更接近当前博客的语气
+  - README 明确了安装方式、推荐配置、`blog-page.html` 的 section 用法，以及几处带偏好的默认值
+- `themes/cone-scroll/screenshot.svg`
+  - 选取当前主题的首页与文章页桌面截图，拼成一张单独的效果图供 README 引用
+
+### 4. 模板目录收拢
 
 - 根目录 `templates/` 已移除为主题入口
 - 主题模板统一位于 `themes/cone-scroll/templates/`
@@ -49,7 +57,7 @@
   - 页面模板：`index.html`、`page.html`、`blog-page.html`、`section.html`
   - 复用目录：`macros/`、`partials/`、`shortcodes/`、`tags/`
 
-### 4. 主题静态资源收拢
+### 5. 主题静态资源收拢
 
 - 根目录 `static/css/`、`static/js/` 已移除为主题入口
 - `static/icons.svg` 已迁入 `themes/cone-scroll/static/icons.svg`
@@ -58,7 +66,7 @@
   - `themes/cone-scroll/static/js/`
   - `themes/cone-scroll/static/icons.svg`
 
-### 5. 根目录保留资产确认
+### 6. 根目录保留资产确认
 
 - `static/favicon.ico` 仍保留在根目录，继续作为站点 branding 资源
 - `static/images/**` 仍保留在根目录，未被误迁

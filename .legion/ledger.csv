@@ -260,3 +260,7 @@
 2026-03-14T02:51:12.901Z,legion_get_status,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,,success
 2026-03-14T02:51:21.355Z,legion_update_context,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,addDecision: 保留既有基线任务 `granda` 的历史命名，但当前抽取任务与实际主题目录统一改名为 `cone-scroll` / `cone-scroll-folder`,success
 2026-03-14T02:51:21.357Z,legion_update_context,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,addFile: themes/cone-scroll/,success
+2026-03-15T14:49:22.451Z,legion_update_context,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,addFile: themes/cone-scroll/README.md,success
+2026-03-15T14:49:22.533Z,legion_update_context,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,addFile: themes/cone-scroll/screenshot.svg,success
+2026-03-16T04:31:40.499Z,legion_update_context,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,addDecision: README 效果图改为并排展示 light / dark 首页，而不是继续混合首页与文章页,success
+2026-03-16T04:35:45.637Z,legion_update_context,cone-scroll-folder,提取 Cone Scroll 主题为独立 folder 并切换站点配置,Claude,addFile: themes/cone-scroll/screenshot-post.svg,success

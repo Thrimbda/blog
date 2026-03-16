@@ -15,6 +15,7 @@
 ## How
 
 - 在 `themes/cone-scroll/` 下落地主题元数据、模板与 theme-level 静态资源
+- 在 `themes/cone-scroll/README.md` 中补充主题说明，并新增 `themes/cone-scroll/screenshot.svg` 作为效果图
 - `config.toml` 仅增加必要的 `theme = "cone-scroll"` 配置切换
 - 根目录 `theme.toml`、`templates/`、`static/css/`、`static/js/`、`static/icons.svg` 对应主题入口完成迁移/清理
 - 根目录继续保留 site-level 资产：`static/favicon.ico`、`static/images/**`、`static/CNAME`、`static/click.ogg`
