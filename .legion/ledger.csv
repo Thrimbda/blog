@@ -353,3 +353,10 @@
 2026-03-17T07:39:40.591Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,handoff: 将 `.legion/tasks/zola/docs/pr-body.md` 作为 PR 描述提交 Review,success
 2026-03-17T07:40:10.331Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: .legion/playbook.md,success
 2026-03-17T07:40:19.590Z,legion_get_status,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
+2026-03-17T12:07:30.137Z,legion_get_status,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
+2026-03-17T12:07:36.870Z,legion_list_tasks,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
+2026-03-17T12:07:52.507Z,legion_archive_task,zola,接入 Zola 多语言同步脚本与语言切换,Claude,taskId: zola,success
+2026-03-17T12:07:58.800Z,legion_list_tasks,,,Claude,,success
+2026-03-17T14:32:20.200Z,legion_get_status,,,Claude,,success
+2026-03-17T14:32:30.404Z,legion_create_task,,,Claude,goal: 修复 diary-2026 页面中的异常换行，恢复符合现有内容风格的段落结构。,failed
+2026-03-17T14:32:38.234Z,legion_propose_task,,,Claude,name: 修复 diary-2026 换行,success
