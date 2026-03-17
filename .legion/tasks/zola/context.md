@@ -12,11 +12,13 @@
 - 完成 `node scripts/sync-zola-i18n.ts`、`zola build`、代码评审、安全评审与 walkthrough / PR body 产出
 - 补充 `scripts/build-zola-site.ts`，在临时工作区中生成翻译并执行 `zola build`，避免本地 `content/` 被派生文件污染
 - 为 `scripts/sync-zola-i18n.ts` 增加 `--clean`，并清理本地已生成的 `content/**/*.<lang>.md` 文件
+- 完成语言入口收口：以 `details + a` 替代 `<select>` + JS，并修正默认语言 page/section 跳转
+- 移除公开页面 `[编辑]` / `/admin` 入口及其样式/翻译残留
 
 
 ### 🟡 进行中
 
-- 根据用户反馈调整构建流程，目标是在不污染本地 `content/` 的前提下完成多语言同步与 Zola 构建
+- 刷新测试/评审/报告产物，确认 taxonomy term 页的 best-effort 回退策略被文档化
 
 
 ### ⚠️ 阻塞/待定
@@ -41,6 +43,7 @@
 | 引入临时工作区构建包装脚本，并为低层同步脚本补 `--clean` 能力 | 当前直接把翻译文件平铺到仓库 `content/` 会污染本地工作区；使用临时工作区可以保留多语言构建能力，同时保持本地内容树整洁 | 继续直接写入 `content/` 并依赖 `.gitignore` 或手工清理；但文件系统层面的污染仍然存在 | 2026-03-16 |
 | 将 `build-zola-site` 与 `sync-zola-i18n` 合并为单一入口 `scripts/zola-i18n.ts` | 对外只保留一个脚本更易理解；通过 `build` / `sync` / `clean` 子命令区分无污染构建、显式同步和清理，既减少心智负担也保留调试能力 | 继续保留两个脚本分别承担内容同步与无污染构建；但用户反馈这会增加理解成本 | 2026-03-16 |
 | 语言切换改为模板内联 fallback + 脚本幂等初始化双保险 | 线上跳转失败说明仅靠外部 JS 绑定存在脆弱点；把跳转兜底放回 `<select onchange=...>`，并让脚本在 `DOMContentLoaded`/`pageshow` 都可重绑，可以覆盖缓存恢复或脚本初始化时序问题 | 继续只依赖 `script.js` 的 change 监听；但这会让部署站点在某些初始化路径上继续失效 | 2026-03-16 |
+| 放弃 `<select>` + JS 的语言切换，改为以真实链接为核心的低声量语言入口 | 用户已反馈线上点击仍不跳转，说明控件式切换在真实环境下仍有脆弱路径；直接使用 reader-facing 链接可以把导航可靠性前移到 HTML 层 | 继续修补 `change` 事件、内联 `onchange` 或额外补脚本重绑；但仍然依赖脚本时序与浏览器事件行为 | 2026-03-17 |
 
 ---
 
@@ -48,17 +51,33 @@
 
 **下次继续从这里开始：**
 
-1. 本地构建改用 `node scripts/build-zola-site.ts`；若只想清掉历史派生文件可运行 `node scripts/sync-zola-i18n.ts --clean`
-2. CI 已切到无污染构建路径；如需继续收口，可刷新 task docs 中对构建命令的描述
+1. 将 `.legion/tasks/zola/docs/pr-body.md` 作为 PR 描述提交 Review
+2. 若后续要进一步提升 taxonomy term 跨语言保真度，可考虑为 tag 建独立跨语言映射表
 
 **注意事项：**
 
-- 当前仓库 `content/` 已恢复为仅默认语言内容，未残留 `*.en-US.md` / `*.ja-JP.md` / `*.es-ES.md` / `*.de-DE.md`
-- 临时工作区构建仍保留 18 个 translated diary broken anchor warning，性质不变，仍为非阻塞
+- 当前语言入口已不再依赖 JS 跳转；article/diary/section/taxonomy list 均命中目标语言页面
+- taxonomy term 页采用 best-effort term 保留；当跨语言 tag 语义无法可靠推断时会稳定回退到目标语言 tags 列表页
+- `node scripts/zola-i18n.ts build` 通过，仍保留 18 个既有 `diary-2026` broken anchor warning，性质不变
 
 ---
 
-*最后更新: 2026-03-16 17:10 by Claude*
+*最后更新: 2026-03-17 15:40 by Claude*
+---
+
+*最后更新: 2026-03-16 15:05 by Claude*
+意事项：**
+
+- 当前交付已完成；`zola build` 通过，存在 18 个非阻塞 translated diary broken anchor warning
+- 非默认语言派生页已隐藏 edit 入口；语言切换遵循 page/section 精确跳转、taxonomy/无翻译页回稳定入口
+
+---
+
+*最后更新: 2026-03-16 15:05 by Claude*
+---
+
+*最后更新: 2026-03-16 15:05 by Claude*
+*
 ---
 
 *最后更新: 2026-03-16 15:05 by Claude*

@@ -15,10 +15,6 @@
   <a href="{{ get_taxonomy_url(kind='tags', name=tag, lang=current_lang) }}">&#47;{{ tag }}&#47;</a>
   {% endfor %} {% endif %}
 </p>
-
-{% if current_lang == config.default_language %}
-<p class="admin-edit"><a href="/admin?path={{ page.relative_path }}" class="admin-edit-link">[{{ trans(key="edit_label", lang=current_lang) }}]</a></p>
-{% endif %}
 </article>
 </div>
 {% endblock content %}

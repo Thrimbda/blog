@@ -1,31 +1,36 @@
 # 测试报告
 
 ## 执行命令
-`node scripts/zola-i18n.ts sync`
-
-`node scripts/zola-i18n.ts clean`
-
 `node scripts/zola-i18n.ts build`
 
+`spot check: public/en-US/blog/chu-tan-bing-fa/index.html`
+
+`spot check: public/en-US/diary/diary-2020/index.html`
+
+`spot check: public/en-US/blog/index.html`
+
+`spot check: public/en-US/tags/index.html`
+
+`spot check: public/en-US/tags/reflection/index.html`
+
+`spot check: public/en-US/tags/mapreduce/index.html`
+
+`grep: <select|onchange=|\[编辑\]|/admin (path=public, include=*.html)`
+
 ## 结果
-WARN
+PASS
 
 ## 摘要
-- `node scripts/zola-i18n.ts sync` 执行成功，输出 `generated=236 updated=0 unchanged=0 deleted=0`，说明统一脚本仍能显式生成全部受管翻译文件。
-- `node scripts/zola-i18n.ts clean` 执行成功，输出 `generated=0 updated=0 unchanged=0 deleted=236`，说明统一脚本能把生成文件完整清回干净工作区。
-- `node scripts/zola-i18n.ts build` 执行成功，临时工作区内生成 `280` 个页面、`14` 个 section，本地工作区未残留 `content/**/*.<lang>.md`。
-- 多语言输出已生成：`public/index.html` 为默认语言根路径，同时存在 `public/en-US/`、`public/ja-JP/`、`public/es-ES/`、`public/de-DE/`，且各目录下均有 `about/`、`blog/`、`diary/`、`tags/`、`index.html` 等页面。
-- 综合判定为 `WARN`：统一入口脚本和最终构建均成功，验收项中的多语言输出与无污染工作区都已满足，但存在非阻塞 warning，建议后续清理。
+- 按 CI 同路径执行 `node scripts/zola-i18n.ts build` 成功；输出 `generated=236`，随后 Zola 成功创建 `280` 个页面和 `14` 个 section。
+- `public/en-US/blog/chu-tan-bing-fa/index.html`、`public/en-US/diary/diary-2020/index.html`、`public/en-US/blog/index.html` 均使用 `details + a` 语言切换，并命中对应目标语言 page/section，而非旧 `select + JS`。
+- `public/en-US/tags/index.html` 的语言切换命中各语言 `tags` 列表页，符合 taxonomy list 页要求。
+- `public/en-US/tags/mapreduce/index.html` 能保留当前 term 并跳到目标语言对应 term 页；`public/en-US/tags/reflection/index.html` 则稳定回退到目标语言 `tags` 列表页，没有回到首页，也未生成 `/admin` 或明显 404 风险链接，符合 term 页的允许回退策略。
+- `public/` 全量检索未发现旧 `<select>`、`onchange=`、`[编辑]` 或 `/admin` 残留。
 
 ## 失败项（如有）
-- 无阻塞失败。
-
-## 已知警告
-- `node scripts/zola-i18n.ts build` 内部调用的 `zola build` 在 internal anchor 检查阶段报告 `18` 个 broken internal anchor links。
-- 警告集中在 `content/diary/diary-2026.ja-JP.md`、`content/diary/diary-2026.es-ES.md`、`content/diary/diary-2026.de-DE.md` 内若干 `#org...` 锚点不存在。
-- 该警告未阻塞静态站点构建与多语言目录生成，但会影响对应翻译页内的锚点跳转准确性。
+- 无阻塞失败项。
 
 ## 备注
-- 之所以优先执行这三个命令，是因为统一入口脚本已经替代原来的双脚本方案：`sync` 用于显式生成、`clean` 用于恢复干净工作区、`build` 用于本地/CI 的无污染正式构建。
-- 备选项曾考虑补充从 `package.json` scripts 或 `Makefile` 推断测试入口，但仓库根下未发现这两个文件，因此未采用额外脚本入口。
-- 本次以“先验证显式生成与清理，再验证无污染正式构建”为主；未额外执行更重的站点级检查，因为当前任务的硬性要求已覆盖关键链路，且 `zola build` 本身已执行链接与锚点校验。
+- 选择 `node scripts/zola-i18n.ts build`，因为这是用户指定的首选命令，也是 `.github/workflows/pages.yaml` 中实际使用的构建入口，能同时覆盖多语言同步和 Zola 构建。
+- 备选项是直接跑 `zola build` 或仅检查已有 `public/` 产物；前者不能验证同步链路，后者无法确认最新决策已重新生成到输出，因此优先采用 CI 一致入口。
+- 构建仍有 `18` 个既有 broken internal anchor warning，集中在多语言 `diary-2026` 页面；本次不影响语言切换验收，但应继续作为已知 warning 跟踪。

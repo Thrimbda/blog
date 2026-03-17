@@ -1,12 +1,13 @@
 {% set current_lang = lang | default(value=config.default_language) %}
-<span class="language-switch-wrap">
-  <select id="language-select" class="language-switch" aria-label="{{ trans(key='language_switch', lang=current_lang) }}" onchange="try{const u=new URL(this.value,window.location.origin);if(u.origin===window.location.origin&&u.href!==window.location.href){window.location.assign(u.href)}}catch(e){}">
+{% set current_option = config.extra.language_options | filter(attribute="code", value=current_lang) | first %}
+<details class="language-switch">
+  <summary class="language-switch-toggle" aria-label="{{ trans(key='language_switch', lang=current_lang) }}">
+    {{ current_option.label | default(value=current_lang) }}
+  </summary>
+  <nav class="language-switch-panel" aria-label="{{ trans(key='language_switch', lang=current_lang) }}">
     {% for option in config.extra.language_options %}
       {% set option_url = get_url(path='@/_index.md', lang=option.code) %}
       {% set translation_lang = option.code %}
-      {% if option.code == config.default_language %}
-        {% set translation_lang = "" %}
-      {% endif %}
 
       {% if page is defined %}
         {% if option.code == current_lang %}
@@ -30,11 +31,54 @@
             {% set option_url = translation.permalink %}
           {% endif %}
         {% endif %}
-      {% elif terms is defined or term is defined %}
+      {% elif term is defined %}
+        {% if option.code == current_lang %}
+          {% set option_url = term.permalink %}
+        {% else %}
+          {% set translated_taxonomy = get_taxonomy(kind='tags', lang=option.code) %}
+          {% set translated_term = translated_taxonomy.items | filter(attribute='slug', value=term.slug) | first %}
+          {% if not translated_term %}
+            {% set translated_term = translated_taxonomy.items | filter(attribute='name', value=term.name) | first %}
+          {% endif %}
+          {% if not translated_term %}
+            {% set matched_term_name = "" %}
+            {% if paginator is defined %}
+              {% set source_term_pages = paginator.pages %}
+            {% else %}
+              {% set source_term_pages = term.pages %}
+            {% endif %}
+            {% for tagged_page in source_term_pages %}
+              {% if matched_term_name == "" %}
+                {% set translated_page = tagged_page.translations | filter(attribute='lang', value=translation_lang) | first %}
+                {% if translated_page and tagged_page.taxonomies.tags and translated_page.taxonomies.tags %}
+                  {% set translated_tag_count = translated_page.taxonomies.tags | length %}
+                  {% for tagged_name in tagged_page.taxonomies.tags %}
+                    {% if tagged_name == term.name and loop.index0 < translated_tag_count %}
+                      {% set_global matched_term_name = translated_page.taxonomies.tags[loop.index0] %}
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            {% if matched_term_name != "" %}
+              {% set translated_term = translated_taxonomy.items | filter(attribute='name', value=matched_term_name) | first %}
+            {% endif %}
+          {% endif %}
+          {% if translated_term %}
+            {% set option_url = translated_term.permalink %}
+          {% else %}
+            {% set option_url = get_url(path='tags', trailing_slash=true, lang=option.code) %}
+          {% endif %}
+        {% endif %}
+      {% elif terms is defined %}
         {% set option_url = get_url(path='tags', trailing_slash=true, lang=option.code) %}
       {% endif %}
 
-      <option value="{{ option_url }}"{% if option.code == current_lang %} selected{% endif %}>{{ option.label }}</option>
+      {% if option.code == current_lang %}
+        <span class="language-switch-link is-current" aria-current="true">{{ option.label }}</span>
+      {% else %}
+        <a href="{{ option_url }}" class="language-switch-link">{{ option.label }}</a>
+      {% endif %}
     {% endfor %}
-  </select>
-</span>
+  </nav>
+</details>

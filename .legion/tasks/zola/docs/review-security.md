@@ -3,48 +3,39 @@
 ## 结论
 PASS
 
-基于最新实现复审后，前一轮的两项主要顾虑已得到有效收敛：
-
-- `themes/cone-scroll/templates/partials/language-switch.html` 已移除 `|safe`，降低了语言切换 URL 被错误当作已验证 HTML/URL 片段直接信任的风险。
-- `themes/cone-scroll/static/js/script.js` 已在跳转前加入 same-origin 校验，当前语言切换链路不存在明显开放跳转路径。
-- `scripts/sync-zola-i18n.ts` 已补充删除文件相对路径日志，在受管文件被清理时具备基本可追溯性。
-
-结合现有实现，`scripts/sync-zola-i18n.ts` 的路径约束、删除边界与符号链接拒绝策略仍然稳健；`.czon/src` 到 `content/` 的同步不执行输入内容；主题层未见新增 XSS、开放跳转或越权路径。当前未发现 blocking 或 major 风险，剩余风险以供应链与持续加固项为主，属于当前发布上下文下可接受的 minor 风险。
+本次公开站点 UI 收口改动整体风险较低，当前未发现阻塞发布的安全问题。重点关注的 reader-facing 链接、后台入口暴露面、开放重定向与越权残留路径均已明显收敛：语言切换已从脚本驱动跳转改为模板内真实链接，公开模板范围内未再发现 `[编辑]` 或 `/admin` 入口残留，默认行为也符合 secure-by-default。
 
 ## 阻塞问题
 - [ ] 无
 
-## Major 风险
-- [ ] 无
-
-## Minor 风险
-- [ ] `[STRIDE:Elevation of Privilege/Denial of Service]` `.github/workflows/pages.yaml:32` `.github/workflows/pages.yaml:53` - 本次新增 `node scripts/sync-zola-i18n.ts` 本身风险较低，但 workflow 仍依赖未固定到 commit SHA 的 GitHub Action，以及 `npx czon@latest` 的浮动供应链；同时构建链路仍在具备 `pages:write` / `id-token:write` 的整体发布上下文中运行。若上游依赖或 action 被污染，影响面仍偏大。建议后续将 action 固定到 SHA、把 `czon` 固定到明确版本，并继续评估构建/部署权限拆分。
-
 ## 建议（非阻塞）
-- 维持当前 `scripts/sync-zola-i18n.ts` 的固定语言白名单、`ensureWithin(...)` 与符号链接拒绝策略，不要演进为外部可配置的任意路径同步器。
-- 将 `.czon/src` 继续视为受信任内容源；若未来引入更开放的协作来源，建议单独增加对原始 HTML、短代码和外链的内容审查门禁。
-- 可补一个轻量一致性检查，确保 `managedLanguages`、`config.toml` 的语言注册和 `language_options` 长期不漂移。
+- `[STRIDE:Tampering/Elevation of Privilege]` `themes/cone-scroll/templates/partials/language-switch.html:9` - 当前语言切换链接来源于 `get_url(...)`、`page.translations` 与 `section.translations`，按现状属于站点内部已生成 permalink，未见开放重定向入口。建议后续补一个轻量模板/构建校验，约束 `language_options` 只能映射到站内语言白名单，防止未来有人把该入口演进成可配置外链。
+- `[STRIDE:Repudiation/Denial of Service]` `config.toml:226` - 语言列表与模板 fallback 路径目前靠人工保持一致；若后续语言配置漂移，最可能出现的是跳到错误落点或局部 404，而不是直接安全漏洞。建议在 CI 增加一致性检查，校验 `default_language`、`[languages.*]`、`language_options` 与主题导航逻辑同步，避免 reader-facing 链接 silently degrade。
+- `[STRIDE:Information Disclosure]` `themes/cone-scroll/templates/head.html:100` - 主题仍依赖多处第三方脚本/CDN（如 `highlight.js`、`mermaid`、`embla`、`giscus`、`gtag`），本次改动未扩大该暴露面，但从依赖风险视角看仍是公开页面的长期供应链面。建议后续评估固定版本、SRI 或自托管策略，并监控前端脚本加载失败/异常上报。
+- `[STRIDE:Repudiation]` `themes/cone-scroll/templates/header.html:22` - 公开模板里已移除后台入口，方向正确。建议补一个极轻量静态检查，防止 `/admin`、`[编辑]`、`edit` 链接在后续模板改动中重新进入公开页面。
 
 ## 修复指导
-1. CI 加固时优先处理供应链：固定 `actions/checkout`、`actions/setup-node`、`taiki-e/install-action`、`actions/configure-pages`、`actions/upload-pages-artifact`、`actions/deploy-pages` 到 SHA。
-2. 将 `npx czon@latest build` 改为固定版本调用，避免未来 silent upgrade。
-3. 若要进一步收紧最小权限，把构建 job 与部署 job 的权限边界再拆细。
+1. 保持 `themes/cone-scroll/templates/partials/language-switch.html` 只输出站内生成链接，不要引入 query 参数拼接、前端 `location=` 跳转或可配置外部目标。
+2. 在 CI 增加一条低成本检查：枚举 `config.toml` 中语言配置与 `themes/cone-scroll/templates/partials/language-switch.html` 的输出目标，确保所有语言入口都落在本站域名和已知语言路径内。
+3. 增加模板级回归检查，阻止 `/admin`、`edit`、`[编辑]` 重新暴露到 reader-facing 页面。
+4. 将第三方前端依赖纳入常规版本审计与异常监控，降低公开页供应链风险。
 
 [Handoff]
 summary:
-  - 复审结论为 PASS。
-  - 语言切换的 `|safe` 与开放跳转防护问题已修复。
-  - 删除日志已补充，当前无 blocking / major 风险。
+  - 本次 UI 收口安全结论为 PASS，无 blocking 问题。
+  - 语言切换改为真实链接后，当前未见开放重定向或脚本时序导致的跳转风险。
+  - 公开模板范围内未发现 `[编辑]` / `/admin` 入口残留，默认暴露面已收紧。
 decisions:
   - (none)
 risks:
-  - workflow 仍存在浮动依赖与较宽部署权限带来的 residual supply-chain risk。
+  - 语言配置与模板 fallback 逻辑若未来漂移，可能带来错误落点或 404，需用 CI 守护。
+  - 公开页第三方脚本/CDN 仍是长期供应链暴露面，但非本次改动新增。
 files_touched:
   - path: /Users/c1/Work/blog/.legion/tasks/zola/docs/review-security.md
 commands:
   - (none)
 next:
-  - 后续单开任务收紧 CI 供应链与权限边界。
-  - 维持当前同步脚本路径/删除边界设计，不再放宽为动态路径输入。
+  - 给语言入口和后台入口残留补静态/CI 守护。
+  - 后续单开任务处理第三方脚本供应链加固。
 open_questions:
   - (none)

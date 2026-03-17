@@ -59,11 +59,6 @@
   crossorigin="anonymous"
   async
 ></script>
-
-{% if current_lang == config.default_language %}
-<p class="admin-edit"><a href="/admin?path={{ page.relative_path }}" class="admin-edit-link">[{{ trans(key="edit_label", lang=current_lang) }}]</a></p>
-{% endif %}
-
 </article>
   </div>
 {% endblock content %}

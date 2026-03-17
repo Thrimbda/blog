@@ -4,52 +4,41 @@
 
 PASS
 
-当前版本已消除上轮 major：`content/blog/_index.{en-US,ja-JP,es-ES,de-DE}.md` 中的标签链接已改为 `../tags`，不会再把非默认语言用户串回默认语言。结合已知信息，`zola build` 已通过，主题层语言切换、Zola 多语言配置与同步脚本的主路径行为均与 RFC 预期一致。
+本轮增量已把语言入口收敛为真实 reader-facing 链接，`page` / `section` / `taxonomy` 三类场景都有明确落点；此前 taxonomy term 切语言丢失上下文的问题也已被修复为“先保留当前 term，匹配不到再稳定回退到 taxonomy 列表页”。结合当前约束，这个 best-effort 策略是合理的，不再构成阻塞。
 
 ## 阻塞问题
 
-- [ ] 无
-
-## Major 发现
-
-- [ ] 无
+- [ ] （无）
 
 ## 建议（非阻塞）
 
-- `content/diary/diary-2026.md:8` 及对应多语言 diary 文件 - 剩余 18 个 broken anchor warning 既然已确认都来自 translated diary 的 `#org...` 锚点缺失，就更适合作为已知内容质量问题记录，不建议作为本轮阻塞项。理由是：构建已成功，问题集中、可解释，且更像 link checker 无法识别这类 HTML anchor / 目录产物，而不是用户可感知的站点路由或模板逻辑错误。
-
-- `scripts/sync-zola-i18n.ts:291` - 当前脚本维护成本总体可接受。路径安全、幂等写入、受管文件清理、front matter 最小规范化都清晰；新增对 `blog/_index.*.md` 的 `(/tags) -> (../tags)` 改写虽然是特例规则，但边界明确、影响面小，短期内可以接受。
-
-- `scripts/sync-zola-i18n.ts:308` - 删除策略仍然是“所有受管语言后缀文件均视为脚本产物”，这和 RFC 假设一致，当前不构成缺陷；但建议继续把这条边界保留在任务文档或脚本说明里，避免未来有人误把手写非默认语言页放进同一命名空间。
+- `themes/cone-scroll/static/css/style.css:615` - 桌面端语言面板仍使用 `left: 0` + `min-width: 10rem`，当入口位于导航末端且视口偏窄时，面板存在向右溢出或被裁切的风险；这是可用性问题，但当前不构成阻塞。
+- `themes/cone-scroll/templates/partials/language-switch.html:38` - taxonomy term 的跨语言保留现在依赖 `slug` / `name` 匹配；在不同语言对 tag 做了真正本地化命名时，仍可能回退到 tags 列表页。现状合理，但建议后续如果要追求更稳定的 term 对齐，补一个显式映射来源。
+- `themes/cone-scroll/templates/partials/language-switch.html:3` - 目前用 `<details>` 承载语言入口，交互简单可靠；若后续继续打磨移动端体验，可考虑补“点外部关闭”或展开态视觉提示，让用户更容易感知当前面板状态。
+- `themes/cone-scroll/` - 本次范围内未再发现 `edit` / `admin` 相关公开入口、文案、样式或脚本残留，清理结果符合预期；后续只需注意不要在新模板里重新引入旧 key 或旧链接。
 
 ## 修复指导
 
-1. 对 18 个 anchor warning，不必回退本轮实现；把它们登记为已知内容质量问题即可。
-2. 后续若要清 warning，优先处理 diary 内容生成方式：尽量改为 Zola/link checker 可识别的原生标题锚点，而不是 `#org...` 目录锚点。
-3. 保持 `scripts/sync-zola-i18n.ts` 的“固定白名单语言 + 固定受管后缀”策略，不建议在本轮再扩展复杂抽象；若未来出现手写非默认语言页需求，再引入 manifest 或额外受管边界。
-
-## 后续可收敛点
-
-- 给同步脚本补最小样例回归，覆盖 front matter 规范化、删除策略和 blog index 链接改写。
-- 若希望 CI 更干净，可单独开一轮清理 translated diary 的 `#org...` 目录锚点 warning。
-- 可在 review/test 流程中增加语言列表一致性检查，避免 `managedLanguages`、`config.toml` 与语言下拉漂移。
+1. 若要消除桌面端面板溢出风险，可优先把 `themes/cone-scroll/static/css/style.css:615` 一段改成右对齐方案，例如 `left: auto; right: 0;`，并补 `max-width: calc(100vw - 2rem)`。
+2. 若要把 taxonomy term 切换从“best-effort”升级为“确定性命中”，可在内容源或生成脚本中维护跨语言 tag 映射，再由 `themes/cone-scroll/templates/partials/language-switch.html:38` 直接按映射取目标 term permalink，而不是运行时猜测 `slug` / `name`。
+3. 若要进一步增强移动端可用性，可给 `<details class="language-switch">` 增加展开态样式或轻量关闭策略，但保持“无 JS 也能跳”的 HTML 优先原则不变。
 
 [Handoff]
 summary:
-  - 结论更新为 PASS。
-  - 当前无 blocking / major 问题。
-  - 18 个 broken anchor warning 可作为已知内容质量问题记录，不阻塞本轮交付。
+  - 报告结论为 PASS。
+  - 语言入口现在是稳定的 reader-facing 链接，覆盖 page、section、taxonomy list 与 taxonomy term。
+  - taxonomy term 页的 best-effort term 保留在当前信息模型下是合理降级，不再视为阻塞。
 decisions:
-  - `scripts/sync-zola-i18n.ts` 的当前维护成本与边界可接受，暂不要求进一步抽象。
+  - (none)
 risks:
-  - translated diary 的 `#org...` anchor warning 仍会持续给 CI 带来噪音。
-  - 脚本仍按语言后缀全量接管，未来若引入手写非默认语言页需先调整边界策略。
+  - 桌面端语言面板在较窄视口下仍可能向右溢出。
+  - 若未来不同语言对同一 tag 使用不同 slug/name，term 切换会回退到列表页而非详情页。
 files_touched:
   - path: /Users/c1/Work/blog/.legion/tasks/zola/docs/review-code.md
 commands:
   - (none)
 next:
-  - 将 18 个 broken anchor warning 记录为已知问题，避免和代码正确性阻塞项混淆。
-  - 若要继续打磨质量，可单开任务清理 translated diary 锚点与脚本回归样例。
+  - 如需继续打磨体验，优先补桌面端语言面板防溢出样式。
+  - 如需更强的 taxonomy term 精确切换，可设计跨语言 term 映射。
 open_questions:
   - (none)

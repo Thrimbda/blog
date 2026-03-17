@@ -330,3 +330,26 @@
 2026-03-16T08:43:48.235Z,legion_get_status,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
 2026-03-16T09:10:45.864Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,progress.completed: 修复语言切换在已部署站点上不跳转的脆弱点：语言下拉新增内联 same-origin 跳转兜底，主题脚本改为更稳健的即时/`pageshow` 初始化,success
 2026-03-16T09:10:45.864Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDecision: 语言切换改为模板内联 fallback + 脚本幂等初始化双保险,success
+2026-03-17T07:14:26.295Z,legion_get_status,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
+2026-03-17T07:14:34.451Z,legion_read_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,"section: all, includeReviews: true",success
+2026-03-17T07:18:26.503Z,legion_update_tasks,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDiscoveredTask: 收口语言切换入口，替换为点击即可稳定跳转的 reader-facing 导航,success
+2026-03-17T07:18:26.503Z,legion_update_tasks,zola,接入 Zola 多语言同步脚本与语言切换,Claude,completeTask: 改造多语言构建流程，避免本地 `content/` 被生成翻译文件污染,success
+2026-03-17T07:18:26.504Z,legion_update_tasks,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDiscoveredTask: 移除公开页面中的 `[编辑]` / `/admin` 入口，消除后台操作痕迹,success
+2026-03-17T07:18:29.876Z,legion_update_tasks,zola,接入 Zola 多语言同步脚本与语言切换,Claude,setCurrentTask: 收口语言切换入口，替换为点击即可稳定跳转的 reader-facing 导航,success
+2026-03-17T07:18:36.681Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
+2026-03-17T07:18:36.760Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDecision: 放弃 `<select>` + JS 的语言切换，改为以真实链接为核心的低声量语言入口,success
+2026-03-17T07:23:59.010Z,legion_get_status,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
+2026-03-17T07:31:24.152Z,legion_get_status,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
+2026-03-17T07:35:32.433Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addDecision: taxonomy term 页语言切换采用 best-effort term 保留，无法可靠推断跨语言 tag 语义时回退到目标语言 tags 列表页,success
+2026-03-17T07:35:32.433Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,progress.completed: 完成语言入口收口：以 `details + a` 替代 `<select>` + JS，并修正默认语言 page/section 跳转,success
+2026-03-17T07:39:16.502Z,legion_update_tasks,zola,接入 Zola 多语言同步脚本与语言切换,Claude,completeTask: 收口语言切换入口，替换为点击即可稳定跳转的 reader-facing 导航,success
+2026-03-17T07:39:16.535Z,legion_update_tasks,zola,接入 Zola 多语言同步脚本与语言切换,Claude,completeTask: 移除公开页面中的 `[编辑]` / `/admin` 入口，消除后台操作痕迹,success
+2026-03-17T07:39:29.856Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: themes/cone-scroll/templates/partials/language-switch.html,success
+2026-03-17T07:39:29.864Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: themes/cone-scroll/templates/page.html,success
+2026-03-17T07:39:29.866Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: themes/cone-scroll/templates/blog-page.html,success
+2026-03-17T07:39:29.873Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: themes/cone-scroll/static/css/style.css,success
+2026-03-17T07:39:29.874Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: config.toml,success
+2026-03-17T07:39:40.591Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,progress.completed: 刷新 `test-report.md`、`review-code.md`、`review-security.md`，确认当前增量变更验证/评审已通过,success
+2026-03-17T07:39:40.591Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,handoff: 将 `.legion/tasks/zola/docs/pr-body.md` 作为 PR 描述提交 Review,success
+2026-03-17T07:40:10.331Z,legion_update_context,zola,接入 Zola 多语言同步脚本与语言切换,Claude,addFile: .legion/playbook.md,success
+2026-03-17T07:40:19.590Z,legion_get_status,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
