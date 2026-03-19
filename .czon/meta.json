@@ -8446,6 +8446,166 @@
       "metadataTranslationHash": "14f6a0eee71ce523b97bb8c7806fafd4f70721e5606361fb1669ac5507be7594"
     },
     {
+      "path": "content/blog/markdown-render-showcase.md",
+      "links": [
+        "https://www.getzola.org/",
+        "/blog/",
+        "/images/avatar.jpg"
+      ],
+      "metadata": {
+        "title": "Cone Scroll 主题 Markdown 渲染展示",
+        "description": "一篇用于观察 Cone Scroll 主题文章页排版细节的中文基线文章，覆盖常见 Markdown 渲染元素。",
+        "short_summary": "本文是 Cone Scroll 主题的 Markdown 渲染展示文章，用于观察主题在标题、段落、列表、代码、表格、图片等元素上的排版细节。文章提供了一个稳定的样本，以便在主题优化过程中进行视觉回归测试，确保排版清晰、易读且稳定。",
+        "audience": "博客主题开发者、视觉设计师、内容创作者，以及对 Markdown 排版和主题优化感兴趣的人",
+        "key_points": [
+          "提供 Cone Scroll 主题的排版基线样本，用于视觉回归测试",
+          "覆盖常见 Markdown 元素，如标题、列表、代码、表格、图片等",
+          "强调排版应注重清晰度、可读性和稳定性",
+          "提出排版巡检建议，如关注标题区分度、正文行距、强调元素识别",
+          "确保文章在不同设备上表现一致，作为后续优化的参考"
+        ],
+        "summary": "本文是一篇用于 Cone Scroll 主题视觉优化的基线文章，旨在提供一个稳定、可复用的样本，以观察和评估主题在标题层级、正文节奏、代码块、表格、图片、脚注等常见 Markdown 元素上的排版表现。文章覆盖了基础文本元素、列表与信息组织、代码与技术表达、表格与分隔线、图片与脚注等多个方面，并提出了排版巡检的建议，如关注目录清晰度、段落可读性、链接识别度等。最终目标是确保文章在不同设备上都能保持清楚、克制、稳定的排版，作为后续主题优化的回归基线。",
+        "slug": "markdown-render-showcase",
+        "tags": [
+          "博客",
+          "Markdown",
+          "Cone Scroll",
+          "排版",
+          "视觉优化",
+          "基线文章",
+          "文档示例"
+        ],
+        "inferred_date": "2026-03-18",
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 1758,
+          "completion": 439,
+          "total": 2197
+        }
+      },
+      "hash": "228d66c3b353093f72f852b1810901e97de0ad85bccfb2b2d85c2a3fd843830f",
+      "metadataTranslations": {
+        "zh-Hans": {
+          "title": "Cone Scroll 主题 Markdown 渲染展示",
+          "description": "一篇用于观察 Cone Scroll 主题文章页排版细节的中文基线文章，覆盖常见 Markdown 渲染元素。",
+          "summary": "本文是一篇用于 Cone Scroll 主题视觉优化的基线文章，旨在提供一个稳定、可复用的样本，以观察和评估主题在标题层级、正文节奏、代码块、表格、图片、脚注等常见 Markdown 元素上的排版表现。文章覆盖了基础文本元素、列表与信息组织、代码与技术表达、表格与分隔线、图片与脚注等多个方面，并提出了排版巡检的建议，如关注目录清晰度、段落可读性、链接识别度等。最终目标是确保文章在不同设备上都能保持清楚、克制、稳定的排版，作为后续主题优化的回归基线。",
+          "short_summary": "本文是 Cone Scroll 主题的 Markdown 渲染展示文章，用于观察主题在标题、段落、列表、代码、表格、图片等元素上的排版细节。文章提供了一个稳定的样本，以便在主题优化过程中进行视觉回归测试，确保排版清晰、易读且稳定。",
+          "key_points": [
+            "提供 Cone Scroll 主题的排版基线样本，用于视觉回归测试",
+            "覆盖常见 Markdown 元素，如标题、列表、代码、表格、图片等",
+            "强调排版应注重清晰度、可读性和稳定性",
+            "提出排版巡检建议，如关注标题区分度、正文行距、强调元素识别",
+            "确保文章在不同设备上表现一致，作为后续优化的参考"
+          ],
+          "audience": "博客主题开发者、视觉设计师、内容创作者，以及对 Markdown 排版和主题优化感兴趣的人",
+          "tags": [
+            "博客",
+            "Markdown",
+            "Cone Scroll",
+            "排版",
+            "视觉优化",
+            "基线文章",
+            "文档示例"
+          ]
+        },
+        "en-US": {
+          "title": "Cone Scroll Theme Markdown Rendering Demo",
+          "description": "A Chinese baseline article for observing the typographic details of the Cone Scroll theme's article page, covering common Markdown rendering elements.",
+          "summary": "This article serves as a baseline for the visual optimization of the Cone Scroll theme, aiming to provide a stable, reusable sample for observing and evaluating the theme's typographic performance on common Markdown elements such as heading levels, body text rhythm, code blocks, tables, images, footnotes, and more. It covers basic text elements, lists and information organization, code and technical expression, tables and dividers, images and footnotes, among other aspects, and proposes suggestions for typographic inspection, such as focusing on table of contents clarity, paragraph readability, link recognizability, etc. The ultimate goal is to ensure that the article maintains clear, restrained, and stable typography across different devices, serving as a regression baseline for subsequent theme optimizations.",
+          "short_summary": "This article is a Markdown rendering demo for the Cone Scroll theme, used to observe the theme's typographic details on elements such as headings, paragraphs, lists, code, tables, and images. It provides a stable sample for visual regression testing during theme optimization, ensuring the typography is clear, readable, and stable.",
+          "key_points": [
+            "Provides a typographic baseline sample for the Cone Scroll theme for visual regression testing",
+            "Covers common Markdown elements such as headings, lists, code, tables, images, etc.",
+            "Emphasizes that typography should focus on clarity, readability, and stability",
+            "Proposes typographic inspection suggestions, such as focusing on heading distinction, body text line spacing, and emphasis element recognition",
+            "Ensures consistent article performance across different devices, serving as a reference for subsequent optimizations"
+          ],
+          "audience": "Blog theme developers, visual designers, content creators, and those interested in Markdown typography and theme optimization",
+          "tags": [
+            "Blog",
+            "Markdown",
+            "Cone Scroll",
+            "Typography",
+            "Visual Optimization",
+            "Baseline Article",
+            "Documentation Example"
+          ]
+        },
+        "es-ES": {
+          "title": "Demostración de Renderizado Markdown del Tema Cone Scroll",
+          "description": "Un artículo de referencia en chino para observar los detalles de maquetación de páginas de artículos del tema Cone Scroll, cubriendo elementos comunes de renderizado Markdown.",
+          "summary": "Este artículo es un texto de referencia para la optimización visual del tema Cone Scroll, con el objetivo de proporcionar una muestra estable y reutilizable para observar y evaluar el rendimiento de maquetación del tema en elementos comunes de Markdown como niveles de encabezado, ritmo del texto, bloques de código, tablas, imágenes, notas al pie, etc. Cubre múltiples aspectos como elementos de texto básicos, listas y organización de información, expresión técnica y código, tablas y líneas divisorias, imágenes y notas al pie, y propone sugerencias para la inspección de maquetación, como prestar atención a la claridad del índice, legibilidad de párrafos, reconocibilidad de enlaces, etc. El objetivo final es garantizar que el artículo mantenga una maquetación clara, contenida y estable en diferentes dispositivos, sirviendo como línea base de regresión para futuras optimizaciones del tema.",
+          "short_summary": "Este artículo es una demostración de renderizado Markdown del tema Cone Scroll, utilizada para observar los detalles de maquetación del tema en elementos como encabezados, párrafos, listas, código, tablas, imágenes, etc. Proporciona una muestra estable para realizar pruebas de regresión visual durante el proceso de optimización del tema, asegurando que la maquetación sea clara, legible y estable.",
+          "key_points": [
+            "Proporciona una muestra de referencia de maquetación para el tema Cone Scroll, utilizada en pruebas de regresión visual",
+            "Cubre elementos comunes de Markdown, como encabezados, listas, código, tablas, imágenes, etc.",
+            "Enfatiza que la maquetación debe centrarse en la claridad, legibilidad y estabilidad",
+            "Propone sugerencias para la inspección de maquetación, como prestar atención a la diferenciación de encabezados, interlineado del texto, reconocimiento de elementos enfatizados",
+            "Garantiza que el artículo se comporte de manera consistente en diferentes dispositivos, sirviendo como referencia para futuras optimizaciones"
+          ],
+          "audience": "Desarrolladores de temas de blogs, diseñadores visuales, creadores de contenido, y personas interesadas en la maquetación Markdown y optimización de temas",
+          "tags": [
+            "Blog",
+            "Markdown",
+            "Cone Scroll",
+            "Maquetación",
+            "Optimización visual",
+            "Artículo de referencia",
+            "Ejemplo de documentación"
+          ]
+        },
+        "ja-JP": {
+          "title": "Cone Scroll テーマ Markdown レンダリングデモ",
+          "description": "Cone Scroll テーマの記事ページにおける組版の詳細を観察するための中国語ベースライン記事で、一般的な Markdown レンダリング要素を網羅しています。",
+          "summary": "この記事は、Cone Scroll テーマの視覚的最適化のためのベースライン記事であり、見出しレベル、本文のリズム、コードブロック、表、画像、脚注などの一般的な Markdown 要素におけるテーマの組版表現を観察・評価するための、安定した再利用可能なサンプルを提供することを目的としています。記事は、基本的なテキスト要素、リストと情報の整理、コードと技術的表現、表と区切り線、画像と脚注など、複数の側面をカバーしており、目次の明瞭さ、段落の読みやすさ、リンクの識別性などに注目する組版チェックの提案も行っています。最終的な目標は、記事が異なるデバイスでも明確で抑制が効き、安定した組版を維持できるようにし、今後のテーマ最適化の回帰ベースラインとして機能させることです。",
+          "short_summary": "この記事は、Cone Scroll テーマの Markdown レンダリングデモ記事であり、見出し、段落、リスト、コード、表、画像などの要素におけるテーマの組版の詳細を観察するために使用されます。記事は安定したサンプルを提供し、テーマの最適化プロセスにおいて視覚的回帰テストを行い、組版が明確で読みやすく、安定していることを保証します。",
+          "key_points": [
+            "Cone Scroll テーマの組版ベースラインサンプルを提供し、視覚的回帰テストに使用",
+            "見出し、リスト、コード、表、画像などの一般的な Markdown 要素を網羅",
+            "組版は明瞭さ、読みやすさ、安定性を重視すべきことを強調",
+            "見出しの区別、本文の行間、強調要素の識別などに注目する組版チェックを提案",
+            "記事が異なるデバイスで一貫して表示されることを保証し、今後の最適化の参考とする"
+          ],
+          "audience": "ブログテーマ開発者、ビジュアルデザイナー、コンテンツクリエイター、および Markdown 組版とテーマ最適化に興味のある方",
+          "tags": [
+            "ブログ",
+            "Markdown",
+            "Cone Scroll",
+            "組版",
+            "視覚的最適化",
+            "ベースライン記事",
+            "ドキュメントサンプル"
+          ]
+        },
+        "de-DE": {
+          "title": "Cone Scroll Theme Markdown-Rendering-Demo",
+          "description": "Ein chinesischer Basisartikel zur Beobachtung der Typografie-Details von Cone Scroll-Theme-Artikelseiten, der gängige Markdown-Rendering-Elemente abdeckt.",
+          "summary": "Dieser Artikel dient als Basisartikel für die visuelle Optimierung des Cone Scroll-Themas und zielt darauf ab, eine stabile, wiederverwendbare Probe bereitzustellen, um die Typografie-Leistung des Themes bei gängigen Markdown-Elementen wie Überschriftenebenen, Textfluss, Codeblöcken, Tabellen, Bildern, Fußnoten usw. zu beobachten und zu bewerten. Der Artikel deckt grundlegende Textelemente, Listen und Informationsorganisation, Code und technische Darstellung, Tabellen und Trennlinien, Bilder und Fußnoten sowie andere Aspekte ab und gibt Vorschläge für Typografie-Inspektionen, wie z.B. die Klarheit des Inhaltsverzeichnisses, die Lesbarkeit von Absätzen, die Erkennbarkeit von Links usw. Das ultimative Ziel ist es, sicherzustellen, dass die Artikel auf verschiedenen Geräten eine klare, zurückhaltende und stabile Typografie beibehalten, die als Regressionsbasis für die weitere Themenoptimierung dient.",
+          "short_summary": "Dieser Artikel ist eine Markdown-Rendering-Demo für das Cone Scroll-Theme, um die Typografie-Details des Themes bei Elementen wie Überschriften, Absätzen, Listen, Code, Tabellen, Bildern usw. zu beobachten. Der Artikel bietet eine stabile Probe für visuelle Regressionstests während des Theme-Optimierungsprozesses, um eine klare, lesbare und stabile Typografie zu gewährleisten.",
+          "key_points": [
+            "Bietet eine Typografie-Basisprobe für das Cone Scroll-Theme für visuelle Regressionstests",
+            "Deckt gängige Markdown-Elemente ab, wie Überschriften, Listen, Code, Tabellen, Bilder usw.",
+            "Betonung, dass Typografie auf Klarheit, Lesbarkeit und Stabilität achten sollte",
+            "Gibt Vorschläge für Typografie-Inspektionen, wie z.B. die Unterscheidung von Überschriften, Zeilenabstand im Text, Erkennbarkeit von Hervorhebungselementen",
+            "Sicherstellung, dass Artikel auf verschiedenen Geräten konsistent erscheinen, als Referenz für weitere Optimierungen"
+          ],
+          "audience": "Blog-Theme-Entwickler, Visuelle Designer, Content-Ersteller sowie Personen, die an Markdown-Typografie und Theme-Optimierung interessiert sind",
+          "tags": [
+            "Blog",
+            "Markdown",
+            "Cone Scroll",
+            "Typografie",
+            "Visuelle Optimierung",
+            "Basisartikel",
+            "Dokumentationsbeispiel"
+          ]
+        }
+      },
+      "metadataTranslationHash": "f91e81f562e83d1a1bdbe2f74771faf92f71e65113b7937019e2ec1de0f9796e",
+      "category": "Technical Demo",
+      "nativeMarkdownHash": "228d66c3b353093f72f852b1810901e97de0ad85bccfb2b2d85c2a3fd843830f"
+    },
+    {
       "hash": "0da24b7824975781da8a15cbd8bc82d50f66b6acd02d07d897688b42f57ebf25",
       "path": "content/blog/new-life-2023.md",
       "links": [],

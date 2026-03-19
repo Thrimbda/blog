@@ -360,3 +360,55 @@
 2026-03-17T14:32:20.200Z,legion_get_status,,,Claude,,success
 2026-03-17T14:32:30.404Z,legion_create_task,,,Claude,goal: 修复 diary-2026 页面中的异常换行，恢复符合现有内容风格的段落结构。,failed
 2026-03-17T14:32:38.234Z,legion_propose_task,,,Claude,name: 修复 diary-2026 换行,success
+2026-03-18T03:31:30.967Z,legion_get_status,zola,接入 Zola 多语言同步脚本与语言切换,Claude,,success
+2026-03-18T03:32:07.546Z,legion_create_task,zola,接入 Zola 多语言同步脚本与语言切换,Claude,goal: 为 Cone Scroll 主题新增一篇覆盖常见 Markdown 渲染元素的示例文章，作为后续主题视觉优化的稳定验收样本。,failed
+2026-03-18T03:32:23.446Z,legion_propose_task,zola,接入 Zola 多语言同步脚本与语言切换,Claude,name: cone-scroll-markdown-showcase,success
+2026-03-18T03:32:27.762Z,legion_approve_proposal,cone-scroll-markdown-showcase,cone-scroll-markdown-showcase,Claude,proposalId: proposal-mmvhjnk6-f58718,success
+2026-03-18T03:32:36.026Z,legion_switch_task,cone-scroll-markdown-showcase,cone-scroll-markdown-showcase,Claude,taskId: cone-scroll-markdown-showcase,success
+2026-03-18T03:36:25.775Z,legion_update_tasks,cone-scroll-markdown-showcase,cone-scroll-markdown-showcase,Claude,completeTask: phase 1,success
+2026-03-18T03:36:25.775Z,legion_update_context,cone-scroll-markdown-showcase,cone-scroll-markdown-showcase,Claude,addDecision: 本任务按 Low risk / 非 Epic 处理，仅使用 design-lite，不进入 RFC 流程。,success
+2026-03-18T03:36:25.776Z,legion_update_context,cone-scroll-markdown-showcase,cone-scroll-markdown-showcase,Claude,progress.completed: 补全 plan.md：写清问题定义、验收、假设、约束、Low 风险判断、范围与设计索引,success
+2026-03-18T03:47:25.559Z,legion_get_status,cone-scroll-markdown-showcase,cone-scroll-markdown-showcase,Claude,,success
+2026-03-18T09:24:39.017Z,legion_get_status,cone-scroll-markdown-showcase,cone-scroll-markdown-showcase,Claude,,success
+2026-03-18T09:25:10.063Z,legion_propose_task,cone-scroll-markdown-showcase,cone-scroll-markdown-showcase,Claude,name: cone-scroll-markdown-render-fixes,success
+2026-03-18T09:25:19.778Z,legion_approve_proposal,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,proposalId: proposal-mmvu5bu3-f5b5e4,success
+2026-03-18T09:25:26.899Z,legion_switch_task,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,taskId: cone-scroll-markdown-render-fixes,success
+2026-03-18T09:32:14.369Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,completeTask: 建立任务契约，明确问题、验收、假设、约束、风险与允许 scope,success
+2026-03-18T09:32:14.418Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,completeTask: 补充 design-lite，明确列表 marker、任务列表视觉与代码高亮接入策略,success
+2026-03-18T09:32:14.421Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,addDecision: 代码块高亮继续沿用 highlight.js，而不是切换到 Zola 内建高亮。,success
+2026-03-18T09:32:14.421Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,progress.completed: 补全 plan.md：写清问题定义、验收、假设、约束、Low 风险判断、范围与设计索引,success
+2026-03-18T09:32:21.037Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,setCurrentTask: 修复无序列表与有序列表 marker 显示问题，并让无序列表使用 `>>`,success
+2026-03-18T09:37:57.208Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,completeTask: 修复无序列表与有序列表 marker 显示问题，并让无序列表使用 `>>`,success
+2026-03-18T09:37:57.208Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,completeTask: 启用并收口代码块语法高亮样式,success
+2026-03-18T09:37:57.209Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,progress.completed: 实现 `.page-article` 内的列表 marker：无序列表使用 `>>`，有序列表改为 quiet 的自定义数字 marker,success
+2026-03-18T09:37:57.209Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,completeTask: 修复任务列表的 checkbox 与文本对齐/状态表现,success
+2026-03-18T09:49:21.621Z,legion_get_status,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-18T10:00:27.595Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,addDiscoveredTask: 使用 Playwright 对至少 5 个页面做浏览器级验收，确认列表 marker、任务列表与代码高亮没有明显回归,success
+2026-03-18T10:00:27.596Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-18T10:11:13.889Z,legion_get_status,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-18T10:11:13.893Z,legion_read_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,"section: handoff, includeReviews: true",success
+2026-03-18T10:13:45.202Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,addTask: 使用 Playwright 对至少 5 个页面做浏览器级验收，确认列表 marker、任务列表与代码高亮没有明显回归,success
+2026-03-18T10:13:45.202Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-18T10:53:18.426Z,legion_get_status,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-18T10:53:18.430Z,legion_read_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,section: progress,success
+2026-03-18T10:54:40.000Z,legion_get_status,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-18T10:54:40.000Z,legion_read_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,"section: handoff, includeReviews: true",success
+2026-03-18T10:54:47.560Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,setCurrentTask: 使用 Playwright 对至少 5 个页面做浏览器级验收，确认列表 marker、任务列表与代码高亮没有明显回归,success
+2026-03-18T10:54:51.106Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-18T10:57:47.892Z,legion_get_status,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-18T10:57:47.902Z,legion_read_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,"section: handoff, includeReviews: true",success
+2026-03-18T10:57:56.973Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-18T10:57:56.973Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,setCurrentTask: 使用 Playwright 对至少 5 个页面做浏览器级验收，确认列表 marker、任务列表与代码高亮没有明显回归,success
+2026-03-18T11:01:11.571Z,legion_get_status,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-18T11:01:11.572Z,legion_read_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,"section: all, includeReviews: true",success
+2026-03-18T11:01:11.633Z,legion_list_reviews,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,"status: open, type: all",success
+2026-03-18T11:01:25.233Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,setCurrentTask: 使用 Playwright 对至少 5 个页面做浏览器级验收，确认列表 marker、任务列表与代码高亮没有明显回归,success
+2026-03-18T11:44:18.188Z,legion_get_status,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-18T11:51:26.543Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,addDecision: 浏览器级验收不再直接使用仓库已有 `public/` 目录，而是基于临时工作区重新 `sync + zola build --base-url http://127.0.0.1:4174` 生成本地预览后再跑 Playwright。,success
+2026-03-18T11:53:04.272Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,completeTask: 使用 Playwright 对至少 5 个页面做浏览器级验收，确认列表 marker、任务列表与代码高亮没有明显回归,success
+2026-03-18T11:53:20.541Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,addFile: .legion/playbook.md,success
+2026-03-18T11:53:27.880Z,legion_get_status,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-18T14:30:14.537Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,setCurrentTask: 修复首页 Markdown 有序/无序列表未继承正文 marker 规则的问题，并补首页列表的 Playwright 断言,success
+2026-03-18T14:30:24.886Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-18T14:36:29.988Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,completeTask: 修复首页 Markdown 有序/无序列表未继承正文 marker 规则的问题，并补首页列表的 Playwright 断言,success
+2026-03-18T14:36:46.779Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,addDecision: 首页 Markdown 列表不单独再做一套样式，而是让 `.home-copy` 复用文章页正文列表的同一套 marker 规则。,success

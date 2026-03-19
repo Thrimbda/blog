@@ -170,6 +170,44 @@
     button.addEventListener("click", toggleTheme);
   }
 
+  function initMarkdownTaskLists() {
+    const article = document.querySelector(".page-article");
+    if (!article) {
+      return;
+    }
+
+    article.querySelectorAll("li").forEach((item) => {
+      const checkbox = item.querySelector(':scope > input[type="checkbox"]');
+      if (!checkbox) {
+        return;
+      }
+
+      item.classList.add("is-task-item");
+      const list = item.parentElement;
+      if (list && (list.tagName === "UL" || list.tagName === "OL")) {
+        list.classList.add("is-task-list");
+      }
+    });
+  }
+
+  function initCodeHighlighting() {
+    if (typeof hljs === "undefined") {
+      return;
+    }
+
+    document.querySelectorAll(".page-article pre code").forEach((block) => {
+      if (block.closest("pre.mermaid") || block.classList.contains("language-mermaid")) {
+        return;
+      }
+
+      if (block.dataset.highlighted === "yes") {
+        return;
+      }
+
+      hljs.highlightElement(block);
+    });
+  }
+
   function initEmblaCarousels() {
     if (typeof EmblaCarousel === "undefined" || typeof EmblaCarouselAutoplay === "undefined") {
       return;
@@ -224,6 +262,8 @@
   function initInteractiveControls() {
     updateToggleButton(getResolvedTheme());
     bindThemeToggle();
+    initMarkdownTaskLists();
+    initCodeHighlighting();
     initEmblaCarousels();
   }
 
@@ -231,7 +271,7 @@
   applyTheme(initialTheme);
   initPageOutline();
 
-  if (document.readyState === "loading") {
+  if (document.readyState === "loading" || document.readyState === "interactive") {
     document.addEventListener("DOMContentLoaded", initInteractiveControls, { once: true });
   } else {
     initInteractiveControls();

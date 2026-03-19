@@ -1,0 +1,18 @@
+Building site...
+Checking all internal links with anchors.
+> Successfully checked 0 internal link(s) with anchors.
+-> Creating 281 pages (0 orphan) and 14 sections
+Done in 2.5s.
+
+Web server is available at http://127.0.0.1:4174 (bound to 127.0.0.1:4174)
+
+Listening for changes in /Users/c1/Work/blog/{config.toml,content,static,themes}
+Press Ctrl+C to stop
+
+Change detected @ 2026-03-18 19:39:55
+-> Themes changed.
+Checking all internal links with anchors.
+> Successfully checked 0 internal link(s) with anchors.
+-> Creating 281 pages (0 orphan) and 14 sections
+Done in 2.5s.
+

@@ -39,6 +39,32 @@
 - 对站点 header、语言切换、返回入口这类 reader-facing 关键导航，优先使用原生 `<a>` 链接；只有在真实链接无法表达时才考虑 JS 驱动控件。
 - 若跨语言语义无法可靠一一映射，优先回退到同语言下的稳定列表入口，而不是生成可能失效或误导的“猜测链接”。
 
+## [Convention] 主题视觉迭代先准备稳定 Markdown showcase 样本
+
+- 在做文章页主题优化前，优先准备一篇可长期复用的 Markdown showcase 文章，集中覆盖标题层级、列表、任务列表、引用、代码块、表格、图片、脚注等核心 surface。
+- 这篇样本应保持“可读文章”而不是语法清单，这样后续视觉判断更接近真实阅读场景。
+- 若仓库已有站内图片资源，优先复用现有素材，减少主题回归时的额外变量。
+
+## [Pitfall] reset 之后要在正文作用域内补回 Markdown 列表 marker
+
+- 如果主题使用 reset 清掉了 `ul/ol` 默认 marker，必须在正文作用域（如 `.page-article`）内显式补回列表样式；否则文章里的无序/有序列表会直接失去阅读引导。
+- 补 marker 时要把作用域限制在 markdown 内容区，避免误伤 header/nav、TOC rail、post list 等非正文列表。
+
+## [Pitfall] 第三方高亮库不要在 head 里立即执行初始化
+
+- 如果主题脚本与第三方高亮库都用 `defer`，不要在 `head` 中直接内联调用 `hljs.highlightAll()` 这类初始化；更稳妥的做法是让主题脚本在 `DOMContentLoaded` 之后统一初始化。
+- 这样可以避免 defer 执行顺序与 `document.readyState === "interactive"` 时机造成的首屏漏初始化。
+
+## [Pitfall] Zola 本地浏览器验收不要直接复用现成 `public/`
+
+- 如果 `config.toml` 的 `base_url` 指向线上域名，直接对仓库现有 `public/` 跑本地静态服务时，关键 CSS/JS 很可能仍会回源到线上地址，导致本地 Playwright 结果失真。
+- 更稳妥的做法是：在临时工作区先 `sync`，再用 `zola build --base-url http://127.0.0.1:<port>` 生成本地预览产物，然后只对这份产物做浏览器级验收。
+
+## [Pitfall] 正文列表规则不要只绑定 `.page-article`
+
+- 如果站点里存在多个 Markdown 内容容器（例如文章页 `.page-article`、首页 `.home-copy`），列表 marker 规则不能只修其中一个；否则 `reset.css` 清掉默认 `list-style` 后，其他容器里的有序/无序列表会继续失去 marker。
+- 更稳妥的做法是先明确“哪些容器属于正文 Markdown surface”，再让这些容器共享同一套列表作用域规则；把 `post-list`、nav、TOC rail 等索引组件继续留在独立样式里。
+
 ## [Convention] 公开页面默认不暴露作者后台入口
 
 - 面向读者的公开页面不默认展示 `/admin`、`[编辑]`、后台控制文案或只对作者有意义的操作入口。

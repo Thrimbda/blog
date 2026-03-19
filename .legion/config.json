@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "currentTask": "zola",
+  "currentTask": "cone-scroll-markdown-render-fixes",
   "settings": {
     "autoRemind": true,
     "remindBeforeReset": true,
@@ -66,9 +66,23 @@
     {
       "id": "zola",
       "name": "接入 Zola 多语言同步脚本与语言切换",
-      "status": "active",
+      "status": "paused",
       "createdAt": "2026-03-16T06:02:13.563Z",
-      "updatedAt": "2026-03-17T07:40:10.329Z"
+      "updatedAt": "2026-03-18T03:32:27.751Z"
+    },
+    {
+      "id": "cone-scroll-markdown-showcase",
+      "name": "cone-scroll-markdown-showcase",
+      "status": "paused",
+      "createdAt": "2026-03-18T03:32:27.751Z",
+      "updatedAt": "2026-03-18T09:25:19.775Z"
+    },
+    {
+      "id": "cone-scroll-markdown-render-fixes",
+      "name": "cone-scroll-markdown-render-fixes",
+      "status": "active",
+      "createdAt": "2026-03-18T09:25:19.775Z",
+      "updatedAt": "2026-03-18T14:36:46.777Z"
     }
   ],
   "pendingProposals": [
@@ -742,6 +756,141 @@
       "decidedAt": "2026-03-16T06:02:13.563Z",
       "decidedBy": "Claude",
       "createdTaskId": "zola"
+    },
+    {
+      "id": "proposal-mmvhjnk6-f58718",
+      "name": "cone-scroll-markdown-showcase",
+      "goal": "为 Cone Scroll 主题新增一篇覆盖常见 Markdown 渲染元素的示例文章，作为后续主题视觉优化的稳定验收样本。",
+      "rationale": "用户明确要求以最少人类打断完成一次端到端交付，并先在博客中添加新的示例文章作为后续 Cone Scroll 主题优化的基准样本；该工作涉及任务契约、内容实现、验证与报告，适合单独建立 LegionMind 任务持续跟踪。",
+      "points": [
+        "默认走 Low risk / design-lite；本次不改主题实现，只新增稳定的 markdown showcase 内容样本。",
+        "示例文章需尽量覆盖后续视觉优化会观察到的核心元素，但避免引入不确定的第三方扩展语法。",
+        "文档与任务产物统一使用中文，PR 采用延迟批准模型。"
+      ],
+      "scope": [
+        "content/**",
+        "config.toml",
+        "themes/cone-scroll/**（仅在确认 front matter 或示例引用需要时）",
+        ".legion/tasks/cone-scroll-markdown-showcase/**",
+        ".legion/playbook.md"
+      ],
+      "phases": [
+        {
+          "name": "阶段 1 - 契约与设计",
+          "tasks": [
+            {
+              "description": "建立任务契约，明确问题、验收、假设、约束、风险与允许 scope",
+              "acceptance": "plan.md 已定义任务目标、验收标准、风险等级与 scope"
+            },
+            {
+              "description": "补充 design-lite，说明示例文章覆盖的 Markdown 元素与内容组织策略",
+              "acceptance": "plan.md 或 docs 中存在可执行的 design-lite 摘要"
+            }
+          ]
+        },
+        {
+          "name": "阶段 2 - 内容实现",
+          "tasks": [
+            {
+              "description": "梳理博客内容结构与 Cone Scroll 主题当前文章 front matter 约定",
+              "acceptance": "已确认示例文章落位、slug、分类和 front matter 兼容现有站点"
+            },
+            {
+              "description": "新增示例文章，覆盖标题、段落、强调、列表、引用、代码、表格、图片、任务列表等常见 Markdown 元素",
+              "acceptance": "仓库内存在可构建的 Markdown 示例文章，内容可用于观察主题 render"
+            }
+          ]
+        },
+        {
+          "name": "阶段 3 - 验证与交付",
+          "tasks": [
+            {
+              "description": "运行站点相关验证，确认新增文章可被构建并无明显格式错误",
+              "acceptance": "docs/test-report.md 记录验证命令与结果"
+            },
+            {
+              "description": "完成代码评审与交付报告，生成可直接用于 PR 的说明文档",
+              "acceptance": "docs/review-code.md、docs/report-walkthrough.md 与 docs/pr-body.md 已生成"
+            }
+          ]
+        }
+      ],
+      "proposedBy": "Claude",
+      "proposedAt": "2026-03-18T03:32:23.442Z",
+      "status": "approved",
+      "decidedAt": "2026-03-18T03:32:27.751Z",
+      "decidedBy": "Claude",
+      "createdTaskId": "cone-scroll-markdown-showcase"
+    },
+    {
+      "id": "proposal-mmvu5bu3-f5b5e4",
+      "name": "cone-scroll-markdown-render-fixes",
+      "goal": "修复 Cone Scroll 主题文章页中无序列表、有序列表、任务列表与代码块语法高亮的 Markdown 渲染问题。",
+      "rationale": "用户基于刚新增的 Markdown showcase 文章，已经明确指出当前主题在列表标记、任务列表和代码块语法高亮上存在实际渲染问题，并给出了无序列表应使用 `>>` 的明确方向；该工作将涉及主题样式、站点 Markdown 配置、验证与交付文档，适合建立独立 LegionMind 任务跟踪。",
+      "points": [
+        "本轮以 Markdown showcase 文章为主要回归样本，优先修复 reader-facing 的列表与代码块可读性问题。",
+        "无序列表 marker 按用户要求采用 `>>`；有序列表 marker 需清楚但保持 Cone Scroll 的 quiet 风格。",
+        "若启用 Zola 语法高亮，需同步收口 `pre/code` 样式，避免引入高噪声色块或破坏暗色模式。"
+      ],
+      "scope": [
+        "config.toml",
+        "themes/cone-scroll/static/css/*.css",
+        "themes/cone-scroll/templates/**/*.html（仅在确认需要结构调整时）",
+        "content/blog/markdown-render-showcase.md（仅在验证需要补轻量样本时）",
+        ".legion/tasks/cone-scroll-markdown-render-fixes/**",
+        ".legion/playbook.md"
+      ],
+      "phases": [
+        {
+          "name": "阶段 1 - 契约与设计",
+          "tasks": [
+            {
+              "description": "建立任务契约，明确问题、验收、假设、约束、风险与允许 scope",
+              "acceptance": "plan.md 已定义本轮渲染修复目标、验收标准、风险等级与 scope"
+            },
+            {
+              "description": "补充 design-lite，明确列表 marker、任务列表视觉与代码高亮接入策略",
+              "acceptance": "存在可执行的 design-lite，能指导样式与配置改动"
+            }
+          ]
+        },
+        {
+          "name": "阶段 2 - 实现",
+          "tasks": [
+            {
+              "description": "修复无序列表与有序列表 marker 显示问题，并让无序列表使用 `>>`",
+              "acceptance": "文章页中的 ul/ol 在 Cone Scroll 主题下可见且层级清楚"
+            },
+            {
+              "description": "修复任务列表的 checkbox 与文本对齐/状态表现",
+              "acceptance": "任务列表在文章页中能正确显示未完成/已完成状态"
+            },
+            {
+              "description": "启用并收口代码块语法高亮样式",
+              "acceptance": "代码块拥有可用的语法高亮且与主题配色协调"
+            }
+          ]
+        },
+        {
+          "name": "阶段 3 - 验证与交付",
+          "tasks": [
+            {
+              "description": "运行站点相关验证，确认修改可构建且 showcase 文章可用于观察修复结果",
+              "acceptance": "docs/test-report.md 记录验证命令与结果"
+            },
+            {
+              "description": "完成代码评审与交付报告，生成可直接用于 PR 的说明文档",
+              "acceptance": "docs/review-code.md、docs/report-walkthrough.md 与 docs/pr-body.md 已生成"
+            }
+          ]
+        }
+      ],
+      "proposedBy": "Claude",
+      "proposedAt": "2026-03-18T09:25:10.062Z",
+      "status": "approved",
+      "decidedAt": "2026-03-18T09:25:19.775Z",
+      "decidedBy": "Claude",
+      "createdTaskId": "cone-scroll-markdown-render-fixes"
     }
   ]
 }
