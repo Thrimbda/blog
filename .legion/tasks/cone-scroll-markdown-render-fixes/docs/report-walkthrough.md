@@ -2,7 +2,7 @@
 
 ## 目标与范围
 
-- 目标：修复 Cone Scroll 主题 Markdown 内容区中的列表、任务列表与代码块高亮渲染问题，覆盖文章页与首页正文，主要回归样本为 `content/blog/markdown-render-showcase.md`。
+- 目标：修复 Cone Scroll 主题 Markdown 内容区中的列表、任务列表与代码块高亮渲染问题，覆盖文章页与首页正文，并把 `markdown-render-showcase.md` 补成显式覆盖 1-6 级标题的回归样本。
 - 范围绑定本任务 scope：
   - `themes/cone-scroll/static/css/style.css`
   - `themes/cone-scroll/static/js/script.js`
@@ -16,6 +16,7 @@
 - 设计依据见 [plan](../plan.md) 与 [design-lite](./design-lite.md)。
 - 列表规则收口到 Markdown 内容区：文章页 `.page-article` 与首页 `.home-copy` 共享同一套正文列表 marker 规则，避免误伤全站其他列表。
 - 无序列表明确使用 `»` 作为 marker；有序列表恢复 quiet 的数字 marker，保持可读但不过度抢眼。
+- 无序列表与有序列表共享同一条 marker 列宽与文本起始列，避免视觉上像两套不同缩进。
 - 任务列表显式退出普通列表 marker，修复 checkbox 与文本对齐。
 - 代码块高亮继续沿用 highlight.js，不更换高亮栈；本轮重点修复初始化时序与 token 配色链路。
 
@@ -26,6 +27,7 @@
 - 在 `.page-article` 与首页 `.home-copy` 下重建 `ul/ol/li` 规则，避免 `reset.css` 后 Markdown 正文列表失去稳定 marker。
 - 无序列表通过伪元素恢复 marker，统一输出 `»`。
 - 有序列表恢复 quiet 数字 marker，使用自定义计数器、字宽与间距控制，保证数字清楚但视觉安静。
+- 统一无序/有序列表的 marker 列宽与对齐方式，修复“同为正文列表但看起来像两套缩进”的节奏差异。
 - 任务列表通过 `.is-task-list` / `.is-task-item` 退出普通 marker，并修复 checkbox 尺寸、边距、accent color、disabled 状态与文本对齐。
 - 为 `.hljs` 及常见 `.hljs-*` token 提供本地 light/dark 配色，补回代码块语义高亮。
 
@@ -48,6 +50,11 @@
 - `playwright-check.spec.cjs` / `playwright-diagnose.cjs`：记录本轮浏览器级验收与本地 preview 诊断逻辑。
 - `playwright-*.png`：首页、Blog、About、Diary、Tags 与 Markdown showcase（light/dark）的验收截图。
 
+### 5. `content/blog/markdown-render-showcase.md`
+
+- 在原有 showcase 基础上补齐正文内的 1-6 级标题样本，继续让同一篇文章承担标题层级、TOC、列表、任务列表与代码块的回归职责。
+- 额外补的是最小必要样本，而不是把整篇文章改成纯组件展板。
+
 ## 如何验证
 
 详见 [test-report](./test-report.md)。本轮自动验证与 Playwright 浏览器验收已通过，建议 reviewer 至少关注以下检查点：
@@ -56,9 +63,11 @@
    - 预期：PASS；确认脚本无语法错误。
 2. `node scripts/zola-i18n.ts build`
    - 预期：PASS；站点成功构建，回归样本页面正常生成。
-3. 在临时工作区执行 `node scripts/zola-i18n.ts sync && zola build --force --base-url "http://127.0.0.1:4174" --output-dir <temp-site>`
+3. `grep -n '^#{1,6} ' content/blog/markdown-render-showcase.md`
+   - 预期：能看到 `#` 到 `######` 的完整标题层级样本。
+4. 在临时工作区执行 `node scripts/zola-i18n.ts sync && zola build --force --base-url "http://127.0.0.1:4174" --output-dir <temp-site>`
    - 预期：生成真正引用本地 CSS/JS 的预览产物，而不是继续复用仓库现有 `public/`。
-4. 启动 `python3 -m http.server 4174 --bind 127.0.0.1 --directory <temp-site>` 后，执行：
+5. 启动 `python3 -m http.server 4174 --bind 127.0.0.1 --directory <temp-site>` 后，执行：
    - `node .legion/tasks/cone-scroll-markdown-render-fixes/docs/playwright-diagnose.cjs`
    - `".legion/tasks/cone-scroll-markdown-render-fixes/docs/node_modules/.bin/playwright" test ".legion/tasks/cone-scroll-markdown-render-fixes/docs/playwright-check.spec.cjs" --reporter=line`
    - 预期：至少 5 个页面通过浏览器级验收；首页 Markdown 列表与 showcase 页面在 light/dark 下都能看到正确的列表 marker、任务列表与代码高亮。
@@ -73,6 +82,7 @@
 - `matchMedia(...).addEventListener("change", ...)` 仍存在旧版 Safari 兼容性风险，但不构成本轮阻塞。
 - 浏览器验收已覆盖桌面端关键页面，但仍未覆盖移动端截图与跨浏览器差异。
 - 正文列表规则目前已覆盖文章页与首页 `.home-copy`，但若后续新增其他 Markdown 内容容器，仍需要显式纳入同一套正文作用域。
+- 若后续继续微调列表视觉，需同时看 marker 列宽、文本起始列与嵌套列表缩进，避免只修其中一项又重新出现“有序/无序缩进不一致”的体感。
 
 ### 回滚
 

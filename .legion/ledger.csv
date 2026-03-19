@@ -412,3 +412,11 @@
 2026-03-18T14:30:24.886Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
 2026-03-18T14:36:29.988Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,completeTask: 修复首页 Markdown 有序/无序列表未继承正文 marker 规则的问题，并补首页列表的 Playwright 断言,success
 2026-03-18T14:36:46.779Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,addDecision: 首页 Markdown 列表不单独再做一套样式，而是让 `.home-copy` 复用文章页正文列表的同一套 marker 规则。,success
+2026-03-19T04:25:59.475Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,setCurrentTask: 收口正文无序列表与有序列表的缩进节奏差异，避免读者感知到两套不同的缩进列,success
+2026-03-19T04:26:07.553Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-19T04:30:28.528Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,completeTask: 收口正文无序列表与有序列表的缩进节奏差异，避免读者感知到两套不同的缩进列,success
+2026-03-19T04:30:43.004Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,addDecision: 无序列表不再只放一个裸 `»` marker，而是和有序列表共享相同的 marker 列宽、右对齐与文本起始列。,success
+2026-03-19T04:37:10.144Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,setCurrentTask: 为 `content/blog/markdown-render-showcase.md` 补齐 1-6 级标题样本，并验证生成页标题层级完整,success
+2026-03-19T04:37:15.607Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,,success
+2026-03-19T04:40:34.073Z,legion_update_tasks,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,completeTask: 为 `content/blog/markdown-render-showcase.md` 补齐 1-6 级标题样本，并验证生成页标题层级完整,success
+2026-03-19T04:40:49.956Z,legion_update_context,cone-scroll-markdown-render-fixes,cone-scroll-markdown-render-fixes,Claude,addDecision: 直接在现有 `markdown-render-showcase.md` 中补最小必要的 1-6 级标题样本，而不是新建另一篇专用标题测试文章。,success

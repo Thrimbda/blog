@@ -9,13 +9,14 @@
 - 当前主题加载了 `reset.css`，但 Markdown 内容区没有统一重新建立稳定的列表 marker 规则，导致文章页已修复后，首页正文等非 `.page-article` surface 仍可能缺少可见的无序/有序列表引导。
 - Markdown 任务列表虽然已被渲染成 checkbox，但当前样式没有针对文章正文做专门收口，视觉状态与文本对齐都不理想。
 - 主题虽已引入 highlight.js 脚本，但语法高亮初始化与样式链路不完整，代码块最终几乎只剩统一底色，没有达到可用的语义高亮效果。
-- 需要以 `content/blog/markdown-render-showcase.md` 为回归样本，把这些 reader-facing 的基础渲染问题一次收口。
+- 需要以 `content/blog/markdown-render-showcase.md` 为回归样本，把这些 reader-facing 的基础渲染问题一次收口，并让样本显式覆盖 1-6 级标题。
 
 ## 验收标准
 
 - Markdown showcase 文章中的无序列表恢复可见 marker，且无序列表 marker 使用 `»`。
 - Markdown showcase 文章中的有序列表恢复清晰数字 marker，并与正文排版保持安静一致。
 - 首页 Markdown 正文中的无序列表与有序列表也继承同一套正文 marker 规则，不再因作用域遗漏而失去 marker。
+- Markdown showcase 文章显式包含 1-6 级标题样本，便于继续观察标题层级、TOC 与锚点表现。
 - Markdown showcase 文章中的任务列表 checkbox 状态清楚、与文本对齐稳定，不再混用普通列表 marker。
 - Markdown showcase 文章中的代码块获得可见的语法高亮，且与 Cone Scroll 的明暗主题配色协调。
 - 生成 `docs/test-report.md`、`docs/review-code.md`、`docs/report-walkthrough.md`、`docs/pr-body.md`。
@@ -23,7 +24,7 @@
 ## 假设
 
 - 本轮问题可以通过主题模板/脚本/样式收口解决，不需要改 Markdown 内容结构或引入新依赖包。
-- `content/blog/markdown-render-showcase.md` 已足够覆盖列表、任务列表与代码块等回归 surface，无需新增专用文章。
+- `content/blog/markdown-render-showcase.md` 既是回归样本，也允许补充最小必要的标题样本，以覆盖标题层级表现。
 - highlight.js 继续作为现有代码块高亮方案；本轮优先修复初始化与样式，而不是更换整套高亮栈。
 
 ## 约束
@@ -51,6 +52,7 @@
 - `themes/cone-scroll/static/css/style.css`
 - `themes/cone-scroll/static/js/script.js`
 - `themes/cone-scroll/templates/head.html`
+- `content/blog/markdown-render-showcase.md`
 - `.legion/tasks/cone-scroll-markdown-render-fixes/**`
 - `.legion/playbook.md`
 

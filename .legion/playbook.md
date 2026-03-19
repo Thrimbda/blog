@@ -64,6 +64,7 @@
 
 - 如果站点里存在多个 Markdown 内容容器（例如文章页 `.page-article`、首页 `.home-copy`），列表 marker 规则不能只修其中一个；否则 `reset.css` 清掉默认 `list-style` 后，其他容器里的有序/无序列表会继续失去 marker。
 - 更稳妥的做法是先明确“哪些容器属于正文 Markdown surface”，再让这些容器共享同一套列表作用域规则；把 `post-list`、nav、TOC rail 等索引组件继续留在独立样式里。
+- 共享作用域还不够：如果有序列表给了固定 marker 列宽，无序列表也应共享同一条 marker 列与文本起始列；否则即使 marker 都可见，读者仍会感觉两类列表缩进不一致。
 
 ## [Convention] 公开页面默认不暴露作者后台入口
 

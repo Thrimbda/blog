@@ -41,6 +41,24 @@ test('Playwright 验收：至少 5 个页面', async ({ browser }) => {
   });
   expect(homeUnorderedMarker).toContain('»');
 
+  const homeMarkerMetrics = await lightPage.evaluate(() => {
+    const ordered = document.querySelector('.home-intro ol > li');
+    const unordered = document.querySelector('.home-secondary ul > li');
+    if (!ordered || !unordered) {
+      return null;
+    }
+
+    return {
+      orderedPaddingLeft: getComputedStyle(ordered).paddingLeft,
+      unorderedPaddingLeft: getComputedStyle(unordered).paddingLeft,
+      orderedMarkerWidth: getComputedStyle(ordered, '::before').width,
+      unorderedMarkerWidth: getComputedStyle(unordered, '::before').width,
+    };
+  });
+  expect(homeMarkerMetrics).toBeTruthy();
+  expect(homeMarkerMetrics.orderedPaddingLeft).toBe(homeMarkerMetrics.unorderedPaddingLeft);
+  expect(homeMarkerMetrics.orderedMarkerWidth).toBe(homeMarkerMetrics.unorderedMarkerWidth);
+
   await screenshot(lightPage, 'playwright-home-desktop.png');
 
   await lightPage.goto(`${baseURL}/blog/`);

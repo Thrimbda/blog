@@ -18,6 +18,10 @@
 - 完成 `tasks.md` 中的 Playwright 浏览器级验收勾选，收口本轮新增验收要求。
 - 扩展正文列表作用域：`themes/cone-scroll/static/css/style.css` 现在让首页 `.home-copy` 与文章页 `.page-article` 共享同一套有序/无序列表 marker 规则。
 - 更新 `playwright-check.spec.cjs`，补上首页 `.home-intro ol` 与 `.home-secondary ul` 的浏览器断言，并在本地 preview 上复跑 PASS。
+- 统一正文无序/有序列表的 marker 列宽与文本起始列：`style.css` 现在给两类列表的 `::before` 共享相同宽度与右对齐策略，收口了缩进节奏差异。
+- 复跑 Playwright CLI，新增首页列表 `padding-left` / marker 宽度一致性的断言，结果 PASS。
+- 更新 `content/blog/markdown-render-showcase.md`，补齐正文内的 1-6 级标题样本，使同一篇 showcase 文章同时覆盖标题层级、列表、任务列表与代码块回归。
+- 执行 `node scripts/zola-i18n.ts build` 并用标题 grep 复核，确认 showcase 源文件已显式包含 `#` 到 `######` 的完整标题层级。
 
 
 ### 🟡 进行中
@@ -53,6 +57,8 @@
 | `script.js` 在 `loading` / `interactive` 阶段统一等待 `DOMContentLoaded` 后再初始化交互。 | 主题脚本位于其他 defer 第三方库之前，若在 `interactive` 阶段立即执行会有 highlight.js 首屏漏初始化风险。 | 保持原有 `loading` 分支；或在 head 中内联立即调用高亮初始化。 | 2026-03-18 |
 | 浏览器级验收不再直接使用仓库已有 `public/` 目录，而是基于临时工作区重新 `sync + zola build --base-url http://127.0.0.1:4174` 生成本地预览后再跑 Playwright。 | 仓库现有 `public/` 产物会把主题 CSS/JS 指向线上绝对地址，无法可靠反映本地最新 theme 改动；用本地 base_url 重建后，Playwright 才能验证真实的本地 asset 行为。 | 继续用 `python3 -m http.server public` 直接验收；但该方式会把关键 CSS/JS 解析到线上资源，只适合静态浏览，不适合作为本轮最终浏览器验收基线。 | 2026-03-18 |
 | 首页 Markdown 列表不单独再做一套样式，而是让 `.home-copy` 复用文章页正文列表的同一套 marker 规则。 | 问题根因不是首页需要不同视觉，而是正文列表作用域只覆盖了 `.page-article`；复用同一套正文规则能修复首页回归，同时避免复制维护两套几乎相同的列表逻辑。 | 为首页单独写一套 list-style/marker 规则；或恢复浏览器默认 marker。前者会形成重复维护，后者则无法与文章页的 `»` / quiet 数字 marker 保持一致。 | 2026-03-18 |
+| 无序列表不再只放一个裸 `»` marker，而是和有序列表共享相同的 marker 列宽、右对齐与文本起始列。 | 之前虽然两类列表都可见，但只有有序列表为数字 marker 预留了固定列宽，导致无序列表看起来像更深或更松的一套缩进；统一 marker 列能让阅读节奏更稳定。 | 保持现状，只接受轻微视觉差异；或单独调小/调大某一类列表的 `padding-left`。前者会持续留下不一致体感，后者则更容易把问题转移到嵌套列表和多位数字序号上。 | 2026-03-18 |
+| 直接在现有 `markdown-render-showcase.md` 中补最小必要的 1-6 级标题样本，而不是新建另一篇专用标题测试文章。 | 这篇文章本来就是 Markdown 渲染回归基线；把标题层级也放进同一篇样本，可以减少维护分散和回归入口分裂。 | 另建单独的 heading showcase；或继续只依赖页面 title + 现有 h2-h4。前者会增加维护成本，后者则无法在同一篇回归样本中稳定覆盖 h1/h5/h6。 | 2026-03-19 |
 
 ---
 
@@ -60,15 +66,14 @@
 
 **下次继续从这里开始：**
 
-1. 如需再增强置信度，可补一轮移动端 Playwright 截图，重点看首页 `.home-copy` 的列表缩进。
-2. 若后续有新的 Markdown 内容容器出现，应直接复用 `.page-article` / `.home-copy` 这套正文列表作用域，而不是继续复制样式。
-3. 当前修复已通过 Playwright 复验，可继续等待 reviewer 或后续合并。
+1. 如需继续验证标题视觉，可在后续 Playwright/人工巡检中把 TOC 与各级 heading 锚点也纳入检查。
+2. 当前 showcase 已同时覆盖标题、列表、任务列表、代码块、表格、图片与脚注，后续优先复用这篇文章做主题回归。
 
 **注意事项：**
 
-- 本轮没有新增 JS 逻辑，只调整了 CSS 作用域与浏览器断言。
-- 首页列表问题的根因已记录到 playbook：正文列表规则不要只绑定 `.page-article`。
+- 本轮只改了 showcase 内容样本，没有新增主题逻辑。
+- 由于 build 已通过，当前改动可直接进入下一轮 review 或继续累积同一 PR。
 
 ---
 
-*最后更新: 2026-03-18 22:36 by Claude*
+*最后更新: 2026-03-19 12:40 by Claude*
