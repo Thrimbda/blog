@@ -10,28 +10,28 @@ date: 2026-01-01
 ### 2026-01-22
 
 1.  Was habe ich heute gemacht:
-    1.  Den `opencode-feishu-notifier` refaktoriert. Er sendet Benachrichtigungen nun nach einem festgelegten Muster an die Nutzer.
-    2.  Weiter an `legionmind-github-bridge` von der KI schreiben lassen. Ich habe den Multi-Agent-Modus von opencode gestartet. Es wurden 5 Agents gestartet, um 5 Issues zu bearbeiten. Das Ding lief zwei Stunden lang und hat meine 5 Stunden Codex-Tokens komplett aufgebraucht.
-    3.  Heute ist ein Node im sg-Cluster ausgefallen. Ich habe mir die Logs angesehen und es stellte sich heraus, dass er durch ständige SSH-Angriffsversuche überlastet wurde. Das ist nicht gut. Nach kurzer Überlegung gibt es mehrere mögliche Ansätze:
+    1.  Den `opencode-feishu-notifier` refaktorisiert. Er sendet Benachrichtigungen nun nach einem festgelegten Schema an die Nutzer.
+    2.  Weiter an `legionmind-github-bridge` von der KI schreiben lassen. Ich habe den Multi-Agent-Modus von `opencode` gestartet. Es wurden 5 Agents gestartet, um 5 Issues zu bearbeiten. Das Ding lief 2 Stunden lang und hat mein gesamtes 5-Stunden-Budget an Codex-Tokens aufgebraucht.
+    3.  Heute ist ein Node im `sg`-Cluster ausgefallen. Ich habe mir die Logs angesehen und es stellte sich heraus, dass er durch ständige SSH-Angriffsversuche überlastet wurde. Das ist nicht gut. Nach kurzer Überlegung gibt es mehrere mögliche Maßnahmen:
         - Passwortauthentifizierung deaktivieren
         - Den SSH-Zugang für das gesamte Internet schließen
         - Den Cluster hinter einen NAT verschieben
-    4.  Verschiedene Kleinigkeiten erledigt. ZL kommt nächste Woche nach Suzhou, ich habe etwas Zeit für die Planung aufgewendet, aber es lief nicht reibungslos. Ich plane nicht, weitere Energie darauf zu verwenden.
+    4.  Verschiedene Kleinigkeiten erledigt. `zl` kommt nächste Woche nach Suzhou. Ich habe etwas Zeit für die Planung aufgewendet, aber es lief nicht reibungslos. Ich werde keine weitere Energie mehr darauf verwenden.
 
 2.  Gedanken:
 
-    In meiner derzeitigen Phase kann ich nur 2-3 Dinge gleichzeitig managen. Dazu gehören Entwicklungsarbeit, Alltagsplanung, Denken und Output. Wenn ich diese Grenze überschreite, komme ich nicht mehr hinterher und werde schnell müde. Und das, obwohl ich bereits versuche, so viel Arbeit wie möglich an KI-Agents zu delegieren. Daher denke ich, dass es zwei Verbesserungsrichtungen geben sollte:
-    - Für Codierungsaufgaben sollte ich den Autonomiegrad der Agents so weit wie möglich erhöhen. Es gibt mehrere Optimierungsziele:
-      1.  Sie sollen mich so wenig wie möglich stören.
-      2.  Sie sollen so viel wie möglich arbeiten.
-      3.  Die Zuverlässigkeit ihrer Arbeit soll so weit wie möglich gesteigert werden.
+    In meiner derzeitigen Phase kann ich nur 2-3 Dinge gleichzeitig koordinieren. Dazu gehören Entwicklungsarbeit, Alltagsorganisation, Denken und Output. Wenn ich diese Grenze überschreite, komme ich mit der Koordination nicht mehr hinterher und werde schnell müde. Und das, obwohl ich bereits versuche, so viel Arbeit wie möglich an KI-Agents zu delegieren. Daher denke ich, dass es zwei Verbesserungsrichtungen geben sollte:
+    - Für Codierungsaufgaben sollte ich den Autonomiegrad der Agents so weit wie möglich erhöhen. Optimierungsziele sind:
+      1.  Sie sollen mich möglichst selten stören.
+      2.  Sie sollen möglichst viel arbeiten.
+      3.  Die Zuverlässigkeit ihrer Arbeit soll so hoch wie möglich sein.
     - Auch ich selbst muss mich verbessern:
       1.  Meine mentale Energie besser managen, um nicht so schnell erschöpft zu sein.
-      2.  Die Fähigkeit verbessern, gleichzeitig in verschiedenen Kontexten zu arbeiten, ohne Dinge zu vergessen oder zu übersehen, und dabei den Fortschritt im Blick zu behalten.
+      2.  Die Fähigkeit verbessern, in mehreren verschiedenen Kontexten gleichzeitig zu arbeiten, ohne Dinge zu vergessen oder zu übersehen, und dabei den Fortschritt im Blick zu behalten.
 
     Basierend auf diesen Überlegungen denke ich, dass ich morgen in zwei Richtungen experimentieren könnte:
-    1.  Eine Multi-Agent-Vorlage für Legionmind entwerfen und mit opencode an einer Codierungsaufgabe von Yuan experimentieren.
-    2.  Weiter Arbeitsprotokolle führen und eine Methode für das Management mentaler Energie und Kontexte erarbeiten.
+    1.  Eine Multi-Agent-Vorlage für `legionmind` entwerfen und mit `opencode` an einer Codierungsaufgabe in `yuan` experimentieren.
+    2.  Weiter das Arbeitsprotokoll führen und eine Methode für das Management von mentaler Energie und Kontexten erkunden.
 
 3.  Was plane ich für morgen?
     1.  Wie oben erwähnt, ein Multi-Agent-Experiment durchführen.
@@ -44,40 +44,40 @@ date: 2026-01-01
 
 ### 2026-01-23
 
-Ich habe heute eine leichte Erkältung und Kopfschmerzen, die Produktivität ist niedrig. Aber ich freue mich, dass ich mit den täglichen Zusammenfassungen begonnen habe.
+Heute hatte ich eine leichte Erkältung und Kopfschmerzen, die Produktivität war niedrig. Aber ich bin froh, dass ich mit den täglichen Zusammenfassungen begonnen habe.
 
 1.  Was habe ich heute gemacht:
-    1.  Mit Hilfe der KI ein Multi-Agent-System entworfen. Dieses System ist noch nicht systematisch ausgefeilt.
-    2.  `legionmind-github-bridge` ist wieder einen Schritt vorangekommen.
-    3.  Das Preemption-Design und die Implementierung von `node-unit` angepasst. Früher wurden bei einem fehlgeschlagenen `node-unit` alle darunter liegenden Deployments gelöscht. Jetzt wird nur noch eins nach dem anderen bereinigt.
-    4.  Die Prüfung für die Futures-Broker-Kontoeröffnung bei der CFFEX abgelegt. Man musste die ganze Zeit die Kamera anlassen, durfte das Fenster nicht minimieren oder wechseln. Zum Glück gab es unbegrenzte Versuche – das schaffe ich locker. Bestanden mit 95 Punkten.
+    1.  Mit KI-Hilfe ein Multi-Agent-System entworfen. Das System ist noch nicht systematisch ausgefeilt.
+    2.  `legionmind-github-bridge` ist wieder ein Stück vorangekommen.
+    3.  Das Preemption-Design und die Implementierung von `node-unit` angepasst. Früher wurden bei einem `failed`-Zustand eines `node-unit` alle darunter liegenden Deployments gelöscht. Jetzt wird nur noch eins nach dem anderen bereinigt.
+    4.  Die Prüfung für die Futures-Broker-Kontoeröffnung (CFFEX) abgelegt. Man musste die ganze Zeit die Kamera anlassen, durfte das Fenster nicht minimieren oder wechseln. Zum Glück gab es unbegrenzte Versuche – das schaffe ich locker. Bestanden mit 95 Punkten.
 
 2.  Gedanken:
 
-    Mein Ziel ist es, Agent-Autonomie mit möglichst wenig Aufwand zu erreichen. Mein derzeitiger Workflow sieht so aus:
-    1.  Legionmind als SOP für Entwicklungsarbeit. Es ist eine Agent-Skill. Ich mag Agent-Skills.
-    2.  Opencode als Entität des Agents. Ich nutze dessen Fähigkeiten wie bash / tool calling / langraph / command / subagent. Wenn ich opencode irgendwann ersetzen müsste, wäre das meine To-Do-Liste.
-    3.  Meine derzeitige Kopfschmerzquelle ist, wie ich Skills und diese Sub-Agents kombinieren soll.
+    Mein Ziel ist es, Agent-Autonomie mit möglichst wenig Aufwand (für mich) zu erreichen. Mein aktueller Workflow sieht so aus:
+    1.  `legionmind` als SOP für Entwicklungsarbeit. Es ist eine Agent-Skill. Ich mag Agent-Skills.
+    2.  `opencode` als die physische Instanz des Agents. Ich nutze dessen Fähigkeiten wie bash / tool calling / langraph / command / subagent. Falls ich `opencode` irgendwann ersetzen müsste, wäre das meine To-Do-Liste.
+    3.  Meine derzeitige Kopfzerbrechung ist, wie man Skills und diese Sub-Agents kombiniert.
 
-    Den ganzen Tag Kopfschmerzen, erst am Abend wurde es etwas klarer. Ich merke, dass es vielleicht keine gute Methode ist, diese Gedanken am Ende des Tages aufzuschreiben. Vielleicht sollte ich nur Fakten aufzeichnen und die Gedanken erst am nächsten Morgen zusammenfassen.
+    Den ganzen Tag Kopfschmerzen, erst am Abend wurde es klarer. Ich merke, dass es vielleicht keine gute Idee ist, diese Gedanken erst am Ende des Tages aufzuschreiben. Vielleicht sollte ich nur Fakten notieren und die Gedanken erst am nächsten Morgen zusammenfassen.
 
 3.  Was plane ich für morgen?
-    1.  Mit diesem Multi-Agent-System etwas Sinnvolles tun. Vielleicht das Gate-Vermögensverwaltungskonto anbinden.
+    1.  Mit diesem Multi-Agent-System etwas Nützliches tun. Vielleicht das Gate-Earn-Konto anbinden.
     2.  Weiter an `legionmind-github-bridge` arbeiten.
     3.  Clustersicherheit, falls Zeit bleibt.
     4.  Wieder mit der Arbeitszeiterfassung beginnen. (Wichtig)
-    5.  Morgen kommen SYs Freunde zu Besuch, daher wird die Arbeitszeit wahrscheinlich knapp.
+    5.  Morgen kommen `sy`s Freunde zu Besuch, daher wird die Arbeitszeit wahrscheinlich knapp.
 
 ### 2026-01-24
 
-Heute habe ich mich ausgeschlafen und bin erst um 11 Uhr aufgewacht. Fühlt sich gut an, so lange habe ich nicht mehr so ausgiebig geschlafen.
+Heute habe ich mich ausgeschlafen – bis 11 Uhr! Fühlt sich großartig an, so lange habe ich nicht mehr so ausgiebig geschlafen.
 
 1.  Was habe ich heute gemacht:
-    1.  Die neue Version von `node-unit` live geschaltet. Der Grund, warum ich es relativ sorglos deployen konnte, sind meine umfangreichen End-to-End-Tests. Konkret: Ein Docker-Container startet eine TimescaleDB (PostgreSQL 17), dann werden zwei `node-unit`-Instanzen gestartet und 21 `@yuants/portal`-Deployments in die Datenbank eingefügt, um zu testen, ob sie sich schließlich gleichmäßig aufteilen.
+    1.  Die neue Version von `node-unit` deployed. Der Grund, warum ich es relativ sorglos deployen konnte, sind meine umfangreichen End-to-End-Tests. Konkret: Ich starte eine TimescaleDB (PostgreSQL 17) in Docker, dann zwei `node-unit`-Instanzen und füge 21 `@yuants/portal`-Deployments in die Datenbank ein, um zu testen. Am Ende konvergieren sie zu einem halb-halb Zustand.
 
-        Dieser Test deckt im Wesentlichen ab, was passiert, wenn eine Reihe herrenloser Deployments auftauchen und zwei `node-unit`-Instanzen online gehen. Man kann beobachten, wie sie abwechselnd Deployments übernehmen. Was vielleicht noch fehlt, sind echte CPU-/Arbeitsspeicher-Last und das Szenario, in dem ein `node-unit` absichtlich heruntergefahren wird.
+        Dieser Test deckt im Wesentlichen ab, was passiert, wenn viele herrenlose Deployments auftauchen und zwei `node-unit`-Instanzen hochfahren: Man sieht, wie sie abwechselnd Deployments übernehmen. Was fehlt, sind echte CPU-/Memory-Arbeitslasten und das Szenario, in dem ein `node-unit` absichtlich heruntergefahren wird.
 
-    2.  Die neue Multi-Agent-Version von Legionmind in Yuan verwendet, um das Problem der Kontostromausgabe für das `vendor-gate earn`-Konto zu lösen. Ich ließ den Agent zuerst mit Legion Dokumentation erstellen. Insgesamt wurden folgende Dokumente erstellt:
+    2.  Die neue Multi-Agent-Version von `legionmind` in `Yuan` verwendet, um das Problem der Kontostromausgabe für das `vendor-gate` Earn-Konto zu lösen. Ich ließ den Agent zuerst mit `legion` Dokumentation erstellen. Insgesamt wurden folgende Dokumente erstellt:
 
         ```text
         .legion/tasks/vendor-gate
@@ -95,119 +95,119 @@ Heute habe ich mich ausgeschlafen und bin erst um 11 Uhr aufgewacht. Fühlt sich
         └── tasks.md
         ```
 
-        Fühlt sich nach einem soliden Workflow an. Allerdings gibt es einige Konflikte zwischen meinem neuen Multi-Agent-System und der bestehenden Dokumentationserstellung von Legionmind. Ich sollte die Grenzen der verschiedenen Aufgaben genau überdenken. Zum Beispiel sollten Spezifikationen, wie jede Art von Dokument geschrieben werden soll, in separaten Skills liegen, und Legionmind sollte eine Arbeitsablaufbeschreibung sein. Jeder Agent sollte in der Lage sein, einige kleinere Skills zu laden, um seine Arbeit zu unterstützen.
+        Das fühlt sich nach einem soliden Workflow an. Allerdings gibt es Konflikte zwischen meinem neuen Multi-Agent-System und der bestehenden Dokumentationserstellung von `legionmind`. Ich sollte die Grenzen der einzelnen Aufgaben genauer überdenken. Zum Beispiel sollten Spezifikationen, wie jede Art von Dokument geschrieben werden soll, in separaten Skills liegen. `legionmind` sollte eher eine Workflow-Beschreibung sein. Jeder Agent sollte in der Lage sein, einige kleinere Skills zu laden, um seine Arbeit zu unterstützen.
 
-        Ein weiteres Problem war, dass er beim ersten Versuch einen Fehler machte und den Kontostrom in `account-actions-with-credential.ts` ausgab. Das lag daran, dass ich ihn angewiesen hatte, sich an `vendor-okx` zu orientieren, um das Earn-Konto einzubinden. Der Grund für diese Anweisung war, dass bisher nur das OKX-Earn-Konto ebenfalls als `account` eingebunden war. Aber die KI übernahm auch einige veraltete Praktiken daraus. Der aktuelle Standard für den Börsenzugang ist, alle Konten über `provideExchangeServices` bereitzustellen, nicht `provideAccountActionsWithCredential` zu verwenden.
+        Ein weiteres Problem war, dass beim ersten Versuch ein Fehler gemacht wurde: Der Kontostrom wurde in `account-actions-with-credential.ts` ausgegeben. Das lag daran, dass ich verlangt hatte, sich an `vendor-okx` für die Earn-Konto-Integration zu orientieren – weil bisher nur das OKX-Earn-Konto als `account` integriert war. Aber die KI hat auch einige veraltete Praktiken übernommen. Der aktuelle Standard für Exchange-Integrationen ist, alle Konten über `provideExchangeServices` bereitzustellen, nicht über `provideAccountActionsWithCredential`.
 
-        Dieses Wissen besitzt ein brandneuer KI-Agent nicht. Wie modelliert man solches Wissen? Wie stelle ich einem KI-Agenten solchen Projektkontext als externes Gehirn zur Verfügung? Das ist eine Frage, die es wert ist, tief durchdacht zu werden. Morgen muss ich mich damit genauer befassen.
+        Dieses Wissen besitzt ein brandneuer KI-Agent nicht. Wie modelliert man solches Wissen? Wie stelle ich einem KI-Agent solchen Projektkontext als externes Gehirn zur Verfügung? Das ist eine Frage, über die ich nachdenken muss. Morgen muss ich das genauer durchdenken.
 
-    3.  Nachmittags für SYs Freunde gekocht. Das hat mich ganz schön erschöpft. Also morgen geht die Arbeit weiter.
+    3.  Nachmittags für `sy`s Freunde gekocht. Das hat mich ganz schön erschöpft. Also morgen geht die Arbeit weiter.
 
 2.  Gedanken:
-    - Wie oben erwähnt, muss ich mir genau überlegen, wie ich für KI-Agents ein kompaktes externes Gehirn entwerfe. Am einfachsten könnte man mit einer Sammlung von `AGENT.md`-Dateien beginnen. Das habe ich schon versucht, aber der Aufwand für die Pflege dieser Dokumente selbst ist recht hoch. Müll von wirklich wertvollen Erfahrungen zu unterscheiden, ist ein schwieriges Problem. Derzeit scheint es, dass Erinnerungen wie andere Prompts sind, nur dass der Agent möglicherweise eine eigene Schleife hat, um sie zu aktualisieren. Das Wichtigste ist, wie man die Ergebnisse der Arbeit eines KI-Agents bewertet.
+    - Wie oben erwähnt, muss ich genau überlegen, wie ich einem KI-Agent ein kompaktes externes Gehirn bereitstellen kann. Am einfachsten wäre es, mit einer Sammlung von `AGENT.md`-Dateien zu beginnen. Das habe ich schon versucht, aber der Overhead für die Pflege dieser Dokumente selbst ist hoch. Müll von wirklich wertvollen Erfahrungen zu unterscheiden, ist schwierig. Derzeit scheint es, dass Erinnerungen wie andere Prompts sind, nur dass der Agent vielleicht eine eigene Schleife hat, um sie zu aktualisieren. Am wichtigsten ist, wie man die Ergebnisse der KI-Agent-Arbeit bewertet.
 
-    - In Bezug auf den obigen Punkt habe ich einen interessanten Artikel gelesen. Lassen Sie mich ihn in meinen eigenen Worten zusammenfassen: Zunächst kann die Bewertung einer einzelnen Agentenarbeit in mehrere Kategorien unterteilt werden:
-      1.  Statische Tool-Evaluation: Compiler, Linter, Unit-Tests, E2E-Tests
-      2.  Model-Evaluation: Ein anderes LLM bewertet anhand eines von uns definierten Prompts.
-      3.  Manuelle Evaluation: Ich bewerte.
+    - Bezüglich des vorherigen Punktes habe ich einen interessanten Artikel gelesen. Lassen Sie mich ihn in meinen eigenen Worten zusammenfassen: Zunächst kann die Bewertung einer einzelnen Agenten-Aufgabe in Kategorien unterteilt werden:
+      1.  Statische Tool-Eval: Compiler, Linter, Unit-Tests, E2E-Tests.
+      2.  Model-Eval: Ein anderes LLM bewertet anhand eines von uns definierten Prompts.
+      3.  Menschliche Eval: Ich bewerte.
 
-      Dann gibt es zwei Arten der systematischen Bewertung eines Agenten:
-      1.  Fähigkeitsbasiert: Beantwortet die Frage, was der Agent kann? Die Erfolgsquote kann niedrig sein, z.B. wenn ich Legion verwende, um schrittweise größere, schwierigere Aufgaben auszuführen – wie die Erkundung einer neuen Grenze.
-      2.  Regressionsbasiert: Kann er frühere Fähigkeiten noch beibehalten? Z.B. durch wiederholtes Testen einiger Aufgaben, um sicherzustellen, dass sie noch stabil implementiert werden können.
+      Dann gibt es zwei Arten der systematischen Bewertung eines Agenten-Systems:
+      1.  Fähigkeitsbasiert: Beantwortet die Frage, was der Agent tun kann. Die Erfolgsquote kann niedrig sein, z.B. wenn ich `legion` verwende, um größere, schwierigere Aufgaben schrittweise auszuführen – wie die Erkundung einer neuen Grenze.
+      2.  Regressionsbasiert: Kann er seine bisherigen Fähigkeiten beibehalten? Z.B. durch wiederholtes Testen einiger Aufgaben, um sicherzustellen, dass sie stabil implementiert werden können.
 
-      Wenn eine neue Fähigkeit eingeführt wird, sollte sie von fähigkeitsbasiert zu regressionsbasiert übergehen.
+      Wenn eine neue Fähigkeit eingeführt wird, sollte sie von "fähigkeitsbasiert" zu "regressionsbasiert" übergehen.
 
       Der Artikel erwähnt auch zwei wichtige Metriken: `pass@K` und `pass^K`
-      - `pass@k`: Mindestens ein Erfolg bei k Versuchen. Je mehr Versuche, desto höher die Wahrscheinlichkeit für mindestens einen Erfolg. Anwendbar: Wenn es Ihnen nur darum geht, "mindestens eine brauchbare Lösung zu finden".
-      - `pass<sup>k</sup>`: Alle k Versuche müssen erfolgreich sein. Je mehr Versuche, desto schwieriger ist es, Konsistenz aufrechtzuerhalten. Anwendbar: Wenn der Nutzer einen zuverlässig produzierenden Agenten erwartet.
+      - `pass@k`: Mindestens ein Erfolg in k Versuchen. Je mehr Versuche, desto höher die Wahrscheinlichkeit, mindestens eine brauchbare Lösung zu finden. Anwendbar: Wenn es nur darum geht, "mindestens eine brauchbare Lösung" zu finden.
+      - `pass<sup>k</sup>`: Alle k Versuche müssen erfolgreich sein. Je mehr Versuche, desto schwieriger ist es, Konsistenz aufrechtzuerhalten. Anwendbar: Wenn der Nutzer einen zuverlässigen Produktions-Agenten erwartet.
 
       FYI: [Siehe diesen Artikel](https://medium.com/ai-software-engineer/anthropic-new-guide-shows-how-to-build-quality-ai-agents-without-getting-fooled-29f378ec2609)
 
-    - Meine Energie ist immer noch etwas gering. Nachmittags habe ich ein bisschen gearbeitet, abends gekocht und fühle mich schon etwas müde. Wann werde ich wie CZ sein und nicht schlafen müssen?
+    - Meine Energie ist immer noch etwas niedrig. Nachmittags etwas gearbeitet, abends gekocht – und schon fühle ich mich müde. Wann werde ich wie CZ sein und keinen Schlaf brauchen?
 
 3.  Was plane ich für morgen?
-    1.  Über dieses Evaluierungs-Agenten-Modell nachdenken und das Multi-Agent-System weiter iterieren.
+    1.  Über dieses Eval-Agent-Modell nachdenken und das Multi-Agent-System weiter iterieren.
     2.  Clustersicherheit – muss gemacht werden.
-    3.  `legion-github-bridge`
+    3.  `legion-github-bridge`.
 
 ### 2026-01-25
 
-Heute war ich beim Friseur. Als ich zurückkam, war das System instabil. Es stellte sich heraus, dass Jige zwei Dienste mit derselben `terminal_id` gestartet hatte, die sich gegenseitig blockierten und große Probleme verursachten.
+Heute war ich beim Friseur. Als ich zurückkam, war das System instabil. Es stellte sich heraus, dass `鸡哥` zwei Dienste mit derselben `terminal<sub>id</sub>` gestartet hatte, die sich gegenseitig blockierten und große Probleme verursachten.
 
 1.  Was habe ich heute gemacht:
-    1.  Versucht, den Cluster hinter einen NAT zu migrieren – natürlich mit Hilfe des neuen Legion. Meine Vorgehensweise war:
+    1.  Versucht, den Cluster hinter einen NAT zu migrieren – natürlich mit Hilfe des neuen `legion`. Meine Vorgehensweise:
         - Zuerst den kops-Cluster modifiziert, ein neues VPC erstellt, mit den Netzwerken 172.21.0.0/24 und 172.21.1.0/24. Dann einen NAT für den ausgehenden Traffic erstellt.
 
-          Ursprünglich wollte ich ein Netzwerksegment mit 10.0. verwenden, aber AWS ließ das nicht zu. Also wechselte ich zu 172.21. Dabei gab es eine Falle: In der Cluster-Ressource musste der bestehende Loadbalancer manuell auf das entsprechende VPC zeigen (vorher war es implizit standardmäßig zugewiesen, jetzt mit einem zusätzlichen CIDR muss es manuell angegeben werden).
+          Ursprünglich wollte ich ein 10.0.-Netzwerk verwenden, aber AWS ließ das nicht zu. Also wechselte ich zu 172.21. Hier gab es eine Falle: In der Cluster-Ressource musste der bestehende Loadbalancer manuell dem neuen VPC zugewiesen werden (vorher war es implizit das Standard-VPC, mit einem zusätzlichen CIDR muss man es explizit angeben).
 
-        - Dann eine neue Instance Group erstellt, die auf das neue VPC zeigt. Eine kleine Zwischenepisode: Die neue IG hatte keine S3-Berechtigungen, aus unerfindlichen Gründen. Nach manueller Hinzufügung traten die Nodes dem Cluster normal bei.
+        - Dann eine neue Instance Group erstellt, die auf das neue VPC zeigt. Kleine Zwischenfälle: Die neue IG hatte keine S3-Berechtigungen – keine Ahnung warum. Nach manueller Hinzufügung traten die Nodes dem Cluster normal bei.
 
-        - Als nächstes Dienste manuell in die neue IG migriert.
+        - Nächster Schritt: Dienste manuell in die neue IG migrieren.
 
-        - Schließlich die alte IG heruntergefahren.
+        - Schließlich die alte IG herunterfahren.
 
-        Nachdem alles erledigt war, stellte sich heraus, dass der gesamte ausgehende Cluster-Traffic nur noch eine einzige IP hatte. Das brachte unsere Dienste, die auf IP-Ratenbegrenzung angewiesen sind, etwas in Bedrängnis. Keine andere Wahl, als zurückzurollen. Das HTTP-Proxy-Feature muss zuerst implementiert werden, bevor der nächste Schritt gemacht werden kann.
+        Nachdem alles fertig war, hatte der Cluster nur noch eine einzige ausgehende IP-Adresse, was unsere Dienste, die auf IP-Rate-Limiting angewiesen sind, ziemlich durcheinanderbrachte. Leider musste ich einen Rollback durchführen. Zuerst muss ich das HTTP-Proxy-Feature implementieren, bevor ich weitergehen kann.
 
-    2.  Das Multi-Agent-System wurde praktisch eingesetzt, um ein Skript zur automatischen Aktualisierung der Midas-Nettowerte zu erstellen. Deepseek hat lange daran gearbeitet, und ich war eigentlich ganz zufrieden. Ein Kernproblem dabei ist: Wenn ich einen Fehler im frühen Design nicht bemerke, erwartet mich eine enorme Verschwendung von Tokens und Zeit, denn ich merke, dass Agents nicht besonders schnell arbeiten.
+    2.  Das Multi-Agent-System wurde praktisch eingesetzt, um ein Skript zur automatischen Aktualisierung der `midas`-Nettovermögen zu erstellen. `deepseek` hat lange daran gearbeitet, und ich war ziemlich zufrieden. Ein Kernproblem dabei ist: Wenn ich einen Fehler im frühen Design nicht bemerke, kostet mich das eine Menge Tokens und Zeit, denn die Agents arbeiten nicht gerade schnell.
 
-        Derzeit sind diese Coding-Agents noch recht primitiv. Sie brechen oft aufgrund von Netzwerkproblemen o.ä. ab. Sie für ernsthafte, lang laufende Arbeiten einzusetzen, ist noch etwas unzuverlässig (SLI ist noch niedrig). Das ist aber vielleicht auch eine Chance. Auf den ersten Blick erfordert dies Kenntnisse in Software-Engineering und Hochverfügbarkeit.
+        Derzeit sind diese Coding-Agents noch ziemlich primitiv. Sie brechen oft aufgrund von Netzwerkproblemen o.ä. ab. Sie für ernsthafte, lang laufende Arbeiten einzusetzen, ist noch etwas unzuverlässig (SLI ist niedrig). Das ist aber auch eine Chance. Auf den ersten Blick erfordert das Wissen aus der Softwareentwicklung über Hochverfügbarkeit etc.
 
 2.  Gedanken:
 
-    Heute hatte ich weniger Gedanken, sie sind bereits in die obigen Abschnitte eingeflossen.
+    Heute hatte ich weniger Gedanken, die ich bereits oben eingefügt habe.
 
 3.  Was plane ich für morgen?
-    1.  Den HTTP-Proxy-Mechanismus für Yuan entwerfen.
+    1.  Den HTTP-Proxy-Mechanismus für `Yuan` entwerfen.
     2.  Nach dem Deployment den Cluster erneut migrieren.
 
 ### 2026-01-26
 
-Heute war ein Tag der Zurückhaltung. Ich habe festgestellt, dass ich nach dem 25. Lebensjahr im Umgang mit Emotionen einen deutlichen Fortschritt gemacht habe: Neben den Emotionen gibt es jetzt deutlich einen Hauch von Vernunft, der als Copilot fungiert. Dieser Hauch von Vernunft setzt eine Art Kontrollstange in den gewaltigen emotionalen Reaktor. Ohne diese Stange würden die Emotionen außer Kontrolle geraten, eine sich selbst verstärkende Kettenreaktion auslösen und möglicherweise unzählige unumkehrbare Folgen haben. Unter dem Einfluss dieser Stange beginne ich zu verstehen, was gesagt werden kann und was nicht, was getan werden kann und was nicht, welche Entscheidungen getroffen werden können und welche nicht. Das ist eine erfreuliche Veränderung in mir.
+Heute war ein Tag der Zurückhaltung. Ich habe festgestellt, dass ich nach meinem 25. Lebensjahr einen deutlichen Fortschritt im Umgang mit Emotionen gemacht habe: Neben der Emotion selbst gibt es jetzt einen klaren Funken Vernunft, der als Copilot fungiert. Dieser Funke setzt eine Art Kontrollstange in den riesigen emotionalen Reaktor. Ohne diese Stange würden die Emotionen außer Kontrolle geraten, eine selbstverstärkende Kettenreaktion auslösen und möglicherweise unzählige unumkehrbare Folgen haben. Unter dem Einfluss dieser Stange beginne ich zu verstehen, was man sagen kann und was nicht, was man tun kann und was nicht, welche Entscheidungen getroffen werden können und welche nicht. Das ist eine erfreuliche Veränderung in mir.
 
 1.  Was habe ich heute gemacht:
-    1.  Heute mit Legion das Design und die Implementierung des HTTP-Proxys für Yuan erstellt. Ich finde, es läuft ziemlich reibungslos. Unterwegs habe ich sein Design überprüft, einen Punkt (wie ein verfügbares Terminal ausgewählt wird) modifiziert und dann den Agenten freie Hand gelassen. Das Ergebnis war ziemlich gut.
-    2.  Ich habe auch mit Legion eine automatische Midas-Aktualisierung durchgeführt. Aber die KI hat durchweg schlechte Arbeit geleistet, hat meine Anforderungen nicht richtig verstanden und die Verwendung von `@yuants/protocol` nicht korrekt erfasst. Ich habe einige Verdachtsmomente: Die Intelligenz der KI reicht nicht aus (Deepseek scheint doch nicht so clever zu sein); das Review war nicht streng genug; oder die Dokumentations-Wissensbasis ist nicht streng genug.
-    3.  Verdammt, nachts wurde ich von einem Alarm geweckt. Ein Host war aus unerklärlichen Gründen abgestürzt. Es sieht aus wie ein CPU-Spitzenwert, der den Host in einen Zustand versetzt hat, aus dem er sich nicht selbst erholen kann. Die Logs des Hosts sind ein Haufen Mist. Mein Urteil: Der Alarm ist nützlich, die Logs sind Schrott. Notiz gemacht!
+    1.  Heute habe ich mit `legion` das Design und die Implementierung des HTTP-Proxys für `yuan` erstellt. Ich finde, es lief ziemlich reibungslos. Unterwegs habe ich sein Design überprüft, einen Punkt (wie man einen verfügbaren Terminal auswählt) modifiziert und dann den Agenten machen lassen. Das Ergebnis war ziemlich gut.
+    2.  Ich habe auch mit `legion` eine automatische Aktualisierung für `midas` erstellt, aber die KI hat es ständig schlecht gemacht, meine Anforderungen nicht richtig verstanden und die Verwendung von `@yuants/protocol` nicht korrekt umgesetzt. Ich habe einige Verdachtsmomente: Die Intelligenz der KI reicht nicht aus (`deepseek` scheint nicht sehr klug zu sein); das Review war nicht streng genug; oder die Dokumentations-Wissensbasis ist nicht streng genug.
+    3.  Verdammt, nachts wurde ich durch einen Alarm geweckt. Ein Host war plötzlich ausgefallen. Es scheint einen CPU-Spitzenwert gegeben zu haben, der den Host in einen Zustand versetzt hat, aus dem er sich nicht selbst erholen konnte. Die Logs des Hosts sind ein Haufen Mist. Mein Urteil: Der Alarm ist nützlich, die Logs sind Schrott. Notiert!
 
 2.  Gedanken:
-    1.  Beim Duschen dachte ich über den kritischsten Punkt in der Zusammenarbeit mit KI nach. Einer ist die Serviceverfügbarkeit des KI-Agents selbst – dass er nicht mitten in der Arbeit abstürzt oder so. Übrigens, Ralph Loop erhöht die Verfügbarkeit im Grunde durch grobes ständiges Wiederholen. Der andere Punkt ist, wie ich die Ausgabe der KI annehme. Selbst wenn ein Mitarbeiter seinem Vorgesetzten berichtet, braucht er eine PowerPoint oder einfach einen professionellen mittleren Manager als "teuren Sprachrohr". Wie kann die Berichterstattung der KI an den Menschen auf flache Markdown und Code beschränkt sein? Könnte der Bericht der KI jeden Punkt mit einem Artefakt verlinken? Könnte es einen "Citation Agent" geben, der speziell für diesen Teil zuständig ist?
+    1.  Beim Duschen habe ich über den kritischsten Punkt in der Zusammenarbeit zwischen mir und der KI nachgedacht. Einerseits die Serviceverfügbarkeit des KI-Agents selbst – dass er nicht mitten in der Arbeit abstürzt oder so. Übrigens, `ralph loop` erhöht die Verfügbarkeit im Grunde durch grobes ständiges Wiederholen. Der andere Punkt ist, wie ich die Ausgabe der KI annehme. Selbst wenn ein Mitarbeiter seinem Vorgesetzten berichtet, braucht er eine PowerPoint oder sogar einen professionellen mittleren Manager als "teuren Sprachrohr". Wie kann sich die Berichterstattung der KI an den Menschen auf flaches Markdown und Code beschränken? Könnte jeder Punkt in einem KI-Report mit einem Artefakt verlinkt sein? Könnte es einen "Citation Agent" geben, der speziell für diesen Teil zuständig ist?
 
-        Allerdings ist meine derzeitige Verwendung von KI ziemlich eingeschränkt, nur auf Codierungsaufgaben konzentriert.
+        Allerdings ist meine derzeitige Verwendung der KI ziemlich eingeschränkt, hauptsächlich auf Codierungsaufgaben.
 
-    2.  Überlegen wir genau, warum mein Multi-Agent-System, nachdem ich es einmal eingerichtet hatte, stabil in Richtung eines Absturzes steuerte. In den vorherigen Überlegungen wurden grob drei Möglichkeiten erwähnt:
+    2.  Überlegen wir genau, warum mein Multi-Agent-System, nachdem ich es aufgebaut habe, stabil in Richtung eines Scheiterns steuert. In den vorherigen Überlegungen wurden grob drei Möglichkeiten erwähnt:
         1.  Das intellektuelle Niveau der KI selbst.
         2.  Das menschliche Review war nicht streng genug.
-        3.  Die Wissensbasis war nicht detailliert genug, um korrektere Informationen für einen schnellen Start der KI bereitzustellen.
+        3.  Die Wissensbasis ist nicht detailliert genug, um korrektere Informationen für einen schnellen Start der KI bereitzustellen.
 
-        Lassen Sie uns diese Punkte genauer betrachten. Punkt 1 muss nicht weiter bedacht werden. Sich in Richtung 2 zu bemühen, würde tatsächlich auf ein immer detaillierteres RFC-Dokument angewiesen sein, um den nachfolgenden Schritten eine ausreichend korrekte Richtung zu geben. Aber diese Art der Entwicklung ist, als wären wir zum **Wasserfallmodell** zurückgekehrt, Arbeit über einen linearen Prozess zu erledigen:
+        Lassen Sie uns diese Punkte genauer betrachten. Punkt 1 muss nicht weiter bedacht werden. Sich in Richtung 2 anzustrengen, würde tatsächlich auf ein immer detaillierteres RFC-Dokument setzen, um den nachfolgenden Schritten eine ausreichend korrekte Richtung zu geben. Aber diese Art der Entwicklung ist, als wären wir zum **Wasserfallmodell** zurückgekehrt, Arbeit durch einen linearen Prozess zu erledigen:
 
         ```text
         Anforderungsanalyse -> Backend-Design -> Backend-Entwicklung -> Frontend-Entwicklung -> Integrationstests
         ```
 
-        Die Gründe dafür liegen auf zwei Ebenen: der technischen Ebene und der organisatorischen/prozessualen Ebene, wobei die organisatorische/prozessuale Ebene der *Hauptfaktor* ist.
+        Die Gründe dafür gibt es auf zwei Ebenen: der technischen und der organisatorisch-prozessualen Ebene, wobei die organisatorisch-prozessuale Ebene der *Hauptfaktor* ist.
 
-        Auf technischer Ebene gibt es natürliche Abhängigkeiten zwischen Aufgaben, z.B. muss das Frontend auf Backend-Schnittstellen warten, um mit der Entwicklung zu beginnen, und das Backend muss warten, bis das Produkt-CRD geschrieben ist, um zu starten.
+        Auf der technischen Ebene gibt es natürliche Abhängigkeiten zwischen Aufgaben, z.B. muss das Frontend auf Backend-Schnittstellen warten, um mit der Entwicklung zu beginnen; das Backend muss warten, bis das Produkt-CRD geschrieben ist, um zu starten.
 
-        In menschlichen Organisationen hat das Wasserfallmodell Probleme wie: Ineffizienz, Qualitätsrisiken werden schwer aufgedeckt, geringe Flexibilität, Teamkonflikte. In der Zusammenarbeit zwischen mir und der KI existieren Ineffizienz und Teamkonflikte von Natur aus nicht in der Welt der KI. Es ist, als ob ich und die KI in zwei verschiedenen Zeitdimensionen leben würden, ein Tag für mich ist wie ein Jahr für die KI. Ineffizienz könnte mehr Tokens kosten, aber das ist derzeit nicht mein Hauptanliegen. Mein tatsächliches Problem sind Qualitätsrisiken durch Missverständnisse von Anforderungen oder Fakten, und die Flexibilität ist ebenfalls gering.
+        In menschlichen Organisationen hat das Wasserfallmodell Probleme: Ineffizienz, Qualitätsrisiken, die schwer aufzudecken sind, mangelnde Flexibilität, Teamkonflikte usw. In der Zusammenarbeit zwischen mir und der KI existieren Effizienz und Teamkonflikte von Natur aus nicht in der Welt der KI. Es ist, als ob ich und die KI in zwei verschiedenen Zeitdimensionen leben – ein Tag für mich ist wie ein Jahr für die KI. Nun, Ineffizienz könnte mehr Tokens kosten, aber das ist derzeit nicht mein Hauptproblem. Was ich tatsächlich erlebe, sind Qualitätsrisiken durch Missverständnisse von Anforderungen oder Fakten, und mangelnde Flexibilität.
 
-        Ich muss einen Weg finden, die Fähigkeiten der KI maximal zu nutzen und mich gleichzeitig maximal zu befreien. Nach den Erfahrungen der menschlichen Organisation muss ich zu einem höheren Knoten im Befehlsbaum werden, der Dinge der KI anvertrauen kann, während sie auf Kurs bleibt.
+        Ich muss einen Weg finden, die Fähigkeiten der KI maximal zu nutzen und mich gleichzeitig maximal zu befreien. Nach den Erfahrungen der menschlichen Organisation muss ich zu einem höheren Knoten im Befehlsbaum werden, der Dinge der KI anvertrauen kann, ohne dass sie vom Kurs abkommt.
 
         Die beiden entscheidenden Punkte sind:
         1.  Absichtsausrichtung (Intent Alignment)
         2.  Schichtweise Validierung (Layered Verification)
 
-        Darüber muss ich noch tiefer nachdenken. Ich habe das Gefühl, ich muss es mehr nutzen, um es zu verstehen.
+        Darüber muss ich noch tiefer nachdenken. Ich habe das Gefühl, ich muss es mehr nutzen, um ein Gefühl dafür zu bekommen.
 
     3.  Ich muss mich vor der schlechten Seite meines Zustands hüten, mit dem Hammer nach Nägeln zu suchen: Pfadabhängigkeit, Output über Verständnis.
 
 3.  Was plane ich für morgen?
 
-    Morgen kommt ZL. Geplant sind Training, Essen und Brettspiele.
+    Morgen kommt `zl`. Geplant sind Training, Essen und Brettspiele.
 
 ### 2026-01-27
 
-ZL ist da, die Informationsmenge ist groß, ich muss sie erst verdauen. Brettspiele gespielt, "Tragic Loop". Wir haben drei Stunden damit verbracht, die Regeln zu verstehen. Erst im letzten Szenario, in dem ich den Bösewicht-Dramatiker spielte, spürte ich den Sweet Spot des Spiels und beendete das Spiel mit meinem vollständigen Sieg.
+`zl` ist da, die Informationsmenge ist groß, ich muss sie erst verdauen. Brettspiele gespielt, "Tragic Loop". Wir haben drei Stunden damit verbracht, die Regeln zu verstehen, und erst im letzten Szenario, in dem ich den bösen Dramatiker spielte, habe ich den Sweet Spot des Spiels gespürt. Das Spiel endete mit meinem vollständigen Sieg.
 
 ### 2026-01-31
 
@@ -215,103 +215,91 @@ Die letzten Tage waren ziemlich voll, daher habe ich nichts aufgezeichnet. Aber 
 
 Abgesehen von der vielen Arbeit – warum habe ich nicht aufgezeichnet?
 
-1.  Weil ich Angst hatte, dass Aufzeichnen bedeutet, sich hinzusetzen und speziell 30+ Minuten für einen Tag aufzuwenden. Das liegt eigentlich an einer gewissen Angst und Belastung durch das Aufzeichnen des Alltags, was nicht gut ist.
-2.  Normalerweise möchte ich erst am Ende eines Tages mit der Aufzeichnung beginnen. Aber wenn ich genau darüber nachdenke, ist das etwas unmenschlich, denn ich gehe jetzt meistens ins Bett, sobald es Zeit ist, und nicht weil ich alles, was ich tun wollte, wirklich erledigt habe (gibt es das überhaupt?). Das führt dazu, dass ich in freien Momenten nicht aufzeichne, und wenn es wirklich Zeit zum Aufzeichnen ist, muss ich schnell ins Bett. Zusammen mit Problem 1 häuft sich das immer mehr an.
+1.  Weil ich Angst hatte, dass das Aufzeichnen bedeutet, sich hinzusetzen und mindestens 30 Minuten speziell dafür aufzuwenden, einen Tag zusammenzufassen. Das liegt daran, dass ich eine gewisse Angst und Belastung gegenüber der täglichen Aufzeichnung entwickelt habe, was nicht gut ist.
+2.  Normalerweise möchte ich erst am Ende eines Tages mit der Aufzeichnung beginnen, aber wenn ich genau darüber nachdenke, ist das etwas unmenschlich. Denn ich gehe jetzt meistens ins Bett, sobald es Zeit ist, schnell unter die Decke zu schlüpfen, und nicht, weil ich alles, was ich tun wollte, wirklich erledigt habe (gibt es das überhaupt?). Das führt dazu, dass ich in freien Momenten nicht aufzeichne, und wenn es wirklich Zeit zum Aufzeichnen ist, muss ich schnell ins Bett. Zusammen mit Problem 1 wird es immer mehr.
+
+Die Kombination dieser beiden Dinge hat sich angestaut.
 
 1.  Was habe ich heute gemacht:
 
     > Korrektur: Was habe ich in den letzten Tagen gemacht?
-    1.  Auf Anraten von SC begonnen, Neovim zu verwenden. Warum? Ich habe gesehen, dass `nvim-orgmode` anscheinend wirklich zu einem brauchbaren Org-Mode geworden ist, und gleichzeitig begann ich, mich an Emacs zu stören:
+    1.  Auf Anraten von `sc` habe ich begonnen, `neovim` zu verwenden. Warum? Ich habe gesehen, dass `nvim-orgmode` anscheinend wirklich ein brauchbarer org-mode geworden ist, und gleichzeitig begann ich, mich von `emacs` zu langweilen:
         - Endlose Update-Fehler
         - Verwirrendes Debugging und Fehlermeldungen
-        - Flexibilität, die für mich nur zusätzliche Belastung ist und keinen Nutzen bringt
-        - Ich verstehe Emacs-Lisp nicht und möchte es auch nicht verstehen
+        - Flexibilität, die für mich nur Belastung ist und keinen Nutzen bringt
+        - Ich verstehe `emacs-lisp` nicht und will es auch nicht verstehen
 
-        Jahrelang habe ich das oben Genannte ertragen, um Org-Mode zu nutzen, aber nirgendwo sonst konnte ich Org-Mode gut nutzen. Jetzt scheint das Neovim-Lager eine brauchbare Alternative zu haben – warum es nicht versuchen?
+        Jahrelang habe ich das alles ertragen, um org-mode zu nutzen, aber es gab nirgendwo sonst eine gute Alternative für org-mode. Jetzt scheint das `nvim`-Lager eine brauchbare Alternative zu haben – warum es nicht ausprobieren?
 
-        Da ich seit Jahren Vim-Nutzer bin und in Emacs auch evil-mode (vim-mode) verwendet habe, empfinde ich die Verwendung von Vim nie als große Belastung. In VSCode und IDEA kann ich ohne Vim nicht überleben, daher ist die direkte Verwendung von nvim für mich überhaupt kein Problem.
+        Da ich seit Jahren ein `vim`-Nutzer bin und auch in `emacs` `evil-mode` (`vim-mode`) verwendet habe, habe ich nie das Gefühl, dass die Verwendung von `vim` eine große Belastung wäre. In `vscode` und `idea` kann ich ohne `vim` nicht überleben, daher ist die direkte Verwendung von `nvim` für mich überhaupt kein Problem.
 
-        Da das Hindernis weg ist, schaue ich mir das Neovim-Ökosystem an. Neovim hat, weil es das historische Ballast von Vimscript nicht hat, direkt Lua als Konfigurations- und Plugin-Sprache übernommen. Es kann also leicht starten, und die Community ist sehr aktiv. Ich sehe, dass das Plugin-System von Neovim jetzt auch von einem System namens `lazy.vim` vereinheitlicht wurde. Das Design des Plugin- und Konfigurationssystems von nvim scheint organisiert und geplant speziell gegen die Schmerzpunkte von Vim mutige Innovationen vorgenommen zu haben. In Vim & Emacs gab es wahrscheinlich unzählige ähnliche Versuche, die alle scheiterten, weil die Community zu fragmentiert war.
+        Da das Hindernis also weg ist, habe ich mir das `nvim`-Ökosystem angesehen. `nvim` hat, da es keine Altlasten von `vimscript` hat, direkt `lua` als Konfigurations- und Plugin-Sprache übernommen. Es kann also leicht auftreten, und die Community ist sehr aktiv. Ich sehe, dass das Plugin-System von `neovim` jetzt auch von einem System namens `lazy.vim` vereinheitlicht wurde. Das Design des Plugin- und Konfigurationssystems von `nvim` scheint organisiert und geplant speziell gegen die Schmerzpunkte von `vim` mutige Innovationen vorgenommen zu haben. In `vim` & `emacs` gab es wahrscheinlich unzählige ähnliche Versuche, die alle scheiterten, weil die Community zu fragmentiert war.
 
-        Also habe ich lazyVim direkt ausprobiert. Wow, jetzt habe ich das Gefühl, direkt einen VSCode zu besitzen, und dieser VSCode kann im Terminal laufen – wissen Sie, wie geil das ist?
+        Also habe ich direkt `lazyVim` ausprobiert. Wow, jetzt habe ich das Gefühl, direkt eine `vscode` zu besitzen, und diese `vscode` kann im Terminal laufen – weißt du, wie geil das ist?
 
-        Jetzt habe ich einen mächtigen alten Herrscher auf neuer Infrastruktur, und seine Konfiguration ist extrem einfach, Flexibilität und Bequemlichkeit sind genau richtig eingeschränkt, meine alten Schmerzpunkte sind im Wesentlichen alle gelöst.
+        Jetzt habe ich einen mächtigen alten Herrscher auf einer brandneuen Infrastruktur, und seine Konfiguration ist extrem einfach, Flexibilität und Bequemlichkeit sind genau richtig konvergiert, meine alten Schmerzpunkte sind im Wesentlichen alle gelöst.
 
-        Ich habe kaum Zeit gebraucht, um viele Workflows darauf umzustellen. Ich verwende jetzt tmux mit 5 Windows, in jedem Window öffne ich nvim in einem Ordner, in nvim links der Verzeichnisbaum, in der Mitte der Code, rechts opencode und Terminal.
+        Ich habe kaum Zeit gebraucht, um viele Workflows darauf umzustellen. Ich verwende jetzt `tmux`, öffne 5 Windows, und in jedem Window öffne ich `nvim` in einem Ordner. In `nvim` ist links der Verzeichnisbaum, in der Mitte der Code, rechts `opencode` und das Terminal.
 
-    2.  Eine Version von Legion aktualisiert. Ich habe den Textumfang des Legionmind-Skills stark reduziert (von 4k Zeilen). Derzeit habe ich das Gefühl, dass ich mich um weniger kümmern muss, aber ich weiß nicht, ob es daran liegt, dass ich in letzter Zeit klügere Modelle verwende oder diese Version von Legionmind wirklich klüger geworden ist.
+    2.  Eine neue Version von `legion` veröffentlicht. Ich habe den Textumfang des `legionmind`-Skills erheblich reduziert (von 4k Zeilen). Derzeit habe ich das Gefühl, dass ich mich um weniger kümmern muss, aber ich weiß nicht, ob es daran liegt, dass ich in letzter Zeit klügere Modelle verwendet habe oder ob diese Version von `legionmind` wirklich klüger geworden ist.
 
-    3.  Ein openclaw eingerichtet. Minimax 2.1 ist immer noch etwas dumm, aber als persönlicher Assistent finde ich openclaw ziemlich gut, denn es ist im Grunde ein ChatGPT mit Gedächtnis + Händen und Füßen (kann meinen Computer bedienen).
+    3.  Ein `openclaw` aufgesetzt. `minimax 2.1` ist immer noch etwas dumm, aber als persönlicher Assistent finde ich `openclaw` ziemlich gut, denn es ist im Grunde ein `chatgpt` mit Gedächtnis + Händen und Füßen (kann meinen Computer bedienen).
 
-    4.  Yuan um HTTP-Proxy-Funktionalität erweitert, Metriken hinzugefügt usw.
+    4.  `Yuan` um HTTP-Proxy-Funktionalität erweitert, Metriken hinzugefügt usw.
 
 2.  Gedanken
 
-    Manchmal habe ich das Gefühl, dass das Schreiben mit KI ein bisschen wie das Debuggen von Code ist, dessen Prinzipien man nicht ganz versteht – durch ständiges Testen seines Verhaltens oder Ausgeben von Logs, um beim Debuggen zu helfen, hier ein bisschen ändern, dort ein bisschen hinzufügen, bis man schließlich ein zufriedenstellendes Ergebnis erhält. Lassen Sie uns über den Ursprung dieses Gefühls nachdenken:
+    Manchmal habe ich das Gefühl, dass das Schreiben von Dingen mit KI ein bisschen wie das Debuggen von Code ist, dessen Prinzipien man nicht ganz versteht – durch ständiges Testen seines Verhaltens oder das Ausgeben von Logs, um beim Debuggen zu helfen, hier ein bisschen ändern, dort ein bisschen hinzufügen, bis man schließlich ein zufriedenstellendes Ergebnis erhält. Lassen Sie uns über den Ursprung dieses Gefühls nachdenken:
 
-    Beim Schreiben von Code mit KI gibt der Mensch im Grunde einen Prompt ein, der einige spezifische Anweisungen enthält, in der Hoffnung, dass die KI die impliziten Anweisungen und Informationen dahinter versteht und die Arbeit korrekt erledigt.
+    Bei der Verwendung von KI zum Schreiben von Code ist der Prozess im Wesentlichen, dass ein Mensch einen Prompt eingibt, der einige spezifische Anweisungen enthält, und dann hofft, dass die KI die impliziten Anweisungen und Informationen hinter diesen Anweisungen versteht und die Arbeit korrekt erledigt.
 
-    Die an die KI zu übermittelnden Anweisungen können geschichtet werden: Die oberste Ebene ist die Anweisung für die aktuelle Aufgabe. Darunter liegen einige getroffene technische Entscheidungen für das Softwareprojekt, Best Practices, die nach Abwägung von Vor- und Nachteilen für einen lokalen Teil des Projekts geeignet sind. Die nächste Ebene sind Hintergrundinformationen zur Problemdomäne, die das Projekt lösen soll. Die darunter liegende Ebene ist das professionelle Hintergrundwissen des Software-Ingenieurs, der die KI verwendet – seine persönlichen Vorlieben, technischen Präferenzen, Stilpräferenzen, historischen Erfahrungen, Denkweisen. Die unterste Ebene ist das Weltwissen.
+    Die Anweisungen, die man der KI vermitteln möchte, können geschichtet werden: Die oberste Ebene sind die Anweisungen für die aktuelle Aufgabe. Darunter stehen einige technische Entscheidungen, die für dieses Softwareprojekt getroffen wurden, Best Practices, die nach Abwägung von Vor- und Nachteilen für einen lokalen Teil des Projekts geeignet sind. Die nächste Ebene sind Hintergrundinformationen zur Problemdomäne, die das Projekt lösen soll. Die nächste Ebene ist das eigene Fachwissen des Softwareingenieurs, der die KI verwendet – seine persönlichen Vorlieben, technischen Präferenzen, Stilpräferenzen, historischen Erfahrungen, Denkweisen. Die unterste Ebene ist das Weltwissen.
 
-    In einem Dialog mit der KI kann nur die Anweisung für die aktuelle Aufgabe klar und deutlich gemacht werden, in der Hoffnung, dass die KI über ausreichend Weltwissen und Hintergrundinformationen zur Problemlösung verfügt.
+    In einem Dialog mit der KI kann nur die Anweisung für die aktuelle Aufgabe klar und deutlich vermittelt werden, und dann hofft man, dass die KI über ausreichend Weltwissen und Hintergrundinformationen zur Problemlösung verfügt.
 
-    Daher kann man schlussfolgern: Wenn der Kontext einer Aufgabe klein genug ist, die gegebenen Anweisungen absolut klar sind und es kein historisches Ballast gibt, sollte die KI die Aufgabe leicht in hoher Qualität erledigen können. Wenn es viele implizite Hintergrundinformationen gibt, neigt sie dazu, seltsame Dinge zu produzieren.
+    Daraus lässt sich schließen: Wenn der Kontext einer Aufgabe klein genug ist, die gegebenen Anweisungen absolut klar sind und es keine historischen Altlasten gibt, sollte die KI die Aufgabe leicht in hoher Qualität erledigen können. Wenn es viele implizite Hintergrundinformationen gibt, kommt es leicht zu seltsamen Ergebnissen.
 
-    Was Legionmind tun muss, ist, der KI zu helfen, selbst Hintergrundwissen und Best Practices bezüglich dieses spezifischen Projekts und der Problemdomäne anzusammeln. Das erfordert, dass die KI entweder über gute logische Denkfähigkeiten und Gedächtnis (Kontextkapazität) verfügt, oder dass die KI selbst über umfangreiches Weltwissen verfügt. Was darüber hinausgeht, kann nicht gerettet werden.
+    Was `Legionmind` tun muss, ist, der KI zu ermöglichen, selbst Hintergrundwissen und Best Practices bezüglich dieses Projekts und der Problemdomäne zu sammeln. Das erfordert, dass die KI entweder über gute logische Denkfähigkeiten und ein gutes Gedächtnis (Kontextkapazität) verfügt oder dass die KI selbst über umfangreiches Weltwissen verfügt. Was darüber hinausgeht, kann nicht gerettet werden.
 
     —
 
-    Und dann denke ich, dass nvim wirklich eine späte Liebe ist.
+    Und dann finde ich, dass `nvim` wirklich eine späte Liebe ist.
 
 3.  Was plane ich für morgen?
 
-    Morgen besuche ich SC zu Hause, um sein neues Zuhause zu besichtigen, dann spielen wir zusammen Brettspiele und schauen nebenbei SYs Skiausrüstung an.
+    Morgen gehe ich zu `sc` nach Hause, um sein neues Zuhause zu besichtigen, dann spielen wir zusammen Brettspiele und schauen nebenbei Schneeausrüstung für `sy` an.
 
 ### 2026-02-01
 
-War bei Cold Mountain, um SY Skischuhe anzuschauen. Gemessene Fußlänge (245) und einen bequemen Schuh gefunden. Leider war die schöne Farbe bei Cold Mountain ausverkauft, also muss SY online kaufen.
+Bin zu "Cold Mountain" gegangen, um `sy` Skischuhe anzuschauen. Fußlänge gemessen (245) und einen bequemen Schuh anprobiert. Leider war die schöne Farbe bei Cold Mountain ausverkauft, also muss `sy` online kaufen.
 
-Mittags bei SC zu Hause gegessen, was er gekocht hat. Er hat ein Sous-Vide-Gerät für Steaks, das wirklich zartes Fleisch produziert. SC bereitete eine Room-Tour-Rätseljagd für uns vor. Es gab zwei Hinweise. Der erste Hinweise erforderte, an 4 Stellen 4 englische Wörter/Sätze zu finden und mit einem Indexcode ein Wort zu bilden: "Three". Der zweite Hinweis kam aus einem Umweltpuzzle, am Ende erhielten wir die Zahlen 31/13 (ich erinnere mich nicht genau) und konnten aus einer Schublade mit vielen nummerierten kleinen Kästchen eine Schokolade holen.
+Mittags bei `sc` zu Hause gegessen, was er gekocht hat. Er hat ein Sous-Vide-Gerät für Steaks, das wirklich zartes Fleisch produziert. `sc` hat eine Room-Tour-Rätseljagd für uns vorbereitet. Es gab zwei Hinweise: Der erste Hinweise führte zu 4 Orten, um 4 englische Wörter/Sätze zu finden, die mit einem Indexcode zu einem Wort kombiniert wurden: "Three". Der zweite Hinweis kam aus einem Umweltpuzzle, am Ende erhielt man die Zahlen 31 / 13 (ich erinnere mich nicht genau) und konnte aus einer Schublade mit vielen nummerierten kleinen Kästchen eine Schokolade holen.
 
 Leider hatte er keine Schokolade mehr, wir bekamen einen süßen Aufkleber.
 
 —
 
-Der Nachmittag mit Brettspielen war sehr interessant. Das Hauptspiel war natürlich "John Company", und schließlich gewann SC, der die Mittelschicht spielte, einen beispiellosen Sieg – das erste Mal in unserer Spielgeschichte, dass die Mittelschicht gewann. Pgw, der die Bourgeoisie spielte, war sauer, weil der als Regierung spielende Xiaohaozhi bei zwei für Pgw entscheidenden Politikreform-Abstimmungen nicht für ihn stimmte. Ich spielte die Arbeiterklasse und hatte natürlich bei den meisten Themen keine gemeinsamen Interessen mit der Bourgeoisie, konnte also nicht helfen. Tatsächlich lagen am Spielende außer Pgw unsere drei Punkte sehr eng beieinander. Eine Welt, in der nur der Kapitalist verletzt wurde.
+Der Nachmittag mit Brettspielen war sehr interessant, das Hauptspiel war natürlich "Die Landesherren". Am Ende errang `sc`, der die Mittelschicht spielte, einen beispiellosen Sieg – das erste Mal in unserer Spielgeschichte, dass die Mittelschicht gewann. `pgw`, der die Bourgeoisie spielte, war sauer, weil `小耗子`, der die Regierung spielte, bei zwei für `pgw` entscheidenden Abstimmungen über politische Reformen nicht geholfen hatte. Ich spielte die Arbeiterklasse und hatte natürlich bei den meisten Themen keine gemeinsamen Interessen mit der Bourgeoisie, konnte also nicht helfen. Tatsächlich lagen am Ende des Spiels außer `pgw` unsere drei Punkte sehr eng beieinander. Eine Welt, in der nur der Kapitalist verletzt wurde.
 
-Dieses Spiel ist wirklich großartig und wurde zu meinem Lieblingsbrettspiel. Es hat beträchtliche Spieltiefe, die Spielweise jedes der vier Spieler ist sehr unterschiedlich, und jedes Mal, wenn man eine andere Rolle spielt, ist es eine völlig andere Erfahrung. Diesmal zum Beispiel, als ich die Arbeiterklasse spielte, gab es zum ersten Mal einen Überschuss an Arbeitslosen (weil Regierung und Bourgeoisie keine neuen Unternehmen gründen wollten), der die Bedingungen für einen Arbeiterprotest/Aufstand erfüllte. Die Arbeiterklasse ging auf die Straße und drohte, das Land umzukrempeln. Die konkrete Wirkung war, Einflusswürfel zu erhalten und den anderen Klassen insgesamt (Anzahl Arbeitslose - 2 + Anzahl Gewerkschaften) Punkte abzuziehen.
+Dieses Spiel ist wirklich großartig und wurde zu meinem Lieblingsbrettspiel. Es hat beträchtliche Spieltiefe, die Spielweise jedes der vier Spieler ist sehr unterschiedlich, und jedes Mal, wenn man eine andere Rolle spielt, ist es ein völlig anderes Spielerlebnis. Diesmal zum Beispiel, als ich die Arbeiterklasse spielte, gab es zum ersten Mal einen Überschuss an Arbeitslosen (weil Regierung und Bourgeoisie keine neuen Unternehmen gründen wollten), der die Bedingungen für einen Arbeiterprotest erreichte. Die Arbeiterklasse ging auf die Straße und drohte, das Land umzukrempeln. Die konkrete Wirkung war, Einflusswürfel zu erhalten und den anderen Klassen insgesamt (Anzahl der Arbeitslosen - 2 + Anzahl der Gewerkschaften) Punkte abzuziehen.
 
-Wie erwartet, wollten Arbeiterklasse, Regierung und Bourgeoisie, die früher darum baten und bettelten, neue Unternehmen zu gründen, jetzt plötzlich alle neue Unternehmen gründen, was das Spiel sofort belebte. Am Ende erreichte ich mit 101 Punkten den zweiten Platz in diesem Spiel.
+Wie erwartet, wollten Regierung und Bourgeoisie, die früher von der Arbeiterklasse gebeten und angefleht wurden, neue Unternehmen zu gründen, jetzt plötzlich alle neue Unternehmen gründen, was das Spiel sofort belebt hat. Am Ende belegte ich mit 101 Punkten den zweiten Platz in diesem Spiel.
 
 ### 2026-02-02
 
-Heute nach dem Training den Kopf freibekommen, nichts gemacht.
+Heute nach dem Training habe ich mich entspannt und nichts gemacht.
 
 1.  Was plane ich für morgen?
-    1.  Alles HTTP-Proxy-Zeug durchtesten, den Cluster in Ordnung bringen.
+    1.  Alles HTTP-Proxy-Zeug zum Laufen bringen, den Cluster in Ordnung bringen.
     2.  `org-mode.nvim` in Ordnung bringen.
-    3.  Den Transferpunkt untersuchen.
+    3.  Den "Transit Point" untersuchen.
 
 ### 2026-02-05
 
-Zeit, meinen Tag festzuhalten! Heute mit einem anderen Format.
+Lasst mich meinen Tag festhalten! Heute mit einem anderen Format.
 
-1.  ChatGPT Pro
+1.  chatgpt pro
 
-    Am Freitag habe ich einen Entschluss gefasst und auf dem allmächtigen Xianyu einen ChatGPT Pro-Account gekauft, für 1369 CNY. Ich sah, das ist günstiger als 200 USD, und kaufte schnell. Es dauerte bis Dienstag, bis es fertig war. Er gab mir ein Outlook-Postfach und einen daran gebundenen ChatGPT-Account.
+    Am Freitag habe ich mich entschieden, auf dem allmächtigen "Xianyu" (闲鱼) ein `chatgpt pro` zu kaufen, für 1369 CNY. Ich sah, dass das günstiger als 200 USD war, und kaufte schnell. Es dauerte bis Dienstag, bis es fertig war. Er gab mir ein Outlook-Postfach und ein `chatgpt`-Konto, das an diese E-Mail gebunden war.
 
-    Als ich mich im Outlook-Postfach anmeldete: Wow, da war eine ChatGPT-Rechnung, bezahlt in philippinischen Pesos.
-
-    |                          |                 |
-    | ------------------------ | --------------- |
-    | Plan                     | Betrag          |
-    | ChatGPT Pro Subscription | ₱8919.64        |
-    |                          | Steuer: ₱1070.36   |
-    |                          | Gesamt: ₱9990.00 |
-    | Zahlungsmethode          | Mastercard-xxxx |
-
-    Neugierig rechnete ich den Preis in CNY um: nur etwa 1174.54 CNY. Das heißt, er hat fast 200 CNY Gewinn gemacht!
-
-    Dann recherchierte ich: Verdammt. Das Geld hat er sich verdient. Die Philippinen sind tatsächlich der weltweit günstigste Ort, an dem man den ChatGPT Pro Plan kaufen kann. Krass.
-
-    Ich habe eine zuverlässige Kontaktperson in Thailand. Ich wollte seinen Erfolg kopieren, aber haha, Thailand ist teurer.
+    Als ich mich im Outlook-Postfach anmeldete, sah ich eine `chatgpt`-Rechnung, bezahlt
