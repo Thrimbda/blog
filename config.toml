@@ -14,6 +14,7 @@ taxonomies = [{ name = "tags", feed = true }]
 nav_blog = "博客"
 nav_diary = "日志"
 nav_gcores = "机组"
+nav_const = "const"
 nav_about = "关于"
 main_navigation = "主导航"
 footer_navigation = "页脚导航"
@@ -51,6 +52,7 @@ taxonomies = [{ name = "tags", feed = true }]
 nav_blog = "blog"
 nav_diary = "diary"
 nav_gcores = "crew"
+nav_const = "const"
 nav_about = "about"
 main_navigation = "Main navigation"
 footer_navigation = "Footer navigation"
@@ -88,6 +90,7 @@ taxonomies = [{ name = "tags", feed = true }]
 nav_blog = "ブログ"
 nav_diary = "日記"
 nav_gcores = "クルー"
+nav_const = "const"
 nav_about = "自己紹介"
 main_navigation = "メインナビゲーション"
 footer_navigation = "フッターナビゲーション"
@@ -125,6 +128,7 @@ taxonomies = [{ name = "tags", feed = true }]
 nav_blog = "blog"
 nav_diary = "diario"
 nav_gcores = "crew"
+nav_const = "const"
 nav_about = "acerca de"
 main_navigation = "Navegacion principal"
 footer_navigation = "Navegacion del pie"
@@ -162,6 +166,7 @@ taxonomies = [{ name = "tags", feed = true }]
 nav_blog = "blog"
 nav_diary = "tagebuch"
 nav_gcores = "crew"
+nav_const = "const"
 nav_about = "uber mich"
 main_navigation = "Hauptnavigation"
 footer_navigation = "Fussnavigation"
@@ -220,6 +225,7 @@ header_nav = [
   { path = "@/blog/_index.md", label_key = "nav_blog" },
   { path = "@/diary/_index.md", label_key = "nav_diary" },
   { path = "@/gcores-talks.md", label_key = "nav_gcores" },
+  { path = "@/const.md", label_key = "nav_const" },
   { path = "@/about.md", label_key = "nav_about" },
 ]
 

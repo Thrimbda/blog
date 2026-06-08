@@ -478,6 +478,137 @@
       "metadataTranslationHash": "c29af0204fce526e1d77b0c96f760c1e78cd71653069f9c917d0237ed77abbd8"
     },
     {
+      "path": "content/const.md",
+      "links": [],
+      "metadata": {
+        "title": "const",
+        "description": "介绍需要通过 Cloudflare Access 保护的内容。",
+        "short_summary": "文档介绍了需要通过 Cloudflare Access 保护的内容。这有助于确保内容的安全性，防止未授权访问。",
+        "audience": "需要了解内容安全保护的技术人员或管理员。",
+        "key_points": [
+          "内容需要保护",
+          "使用 Cloudflare Access",
+          "确保授权访问"
+        ],
+        "summary": "本文档简要说明了内容保护的需求，指出某些内容需要通过 Cloudflare Access 进行安全保护，以确保只有授权用户才能访问。",
+        "slug": "const",
+        "tags": [
+          "Cloudflare Access",
+          "内容保护",
+          "安全",
+          "授权",
+          "文档"
+        ],
+        "inferred_lang": "zh-Hans",
+        "tokens_used": {
+          "prompt": 522,
+          "completion": 172,
+          "total": 694
+        }
+      },
+      "hash": "149ea8cce64243be336232fd737f3e47f81ba3b549dc2cb12965dbd649f043c2",
+      "metadataTranslations": {
+        "en-US": {
+          "title": "const",
+          "description": "Introduces content that needs to be protected via Cloudflare Access.",
+          "summary": "This document briefly explains the need for content protection, indicating that certain content requires secure protection through Cloudflare Access to ensure only authorized users can access it.",
+          "short_summary": "The document introduces content that needs to be protected via Cloudflare Access. This helps ensure content security and prevent unauthorized access.",
+          "key_points": [
+            "Content requires protection",
+            "Use Cloudflare Access",
+            "Ensure authorized access"
+          ],
+          "audience": "Technical personnel or administrators who need to understand content security protection.",
+          "tags": [
+            "Cloudflare Access",
+            "Content Protection",
+            "Security",
+            "Authorization",
+            "Documentation"
+          ]
+        },
+        "es-ES": {
+          "title": "const",
+          "description": "Introduce el contenido que necesita ser protegido a través de Cloudflare Access.",
+          "summary": "Este documento explica brevemente la necesidad de proteger el contenido, señalando que ciertos contenidos requieren protección de seguridad mediante Cloudflare Access para garantizar que solo los usuarios autorizados puedan acceder.",
+          "short_summary": "El documento presenta el contenido que necesita ser protegido mediante Cloudflare Access. Esto ayuda a garantizar la seguridad del contenido y prevenir el acceso no autorizado.",
+          "key_points": [
+            "El contenido necesita protección",
+            "Uso de Cloudflare Access",
+            "Garantizar el acceso autorizado"
+          ],
+          "audience": "Técnicos o administradores que necesitan comprender la protección de seguridad del contenido.",
+          "tags": [
+            "Cloudflare Access",
+            "Protección de contenido",
+            "Seguridad",
+            "Autorización",
+            "Documentación"
+          ]
+        },
+        "de-DE": {
+          "title": "const",
+          "description": "Beschreibt Inhalte, die über Cloudflare Access geschützt werden müssen.",
+          "summary": "Dieses Dokument erläutert kurz den Bedarf an Inhaltschutz und weist darauf hin, dass bestimmte Inhalte über Cloudflare Access gesichert werden müssen, um sicherzustellen, dass nur autorisierte Benutzer darauf zugreifen können.",
+          "short_summary": "Das Dokument stellt Inhalte vor, die über Cloudflare Access geschützt werden müssen. Dies trägt zur Sicherheit der Inhalte bei und verhindert unbefugten Zugriff.",
+          "key_points": [
+            "Inhalte müssen geschützt werden",
+            "Verwendung von Cloudflare Access",
+            "Autorisierten Zugriff sicherstellen"
+          ],
+          "audience": "Technisches Personal oder Administratoren, die sich über den Schutz von Inhalten informieren müssen.",
+          "tags": [
+            "Cloudflare Access",
+            "Inhaltschutz",
+            "Sicherheit",
+            "Autorisierung",
+            "Dokumentation"
+          ]
+        },
+        "ja-JP": {
+          "title": "const",
+          "description": "Cloudflare Access で保護する必要があるコンテンツについて紹介します。",
+          "summary": "このドキュメントは、コンテンツ保護の必要性を簡潔に説明し、特定のコンテンツが Cloudflare Access によるセキュリティ保護を必要とし、許可されたユーザーのみがアクセスできるようにすることを指摘しています。",
+          "short_summary": "このドキュメントは、Cloudflare Access で保護する必要があるコンテンツについて紹介します。これはコンテンツのセキュリティを確保し、不正アクセスを防ぐのに役立ちます。",
+          "key_points": [
+            "コンテンツは保護が必要",
+            "Cloudflare Access を使用",
+            "許可されたアクセスを確保"
+          ],
+          "audience": "コンテンツセキュリティ保護について理解する必要がある技術者または管理者。",
+          "tags": [
+            "Cloudflare Access",
+            "コンテンツ保護",
+            "セキュリティ",
+            "認可",
+            "ドキュメント"
+          ]
+        },
+        "zh-Hans": {
+          "title": "const",
+          "description": "介绍需要通过 Cloudflare Access 保护的内容。",
+          "summary": "本文档简要说明了内容保护的需求，指出某些内容需要通过 Cloudflare Access 进行安全保护，以确保只有授权用户才能访问。",
+          "short_summary": "文档介绍了需要通过 Cloudflare Access 保护的内容。这有助于确保内容的安全性，防止未授权访问。",
+          "key_points": [
+            "内容需要保护",
+            "使用 Cloudflare Access",
+            "确保授权访问"
+          ],
+          "audience": "需要了解内容安全保护的技术人员或管理员。",
+          "tags": [
+            "Cloudflare Access",
+            "内容保护",
+            "安全",
+            "授权",
+            "文档"
+          ]
+        }
+      },
+      "metadataTranslationHash": "b81679dae35b954e6e82da8a05ea8b704cb0aadc078cfb26beda4aaf34729ed2",
+      "category": "Security",
+      "nativeMarkdownHash": "149ea8cce64243be336232fd737f3e47f81ba3b549dc2cb12965dbd649f043c2"
+    },
+    {
       "hash": "a10ec12196d196dcb6c83841403b202aa6002d35dd1144f1764a9ef0ef9afe37",
       "path": "content/embla-test.md",
       "links": [
@@ -11519,6 +11650,13 @@
       "es-ES": "Agente de IA",
       "ja-JP": "AIエージェント",
       "de-DE": "KI-Agent"
+    },
+    "Security": {
+      "zh-Hans": "安全",
+      "en-US": "Security",
+      "ja-JP": "セキュリティ",
+      "es-ES": "Seguridad",
+      "de-DE": "Sicherheit"
     }
   },
   "navLinkTranslations": {

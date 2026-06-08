@@ -1,4 +1,15 @@
 public/
+.terraform/
+**/.terraform/
+*.tfstate
+*.tfstate.*
+tfplan
+*.tfplan
+*.tfplan.*
+*.plan
+terraform.tfvars
+*.auto.tfvars
+!*.tfvars.example
 content/**/*.en-US.md
 content/**/*.ja-JP.md
 content/**/*.es-ES.md
