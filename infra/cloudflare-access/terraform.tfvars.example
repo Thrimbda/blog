@@ -1,0 +1,25 @@
+# Copy to terraform.tfvars or provide these values through your private
+# environment-specific mechanism. terraform.tfvars is intentionally ignored.
+# Do not commit real Cloudflare tokens, account IDs, zone IDs, team domains,
+# emails, IdP/group IDs, or service token IDs.
+
+account_id    = "REPLACE_WITH_CLOUDFLARE_ACCOUNT_ID"
+zone_id       = "REPLACE_WITH_CLOUDFLARE_ZONE_ID"
+site_hostname = "example.com"
+
+# The default is "const". This configuration protects all of:
+# - example.com/const
+# - example.com/const/
+# - example.com/const/*
+const_path = "const"
+
+# Provider v5 Access rule object syntax. Replace with private identity rules
+# outside the repository, for example an Access group, IdP group, service token,
+# or email rule using non-public values.
+access_policy_include = [
+  {
+    group = {
+      id = "REPLACE_WITH_ACCESS_GROUP_ID"
+    }
+  }
+]
