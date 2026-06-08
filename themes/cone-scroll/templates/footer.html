@@ -1,4 +1,5 @@
 {% set current_lang = lang | default(value=config.default_language) %}
+{% set link_lang = config.default_language %}
 {% if config.extra.footer_content_license %}
   <p>
     Except where otherwise noted, content on this site is licensed under
@@ -11,7 +12,7 @@
 {% endif %}
 <p>{{ trans(key="built_with_prefix", lang=current_lang) }} <a target="_blank" rel="noopener noreferrer" href="https://www.getzola.org">Zola</a>{{ trans(key="built_with_suffix", lang=current_lang) }}</p>
 <nav aria-label="{{ trans(key='footer_navigation', lang=current_lang) }}">
-  <a href="{{ get_url(path='@/blog/_index.md', lang=current_lang) }}">{{ trans(key="footer_posts", lang=current_lang) }}</a>
-  <a href="{{ get_url(path='@/about.md', lang=current_lang) }}">{{ trans(key="footer_about", lang=current_lang) }}</a>
-  <a href="{{ get_url(path='tags', trailing_slash=true, lang=current_lang) }}">{{ trans(key="footer_tags", lang=current_lang) }}</a>
+  <a href="{{ get_url(path='@/blog/_index.md', lang=link_lang) }}">{{ trans(key="footer_posts", lang=current_lang) }}</a>
+  <a href="{{ get_url(path='@/about.md', lang=link_lang) }}">{{ trans(key="footer_about", lang=current_lang) }}</a>
+  <a href="{{ get_url(path='tags', trailing_slash=true, lang=link_lang) }}">{{ trans(key="footer_tags", lang=current_lang) }}</a>
 </nav>

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set current_lang = lang | default(value=config.default_language) %}
+{% set link_lang = config.default_language %}
+{% if paginator %}
+  {% set entries = paginator.pages %}
+{% else %}
+  {% set entries = section.pages %}
+{% endif %}
+{% set daily_index = load_data(path="data/daily-index.json") %}
+{% set jump_entries = [] %}
+{% if section.extra.daily_index_key == "diary-2020" %}
+  {% set jump_entries = daily_index["diary-2020"] %}
+{% elif section.extra.daily_index_key == "diary-2026" %}
+  {% set jump_entries = daily_index["diary-2026"] %}
+{% elif section.extra.daily_index_key == "gcores" %}
+  {% set jump_entries = daily_index.gcores %}
+{% endif %}
+{% set first_entry_url = section.permalink %}
+{% for entry in jump_entries %}
+  {% if loop.first %}
+    {% set_global first_entry_url = entry.path %}
+  {% endif %}
+{% endfor %}
+{% if section.extra.daily_source == "diary" %}
+  {% set parent_href = get_url(path="@/diary/_index.md", lang=link_lang) %}
+  {% set parent_label = "日志归档" %}
+{% else %}
+  {% set parent_href = config.base_url %}
+  {% set parent_label = "首页" %}
+{% endif %}
+
+<section class="daily-shell" data-daily-archive>
+  <header class="daily-head">
+    <p class="post-meta daily-backlink"><a href="{{ parent_href | safe }}">&larr; {{ parent_label }}</a></p>
+    <h1>{{ section.title }}</h1>
+    <div class="daily-head-copy">
+      {{ section.content | safe }}
+    </div>
+    <p class="daily-count">
+      <span>{{ jump_entries | length }} 则</span>
+      {% if paginator %}
+        <span>第 {{ paginator.current_index }} / {{ paginator.number_pagers }} 页</span>
+      {% endif %}
+      {% if section.extra.source_url %}
+        <a href="{{ section.extra.source_url }}">原始来源</a>
+      {% endif %}
+    </p>
+  </header>
+
+  <div class="daily-layout">
+    <aside class="daily-tools" aria-label="日志工具">
+      <details class="daily-jump" open>
+        <summary>查日期</summary>
+        <div class="daily-jump-body">
+          <label class="daily-jump-label" for="daily-jump-select">选择日期</label>
+          <select id="daily-jump-select" class="daily-jump-select" data-daily-jump-select>
+            {% for entry in jump_entries %}
+              <option value="{{ entry.path | safe }}">{{ entry.title }}{% if entry.topic %} · {{ entry.topic }}{% endif %}</option>
+            {% endfor %}
+          </select>
+          <a class="daily-jump-open" data-daily-jump-open href="{{ first_entry_url | safe }}">打开</a>
+        </div>
+      </details>
+
+      <div class="daily-tool-note">
+        <p>每日入口已经拆成独立页面。这里保留连续阅读，向下滚动会继续加载下一页。</p>
+      </div>
+    </aside>
+
+    <section class="daily-feed" aria-label="{{ section.title }}">
+      <div class="daily-entry-list" data-infinite-list>
+        {% for entry in entries %}
+          <article class="daily-entry-card" id="{{ entry.slug }}" data-daily-entry-card>
+            <header class="daily-entry-card-head">
+              <h2><a href="{{ entry.permalink | safe }}">{{ entry.title }}</a></h2>
+              <p class="daily-entry-meta">
+                {% if entry.date %}<time datetime="{{ entry.date }}">{{ entry.date }}</time>{% endif %}
+                {% if entry.extra.daily_source_label %}<span>{{ entry.extra.daily_source_label }}</span>{% endif %}
+                {% if entry.extra.topic %}<span>{{ entry.extra.topic }}</span>{% endif %}
+              </p>
+            </header>
+            <div class="daily-entry-content">
+              {{ entry.content | safe }}
+            </div>
+            <p class="daily-entry-actions"><a href="{{ entry.permalink | safe }}">打开这一天</a></p>
+          </article>
+        {% endfor %}
+      </div>
+
+      {% if paginator %}
+        <nav class="post-nav daily-pagination" aria-label="{{ trans(key='pagination', lang=current_lang) }}" data-infinite-pagination>
+          {% if paginator.previous %}<a href="{{ paginator.previous }}">{{ trans(key="previous", lang=current_lang) }}</a>{% endif %}
+          <span>{{ paginator.current_index }} / {{ paginator.number_pagers }}</span>
+          {% if paginator.next %}<a class="post-nav-next daily-load-next" href="{{ paginator.next }}" data-infinite-next>继续加载</a>{% endif %}
+        </nav>
+        <p class="daily-load-status" aria-live="polite" data-infinite-status></p>
+        <div class="daily-load-sentinel" data-infinite-sentinel aria-hidden="true"></div>
+      {% endif %}
+    </section>
+  </div>
+</section>
+{% endblock content %}

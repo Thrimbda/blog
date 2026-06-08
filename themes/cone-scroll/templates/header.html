@@ -1,7 +1,8 @@
 {% set current_lang = lang | default(value=config.default_language) %}
+{% set link_lang = config.default_language %}
 {% if config.extra.header_nav %}
 <div class="header-block">
-  <a href="{{ get_url(path='@/_index.md', lang=current_lang) }}" class="logo" aria-label="{{ config.title }}">
+  <a href="{{ get_url(path='@/_index.md', lang=link_lang) }}" class="logo" aria-label="{{ config.title }}">
     <pre>   ___           _
   / _ \__  _____/ |
  | | | \ \/ / __| |
@@ -10,12 +11,12 @@
   </a>
   <nav aria-label="{{ trans(key='main_navigation', lang=current_lang) }}">
     {% for nav_item in config.extra.header_nav %}
-      <a href="{{ get_url(path=nav_item.path, lang=current_lang) }}">
+      <a href="{{ get_url(path=nav_item.path, lang=link_lang) }}">
         {{ trans(key=nav_item.label_key, lang=current_lang) }}
       </a>
     {% endfor %}
     {% if config.generate_feeds %}
-      <a href="{{ get_url(path='atom.xml', trailing_slash=false, lang=current_lang) }}">rss</a>
+      <a href="{{ get_url(path='atom.xml', trailing_slash=false, lang=link_lang) }}">rss</a>
     {% endif %}
     <span class="nav-controls">
       <button id="theme-toggle" class="theme-toggle" type="button" aria-label="{{ trans(key='theme_to_dark', lang=current_lang) }}" data-theme-prefix="{{ trans(key='theme_label', lang=current_lang) }}" data-light-state="{{ trans(key='theme_light', lang=current_lang) }}" data-dark-state="{{ trans(key='theme_dark', lang=current_lang) }}" data-light-label="{{ trans(key='theme_to_light', lang=current_lang) }}" data-dark-label="{{ trans(key='theme_to_dark', lang=current_lang) }}">{{ trans(key='theme_label', lang=current_lang) }}</button>

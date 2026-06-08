@@ -1,11 +1,12 @@
 {% extends "base.html" %} {% import "macros/page_outline.html" as page_outline %} {% block content %}
 {% set show_outline = page.extra.toc | default(value=true) %}
 {% set current_lang = lang | default(value=config.default_language) %}
+{% set link_lang = config.default_language %}
 {% if page.relative_path | split(pat="/") | first == "diary" %}
-  {% set back_href = get_url(path='@/diary/_index.md', lang=current_lang) %}
+  {% set back_href = get_url(path='@/diary/_index.md', lang=link_lang) %}
   {% set back_text = trans(key='back_to_diary', lang=current_lang) %}
 {% else %}
-  {% set back_href = get_url(path='@/blog/_index.md', lang=current_lang) %}
+  {% set back_href = get_url(path='@/blog/_index.md', lang=link_lang) %}
   {% set back_text = trans(key='back_to_blog', lang=current_lang) %}
 {% endif %}
 {% if current_lang == "zh-Hans" %}
@@ -39,7 +40,7 @@
 
 <p class="tags-data">
   {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags %}
-  <a href="{{ get_taxonomy_url(kind='tags', name=tag, lang=current_lang) }}">&#47;{{ tag }}&#47;</a>
+  <a href="{{ get_taxonomy_url(kind='tags', name=tag, lang=link_lang) }}">&#47;{{ tag }}&#47;</a>
   {% endfor %} {% endif %}
 </p>
 

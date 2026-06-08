@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set current_lang = lang | default(value=config.default_language) %}
+{% set link_lang = config.default_language %}
+{% if page.extra.target_path %}
+  {% set target_href = get_url(path=page.extra.target_path, lang=link_lang) %}
+{% else %}
+  {% set target_href = get_url(path="@/diary/_index.md", lang=link_lang) %}
+{% endif %}
+
+<article class="page-article daily-redirect">
+  <h1>{{ page.title }}</h1>
+  {{ page.content | safe }}
+  <p><a href="{{ target_href | safe }}">{{ page.extra.target_label | default(value="打开每日归档") }}</a></p>
+</article>
+{% endblock content %}

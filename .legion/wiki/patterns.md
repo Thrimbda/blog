@@ -26,3 +26,27 @@
 - Validate Terraform with `terraform fmt -check`, `terraform init -backend=false`, and `terraform validate`; do not run `terraform apply` in review tasks unless explicitly requested with environment details.
 
 **Source**: `.legion/tasks/const-cloudflare-access/docs/rfc.md`, `.legion/tasks/const-cloudflare-access/docs/review-change.md`
+
+## Static-First Infinite Archives
+
+Infinite loading should enhance a real paginator rather than replace it.
+
+Required pieces:
+
+- server-rendered list container
+- real next page URL
+- polite live status
+- failure path that leaves a usable link
+- throttling so image layout shifts do not trigger multiple automatic loads at one scroll position
+
+## Date Access On Mobile
+
+For long daily archives, mobile access to a specific date should use a native select plus a normal link. This keeps the interaction touch-friendly and avoids a giant outline.
+
+## Paginated Section Date Indexes
+
+When Zola pagination hides the full `section.pages` list from the template, generate a data file such as `data/daily-index.json` during migration and load it in the archive template.
+
+## Daily Feed Width
+
+Daily archive entries live inside CSS grid. Set `min-width: 0` on the grid item and markdown content wrappers so long code blocks scroll inside `pre` instead of widening the whole page.
