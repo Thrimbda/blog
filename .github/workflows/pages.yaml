@@ -43,7 +43,13 @@ jobs:
         run: node scripts/zola-i18n.ts build --output-dir ./final-output
 
       - name: Build Czon site (sub-path /czon)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "::error::OPENAI_API_KEY secret is not configured"
+            exit 1
+          fi
           npx czon@latest build --lang zh-Hans --lang en-US --lang ja-JP --lang es-ES --lang de-DE
           mkdir -p ./final-output/czon
           cp -r ./.czon/dist/* ./final-output/czon/
