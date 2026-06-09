@@ -1,37 +1,48 @@
-# Daily Log Split Implementation Tasks
+# Daily Log Split Design Tasks
 
 ## Quick Restore
 
 - **Current phase**: Closing
 - **Current task**: Complete
-- **Progress**: 14/14 checks complete
+- **Progress**: 14/14 planned checks complete
 
-## Contract
+## Phase 1: Contract And Context
 
-- [x] Restore approved RFC context
-- [x] Add PRODUCT/DESIGN context to this implementation worktree
-- [x] Expand task contract for implementation
+- [x] Load `legion-workflow` and route the new request through `brainstorm`
+- [x] Load `impeccable` setup and confirm missing `PRODUCT.md`
+- [x] Ask the user to confirm the inferred brand-register positioning
+- [x] Write `PRODUCT.md`
+- [x] Write `DESIGN.md` and `.impeccable/design.json`
+- [x] Materialize Legion task contract in `plan.md` and `tasks.md`
 
-## Engineer
+## Phase 2: Research And RFC
 
-- [x] Add repeatable split script
-- [x] Generate atomic diary and Gcores entries
-- [x] Replace aggregate routes with archive/compatibility surfaces
-- [x] Add daily archive template
-- [x] Add daily entry template
-- [x] Add infinite loading JavaScript
-- [x] Add mobile date access controls
-- [x] Add responsive/archive CSS
+- [x] Inspect long daily-log content files
+- [x] Inspect current Zola templates, CSS, and JavaScript relevant to archive pages
+- [x] Record source constraints and current UI behavior in `docs/research.md`
+- [x] Write `docs/rfc.md` with split, browsing, migration, rollback, and verification design
 
-## Verify
+## Phase 3: RFC Review
 
-- [x] Run `zola build`
-- [x] Verify routes and infinite loading with browser automation
-- [x] Verify iPhone-class, 13-inch, and 27-inch sizes with Computer Use
+- [x] Review the RFC for scope ambiguity, rollback gaps, and verification gaps
+- [x] Record PASS/FAIL decision in `docs/review-rfc.md`
 
-## Closing
+## Phase 4: Browser Validation
 
-- [x] Write `docs/test-report.md`
-- [x] Write `docs/review-change.md`
+- [x] Use Computer Use for iPhone 17-sized viewport inspection
+- [x] Use Computer Use for 13-inch laptop viewport inspection
+- [x] Use Computer Use for 27-inch desktop viewport inspection
+- [x] Record viewport evidence in `docs/test-report.md`
+
+## Phase 5: Closing
+
 - [x] Write `docs/report-walkthrough.md`
-- [x] Write `.legion/wiki` notes
+- [x] Write reusable notes to `.legion/wiki`
+
+## Follow-up Implementation Candidates
+
+- [ ] Implement daily diary split for one year first
+- [ ] Add static paginated daily archive template
+- [ ] Add progressive infinite-list enhancement over real pagination
+- [ ] Extend `scripts/get-gcores-talk.ts` to output atomic Gcores entry files with stable sequence or source ids
+- [ ] Add redirect or legacy aggregate strategy for old URLs

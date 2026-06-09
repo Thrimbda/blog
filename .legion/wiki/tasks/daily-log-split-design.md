@@ -1,38 +1,51 @@
-# Daily Log Split Design
+# Task Note: Daily Log Split Design
 
 ## Status
 
-Implemented on 2026-06-08 in worktree `.worktrees/daily-log-split-implementation`.
+Completed on 2026-06-08.
 
-## Current Truth
+## Decision
 
-Long daily-log content is now published as atomic Zola pages with archive feed fronts:
+Use atomic Zola pages for daily entries and keep archive browsing static-first.
 
-- `/gcores-talks/`
-- `/diary/2020/`
-- `/diary/2026/`
+Recommended future layout:
 
-The archive frontend renders full entries inline and keeps a real paginator. JavaScript enhances the paginator into infinite loading.
+```text
+content/
+  diary/
+    2020/
+      _index.md
+      2020-04-13.md
+  gcores-talks/
+    2025/
+      07/
+        2025-07-23-01.md
+```
 
-## Mobile Date Access
+Diary entries can use date-only filenames for inspected years. Gcores entries cannot use date-only filenames because duplicate dates exist; use stable source ids if available, otherwise deterministic sequence suffixes.
 
-Each archive has a native date select and `[打开]` link. This is the primary way to reach a specific date on mobile without scrolling through the whole feed.
+## Browsing Rule
 
-## Duplicate Dates
+Build normal paginated Zola archive sections first. Infinite loading may fetch and append the next static page, but must not replace real pagination or non-JS access.
 
-Gcores duplicate dates use sequence slugs, for example:
+## UI Rule
 
-- `/gcores-talks/2025-07-23-01/`
-- `/gcores-talks/2025-07-23-02/`
+Preserve the existing terminal-paper theme:
 
-## Implementation Pattern
+- text rows rather than cards
+- constrained article width
+- warm paper/dark ink palette
+- bracketed/text controls
+- thin rules and quiet metadata
 
-- `scripts/daily-sources/`: migration source aggregates
-- `scripts/split-daily-logs.mjs`: reproducible splitter
-- `data/daily-index.json`: full archive date index
-- `daily-archive.html`: feed and controls
-- `daily-entry.html`: standalone entry page
+Validated hardening:
 
-## Validation
+- mobile outlines default collapsed when no stored user state exists
+- article/home links wrap with `overflow-wrap: anywhere`
+- viewport meta allows browser zoom
 
-`zola build`, Playwright 3x3 viewport checks, infinite-load interaction, mobile date jump, and Computer Use visual checks all passed.
+## Evidence
+
+- Task RFC: `.legion/tasks/daily-log-split-design/docs/rfc.md`
+- Test report: `.legion/tasks/daily-log-split-design/docs/test-report.md`
+- Review: `.legion/tasks/daily-log-split-design/docs/review-change.md`

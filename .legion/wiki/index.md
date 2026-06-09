@@ -1,11 +1,11 @@
 # Legion Wiki
 
-## 查询入口
-- `patterns.md` - 可复用工程模式与约定。
-- `tasks/const-cloudflare-access.md` - `const` 入口与 Cloudflare Access Terraform 任务摘要。
-- `tasks/daily-log-split-design.md` - daily-log split implementation and frontend behavior.
+## Current Durable Notes
 
-## 当前重点
-- Zola/czon 项目构建验证应优先使用 `shell.nix` 中暴露的 `npx czon build --lang ...` 命令。
-- Cloudflare Access path 保护需要显式覆盖 exact path、trailing slash 和 wildcard descendants。
-- Daily archives should preserve static pagination while enhancing to infinite loading.
+- `tasks/daily-log-split-design.md`: Daily log split architecture and viewport validation decisions.
+- `patterns.md`: Reusable theme and archive implementation conventions.
+- `maintenance.md`: Follow-up implementation backlog.
+
+## Current Truth
+
+The blog is a Zola static archive with a deliberate terminal-paper visual language. Long daily-log pages should be split into atomic Markdown pages through static sections and pagination, with infinite loading used only as progressive enhancement.

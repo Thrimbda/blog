@@ -1,10 +1,61 @@
 {
-  "register": "brand",
-  "northStar": "Terminal Paper Archive",
-  "style": {
-    "palette": "existing warm paper and ink",
-    "typography": "existing monospace/serif terminal-paper voice",
-    "components": "text rows, thin rules, quiet metadata, bracketed controls",
-    "avoid": ["cards", "decorative gradients", "dashboard chrome", "JS-only archive"]
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-08T16:19:51+08:00",
+  "title": "Design System: c1 blog",
+  "extensions": {
+    "colorMeta": {
+      "paper-bg": {
+        "role": "neutral",
+        "displayName": "Paper Background",
+        "canonical": "#f6f1e8",
+        "tonalRamp": ["#fbf8f2", "#f6f1e8", "#ebe5db", "#d4ccbf"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#171411",
+        "tonalRamp": ["#171411", "#555047", "#6c655c", "#aa9f92"]
+      },
+      "link-blue": {
+        "role": "primary",
+        "displayName": "Link Blue",
+        "canonical": "#1f4d8f",
+        "tonalRamp": ["#1f4d8f", "#9ab8df"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page and article titles in the same terminal-paper voice as body text."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Long-form reading at 15px with generous 1.72 line-height and 65ch-75ch measures."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Sparse controls and outline labels, not repeated section grammar."
+      }
+    },
+    "elevation": {
+      "strategy": "flat-by-default",
+      "tokens": {
+        "dropdown-lift": "0 0.45rem 1rem rgba(23, 20, 17, 0.08)"
+      }
+    },
+    "motion": {
+      "strategy": "small state transitions only",
+      "reducedMotion": "Disable outline transitions and avoid content gated by animation."
+    },
+    "breakpoints": {
+      "mobile": "max-width: 600px",
+      "outlineDesktop": "min-width: 960px"
+    },
+    "rules": [
+      "Articles and daily log entries are not cards.",
+      "Blue is reserved for links and core interactive affordances.",
+      "Lazy or infinite browsing must keep static fallback pages available.",
+      "Avoid visual restyling that makes the archive feel like a SaaS product."
+    ]
   }
 }

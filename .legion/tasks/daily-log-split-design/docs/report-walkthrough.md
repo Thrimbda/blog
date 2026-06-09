@@ -1,44 +1,39 @@
 # Report Walkthrough
 
-## Mode
+## What Was Delivered
 
-Implementation.
+- Created `PRODUCT.md`, `DESIGN.md`, and `.impeccable/design.json` so future UI work has durable product and design context.
+- Inspected the three aggregate daily-log pages and documented source constraints in `docs/research.md`.
+- Designed the future split architecture in `docs/rfc.md`.
+- Reviewed the RFC in `docs/review-rfc.md`; decision is PASS.
+- Added limited responsive/accessibility hardening needed by viewport validation.
+- Verified the current pages across iPhone-class mobile, 13-inch laptop, and 27-inch desktop sizes.
 
-## What Changed
+## Key Design Decision
 
-- Split the three aggregate daily-log sources into atomic Zola pages.
-- Added a daily archive frontend that renders full entries inline.
-- Added a native date jump control for opening a specific daily page.
-- Added infinite loading over real paginated archive pages.
-- Added standalone daily entry pages and compatibility pages for old diary-year URLs.
-- Kept the existing terminal-paper visual language.
+Split daily logs into ordinary Zola section pages and keep browsing static-first:
 
-## Final Presentation
+1. Atomic diary/Gcores entries become standalone Markdown pages.
+2. Year/source archive sections render normal paginated lists.
+3. Infinite loading is optional progressive enhancement over those real paginated pages.
+4. Old aggregate URLs remain as compatibility surfaces during at least the first migration release.
 
-Archive pages now behave like readable logs:
+## Why This Direction
 
-- top: source/year title and count
-- left rail or mobile sticky block: `查日期`, select, `[打开]`
-- right or lower content: full daily entries in a continuous ruled feed
-- bottom: real paginator link enhanced into `继续加载`
+This keeps the archive durable, linkable, and readable without turning the site into a client-rendered app. It also matches the current theme: text rows, thin rules, quiet metadata, and constrained article columns.
 
-## Key Files
+## Implementation Notes For The Next Task
 
-- `scripts/split-daily-logs.mjs`
-- `data/daily-index.json`
-- `themes/cone-scroll/templates/daily-archive.html`
-- `themes/cone-scroll/templates/daily-entry.html`
-- `themes/cone-scroll/static/js/script.js`
-- `themes/cone-scroll/static/css/style.css`
+- Start with `diary-2020` because its dates are unique and the content shape is simpler.
+- Generate a dry-run manifest before writing atomic files.
+- Preserve the aggregate pages until build, link, feed, and viewport checks pass.
+- For Gcores, do not use date-only filenames because duplicate dates exist.
+- Add infinite loading only after real Zola pagination works and is accessible without JavaScript.
 
-## Validation
+## Evidence
 
-- `zola build`: PASS
-- Playwright 3x3 viewport checks: PASS
-- Infinite loading: PASS
-- Mobile date jump: PASS
-- Computer Use iPhone-class, 13-inch, 27-inch: PASS
-
-## Reviewer Notes
-
-This PR-like change is large mostly because it materializes 202 generated daily pages. The handwritten implementation surface is the split script, templates, CSS, JS, and small navigation/template fallback changes.
+- Build and viewport report: `docs/test-report.md`
+- Raw metrics: `docs/viewport-metrics.json`
+- Screenshots: `docs/screenshots/`
+- RFC review: `docs/review-rfc.md`
+- Implementation review: `docs/review-change.md`

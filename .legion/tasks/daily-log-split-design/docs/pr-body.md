@@ -2,18 +2,25 @@
 
 ## Summary
 
-- Split long daily-log pages into per-entry Zola pages.
-- Add daily archive feed pages with full inline entries, date jump controls, and progressive infinite loading.
-- Preserve static pagination and standalone daily entry URLs.
+- Add product/design context docs required by `impeccable`.
+- Add a Legion RFC for splitting aggregate daily-log pages into atomic Zola entries with static-first browsing and optional infinite loading.
+- Apply small responsive/accessibility hardening while preserving the existing terminal-paper UI style.
+
+## UI Changes
+
+- Allow browser zoom by removing `user-scalable=no`.
+- Wrap long links inside article and home markdown content.
+- Collapse the article outline by default on small viewports when no saved user preference exists.
 
 ## Validation
 
-- `zola build`
-- Playwright viewport checks for iPhone-class, 13-inch, and 27-inch sizes
-- Playwright interaction checks for date jump, duplicate-date Gcores entry, infinite loading, and standalone daily page
-- Computer Use visual inspection in Chrome for the same three size classes
+- `zola build` via Nix-provided Zola `0.21.0`
+- Playwright metrics for `gcores-talks`, `diary-2020`, and `diary-2026` across:
+  - iPhone-class `402x874`
+  - 13-inch `1440x900`
+  - 27-inch `2560x1440`
+- Computer Use visual inspection across the same three size classes
 
 ## Notes
 
-- Original aggregate Markdown sources moved to `scripts/daily-sources/` for reproducible migration.
-- `data/daily-index.json` powers complete date jump controls on paginated archive pages.
+This does not split production daily-log content yet. The split is documented as a follow-up implementation plan.

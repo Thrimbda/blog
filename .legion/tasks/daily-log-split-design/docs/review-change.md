@@ -1,42 +1,40 @@
-# Review Change
+# Review Change: Viewport Hardening
 
 ## Decision
 
 PASS.
 
-## Scope Review
+## Scope Reviewed
 
-The implementation matches the expanded task contract:
+This review covers the limited implementation changes made during a design-first task:
 
-- Atomic daily pages exist for the three requested aggregate sources.
-- Archive pages present full entries as a continuous feed.
-- Infinite loading is progressive enhancement over static pagination.
-- Mobile date access is available through a native select and open link.
-- The UI keeps the existing terminal-paper style.
+- viewport meta zoom behavior
+- long-link wrapping in markdown content surfaces
+- mobile default state for the article outline
+- project UI context docs required by `impeccable`
+- Legion design and validation docs
+
+It does not review a production daily-log split because no content split was implemented.
 
 ## Findings
 
 No blocking findings.
 
-## Maintainability
+## Behavioral Review
 
-- `scripts/split-daily-logs.mjs` makes the migration reproducible.
-- `data/daily-index.json` keeps date-jump controls independent from paginator limitations.
-- New templates are scoped to daily archive surfaces.
-- CSS changes are scoped to `.daily-*` classes plus markdown resilience rules.
+- The visual language remains the existing terminal-paper style: no cards, new palettes, new navigation model, or decorative UI were introduced.
+- The outline change is conservative: mobile gets a collapsed default only when there is no saved reader preference.
+- Desktop and laptop outlines remain expanded by default.
+- Long URLs now wrap inside article and home markdown surfaces, reducing mobile overflow without affecting post-list layout.
+- Removing `user-scalable=no` improves accessibility and does not change layout.
 
-## Accessibility And Fallback
+## Verification Evidence
 
-- The archive still has real paginator links without JavaScript.
-- The date selector uses native form controls.
-- Infinite loading updates a polite live region.
-- Standalone daily pages are normal links and pages, not client-only states.
-
-## Security Lens
-
-No security trigger is present. The change does not alter authentication, permissions, secrets, user-controlled privileged paths, or data transmission.
+- `zola build` passed through Nix-provided Zola `0.21.0`.
+- Playwright metrics show no page-level horizontal overflow across 3 pages x 3 viewport classes.
+- Computer Use visual inspection covered iPhone-class, 13-inch, and 27-inch page sizes.
 
 ## Residual Risk
 
-- The legacy aggregate source files still exist under `scripts/daily-sources/` as migration inputs, but they are not published as aggregate pages.
-- Imported remote Gcores images can affect visual loading timing; the infinite loader is throttled to avoid runaway loading while images settle.
+- Users with existing localStorage outline state may still see their saved expanded outline on mobile. This is expected because explicit user preference takes precedence over viewport default.
+- Off-screen Embla slides and scrollable code content appear in raw element overflow lists but do not create document-level horizontal scrolling.
