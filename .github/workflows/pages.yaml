@@ -45,6 +45,9 @@ jobs:
       - name: Build Czon site (sub-path /czon)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: https://api.siliconflow.cn/v1
+          OPENAI_MODEL: Pro/deepseek-ai/DeepSeek-V3.2
+          OPENAI_MAX_TOKENS: "8192"
         run: |
           if [ -z "$OPENAI_API_KEY" ]; then
             echo "::error::OPENAI_API_KEY secret is not configured"
