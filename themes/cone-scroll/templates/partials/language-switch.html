@@ -1,4 +1,5 @@
 {% set current_lang = lang | default(value=config.default_language) %}
+{% set link_lang = config.default_language %}
 {% set current_option = config.extra.language_options | filter(attribute="code", value=current_lang) | first %}
 <details class="language-switch">
   <summary class="language-switch-toggle" aria-label="{{ trans(key='language_switch', lang=current_lang) }}">
@@ -6,7 +7,7 @@
   </summary>
   <nav class="language-switch-panel" aria-label="{{ trans(key='language_switch', lang=current_lang) }}">
     {% for option in config.extra.language_options %}
-      {% set option_url = get_url(path='@/_index.md', lang=option.code) %}
+      {% set option_url = get_url(path='@/_index.md', lang=link_lang) %}
       {% set translation_lang = option.code %}
 
       {% if page is defined %}
@@ -17,9 +18,9 @@
           {% if translation %}
             {% set option_url = translation.permalink %}
           {% elif page.relative_path | split(pat="/") | first == "blog" %}
-            {% set option_url = get_url(path='@/blog/_index.md', lang=option.code) %}
+            {% set option_url = get_url(path='@/blog/_index.md', lang=link_lang) %}
           {% elif page.relative_path | split(pat="/") | first == "diary" %}
-            {% set option_url = get_url(path='@/diary/_index.md', lang=option.code) %}
+            {% set option_url = get_url(path='@/diary/_index.md', lang=link_lang) %}
           {% endif %}
         {% endif %}
       {% elif section is defined %}
@@ -67,11 +68,11 @@
           {% if translated_term %}
             {% set option_url = translated_term.permalink %}
           {% else %}
-            {% set option_url = get_url(path='tags', trailing_slash=true, lang=option.code) %}
+            {% set option_url = get_url(path='tags', trailing_slash=true, lang=link_lang) %}
           {% endif %}
         {% endif %}
       {% elif terms is defined %}
-        {% set option_url = get_url(path='tags', trailing_slash=true, lang=option.code) %}
+        {% set option_url = get_url(path='tags', trailing_slash=true, lang=link_lang) %}
       {% endif %}
 
       {% if option.code == current_lang %}

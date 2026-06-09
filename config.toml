@@ -224,7 +224,7 @@ twitter_card = true
 header_nav = [
   { path = "@/blog/_index.md", label_key = "nav_blog" },
   { path = "@/diary/_index.md", label_key = "nav_diary" },
-  { path = "@/gcores-talks.md", label_key = "nav_gcores" },
+  { path = "@/gcores-talks/_index.md", label_key = "nav_gcores" },
   { path = "@/const.md", label_key = "nav_const" },
   { path = "@/about.md", label_key = "nav_about" },
 ]

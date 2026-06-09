@@ -1,9 +1,10 @@
 <meta charset="UTF-8">
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="index, follow">
 {% set current_lang = lang | default(value=config.default_language) %}
+{% set link_lang = config.default_language %}
 {% if page.title %}
 {% set title = page.title %}
 {% elif section.title %}
@@ -87,7 +88,7 @@
 {% endblock metatags %}
 {% if config.generate_feeds %}
 {% block feed %}
-<link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml", trailing_slash=false, lang=current_lang) }}"> 
+<link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml", trailing_slash=false, lang=link_lang) }}"> 
 {% endblock feed %}
 {% endif %}
 {% block css %}

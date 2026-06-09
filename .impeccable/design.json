@@ -1,0 +1,10 @@
+{
+  "register": "brand",
+  "northStar": "Terminal Paper Archive",
+  "style": {
+    "palette": "existing warm paper and ink",
+    "typography": "existing monospace/serif terminal-paper voice",
+    "components": "text rows, thin rules, quiet metadata, bracketed controls",
+    "avoid": ["cards", "decorative gradients", "dashboard chrome", "JS-only archive"]
+  }
+}

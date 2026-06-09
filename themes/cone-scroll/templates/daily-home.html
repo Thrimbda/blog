@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set current_lang = lang | default(value=config.default_language) %}
+{% set link_lang = config.default_language %}
+{% set diary_2026 = get_section(path="diary/2026/_index.md", lang=link_lang) %}
+{% set diary_2020 = get_section(path="diary/2020/_index.md", lang=link_lang) %}
+
+<section class="home-copy home-intro daily-home">
+  <h1>{{ section.title }}</h1>
+  {{ section.content | safe }}
+
+  <ul class="daily-home-list">
+    {% if diary_2026 %}
+      <li>
+        <span class="post-marker" aria-hidden="true">&raquo;</span>
+        <a class="post-link" href="{{ diary_2026.permalink | safe }}">{{ diary_2026.title }}</a>
+        <span class="post-filler" aria-hidden="true"></span>
+        <span class="post-date">{{ diary_2026.pages | length }} 则</span>
+      </li>
+    {% endif %}
+    {% if diary_2020 %}
+      <li>
+        <span class="post-marker" aria-hidden="true">&raquo;</span>
+        <a class="post-link" href="{{ diary_2020.permalink | safe }}">{{ diary_2020.title }}</a>
+        <span class="post-filler" aria-hidden="true"></span>
+        <span class="post-date">{{ diary_2020.pages | length }} 则</span>
+      </li>
+    {% endif %}
+  </ul>
+</section>
+{% endblock content %}
