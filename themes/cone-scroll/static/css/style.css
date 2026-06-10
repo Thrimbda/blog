@@ -402,6 +402,8 @@ main {
   width: 100%;
   max-width: 1040px;
   min-width: 0;
+  --daily-rail-width: clamp(12rem, 24vw, 15rem);
+  --daily-layout-gap: clamp(1.6rem, 4vw, 2.75rem);
 }
 
 .daily-head {
@@ -548,6 +550,26 @@ main {
   font-size: 0.9rem;
 }
 
+@media (min-width: 880px) {
+  .daily-layout {
+    display: grid;
+    grid-template-columns: minmax(0, var(--daily-rail-width)) minmax(0, 1fr);
+    column-gap: var(--daily-layout-gap);
+    align-items: start;
+  }
+
+  .daily-outline {
+    position: sticky;
+    top: 1.75rem;
+    max-height: calc(100vh - 3.5rem);
+    margin: 0;
+    padding-right: clamp(1rem, 2.5vw, 1.65rem);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+
 footer {
   margin-top: 3rem;
   padding-top: 1rem;
@@ -636,23 +658,6 @@ footer nav + p {
     padding-top: 1.7rem;
   }
 
-  .daily-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
-    column-gap: 2.75rem;
-    align-items: start;
-  }
-
-  .daily-outline {
-    position: sticky;
-    top: 1.75rem;
-    max-height: calc(100vh - 3.5rem);
-    margin: 0;
-    padding-right: 1.65rem;
-    border-right: 1px solid var(--border);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

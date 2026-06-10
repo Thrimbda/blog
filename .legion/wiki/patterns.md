@@ -31,6 +31,8 @@ For daily archive navigation, prefer document-outline navigation over form contr
 - group duplicate-date sources under the date with stable sequence labels
 - keep mobile access in normal document flow with native `<details>`
 - keep desktop access as a sticky left rail with a thin divider
+- verify desktop/laptop archive pages by asserting left/right placement, not only by checking that screenshots have no overlap
+- keep the daily archive rail breakpoint aligned with the approved dummy behavior unless a new design explicitly changes it
 
 ## Terminal-Paper UI Preservation
 
