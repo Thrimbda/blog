@@ -9,20 +9,19 @@
   {% set entries = section.pages %}
 {% endif %}
 {% set daily_index = load_data(path="data/daily-index.json") %}
+{% set daily_toc = load_data(path="data/daily-toc.json") %}
 {% set jump_entries = [] %}
+{% set toc_groups = [] %}
 {% if section.extra.daily_index_key == "diary-2020" %}
   {% set jump_entries = daily_index["diary-2020"] %}
+  {% set toc_groups = daily_toc["diary-2020"] %}
 {% elif section.extra.daily_index_key == "diary-2026" %}
   {% set jump_entries = daily_index["diary-2026"] %}
+  {% set toc_groups = daily_toc["diary-2026"] %}
 {% elif section.extra.daily_index_key == "gcores" %}
   {% set jump_entries = daily_index.gcores %}
+  {% set toc_groups = daily_toc.gcores %}
 {% endif %}
-{% set first_entry_url = section.permalink %}
-{% for entry in jump_entries %}
-  {% if loop.first %}
-    {% set_global first_entry_url = entry.path %}
-  {% endif %}
-{% endfor %}
 {% if section.extra.daily_source == "diary" %}
   {% set parent_href = get_url(path="@/diary/_index.md", lang=link_lang) %}
   {% set parent_label = "日志归档" %}
@@ -50,23 +49,42 @@
   </header>
 
   <div class="daily-layout">
-    <aside class="daily-tools" aria-label="日志工具">
-      <details class="daily-jump" open>
-        <summary>查日期</summary>
-        <div class="daily-jump-body">
-          <label class="daily-jump-label" for="daily-jump-select">选择日期</label>
-          <select id="daily-jump-select" class="daily-jump-select" data-daily-jump-select>
-            {% for entry in jump_entries %}
-              <option value="{{ entry.path | safe }}">{{ entry.title }}{% if entry.topic %} · {{ entry.topic }}{% endif %}</option>
+    <aside class="page-outline daily-outline" aria-label="日期目录">
+      <details class="page-outline-panel daily-outline-panel" open>
+        <summary class="page-outline-toggle">日期目录</summary>
+        <nav class="page-outline-nav daily-outline-nav" aria-label="{{ section.title }} 日期目录">
+          <ol>
+            {% for group in toc_groups %}
+              <li>
+                <span class="daily-outline-group">{{ group.label }}</span>
+                <ol>
+                  {% for date_group in group.dates %}
+                    <li>
+                      {% if date_group.entries | length > 1 %}
+                        <span class="daily-outline-date">{{ date_group.label }}</span>
+                        <ol class="daily-outline-sequences">
+                          {% for item in date_group.entries %}
+                            <li>
+                              <a class="daily-outline-entry" href="{{ item.path | safe }}">
+                                <span class="daily-outline-seq">{{ item.sequence_label }}</span>{% if item.topic %}<span>{{ item.topic }}</span>{% else %}<span>{{ item.title }}</span>{% endif %}
+                              </a>
+                            </li>
+                          {% endfor %}
+                        </ol>
+                      {% else %}
+                        {% for item in date_group.entries %}
+                          <a href="{{ item.path | safe }}">{{ date_group.label }}</a>
+                          {% if item.topic %}<span class="daily-outline-topic">{{ item.topic }}</span>{% endif %}
+                        {% endfor %}
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ol>
+              </li>
             {% endfor %}
-          </select>
-          <a class="daily-jump-open" data-daily-jump-open href="{{ first_entry_url | safe }}">打开</a>
-        </div>
+          </ol>
+        </nav>
       </details>
-
-      <div class="daily-tool-note">
-        <p>每日入口已经拆成独立页面。这里保留连续阅读，向下滚动会继续加载下一页。</p>
-      </div>
     </aside>
 
     <section class="daily-feed" aria-label="{{ section.title }}">

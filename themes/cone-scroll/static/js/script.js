@@ -272,21 +272,6 @@
 
   function initDailyArchive() {
     document.querySelectorAll("[data-daily-archive]").forEach((archive) => {
-      const jumpSelect = archive.querySelector("[data-daily-jump-select]");
-      const jumpOpen = archive.querySelector("[data-daily-jump-open]");
-
-      if (jumpSelect && jumpOpen && jumpSelect.getAttribute("data-daily-jump-bound") !== "true") {
-        const syncJumpLink = function () {
-          if (jumpSelect.value) {
-            jumpOpen.setAttribute("href", jumpSelect.value);
-          }
-        };
-
-        jumpSelect.setAttribute("data-daily-jump-bound", "true");
-        jumpSelect.addEventListener("change", syncJumpLink);
-        syncJumpLink();
-      }
-
       if (archive.getAttribute("data-infinite-bound") === "true") {
         return;
       }
