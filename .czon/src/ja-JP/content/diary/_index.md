@@ -1,8 +1,7 @@
 +++
-paginate_by = 15
-title = "ログアーカイブ"
+title = "日誌アーカイブ"
+template = "daily-home.html"
 sort_by = "date"
-page_template = "blog-page.html"
 +++
 
-> これらの段階的な仕事と生活の記録を、時系列で閲覧できます。
+> 時間に沿って、これらの断片的な仕事と生活の記録を振り返ります。

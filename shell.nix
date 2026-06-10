@@ -34,7 +34,7 @@ mkShell {
     # OPENAI_MODEL='deepseek-chat'
     # ----------------
     # silicon flow Deepseek API configuration
-    OPENAI_BASE_URL="https://api.siliconflow.cn/v1";
-    OPENAI_MODEL="Pro/deepseek-ai/DeepSeek-V3.2";
+    OPENAI_BASE_URL="https://api.deepseek.com";
+    OPENAI_MODEL="deepseek-v4-flash";
   };
 }

@@ -1,8 +1,7 @@
 +++
-paginate_by = 15
-title = "Blog Archive"
+title = "Log Archive"
+template = "daily-home.html"
 sort_by = "date"
-page_template = "blog-page.html"
 +++
 
-> Browse these periodic work and life records by time.
+> Browse through these periodic work and life records chronologically.

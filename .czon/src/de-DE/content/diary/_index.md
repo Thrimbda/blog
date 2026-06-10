@@ -1,8 +1,7 @@
 +++
-paginate_by = 15
-title = "Blog-Archiv"
+title = "Logbuch-Archiv"
+template = "daily-home.html"
 sort_by = "date"
-page_template = "blog-page.html"
 +++
 
-> Durchblättern Sie diese regelmäßigen Aufzeichnungen von Arbeit und Leben chronologisch.
+> Durchblättern Sie diese phasenweise Arbeits- und Lebensaufzeichnungen nach Datum.
