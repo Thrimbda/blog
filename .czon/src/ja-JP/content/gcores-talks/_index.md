@@ -1,4 +1,3 @@
-```toml
 +++
 title = "0xc1のクルーログ"
 sort_by = "date"
@@ -14,6 +13,6 @@ daily_archive_kind = "source"
 daily_index_key = "gcores"
 source_url = "https://www.gcores.com/users/464460/talks"
 +++
-```
 
 元のリンク：[Thrimbdaのクルー](https://www.gcores.com/users/464460/talks)
+
