@@ -12518,119 +12518,131 @@
       "path": "content/diary/2020/2020-05-06.md",
       "links": [],
       "metadata": {
-        "title": "2020-05-06",
-        "description": "记录2020年5月6日的工作内容，包括Du Valid的使用和头脑风暴。",
-        "short_summary": "本文记录了2020年5月6日的工作，涉及Du Valid验证（使用mill和nexus-osm）以及头脑风暴。",
-        "audience": "记录个人工作日志，面向团队或自我回顾",
+        "title": "2020-05-06 工作日志",
+        "description": "记录了使用mill和nexus-osm工具以及脑力风暴的工作日志。",
+        "short_summary": "今日工作：使用mill和nexus-osm工具，进行脑力风暴。",
+        "audience": "开发团队或个人，关注工作效率和工具使用。",
         "key_points": [
-          "使用mill进行构建",
-          "使用nexus-osm进行验证",
-          "进行头脑风暴"
+          "使用mill工具",
+          "使用nexus-osm工具",
+          "进行脑力风暴"
         ],
-        "summary": "本文是2020年5月6日的工作日志，主要记录了使用mill和nexus-osm进行Du Valid验证的过程，以及随后进行的头脑风暴活动。这些内容反映了当天的工作重点和技术实践，为后续工作提供参考。",
+        "summary": "本文是2020年5月6日的工作日志，简要记录了当日使用mill和nexus-osm等开发工具的情况，并进行了脑力风暴。内容包含工具使用记录和创意发散，是一篇日常工作总结。",
         "slug": "2020-05-06",
         "tags": [
           "工作日志",
           "月度总结",
-          "技术"
+          "技术",
+          "mill",
+          "nexus-osm"
         ],
         "inferred_date": "2020-05-06",
         "inferred_lang": "zh-Hans",
         "tokens_used": {
           "prompt": 658,
-          "completion": 700,
-          "total": 1358
+          "completion": 1354,
+          "total": 2012
         }
       },
       "hash": "90df1ad6fa8f7d2ca8d619a5f2c968a794746f510caceb26d59ff8d6c8acf570",
       "metadataTranslations": {
         "zh-Hans": {
-          "title": "2020-05-06",
-          "description": "记录2020年5月6日的工作内容，包括Du Valid的使用和头脑风暴。",
-          "summary": "本文是2020年5月6日的工作日志，主要记录了使用mill和nexus-osm进行Du Valid验证的过程，以及随后进行的头脑风暴活动。这些内容反映了当天的工作重点和技术实践，为后续工作提供参考。",
-          "short_summary": "本文记录了2020年5月6日的工作，涉及Du Valid验证（使用mill和nexus-osm）以及头脑风暴。",
+          "title": "2020-05-06 工作日志",
+          "description": "记录了使用mill和nexus-osm工具以及脑力风暴的工作日志。",
+          "summary": "本文是2020年5月6日的工作日志，简要记录了当日使用mill和nexus-osm等开发工具的情况，并进行了脑力风暴。内容包含工具使用记录和创意发散，是一篇日常工作总结。",
+          "short_summary": "今日工作：使用mill和nexus-osm工具，进行脑力风暴。",
           "key_points": [
-            "使用mill进行构建",
-            "使用nexus-osm进行验证",
-            "进行头脑风暴"
+            "使用mill工具",
+            "使用nexus-osm工具",
+            "进行脑力风暴"
           ],
-          "audience": "记录个人工作日志，面向团队或自我回顾",
+          "audience": "开发团队或个人，关注工作效率和工具使用。",
           "tags": [
             "工作日志",
             "月度总结",
-            "技术"
-          ]
-        },
-        "en-US": {
-          "title": "2020-05-06",
-          "description": "Records work content on May 6, 2020, including the use of Du Valid and brainstorming.",
-          "summary": "This article is a work log for May 6, 2020, mainly recording the process of Du Valid verification using mill and nexus-osm, followed by a brainstorming session. These contents reflect the work focus and technical practices of the day, providing reference for future work.",
-          "short_summary": "This article records the work on May 6, 2020, involving Du Valid verification (using mill and nexus-osm) and brainstorming.",
-          "key_points": [
-            "Using mill for building",
-            "Using nexus-osm for validation",
-            "Conducting brainstorming session"
-          ],
-          "audience": "Personal work log, for team or self-review",
-          "tags": [
-            "Work log",
-            "Monthly summary",
-            "Technology"
+            "技术",
+            "mill",
+            "nexus-osm"
           ]
         },
         "ja-JP": {
-          "title": "2020-05-06",
-          "description": "2020年5月6日の作業内容を記録。Du Validの使用とブレインストーミングを含む。",
-          "summary": "本稿は2020年5月6日の作業ログであり、主にmillとnexus-osmを使用したDu Valid検証のプロセスと、その後のブレインストーミング活動を記録しています。これらの内容は当日の作業の重点と技術実践を反映し、今後の作業の参考となります。",
-          "short_summary": "本稿は2020年5月6日の作業を記録。Du Valid検証（millとnexus-osm使用）およびブレインストーミングを含む。",
+          "title": "2020-05-06 作業日誌",
+          "description": "millとnexus-osmツールの使用およびブレインストーミングを記録した作業日誌。",
+          "summary": "本文は2020年5月6日の作業日誌であり、当日のmillやnexus-osmなどの開発ツールの使用状況を簡潔に記録し、ブレインストーミングを行った。内容はツール使用記録とアイデアの発散を含み、日常の作業まとめである。",
+          "short_summary": "本日の作業：millとnexus-osmツールを使用し、ブレインストーミングを実施。",
           "key_points": [
-            "millを使用してビルド",
-            "nexus-osmを使用して検証",
+            "millツールを使用",
+            "nexus-osmツールを使用",
             "ブレインストーミングを実施"
           ],
-          "audience": "個人の作業ログとして記録し、チームや自己振り返り向け",
+          "audience": "開発チームや個人、作業効率とツールの使用に関心がある人。",
           "tags": [
-            "作業ログ",
-            "月次まとめ",
-            "技術"
+            "作業日誌",
+            "月間まとめ",
+            "技術",
+            "mill",
+            "nexus-osm"
           ]
         },
         "es-ES": {
-          "title": "2020-05-06",
-          "description": "Registro del trabajo del 6 de mayo de 2020, incluyendo el uso de Du Valid y una tormenta de ideas.",
-          "summary": "Este artículo es el registro de trabajo del 6 de mayo de 2020, que documenta principalmente el proceso de verificación de Du Valid utilizando mill y nexus-osm, seguido de una actividad de tormenta de ideas. Estos contenidos reflejan el enfoque de trabajo y las prácticas técnicas de ese día, proporcionando una referencia para trabajos posteriores.",
-          "short_summary": "Este artículo registra el trabajo del 6 de mayo de 2020, que involucra la verificación de Du Valid (usando mill y nexus-osm) y una tormenta de ideas.",
+          "title": "Registro de trabajo: 2020-05-06",
+          "description": "Registro de trabajo que documenta el uso de las herramientas mill y nexus-osm, así como una lluvia de ideas.",
+          "summary": "Este artículo es un registro de trabajo del 6 de mayo de 2020, que resume brevemente el uso de herramientas de desarrollo como mill y nexus-osm, además de una sesión de lluvia de ideas. Contiene registros de uso de herramientas y generación de ideas, siendo un resumen diario de trabajo.",
+          "short_summary": "Trabajo del día: uso de herramientas mill y nexus-osm, y lluvia de ideas.",
           "key_points": [
-            "Uso de mill para la construcción",
-            "Uso de nexus-osm para la verificación",
-            "Realización de una tormenta de ideas"
+            "Uso de la herramienta mill",
+            "Uso de la herramienta nexus-osm",
+            "Realización de lluvia de ideas"
           ],
-          "audience": "Registro de trabajo personal, dirigido al equipo o para autorreflexión",
+          "audience": "Equipo de desarrollo o individuos interesados en la eficiencia laboral y el uso de herramientas.",
           "tags": [
-            "Registro de trabajo",
-            "Resumen mensual",
-            "Tecnología"
+            "registro de trabajo",
+            "resumen mensual",
+            "tecnología",
+            "mill",
+            "nexus-osm"
           ]
         },
         "de-DE": {
-          "title": "2020-05-06",
-          "description": "Aufzeichnung der Arbeit vom 6. Mai 2020, einschließlich der Verwendung von Du Valid und Brainstorming.",
-          "summary": "Dieser Artikel ist das Arbeitstagebuch vom 6. Mai 2020. Es dokumentiert hauptsächlich den Prozess der Du-Valid-Überprüfung mit mill und nexus-osm sowie die anschließende Brainstorming-Aktivität. Diese Inhalte spiegeln die Arbeitsschwerpunkte und technischen Praktiken des Tages wider und dienen als Referenz für die weitere Arbeit.",
-          "short_summary": "Dieser Artikel dokumentiert die Arbeit vom 6. Mai 2020, einschließlich der Du-Valid-Überprüfung (mit mill und nexus-osm) und Brainstorming.",
+          "title": "Arbeitsprotokoll 06.05.2020",
+          "description": "Arbeitsprotokoll mit Aufzeichnungen zur Nutzung der Tools mill und nexus-osm sowie Brainstorming.",
+          "summary": "Dieser Artikel ist das Arbeitsprotokoll vom 6. Mai 2020, in dem die Nutzung von Entwicklungstools wie mill und nexus-osm sowie ein Brainstorming kurz festgehalten werden. Der Inhalt umfasst Aufzeichnungen zur Werkzeugnutzung und kreative Denkanstöße und stellt eine tägliche Arbeitszusammenfassung dar.",
+          "short_summary": "Heutige Arbeit: Nutzung von mill und nexus-osm, Brainstorming.",
           "key_points": [
-            "Verwendung von mill zum Bauen",
-            "Verwendung von nexus-osm zur Überprüfung",
-            "Durchführung von Brainstorming"
+            "Nutzung des mill-Tools",
+            "Nutzung des nexus-osm-Tools",
+            "Brainstorming durchführen"
           ],
-          "audience": "Persönliches Arbeitstagebuch, gedacht für das Team oder zur eigenen Reflexion",
+          "audience": "Entwicklungsteams oder Einzelpersonen, die sich für Arbeitseffizienz und Werkzeugnutzung interessieren.",
           "tags": [
-            "Arbeitstagebuch",
+            "Arbeitsprotokoll",
             "Monatszusammenfassung",
-            "Technik"
+            "Technologie",
+            "mill",
+            "nexus-osm"
+          ]
+        },
+        "en-US": {
+          "title": "2020-05-06 Work Log",
+          "description": "Records the work log of using mill and nexus-osm tools along with brainstorming.",
+          "summary": "This article is the work log for May 6, 2020, briefly recording the use of development tools such as mill and nexus-osm, and conducting a brainstorming session. It includes tool usage records and creative divergence, serving as a daily work summary.",
+          "short_summary": "Today's work: using mill and nexus-osm tools, and brainstorming.",
+          "key_points": [
+            "Using mill tool",
+            "Using nexus-osm tool",
+            "Conducting brainstorming"
+          ],
+          "audience": "Development team or individuals, focusing on work efficiency and tool usage.",
+          "tags": [
+            "Work Log",
+            "Monthly Summary",
+            "Technology",
+            "mill",
+            "nexus-osm"
           ]
         }
       },
-      "metadataTranslationHash": "16ba130425c7c7fda320b81f84a0fe167d0b19ee98e58476cbcde58586884321",
+      "metadataTranslationHash": "c9dbe2aa3ec1e31a7c2a416f44abd558d9c5d96f80d3eb21ba9be49313d02a59",
       "category": "Work Log",
       "nativeMarkdownHash": "90df1ad6fa8f7d2ca8d619a5f2c968a794746f510caceb26d59ff8d6c8acf570"
     },

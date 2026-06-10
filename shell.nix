@@ -35,6 +35,6 @@ mkShell {
     # ----------------
     # silicon flow Deepseek API configuration
     OPENAI_BASE_URL="https://api.deepseek.com";
-    OPENAI_MODEL="deepseek-v4-flash";
+    OPENAI_MODEL="deepseek-v4-pro";
   };
 }
