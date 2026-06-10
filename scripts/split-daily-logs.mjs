@@ -291,6 +291,59 @@ async function writeDailyIndex(data) {
   await writeFile(path.join(dataDir, "daily-index.json"), JSON.stringify(data, null, 2));
 }
 
+function buildDailyToc(entries, { groupBy }) {
+  const dateCounts = entries.reduce((memo, entry) => {
+    memo.set(entry.date, (memo.get(entry.date) ?? 0) + 1);
+    return memo;
+  }, new Map());
+  const groups = [];
+  const groupMap = new Map();
+
+  entries.forEach((entry) => {
+    const groupLabel = groupBy === "year" ? entry.date.slice(0, 4) : entry.date.slice(0, 7);
+    const dateLabel = groupBy === "year" ? entry.date : entry.date.slice(5);
+    const duplicateCount = dateCounts.get(entry.date) ?? 1;
+
+    if (!groupMap.has(groupLabel)) {
+      const group = { label: groupLabel, dates: [] };
+      groups.push(group);
+      groupMap.set(groupLabel, { group, dateMap: new Map() });
+    }
+
+    const groupRecord = groupMap.get(groupLabel);
+    if (!groupRecord.dateMap.has(entry.date)) {
+      const dateGroup = {
+        label: dateLabel,
+        date: entry.date,
+        duplicate_count: duplicateCount,
+        entries: [],
+      };
+      groupRecord.group.dates.push(dateGroup);
+      groupRecord.dateMap.set(entry.date, dateGroup);
+    }
+
+    groupRecord.dateMap.get(entry.date).entries.push({
+      path: entry.path,
+      title: entry.title,
+      topic: entry.topic ?? "",
+      sequence_label: duplicateCount > 1 ? pad(entry.sequence ?? 1) : "",
+    });
+  });
+
+  return groups;
+}
+
+async function writeDailyToc(data) {
+  await writeFile(
+    path.join(dataDir, "daily-toc.json"),
+    JSON.stringify({
+      "diary-2020": buildDailyToc(data["diary-2020"], { groupBy: "month" }),
+      "diary-2026": buildDailyToc(data["diary-2026"], { groupBy: "month" }),
+      gcores: buildDailyToc(data.gcores, { groupBy: "year" }),
+    }, null, 2)
+  );
+}
+
 async function writeDiaryIndex() {
   await writeFile(
     path.join(contentDir, "diary", "_index.md"),
@@ -322,14 +375,16 @@ async function writeCompatibilityPage(year) {
 const diary2020 = await splitDiaryYear(2020, "2020 工作日志", ["工作日志", "月度总结", "技术"]);
 const diary2026 = await splitDiaryYear(2026, "2026 工作日志", ["工作日志"]);
 const gcores = await splitGcores();
-await writeDiaryIndex();
-await writeCompatibilityPage(2020);
-await writeCompatibilityPage(2026);
-await writeDailyIndex({
+const dailyIndex = {
   "diary-2020": diary2020,
   "diary-2026": diary2026,
   gcores,
-});
+};
+await writeDiaryIndex();
+await writeCompatibilityPage(2020);
+await writeCompatibilityPage(2026);
+await writeDailyIndex(dailyIndex);
+await writeDailyToc(dailyIndex);
 
 console.log(`Generated ${diary2020.length} diary-2020 entries`);
 console.log(`Generated ${diary2026.length} diary-2026 entries`);

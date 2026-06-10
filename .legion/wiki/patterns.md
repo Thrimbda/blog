@@ -22,6 +22,16 @@ Infinite loading is a progressive enhancement over real pagination:
 - announce appended content with a polite live region
 - stop cleanly when there is no next page
 
+## Daily Archive TOC
+
+For daily archive navigation, prefer document-outline navigation over form controls:
+
+- use the existing `.page-outline` visual language
+- render dates as plain links, not select options
+- group duplicate-date sources under the date with stable sequence labels
+- keep mobile access in normal document flow with native `<details>`
+- keep desktop access as a sticky left rail with a thin divider
+
 ## Terminal-Paper UI Preservation
 
 Theme changes should keep the current blog identity:
