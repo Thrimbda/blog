@@ -14,12 +14,12 @@ site_hostname = "example.com"
 const_path = "const"
 
 # Provider v5 Access rule object syntax. Replace with private identity rules
-# outside the repository, for example an Access group, IdP group, service token,
-# or email rule using non-public values.
+# outside the repository. This example uses a single email rule; Access group,
+# IdP group, or service token rules are also possible when intentionally chosen.
 access_policy_include = [
   {
-    group = {
-      id = "REPLACE_WITH_ACCESS_GROUP_ID"
+    email = {
+      email = "REPLACE_WITH_EMAIL"
     }
   }
 ]

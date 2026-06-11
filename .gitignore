@@ -3,6 +3,7 @@ public/
 **/.terraform/
 *.tfstate
 *.tfstate.*
+!secrets/cloudflare-access.tfstate.enc.json
 tfplan
 *.tfplan
 *.tfplan.*

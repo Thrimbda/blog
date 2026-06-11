@@ -55,7 +55,7 @@ variable "policy_decision" {
 }
 
 variable "access_policy_include" {
-  description = "Private Access include rules in Cloudflare provider v5 object syntax, for example [{ group = { id = \"REPLACE_WITH_ACCESS_GROUP_ID\" } }]. Do not commit real emails, domains, group IDs, IdP IDs, or service token IDs."
+  description = "Private Access include rules in Cloudflare provider v5 object syntax, for example [{ email = { email = \"REPLACE_WITH_EMAIL\" } }]. Do not commit real emails, domains, group IDs, IdP IDs, or service token IDs."
   type        = any
   sensitive   = true
 }

@@ -10,3 +10,8 @@
 - Updated daily-log maintenance backlog after TOC implementation.
 - Added task summary for `daily-toc-desktop-layout-fix`.
 - Promoted a daily archive responsive verification rule: desktop/laptop checks must assert left/right TOC placement, not just visual non-overlap.
+
+## 2026-06-11
+- Added task summary for `const-access-sops-apply`.
+- Promoted the SOPS-backed Terraform apply pattern: encrypted env inputs, temporary plaintext state only during operations, encrypted JSON state as durable copy, plan scope gate, and no raw secret-bearing evidence in docs.
+- Updated current truth to note `/const` is protected by Cloudflare Access with SOPS-managed private inputs/state.
