@@ -47,3 +47,18 @@ Theme changes should keep the current blog identity:
 ## Mobile Outline Default
 
 For article outline rails, mobile can default to collapsed when no stored user state exists. A stored per-page reader preference should override viewport defaults.
+
+## SOPS-Backed Terraform Apply
+
+For small sensitive Terraform stacks that do not use a remote backend:
+
+- keep private inputs in a SOPS encrypted env file
+- run Terraform through `sops exec-env` instead of writing plaintext tfvars
+- restore plaintext local state only for the duration of plan/apply/verification
+- save durable state as SOPS encrypted JSON
+- ignore plaintext state, backups, plan files, and tfvars
+- delete apply logs and plan logs if they may contain resource IDs or private identifiers
+- record only scoped summaries and pass/fail evidence in task docs
+- require a plan scope gate before apply
+
+For Cloudflare Access path protection, continue to assert exact, trailing slash, and wildcard descendant coverage for the intended path family.

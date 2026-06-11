@@ -4,6 +4,7 @@ mkShell {
     zola
     sops
     age
+    terraform
   ];
   shellHook = ''
     echo "🚀 0xc1 Blog Environment!"

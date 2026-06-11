@@ -7,7 +7,7 @@
 - `schema-version`: `legion-wiki-current`
 - `historical`: `false`
 - `supersedes`: `(none)`
-- `superseded-by`: `(none)`
+- `superseded-by`: `const-access-sops-apply` for production rollout/state handling
 
 ## Outcome Summary
 - Added a new `const` site entry using existing Zola navigation conventions.
@@ -32,5 +32,5 @@
 - `pr-body`: `.legion/tasks/const-cloudflare-access/docs/pr-body.md`
 
 ## Notes
-- Production rollout still requires a private Terraform variable source and an environment owner to run apply outside this task.
-- If a matching Access app already exists, import or coordinate instead of creating a duplicate.
+- Production rollout and state handling were completed by `const-access-sops-apply`.
+- If a matching Access app already exists in future environments, import or coordinate instead of creating a duplicate.
