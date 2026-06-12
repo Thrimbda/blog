@@ -447,8 +447,46 @@ main {
   display: block;
 }
 
+.daily-outline-row {
+  display: inline-flex;
+  align-items: baseline;
+  max-width: 100%;
+  gap: 0.28rem;
+}
+
 .daily-outline-entry {
+  min-width: 0;
   overflow-wrap: anywhere;
+}
+
+.daily-outline-anchor {
+  min-width: 0;
+}
+
+.daily-outline-open {
+  flex: 0 0 auto;
+  color: var(--muted);
+  text-decoration: none;
+  opacity: 0;
+  transform: translateX(-0.2rem);
+}
+
+.daily-outline-open:visited {
+  color: var(--muted);
+}
+
+.daily-outline li:hover > .daily-outline-row .daily-outline-open,
+.daily-outline li:focus-within > .daily-outline-row .daily-outline-open,
+.daily-outline-row:hover .daily-outline-open,
+.daily-outline-row:focus-within .daily-outline-open {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.daily-outline-open:hover,
+.daily-outline-open:focus {
+  color: var(--fg);
+  text-decoration: underline;
 }
 
 .daily-outline-seq,
@@ -487,6 +525,7 @@ main {
   margin: 0 0 2rem;
   padding: 0 0 2rem;
   border-bottom: 1px solid var(--border);
+  scroll-margin-top: 1.75rem;
 }
 
 .daily-entry-card:last-child {
@@ -662,7 +701,8 @@ footer nav + p {
 
 @media (prefers-reduced-motion: no-preference) {
   .page-outline-nav,
-  .page-outline-toggle {
+  .page-outline-toggle,
+  .daily-outline-open {
     transition: opacity 0.18s ease, transform 0.18s ease, color 0.18s ease;
   }
 }
@@ -671,8 +711,20 @@ footer nav + p {
   .page-shell.has-outline,
   .page-outline,
   .page-outline-nav,
-  .page-outline-toggle {
+  .page-outline-toggle,
+  .daily-outline-open {
     transition: none;
+  }
+
+  .daily-outline-open {
+    transform: none;
+  }
+}
+
+@media (hover: none) {
+  .daily-outline-open {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -1452,6 +1504,11 @@ address.post-meta {
 
   .daily-outline {
     margin: 0.65rem 0 1.4rem;
+  }
+
+  .daily-outline-open {
+    opacity: 1;
+    transform: none;
   }
 
   .daily-entry-card {

@@ -291,6 +291,10 @@ async function writeDailyIndex(data) {
   await writeFile(path.join(dataDir, "daily-index.json"), JSON.stringify(data, null, 2));
 }
 
+function anchorFromPath(urlPath) {
+  return String(urlPath).split("/").filter(Boolean).pop() ?? "";
+}
+
 function buildDailyToc(entries, { groupBy }) {
   const dateCounts = entries.reduce((memo, entry) => {
     memo.set(entry.date, (memo.get(entry.date) ?? 0) + 1);
@@ -324,6 +328,7 @@ function buildDailyToc(entries, { groupBy }) {
 
     groupRecord.dateMap.get(entry.date).entries.push({
       path: entry.path,
+      anchor: anchorFromPath(entry.path),
       title: entry.title,
       topic: entry.topic ?? "",
       sequence_label: duplicateCount > 1 ? pad(entry.sequence ?? 1) : "",
