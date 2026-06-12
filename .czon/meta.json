@@ -39418,6 +39418,161 @@
       "nativeMarkdownHash": "a5ce8c616e7162ae63fc82b1a15bfece8241bfba9689a1a4507e1b2e44771a76"
     },
     {
+      "path": "infra/cloudflare-access/README.md",
+      "links": [],
+      "metadata": {
+        "title": "Cloudflare Access Terraform 运行手册",
+        "description": "使用Terraform管理Cloudflare Access保护/const路径的操作手册，涵盖令牌创建、加密配置和状态管理。",
+        "short_summary": "本手册指导如何使用Terraform管理Cloudflare Access保护/const路径，从创建最小权限令牌到加密配置部署。强调安全实践，确保变更受控且不影响其他资源。",
+        "audience": "使用Terraform管理Cloudflare Zero Trust访问的开发者和运维工程师。",
+        "key_points": [
+          "创建最小权限Cloudflare API令牌，仅限Access Apps/Policies读写。",
+          "使用SOPS加密环境变量和Terraform状态文件，确保安全。",
+          "通过sops exec-env运行Terraform命令，隔离机密。",
+          "严格审查计划，确保只修改预期的Access应用和/const路径策略。",
+          "应用前需满足门控条件，防止未授权变更。"
+        ],
+        "summary": "本文是Cloudflare Access Terraform的运行手册，专门用于管理/const路径的零信任访问应用和策略。介绍了创建最小权限API令牌、填写SOPS加密环境文件、通过sops exec-env运行Terraform命令、处理加密本地状态以及应用前检查的完整流程。强调安全最佳实践，如不泄露令牌、加密状态、审查计划仅影响预期资源，以及遵守应用门控条件。确保只有经过审查且符合最小权限的更改才能应用，避免意外影响其他Cloudflare资源。",
+        "slug": "cloudflare-access-terraform-runbook",
+        "tags": [
+          "Cloudflare Access",
+          "Terraform",
+          "运行手册",
+          "零信任",
+          "访问控制",
+          "SOPS加密",
+          "安全"
+        ],
+        "inferred_lang": "en-US",
+        "tokens_used": {
+          "prompt": 1790,
+          "completion": 1398,
+          "total": 3188
+        }
+      },
+      "hash": "63e86a9093475e614a63fa5635755f640097f8656614ee8dca7f9a60e5827d99",
+      "metadataTranslations": {
+        "en-US": {
+          "title": "Cloudflare Access Terraform 运行手册",
+          "description": "使用Terraform管理Cloudflare Access保护/const路径的操作手册，涵盖令牌创建、加密配置和状态管理。",
+          "summary": "本文是Cloudflare Access Terraform的运行手册，专门用于管理/const路径的零信任访问应用和策略。介绍了创建最小权限API令牌、填写SOPS加密环境文件、通过sops exec-env运行Terraform命令、处理加密本地状态以及应用前检查的完整流程。强调安全最佳实践，如不泄露令牌、加密状态、审查计划仅影响预期资源，以及遵守应用门控条件。确保只有经过审查且符合最小权限的更改才能应用，避免意外影响其他Cloudflare资源。",
+          "short_summary": "本手册指导如何使用Terraform管理Cloudflare Access保护/const路径，从创建最小权限令牌到加密配置部署。强调安全实践，确保变更受控且不影响其他资源。",
+          "key_points": [
+            "创建最小权限Cloudflare API令牌，仅限Access Apps/Policies读写。",
+            "使用SOPS加密环境变量和Terraform状态文件，确保安全。",
+            "通过sops exec-env运行Terraform命令，隔离机密。",
+            "严格审查计划，确保只修改预期的Access应用和/const路径策略。",
+            "应用前需满足门控条件，防止未授权变更。"
+          ],
+          "audience": "使用Terraform管理Cloudflare Zero Trust访问的开发者和运维工程师。",
+          "tags": [
+            "Cloudflare Access",
+            "Terraform",
+            "运行手册",
+            "零信任",
+            "访问控制",
+            "SOPS加密",
+            "安全"
+          ]
+        },
+        "zh-Hans": {
+          "title": "Cloudflare Access Terraform 运行手册",
+          "description": "使用Terraform管理Cloudflare Access保护/const路径的操作手册，涵盖令牌创建、加密配置和状态管理。",
+          "summary": "本文是Cloudflare Access Terraform的运行手册，专门用于管理/const路径的零信任访问应用和策略。介绍了创建最小权限API令牌、填写SOPS加密环境文件、通过sops exec-env运行Terraform命令、处理加密本地状态以及应用前检查的完整流程。强调安全最佳实践，如不泄露令牌、加密状态、审查计划仅影响预期资源，以及遵守应用门控条件。确保只有经过审查且符合最小权限的更改才能应用，避免意外影响其他Cloudflare资源。",
+          "short_summary": "本手册指导如何使用Terraform管理Cloudflare Access保护/const路径，从创建最小权限令牌到加密配置部署。强调安全实践，确保变更受控且不影响其他资源。",
+          "key_points": [
+            "创建最小权限Cloudflare API令牌，仅限Access Apps/Policies读写。",
+            "使用SOPS加密环境变量和Terraform状态文件，确保安全。",
+            "通过sops exec-env运行Terraform命令，隔离机密。",
+            "严格审查计划，确保只修改预期的Access应用和/const路径策略。",
+            "应用前需满足门控条件，防止未授权变更。"
+          ],
+          "audience": "使用Terraform管理Cloudflare Zero Trust访问的开发者和运维工程师。",
+          "tags": [
+            "Cloudflare Access",
+            "Terraform",
+            "运行手册",
+            "零信任",
+            "访问控制",
+            "SOPS加密",
+            "安全"
+          ]
+        },
+        "ja-JP": {
+          "title": "Cloudflare Access Terraform 運用マニュアル",
+          "description": "TerraformでCloudflare Accessの/constパスを保護する運用マニュアル。トークン作成、暗号化設定、状態管理をカバー。",
+          "summary": "本記事は、Cloudflare Access Terraformを用いた/constパス向けゼロトラストアクセスアプリ・ポリシー管理の運用マニュアルです。最小権限APIトークンの作成、SOPS暗号化環境ファイルの記入、sops exec-envによるTerraformコマンド実行、暗号化ローカル状態の取り扱い、適用前の確認までの完全な流れを解説します。トークン漏洩防止、状態の暗号化、計画の精査による意図したリソースのみへの影響確認、適用ゲート条件の遵守といったセキュリティベストプラクティスを強調。最小権限かつ精査済みの変更のみを適用し、他のCloudflareリソースへの予期せぬ影響を防ぎます。",
+          "short_summary": "本マニュアルは、最小権限トークン作成から暗号化設定デプロイまで、TerraformでCloudflare Accessの/constパスを保護する手順を説明。変更の制御と他リソースへの影響防止を重視。",
+          "key_points": [
+            "Access Apps/Policiesの読み書きに限定した最小権限のCloudflare APIトークンを作成する。",
+            "SOPSを用いて環境変数とTerraform状態ファイルを暗号化し、安全性を確保する。",
+            "sops exec-env経由でTerraformコマンドを実行し、機密情報を隔離する。",
+            "計画を厳密にレビューし、意図したAccessアプリと/constパスポリシーのみが変更されることを確認する。",
+            "適用前にゲート条件を満たし、未承認の変更を防ぐ。"
+          ],
+          "audience": "TerraformでCloudflare Zero Trustアクセスを管理する開発者と運用エンジニア。",
+          "tags": [
+            "Cloudflare Access",
+            "Terraform",
+            "運用マニュアル",
+            "ゼロトラスト",
+            "アクセス制御",
+            "SOPS暗号化",
+            "セキュリティ"
+          ]
+        },
+        "es-ES": {
+          "title": "Guía operativa de Cloudflare Access con Terraform",
+          "description": "Guía operativa para gestionar la protección de la ruta /const con Cloudflare Access mediante Terraform, que cubre la creación de tokens, la configuración de cifrado y la gestión del estado.",
+          "summary": "Este artículo es la guía operativa de Cloudflare Access con Terraform, específicamente para gestionar aplicaciones y políticas de acceso de confianza cero para la ruta /const. Se describe el proceso completo de creación de tokens de API con privilegios mínimos, completar el archivo de entorno cifrado con SOPS, ejecutar comandos de Terraform mediante sops exec-env, gestionar el estado local cifrado y las comprobaciones previas a la aplicación. Se enfatizan las mejores prácticas de seguridad, como no filtrar tokens, cifrar el estado, revisar el plan para que solo afecte a los recursos previstos y cumplir con las condiciones de 'gating' de aplicación. Se garantiza que solo los cambios revisados y que cumplan con el principio de privilegio mínimo se apliquen, evitando impactos accidentales en otros recursos de Cloudflare.",
+          "short_summary": "Esta guía muestra cómo utilizar Terraform para gestionar Cloudflare Access y proteger la ruta /const, desde la creación de tokens con privilegios mínimos hasta la implementación de la configuración cifrada. Se enfatizan las prácticas de seguridad para garantizar que los cambios estén controlados y no afecten a otros recursos.",
+          "key_points": [
+            "Crear un token de API de Cloudflare con privilegios mínimos, limitado a lectura/escritura en Access Apps/Políticas.",
+            "Cifrar las variables de entorno y el archivo de estado de Terraform con SOPS para garantizar la seguridad.",
+            "Ejecutar comandos de Terraform a través de sops exec-env para aislar los secretos.",
+            "Revisar estrictamente el plan para garantizar que solo se modifiquen las aplicaciones de Access y las políticas de la ruta /const previstas.",
+            "Cumplir con las condiciones de 'gating' antes de aplicar para evitar cambios no autorizados."
+          ],
+          "audience": "Desarrolladores e ingenieros de operaciones que utilizan Terraform para gestionar el acceso a Cloudflare Zero Trust.",
+          "tags": [
+            "Cloudflare Access",
+            "Terraform",
+            "Guía operativa",
+            "Confianza cero",
+            "Control de acceso",
+            "Cifrado SOPS",
+            "Seguridad"
+          ]
+        },
+        "de-DE": {
+          "title": "Cloudflare Access Terraform",
+          "description": "Ein Runbook zur Verwaltung von Cloudflare Access für den Pfad /const mit Terraform, das die Token-Erstellung, Verschlüsselungskonfiguration und Zustandsverwaltung abdeckt.",
+          "summary": "Dies ist ein Runbook für Cloudflare Access Terraform, das sich speziell mit der Verwaltung von Zero-Trust-Zugriffsanwendungen und -richtlinien für den Pfad /const befasst. Es beschreibt den vollständigen Prozess: Erstellen eines API-Tokens mit minimalen Berechtigungen, Ausfüllen der SOPS-verschlüsselten Umgebungsdatei, Ausführen von Terraform-Befehlen über sops exec-env, Verarbeiten des verschlüsselten lokalen Zustands und die Überprüfung vor dem Anwenden. Bewährte Sicherheitspraktiken werden hervorgehoben: Token nicht preisgeben, Zustand verschlüsseln, Plan daraufhin überprüfen, dass nur die vorgesehenen Ressourcen betroffen sind, und Gatekeeping-Bedingungen einhalten. So wird sichergestellt, dass nur geprüfte und minimal berechtigte Änderungen angewendet werden und keine unbeabsichtigten Auswirkungen auf andere Cloudflare-Ressourcen entstehen.",
+          "short_summary": "Dieses Runbook zeigt, wie Cloudflare Access über Terraform für den Pfad /const verwaltet wird, von der Erstellung eines Minimal-Tokens bis zur verschlüsselten Konfigurationsbereitstellung. Sicherheitspraktiken stellen sicher, dass Änderungen kontrolliert und ohne Auswirkungen auf andere Ressourcen erfolgen.",
+          "key_points": [
+            "Erstellen eines Cloudflare-API-Tokens mit minimalen Berechtigungen (nur Lese-/Schreibzugriff auf Access Apps/Policies).",
+            "Verschlüsselung von Umgebungsvariablen und Terraform-Statusdateien mit SOPS, um Sicherheit zu gewährleisten.",
+            "Ausführen von Terraform-Befehlen über sops exec-env, um Geheimnisse zu isolieren.",
+            "Sorgfältige Prüfung des Plans, um sicherzustellen, dass nur die beabsichtigten Access-Apps und -Richtlinien für /const geändert werden.",
+            "Erfüllen von Gatekeeping-Bedingungen vor der Anwendung, um nicht autorisierte Änderungen zu verhindern."
+          ],
+          "audience": "Entwickler und Betriebsingenieure, die Cloudflare Zero Trust Access mit Terraform verwalten.",
+          "tags": [
+            "Cloudflare Access",
+            "Terraform",
+            "Runbook",
+            "Zero Trust",
+            "Zugriffskontrolle",
+            "SOPS-Verschlüsselung",
+            "Sicherheit"
+          ]
+        }
+      },
+      "metadataTranslationHash": "fe619e2ec7e0dcba3d294c0d4e2bd311b3fd965b490b2c1e0f4759bb19ceb218",
+      "category": "Technical Tutorial",
+      "nativeMarkdownHash": "63e86a9093475e614a63fa5635755f640097f8656614ee8dca7f9a60e5827d99"
+    },
+    {
       "path": "themes/cone-scroll/README.md",
       "links": [
         "https://github.com/Speyll/anemone",
