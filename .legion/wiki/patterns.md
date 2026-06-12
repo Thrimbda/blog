@@ -27,12 +27,16 @@ Infinite loading is a progressive enhancement over real pagination:
 For daily archive navigation, prefer document-outline navigation over form controls:
 
 - use the existing `.page-outline` visual language
-- render dates as plain links, not select options
+- render dates as plain in-page anchor links, not select options
+- use a small inline `+` for the standalone daily page action
+- keep `+` visible on mobile and touch, because hover is unavailable
 - group duplicate-date sources under the date with stable sequence labels
+- give each duplicate sequence row its own standalone `+` link
 - keep mobile access in normal document flow with native `<details>`
 - keep desktop access as a sticky left rail with a thin divider
 - verify desktop/laptop archive pages by asserting left/right placement, not only by checking that screenshots have no overlap
 - keep the daily archive rail breakpoint aligned with the approved dummy behavior unless a new design explicitly changes it
+- when a TOC target is not loaded yet, resolve it through the existing paginator/infinite loader instead of introducing a client-only feed path
 
 ## Terminal-Paper UI Preservation
 

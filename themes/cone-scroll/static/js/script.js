@@ -281,73 +281,162 @@
       const status = archive.querySelector("[data-infinite-status]");
       const sentinel = archive.querySelector("[data-infinite-sentinel]");
 
-      if (!list || !nextLink || !status) {
+      if (!list) {
         return;
       }
 
       archive.setAttribute("data-infinite-bound", "true");
       let loading = false;
-      let finished = !nextLink.getAttribute("href");
+      let loadingPromise;
+      let finished = !nextLink || !nextLink.getAttribute("href");
       let lastAutoLoadY = -Infinity;
+
+      function setStatus(message) {
+        if (status) {
+          status.textContent = message;
+        }
+      }
 
       async function loadNext(event) {
         if (event) {
           event.preventDefault();
         }
 
-        const nextUrl = nextLink.getAttribute("href");
+        if (loading) {
+          return loadingPromise;
+        }
+
+        const nextUrl = nextLink ? nextLink.getAttribute("href") : "";
         if (loading || finished || !nextUrl) {
-          return;
+          return false;
         }
 
         loading = true;
         archive.setAttribute("aria-busy", "true");
-        nextLink.textContent = "加载中";
-        status.textContent = "正在加载下一页";
+        if (nextLink) {
+          nextLink.textContent = "加载中";
+        }
+        setStatus("正在加载下一页");
+
+        loadingPromise = (async function () {
+          try {
+            const response = await fetch(nextUrl, {
+              headers: {
+                "X-Requested-With": "daily-archive",
+              },
+            });
+
+            if (!response.ok) {
+              throw new Error("Failed to load next archive page");
+            }
+
+            const html = await response.text();
+            const doc = new DOMParser().parseFromString(html, "text/html");
+            const incomingList = doc.querySelector("[data-infinite-list]");
+            const incomingItems = incomingList ? Array.from(incomingList.children) : [];
+            const incomingNext = doc.querySelector("[data-infinite-next]");
+
+            incomingItems.forEach((item) => {
+              list.appendChild(document.importNode(item, true));
+            });
+
+            if (incomingNext && incomingNext.getAttribute("href")) {
+              nextLink.setAttribute("href", incomingNext.getAttribute("href"));
+              nextLink.textContent = "继续加载";
+              setStatus(`已加载 ${incomingItems.length} 则`);
+            } else if (nextLink) {
+              finished = true;
+              nextLink.removeAttribute("href");
+              nextLink.hidden = true;
+              setStatus("已经到底");
+            }
+
+            initInteractiveControls();
+            return incomingItems.length > 0;
+          } catch (error) {
+            setStatus("加载失败，可以使用分页链接继续浏览");
+            if (nextLink) {
+              nextLink.textContent = "打开下一页";
+            }
+            return false;
+          } finally {
+            loading = false;
+            loadingPromise = undefined;
+            archive.removeAttribute("aria-busy");
+          }
+        })();
+
+        return loadingPromise;
+      }
+
+      function getAnchorTarget(anchor) {
+        const target = document.getElementById(anchor);
+        return target && archive.contains(target) ? target : null;
+      }
+
+      function updateHash(link) {
+        if (!link || !history.pushState) {
+          return;
+        }
 
         try {
-          const response = await fetch(nextUrl, {
-            headers: {
-              "X-Requested-With": "daily-archive",
-            },
-          });
-
-          if (!response.ok) {
-            throw new Error("Failed to load next archive page");
-          }
-
-          const html = await response.text();
-          const doc = new DOMParser().parseFromString(html, "text/html");
-          const incomingList = doc.querySelector("[data-infinite-list]");
-          const incomingItems = incomingList ? Array.from(incomingList.children) : [];
-          const incomingNext = doc.querySelector("[data-infinite-next]");
-
-          incomingItems.forEach((item) => {
-            list.appendChild(document.importNode(item, true));
-          });
-
-          if (incomingNext && incomingNext.getAttribute("href")) {
-            nextLink.setAttribute("href", incomingNext.getAttribute("href"));
-            nextLink.textContent = "继续加载";
-            status.textContent = `已加载 ${incomingItems.length} 则`;
-          } else {
-            finished = true;
-            nextLink.removeAttribute("href");
-            nextLink.hidden = true;
-            status.textContent = "已经到底";
-          }
-
-          initInteractiveControls();
+          history.pushState(null, "", link.getAttribute("href"));
         } catch (error) {
-          status.textContent = "加载失败，可以使用分页链接继续浏览";
-          nextLink.textContent = "打开下一页";
-        } finally {
-          loading = false;
-          archive.removeAttribute("aria-busy");
+          return;
         }
       }
 
-      nextLink.addEventListener("click", loadNext);
+      function scrollToAnchorTarget(anchor, link) {
+        const target = getAnchorTarget(anchor);
+        if (!target) {
+          return false;
+        }
+
+        updateHash(link);
+        const prefersReducedMotion =
+          window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        target.scrollIntoView({
+          block: "start",
+          behavior: prefersReducedMotion ? "auto" : "smooth",
+        });
+        if (typeof target.focus === "function") {
+          target.focus({ preventScroll: true });
+        }
+        setStatus("已定位到目标日期");
+        return true;
+      }
+
+      async function resolveDailyAnchor(anchor, link) {
+        if (!anchor || scrollToAnchorTarget(anchor, link)) {
+          return;
+        }
+
+        setStatus("正在加载目标日期");
+        while (!finished) {
+          const loaded = await loadNext();
+          if (!loaded || scrollToAnchorTarget(anchor, link)) {
+            return;
+          }
+        }
+
+        setStatus("未找到目标日期，可以使用单日链接打开");
+      }
+
+      archive.querySelectorAll("[data-daily-anchor-link]").forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          const anchor = link.getAttribute("data-daily-anchor") || link.hash.slice(1);
+          resolveDailyAnchor(anchor, link);
+        });
+      });
+
+      if (window.location.hash) {
+        resolveDailyAnchor(decodeURIComponent(window.location.hash.slice(1)));
+      }
+
+      if (nextLink) {
+        nextLink.addEventListener("click", loadNext);
+      }
 
       if (sentinel && "IntersectionObserver" in window) {
         const observer = new IntersectionObserver((entries) => {

@@ -65,15 +65,21 @@
                         <ol class="daily-outline-sequences">
                           {% for item in date_group.entries %}
                             <li>
-                              <a class="daily-outline-entry" href="{{ item.path | safe }}">
-                                <span class="daily-outline-seq">{{ item.sequence_label }}</span>{% if item.topic %}<span>{{ item.topic }}</span>{% else %}<span>{{ item.title }}</span>{% endif %}
-                              </a>
+                              <span class="daily-outline-row">
+                                <a class="daily-outline-entry daily-outline-anchor" href="#{{ item.anchor }}" data-daily-anchor-link data-daily-anchor="{{ item.anchor }}">
+                                  <span class="daily-outline-seq">{{ item.sequence_label }}</span>{% if item.topic %}<span>{{ item.topic }}</span>{% else %}<span>{{ item.title }}</span>{% endif %}
+                                </a>
+                                <a class="daily-outline-open" href="{{ item.path | safe }}" aria-label="打开 {{ item.title }} 的单独页面">+</a>
+                              </span>
                             </li>
                           {% endfor %}
                         </ol>
                       {% else %}
                         {% for item in date_group.entries %}
-                          <a href="{{ item.path | safe }}">{{ date_group.label }}</a>
+                          <span class="daily-outline-row">
+                            <a class="daily-outline-anchor" href="#{{ item.anchor }}" data-daily-anchor-link data-daily-anchor="{{ item.anchor }}">{{ date_group.label }}</a>
+                            <a class="daily-outline-open" href="{{ item.path | safe }}" aria-label="打开 {{ item.title }} 的单独页面">+</a>
+                          </span>
                           {% if item.topic %}<span class="daily-outline-topic">{{ item.topic }}</span>{% endif %}
                         {% endfor %}
                       {% endif %}
@@ -90,7 +96,7 @@
     <section class="daily-feed" aria-label="{{ section.title }}">
       <div class="daily-entry-list" data-infinite-list>
         {% for entry in entries %}
-          <article class="daily-entry-card" id="{{ entry.slug }}" data-daily-entry-card>
+          <article class="daily-entry-card" id="{{ entry.slug }}" data-daily-entry-card tabindex="-1">
             <header class="daily-entry-card-head">
               <h2><a href="{{ entry.permalink | safe }}">{{ entry.title }}</a></h2>
               <p class="daily-entry-meta">
