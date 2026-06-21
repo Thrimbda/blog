@@ -66,3 +66,17 @@ For small sensitive Terraform stacks that do not use a remote backend:
 - require a plan scope gate before apply
 
 For Cloudflare Access path protection, continue to assert exact, trailing slash, and wildcard descendant coverage for the intended path family.
+
+## Feed Privacy For Protected Paths
+
+Access-controlled or private path families must not leak through generated feeds:
+
+- filter at template generation time, before emitting each feed entry
+- key the rule on generated URL path, not source filename
+- cover the canonical exact path and descendants
+- keep normal public feed entries enabled and populated
+- scan every generated feed file, not just the root feed
+- use a temporary feed-eligible fixture to prove future descendants are excluded
+- remove the fixture before commit
+
+For the current Zola Atom setup, `/const` is excluded by skipping pages whose `page.path` starts with `/const/` in `templates/atom.xml`.

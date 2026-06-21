@@ -20,3 +20,8 @@
 - Added task summary for `daily-toc-anchor-plus`.
 - Promoted the Version D daily archive TOC rule: primary date links locate entries in the aggregate archive, while inline `+` links open standalone daily pages.
 - Promoted the lazy anchor-resolution rule: unloaded TOC targets should use existing pagination/infinite loading, not a separate client-only data path.
+
+## 2026-06-21
+- Added task summary for `const-rss-exclusion`.
+- Promoted the feed privacy pattern for access-controlled paths: filter generated feed entries by URL path before emitting them and verify with an all-feed scan plus a temporary feed-eligible fixture.
+- Updated current truth to state that `/const` path-family documents must be excluded from public feeds in addition to Cloudflare Access protection.
