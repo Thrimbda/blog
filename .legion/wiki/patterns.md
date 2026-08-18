@@ -80,3 +80,13 @@ Access-controlled or private path families must not leak through generated feeds
 - remove the fixture before commit
 
 For the current Zola Atom setup, `/const` is excluded by skipping pages whose `page.path` starts with `/const/` in `templates/atom.xml`.
+
+## Third-Party Analytics Injection
+
+Third-party analytics or tracking scripts are wired through `config.extra.<name>` flags plus a conditional block in `themes/cone-scroll/templates/head.html`, mirroring the existing `google_analytics` pattern:
+
+- add a `config.extra.<name>` key (e.g. `clarity = "vg7b9rsa98"`) instead of hardcoding the id
+- keep the vendor snippet verbatim, parameterizing only the id via `{{ config.extra.<name> }}`
+- guard the whole block with `{% if config.extra.<name> %}` so the script is absent when unconfigured
+
+The Clarity snippet builds its `clarity.ms/tag/` URL at runtime (`+i`), so generated HTML contains the id but not the literal full URL; verify by grepping the injected id rather than the assembled URL.
