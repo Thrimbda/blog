@@ -213,6 +213,7 @@ internal_level = "warn"
 author = "0xc1"
 display_author = true
 google_analytics = "G-8DQTX42T4P"
+clarity = "vg7b9rsa98"
 
 favicon = "favicon.ico"
 image = ""
