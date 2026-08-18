@@ -25,3 +25,7 @@
 - Added task summary for `const-rss-exclusion`.
 - Promoted the feed privacy pattern for access-controlled paths: filter generated feed entries by URL path before emitting them and verify with an all-feed scan plus a temporary feed-eligible fixture.
 - Updated current truth to state that `/const` path-family documents must be excluded from public feeds in addition to Cloudflare Access protection.
+
+## 2026-08-18
+- Added task summary for `clarity-analytics`.
+- Promoted the third-party analytics injection pattern: gate tracking scripts behind `config.extra.<name>` flags plus a conditional `head.html` block, parameterizing only the id.

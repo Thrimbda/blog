@@ -9,6 +9,7 @@
 - `tasks/daily-log-toc-implementation.md`: Daily archive TOC implementation and duplicate-date sequence rule.
 - `tasks/daily-toc-desktop-layout-fix.md`: Daily archive TOC breakpoint correction after production/demo mismatch.
 - `tasks/daily-toc-anchor-plus.md`: Version D TOC behavior, date links locate aggregate entries and `+` opens standalone pages.
+- `tasks/clarity-analytics.md`: Microsoft Clarity analytics injected via `config.extra.clarity` + conditional `head.html` block.
 - `patterns.md`: Reusable theme and archive implementation conventions.
 - `maintenance.md`: Follow-up implementation backlog.
 
